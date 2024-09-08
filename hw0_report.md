@@ -3,9 +3,9 @@
 ### DATA 440, Fall 2024
 ### September 10th, 2024
 
-# Q1
+# Q3
 
-*You may copy the question into your report, but make sure that you make it clear where the question ends and your answer begins.*
+*Upload an image to your GitHub repo and include it in place of the "Growth of the Early Web" image. Make sure to change the description of the image in the report, too.*
 
 ## Answer
 
