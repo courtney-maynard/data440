@@ -11,7 +11,7 @@
 
 The image below shows me doing one of my favorite activities - hiking - in Acadia National Park.
 
-![\label{fig:courtney-hiking}](hw0/IMG_2057.png)
+![\label{fig:courtney-hiking}](IMG_2057.png)
 
 ## Discussion
 In order to arrive at the image above, I downloaded an image from my phone to computer and uploaded it into the correct hw0 directory. Following the example template, I chose an applicable name for the image and pasted the local path to the image.
