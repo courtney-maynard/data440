@@ -11,10 +11,10 @@
 
 The image below shows me doing one of my favorite activities - hiking - in Acadia National Park.
 
-![\label{fig:courtney-hiking}](IMG_2057.png)
+![\label{fig:courtney-hiking}](IMG_2057.png = 200x200)
 
 ## Discussion
-In order to arrive at the image above, I downloaded an image from my phone to computer and uploaded it into the correct hw0 directory. Following the example template, I chose an applicable name for the image and pasted the local path to the image.
+In order to arrive at the image above, I downloaded an image from my phone to computer and uploaded it into the correct hw0 directory. Following the example template, I chose an applicable name for the image and pasted the local path to the image. After committing the changes, I realized that the image was too big so I used an online page called Github Gist for an example of how to resize the image.
 
 # Q4
 *Replace the code in the fenced code block with any other block of code. You can use some Python code, or you can insert code from a different language -- just change the language indicated so that syntax highlighting still works properly.*
@@ -66,5 +66,5 @@ I used the syllabus markdown file as a reference for creating this table. Lookin
 
 # References
 
-* Insert Reference 1, <https://www.example.com>
+* Github Gist - Image Resize in Github Flavored Markdown, <https://gist.github.com/uupaa/f77d2bcf4dc7a294d109>
 * Insert Reference 2, <https://www.example.com/reallyreallyreally-extra-long-URI/>
