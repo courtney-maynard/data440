@@ -11,7 +11,7 @@
 
 The image below shows me doing one of my favorite activities - hiking - in Acadia National Park.
 
-<img src="IMG_2057.png" width="200" height="200">
+<img src="IMG_2057.png" width="200">
 
 ## Discussion
 In order to arrive at the image above, I downloaded an image from my phone to computer and uploaded it into the correct hw0 directory. Following the example template, I chose an applicable name for the image and pasted the local path to the image. After committing the changes, I realized that the image was too big so I used an online page called Github Gist for an example of how to resize the image. This required me to change the code for uploading an image to use typical HTML syntax of img src="link to image". 
@@ -67,4 +67,5 @@ I used the syllabus markdown file as a reference for creating this table. Lookin
 # References
 
 * Github Gist - Markdown - Resize pictures in GitHub, including in comments comment, <https://gist.github.com/MichaelPolla/a65ac84286ab523603e64549f9850223>
-* Insert Reference 2, <https://www.example.com/reallyreallyreally-extra-long-URI/>
+* Scribbr - Poisson Distributions | Definition, Formula & Examples, <https://www.scribbr.com/statistics/poisson-distribution/>
+* Computer Science Wiki - Graph theory and connectivity of the web,<https://computersciencewiki.org/index.php/Graph_theory_and_connectivity_of_the_web>
