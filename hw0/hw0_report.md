@@ -3,6 +3,7 @@
 ### DATA 440, Fall 2024
 ### September 10th, 2024
 
+# Part One
 # Q3
 
 *Upload an image to your GitHub repo and include it in place of the "Growth of the Early Web" image. Make sure to change the description of the image in the report, too.*
@@ -64,8 +65,64 @@ The table shows the first four weeks of the Data 440 Web Science class schedule.
 
 I used the syllabus markdown file as a reference for creating this table. Looking at the raw code for the file allowed me to see how to code line breaks to put the homework topics in the correct stacked order. Additionally, I was able to reference how to include links to other files or markdown pages to create the links in this table as well. I included all global links instead of local links, as I didn't create copies in my folder of the homework assignments.
 
+
 # References
 
 * Github Gist - Markdown - Resize pictures in GitHub, including in comments comment, <https://gist.github.com/MichaelPolla/a65ac84286ab523603e64549f9850223>
 * Scribbr - Poisson Distributions | Definition, Formula & Examples, <https://www.scribbr.com/statistics/poisson-distribution/>
 * Computer Science Wiki - Graph theory and connectivity of the web,<https://computersciencewiki.org/index.php/Graph_theory_and_connectivity_of_the_web>
+
+
+# Part Two
+# Q1
+*Create a directory (name it whatever you wish, e.g., data440 (or data691). Change the permissions on this directory so that you are the only user who can read, write, or execute. Take a screenshot of (or copy/paste) the command and its output into your report.*
+
+## Answer
+
+## Discussion
+
+I have some previous Linux experience, so I remembered that mkdir creates a directory and that chmod allows you to modify the permissions of the dictionary. chmod 700 gives full read, write, and execute permissions to the owner, but gives no permissions to the group that the owner may belong to or any others. Thus, by using 700, I was able to set read, write, and execute privileges for myself only.
+
+
+# Q2
+*For each of the commands below, do the following: Execute the command, Take a screenshot of (or copy/paste) the command and its output into your report, and Write a sentence that describes what the command did*
+
+## wc -l test.txt
+Answer:
+
+Discussion: This command prints the number of lines in a file.
+
+## echo "CS 800" >> test.txt; cat test.txt
+Answer:
+
+Discussion: This command appends ‘CS 800’ to the file, and then outputs the contents of the changed file.
+
+## grep CS test.txt
+Answer:
+
+Discussion: The grep command, which stands for ‘Global Regular Expression Print’, searches for lines containing the phrase ‘CS’ and prints them.
+
+## grep -c CS test.txt
+Answer:
+
+Discussion: This command prints the number of lines that contain the expression ‘CS’.
+
+## sort test.txt
+Answer:
+
+Discussion: This command sorts the contents of the file line by line,  alphabetically and lexicographically by looking at each value in the numbers from left to right, which explains why MATH 212 appears before MATH 32, even though 32 is a smaller number.
+
+## sort -k2 test.txt
+Answer:
+
+Discussion: This command sorts the lines in the file according to the second ‘field’ of information, which in this case is the second portion of the string, the numbers associated with the courses.
+
+## sort -k2 -n test.txt
+Answer:
+
+Discussion: This command uses numerical sort to sort the lines according to the second ‘field’ of information (the course numbers), which then results in MATH 32 being placed before MATH 212, as 32 is a smaller number than 212.
+
+## sort test.txt | uniq -c
+Answer:
+
+Discussion: This command first sorts the file alphabetically/lexicographically, and then counts the number of unique lines that occur, output the number of times the line occurs followed by the actual content of the line.
