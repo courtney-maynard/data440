@@ -78,7 +78,7 @@ I used the syllabus markdown file as a reference for creating this table. Lookin
 *Create a directory (name it whatever you wish, e.g., data440 (or data691). Change the permissions on this directory so that you are the only user who can read, write, or execute. Take a screenshot of (or copy/paste) the command and its output into your report.*
 
 ## Answer
-
+![question one answer](/hw0/partTwoScreenshots/hw0-q1screenshot.png)
 ## Discussion
 
 I have some previous Linux experience, so I remembered that mkdir creates a directory and that chmod allows you to modify the permissions of the dictionary. chmod 700 gives full read, write, and execute permissions to the owner, but gives no permissions to the group that the owner may belong to or any others. Thus, by using 700, I was able to set read, write, and execute privileges for myself only.
