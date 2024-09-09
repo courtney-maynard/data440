@@ -89,40 +89,40 @@ I have some previous Linux experience, so I remembered that mkdir creates a dire
 
 ## wc -l test.txt
 Answer:
-
+![question two answer](/hw0/partTwoScreenshots/hw0-q2-1.png)
 Discussion: This command prints the number of lines in a file.
 
 ## echo "CS 800" >> test.txt; cat test.txt
 Answer:
-
+![question two answer](/hw0/partTwoScreenshots/hw0-q2-2.png)
 Discussion: This command appends ‘CS 800’ to the file, and then outputs the contents of the changed file.
 
 ## grep CS test.txt
 Answer:
-
+![question two answer](/hw0/partTwoScreenshots/hw0-q2-3.png)
 Discussion: The grep command, which stands for ‘Global Regular Expression Print’, searches for lines containing the phrase ‘CS’ and prints them.
 
 ## grep -c CS test.txt
 Answer:
-
+![question two answer](/hw0/partTwoScreenshots/hw0-q2-4.png)
 Discussion: This command prints the number of lines that contain the expression ‘CS’.
 
 ## sort test.txt
 Answer:
-
+![question two answer](/hw0/partTwoScreenshots/hw0-q2-5.png)
 Discussion: This command sorts the contents of the file line by line,  alphabetically and lexicographically by looking at each value in the numbers from left to right, which explains why MATH 212 appears before MATH 32, even though 32 is a smaller number.
 
 ## sort -k2 test.txt
 Answer:
-
+![question two answer](/hw0/partTwoScreenshots/hw0-q2-6.png)
 Discussion: This command sorts the lines in the file according to the second ‘field’ of information, which in this case is the second portion of the string, the numbers associated with the courses.
 
 ## sort -k2 -n test.txt
 Answer:
-
+![question two answer](/hw0/partTwoScreenshots/hw0-q2-7.png)
 Discussion: This command uses numerical sort to sort the lines according to the second ‘field’ of information (the course numbers), which then results in MATH 32 being placed before MATH 212, as 32 is a smaller number than 212.
 
 ## sort test.txt | uniq -c
 Answer:
-
+![question two answer](/hw0/partTwoScreenshots/hw0-q2-8.png)
 Discussion: This command first sorts the file alphabetically/lexicographically, and then counts the number of unique lines that occur, output the number of times the line occurs followed by the actual content of the line.
