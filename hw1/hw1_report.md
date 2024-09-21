@@ -134,10 +134,57 @@ for each_link in all_links:
         #print('LINK NOT VALID: ', each_link)
 ```
 **Proving that the program works on the following URIs:**
+
+https://alexandernwala.com/files/teaching/fall-2022/week-2/2018_wsdl_publications.html
 ```console
-courtneymaynard@Courtneys-MacBook-Pro-2 data440 % python3 get_pdfs.py https://alexandernwala.com/files/teaching/fall-2022/week-2/2018_wsdl_publications.html
+(base) courtneymaynard@Courtneys-MacBook-Pro-2 data440 % python3 get_pdfs.py https://alexandernwala.com/files/teaching/fall-2022/week-2/2018_wsdl_publications.html
+URI:  http://www.cs.odu.edu/~mln/pubs/ht-2018/hypertext-2018-nwala-bootstrapping.pdf
+Final URI:  https://www.cs.odu.edu/~mln/pubs/ht-2018/hypertext-2018-nwala-bootstrapping.pdf
+Content Length: 994153 bytes 
+
+URI:  http://www.cs.odu.edu/~mln/pubs/ipres-2018/ipres-2018-atkins-news-similarity.pdf
+Final URI:  https://www.cs.odu.edu/~mln/pubs/ipres-2018/ipres-2018-atkins-news-similarity.pdf
+Content Length: 18995885 bytes 
+
+URI:  http://www.cs.odu.edu/~mln/pubs/ipres-2018/ipres-2018-jones-off-topic.pdf
+Final URI:  https://www.cs.odu.edu/~mln/pubs/ipres-2018/ipres-2018-jones-off-topic.pdf
+Content Length: 3119205 bytes 
+
+URI:  http://www.cs.odu.edu/~mln/pubs/ipres-2018/ipres-2018-jones-archiveit.pdf
+Final URI:  https://www.cs.odu.edu/~mln/pubs/ipres-2018/ipres-2018-jones-archiveit.pdf
+Content Length: 2639215 bytes 
+
+URI:  http://www.cs.odu.edu/~mln/pubs/jcdl-2018/jcdl-2018-nwala-scraping-serps-seeds.pdf
+Final URI:  https://www.cs.odu.edu/~mln/pubs/jcdl-2018/jcdl-2018-nwala-scraping-serps-seeds.pdf
+Content Length: 2172494 bytes 
+
+URI:  http://www.cs.odu.edu/~mln/pubs/jcdl-2018/jcdl-2018-kelly-private-public-web-archives.pdf
+Final URI:  https://www.cs.odu.edu/~mln/pubs/jcdl-2018/jcdl-2018-kelly-private-public-web-archives.pdf
+Content Length: 2553579 bytes 
+
+URI:  http://www.cs.odu.edu/~mln/pubs/jcdl-2018/jcdl-2018-aturban-archivenow.pdf
+Final URI:  https://www.cs.odu.edu/~mln/pubs/jcdl-2018/jcdl-2018-aturban-archivenow.pdf
+Content Length: 3998654 bytes 
+
+URI:  http://www.cs.odu.edu/~mln/pubs/jcdl-2018/jcdl-2018-alam-archive-banner.pdf
+Final URI:  https://www.cs.odu.edu/~mln/pubs/jcdl-2018/jcdl-2018-alam-archive-banner.pdf
+Content Length: 596000 bytes 
+
 ```
 
+https://yhe15.people.wm.edu/publication.html
+```console
+(base) courtneymaynard@Courtneys-MacBook-Pro-2 data440 % python3 get_pdfs.py https://yhe15.people.wm.edu/publication.html                                          
+URI:  https://arxiv.org/pdf/2408.12665
+Final URI:  https://arxiv.org/pdf/2408.12665
+Content Length: 444750 bytes 
 
+```
+
+https://swensonlab.weebly.com/pubs.html
+```console
+
+```
 
 ### Discussion
+
