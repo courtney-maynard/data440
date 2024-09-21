@@ -181,8 +181,16 @@ Content Length: 444750 bytes
 
 ```
 
-https://swensonlab.weebly.com/pubs.html
+https://cristianofanelli.com/publications/
 ```console
+(base) courtneymaynard@Courtneys-MacBook-Pro-2 data440 % python3 get_pdfs.py https://cristianofanelli.com/publications/
+URI:  https://ml4physicalsciences.github.io/2023/files/NeurIPS_ML4PS_2023_250.pdf
+Final URI:  https://ml4physicalsciences.github.io/2023/files/NeurIPS_ML4PS_2023_250.pdf
+Content Length: 543834 bytes 
+
+URI:  https://www.epj-conferences.org/articles/epjconf/pdf/2021/05/epjconf_chep2021_04011.pdf
+Final URI:  https://www.epj-conferences.org/articles/epjconf/pdf/2021/05/epjconf_chep2021_04011.pdf
+Content Length: 24 bytes 
 
 ```
 
