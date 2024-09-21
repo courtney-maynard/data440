@@ -1,4 +1,3 @@
-
 <h1 align = "center">HW 1 - Web Science Intro</h1>
 
 <h3 align = "center">Courtney Maynard</h3>
@@ -30,7 +29,16 @@ To construct this graph, I first sketched all the nodes on paper as I read them.
 *Load the URI in the browser and take a screenshot. Then, in a single curl command, issue a HEAD HTTP request for the second URI. Show the HTTP response headers, follow any redirects, and change the User-Agent HTTP request field to DATA 440_691. Show the commands and results*
 
 ### Answer
+**Part A**
+<img src="q2parta.jpeg">
 
+**Part B**
+```console
+(base) courtneymaynard@Courtneys-MacBook-Pro-2 ~ % curl -I -L -A "DATA 440_691" https://t.co/KSHFYLmmB0
+```
+
+<img src="q2partbsegment1.jpeg">
+<img src="q2partbsegment2.jpeg">
 
 ### Discussion
 Explanation in progress
