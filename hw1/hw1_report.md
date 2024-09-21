@@ -54,6 +54,7 @@ import requests
 import re
 
 from bs4 import BeautifulSoup
+from urllib.parse import urljoin
 
 #FUNCTIONS
 
@@ -89,12 +90,23 @@ action_on_links(each_link)
 
     output: does not return any objects
 '''
-def action_on_links(each_link):
+def action_on_links(each_link, base_uri):
     # get the link itself from the whole tag+link representation
     actual_link = each_link.get('href')
 
+    # skip empty links
+    if not actual_link:
+        return
+    
+    # join together the base with relative link found, for internal page links
+    actual_link = urljoin(base_uri, actual_link)
+
+    # some links are doi and the format isn't recognized in parsing
+    if actual_link.startswith("http://doi:"):
+        actual_link = f"https://doi.org/{actual_link[11:]}"
+        
     # request the NEXT uri 
-    next_uri = requests.get(actual_link)
+    next_uri = requests.get(actual_link, allow_redirects=True)
 
     # use the Content-Type HTTP response header to determine if the link references a PDF file
     content_type_link = next_uri.headers.get('Content-Type', '')
@@ -125,13 +137,7 @@ soup = create_soup(html_of_page) # create soup object
 all_links = soup.find_all('a', href=True) # for some tested pages, there was no href inside the A tag
 
 for each_link in all_links:
-    # need to make sure the link is valid, 
-    # some websites have internal not external links inside A tag, or other content that isn't a URI
-    if each_link.get('href').startswith('http'):
-        #print('Link:', each_link.get('href'))
-        action_on_links(each_link)
-    #else:
-        #print('LINK NOT VALID: ', each_link)
+    action_on_links(each_link, captured_uri) # some links are relative, so have to pass in the base
 ```
 **Proving that the program works on the following URIs:**
 
