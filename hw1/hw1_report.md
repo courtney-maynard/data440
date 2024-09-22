@@ -44,6 +44,7 @@ To construct this graph, I first sketched all the nodes on paper as I read them.
 **Part A:** The URI resulted in the User-Agent request string that is shown above. The different parts of the string indicate different things about the computer and browser. This string indicates to websites that the request is coming from a Google Chrome browser on a Mac computer running macOS version 10.15.7.
 
 **Part B:** The curl command consists of several parts: -I fetches only the HTTP headers, -L makes curl follow any redirects that occur, and -A "DATA 440_691" sets the user-agent string to DATA 440_691. The results can be understood as follows:
+
 HTTP/1.1 301 Moved Permanently indicates that the content of the URI has been moved to a new location. Additional information is provided regarding the date and time of the request, cookies, caching, and the performance of the server. The headers also include the location of the new URL for the content, and indicate that the connection to the server will be kept alive in case there are any additional requests. 
 
 The second portion of headers are the result of redirect from the original URI, HTTP/1.1 200 OK indicates that this was a successful request. We are provided information regarding the size of the content body in bytes, Content-Length: 340870, and that the content is HTML encoded in UTF-8. Many of the headers provide information regarding cache, cookies, and the security of the connection. One interesting header is x-sigsci-tags: SUSPECTED-BOT, site.all-traffic, which indicates the request has been flagged as potential bot activity.
@@ -206,4 +207,4 @@ Content Length: 24 bytes
 ```
 
 ### Discussion
-
+To write this program, I started by creating the beautiful soup object and ensuring I could get a representation of the HTML content of the page. Then, I created several functions, to make my code easier to understand, and I created a function for the actions that needed to be performed on each link so that I could place it cleanly inside a for loop. While coding and testing my action_on_links function, I realized there were several peculiarities in possible 'links' found, that did not occur in the test website given. Some links on other sites would not contain a URI at all, others would be relative links, and some links to DOIs were not formatted in a way that could be parsed by the requests.get() command. As I ran into errors thrown by these formatting differences, I added conditions into my function to ensure that whatever content is found inside the <a> tag could be handled properly. Throughout the process, I created many debugging statements and learned about different errors possible from the requests.get() command. 
