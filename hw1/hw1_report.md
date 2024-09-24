@@ -2,7 +2,7 @@
 
 <h3 align = "center">Courtney Maynard</h3>
 <h3 align = "center">DATA 440, Fall 2024</h3>
-<h3 align = "center">September 24th</h3>
+<h3 align = "center">September 24th, 2024</h3>
 
 ## Question 1
 *Consider the 'bow-tie' structure of the web and the following links A - G. Draw the resulting directed graph showing how the nodes are connected to each other. For the graph list the nodes (in alphabetical order) that are each of the categories.*
