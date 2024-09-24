@@ -128,6 +128,16 @@ def action_on_links(each_link, base_uri):
         #print the number of bytes in the PDF file
         num_bytes = next_uri.headers.get('Content-Length')
         print('Content Length:', num_bytes, 'bytes \n')
+    elif '/pdf' in actual_link: # some links reference a pdf but it is not picked up by content_type_link
+        #print the original URI (found in the parent HTML page)
+        print('URI: ', actual_link)
+
+        #print the final URI (after any redirects)
+        print('Final URI: ', next_uri.url)
+
+        #print the number of bytes in the PDF file
+        num_bytes = next_uri.headers.get('Content-Length')
+        print('Content Length:', num_bytes, 'bytes \n')
 
     return
 
@@ -144,6 +154,7 @@ all_links = soup.find_all('a', href=True) # for some tested pages, there was no 
 
 for each_link in all_links:
     action_on_links(each_link, captured_uri) # some links are relative, so have to pass in the base
+
 ```
 **Proving that the program works on the following URIs:**
 
@@ -199,6 +210,14 @@ https://cristianofanelli.com/publications/
 URI:  https://ml4physicalsciences.github.io/2023/files/NeurIPS_ML4PS_2023_250.pdf
 Final URI:  https://ml4physicalsciences.github.io/2023/files/NeurIPS_ML4PS_2023_250.pdf
 Content Length: 543834 bytes 
+
+URI:  https://iopscience.iop.org/article/10.1088/2632-2153/ad2098/pdf
+Final URI:  https://validate.perfdrive.com/9730847aceed30627ebd520e46ee70b2/?ssa=37ed0174-6ae4-4d32-b4be-e2b1836cf8e5&ssb=70310293930&ssc=https%3A%2F%2Fiopscience.iop.org%2Farticle%2F10.1088%2F2632-2153%2Fad2098%2Fpdf&ssi=b4838fa0-cnvj-4ac1-a6ab-9e5f09215760&ssk=botmanager_support@radware.com&ssm=55355165919643652102589046976213&ssn=49d5c2d124d6337a0bbfd4b36c00c25ea2dc6bc11109-a313-4bae-a48356&sso=2cfbbd3c-2b7a9807ebfb60deadbe2206426bee104063563103697006&ssp=71016424311727277791172723932094342&ssq=68894060662986537105106629765944838200217&ssr=OTguMTY2LjIyNS4xMjY=&sst=python-requests/2.25.1&ssu=&ssv=&ssw=&ssx=eyJfX3V6bWYiOiI3ZjYwMDA3MDQ5YzU1NS0wODJjLTRlY2QtOTQ2YS0wMTRhZWRjYTA5MTAxNzI3MjA2NjI5MjA5MC01ZDcyODJmODFkZWIyZTZhMTAiLCJ1em14IjoiN2Y5MDAwYzI5ZDM2NWEtMmIxNi00NDM4LWEyMDktYWU5MDNjNjZkMzRjMS0xNzI3MjA2NjI5MjA5MC1jY2Q3OThiN2U4MmQzMDZmMTAiLCJyZCI6ImlvcC5vcmcifQ==
+Content Length: 14416 bytes 
+
+URI:  https://iopscience.iop.org/article/10.1088/2632-2153/ac9bcb/pdf
+Final URI:  https://validate.perfdrive.com/9730847aceed30627ebd520e46ee70b2/?ssa=0e6f036f-b73c-412c-b9a1-49d057545592&ssb=27629239840&ssc=https%3A%2F%2Fiopscience.iop.org%2Farticle%2F10.1088%2F2632-2153%2Fac9bcb%2Fpdf&ssi=978cae66-cnvj-4c20-b68e-5571ca8617ce&ssk=botmanager_support@radware.com&ssm=01474841818512260105077689290605&ssn=e57b2398cf8bc3ad2d0aecf1e7f2425bc18880c17d2e-f39b-42cb-af9e0a&sso=927a8d94-665c8b7fa1bc28916a9e545434f4b19f7762f86c91f37ccb&ssp=54882684311727271574172727106013900&ssq=39925380663021220070906630231355113843921&ssr=OTguMTY2LjIyNS4xMjY=&sst=python-requests/2.25.1&ssu=&ssv=&ssw=&ssx=eyJyZCI6ImlvcC5vcmciLCJ1em14IjoiN2Y5MDAwNzUxMDFhZGUtYWJhYi00Njg1LTk4NGQtYWI1MzU5OGJjMmFhMS0xNzI3MjA2NjMwOTc1MC1kNmE1YmVmZWQyYWU2NzkzMTAiLCJfX3V6bWYiOiI3ZjYwMDAyYmI2MDdhZi00YTRiLTRjMDktYWY4Mi1hNTgyYjUzNWU2ZGIxNzI3MjA2NjMwOTc1MC02YTIzOGFmNWIwZmZlMjk2MTAifQ==
+Content Length: 14416 bytes 
 
 URI:  https://www.epj-conferences.org/articles/epjconf/pdf/2021/05/epjconf_chep2021_04011.pdf
 Final URI:  https://www.epj-conferences.org/articles/epjconf/pdf/2021/05/epjconf_chep2021_04011.pdf
