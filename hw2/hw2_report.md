@@ -9,6 +9,7 @@
 ### Parts One and Two Code: Collecting Tweets + Extracting Links from Tweets
 
 I created one program to both collect the tweets and extract the links from the tweets corresponding to a given keyword.
+
 ```console
 (base) courtneymaynard@Courtneys-MacBook-Pro-2 data440 % python3 collect_uris_tweets.py
 ```
@@ -106,11 +107,12 @@ if __name__ == "__main__":
 
 ```
 
-After several attempts, I realized that Twitter had pretty strict rate limits, which meant that in order to search for more tweets I had to wait ~12 minutes. Because of this, it was not feasible for me to set up a loop to iterate through the different keywords, and I had to manually re-run the program for each new word I wanted to search. Thus, I ended up with 50+ named files corresponding to all of the collected tweets, and created another program to combine the links in all the files.
+After several attempts, I realized that Twitter had pretty strict rate limits, which meant that in order to search for more tweets I had to wait ~12 minutes. Because of this, it was not feasible for me to set up a loop to iterate through the different keywords, and I had to manually re-run the program for each new word I wanted to search. Thus, I ended up with 30+ named files corresponding to all of the collected tweets, and created another program to combine the links in all the files.
 
 ```console
-(base) courtneymaynard@Courtneys-MacBook-Pro-2 data440 % python3 combine_links.py                                  ```
-                                            
+(base) courtneymaynard@Courtneys-MacBook-Pro-2 data440 % python3 combine_links.py
+```
+                                    
 ```python
 '''combining all links from the various text files into one file'''
 
@@ -148,7 +150,7 @@ while IFS= read -r uri; do
     
     final_uri="$uri"
 
-    # keeps iterating through the URIs until you reach the final resolvced one
+    # keeps iterating through the URIs until you reach the final resolved one
     while true; do
         # fetch the headers using curl
         response=$(curl -IL --silent --max-time 10 --location "$final_uri" 2>/dev/null)
@@ -206,6 +208,7 @@ echo "unique links have been saved to $unique_resolved_uris"
 ```
 
 ### Commentary:
+I created a shell script to work with all the links and use curl to request their headers. I chose the approach of iteratively requesting the headers, checking the HTTP status to see if a successful status is returned, checking for a new resolved URI, and if the URI is not the final location, repeating the loop. I had some problems with unpacking shortened URLs, such as bit.ly or tinylink, so I put in extra checks that the URI resolved to an http or https before saving it to the file. Not every link could be resolved - some links were protected, forbidden, or behind some wall which meant I could not access them through crawling. After resolving all of the URIs, I then sorted and identified all the unique URI-Rs, saving them into a file called unique_resolved_uris. I ended up with 1046 URI-Rs.
 
 ---
 
