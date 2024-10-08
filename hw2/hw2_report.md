@@ -391,7 +391,8 @@ The table shows the number of URI-Rs that have a number of mementos in the bin r
 ### Q4 Commentary:
 *Q: What can you say about the relationship between the age of a URI-R and the number of its mementos?*
 
-*Q: What URI-R had the oldest memento? Did that surprise you?
+*Q: What URI-R had the oldest memento? Did that surprise you?*
+The URI-R with the oldest memento, 10214 days (almost 28 years), is https://www.boston.com/. 
 
 *Q: How many URI-Rs had an age of < 1 week, meaning that their first memento was captured the same week you collected the data?*
 
