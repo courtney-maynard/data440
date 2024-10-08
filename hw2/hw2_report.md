@@ -386,6 +386,8 @@ The table shows the number of URI-Rs that have a number of mementos in the bin r
 
 ### Q4 Results:
 
+<img src="age_vs_num_mementos.png">
+
 ### Q4 Commentary:
 *Q: What can you say about the relationship between the age of a URI-R and the number of its mementos?*
 
