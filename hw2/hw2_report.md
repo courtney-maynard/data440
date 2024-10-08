@@ -9,6 +9,10 @@
 ### Parts One and Two Code: Collecting Tweets + Extracting Links from Tweets
 
 I created one program to both collect the tweets and extract the links from the tweets corresponding to a given keyword.
+```console
+(base) courtneymaynard@Courtneys-MacBook-Pro-2 data440 % python3 collect_uris_tweets.py
+```
+
 ```python
 # IMPORTS
 from playwright.sync_api import sync_playwright
@@ -104,6 +108,9 @@ if __name__ == "__main__":
 
 After several attempts, I realized that Twitter had pretty strict rate limits, which meant that in order to search for more tweets I had to wait ~12 minutes. Because of this, it was not feasible for me to set up a loop to iterate through the different keywords, and I had to manually re-run the program for each new word I wanted to search. Thus, I ended up with 50+ named files corresponding to all of the collected tweets, and created another program to combine the links in all the files.
 
+```console
+(base) courtneymaynard@Courtneys-MacBook-Pro-2 data440 % python3 combine_links.py                                  ```
+                                            
 ```python
 '''combining all links from the various text files into one file'''
 
@@ -119,7 +126,13 @@ with open(combined_file, 'w') as outfile:
 
 ### Commentary:
 
+I began by writing the code to collect the tweets and testing in small batches, then looking at the raw output of the tweets in order to understand how to process the tweets and get the links from tweets that did contain links. On these small batches, I tested the validity rate -- how many tweets actually have links, and valid links at that. I realized some keywords resulted in more links than others, but the average probability of a tweet having a link was about 10%, meaning to get 1000 links (not considering their ability to resolve to a URI-R or their uniqueness) I would need to gather 10,000 tweets. I ran into many issues with only being able to request between 500-700 tweets before Twitter was no longer letting me search for tweets. Thus, I began manually searching new tweets every 12-15 minutes. This process took me about three days, as I ended up having to request over 40,000 tweets in order to get 1000 unique URI-Rs. If I were to do this project again, I would set up a loop to iterate through keywords and set up a ~12 minute time out between requests so I wouldn't have to manually request each time.
+
 ### Parts Three and Four Code: Resolved URIs to Final Target URI
+```console
+(base) courtneymaynard@Courtneys-MacBook-Pro-2 data440 % ./resolve_uris.sh all_combined_links_FINAL.txt resolved_uris_FINAL.txt
+```
+
 ```shell
 #!/bin/bash
 
@@ -172,6 +185,9 @@ while IFS= read -r uri; do
 done < "$load_file"
 
 echo "final URIs are now saved to $save_file"
+```
+```console
+(base) courtneymaynard@Courtneys-MacBook-Pro-2 data440 % ./sort_unique_uris.sh resolved_uris_FINAL.txt unique_uris_FINAL.txt
 ```
 
 ```shell
