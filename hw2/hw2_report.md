@@ -367,6 +367,20 @@ plt.show()
 
 ### Q3 Results:
 
+The table shows the number of URI-Rs that have a number of mementos in the bin range.
+
+|Number of Mementos|Number of URI-Rs|
+|:---|:---|
+|0|431|
+|1|233|
+|2-10|184|
+|11-100|112|
+|101-1000|40|
+|1001-10000|29|
+|10001-100000|12|
+|100000+|5|
+
+
 ### Q3 Commentary:
 *Q: What URI-Rs had the most mementos? Did that surprise you?*
 
