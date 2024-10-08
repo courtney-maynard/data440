@@ -417,6 +417,26 @@ The URI-R with the oldest memento, 10214 days (almost 28 years), is https://www.
 The URI-R with the second oldest memento, 10196 days, is https://io.net/. This site was created to help companies start an online presence. It makes logical sense that this would be one of the oldest URI-Rs, as others without technical experience who want to create websites would have to utilize a service like io.net. 
 
 *Q: How many URI-Rs had an age of < 1 week, meaning that their first memento was captured the same week you collected the data?*
+```console
+(base) courtneymaynard@Courtneys-MacBook-Pro-2 data440 % python3 less_than_week.py
+[51, 128, 27, 8, 10, 3]
+the number of URI-Rs less than a week old:  227
+```
+
+```python
+import pandas as pd
+
+age_num_df = pd.read_csv('memento_age_and_number.csv')
+
+counts = []
+for age in range(1, 7):
+    counts.append(len(age_num_df[age_num_df['age_days'] == age]))
+
+print(counts)
+print('the number of URI-Rs less than a week old: ', sum(counts))
+```
+
+There were 227 URI-Rs less than a week old. 
 
 ---
 
