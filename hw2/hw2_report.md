@@ -128,7 +128,7 @@ with open(combined_file, 'w') as outfile:
 
 ### Commentary:
 
-I began by writing the code to collect the tweets and testing in small batches, then looking at the raw output of the tweets in order to understand how to process the tweets and get the links from tweets that did contain links. On these small batches, I tested the validity rate -- how many tweets actually have links, and valid links at that. I realized some keywords resulted in more links than others, but the average probability of a tweet having a link was about 10%, meaning to get 1000 links (not considering their ability to resolve to a URI-R or their uniqueness) I would need to gather 10,000 tweets. I ran into many issues with only being able to request between 500-700 tweets before Twitter was no longer letting me search for tweets. Thus, I began manually searching new tweets every 12-15 minutes. This process took me about three days, as I ended up having to request over 40,000 tweets in order to get 1000 unique URI-Rs. If I were to do this project again, I would set up a loop to iterate through keywords and set up a ~12 minute time out between requests so I wouldn't have to manually request each time.
+I began by writing the code to collect the tweets and testing in small batches, then looking at the raw output of the tweets in order to understand how to process the tweets and get the links from tweets that did contain links. On these small batches, I tested the validity rate - how many tweets actually have links, and valid links at that. I realized some keywords resulted in more links than others, but the average probability of a tweet having a link was about 10%, meaning to get 1000 links (not considering their ability to resolve to a URI-R or their uniqueness) I would need to gather 10,000 tweets. I ran into many issues with only being able to request between 500-700 tweets before Twitter was no longer letting me search for tweets. Thus, I began manually searching new tweets every 12-15 minutes. This process took me about three days, as I ended up having to request over 40,000 tweets in order to get 1000 unique URI-Rs. If I were to do this project again, I would set up a loop to iterate through keywords and set up a ~12 minute time out between requests so I wouldn't have to manually request each time.
 
 ### Parts Three and Four Code: Resolved URIs to Final Target URI
 ```console
@@ -208,7 +208,7 @@ echo "unique links have been saved to $unique_resolved_uris"
 ```
 
 ### Commentary:
-I created a shell script to work with all the links and use curl to request their headers. I chose the approach of iteratively requesting the headers, checking the HTTP status to see if a successful status is returned, checking for a new resolved URI, and if the URI is not the final location, repeating the loop. I had some problems with unpacking shortened URLs, such as bit.ly or tinylink, so I put in extra checks that the URI resolved to an http or https before saving it to the file. Not every link could be resolved - some links were protected, forbidden, or behind some wall which meant I could not access them through crawling. After resolving all of the URIs, I then sorted and identified all the unique URI-Rs, saving them into a file called unique_resolved_uris. I ended up with 1046 URI-Rs.
+I created a shell script to work with all the links and use curl to request their headers. I chose the approach of iteratively requesting the headers, checking the HTTP status to see if a successful status is returned, checking for a new resolved URI, and if the URI is not the final location, repeating the loop. I had some problems with unpacking shortened URLs, such as bit.ly or tinylink, so I put in extra checks that the URI resolved to an http or https before saving it to the file. Not every link could be resolved - some links were protected, forbidden, or behind some wall which meant I could not access them through crawling. After resolving all of the URIs, I then sorted and identified all the unique URI-Rs, saving them into a file called unique_uris_FINAL. I ended up with 1046 URI-Rs.
 
 ---
 
@@ -218,7 +218,7 @@ I created a shell script to work with all the links and use curl to request thei
 ```shell
 #!/bin/bash
 
-file_of_links="timemap_test_file.txt"
+file_of_links="unique_uris_FINAL.txt"
 num_links=1
 
 # want to save the number of mementos during this process, 
