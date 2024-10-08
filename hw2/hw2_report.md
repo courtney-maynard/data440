@@ -47,7 +47,8 @@ extract_links()
     - for each tweet, find the url entitity if it exists, and discard all irrelevant primarily
     audio/visual link, keeping all other links found
     - outputs the validity ratio to understand how many links result from every twitter request batch
-    - writes and saves all links into a test file'''
+    - writes and saves all links into a test file
+'''
 def extract_links():
 
     tweet_content = []
