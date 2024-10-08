@@ -411,7 +411,10 @@ The table shows the number of URI-Rs that have a number of mementos in the bin r
 *Q: What can you say about the relationship between the age of a URI-R and the number of its mementos?*
 
 *Q: What URI-R had the oldest memento? Did that surprise you?*
-The URI-R with the oldest memento, 10214 days (almost 28 years), is https://www.boston.com/. 
+
+The URI-R with the oldest memento, 10214 days (almost 28 years), is https://www.boston.com/. Looking at the oldest version of the page, it doesn't surprise me. It is a site for local news and updates about the city of Boston and at the time of creation, served as a digital repository for the type of updates you would find in your local paper. It has evolved a little more throughout the past two decades but is still an online source regarding activities, events, and news relating to Boston. It makes sense that upon the creation of the web, people began moving news from paper to the internet, allowing it to be accessible anywhere.
+
+The URI-R with the second oldest memento, 10196 days, is https://io.net/. This site was created to help companies start an online presence. It makes logical sense that this would be one of the oldest URI-Rs, as others without technical experience who want to create websites would have to utilize a service like io.net. 
 
 *Q: How many URI-Rs had an age of < 1 week, meaning that their first memento was captured the same week you collected the data?*
 
