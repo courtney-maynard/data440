@@ -406,6 +406,7 @@ I decided to create one file for the analysis of date-times and number of mement
 *Q: What URI-Rs had the most mementos? Did that surprise you?*
 
 Five URI-Rs had over 100k mementos.
+|URI-R|Number of Mementos|
 |:---|:---|
 | https://naturalnews.com/ | 111628 |
 | https://www.boston.com/ | 232180 |
