@@ -401,7 +401,18 @@ The table shows the number of URI-Rs that have a number of mementos in the bin r
 
 
 ### Q3 Commentary:
+I decided to create one file for the analysis of date-times and number of mementos. Using the saved json files from the previous steps, I was able to find the oldest datetime associated with each URI-R. Since I gave each link its own numbered json file, it was easier to match up the datetime and number of mementos with each URI-R and save it in a dataframe, then csv, for analysis.
+
 *Q: What URI-Rs had the most mementos? Did that surprise you?*
+
+Five URI-Rs had over 100k mementos.
+https://naturalnews.com/ --> 111628
+https://www.boston.com/ --> 232180
+https://www.dailymail.co.uk/ --> 252943
+https://www.eventbrite.com --> 483904
+https://www.nj.com:443/ --> 197561
+
+I does not surprise me that four out of the five URI-Rs (all except eventbrite) with the highest number of mementos are news sites, as they are likely archived often in order to retain the content of all of the news stories. Since these sites deal with a high volume of content, it is logical that they would have many mementos over time to capture all of the content and save it. Eventbrite is a website which posts different events occuring around the world, which also makes sense for having a high number of mementos because after events occur, the content is likely archived to maintain a history of events. Due to the sheer volume of events posted about or hosted through Eventbrite, a large number of mementos makes sense. 
 
 ### Q4 Results:
 
