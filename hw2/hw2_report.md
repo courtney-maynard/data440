@@ -401,6 +401,7 @@ The table shows the number of URI-Rs that have a number of mementos in the bin r
 
 
 ### Q3 Commentary:
+
 I decided to create one file for the analysis of date-times and number of mementos. Using the saved json files from the previous steps, I was able to find the oldest datetime associated with each URI-R. Since I gave each link its own numbered json file, it was easier to match up the datetime and number of mementos with each URI-R and save it in a dataframe, then csv, for analysis.
 
 *Q: What URI-Rs had the most mementos? Did that surprise you?*
@@ -422,6 +423,7 @@ I does not surprise me that four out of the five URI-Rs (all except eventbrite) 
 
 ### Q4 Commentary:
 *Q: What can you say about the relationship between the age of a URI-R and the number of its mementos?*
+
 Older URI-Rs tend to have more mementos than younger URI-Rs, however, not all old URI-Rs have many mementos. Most younger pages have a small number of mementos, while the number for older pages is more varied. Older pages have likely seen more updates and timestamps over time, however, there could be some pages that have stayed unchanged for long periods and may not have as many mementos associated with them. Thus, as a URI-R gets older, it is more likely it will have more mementos associated with it, but there is not a strictly linear relationship between age and the number of mementos; the graph appears to follow a slightly stretched exponential distribution relating age of URI-Rs to the number of mementos.
 
 *Q: What URI-R had the oldest memento? Did that surprise you?*
@@ -460,6 +462,10 @@ There were 227 URI-Rs less than a week old.
 
 [Marathon Training Conifer Collection]https://conifer.rhizome.org/cbm_data_scie/marathon_training
 
+<img src="pages_conifer_extra_credit.png">
+
+<img src="urls_conifer_extra_credit.png">
+
 ### Commentary:
 *Q: Why did you choose this particular topic?*
 
@@ -470,6 +476,7 @@ I chose to look at sites relating to marathon training because I am training for
 One issue I ran into was that the webpage loaded briefly in Conifer and I began archiving it, then within 5-10 seconds the screen showed 'Page Not Found' and I was unable to save the archive, even though I had captured it briefly. Additionally, I didn't like that you couldn't delete archives without deleting the entire collection.
 
 *Q: Do the archived webpages look like the original webpages?*
+
 The archived webpages do look like the original webpages, however, if you try to navigate to any link, even internal, you are not able to unless you archived that sub page/linked page as well.
 
 *Q: How many URLs were archived in the WARC file? How does this compare to the number of Pages?*
