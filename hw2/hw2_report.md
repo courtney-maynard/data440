@@ -215,6 +215,14 @@ I created a shell script to work with all the links and use curl to request thei
 ## Q2: Get TimeMaps for Each URI
 
 ### Code:
+```console
+(base) courtneymaynard@Courtneys-MacBook-Pro-2 data440 % ls -l ./memgator-darwin-amd64
+-rw-r--r--@ 1 courtneymaynard  staff  8814576 Oct  6 20:42 ./memgator-darwin-amd64
+(base) courtneymaynard@Courtneys-MacBook-Pro-2 data440 % chmod +x ./memgator-darwin-amd64
+(base) courtneymaynard@Courtneys-MacBook-Pro-2 data440 % ./memgator_execute.sh
+```
+
+
 ```shell
 #!/bin/bash
 
