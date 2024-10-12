@@ -222,7 +222,6 @@ I created a shell script to work with all the links and use curl to request thei
 (base) courtneymaynard@Courtneys-MacBook-Pro-2 data440 % ./memgator_execute.sh
 ```
 
-
 ```shell
 #!/bin/bash
 
@@ -257,7 +256,7 @@ done < "$file_of_links"
 
 ### Commentary:
 
----
+I first ensured that I had executable permissions for the memgator software, as seen in my command line excerpts above. I saved each URI-Rs timemap information to a specific numbered json file, to make it easier to reference back the URI at different points of time during the analysis. I decided to save both the compressed json file and the number of mementos for each URI-R with one program and in one step, to limit the number of times I would need to re-access the json file later. Additionally, it served as an easy 'sanity test' to see if I was collecting the json information correctly because I knew how many mementos to expect for a test subset of links I used. In the cases that there were no mementos found, I outputed zero so that the correct numbering would still hold in the memento count file, instead of essentially 'skipping' that link. This part of the project took the longest to run; I set up my computer to run overnight and it took about 8 hours to gather the timemaps for all 1000 links.
 
 ## Q3: Analyze Mementos Per URI-R and Q4: Analyze Datetimes of Mementos 
 
