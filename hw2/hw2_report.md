@@ -458,16 +458,23 @@ There were 227 URI-Rs less than a week old.
 
 ### Results:
 
+[Marathon Training Conifer Collection]https://conifer.rhizome.org/cbm_data_scie/marathon_training
 
 ### Commentary:
 *Q: Why did you choose this particular topic?*
 
+I chose to look at sites relating to marathon training because I am training for the Richmond Marathon and I thought it would be interesting to look at archives of different sites to see how their training suggestions may have changed over time. However, I then realized that Conifer actually allows you to manually archive pages, so I would not be looking 'into the past'. 
+
 *Q: Did you have any issues in archiving the webpages?*
 
+One issue I ran into was that the webpage loaded briefly in Conifer and I began archiving it, then within 5-10 seconds the screen showed 'Page Not Found' and I was unable to save the archive, even though I had captured it briefly. Additionally, I didn't like that you couldn't delete archives without deleting the entire collection.
+
 *Q: Do the archived webpages look like the original webpages?*
+The archived webpages do look like the original webpages, however, if you try to navigate to any link, even internal, you are not able to unless you archived that sub page/linked page as well.
 
 *Q: How many URLs were archived in the WARC file? How does this compare to the number of Pages?*
 
+I archived 12 pages, and 2211 URLs were archived. URLs pertaining to javascript and media elements, among others, were saved, contributing the the number nearly 200x the number of pages saved. 
 
 
 
