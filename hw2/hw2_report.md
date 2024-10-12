@@ -460,10 +460,12 @@ There were 227 URI-Rs less than a week old.
 
 ### Results:
 
-[Marathon Training Conifer Collection]https://conifer.rhizome.org/cbm_data_scie/marathon_training
+[Marathon Training Conifer Collection](https://conifer.rhizome.org/cbm_data_scie/marathon_training)
 
+List of Pages Loaded From WARC Files
 <img src="pages_conifer_extra_credit.png">
 
+URLs Archived in WARC File
 <img src="urls_conifer_extra_credit.png">
 
 ### Commentary:
