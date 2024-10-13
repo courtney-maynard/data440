@@ -8,7 +8,7 @@
 
 ### Parts One and Two Code: Collecting Tweets + Extracting Links from Tweets
 
-I created one program to both collect the tweets and extract the links from the tweets corresponding to a given keyword.
+I created one program to collect tweets and extract links from them corresponding to a given keyword.
 
 ```console
 (base) courtneymaynard@Courtneys-MacBook-Pro-2 data440 % python3 collect_uris_tweets.py
@@ -107,7 +107,7 @@ if __name__ == "__main__":
 
 ```
 
-After several attempts, I realized that Twitter had pretty strict rate limits, which meant that in order to search for more tweets I had to wait ~12 minutes. Because of this, it was not feasible for me to set up a loop to iterate through the different keywords, and I had to manually re-run the program for each new word I wanted to search. Thus, I ended up with 30+ named files corresponding to all of the collected tweets, and created another program to combine the links in all the files.
+After several attempts, I realized that Twitter had strict rate limits, which meant that to search for more tweets I had to wait ~12 minutes. Because of this, it was not feasible for me to set up a loop to iterate through the different keywords, and I had to manually re-run the program for each new word I wanted to search. Thus, I ended up with 30+ named files corresponding to all the collected tweets, and I created another program to combine the links across the files.
 
 ```console
 (base) courtneymaynard@Courtneys-MacBook-Pro-2 data440 % python3 combine_links.py
@@ -128,7 +128,7 @@ with open(combined_file, 'w') as outfile:
 
 ### Commentary:
 
-I began by writing the code to collect the tweets and testing in small batches, then looking at the raw output of the tweets in order to understand how to process the tweets and get the links from tweets that did contain links. On these small batches, I tested the validity rate - how many tweets actually have links, and valid links at that. I realized some keywords resulted in more links than others, but the average probability of a tweet having a link was about 10%, meaning to get 1000 links (not considering their ability to resolve to a URI-R or their uniqueness) I would need to gather 10,000 tweets. I ran into many issues with only being able to request between 500-700 tweets before Twitter was no longer letting me search for tweets. Thus, I began manually searching new tweets every 12-15 minutes. This process took me about three days, as I ended up having to request over 40,000 tweets in order to get 1000 unique URI-Rs. If I were to do this project again, I would set up a loop to iterate through keywords and set up a ~12 minute time out between requests so I wouldn't have to manually request each time.
+I began by writing the code to collect the tweets and testing in small batches, then looking at the raw output of the tweets to understand how to process the tweets and get the links from tweets that did contain links. I tested the validity rate on these small batches - how many tweets contain links. I realized some keywords resulted in more links than others but the average probability of a tweet having a link was about 10%, meaning to get 1000 links (not considering their ability to resolve to a URI-R or their uniqueness) I would need to gather 10,000 tweets. I ran into many issues with only being able to request between 500-700 tweets before Twitter was no longer letting me search for tweets due to the rate limits. Thus, I began manually searching new tweets every 12-15 minutes. This process was the most time-intensive of the project, as I manually requested over 40,000 tweets to get 1000 unique URI-Rs. If I were to do this project again, I would set up a loop to iterate through keywords and set up a ~12 minute time-out between requests so I wouldn't need to manually request each time.
 
 ### Parts Three and Four Code: Resolved URIs to Final Target URI
 ```console
@@ -208,7 +208,7 @@ echo "unique links have been saved to $unique_resolved_uris"
 ```
 
 ### Commentary:
-I created a shell script to work with all the links and use curl to request their headers. I chose the approach of iteratively requesting the headers, checking the HTTP status to see if a successful status is returned, checking for a new resolved URI, and if the URI is not the final location, repeating the loop. I had some problems with unpacking shortened URLs, such as bit.ly or tinylink, so I put in extra checks that the URI resolved to an http or https before saving it to the file. Not every link could be resolved - some links were protected, forbidden, or behind some wall which meant I could not access them through crawling. After resolving all of the URIs, I then sorted and identified all the unique URI-Rs, saving them into a file called unique_uris_FINAL. I ended up with 1046 URI-Rs.
+I created a shell script to work with all the links and used curl to request their headers. I chose the approach of iteratively requesting the headers, checking the HTTP status to see if a successful status is returned, checking for a new resolved URI, and if the URI is not the final location, repeating the loop. I had some problems with unpacking shortened URLs, such as bit.ly or tinylink, so I put in extra checks that the URI resolved to an http or https before saving it to the file. Not every link could be resolved - some links were protected, forbidden, or behind some wall which meant I could not access them through crawling. After resolving the URIs, I sorted and identified all the unique URI-Rs, saving them into a file called unique_uris_FINAL. I ended up with 1046 URI-Rs.
 
 ---
 
@@ -256,7 +256,7 @@ done < "$file_of_links"
 
 ### Commentary:
 
-I first ensured that I had executable permissions for the memgator software, as seen in my command line excerpts above. I saved each URI-Rs timemap information to a specific numbered json file, to make it easier to reference back the URI at different points of time during the analysis. I decided to save both the compressed json file and the number of mementos for each URI-R with one program and in one step, to limit the number of times I would need to re-access the json file later. Additionally, it served as an easy 'sanity test' to see if I was collecting the json information correctly because I knew how many mementos to expect for a test subset of links I used. In the cases that there were no mementos found, I outputed zero so that the correct numbering would still hold in the memento count file, instead of essentially 'skipping' that link. This part of the project took the longest to run; I set up my computer to run overnight and it took about 8 hours to gather the timemaps for all 1000 links.
+I first ensured that I had executable permissions for the memgator software, as seen in my command line excerpts above. I saved each URI-R's timemap information to a specific numbered JSON file, to make it easier to reference the URI at different points during the analysis. I decided to save the number of mementos for each URI-R before compressing the JSON file and returning that as the final output in order to limit the number of times I would need to re-access the JSON file later. Additionally, it served as an easy 'sanity test' to see if I was collecting the JSON information correctly because I knew how many mementos to expect for a test subset of links I used. In the cases of no mementos found, I output zero to the memento counting file so that the correct numbering would still hold, instead of essentially 'skipping' that link. This part of the project took the longest to run; I set up my computer to run overnight and it took about 8 hours to gather the timemaps for all 1000 links.
 
 ## Q3: Analyze Mementos Per URI-R and Q4: Analyze Datetimes of Mementos 
 
@@ -409,7 +409,7 @@ The table shows the number of URI-Rs that have a number of mementos in the bin r
 
 ### Q3 Commentary:
 
-I decided to create one file for the analysis of date-times and number of mementos. Using the saved json files from the previous steps, I was able to find the oldest datetime associated with each URI-R. Since I gave each link its own numbered json file, it was easier to match up the datetime and number of mementos with each URI-R and save it in a dataframe, then csv, for analysis.
+I created one file to analyze date-times and the number of mementos. Using the saved JSON files from the previous steps, I was able to find the oldest date-time associated with each URI-R. Since I gave each link its own numbered JSON file, it was easier to match up the datetime and number of mementos with each URI-R and save it in a dataframe, then CSV, for analysis.
 
 *Q: What URI-Rs had the most mementos? Did that surprise you?*
 
@@ -422,7 +422,7 @@ Five URI-Rs had over 100k mementos.
 | https://www.eventbrite.com | 483904 |
 | https://www.nj.com:443/ | 197561 |
 
-I does not surprise me that four out of the five URI-Rs (all except eventbrite) with the highest number of mementos are news sites, as they are likely archived often in order to retain the content of all of the news stories. Since these sites deal with a high volume of content, it is logical that they would have many mementos over time to capture all of the content and save it. Eventbrite is a website which posts different events occuring around the world, which also makes sense for having a high number of mementos because after events occur, the content is likely archived to maintain a history of events. Due to the sheer volume of events posted about or hosted through Eventbrite, a large number of mementos makes sense. 
+It does not surprise me that four out of the five URI-Rs (all except Eventbrite) with the highest number of mementos are news sites, as they are likely archived often to retain the high volume of content of all of the news stories. Eventbrite is a website that posts different events occurring around the world, which also makes sense to have a high number of mementos because after events occur, the content is likely archived to maintain a history of events. Due to the sheer volume of events posted about or hosted through Eventbrite, a higher number of mementos make sense. 
 
 ### Q4 Results:
 
@@ -435,7 +435,7 @@ Older URI-Rs tend to have more mementos than younger URI-Rs, however, not all ol
 
 *Q: What URI-R had the oldest memento? Did that surprise you?*
 
-The URI-R with the oldest memento, 10214 days (almost 28 years), is https://www.boston.com/. Looking at the oldest version of the page, it doesn't surprise me. It is a site for local news and updates about the city of Boston and at the time of creation, served as a digital repository for the type of updates you would find in your local paper. It has evolved a little more throughout the past two decades but is still an online source regarding activities, events, and news relating to Boston. It makes sense that upon the creation of the web, people began moving news from paper to the internet, allowing it to be accessible anywhere.
+I collected these mementos on October 6th, so all ages are counting from that day. The URI-R with the oldest memento, 10214 days (almost 28 years), is [boston.com](https://www.boston.com/). Looking at the oldest version of the page, it doesn't surprise me. It is a site for local news and updates about the city of Boston and at the time of creation, served as a digital repository for the type of updates you would find in your local paper. It has evolved a little more throughout the past two decades but is still an online source regarding activities, events, and news relating to Boston. It makes sense that upon the creation of the web, people began moving news from paper to the internet, allowing it to be accessible anywhere.
 
 The URI-R with the second oldest memento, 10196 days, is https://io.net/. This site was created to help companies start an online presence. It makes logical sense that this would be one of the oldest URI-Rs, as others without technical experience who want to create websites would have to utilize a service like io.net. 
 
@@ -478,19 +478,19 @@ URLs Archived in WARC File
 ### Commentary:
 *Q: Why did you choose this particular topic?*
 
-I chose to look at sites relating to marathon training because I am training for the Richmond Marathon and I thought it would be interesting to look at archives of different sites to see how their training suggestions may have changed over time. However, I then realized that Conifer actually allows you to manually archive pages, so I would not be looking 'into the past'. 
+I chose to look at sites relating to marathon training because I am training for the Richmond Marathon and I thought it would be interesting to look at archives of different sites to see how their training suggestions may have changed over time. However, I then realized that Conifer actually allows you to manually archive pages in the present time, so I would not be looking 'into the past'. 
 
 *Q: Did you have any issues in archiving the webpages?*
 
-One issue I ran into was that the webpage loaded briefly in Conifer and I began archiving it, then within 5-10 seconds the screen showed 'Page Not Found' and I was unable to save the archive, even though I had captured it briefly. Additionally, I didn't like that you couldn't delete archives without deleting the entire collection.
+One issue I ran into was that a webpage loaded briefly in Conifer and I began archiving it, then within 5-10 seconds the screen showed 'Page Not Found' and I was unable to save the archive, even though I had captured it briefly. Additionally, I didn't like that you couldn't delete archives without deleting the entire collection.
 
 *Q: Do the archived webpages look like the original webpages?*
 
-The archived webpages do look like the original webpages, however, if you try to navigate to any link, even internal, you are not able to unless you archived that sub page/linked page as well.
+The archived webpages do look like the original webpages, however, if you try to navigate to any link, even internal, you are not able to unless you archived that sub-page/linked page as well.
 
 *Q: How many URLs were archived in the WARC file? How does this compare to the number of Pages?*
 
-I archived 12 pages, and 2211 URLs were archived. URLs pertaining to javascript and media elements, among others, were saved, contributing the the number nearly 200x the number of pages saved. 
+I archived 12 pages, and 2211 URLs were archived. URLs pertaining to javascript and media elements, among others, were saved, contributing to the number of URLs nearly 200x the number of pages saved. 
 
 
 
