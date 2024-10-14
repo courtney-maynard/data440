@@ -7,6 +7,7 @@
 ## Q1: Data Collection
 
 ### Part One: Download Raw HTML With Hash Named File
+
 ```shell
 #!/bin/bash
 
@@ -14,7 +15,7 @@ uris_file="1000_uris_hw3.txt"
 hashmap_file="hashmaps_hw3.txt"
 
 # delete existing hashmaps file
-> "$hash_map_file"
+> "$hashmap_file"
 
 # read in each URI from the 1000
 while IFS= read -r each_uri; do
@@ -31,6 +32,9 @@ while IFS= read -r each_uri; do
 done < "$uris_file"
 
 ```
+### Commentary:
+
+
 
 ### Part Two: Extract Text Content
 ```python
