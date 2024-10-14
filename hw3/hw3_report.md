@@ -34,7 +34,7 @@ done < "$uris_file"
 ```
 ### Commentary:
 
-
+I created a shell script to read each URI in from the text file containing all 1000 URI-Rs. Then, for each URI, a hash is created and the html is downloaded and saved in a file with that hash value as the name and both the hash value and URI are added to a hashmap file which is also saved.
 
 ### Part Two: Extract Text Content
 ```python
