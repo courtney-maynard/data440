@@ -189,6 +189,10 @@ Total Number of Documents with 'Career': 58
 (base) courtneymaynard@Courtneys-MacBook-Pro-2 processed_html_files % wc -w 8376c58e4bbbc685f5e2271fd489caca_processed.txt
     1350 8376c58e4bbbc685f5e2271fd489caca_processed.txt
 ```
+
+I used the command line to count the number of files with occurences of the chosen word, 'career', across the entire corpus of documents. I made sure that I was counting the actual number of files, not the number of lines that the word appears in, as this would overestimate the number of documents. Only 58 documents contained the word 'career'. I chose ten documents and searched for occurences of the word, ensuring that the case of the word was not taken into account.
+
+
 **Table 1. Indicating the TF, IDF, and TF-IDF Values For Each Link, Ranked by TF-IDF**
 
 |TF-IDF |TF |IDF  |URI
@@ -204,3 +208,17 @@ Total Number of Documents with 'Career': 58
 |0.00091|0.00051|1.78|https://www.hayfestival.com/m-210-dallas-2024.aspx?skinid=23&localesetting=en-GB&currencysetting=USD&hpcurr=USD&pagenum=1&resetfilters=true
 |0.000012|0.0000068|1.78|https://www.marketingaiinstitute.com/blog/the-ai-show-episode-117?utm_campaign=MAII%3A%20Social%20Media&utm_content=310156390&utm_medium=social&utm_source=twitter&hss_channel=tw-769616948522946560
 
+
+To calculate TF: occurence in document/words in document
+- for each document, I used the count of word occurence divided by the total number of words in the document
+- Example for URI ONE: 3/5254 = 0.00057
+  
+To calculate IDF: log<sub>2</sub>(total documents in corpus/documents with term)
+- I used 35 billion as the number of total documents in the corpus of the web, and 10.19 billion as the number of documents with the term.
+- I found 10.19 billion by performing a quick google search of the term 'career' and seeing how many results were returned.
+- log<sub>2</sub>(35 billion/ 10.19 billion) = log<sub>2</sub>(3.43) = 1.78
+
+<img src="career_google_search.png">
+
+TF-IDF: TF * IDF
+- Example for URI ONE: 0.00057 * 1.78 = 0.001
