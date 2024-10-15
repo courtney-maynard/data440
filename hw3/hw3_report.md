@@ -97,6 +97,12 @@ print('The number of html containing files is: ', total_valid)
 ## Q2: Rank with TF-IDF
 Word: Career
 
+Total Number of Documents with 'Career': 58
+```console
+(base) courtneymaynard@Courtneys-MacBook-Pro-2 processed_html_files % grep -irm 1 career . | wc -l 
+      58
+```
+
 [URI One](https://www.keepingtheNHShonest.co.uk/) Law/Healthcare
 ```console
 (base) courtneymaynard@Courtneys-MacBook-Pro-2 processed_html_files % grep -o -i career 0d9e10232a60b86214399cc6525aacd9_processed.txt | wc -l 
@@ -176,4 +182,18 @@ Word: Career
 (base) courtneymaynard@Courtneys-MacBook-Pro-2 processed_html_files % wc -w 8376c58e4bbbc685f5e2271fd489caca_processed.txt
     1350 8376c58e4bbbc685f5e2271fd489caca_processed.txt
 ```
+**Table 1. Indicating the TF, IDF, and TF-IDF Values For Each Link, Ranked by TF-IDF**
+
+|TF-IDF |TF |IDF  |URI
+|------:|--:|---:|---
+|0.0196|0.011|1.78|https://datascience.virginia.edu/news/msds-alumni-profile-levi-davis
+|0.011|0.0059|1.78|https://ellenor.org/news/angela/
+|0.0094|0.0053|1.78|https://www.espn.com/nfl/story/_/id/40919095/60k-club-passing-yards-quarterback-nfl-history?utm_source=dlvr.it&utm_medium=twitter
+|0.0066|0.0037|1.78|https://www.simplek12.com/?utm_content=310685313&utm_medium=social&utm_source=twitter&hss_channel=tw-133020661
+|0.0037|0.0021|1.78|https://the-avidreader.blogspot.com/2024/10/Off-Edge-10-02-24-BT-RABT.html
+|0.0032|0.0018|1.78|https://thectoclub.com/news/best-data-science-newsletters/?ref=quuu
+|0.0011|0.0006|1.78|https://nhwc.janeapp.com:443/
+|0.0010|0.00057|1.78|https://www.keepingtheNHShonest.co.uk/
+|0.00091|0.00051|1.78|https://www.hayfestival.com/m-210-dallas-2024.aspx?skinid=23&localesetting=en-GB&currencysetting=USD&hpcurr=USD&pagenum=1&resetfilters=true
+|0.000012|0.0000068|1.78|https://www.marketingaiinstitute.com/blog/the-ai-show-episode-117?utm_campaign=MAII%3A%20Social%20Media&utm_content=310156390&utm_medium=social&utm_source=twitter&hss_channel=tw-769616948522946560
 
