@@ -34,7 +34,7 @@ done < "$uris_file"
 ```
 ### Commentary:
 
-I created a shell script to read each URI in from the text file containing all 1000 URI-Rs. Then, for each URI, a hash is created and the html is downloaded and saved in a file with that hash value as the name and both the hash value and URI are added to a hashmap file which is also saved.
+I created a shell script to read each URI in from the text file containing all 1000 URI-Rs. Then, for each URI, a hash is created and the html is downloaded and saved in a file with that hash value as the name and both the hash value and URI are added to a hashmap file which is also saved. Even though I had already named my links numerically, I decided to do the hashing in order to get some experience with hashing. 
 
 ### Part Two: Extract Text Content
 ```python
@@ -92,6 +92,12 @@ print('The number of html containing files is: ', total_valid)
 
 ```
 ### Commentary
+
+I created a python program to extract the text content from the raw HTML. Rather than iterating through the folder containing all of the raw HTML files, I decided to use the hashmap file I created to load in one file at a time, store that hash value in temporary memory, extract the content, and then save valid content to a hashvalue named file of the processed content. Thus, each URI ended up with a unique hash value named raw and processed file. Throughout creation of this program, many errors were thrown as I tested extracting the content. I created try and except blocks to account for the HTMLExtractionErrors and UnicodeDecodeErrors that I was receiving. Additionally, I ensured I only saved content to a file if there was actually content to be found and not just an empty output that would result in a OB file. After this process was completed, I ended up with 733 content-containing processed files.
+
+*How many of your 1000 URIs produced useful text? If that number was less than 1000, did that surprise you?*
+733 URIs ended up producing content containing text; there were several URIs that had no content, as well as others that flagged errors such as HTMLExtractionErrors and UnicodeDecodeErrors. This did not surprise me, as I didn't expect all of the webpages to have extractable content. Some of the links were to registration sites or may have been primarily audio or visual, though I filtered for those initially, so they didn't have any pure textual content.
+
 ---
 
 ## Q2: Rank with TF-IDF
