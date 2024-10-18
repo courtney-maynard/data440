@@ -1,0 +1,35 @@
+Fuente: @soy502
+ChatGPT será más fácil de usar: Así podrás escribir y programar en segundos.
+El chatbot impulsado con inteligencia artificial de OpenAI incorporará nuevas herramientas de escritura y codificación de forma predeterminada.
+OpenAI ha lanzado un nuevo diseño de la interfaz de ChatGPT llamado Canvas que promete transformar la interacción de los usuarios con la inteligencia artificial, haciéndola más eficiente y versátil.
+Este rediseño, anunciado por la compañía, va más allá del chat tradicional, ya que incorpora opciones adicionales para escritura y codificación, con el objetivo de facilitar el trabajo colaborativo.
+Una de las principales novedades es la herramienta Canvas, que ofrece una interfaz orientada a proyectos que requieren más que simples respuestas en una ventana de chat. Canvas permite a los usuarios resaltar secciones específicas del texto o código en las que desean que ChatGPT se enfoque, lo que mejora la precisión de las sugerencias y comentarios de la IA.
+Esta funcionalidad se asemeja a la de un editor de texto o un revisor de código, que no solo analiza las partes individuales, sino que también toma en cuenta el contexto completo del proyecto.
+"Hay un menú de accesos directos para que puedas pedirle a ChatGPT que ajuste la longitud de escritura, depure tu código y realice rápidamente otras acciones útiles", explica OpenAI
+Novedades de ChatGPT
+Canvas se activa automáticamente cuando ChatGPT detecta una situación en la que su uso podría ser beneficioso. Además, los usuarios pueden solicitar su apertura incluyendo la instrucción "usar Canvas" en su mensaje, lo que les permitirá emplear esta herramienta para trabajar en un proyecto ya existente.
+Los nuevos atajos de escritura que incluye Canvas de ChatGPT son:
+Sugerir ediciones: ChatGPT ofrece sugerencias y comentarios en línea.
+Ajustar la longitud: Edita la longitud del documento para que sea más corta o más larga.
+Cambiar el nivel de lectura: Ajusta el nivel de lectura o tono para que se adecúe a los parámetros de un trabajo de jardín de infantes o de posgrado.
+Añadir un toque final: Comprueba la gramática, la claridad y la coherencia.
+Agregar emojis: Agrega emojis relevantes para enfatizar y dar color.
+Los atajos de codificación incluyen:
+Revisar código: ChatGPT proporciona sugerencias para mejorar el código.
+Agregar registros: Inserta alertas de imprecisiones para ayudar a depurar y comprender el código.
+Agregar comentarios: Agrega comentarios al código para que sea más fácil de entender.
+Corregir errores: Detecta y reescribe el código problemático para resolver errores.
+Puerto a un lenguaje: Traduce código a JavaScript, TypeScript, Python, Java, C++ o PHP.
+"Canvas es un nuevo enfoque y la primera actualización importante de la interfaz visual de ChatGPT desde que la lanzamos hace dos años", señaló la compañía.
+Cómo acceder al nuevo ChatGPT
+La interfaz de Canvas se encuentra actualmente en versión beta y está disponible seleccionando la opción "GPT-4 con Canvas" en el menú desplegable del selector de modelos de ChatGPT.
+En esta fase, está siendo implementada globalmente para los usuarios de ChatGPT Plus y Teams, con planes de ampliar el acceso la próxima semana a los usuarios de Enterprise y Edu.
+Una vez que Canvas salga de la versión beta, estará disponible para los usuarios gratuitos de ChatGPT y se activará automáticamente cuando ChatGPT detecte un escenario en el que pueda ser útil, según OpenAI.
+Consejos para preguntar a ChatGPT
+Formular una pregunta a ChatGPT es un procedimiento simple. A continuación, se ofrecen algunos consejos para hacerlo de manera más eficaz:
+Ser claro y específico: Cuanto más precisa y detallada sea la pregunta, más adecuada será la respuesta. Por ejemplo, en lugar de preguntar "Háblame de historia", es preferible algo como "¿Cuál fue la causa principal de la Revolución Francesa?".
+Incluir contexto: Aportar algo de contexto puede ayudar a obtener una respuesta más pertinente, especialmente si la pregunta se vincula a una conversación previa o a un tema concreto.
+Formular preguntas abiertas: Si se desea una respuesta más desarrollada, es útil optar por preguntas abiertas, como "¿Cuáles son las ventajas y desventajas de la energía solar?".
+Dividir las preguntas complejas: Si se tienen varias dudas, conviene separarlas en partes para que cada una pueda abordarse por separado.
+Solicitar ejemplos: Para aclaraciones o ilustraciones adicionales, se puede pedir ejemplos específicos.
+#generacion_news

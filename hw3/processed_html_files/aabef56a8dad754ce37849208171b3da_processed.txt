@@ -1,0 +1,19 @@
+rajeevsrinivasan.substack.com
+Ep. 140: Bharatiya Knowledge Systems can benefit from generativeAI
+Share this post
+rajeevsrinivasan.substack.com
+Audio playback is not supported on your browser. Please upgrade.
+Ep. 140: Bharatiya Knowledge Systems can benefit from generativeAI
+How can India protect its traditional knowledge, prevent it from being either digested or discarded, translate texts into Sanskrit or between Indian language, and pursue a different path for the tech?
+rajeevsrinivasan.substack.com
+I wrote a note in January regarding BKS (which I will not post because of some sensitive information), and here I share a summary, created by Google Gemini NotebookLM.
+Summary
+Rajeev Srinivasan argues that India can use technology to advance its traditional knowledge systems (BKS). He proposes developing a "BharatLLM" – a large language model trained on Indian texts – to preserve Bharatiya concepts and create a "Splinternet" of domain-specific text repositories. This would allow for machine translation into Sanskrit, protect intellectual property, and foster research in BKS. Srinivasan acknowledges challenges like access to computational resources and copyright issues, but believes that building these systems could benefit India's cultural heritage and technological advancements.
+The podcast above is also created by the same LM and its Deep dive audio output, which is amazing, and the male and female hosts are uncannily human.
+rajeevsrinivasan.substack.com
+Shadow Warrior by Rajeev Srinivasan
+An Indian/Hindu nationalist perspective on world affairs; as well as on technology and innovation; conversations with experts and with people just like you and me.
+An Indian/Hindu nationalist perspective on world affairs; as well as on technology and innovation; conversations with experts and with people just like you and me.
+Subscribe
+Recent Episodes
+Share

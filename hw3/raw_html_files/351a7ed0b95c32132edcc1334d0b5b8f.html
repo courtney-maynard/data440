@@ -1,0 +1,214 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<title>Science.gov</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="description" content="Science.gov is a gateway to government science information provided by U.S. Government science agencies, including research and development results.">  
+	<link rel="stylesheet" href="/styles/main.css">	  
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+	<script>
+		function scrollToTop(){
+			if (document.documentElement.scrollTop > 200) {
+				document.getElementById("backToTop").style.setProperty('right', '0px');
+			} else {
+				document.getElementById("backToTop").style.setProperty('right', '-100px');
+			}
+		}	
+	</script>
+
+	<style>		
+		main#home{
+			margin: 0;
+			width: 100%;
+			max-width: 100%;
+			flex: 1 0 auto;
+			display: flex;
+			flex-direction: column;
+		}		
+		
+		div#hero {
+			background: #fff url("images/SciGov_hero_1920-min.jpg");
+			background-size: cover;
+			flex: 1 0 auto;
+		}
+
+		div#hero aside {
+			background-color: #015683;
+			width: 370px;	
+			margin: 3em;
+			text-align: center;
+			position: relative;
+		}
+
+		div#hero aside p {
+			color: #fff;
+			font-size: 200%;
+			line-height: 1.25em;
+			text-align: left;
+			padding: 1em 1em .5em 1em;
+			margin-bottom: 0;
+		}
+
+		div#hero aside button {
+			margin-bottom: 1em;	
+			font-size: 120%;
+			font-weight: bold;
+		}
+
+		div#partners{
+			background-color: #e7f0f9;
+		}
+
+		div#CENDI{
+			font-family: Barlow, Candara, Arial, sans-serif;
+			font-size: 16px;
+			font-weight: bold;
+			display: flex;
+			align-items:center;	
+			justify-content: center;
+			margin-top: 1em;
+		}
+
+		div#CENDI img{
+			margin-left: .5em;
+			width: 100px;
+			height: 45px;
+		}
+
+		div#agencies{
+			text-align: center;
+			margin: 1em;
+		}
+
+		div#agencies h2{
+			font-weight: bold;
+			font-family: Barlow, Candara, Arial, sans-serif;
+			font-size: 16px;
+			margin: 0 0 .25em 0;
+		}
+
+		div#agencies img{
+			margin-right: .5em;
+			height: 84px;
+			width: 100px;
+		}
+	</style>
+
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-PL8SK8Q34R"></script>
+	<noscript><!--508 compliance--></noscript>
+	<script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-PL8SK8Q34R'); </script>
+	<noscript><!--508 compliance--></noscript> 	  
+  </head>
+  <body onscroll="scrollToTop()">
+	<noscript>Some elements on this page will not display correctly without Javascript.</noscript>
+	<header id="top">
+		<div id="official-site-container">
+			<input id="how-you-know" type="checkbox">
+			<div id="official-site">
+				<img src="/images/us_flag.png" alt="US Flag">An official website of the United States government 
+				<label for="how-you-know">Here's how you know <span class="material-symbols-outlined expand_more">expand_more</span><span class="material-symbols-outlined expand_less">expand_less</span></label>
+			</div>
+			
+			<div id="official-site-info">
+				<section>
+					<img src="/images/icon-dot-gov.png" alt="dot gov icon">
+					<div>
+						<div><strong>Official websites use .gov</strong></div>
+						<div>A <strong>.gov</strong> website belongs to an official government organization in the United States.</div>
+					</div>
+				</section>
+				<section>
+					<img src="/images/icon-https.png" alt="https lock icon">
+					<div>					
+						<div><strong>Secure .gov websites use HTTPS</strong></div>
+						<div>A <strong>lock ( <span class="material-symbols-outlined lock">lock</span> ) or https://</strong> means you've safely connected to the .gov website. Share sensitive information only on official, secure websites.</div>
+					</div>					
+				</section>				
+			</div>
+		</div>
+		<div id="banner-container">
+			<h1>Science.gov</h1>
+			<div id="logo"><a href="/index.html"><img src="/images/SciGov_logo.png" alt="Science.gov logo"></a></div>
+			<nav>
+				<label for="hamburger"><span class="material-symbols-outlined menu">menu</span></label><input type="checkbox" id="hamburger">
+				<ul class="menu">
+					<li><a href="/about.html">About Science.gov <span class="material-symbols-outlined expand_more">expand_more</span><span class="material-symbols-outlined expand_less">expand_less</span></a>
+						<ul class="sub-menu">
+							<li><a href="/faq.html">FAQs</a></li>
+							<li><a href="/help.html">Help</a></li>
+						</ul>				
+					</li>				
+					<li><a href="/Open-Science-Public-Access.html">Open Science & Public Access <span class="material-symbols-outlined expand_more">expand_more</span><span class="material-symbols-outlined expand_less">expand_less</span></a>
+						<ul class="sub-menu">
+							<li><a href="https://open.science.gov/" target="_blank">Open Science Announcements</a></li>
+							<li><a href="/Public-Access-Plans-Guidance.html">Public Access Plans & Guidance</a></li>
+							<li><a href="/Submissions-Public-Access.html">Submissions for Public Access</a></li>
+							<li><a href="/servicesandtools.html">Services for Public Access Collections</a></li>
+						</ul>
+					</li>
+					<li><a href="/Scientific-Integrity.html">Scientific Integrity <span class="material-symbols-outlined expand_more">expand_more</span><span class="material-symbols-outlined expand_less">expand_less</span></a>
+						<ul class="sub-menu">
+							<li><a href="/Scientific-Integrity-Policy.html">Policies</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<div id="search">
+		<div id="search-box">
+			<form id="search_form" action="https://www.science.gov/scigov/search.html" method="POST">
+				<input type="search" id="fullRecord" name="fullRecord" placeholder="Search for authoritative federal science information" required><button class="search-btn" type="submit"><span class="material-symbols-outlined search">search</span></button>
+				<div id="search-link"><a href="https://www.science.gov/scigov/desktop/en/search.html">Advanced Search</a></div>	
+				<label for="fullRecord" class="accessibility">Search</label>
+			</form>
+		</div>
+	</div>
+
+	<main id="home">
+		<div id="hero">		
+			<aside>
+				<p>Science.gov provides access to millions<br>of authoritative scientific research results from U.S. federal agencies.</p>
+				<button type="button" onclick="document.location='/about.html'">Learn More</button>
+			</aside>
+		</div>
+		<div id="partners">
+			<div id="CENDI"><span>Science.gov is governed by</span> <a href="https://www.cendi.gov/" target="_blank"><img src="/images/CENDI_logo.png" alt="CENDI logo"></a></div>
+			
+			<div id="agencies">
+				<h2>Federal Agency Members</h2>
+				<a href="https://www.usda.gov/" target="_blank"><img src="/images/agencies/USDA.png" alt="USDA"></a>
+				<a href="https://www.defense.gov/" target="_blank"><img src="/images/agencies/DOD.png" alt="DOD"></a>
+				<a href="https://discover.dtic.mil/" target="_blank"><img src="/images/agencies/DTIC.png" alt="DTIC"></a>
+				<a href="https://www.energy.gov/" target="_blank"><img src="/images/agencies/DOE.png" alt="DOE"></a>
+				<a href="https://www.dhs.gov/" target="_blank"><img src="/images/agencies/DHS.png" alt="DHS"></a>			
+				<a href="https://www.nasa.gov/" target="_blank"><img src="/images/agencies/NASA.png" alt="NASA"></a>
+				<a href="https://www.nist.gov/" target="_blank"><img src="/images/agencies/NIST.png" alt="NIST"></a>			
+				<a href="https://www.nlm.nih.gov/" target="_blank"><img src="/images/agencies/NIH.png" alt="NIH"></a>			
+				<a href="https://www.nsf.gov/" target="_blank"><img src="/images/agencies/NSF.png" alt="NSF"></a>			
+				<a href="https://www.ntis.gov/" target="_blank"><img src="/images/agencies/NTIS.png" alt="NTIS"></a>
+				<a href="https://www.transportation.gov/" target="_blank"><img src="/images/agencies/DOT.png" alt="DOT"></a>
+				<a href="https://www.usgs.gov/" target="_blank"><img src="/images/agencies/USGS.png" alt="USGS"></a>			
+			</div>
+		</div>
+	</main>
+
+	<a id="backToTop" href="#top"> Top </a>
+	<footer>		
+		<nav>
+			<ul class="links">
+				<li><a href="/sitemap.html">Site Map</a></li>
+				<li><a href="/members/index.html">Members Only</a></li>
+				<li><a href="/website-policies.html">Website Policies</a></li>
+				<li><a href="http://www.energy.gov/vulnerability-disclosure-policy" target="_blank">Vulnerability Disclosure Program</a></li>
+				<li><a href="/contact.html">Contact Us</a></li>
+			</ul>
+			<div class="small">Science.gov is maintained by the U.S. Department of Energy's <a href="https://www.osti.gov/" target="_blank">Office of Scientific and Technical Information</a>, in partnership with <a href="https://www.cendi.gov/" target="_blank">CENDI</a>.</div>
+		</nav>
+	</footer>
+  </body>
+</html>	

@@ -1,0 +1,13 @@
+Welcome to the State of Alaska’s Online Voter Registration System
+To use the Online Voter Registration System, you must have a valid Alaska driver's license or state ID card and 
+                the information you enter when registering must match the information on your Division of Motor Vehicles (DMV) record.  
+                If you do not have a valid Alaska driver's license or state ID, or your information cannot be validated, you may select to register 
+                using a paper registration form.
+You may use this system to 1) Register to vote or 2) Update your Voter Registration.
+Registration Instructions:
+Fill in all of the required fields on the application which are identified with *.
+You are not officially registered to vote until this application is approved.
+You should receive an acknowledgment within two to four weeks after submitting or mailing your registration.  Please contact your Division of Elections Region Office if you have not received any information by then.
+WARNING: If you provide false information on this application you can be convicted of a misdemeanor AS 15.56.050.
+Register Online with DMV Validation
+Register using Paper Form

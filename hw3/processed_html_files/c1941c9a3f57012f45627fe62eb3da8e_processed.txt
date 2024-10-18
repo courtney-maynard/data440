@@ -1,0 +1,24 @@
+Subscribe
+Spread awareness of open-source languages and tools within the data science and data-centric community.
+Hosted By
+Contact the Host
+If you’d like, you can join the waitlist.
+Please click on the button below to join the waitlist. You will be notified if additional spots become available.
+Join Waitlist
+You will be asked to verify token ownership with your wallet.
+About Event
+​Ready to unlock the future of AI with Vertex AI and Model Garden? 🚀 We’ll start with a quick intro to Vertex AI, where you’ll discover how Google’s platform is making AI development faster and more accessible. Then, we’ll dive into the magic of tuning open models on Vertex AI—showing you how to fine-tune models effortlessly and supercharge your projects. Next, we’ll bring the excitement to life with a live demo, giving you a front-row seat to real-world applications. But that’s not all! We’ll also cover how to deploy and serve these models, making scaling and performance management a breeze. To wrap things up, we’ll answer your burning questions in an interactive Q&A and then kick back for a happy hour, where you can connect, chat, and celebrate all things AI with fellow enthusiasts. 🎉 Limited spots available: https://lu.ma/6f8j23p2
+​Our second in-person meetup of the season is in San Francisco.
+​Event Details:
+​When: 6-8 pm, Tuesday, October 15
+​Where: Downtown San Francisco (Exact address will be provided upon registration)
+​Speaker: Ivan Nardini, Developer Relations Engineer at Google Cloud
+​He enables developers to build innovative AI and ML applications using their preferred libraries, models, and tools on Vertex AI, through code samples, online content, and events. Ivan has a master degree in Economics and Social Sciences from Bocconi University and he attended a specialized training in Data Science from Barcelona Graduate School of Economics.
+​Some useful links: • Get free access to more talks/trainings like this at Ai+ Training platform: https://hubs.li/H0Zycsf0 • ODSC blog: https://opendatascience.com/ • Slack Channel: https://hubs.li/Q02zdcSk0 • Code of conduct: https://odsc.com/code-of-conduct/
+Location
+details will be provided over email after your RSVP confirmation
+Presented by
+Subscribe
+Spread awareness of open-source languages and tools within the data science and data-centric community.
+Hosted By
+Contact the Host

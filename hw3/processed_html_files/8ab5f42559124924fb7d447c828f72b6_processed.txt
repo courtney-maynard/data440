@@ -1,0 +1,21 @@
+There's no denying this: ChatGPT is here, and it’s here to stay. The key is to find simple and effective ways to implement it to your advantage. You could try using ChatGPT to develop students' critical thinking skills. The language model can help stimulate analytical abilities, foster creativity, and deepen understanding. However, it's not tailored for teachers.
+Looking for a more teacher-centred AI tool?
+1. Socratic questioning
+ChatGPT could easily provide you with examples of Socratic questions that promote deeper thinking, such as "What evidence supports your claim?" or "Can you identify any assumptions you might be making?" This method focuses on promoting deeper thinking and clarification. Additionally, after a student answers a question, you can ask another student to summarise the answer, to ensure they are actively listening.
+At the end, ask the chat to suggest follow-up questions that dig even deeper into a topic, helping students refine their reasoning and develop a more nuanced understanding.
+3 things to keep in mind while asking questions:
+🌟 Avoid questions with set answers if you want to stimulate critical thinking.
+🌟 If you decide to use provocative questions, include only one or two issues at a time.
+🌟 Wait at least five seconds for students to answer. Ten seconds would be even better.
+2. Discussion prompts
+The language model can help you come up with open-ended discussion prompts that require students to analyse, evaluate, and create. Examples include questions like, "How would you solve this problem differently?" or "What are the potential consequences of this decision?" These types of questions encourage students to think critically, explore multiple perspectives, and develop problem-solving skills.
+Depending on the subject you teach or the topic you want to explore, you can prompt ChatGPT to provide you with 10 or 20 question options almost instantly! It helps you save some time.
+3. Reflective exercises
+ChatGPT can assist you by providing templates for reflective exercises that prompt students to assess their own thinking processes. These exercises encourage students to look into the reasoning behind their conclusions, analysing their thought processes step by step, and as objectivity as possible.
+By reflecting on how they reach conclusions, students gain insights into their cognitive strategies. They identify biases that may lead to prejudice, and work on their critical thinking skills. Reflection and self-reflection help deepen their understanding of the subject matter, and promote greater self-awareness. For some help on encouraging self-reflection, check our resource:
+Imagine teaching a unit on Shakespeare's ‘Macbeth’. Instead of traditional lectures, ChatGPT could suggest creating a scenario where students act as literary detectives investigating Lady Macbeth's motivations for persuading Macbeth to murder King Duncan. Using historical context and textual evidence, students could analyse her character, societal pressures, and political ambitions to develop a good understanding of her role.
+This approach stimulates critical thinking as learners apply literary analysis in a real-world context, making it more relevant.
+5. Comparative analysis
+Stimulate activities that involve comparing different viewpoints, theories, or texts. Encourage students to identify similarities, differences, and underlying assumptions. Ask the language model to facilitate this process with comparative frameworks and by guiding questions that stimulate critical analysis.
+For instance, in a literature class studying different literary movements, ChatGPT could suggest comparing Romantic and Victorian poetry. It could help you explore how each reflects collective values and individual expression. In a history class, it could assist in comparing different interpretations of a historical event, to show how perspectives shape narratives.
+Discover how AI is transforming teaching pedagogy and lesson planning.

@@ -1,0 +1,63 @@
+Movie Gen promises to generate high fidelity videos with synchronized audio.
+Created Using Ideogram
+Next Week in The Sequence:
+Edge 337: Our series about state space models(SSM) discussed BlackMamba, a model that combines MoEs and SSMs in a single architecture. We also review teh original BlackMamba paper and the amazing SWE-Agent for solving engineering tasks.
+Edge 438: We dive into DataGEmma, Google DeepMind’s recent work to ground LLMs on factual knowledge.
+You can subscribe to The Sequence below:
+TheSequence is a reader-supported publication. To receive new posts and support my work, consider becoming a free or paid subscriber.
+A small self-serving note before we start 😉:
+For the past year, I’ve been working on several ideas in AI evaluation and benchmarking—an area that, as many of you know, presents a massive challenge in today’s AI landscape. After experimenting with various approaches, I decided to incubate LayerLens, a new AI company focused on streamlining the evaluation and benchmarking of foundation models. This marks my third venture-backed AI project in the last 18 months. We’ve assembled a phenomenal team, with experience at companies like Google, Microsoft, and Cisco, as well as top universities. We’ve also raised a sizable pre-seed round. More details about that in the next few weeks.
+We are currently hiring across the board, particularly for roles in AI research and engineering with a focus on benchmarking and evaluation. If you’re interested in this space and looking for a new challenge, feel free to reach out to me at jr@layerlens.ai. I look forward to hearing from some of you!
+Now, onto today’s editorial:
+📝 Editorial: Meta Gets Into AI Video Generation
+I rarely write back-to-back editorials about the same company, but Meta has left me no choice. After announcing an impressive number of AI releases last week, Meta AI has just unveiled its latest work in video and audio generation with Movie Gen. Open-source generative video has long been considered a challenging space due to the high cost of pretraining models.
+At its core, Movie Gen is a new suite of generative AI models from Meta that focuses on creating and editing media, including images, video, and audio, using text prompts. It represents the culmination of Meta’s prior work in generative AI, combining and improving upon elements from projects like Make-A-Scene and LLaMA Image Foundation models. Unlike previous models that targeted specific modalities, Movie Gen allows for fine-grained control across all of them, representing a significant leap forward in generative AI for media.
+One of Movie Gen’s key strengths is its ability to perform various tasks across different modalities. It can generate videos from scratch using text prompts, create personalized videos by integrating a user’s image with text descriptions, and precisely edit existing videos using text commands for modifications. Additionally, Movie Gen includes an audio generation model capable of producing realistic sound effects, background music, and ambient sounds synchronized with video content.
+The Movie Gen research paper is fascinating, and we’ll be discussing more details in The Sequence Edge over the next few weeks.
+💎 We recommend
+“I’m blown away by the high quality and value of this event.” – Ricardo B.
+“Great event – worth getting up at 4am in the morning for!” – Sandy A.
+“What an amazing and insightful summit!” – Madhumita R.
+“I loved the presentations and was truly captivated by the depth of experience and insight shared on these panels!” – Peter K.
+“Great event! Looking forward to the next one.” – Rozita A.
+“Spectacular and very insightful summit! Very well done!” – Chad B.
+“This has been such an amazing event.” – Rob B.
+Don’t miss GenAI Productionize 2.0 – the premier conference for GenAI application development featuring AI experts from leading brands, startups, and research labs!
+🔎 ML Research
+Movie Gen
+Meta AI published a paper introducing Movie Gen, a new set of foundation models for video and audio generation. Movie Gen can generate 1080p HD videos with synchronized audio and includes capabilities such as video editing —> Read more .
+MM1.5
+Apple Research published a paper unveiling MM1.5, a new family of multimodal LLMs ranging from 1B to 30B. The new models built upon its MM1 predecessor which includes quite a few modalities during model training —> Read more .
+ComfyGen
+Researchers from NVIDIA and Tel Aviv University  published a paper detailing ComfyGen, a technique for adapting workflows to each user prompt in text to image generation. The method combines two LLMs tasks to learn from user preference data and select the appropiate workflow respectively —> Read more .
+LLM Reasoning Study
+Researchers from Google DeepMind and Mila published a paper studying the reasoning capabilities of different LLMs with surprising results. The paper uses grade-school math problem solving tasks as the core benchmark and showcases major gaps in LLMs across different model sizes —> Read more .
+Cross Capabilities in LLMs
+Meta AI and researchers from the University of Illionois published a paper studying the different types of abilities of LLMs across different tasks. They called this term cross capabilities. The paper also introduces CROSSEVAL, a benchmark for evaluating the cross capabilities of LLMs —> Read more .
+Embodied RAG
+Researchers from Carnegie Mellon University(CMU) published a paper introducing embodied-RAG, a memory method for both navigation and language generation in embodied agents. Embodied-RAG handles semantic resolutions across different environments —> Read more .
+LLaVA-Critic
+ByteDance Research published a paper introducing LLaVA-Critic, a multimodal LLM designed to evaluate mutimodal tasks. LLaVA-Critic is trained using a large instruction dataset for evaluation across different scenarios —> Read more .
+🤖 AI Tech Releases
+Liquid Foundation Models
+Liquid AI released their first set of foundation models based on a non-transformer architecture —> Read more .
+Black Forest Labs API
+Black Forest Labs, the image generation lab powering xAI’s Grok’s image capabilities, unveiled a new API —> Read more .
+Digital Twin Catalog
+Meta AI released the Digital Twin Catalog, a new dataset for 3D object reconstruction —> Read more .
+Data Formulator
+Microsoft open sourced the next version of Data Formulator, a project for designing chart interfaces using language —> Read more .
+Canvas
+OpenAI announced Canvas,  a new interface to interact with ChatGPT —> Read more .
+🛠 Real World AI
+AI at Amazon Pharmacy
+Amazon details some of the AI methods used to process prescriptions for Amazon Pharmacy customers —> Read more .
+📡AI Radar
+Durk Kingma, who was a part of the founding team at OpenAI, joined Anthropic .
+One of the leaders behind OpenAI’s Sora model has left for Google .
+Subnet raised $55 million for building more environmental friendly AI datacenters.
+Numa, a startup that uses AI in car dealerships, raised $32 million .
+Avarra raised $8 million for its AI avatar sales training platform.
+TheSequence is a reader-supported publication. To receive new posts and support my work, consider becoming a free or paid subscriber.
+October 11, 2024
+October 11, 2024

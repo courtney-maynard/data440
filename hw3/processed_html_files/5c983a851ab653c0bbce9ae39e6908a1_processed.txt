@@ -1,0 +1,120 @@
+A .gov website belongs to an official government organization in the United States.
+Secure .gov websites use HTTPS
+A lock ( ) or https:// means you've safely connected to the .gov website. Share sensitive information only on official, secure websites.
+Weekly US Influenza Surveillance Report: Key Updates for Week 39, ending September 28, 2024
+What to know
+Summary
+Viruses
+Illness
+All data are preliminary and may change as more reports are received.
+Directional arrows indicate changes between the current week and the previous week. Additional information on the arrows can be found at the bottom of this page.
+A description of the CDC influenza surveillance system, including methodology and detailed descriptions of each data component is available on the surveillance methods page. 1
+Additional information on the current and previous influenza seasons for each surveillance component are available on FluView Interactive .
+Key Points‎
+• Seasonal influenza activity remains low nationally.
+• Two human infections with an influenza A(H5) virus were reported by the California Department of Public Health.
+• There are prescription flu antiviral drugs that can treat flu illness; those should be started as early as possible and are especially important for higher risk patients.1
+• CDC recommends that everyone ages 6 months and older get an annual flu vaccine, ideally by the end of October.2
+• Seasonal flu viruses are among several viruses contributing to respiratory disease activity. CDC is providing updated, integrated information about COVID-19, flu, and RSV activity on a weekly basis.
+Nationally, the percentage of respiratory specimens testing positive for influenza in clinical laboratories remained stable (change of ≤0.5 percentage points) compared to the previous week. Nationally, influenza A(H1N1)pdm09, A(H3N2), and B/Victoria viruses are all co-circulating. However, the distribution of circulating viruses varies by region. For regional and state level data and age group distribution, please visit FluView Interactive .
+Clinical Laboratories
+The results of tests performed by clinical laboratories nationwide are summarized below. Data from clinical laboratories (the percentage of specimens tested that are positive for influenza virus) are used to monitor whether influenza activity is increasing or decreasing.
+Results of tests from Clinical Laboratories
+Week 39
+Influenza Positive Tests Reported to CDC by Clinical Laboratories, National Summary, 2023-24 Season, week ending Sep. 28, 2024
+The results of tests performed by public health laboratories nationwide are summarized below.  Data from public health laboratories are used to monitor the proportion of circulating influenza viruses that belong to each influenza subtype/lineage.
+Results of tests from Public Health Laboratories
+Week 39
+0 (0.0%)
+1,205 (13.0%)
+*This data reflects specimens tested and the number determined to be positive for influenza viruses at the public health labs (specimens tested is not the same as cases). It does not reflect specimens tested only at CDC and could include more than one specimen tested per person. The guidance for influenza A/H5 testing recommends testing both a conjunctival and respiratory swab for people with conjunctivitis which has resulted in more specimens testing positive for influenza A/H5 than the number of human H5 cases. For more information on the number of people infected with A/H5, please visit the " How CDC is monitoring influenza data among people to better understand the current avian influenza A (H5N1) situation "
+Novel Influenza A Virus
+Two human infections with an influenza A(H5) virus were reported to CDC this week by the California Department of Public Health. These cases are associated with the ongoing outbreak of HPAI A(H5N1) virus in dairy cows.
+Both individuals are aged >18 years and work at commercial dairy cattle farms where highly pathogenic avian influenza (HPAI) A(H5N1) virus had been detected in cows. These individuals work on different farms and there is no known link or contact between them. These individuals had mild symptoms which they reported to the local health department. Specimens were collected from both persons and were initially tested at the local public health laboratory using the Centers for Disease Control and Prevention (CDC) influenza A(H5) assay before being sent to CDC for further testing. Specimens from both individuals were positive for influenza A(H5) virus using diagnostic rRT-PCR at CDC. Additional analysis including genetic sequencing is underway.
+In response to these detections, additional case investigations and surveillance activities are being conducted by public health officials.
+During the 2023-2024 influenza season, a total of 16 cases of human infections with influenza A(H5) virus have been reported in the United States. Six of these occurred in individuals working with dairy cows, nine in individuals associated with poultry depopulation and disposal, and one in an individual with an unknown source of exposure. An ongoing outbreak of H5N1 continues in domestic dairy cows and poultry, and monitoring for additional human cases is ongoing.
+Interim recommendations for Prevention, Monitoring, and Public Health Investigations are available at https://www.cdc.gov/bird-flu/prevention/hpai-interim-recommendations.html .
+Information about avian influenza is available at https://www.cdc.gov/flu/avianflu/index.htm .
+The latest case reports on avian influenza outbreaks in wild birds, commercial poultry; backyard or hobbyist flocks; and mammals in the United States are available from the USDA at https://www.aphis.usda.gov/aphis/ourfocus/animalhealth/animal-disease-information/avian/avian-influenza/2022-hpai .
+Additional information regarding human infections with novel influenza A viruses:‎
+CDC performs genetic and antigenic characterization of U.S. viruses submitted from state and local public health laboratories according to the Right Size Roadmap submission guidance. These data are used to compare how similar the currently circulating influenza viruses are to the reference viruses representing viruses contained in the current influenza vaccines. The data are also used to monitor evolutionary changes that continually occur in influenza viruses circulating in humans. CDC also tests susceptibility of circulating influenza viruses to antiviral medications including the neuraminidase inhibitors (oseltamivir, zanamivir, and peramivir) and the PA endonuclease inhibitor baloxavir.
+CDC has genetically characterized 5,522 influenza viruses collected since October 1, 2023.
+Influenza Virus Characterization from viruses collected in the U.S. from September 29, 2019
+Virus Subtype or Lineage
+0 (0%)
+CDC antigenically characterizes influenza viruses by hemagglutination inhibition (HI) (H1N1pdm09, H3N2, B/Victoria, and B/Yamagata viruses) or neutralization-based HINT (H3N2 viruses) using antisera that ferrets make after being infected with reference viruses representing the 2023-2024 Northern Hemisphere recommended cell or recombinant-based vaccine viruses. Antigenic differences between viruses are determined by comparing how well the antibodies made against the vaccine reference viruses recognize the circulating viruses that have been grown in cell culture. Ferret antisera are useful because antibodies raised against a particular virus can often recognize small changes in the surface proteins of other viruses. In HI assays, viruses with similar antigenic properties have antibody titer differences of less than or equal to 4-fold when compared to the reference (vaccine) virus. In HINT, viruses with similar antigenic properties have antibody neutralization titer differences of less than or equal to 8-fold. Viruses selected for antigenic characterization are a subset representing the genetic changes in the surface proteins seen in genetically characterized viruses.
+Influenza A Viruses
+A (H1N1)pdm09: 593 A(H1N1)pdm09 viruses were antigenically characterized by HI, and 592 (99.8%) were well-recognized (reacting at titers that were within 4-fold of the homologous virus titer) by ferret antisera to cell-grown A/Wisconsin/67/2022-like reference viruses representing the A(H1N1)pdm09 component for the cell- and recombinant-based influenza vaccines.
+A (H3N2): 711 A(H3N2) viruses were antigenically characterized by HI or HINT, and 674 (94.8%) were well-recognized (reacting at titers that were within 4-fold of the homologous virus titer in HI or reacting at titers that were less than or equal to 8-fold of the homologous virus in HINT) by ferret antisera to cell-grown A/Darwin/6/2021-like reference viruses representing the A(H3N2) component for the cell- and recombinant-based influenza vaccines.
+Influenza B Viruses
+B/Victoria: 454 influenza B/Victoria-lineage virus were antigenically characterized by HI, and all were well-recognized (reacting at titers that were within 4-fold of the homologous virus titer) by ferret antisera to cell-grown B/Austria/1359417/2021-like reference viruses representing the B/Victoria component for the cell- and recombinant-based influenza vaccines.
+B/Yamagata: No influenza B/Yamagata-lineage viruses were available for antigenic characterization.
+Assessment of Virus Susceptibility to Antiviral Medications
+CDC assesses susceptibility of influenza viruses to the antiviral medications including the neuraminidase inhibitors (oseltamivir, zanamivir, and peramivir) and the PA endonuclease inhibitor baloxavir using next generation sequence analysis supplemented by laboratory assays. Information about antiviral susceptibility test methods can be found at U.S. Influenza Surveillance: Purpose and Methods .
+Viruses collected in the U.S. since October 1, 2023, were tested for antiviral susceptibility as follows:
+Viruses collected in the U.S. tested for antiviral susceptibility
+Antiviral Medication
+Total Viruses
+Decreased Susceptibility
+1 (0.02%)
+0 (0%)
+1 (0.05%)
+0 (0%)
+Five A(H1N1)pdm09 viruses had NA-H275Y amino acid substitution and one A(H1N1)pdm09 virus had NA-H275Y/H, conferring highly reduced inhibition by oseltamivir and peramivir. One (H1N1)pdm09 virus had NA-I223V and NA-S247N amino acid substitutions and showed reduced inhibition by oseltamivir. Two B viruses had NA-A245G amino acid substitution and showed reduced inhibition by peramivir. One B virus had NA-D197N amino acid substitution and showed reduced inhibition by zanamivir and peramivir. One B virus had NA-H273Y amino acid substitution and showed highly reduced inhibition by peramivir. One A(H3N2) virus had PA-I38T amino acid substitution and showed reduced susceptibility to baloxavir.
+High levels of resistance to the adamantanes (amantadine and rimantadine) persist among influenza A(H1N1)pdm09 and influenza A(H3N2) viruses (the adamantanes are not effective against influenza B viruses). Therefore, use of these antivirals for treatment and prevention of influenza A virus infection is not recommended and data from adamantane resistance testing are not presented.
+Outpatient respiratory illness surveillance
+The U.S. Outpatient Influenza-like Illness Surveillance Network (ILINet) monitors outpatient visits for respiratory illness referred to as influenza-like illness [ILI (fever plus cough or sore throat)], not laboratory-confirmed influenza and will therefore capture respiratory illness visits due to infection with pathogens that can present with similar symptoms, including influenza viruses, SARS-CoV-2, and RSV. It is important to evaluate syndromic surveillance data, including that from ILINet, in the context of other sources of surveillance data to obtain a more complete and accurate picture of influenza, SARS-CoV-2, and other respiratory virus virus activity. CDC is providing integrated information about COVID-19, influenza, and RSV activity on a website that is updated weekly. Information about other respiratory virus activity can be found on CDC's National Respiratory and Enteric Virus Surveillance System (NREVSS) website .
+Outpatient respiratory illness visits
+Nationally, the percentage of visits for respiratory illness that were reported through ILINet remained stable (change of ≤ 0.1 percentage points) compared to the previous week and is below the national baseline. All 10 regions are below their region-specific baselines. Multiple respiratory viruses are co-circulating, and the relative contribution of influenza virus infection to ILI varies by location.
+Outpatient respiratory illness visits by age group
+About 70% of ILINet participants provide both the number of patient visits for respiratory illness and the total number of patient visits for the week broken out by age group. Data from this subset of providers are used to calculate the percentages of patient visits for respiratory illness by age group.
+The percentage of visits for respiratory illness reported in ILINet remained stable in all age groups in Week 39 compared to Week 38.
+Outpatient respiratory illness activity map
+Data collected in ILINet are used to produce a measure of ILI activity* by state/jurisdiction and Core Based Statistical Areas (CBSA).
+ILI Activity by State/Jurisdiction and Core Based Statistical Area
+Activity Level
+1
+0
+283
+246
+*Data collected in ILINet may disproportionally represent certain populations within a jurisdiction or CBSA, and therefore, may not accurately depict the full picture of influenza activity for the entire jurisdiction or CBSA. Differences in the data presented here by CDC and independently by some health departments likely represent differing levels of data completeness with data presented by the health department likely being the more complete.
+Additional information about medically attended visits for ILI for current and past seasons:‎
+The Influenza Hospitalization Surveillance Network (FluSurv-NET) conducts population-based surveillance for laboratory-confirmed influenza-related hospitalizations in select counties in 14 states and represents approximately 9% of the U.S. population. FluSurv-NET hospitalization data are preliminary. As data are received each week, prior case counts and rates are updated accordingly.
+A total of 25,456 laboratory-confirmed influenza-associated hospitalizations were reported by FluSurv-NET sites between October 1, 2023, and September 28, 2024. The weekly hospitalization rate observed in Week 39 was 0.1 per 100,000 population. The peak weekly hospitalization rate observed this season was 8.9 per 100,000 population and occurred during Week 52.
+Among 25,456 hospitalizations, 21,547 (84.6%) were associated with influenza A virus, 3,778 (14.8%) with influenza B virus, 55 (0.2%) with influenza A virus and influenza B virus co-infection, and 76 (0.3%) with influenza virus for which the type was not determined. Among those with influenza A subtype information, 4,508 (67.5%) were A(H1N1) pdm09 and 2,175 (32.5%) were A(H3N2).
+Weekly Rates of Laboratory-Confirmed Influenza Hospitalization among all ages for 2014-25 to 2023-24 seasons
+**In this figure, weekly rates for all seasons prior to the 2023-2024 season reflect end-of-season rates. For the 2023-2024 season, rates for recent hospital admissions are subject to reporting delays and are shown as a dashed line for the current season. As hospitalization data are received each week, prior case counts and rates are updated accordingly.
+Additional FluSurv-NET hospitalization surveillance information for current and past seasons and additional age groups:‎
+National healthcare safety network (NHSN) hospitalization surveillance
+Effective May 1, 2024, hospitals are no longer required to report hospital admissions, hospital capacity, or hospital occupancy data to HHS through NHSN. Voluntarily reported NHSN hospital data can found at Weekly United States Hospitalization Metrics by Jurisdiction .
+Additional NHSN Hospitalization Surveillance information:‎
+Mortality surveillance
+Based on NCHS mortality surveillance data available on October 3, 2024, the percentage of deaths that were due to influenza remained stable (<0.1 percentage point change) compared to the previous week. The data presented are preliminary and may change as more data are received and processed.
+Influenza-Associated Pediatric Mortality
+One influenza-associated pediatric death occurring during the 2023-2024 season was reported to CDC during Week 39. The death was associated with an influenza A virus for which subtyping was not performed and occurred during Week 42 of 2023 (the week ending October 21, 2023).
+A total of 201 influenza-associated pediatric deaths occurring during the 2023-2024 season have been reported to CDC.
+Additional pediatric mortality surveillance information for current and past seasons:‎
+Indicators Status by System
+Increasing:
+Decreasing:
+Stable:
+Clinical Labs: Up or down arrows indicate a change of greater than or equal to 0.5 percentage points in the percent of specimens positive for influenza compared to the previous week.
+Outpatient Respiratory Illness (ILINet): Up or down arrows indicate a change of greater than 0.1 percentage points in the percent of visits due to respiratory illness (ILI) compared to the previous week.
+NHSN Hospitalizations: Up or down arrows indicate change of greater than or equal to 5% of the number of patients admitted with laboratory-confirmed influenza compared to the previous week.
+NCHS Mortality: Up or down arrows indicate change of greater than 0.1 percentage points of the percent of deaths due to influenza compared to the previous week.
+Additional surveillance information
+FluView Interactive: FluView includes enhanced web-based interactive applications that can provide dynamic visuals of the influenza data collected and analyzed by CDC. These FluView Interactive applications allow people to create customized, visual interpretations of influenza data, as well as make comparisons across flu seasons, regions, age groups and a variety of other demographics.
+National Institute for Occupational Safety and Health: Monthly surveillance data on the prevalence of health-related workplace absenteeism among full-time workers in the United States are available from NIOSH .
+U.S. State and local influenza surveillance: Select a jurisdiction below to access the latest local influenza information.
+state links
+WHO Collaborating Centers for Influenza:
+Europe:
+Public Health Agency of Canada:
+The most up-to-date influenza information from Canada is available in Canada's weekly FluWatch report .
+Public Health England:
+The most up-to-date influenza information from the United Kingdom is available from Public Health England .
+Any links provided to non-Federal organizations are provided solely as a service to our users. These links do not constitute an endorsement of these organizations or their programs by CDC or the Federal Government, and none should be inferred. CDC is not responsible for the content of the individual organization web pages found at these links.
+A description of the CDC influenza surveillance system, including methodology and detailed descriptions of each data component is available on the surveillance methods page.
+On This Page
+U.S. Influenza Surveillance: Purpose and Methods (2023 Oct). Centers for Disease Control and Prevention. https://www.cdc.gov/flu/weekly/overview.htm#ILINet .
+Sources

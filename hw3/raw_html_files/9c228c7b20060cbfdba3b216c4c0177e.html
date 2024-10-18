@@ -1,0 +1,601 @@
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<title>ServiceArizona / MVD Now</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="Robots" content="index,follow">
+<link rel="stylesheet" href="/htdocs/theme/mvm_az_style_form.css" type="text/css" media="screen,print">
+<link rel="stylesheet" href="/htdocs/commonfiles/kioskify_desktop.css" type="text/css" media="screen,print">
+<link rel="stylesheet" href="/htdocs/theme/css_002.css" type="text/css" media="screen,print">
+<link rel="stylesheet" href="/htdocs/theme/css.css" type="text/css" media="screen,print">
+<link rel="stylesheet" href="/htdocs/theme/main.css" type="text/css" media="screen,print">
+<link rel="stylesheet" href="/htdocs/theme/mvm_az_style.css" type="text/css" media="screen,print">
+<link rel="stylesheet" href="/htdocs/theme/mvm_az_style_2019.css" type="text/css" media="screen,print">
+<link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="/htdocs/theme/mvm_az_style_help.css" type="text/css" media="screen,print">
+<link rel="stylesheet" href="/htdocs/theme/mvm_az_style_home.css" type="text/css" media="screen,print">
+<meta name="Description" content="Quickly access ADOT services. Vehicle title, registration renewal, custom and specialty license plates, duplicate driver's license and ID, and more.">
+<meta name="Keywords" content="Arizona, on-line, registration, vehicle, Arizona, renewal, driver license, motor vehicle, registration, specialty, tag, speciality plate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/favicon.ico?v=20170104">
+<meta name="theme-color" content="#ffffff">
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/smoothness/jquery-ui.css">
+<script>
+	//unhide the help dialog and use AJAX to get the help data
+	function showHelp() {
+		// set the content of the dialog:
+		$("#maxHelpIFrame").attr("src", "/mvdnowFAQ/home");
+		$("#maxHelpIFrame").attr("title", "Help");
+		// show the dialog
+		$('#maxHelp').show();
+	}
+	// hide the help dialog
+	function hideHelp() {
+		// show the dialog
+		$('#maxHelp').hide();
+	}
+</script>
+<script>
+        var $buoop = {vs:{i:10,f:-4,o:-4,s:8,c:-4},insecure:true,text: "For uninterrupted use of ServiceArizona, please update your web browser. Click on the banner to see what browsers work best with ServiceAizona.", url:"/content/SAZBrowserCheck", api:4};
+        function $buo_f(){
+            var e = document.createElement("script");
+            e.src = "//browser-update.org/update.min.js";
+             document.body.appendChild(e);
+        };
+        try {document.addEventListener("DOMContentLoaded", $buo_f,false);}
+        catch(e){window.attachEvent("onload", $buo_f)}
+    </script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=383180126"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '383180126');
+</script>
+</head>
+<body>
+<div id="b2c">
+<nav class="mvd_navbar--top hidden-print" role="navigation">
+<ul class="mvd_navbar__container">
+<li class="mvd_navbar__left">
+<ul class="mvd_navbar__left__nav">
+<li><a href><img src="htdocs/commonfiles/mvdnow-SAZ-logo-home-page.png" style="padding-right: 13px;" alt="Service Arizona"></a> <a href="/links/azmvdnow"><img alt="AZ MVD Now" src="htdocs/support_files/logo--azmvdnow-white.png"></a>
+</li>
+<li style="color: #999999;">
+</li>
+</ul>
+</li>
+<li id="officialSiteWords">Official site of the ADOT MVD</li>
+<li class="mvd_navbar__right">
+<ul class="mvd_navbar__right__nav">
+<li class="mvd_navbar__help open">
+<a class="mvd_navbar__link" href="javascript:showHelp()" title="Help" id="helpLink"><i class="material-icons">help_outline</i></a><div class="dropdown-menu help--panel" id="maxHelp">
+<div class="help__header">
+<h4>User Assistance</h4>
+<a class="help__close" href="javascript:hideHelp()"><i class="material-icons">close</i></a>
+</div>
+<div class="help__body">
+<iframe class="contentPanel" src="/mvdnow-loading.jsp" id="maxHelpIFrame" title="Help"><div id="maxHelpData"></div></iframe>
+</div>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+<div class="nav--mega--container">
+<div id="navBar">&nbsp;
+</div>
+<div class="header--page" role="banner">
+<ul id="homePageTitle" class="header__nav">
+<li>
+<h1>
+<i class="material-icons">dashboard</i> ServiceArizona at AZ MVD Now
+</h1>
+</li>
+</ul>
+</div>
+<main class="mvdnow-main-table">
+<div class="mvdnow-main-table-row">
+<div class="mvdnow-main-table-cell">
+<div id="homeContent">
+
+
+<div id="m1">
+<div id="mvdnow-button-table" style="clear: both">
+<div class="mvdnow-button-table-row">
+<div class="mvdnow-button-table-cell cell1 mvdnow" id="topButton1">
+<script>
+		    $(function() {
+		        $(".externalButton1").click(function (e) {
+		        	e.preventDefault();
+		        	var link = this;
+		        	$("#linkDialog").dialog("option", "title", "AZ MVD Now "+$(this).text())
+					$("#linkDialog").dialog({
+						buttons: [
+		                	{
+		                	text: "Continue to AZ MVD Now",
+		                	click: function() {
+		                		window.location = "/links/mvdnowvehregrenew";                    
+		                		}
+		                	}
+		                	]})        	
+		            $('#linkDialog').dialog('open');
+		            });
+		        });
+		    </script>
+<form action="/links/mvdnowvehregrenew" style="display: inline">
+<div class="buttons buttonsMain">
+<button class="externalButton1" id="mainButton1">
+Vehicle Registration Renewal<br><span class="espLabel">(Renovación de Registro de Vehículo)</span>
+</button>
+</div>
+</form>
+</div>
+<div class="mvdnow-button-table-cell cell1 mvdnow" id="topButton2">
+<script>
+		    $(function() {
+		        $(".externalButton2").click(function (e) {
+		        	e.preventDefault();
+		        	var link = this;
+		        	$("#linkDialog").dialog("option", "title", "AZ MVD Now "+$(this).text())
+					$("#linkDialog").dialog({
+						buttons: [
+		                	{
+		                	text: "Continue to AZ MVD Now",
+		                	click: function() {
+		                		window.location = "/links/mvdnowdriver";                    
+		                		}
+		                	}
+		                	]})        	
+		            $('#linkDialog').dialog('open');
+		            });
+		        });
+		    </script>
+<form action="/links/mvdnowdriver" style="display: inline">
+<div class="buttons buttonsMain">
+<button class="externalButton2" id="mainButton2">
+Replacement Driver License/ID<br><span class="espLabel">(Licencia de Conducir o Tarjeta de<br>Identidad de Reemplazo)</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+<div class="mvdnow-button-table-row">
+<div class="mvdnow-button-table-cell cell1 mvdnow" id="topButton3">
+<script>
+		    $(function() {
+		        $(".externalButton3").click(function (e) {
+		        	e.preventDefault();
+		        	var link = this;
+		        	$("#linkDialog").dialog("option", "title", "AZ MVD Now "+$(this).text())
+					$("#linkDialog").dialog({
+						buttons: [
+		                	{
+		                	text: "Continue to AZ MVD Now",
+		                	click: function() {
+		                		window.location = "https://azmvdnow.gov/plates";                    
+		                		}
+		                	}
+		                	]})        	
+		            $('#linkDialog').dialog('open');
+		            });
+		        });
+		    </script>
+<form action="https://azmvdnow.gov/plates" style="display: inline">
+<div class="buttons buttonsMain">
+<button class="externalButton3" id="mainButton3">
+Personalized/Specialty Plates<br><span class="espLabel">(Disponibilidad de placas)</span>
+</button>
+</div>
+</form>
+</div>
+<div class="mvdnow-button-table-cell cell1 mvdnow" id="topButton4">
+<script>
+		    $(function() {
+		        $(".externalButton4").click(function (e) {
+		        	e.preventDefault();
+		        	var link = this;
+		        	$("#linkDialog").dialog("option", "title", "AZ MVD Now "+$(this).text())
+					$("#linkDialog").dialog({
+						buttons: [
+		                	{
+		                	text: "Continue to AZ MVD Now",
+		                	click: function() {
+		                		window.location = "/links/mvdnow3day";                    
+		                		}
+		                	}
+		                	]})        	
+		            $('#linkDialog').dialog('open');
+		            });
+		        });
+		    </script>
+<form action="/links/mvdnow3day" style="display: inline">
+<div class="buttons buttonsMain">
+<button class="externalButton4" id="mainButton4">
+Restricted Use 3-Day Permit<br><span class="espLabel">(Permiso de uso restringido de 3 días)</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+<div class="mvdnow-button-table-row">
+<div class="mvdnow-button-table-cell cell1 mvdnow" id="topButton5">
+<script>
+		    $(function() {
+		        $(".externalButton5").click(function (e) {
+		        	e.preventDefault();
+		        	var link = this;
+		        	$("#linkDialog").dialog("option", "title", "AZ MVD Now "+$(this).text())
+					$("#linkDialog").dialog({
+						buttons: [
+		                	{
+		                	text: "Continue to AZ MVD Now",
+		                	click: function() {
+		                		window.location = "https://azmvdnow.gov/appointments/vininspections/search/customer";                    
+		                		}
+		                	}
+		                	]})        	
+		            $('#linkDialog').dialog('open');
+		            });
+		        });
+		    </script>
+<form action="https://azmvdnow.gov/appointments/vininspections/search/customer" style="display: inline">
+<div class="buttons buttonsMain">
+<button class="externalButton5" id="mainButton5">
+Vehicle Inspection Appointments
+</button>
+</div>
+</form>
+</div>
+<div class="mvdnow-button-table-cell cell1 " id="topButton6">
+<form action="/VoterRegistration?id=sazhome" style="display: inline">
+<div class="buttons buttonsMain">
+<button class="externalButton6" id="mainButton6">
+Voter Registration<br><span class="espLabel">(El Registro Electoral)</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="homeOther" class="entry">
+<h2>
+Other ServiceArizona and AZ MVD Now Services
+</h2>
+<div id="otherMain" class="pMain">
+<script>
+    $(function() {
+        $( "#linkDialog" ).dialog({
+            width: 'auto',
+            autoOpen: false,
+            modal: true,
+            width: 600,
+            dialogClass: 'az-ui-dialog',
+            show: { effect: "fade", duration: 300 },
+            hide: { effect: "fade", duration: 300 }
+          });
+        $(".externalLink").click(function (e) {
+        	e.preventDefault();
+        	var link = this;
+        	$("#linkDialog").dialog("option", "title", "AZ MVD Now "+$(this).text())
+			$("#linkDialog").dialog({
+				buttons: [
+                	{
+                	text: "Continue to AZ MVD Now",
+                	click: function() {
+                		window.location = link.href;                    
+                		}
+                	}
+                	]})        	
+            $('#linkDialog').dialog('open');
+            });
+        });
+    </script>
+<div id="linkDialog" title="Leaving ServiceArizona" style="display:none;">
+<div class="modal-dialog" style="margin: 10px auto;">
+<h2>Thank you for visiting ServiceArizona.com.</h2>
+<p>
+You are now being transferred to AZ MVD Now,
+the Motor Vehicle Division&rsquo;s new online platform.
+It&rsquo;s secure, fast, easy and personalized for you.
+Set up your account, log in and you will see your personalized home page.
+That's it! Now you're ready to take advantage of AZ MVD Now!
+</p>
+<p>If you'd like to see a brief <a href="/links/mvdnowhelpvideo">instructional video, click here</a>
+</>
+</div>
+</div>
+<div class="mvdnow-other-table">
+<div class="mvdnow-other-table-row">
+<div class="mvdnow-other-table-cell">
+<ul class="mvdnow-other-list">
+<li>
+<a class="externalLink" href="https://servicearizona.com/links/mvdnow30day
+">
+30-Day General Use Permit</a>
+</li>
+<li>
+<a class="externalLink" href="https://servicearizona.com/links/mvdnowaddress">
+Address/Email Change</a>
+</li>
+<li>
+<a class="externalLink" href="https://servicearizona.com/links/mvdnowreinstate
+">
+Driver License Reinstatement</a>
+</li>
+<li>
+<a class="externalLink" href="https://servicearizona.com/links/mvdnowdupveh">
+Duplicate Vehicle Registration</a>
+</li>
+<li>
+<a class="externalLink" href="https://servicearizona.com/links/mvdnowemission">
+Emissions/Registration Check</a>
+</li>
+<li>
+<a class="externalLink" href="https://servicearizona.com/links/mvdnowfleet">
+Fleet Registration Renewal</a>
+</li>
+<li>
+<a class="externalLink" href="https://servicearizona.com/links/mvdnowfundaccount">
+Fund Account</a>
+</li>
+<li>
+<a class="externalLink" href="https://servicearizona.com/links/mvdnowinsver">
+Insurance Verification</a>
+</li>
+<li>
+<a class="externalLink" href="/links/mvdnowtabrepl">
+License Plate Replacement</a>
+</li>
+<li>
+<a class="externalLink" href="https://servicearizona.com/links/mvdnowlienmvr">
+Lien Motor Vehicle Inquiry</a>
+</li>
+<li>
+<a class="externalLink" href="https://servicearizona.com/links/mvdnowmvrtnr">
+Motor Vehicle Record - Title and Registration</a>
+</li>
+<li>
+<a class="externalLink" href="https://servicearizona.com/links/mvdnowmoa">
+MVD Office Appointments</a>
+</li>
+<li>
+<a class="externalLink" href="https://servicearizona.com/links/mvdnowoffhighway">
+Off-Highway Vehicle Decal (Purchase)</a>
+</li>
+<li>
+<a class="externalLink" href="https://servicearizona.com/links/mvdnowoffhighwayrenew">
+Off-Highway Vehicle Decal (Renew)</a>
+</li>
+</ul>
+</div>
+<div class="mvdnow-other-table-cell">
+<ul class="mvdnow-other-list">
+<li>
+<a class="externalLink" href="https://servicearizona.com/links/mvdnowoffhighwayreplace
+">
+Off-Highway Vehicle Decal (Replace)</a>
+</li>
+<li>
+<a class="externalLink" href="https://servicearizona.com/links/mvdnowplacard">
+Permanent Placard Replacement</a>
+</li>
+<li>
+<a class="externalLink" href="https://servicearizona.com/links/mvdnowpermittest">
+Permit Test @ Home</a>
+</li>
+<li>
+<a class="externalLink" href="https://servicearizona.com/links/mvdnowplaterefund">
+Plate Refund</a>
+</li>
+<li>
+<a href="https://servicearizona.com/reprint?otherclick">
+Reprint</a>
+</li>
+<li>
+<a class="externalLink" href="https://servicearizona.com/links/mvdnowrefundrequest">
+Request Refund</a>
+</li>
+<li>
+<a class="externalLink" href="https://servicearizona.com/links/mvdnowsoldnotice">
+Sold Notice</a>
+</li>
+<li>
+<a class="externalLink" href="https://servicearizona.com/links/mvdnowtabrepl">
+Tab Replacement</a>
+</li>
+<li>
+<a class="externalLink" href="https://servicearizona.com/links/mvdnowtempid">
+Temporary Identification Card</a>
+</li>
+<li>
+<a class="externalLink" href="https://servicearizona.com/links/mvdnowtitleviewer">
+Title Viewer</a>
+</li>
+<li>
+<a class="externalLink" href="https://servicearizona.com/links/mvdnowdeinsure">
+Vehicle De-Insured Certificate</a>
+</li>
+<li>
+<a class="externalLink" href="/links/mvdnowfeerecap">
+Vehicle Fees/Taxes Paid 2021</a>
+</li>
+<li>
+<a href="/vehicleInspection">
+Vehicle Inspection Appointments</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="homeLinks" class="entry">
+<div class="mvdnow-links-table">
+<div class="mvdnow-links-table-row">
+<div class="mvdnow-links-table-cell">
+<h2>
+ADOT Information
+</h2>
+<div class="linksItem">
+<a href="http://www.azdot.gov/">
+ADOT
+</a>
+</div>
+<div class="linksItem">
+<a href="http://www.azdot.gov/mvd/">
+MVD
+</a>
+</div>
+<div class="linksItem">
+<a href="http://www.az511.com/">
+AZ511/Roadway Information
+</a>
+</div>
+<div class="linksItem">
+<a href="/webapp/caz/displayDocument.do?name=azhiwaylink">
+Subscribe to Arizona Highways
+</a>
+</div>
+<div class="linksItem">
+<a href="/links/reportregvio">
+Report Registration Violators <style>#linksMain {height: 305px;}</style>
+</a>
+</div>
+<div class="linksItem">
+<a href="https://azdot.gov/mvd/services/driver-services">
+<div style="line-height: 1">New Driver License or<br><span style="margin-left: 15px">Driver License Renewal</span></div>
+</a>
+</div>
+</div>
+<div class="mvdnow-links-table-cell">
+<h2>
+Additional Services
+</h2>
+<div class="linksItem">
+<a href="http://az.gov/">
+State of Arizona
+</a>
+</div>
+<div class="linksItem">
+<a href="http://www.myazcar.com/">
+ADEQ-Emissions
+</a>
+</div>
+<div class="linksItem">
+<a href="links/organdonor">
+Organ Donor
+</a>
+</div>
+<div class="linksItem">
+<a href="https://aata.az.gov/">
+Watch Your Car
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+<div class="mvdnow-column2-table-cell">
+<div id="homePromo" class="entry">
+<h2>
+AZ MVD Now
+</h2>
+<div id="contentPromo" class="pMain">
+<div style="text-align: center; margin-bottom: 10px;">
+<a href="/links/mvdnowhelpvideo"><img src="data:image/png;base64,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" /></a>
+</div>
+<p style="text-align: center; line-height: 1.4em;">
+<a href="/links/mvdnowhelpvideo">
+Instructional Video for steps on activating
+your AZ MVD Now account.
+</a>
+</p>
+</div>
+</div>
+<div id="homePromo" class="entry">
+<h2>
+Pay with Cash
+</h2>
+<div id="contentPromo2" class="pMain">
+You can now pay in cash at thousands of walk-in locations nationwide.
+<a href="/links/checkfreepaycash">Click here</a> to find the nearest locations.
+<br>
+<a href="/links/checkfreepaycash"><img height="188" width="188" src=" data:image/png;base64,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"></a>
+</div>
+</div>
+<div id="homePromo" class="entry">
+<h2>
+Arizona Travel ID
+</h2>
+<div id="contentPromo3" class="pMain">
+<div style="text-align: center;">
+<p style="margin-top: 0px; margin-bottom: 0px; ">
+<strong>DON’T WAIT</strong>
+<br>make your appointment now
+</p>
+<p style="margin-top: 8px; margin-bottom: 8px; ">
+<a href="https://azdot.gov/TravelID" style>
+azdot.gov/TravelID
+</a>
+</p>
+<a href="https://azdot.gov/TravelID">
+<img alt="Current credentials are only valid at airports and federal buildings until May 7, 2025." width="188" height="103" src=" data:image/jpeg;base64,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" /></a></div>
+<p style="margin-top: 6px; text-align: center;">
+<a href="https://azdot.gov/TravelID" style="font-size: 8pt;">
+Current credentials are only valid
+<br>
+at airports and federal buildings
+<br>
+until May 7, 2025.
+</a>
+</p>
+</div>
+</div>
+
+</div>
+</div>
+</main>
+<footer id="mvdnow-footermain">
+<div id="mvdnow-footerLinks">
+<a href="/links/hours">Nearest Offices</a>
+<span class="vb">&#124;</span>
+<a id="privacy_policy_link" href="/content/SAZHomePrivacy?h=1600&amp;clickContentFooter&amp;storefrontdir=/">Privacy Policy</a>
+<span class="vb">&#124;</span>
+<a class="serviceMenu" href="/links/contactus" />Contact Us</a>
+</div>
+<div id="mvdnow-kyndrylLogo">
+<a href="https://www.kyndryl.com/us/en">
+<img border="0" title="Kyndryl" alt="Kyndryl logo" src="https://servicearizona.com/htdocs/theme/Kyndryl.png">
+</a>
+</div>
+</footer>
+</div>
+<div id="git" style="display:none">4.1.1</div>
+</body>
+</html>

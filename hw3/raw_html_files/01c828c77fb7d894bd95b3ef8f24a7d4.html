@@ -1,0 +1,1060 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="profile" href="https://gmpg.org/xfn/11" />
+
+	<link rel="preconnect" href="https://use.typekit.net" crossorigin>
+	<link rel="preconnect" href="https://p.typekit.net" crossorigin>
+	<link rel="preload" href="https://p.typekit.net" crossorigin>
+	<link rel="stylesheet" href="https://use.typekit.net/ngd8der.css">
+
+	<script>
+	document.addEventListener('DOMContentLoaded', function() {
+    	// Check for hash in the URL
+    	const hash = window.location.hash;
+    	console.log('Hash detected:', hash);
+    
+    	if (hash) {
+        	const target = document.querySelector(hash);
+        	if (target) {
+            	// Open the details block if it's not open
+            	const details = target.closest('details');
+            	if (details) {
+                	details.open = true;
+            	}
+            	// Smoothly scroll to the target, adjusted by 50 pixels
+            	const targetPosition = target.getBoundingClientRect().top + window.scrollY - 70;
+            	window.scrollTo({
+                	top: targetPosition,
+                	behavior: 'smooth'
+            	});
+        	}
+    	}
+	});
+    </script>
+
+	<script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+	<script>
+  		window.OneSignalDeferred = window.OneSignalDeferred || [];
+  			OneSignalDeferred.push(async function(OneSignal) {
+    			await OneSignal.init({
+      				appId: "30da4103-f8f5-4856-892f-da0560f43bd9",
+    			});
+  			});
+	</script>
+
+	<!-- Google Tag Manager -->
+	<script>
+		(function (w, d, s, l, i) {
+       		w[l] = w[l] || [];
+        	w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        	var f = d.getElementsByTagName(s)[0],
+            	j = d.createElement(s),
+            	dl = l != 'dataLayer' ? '&l=' + l : '';
+        	j.async = true;
+        	j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        	f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-WBLPCSQN');
+    </script>
+    <!-- End Google Tag Manager -->
+
+
+	<!-- Hide One Signal when coming from a Google Search Ad -->
+	<script>
+    function hideElementsIfAdMedium() {
+        var url = new URL(window.location.href);
+        var utmMedium = url.searchParams.get("utm_medium");
+        var isSpanish = url.pathname.includes("/es/"); // Check for /es/ in the URL path
+
+        if ((utmMedium && utmMedium.toLowerCase() === 'ads') || isSpanish) {
+            var observer = new MutationObserver(function(mutations) {
+                var oneSignalSelectors = [
+                    '#onesignal-slidedown-container'
+                ];
+
+                oneSignalSelectors.forEach(function(selector) {
+                    var element = document.querySelector(selector);
+                    if (element) {
+                        element.style.display = 'none';
+                    }
+                });
+            });
+
+            observer.observe(document.body, { childList: true, subtree: true });
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', hideElementsIfAdMedium);
+</script>
+    <!--End Hide One Signal when coming from a Google Search Ad -->
+
+	<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+	<!-- This site is optimized with the Yoast SEO Premium plugin v23.4 (Yoast SEO v23.4) - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Kamala Harris for President: Official Campaign Website</title>
+	<meta name="description" content="If we’re going to win this election and save democracy, we need you on board. Join our campaign today!" />
+	<link rel="canonical" href="https://kamalaharris.com/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Kamala Harris for President" />
+	<meta property="og:description" content="If we’re going to win this election and save democracy, we need you on board. Join our campaign today!" />
+	<meta property="og:url" content="https://kamalaharris.com/" />
+	<meta property="og:site_name" content="Kamala Harris for President: Official Campaign Website" />
+	<meta property="article:publisher" content="https://www.facebook.com/KamalaHarris/" />
+	<meta property="article:modified_time" content="2024-10-14T08:55:32+00:00" />
+	<meta property="og:image" content="https://kamalaharris.com/wp-content/uploads/2024/09/walz_harris_opengraph_1200x630.jpg" />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="630" />
+	<meta property="og:image:type" content="image/jpeg" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Home" />
+	<meta name="twitter:site" content="@KamalaHarris" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://kamalaharris.com/","url":"https://kamalaharris.com/","name":"Kamala Harris for President: Official Campaign Website","isPartOf":{"@id":"https://kamalaharris.com/#website"},"about":{"@id":"https://kamalaharris.com/#organization"},"datePublished":"2024-08-27T10:38:53+00:00","dateModified":"2024-10-14T08:55:32+00:00","description":"If we’re going to win this election and save democracy, we need you on board. Join our campaign today!","breadcrumb":{"@id":"https://kamalaharris.com/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://kamalaharris.com/"]}]},{"@type":"BreadcrumbList","@id":"https://kamalaharris.com/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home"}]},{"@type":"WebSite","@id":"https://kamalaharris.com/#website","url":"https://kamalaharris.com/","name":"Kamala Harris for President: Official Campaign Website","description":"If we’re going to win this election and save democracy, we need you on board. Join our campaign today!","publisher":{"@id":"https://kamalaharris.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://kamalaharris.com/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https://kamalaharris.com/#organization","name":"Kamala Harris for President: Official Campaign Website","url":"https://kamalaharris.com/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://kamalaharris.com/#/schema/logo/image/","url":"https://kamalaharris.com/wp-content/uploads/2024/09/cropped-kh_favicon.png","contentUrl":"https://kamalaharris.com/wp-content/uploads/2024/09/cropped-kh_favicon.png","width":512,"height":512,"caption":"Kamala Harris for President: Official Campaign Website"},"image":{"@id":"https://kamalaharris.com/#/schema/logo/image/"},"sameAs":["https://www.facebook.com/KamalaHarris/","https://x.com/KamalaHarris"]}]}</script>
+	<!-- / Yoast SEO Premium plugin. -->
+
+
+<link rel='dns-prefetch' href='//cdn.parsely.com' />
+<link rel='dns-prefetch' href='//stats.wp.com' />
+<script type="text/javascript">
+/* <![CDATA[ */
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/kamalaharris.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.6.2"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83d\udc26\u200d\u2b1b","\ud83d\udc26\u200b\u2b1b")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+/* ]]> */
+</script>
+<link rel='stylesheet' id='formidable-css' href='https://kamalaharris.com/wp-admin/admin-ajax.php?action=frmpro_css&#038;ver=9111911' media='all' />
+<style id='wp-emoji-styles-inline-css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<style id='safe-svg-svg-icon-style-inline-css'>
+.safe-svg-cover{text-align:center}.safe-svg-cover .safe-svg-inside{display:inline-block;max-width:100%}.safe-svg-cover svg{height:100%;max-height:100%;max-width:100%;width:100%}
+
+</style>
+<style id='wp-parsely-recommendations-style-inline-css'>
+.parsely-recommendations-list-title{font-size:1.2em}.parsely-recommendations-list{list-style:none;padding:unset}.parsely-recommendations-cardbody{overflow:hidden;padding:.8em;text-overflow:ellipsis;white-space:nowrap}.parsely-recommendations-cardmedia{padding:.8em .8em 0}
+
+</style>
+<link rel='stylesheet' id='all-css-10' href='https://kamalaharris.com/_static/??-eJzTLy/QzcxLzilNSS3WzyrWz01NyUxMzUnNTc0rQeEU5CRWphbp5qSmJyZX6uVm5uklFxfr6OPTDpRD5sM02efaGpobmVpaGBmZGgEARN0u5g==' type='text/css' media='all' />
+<style id='jetpack-sharing-buttons-style-inline-css'>
+.jetpack-sharing-buttons__services-list{display:flex;flex-direction:row;flex-wrap:wrap;gap:0;list-style-type:none;margin:5px;padding:0}.jetpack-sharing-buttons__services-list.has-small-icon-size{font-size:12px}.jetpack-sharing-buttons__services-list.has-normal-icon-size{font-size:16px}.jetpack-sharing-buttons__services-list.has-large-icon-size{font-size:24px}.jetpack-sharing-buttons__services-list.has-huge-icon-size{font-size:36px}@media print{.jetpack-sharing-buttons__services-list{display:none!important}}.editor-styles-wrapper .wp-block-jetpack-sharing-buttons{gap:0;padding-inline-start:0}ul.jetpack-sharing-buttons__services-list.has-background{padding:1.25em 2.375em}
+</style>
+<style id='classic-theme-styles-inline-css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id='global-styles-inline-css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='all-css-16' href='https://kamalaharris.com/_static/??-eJzTLy/QTc7PK0nNK9EvyUjNTS3Wz0gr0AUz9ZOLi/XTgJLFekCWjj4hpWAWYaXFJZU5YGX2ubaG5kYW5qamlkZGAMb8MYI=' type='text/css' media='all' />
+<script type="text/javascript" src="https://kamalaharris.com/_static/??-eJzTLy/QzcxLzilNSS3WzwKiwtLUokoopZebmaeXVayjj0+Rbm5melFiSSpUsX2uraG5kamlhZGRqVEWAK+YIiM=" ></script><script type="text/javascript" src="https://kamalaharris.com/wp-content/themes/ns-core-theme/js/admin-min.js?ver=6.6.2" id="admin-js-js"></script>
+<link rel="https://api.w.org/" href="https://kamalaharris.com/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://kamalaharris.com/wp-json/wp/v2/pages/292" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://kamalaharris.com/xmlrpc.php?rsd" />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://kamalaharris.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fkamalaharris.com%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://kamalaharris.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fkamalaharris.com%2F&#038;format=xml" />
+	<style>img#wpstats{display:none}</style>
+		<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"WebPage","headline":"Kamala Harris for President: Official Campaign Website","url":"https:\/\/kamalaharris.com"}</script><link rel="icon" href="https://kamalaharris.com/wp-content/uploads/2024/09/cropped-kh_favicon.png?w=32" sizes="32x32" />
+<link rel="icon" href="https://kamalaharris.com/wp-content/uploads/2024/09/cropped-kh_favicon.png?w=192" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://kamalaharris.com/wp-content/uploads/2024/09/cropped-kh_favicon.png?w=180" />
+<meta name="msapplication-TileImage" content="https://kamalaharris.com/wp-content/uploads/2024/09/cropped-kh_favicon.png?w=270" />
+
+	
+</head>
+
+<body class="home page-template-default page page-id-292">
+
+	<!-- Google Tag Manager (noscript) -->
+	<noscript>
+	<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WBLPCSQN" height="0" width="0"
+	        style="display:none;visibility:hidden"></iframe>
+	</noscript>
+	<!-- End Google Tag Manager (noscript) -->
+
+
+	<style>
+    @supports (-ms-ime-align:auto) {
+    .lightbox .container #close-lightbox span {
+        margin-top:5px !important;
+        }
+    }
+    
+    .lightbox .btn-group .button:nth-child(2) {
+        background-color: #369CFB; /* Background color for the second button */
+        color: #0B1836; /* Text color for the second button */
+        border: none; /* Removes the border for the second button */
+    }
+</style>
+
+<div id="lightbox" class="lightbox lightbox-vA" style="display:none;">
+            <div class="container">
+                <div id="close-lightbox" class="lightbox--close"><span>Close</span> <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.49994 10.4211L15.6578 18L16.9999 16.579L9.84203 9.00008L17 1.42104L15.6579 0L8.49994 7.57903L1.34209 0.000135521L0 1.42118L7.15784 9.00008L0.000143351 16.5788L1.34224 17.9999L8.49994 10.4211Z" fill="#0B1836"/>
+                </svg>
+                </div>
+        <div class="content"> <h2 style="text-transform: uppercase;"><span style="font-weight: 400;"> We Need Your Help </span></h2>
+<p><span style="font-weight: 400;">We’re facing our final FEC deadline and our fundraising has taken a serious dip. We need to hit 1,000,000 donations or we’ll have to scale back our persuasion and turnout efforts. Can you donate now?</span></p>
+ <div class="btn-group btn-group-grid"><a class="button" href="https://secure.actblue.com/donate/web-hfp-october-2024?refcode=lightbox_FEC101224&#038;amount=25" target="_blank">$25</a><a class="button" href="https://secure.actblue.com/donate/web-hfp-october-2024?refcode=lightbox_FEC101224&#038;amount=47" target="_blank">$47</a><a class="button" href="https://secure.actblue.com/donate/web-hfp-october-2024?refcode=lightbox_FEC101224&#038;amount=100" target="_blank">$100</a><a class="button" href="https://secure.actblue.com/donate/web-hfp-october-2024?refcode=lightbox_FEC101224&#038;amount=250" target="_blank">$250</a><a class="button" href="https://secure.actblue.com/donate/web-hfp-october-2024?refcode=lightbox_FEC101224&#038;amount=1000" target="_blank">$1000</a><a class="button" href="https://secure.actblue.com/donate/web-hfp-october-2024?refcode=lightbox_FEC101224" target="_blank">Other</a></div> </div> <figure class="picture"><img alt="" src="https://kamalaharris.com/wp-content/uploads/2024/09/COMP-Vice-President-Kamala-Harris-introduces-6k-Lightbox-img.jpg" /></figure></div></div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+            });
+</script>
+
+<style>
+
+    /* countdown lightbox specific styles */
+
+    .lightbox.lightbox-countdown .container {
+        display: flex; 
+        flex-direction: row; 
+    }
+
+    .lightbox.lightbox-countdown .content {
+        order: 2; 
+        flex: 0 0 50%; 
+        padding: 0px 80px 0px 80px; 
+        margin-bottom: 45px;
+    }
+
+    .lightbox.lightbox-countdown .picture {
+        order: 1;
+        flex: 0 0 50%; 
+    }
+
+    .lightbox.lightbox-countdown {
+        flex-direction: row-reverse;
+    }
+
+    #lightbox-countdown {
+        display: flex;
+        gap: 10px; 
+        margin-top:-10px;
+    }
+
+    #lightbox-countdown div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        width: 100px;
+        min-width: 100px;
+
+    }
+
+    #lightbox-countdown span {
+        display: block;
+    }
+
+    #countdown-days,
+    #countdown-hours,
+    #countdown-minutes,
+    #countdown-seconds {
+        font-size: 3.4em; 
+        color: white; 
+        font-family: "Balto", sans-serif;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    #lightbox-countdown span.label {
+        font-size: 1em; 
+        color: white; 
+        font-family: "Fearless", sans-serif;
+        text-align: center; 
+        margin-top:-36px;
+    }
+
+    #lightbox-countdown hr {
+        border: none; 
+        border-left: 1px solid #ffffff; 
+        height: 90%;
+        margin: 0 10px; 
+        width: 2px; 
+        margin-top:20px;
+    }        
+
+    .lightbox.lightbox-countdown .container .picture img {
+            object-position: center center;
+    }
+
+
+    @media (min-width: 1700px) {
+        .lightbox-countdown .container .content {
+            padding: 0px 160px 0px 80px; 
+        }
+    }
+
+    @media (max-width: 1700px) {
+        .lightbox-countdown .container .content {
+            margin-top: 75px;
+        }
+    }
+
+    @media (max-width: 1237px) {
+        .lightbox-countdown .container .content {
+            margin-top: 55px;
+        }
+        #lightbox-countdown div {
+        width: 85px;
+        min-width: 85px;
+        }
+    }
+
+
+    @media (max-width: 1200px) {
+        #countdown-days,
+        #countdown-hours,
+        #countdown-minutes,
+        #countdown-seconds {
+            font-size: 2.6em; 
+        }
+
+        #lightbox-countdown span.label {
+            margin-top:-26px;
+        }
+
+        #lightbox-countdown div {
+        width: 70px;
+        min-width: 70px;
+        }
+    }
+
+    @media (max-width: 1100px) {
+        #countdown-days,
+        #countdown-hours,
+        #countdown-minutes,
+        #countdown-seconds {
+            font-size: 2.3em; 
+        }
+
+        #lightbox-countdown span.label {
+            margin-top:-23px;
+        }
+
+    }
+
+
+    @media (max-width: 1024px) {
+        .lightbox.lightbox-countdown .container {
+            flex-direction: column;
+        }
+
+        .lightbox-countdown .container .content {
+            margin: 40px 0 40px 0;
+        }
+
+        .lightbox.lightbox-countdown .content {
+            order: 1; 
+        }
+
+        .lightbox.lightbox-countdown .picture {
+            order: 2;
+        }
+
+    }
+
+    @media (max-width: 743px) {
+        #countdown-days,
+        #countdown-hours,
+        #countdown-minutes,
+        #countdown-seconds {
+            font-size: 2em; 
+            margin-top:-21px;    
+        }
+
+        #lightbox-countdown {
+            margin-top: 20px!important;
+        }
+
+        #lightbox-countdown div {
+        width: 44px;
+        min-width: 44px;
+        }
+
+        #lightbox-countdown hr {
+            margin-top: -12px;
+            height: 120%;
+        }
+
+        .lightbox-countdown .container .content .btn-group a {
+            width: 150%;
+            height: 48px;
+        }
+
+        .lightbox-countdown .container .content {
+            margin: 46px 0 46px 0;
+        }
+
+    }
+
+    @media (max-width: 480px) {
+
+        .lightbox.lightbox-countdown .content {
+            padding: 8px 40px 0px 40px; 
+        }
+
+        #countdown-days,
+        #countdown-hours,
+        #countdown-minutes,
+        #countdown-seconds {
+            font-size: 1.6em; 
+        }
+
+        #lightbox-countdown span.label {
+            font-size: 1em; 
+            margin-top:-16px;
+        }
+
+        #lightbox-countdown {
+            gap: 10px;
+        }
+
+    }
+
+    @media (max-width: 375px) {
+
+    .lightbox.lightbox-countdown .content {
+        padding: 8px 25px 0px 25px; 
+    }
+
+    #lightbox-countdown div {
+        width: 38px;
+        min-width: 38px;
+    }
+
+
+    #countdown-days,
+    #countdown-hours,
+    #countdown-minutes,
+    #countdown-seconds {
+        font-size: 1.4em; 
+    }
+
+    #lightbox-countdown span.label {
+        font-size: .75em; 
+        margin-top:-10px;
+    }
+
+}
+
+@media (max-width: 384px) {
+
+.lightbox .picture {
+    display:none;
+}
+
+.lightbox.lightbox-countdown {
+    max-height: 100%;
+}
+
+}
+
+</style>	    <div id="ticker">
+        <div class="services-ticker-block ticker-wrap">
+            <div class="stb_line_single ticker">
+                <a href="https://iwillvote.com/?state=natl&utm_source=hfp_organizing&utm_campaign=w_khc_iwv_do_dvc_ve_20241012_hfp_natl_na_na_na&utm_medium=web" class="stb-item" target="_blank">
+                    <span>Make your plan to vote. Check out voting options in your state here >>></span>
+                </a>
+            </div>
+        </div>   
+    </div>
+
+
+<script>
+
+    /*var speedTicker = ; 
+    gsap.utils.toArray('.stb_line_single').forEach((line, i) => {
+        const links = line.querySelectorAll("a"),
+                tl = horizontalLoop(links, {
+                repeat: -1, 
+                speed: speedTicker + i * 0.05,
+                reversed: i ? true : false,
+                paddingRight: parseFloat(gsap.getProperty(links[0], "marginRight", "px")) // otherwise first element would be right up against the last when it loops. In this layout, the spacing is done with marginRight.
+                });
+        links.forEach(link => {
+            link.addEventListener("mouseenter", () => gsap.to(tl, {timeScale: 0, overwrite: true}));
+            link.addEventListener("mouseleave", () => gsap.to(tl, {timeScale: i ? -1 : 1, overwrite: true}));
+        });
+    });*/
+
+    /*function horizontalLoop(items, config) {
+        items = gsap.utils.toArray(items);
+        config = config || {};
+        let tl = gsap.timeline({repeat: config.repeat, paused: config.paused, defaults: {ease: "none"}, onReverseComplete: () => tl.totalTime(tl.rawTime() + tl.duration() * 100)}),
+            length = items.length,
+            startX = items[0].offsetLeft,
+            times = [],
+            widths = [],
+            xPercents = [],
+            curIndex = 0,
+            pixelsPerSecond = (config.speed || 1) * 50,
+            snap = config.snap === false ? v => v : gsap.utils.snap(config.snap || 1), // some browsers shift by a pixel to accommodate flex layouts, so for example if width is 20% the first element's width might be 242px, and the next 243px, alternating back and forth. So we snap to 5 percentage points to make things look more natural
+            totalWidth, curX, distanceToStart, distanceToLoop, item, i;
+        gsap.set(items, { // convert "x" to "xPercent" to make things responsive, and populate the widths/xPercents Arrays to make lookups faster.
+            xPercent: (i, el) => {
+                let w = widths[i] = parseFloat(gsap.getProperty(el, "width", "px"));
+                xPercents[i] = snap(parseFloat(gsap.getProperty(el, "x", "px")) / w * 100 + gsap.getProperty(el, "xPercent"));
+                return xPercents[i];
+            }
+        });
+        gsap.set(items, {x: 0});
+        totalWidth = items[length-1].offsetLeft + xPercents[length-1] / 100 * widths[length-1] - startX + items[length-1].offsetWidth * gsap.getProperty(items[length-1], "scaleX") + (parseFloat(config.paddingRight) || 0);
+        for (i = 0; i < length; i++) {
+            item = items[i];
+            curX = xPercents[i] / 100 * widths[i];
+            distanceToStart = item.offsetLeft + curX - startX;
+            distanceToLoop = distanceToStart + widths[i] * gsap.getProperty(item, "scaleX");
+            tl.to(item, {xPercent: snap((curX - distanceToLoop) / widths[i] * 100), duration: distanceToLoop / pixelsPerSecond}, 0)
+            .fromTo(item, {xPercent: snap((curX - distanceToLoop + totalWidth) / widths[i] * 100)}, {xPercent: xPercents[i], duration: (curX - distanceToLoop + totalWidth - curX) / pixelsPerSecond, immediateRender: false}, distanceToLoop / pixelsPerSecond)
+            .add("label" + i, distanceToStart / pixelsPerSecond);
+            times[i] = distanceToStart / pixelsPerSecond;
+        }
+        function toIndex(index, vars) {
+            vars = vars || {};
+            (Math.abs(index - curIndex) > length / 2) && (index += index > curIndex ? -length : length); // always go in the shortest direction
+            let newIndex = gsap.utils.wrap(0, length, index),
+                time = times[newIndex];
+            if (time > tl.time() !== index > curIndex) { // if we're wrapping the timeline's playhead, make the proper adjustments
+                vars.modifiers = {time: gsap.utils.wrap(0, tl.duration())};
+                time += tl.duration() * (index > curIndex ? 1 : -1);
+            }
+            curIndex = newIndex;
+            vars.overwrite = true;
+            return tl.tweenTo(time, vars);
+        }
+        tl.next = vars => toIndex(curIndex+1, vars);
+        tl.previous = vars => toIndex(curIndex-1, vars);
+        tl.current = () => curIndex;
+        tl.toIndex = (index, vars) => toIndex(index, vars);
+        tl.times = times;
+    if (config.reversed) {
+        tl.vars.onReverseComplete();
+        tl.reverse();
+    }
+        return tl;
+    }*/
+</script>	
+	
+	
+
+<header class="vA ">
+
+    <div class="container">
+        <button id="mobile-nav-button" class="expanded-menu" aria-expanded="false" aria-controls="mobile-nav">
+            <div class="open" aria-label="Open the menu">
+                <svg aria-hidden="true" width="71" height="13" viewBox="0 0 71 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <line y1="9.5" x2="25" y2="9.5" stroke="white" stroke-width="3"/>
+                <line y1="3.5" x2="25" y2="3.5" stroke="white" stroke-width="3"/>
+                <path d="M34.787 11H32.707V1.9H36.243L37.92 7.984L39.584 1.9H43.042V11H40.65V4.305L38.752 11H36.685L34.787 4.344V11ZM44.8148 11V1.9H51.4058V3.668H47.3108V5.462H50.8208V7.217H47.3108V9.232H51.4058V11H44.8148ZM55.3373 11H53.1013V1.9H55.4673L58.7043 7.061V1.9H60.9403V11H58.6913L55.3373 5.657V11ZM65.1651 7.737C65.1651 8.881 65.6721 9.362 66.5431 9.362C67.4141 9.362 67.9211 8.881 67.9211 7.737V1.9H70.3261V7.373C70.3261 9.739 69.0651 11.195 66.5041 11.195C63.9301 11.195 62.6691 9.739 62.6691 7.373V1.9H65.1651V7.737Z" fill="white"/>
+                </svg>
+            </div>
+
+            <div class="close" aria-label="Close the menu">
+                <svg aria-hidden="true" width="77" height="37" viewBox="0 0 77 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.3787 18.4999L8.6005 26.2781L10.7218 28.3994L18.5 20.6213L26.2782 28.3994L28.3995 26.2781L20.6213 18.4999L28.3995 10.7218L26.2782 8.60044L18.5 16.3786L10.7218 8.60044L8.60051 10.7218L16.3787 18.4999Z" fill="white"/>
+                <path d="M40.787 23H38.707V13.9H42.243L43.92 19.984L45.584 13.9H49.042V23H46.65V16.305L44.752 23H42.685L40.787 16.344V23ZM50.8148 23V13.9H57.4058V15.668H53.3108V17.462H56.8208V19.217H53.3108V21.232H57.4058V23H50.8148ZM61.3373 23H59.1013V13.9H61.4673L64.7043 19.061V13.9H66.9403V23H64.6913L61.3373 17.657V23ZM71.1651 19.737C71.1651 20.881 71.6721 21.362 72.5431 21.362C73.4141 21.362 73.9211 20.881 73.9211 19.737V13.9H76.3261V19.373C76.3261 21.739 75.0651 23.195 72.5041 23.195C69.9301 23.195 68.6691 21.739 68.6691 19.373V13.9H71.1651V19.737Z" fill="white"/>
+                </svg>
+            </div>
+        </button>
+        
+
+        <div class="left-side">
+            <div class="language">
+                                    <a href="/es/"><svg width="30" height="28" viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="14" cy="14" r="13.5" stroke="white"/>
+<path fill="white" d="M7.39289 18V11H13.3729L13.4429 12.55H9.21289V13.67H12.5729V15.14H9.21289V16.45H13.5729L13.5129 18H7.39289ZM18.0191 18.17C16.7491 18.17 15.7591 17.9 14.8391 17.5V15.74H14.8491C15.9391 16.31 17.0991 16.62 18.0791 16.62C18.9191 16.62 19.3491 16.39 19.3491 15.99C19.3491 15.58 19.0291 15.46 17.4791 15.2C16.0491 14.97 14.8191 14.53 14.8191 13.13C14.8191 11.89 15.8791 10.83 18.0991 10.83C18.9891 10.83 19.9591 11.04 20.7591 11.43V13.18H20.7491C19.9291 12.69 18.8591 12.38 17.9591 12.38C17.0691 12.38 16.6991 12.62 16.6991 13C16.6991 13.49 17.3691 13.54 18.5391 13.75C19.9691 14 21.2191 14.4 21.2191 15.9C21.2191 16.9 20.5491 18.17 18.0191 18.17Z" fill="#2755A2"/>
+</svg></a>
+                                </div>
+            <div class="left-menu">
+            <nav class="primary-nav-left"><ul id="menu-header-menu-left" class="menu"><li id="menu-item-479" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-479"><a href="#" data-ps2id-api="true">Meet Kamala and Tim</a>
+<ul class="sub-menu">
+	<li id="menu-item-399" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-399"><a href="https://kamalaharris.com/meet-kamala-harris/" data-ps2id-api="true">Kamala Harris</a></li>
+	<li id="menu-item-400" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-400"><a href="https://kamalaharris.com/meet-governor-tim-walz/" data-ps2id-api="true">Tim Walz</a></li>
+</ul>
+</li>
+<li id="menu-item-480" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-480"><a href="https://kamalaharris.com/issues/" data-ps2id-api="true">Issues</a></li>
+</ul></nav>            </div>
+        </div>
+
+        <div class="logo-center">
+            
+<div class="logo">
+	<a id='main-url' href='/'>		<img 
+			id="main-logo" 
+			src="https://kamalaharris.com/wp-content/uploads/2024/09/HarrisWalz_Logo-1.svg" 
+			itemprop="logo" 
+			alt="Harris waltz logo" />
+		<span id="main-name" class="sr-only">Harris waltz logo</span>
+	</a></div>
+        </div>
+
+        <div class="right-side">
+            <div class="right-menu">
+            <nav class="primary-nav-right"><ul id="menu-header-menu-right" class="menu"><li id="menu-item-340" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-340"><a target="_blank" rel="noopener" href="https://go.kamalaharris.com/?utm_source=hfp_w_kh_menu" data-ps2id-api="true">Volunteer</a></li>
+<li id="menu-item-339" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-339"><a target="_blank" rel="noopener" href="http://iwillvote.com?state=natl&#038;utm_source=hfp_organizing&#038;utm_campaign=w_khc_iwv_do_dvc_ve_20241012_hfp_natl_na_na_na&#038;utm_medium=web" data-ps2id-api="true">Let&#8217;s Vote</a></li>
+</ul></nav>            </div>
+            <div class="btn-group">
+                                    <a class="button" href="https://secure.actblue.com/donate/web-hfp-october-01-2024?refcode=hfp_menu" target="_blank"><span class="sr-only">Donate Button</span> DONATE</a>
+                            </div>
+        </div>
+    </div>
+   
+
+</header>	
+<style>
+
+    .language-mobile svg circle  {
+        stroke: white
+    }
+
+    .language-mobile svg path  {
+        fill: white
+    }
+
+</style>  
+
+<div id="mobile-nav" aria-labelledby="mobile-nav-button" class="">
+        <div id="mobile-nav-items" role="dialog">
+        <nav class="primary-mobile-menu"><ul id="menu-mobile-menu" class="menu"><li id="menu-item-487" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-292 current_page_item menu-item-487"><a href="https://kamalaharris.com/" aria-current="page" data-ps2id-api="true">Home</a></li>
+<li id="menu-item-401" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-401"><a href="https://kamalaharris.com/meet-kamala-harris/" data-ps2id-api="true">Kamala Harris</a></li>
+<li id="menu-item-402" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-402"><a href="https://kamalaharris.com/meet-governor-tim-walz/" data-ps2id-api="true">Tim Walz</a></li>
+<li id="menu-item-447" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-447"><a href="https://kamalaharris.com/issues/" data-ps2id-api="true">Issues</a></li>
+<li id="menu-item-341" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-341"><a target="_blank" rel="noopener" href="https://go.kamalaharris.com/?utm_source=hfp_w_kh_menu" data-ps2id-api="true">Volunteer</a></li>
+<li id="menu-item-1370" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1370"><a href="http://iwillvote.com?state=natl&#038;utm_source=hfp_organizing&#038;utm_campaign=w_khc_iwv_do_dvc_ve_20241012_hfp_natl_na_na_na&#038;utm_medium=web" data-ps2id-api="true">Let&#8217;s Vote</a></li>
+<li id="menu-item-342" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-342"><a target="_blank" rel="noopener" href="https://store.kamalaharris.com/" data-ps2id-api="true">Store</a></li>
+</ul></nav>    </div>
+    <div class="language-mobile">
+                    <a href="/es/"><svg width="30" height="28" viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="14" cy="14" r="13.5" stroke="white"/>
+<path fill="white" d="M7.39289 18V11H13.3729L13.4429 12.55H9.21289V13.67H12.5729V15.14H9.21289V16.45H13.5729L13.5129 18H7.39289ZM18.0191 18.17C16.7491 18.17 15.7591 17.9 14.8391 17.5V15.74H14.8491C15.9391 16.31 17.0991 16.62 18.0791 16.62C18.9191 16.62 19.3491 16.39 19.3491 15.99C19.3491 15.58 19.0291 15.46 17.4791 15.2C16.0491 14.97 14.8191 14.53 14.8191 13.13C14.8191 11.89 15.8791 10.83 18.0991 10.83C18.9891 10.83 19.9591 11.04 20.7591 11.43V13.18H20.7491C19.9291 12.69 18.8591 12.38 17.9591 12.38C17.0691 12.38 16.6991 12.62 16.6991 13C16.6991 13.49 17.3691 13.54 18.5391 13.75C19.9691 14 21.2191 14.4 21.2191 15.9C21.2191 16.9 20.5491 18.17 18.0191 18.17Z" fill="#2755A2"/>
+</svg></a>
+                </div>
+</div>
+<main>
+		<section class="container container-wide container-single">
+    	        	<style>
+    header{position:absolute; z-index: 999999; width: 100%; background:transparent;}
+    header #main-logo{filter: brightness(0) invert(1);}
+    header ul li a, header ul li h5{color:white !important;}
+    header .menu-item-has-children > h5:after{ background: url(/wp-content/themes/hfp-theme/img/arrow-down-white.svg) center center no-repeat transparent !important; }
+    body.espanol-page #countdown > h2 {font-size: 80px!important; }
+
+</style>
+
+
+        <section class="home-hero alignfull" style="background:url(https://kamalaharris.com/wp-content/uploads/2024/09/G53968470242_a83f3391a0_o.jpg) center center no-repeat #0B1836;">
+            <div class="container">
+                <figure class="">
+                    <img decoding="async" src="https://kamalaharris.com/wp-content/uploads/2024/09/G53968470242_a83f3391a0_o.jpg" alt="Vice President Harris and Governor Walz addressing a large crowd of supporters at a rally" />
+                </figure>
+                <div class="form">
+                    <script>var countDownText = "If you’ve been waiting for the best time to join the fight, that time is NOW. Sign up for updates:";</script>                    <div id="countdown" class="form-intro"></div>
+                    <div>
+                    <script src='https://web.kamalaharris.com/widgets/v5/form/thank-you-for-standing-with-joe-biden-and-kamala-harris?format=js&#038;source=widget&#038;clear_id=true'></script><div id='can-form-area-thank-you-for-standing-with-joe-biden-and-kamala-harris' style='width: 100%'><!-- this div is the target for our HTML insertion --></div>                    <div class="form-disclaimer"><p>By providing your mobile phone number you consent to receive recurring automated text messages from Harris for President. Message &#038; Data Rates May Apply. Text HELP for Info. Text STOP to opt out. No purchase necessary. Privacy policy: <a href="https://kamalaharris.com/privacy-policy/" target="_blank" rel="noopener">https://KamalaHarris.com/privacy-policy/</a>.</p>
+</div>                    </div>
+                </div>
+            </div>
+        </section>
+    
+
+<script>
+		let deadline = new Date("November 6, 2024 00:00:00")
+						.getTime();
+        let espanolPage = window.location.pathname.includes('/es/');
+
+        if (espanolPage) {
+            document.body.classList.add('espanol-page');
+        }
+
+		//console.log(deadline);
+
+		let x = setInterval(function () {
+
+			const d = new Date();
+			const localTime = d.getTime();
+			const localOffset = d.getTimezoneOffset() * 60000;
+			const utc = localTime; //+ localOffset;
+			const offset = -4;
+			const usa = utc; //+ (3600000 * offset);
+
+			let now = new Date(usa).getTime();
+
+			let t = deadline - now;
+
+			let days = Math.floor(t / (1000 * 60 * 60 * 24));
+			let hours = Math.floor(
+				(t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+			let minutes = Math.floor(
+				(t % (1000 * 60 * 60)) / (1000 * 60));
+			let seconds = Math.floor(
+				(t % (1000 * 60)) / 1000);
+
+            console.log(espanolPage); 
+            let daysLeft = days + " DAYS LEFT"; 
+            let electionDay = "It's Election Day!"; 
+            if(espanolPage) {
+                daysLeft = "QUEDAN "+ days + " DÍAS"; 
+                electionDay = "Es el Día de Las Elecciones"; 
+            }
+
+			document.getElementById("countdown").innerHTML =
+				"<h2><span>" + daysLeft +"</span></h2><p>"+ countDownText + "</p>";
+
+			if (t < 0) {
+				clearInterval(x);
+				document.getElementById("countdown")
+						.innerHTML = "<h2>"+electionDay+"</h2><p>"+ countDownText + "</p>";
+			}
+		}, 400);
+	</script>
+
+
+
+		<section id="" class="ns-donations alignfull">
+            <div class="container">
+                <div>
+                    <h2><strong>LET’S WIN THIS.</strong><br />
+<strong>DONATE NOW.</strong></h2>
+                </div>
+
+                <div>
+                    <div class="btn-group"><a class="button" href="https://secure.actblue.com/donate/web-hfp-october-01-2024?refcode=hfp_home_cta%3F&#038;amount=5" target="_blank"><span class="sr-only">Donate $5 dollars.</span> $5</a><a class="button" href="https://secure.actblue.com/donate/web-hfp-october-01-2024?refcode=hfp_home_cta%3F&#038;amount=10" target="_blank"><span class="sr-only">Donate $10 dollars.</span> $10</a><a class="button" href="https://secure.actblue.com/donate/web-hfp-october-01-2024?refcode=hfp_home_cta%3F&#038;amount=25" target="_blank"><span class="sr-only">Donate $25 dollars.</span> $25</a><a class="button" href="https://secure.actblue.com/donate/web-hfp-october-01-2024?refcode=hfp_home_cta%3F&#038;amount=47" target="_blank"><span class="sr-only">Donate $47 dollars.</span> $47</a><a class="button" href="https://secure.actblue.com/donate/web-hfp-october-01-2024?refcode=hfp_home_cta%3F&#038;amount=100" target="_blank"><span class="sr-only">Donate $100 dollars.</span> $100</a><a class="button" href="https://secure.actblue.com/donate/web-hfp-october-01-2024?refcode=hfp_home_cta%3F&#038;amount=250" target="_blank"><span class="sr-only">Donate $250 dollars.</span> $250</a><a class="button" href="https://secure.actblue.com/donate/web-hfp-october-01-2024?refcode=hfp_home_cta%3F&#038;amount=500" target="_blank"><span class="sr-only">Donate $500 dollars.</span> $500</a><a class="button" href="https://secure.actblue.com/donate/web-hfp-october-01-2024?refcode=hfp_home_cta%3F&#038;amount=1000" target="_blank"><span class="sr-only">Donate $1000 dollars.</span> $1000</a></div>
+                                    </div>
+			</div>
+		</section>
+
+	
+
+
+		<section id="" class="ns-stories alignfull">
+            <div class="container">
+                <section id="stories"><ul><li><figure><a href="https://go.kamalaharris.com/?utm_source=hfp_w_an_findeventmodule" target="_blank"><img decoding="async" alt="An excited crowd at a rally" src="https://kamalaharris.com/wp-content/uploads/2024/09/Events-Image@3x-copy.webp" /></a></figure><h3 class="title"><a href="https://go.kamalaharris.com/?utm_source=hfp_w_an_findeventmodule" target="_blank">Events</a></h3><p>Join the Harris-Walz movement in-person or online.</p><p><a class="btn-small" href="https://go.kamalaharris.com/?utm_source=hfp_w_an_findeventmodule" target="_blank"><span class="sr-only">Link for  page</span> Find an event</a></p></li><li><figure><a href="https://kamalaharris.com/agenda/" target="_self"><img decoding="async" alt="" src="https://kamalaharris.com/wp-content/uploads/2024/10/kamala_harris_home.webp" /></a></figure><h3 class="title"><a href="https://kamalaharris.com/agenda/" target="_self">An Opportunity Agenda for Black men</a></h3><p>Learn more about Vice President Kamala Harris’ plan to provide the tools to Black men to build wealth, support their families, and lead in their communities.</p><p><a class="btn-small" href="https://kamalaharris.com/agenda/" target="_self"><span class="sr-only">Link for Events page</span> Learn More</a></p></li><li><figure><a href="https://kamalaharris.com/project2025/" target="_self"><img decoding="async" alt="A person&#039;s hands hold a book that says &quot;Project 2025&quot;" src="https://kamalaharris.com/wp-content/uploads/2024/09/IMAGE-1.webp" /></a></figure><h3 class="title"><a href="https://kamalaharris.com/project2025/" target="_self">Trump’s Project 2025</a></h3><p>More than 900 pages of a plan to give Trump unprecedented, unchecked power to do whatever he wants. We read it so you don’t have to.</p><p><a class="btn-small" href="https://kamalaharris.com/project2025/" target="_self"><span class="sr-only">Link for An Opportunity Agenda for Black men page</span> Learn more</a></p></li></ul></section>			</div>
+		</section>
+
+	
+
+
+		<section id="" class="ns-registration alignfull">
+            <div class="container ">
+
+                <div id="ns-registration__form" class="alignfull" style="background:url(https://kamalaharris.com/wp-content/uploads/2024/09/freedom-group.svg) center top repeat transparent;">
+                    <div class="container">
+                        <div class="can_embed_form">
+                            <div class="intro-text"><h2>TAKE ACTION.<br />
+ELECT HARRIS.</h2>
+<p>Choose how you want to get involved.</p>
+</div>                            <script src='https://web.kamalaharris.com/widgets/v5/form/take-action-to-elect-kamala-harris-as-president?format=js&#038;source=widget&#038;clear_id=true'></script><div id='can-form-area-take-action-to-elect-kamala-harris-as-president' style='width: 100%'><!-- this div is the target for our HTML insertion --></div>                            <div class="form-disclaimer"><p>By providing your mobile phone number you consent to receive recurring automated text messages from Harris for President. Message &#038; Data Rates May Apply. Text HELP for Info. Text STOP to opt out. No purchase necessary. Privacy policy: <a href="https://kamalaharris.com/privacy-policy/" target="_blank" rel="noopener">https://KamalaHarris.com/privacy-policy/</a>.</p>
+</div>                        </div>
+                    </div>
+                </div>
+
+                    <style>.ns-merchant{padding-top:162px;} @media screen and (max-width: 743px){ .ns-merchant{padding-top:52px;} }</style>			</div>
+		</section>
+
+	
+
+
+		<section id="" class="ns-merchant alignfull">
+            <div class="container">
+                <div>
+                    <h2 style="text-align: left;">SHOP MERCH</h2>
+<p class="p1">Shop our best sellers!</p>
+<p><a class="btn-small" href="https://store.kamalaharris.com/shop-all/" target="_blank">Shop all</a></p>
+                </div>
+                <section id="products" class="splide products" role="" aria-label="Products"><div class="splide__arrows"><button class="splide__arrow splide__arrow--prev"><svg width="37" height="38" viewBox="0 0 37 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="18.5" cy="19" r="17.5" stroke="#0B1836" stroke-width="2"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M15.6569 26.2071L9.29289 19.8431C8.90237 19.4526 8.90237 18.8195 9.29289 18.4289L15.6569 12.065C16.0474 11.6744 16.6805 11.6744 17.0711 12.065C17.4616 12.4555 17.4616 13.0887 17.0711 13.4792L12.4142 18.136H27C27.5523 18.136 28 18.5838 28 19.136C28 19.6883 27.5523 20.136 27 20.136H12.4142L17.0711 24.7929C17.4616 25.1834 17.4616 25.8166 17.0711 26.2071C16.6805 26.5976 16.0474 26.5976 15.6569 26.2071Z" fill="#0B1836"/>
+                    </svg>                    
+                    </button>
+                    
+                    <button class="splide__arrow splide__arrow--next"><svg width="37" height="38" viewBox="0 0 37 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="18.5" cy="18.5" r="17.5" transform="matrix(-1 0 0 1 37 0.5)" stroke="#0B1836" stroke-width="2"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M21.3431 26.2071L27.7071 19.8431C28.0976 19.4526 28.0976 18.8195 27.7071 18.4289L21.3431 12.065C20.9526 11.6744 20.3195 11.6744 19.9289 12.065C19.5384 12.4555 19.5384 13.0887 19.9289 13.4792L24.5858 18.136H10C9.44772 18.136 9 18.5838 9 19.136C9 19.6883 9.44772 20.136 10 20.136H24.5858L19.9289 24.7929C19.5384 25.1834 19.5384 25.8166 19.9289 26.2071C20.3195 26.5976 20.9526 26.5976 21.3431 26.2071Z" fill="#0B1836"/>
+                    </svg>                    
+                    </button></div><div class="splide__track"><ul class="splide__list"><li class="splide__slide products__box"><figure><a href="https://store.kamalaharris.com/harris-walz-yard-sign/" target="_blank"><img decoding="async" alt="Navy yard sign that reads in white text Harris Walz with KamalaHarris.com" src="https://kamalaharris.com/wp-content/uploads/2024/09/harris-walz_yardSing_sideA-url__51262-1.webp" /></a></figure><div><p><span><strong><a href="https://store.kamalaharris.com/harris-walz-yard-sign/" target="_blank">Harris-Walz Yard Sign</a></strong></span> <span>$20</span></p></div></li><li class="splide__slide products__box"><figure><a href="https://store.kamalaharris.com/harris-walz-tee/" target="_blank"><img decoding="async" alt="Navy unisex tee that reads Harris Walz in light blue ink" src="https://kamalaharris.com/wp-content/uploads/2024/09/9200_source_1723138886-1.png" /></a></figure><div><p><span><strong><a href="https://store.kamalaharris.com/harris-walz-tee/" target="_blank">Harris-Walz Tee</a></strong></span> <span>$32</span></p></div></li><li class="splide__slide products__box"><figure><a href="https://store.kamalaharris.com/harris-walz-friendship-bracelets/" target="_blank"><img decoding="async" alt="Two beaded bracelets that spell out &quot;Harris Walz&quot; on blue and black string that is closed off by a bead with the number &quot;24&quot;." src="https://kamalaharris.com/wp-content/uploads/2024/09/harris-Walz_friendshipBracelet.webp" /></a></figure><div><p><span><strong><a href="https://store.kamalaharris.com/harris-walz-friendship-bracelets/" target="_blank">Harris-Walz Friendship Bracelets</a></strong></span> <span>$20</span></p></div></li></ul></div></section>			</div>
+		</section>
+
+	
+<script>
+  document.addEventListener( 'DOMContentLoaded', function () {
+    new Splide( '#products', {
+        type   : 'slide',
+        perPage: 3,
+        perMove: 1,
+        gap: '24px',
+        pagination: false,
+
+        breakpoints: {
+            1024: {
+                perPage: 3,
+            },
+            743: {
+                type   : 'slide',
+                perPage: 2,
+                gap: '11px',
+            },
+        }
+    } ).mount();
+  } );
+</script>  	 	  	</section>
+	</main>
+<div id="sticky-donations"><div class="container"><p><b>Donate now to power our movement!</b></p> <div class="btn-group btn-group-sticky"><a class="button" href="https://secure.actblue.com/donate/web-hfp-october-01-2024?refcode=hfp_footer%3F&#038;amount=25" target="_blank"><span class="sr-only">Donate $25 dollars.</span> $25</a><a class="button" href="https://secure.actblue.com/donate/web-hfp-october-01-2024?refcode=hfp_footer%3F&#038;amount=47" target="_blank"><span class="sr-only">Donate $47 dollars.</span> $47</a><a class="button" href="https://secure.actblue.com/donate/web-hfp-october-01-2024?refcode=hfp_footer%3F&#038;amount=100" target="_blank"><span class="sr-only">Donate $100 dollars.</span> $100</a><a class="button" href="https://secure.actblue.com/donate/web-hfp-october-01-2024?refcode=hfp_footer%3F&#038;amount=250" target="_blank"><span class="sr-only">Donate $250 dollars.</span> $250</a><a class="button" href="https://secure.actblue.com/donate/web-hfp-october-01-2024?refcode=hfp_footer%3F&#038;amount=500" target="_blank"><span class="sr-only">Donate $500 dollars.</span> $500</a></div></div></div>		<div id="bottom-form"><div class="container"><div class="content"><h2>STAY<br />
+UPDATED</h2>
+<p>Sign up to get updates from the campaign.</p>
+</div><div class="embed"><script src='https://web.kamalaharris.com/widgets/v5/form/add-your-name-to-say-youre-ready-to-elect-kamala-harris-footer?format=js&source=widget&clear_id=true'></script><div id='can-form-area-add-your-name-to-say-youre-ready-to-elect-kamala-harris-footer' style='width: 100%'><!-- this div is the target for our HTML insertion --></div></div></div></div>		
+		<footer>
+			
+			<div class="container">
+
+				<div class="ns-logo-data">
+											<figure class="">
+							<img src="https://kamalaharris.com/wp-content/uploads/2024/09/HarrisWalz_Logo.svg" alt="Harris for President">
+						</figure>
+										
+                  								<a href="https://kamalaharris.com/terms-of-service/" target="_blank">
+								<span class="sr-only">Link to PAID FOR BY HARRIS for President</span> <span aria-hidden="true">PAID FOR BY HARRIS for President</a>
+							</a>
+						
+											<p>© Copyright 2024. All rights reserved.</p>
+					
+				</div>
+
+				<div class="footer-navs">
+					<div>
+													<ul>
+																
+											
+									<li class="link-text">
+										<a href="https://kamalaharris.com/meet-kamala-harris/" target="_self"><span class="sr-only">Link to Meet Kamala page</span> <span aria-hidden="true">Meet Kamala</span></a> 
+									</li>
+									
+																	
+											
+									<li class="link-text">
+										<a href="https://kamalaharris.com/meet-tim-walz/" target="_self"><span class="sr-only">Link to Meet Tim page</span> <span aria-hidden="true">Meet Tim</span></a> 
+									</li>
+									
+																	
+											
+									<li class="link-text">
+										<a href="https://kamalaharris.com/issues/" target="_self"><span class="sr-only">Link to Issues page</span> <span aria-hidden="true">Issues</span></a> 
+									</li>
+									
+																	
+											
+									<li class="link-text">
+										<a href="https://kamalaharris.com/a-new-way-forward/" target="_self"><span class="sr-only">Link to A New Way Forward page</span> <span aria-hidden="true">A New Way Forward</span></a> 
+									</li>
+									
+																	
+											
+									<li class="link-text">
+										<a href="https://go.kamalaharris.com/" target="_blank"><span class="sr-only">Link to Volunteer page</span> <span aria-hidden="true">Volunteer</span></a> 
+									</li>
+									
+																	
+											
+									<li class="link-text">
+										<a href="https://store.kamalaharris.com/" target="_blank"><span class="sr-only">Link to Store page</span> <span aria-hidden="true">Store</span></a> 
+									</li>
+									
+																	
+											
+									<li class="link-text">
+										<a href="https://kamalaharris.com/faqs/" target="_self"><span class="sr-only">Link to FAQS page</span> <span aria-hidden="true">FAQS</span></a> 
+									</li>
+									
+																	
+											
+									<li class="link-text">
+										<a href="https://kamalaharris.com/work-with-us/" target="_self"><span class="sr-only">Link to Work with Us page</span> <span aria-hidden="true">Work with Us</span></a> 
+									</li>
+									
+								
+														</ul>
+											</div>
+
+
+
+
+
+					<div>
+													<ul>
+
+																								
+											
+									<li class="link-text">
+										<a href="https://kamalaharris.com/donate-by-mail/" target="_self"><span class="sr-only">Link to Donate by Mail</span> <span aria-hidden="true">Donate by Mail</span></a> 
+									</li>
+									
+																	
+											
+									<li class="link-text">
+										<a href="https://secure.actblue.com/donate/drc-hvf-web?opt_id=oeu1722088340872r0.965472227018431" target="_blank"><span class="sr-only">Link to Donate to the Harris Victory Fund </span> <span aria-hidden="true">Donate to the Harris Victory Fund </span></a> 
+									</li>
+									
+																	
+											
+									<li class="link-text">
+										<a href="https://kamalaharris.com/accessibility/" target="_self"><span class="sr-only">Link to Accessibility</span> <span aria-hidden="true">Accessibility</span></a> 
+									</li>
+									
+																	
+											
+									<li class="link-text">
+										<a href="https://kamalaharris.com/terms-of-service/" target="_self"><span class="sr-only">Link to Terms and Conditions</span> <span aria-hidden="true">Terms and Conditions</span></a> 
+									</li>
+									
+																	
+											
+									<li class="link-text">
+										<a href="https://kamalaharris.com/privacy-policy/" target="_self"><span class="sr-only">Link to Privacy Policy</span> <span aria-hidden="true">Privacy Policy</span></a> 
+									</li>
+									
+																	
+											
+									<li class="link-text">
+										<a href="https://kamalaharris.com/contact-us/" target="_self"><span class="sr-only">Link to Contact Us</span> <span aria-hidden="true">Contact Us</span></a> 
+									</li>
+									
+															
+								
+							</ul>
+											</div>
+
+											<div class="ns-footer-social-icons">
+															<a href="https://x.com/KamalaHarris" target="https://x.com/KamalaHarris">
+									<span class="sr-only">Social media link to X profile.</span>
+									<figure class="">
+										<img src="https://kamalaharris.com/wp-content/themes/hfp-theme/img/x-icon.svg" alt="Go to X Profile.">
+									</figure>
+								</a>
+																						<a href="https://www.facebook.com/KamalaHarris/" target="https://www.facebook.com/KamalaHarris/">
+									<span class="sr-only">Social media link to Facebook profile.</span>
+									<figure class="">
+										<img src="https://kamalaharris.com/wp-content/themes/hfp-theme/img/fb-icon.svg" alt="Go to Facebook Profile.">
+									</figure>
+								</a>
+																						<a href="https://www.instagram.com/kamalaharris/?hl=en" target="https://www.instagram.com/kamalaharris/?hl=en">
+									<span class="sr-only">Social media link to Instagram profile.</span>
+									<figure class="">
+										<img src="https://kamalaharris.com/wp-content/themes/hfp-theme/img/insta-icon.svg" alt="Go to Instagram Profile.">
+									</figure>
+								</a>
+																						<a href="https://www.youtube.com/kamalaharris" target="https://www.youtube.com/kamalaharris">
+									<span class="sr-only">Social media link to YouTube profile.</span>
+									<figure class="">
+										<img src="https://kamalaharris.com/wp-content/themes/hfp-theme/img/you-icon.svg" alt="Go to YouTube Profile.">
+									</figure>
+								</a>
+																						<a href="https://flickr.com/photos/kamalaharris" target="https://flickr.com/photos/kamalaharris">
+									<span class="sr-only">Social media link to Flicker profile.</span>
+									<figure class="">
+										<img src="https://kamalaharris.com/wp-content/themes/hfp-theme/img/flicker-icon.svg" alt="Go to Flicker Profile.">
+									</figure>
+								</a>
+							
+															<a href="https://www.tiktok.com/@kamalaharris?lang=en" target="https://www.tiktok.com/@kamalaharris?lang=en">
+									<span class="sr-only">Social media link to TikTok profile.</span>
+									<figure class="">
+										<img src="https://kamalaharris.com/wp-content/themes/hfp-theme/img/tiktok-icon.svg" alt="Go to TikTok Profile.">
+									</figure>
+								</a>
+													</div>
+									</div>
+
+									<div class="ns-content">
+						<p>Support our presidential campaign to elect Kamala Harris by signing up to <a href="https://go.kamalaharris.com/" target="_blank" rel="noopener">volunteer</a> or <a href="https://secure.actblue.com/donate/web-hfp-october-2024?refcode=footer2" target="_blank" rel="noopener">making a donation</a> online.</p>
+<p>To contribute by mail, please <a href="https://kamalaharris.com/donate-by-mail/">click here</a>.</p>
+
+													<div class="ns-footer-social-icons">
+																	<a href="https://x.com/KamalaHarris" target="https://x.com/KamalaHarris">
+										<span class="sr-only">Social media link to X profile.</span>
+										<figure class="">
+											<img src="https://kamalaharris.com/wp-content/themes/hfp-theme/img/x-icon.svg" alt="Go to X Profile.">
+										</figure>
+									</a>
+																									<a href="https://www.facebook.com/KamalaHarris/" target="https://www.facebook.com/KamalaHarris/">
+										<span class="sr-only">Social media link to Facebook profile.</span>
+										<figure class="">
+											<img src="https://kamalaharris.com/wp-content/themes/hfp-theme/img/fb-icon.svg" alt="Go to Facebook Profile.">
+										</figure>
+									</a>
+																									<a href="https://www.instagram.com/kamalaharris/?hl=en" target="https://www.instagram.com/kamalaharris/?hl=en">
+										<span class="sr-only">Social media link to Instagram profile.</span>
+										<figure class="">
+											<img src="https://kamalaharris.com/wp-content/themes/hfp-theme/img/insta-icon.svg" alt="Go to Instagram Profile.">
+										</figure>
+									</a>
+																									<a href="https://www.youtube.com/kamalaharris" target="https://www.youtube.com/kamalaharris">
+										<span class="sr-only">Social media link to YouTube profile.</span>
+										<figure class="">
+											<img src="https://kamalaharris.com/wp-content/themes/hfp-theme/img/you-icon.svg" alt="Go to YouTube Profile.">
+										</figure>
+									</a>
+																									<a href="https://flickr.com/photos/kamalaharris" target="https://flickr.com/photos/kamalaharris">
+										<span class="sr-only">Social media link to Flicker profile.</span>
+										<figure class="">
+											<img src="https://kamalaharris.com/wp-content/themes/hfp-theme/img/flicker-icon.svg" alt="Go to Flicker Profile.">
+										</figure>
+									</a>
+								
+																	<a href="https://www.tiktok.com/@kamalaharris?lang=en" target="https://www.tiktok.com/@kamalaharris?lang=en">
+										<span class="sr-only">Social media link to TikTok profile.</span>
+										<figure class="">
+											<img src="https://kamalaharris.com/wp-content/themes/hfp-theme/img/tiktok-icon.svg" alt="Go to TikTok Profile.">
+										</figure>
+									</a>
+															</div>
+											</div>
+								
+			</div>
+		</footer>
+
+		<script src="https://kamalaharris.com/wp-content/themes/hfp-theme/js/splide.min.js"></script>
+		<link href="https://kamalaharris.com/wp-content/themes/hfp-theme/css/splide.min.css" rel="stylesheet">
+
+		<script src="https://kamalaharris.com/wp-content/themes/hfp-theme/js/gsap.min.js" type="text/javascript"></script>
+		<script src="https://kamalaharris.com/wp-content/themes/hfp-theme/js/scrollTrigger.min.js" type="text/javascript"></script>
+
+		<script type="text/javascript" id="page-scroll-to-id-plugin-script-js-extra">
+/* <![CDATA[ */
+var mPS2id_params = {"instances":{"mPS2id_instance_0":{"selector":"a[href*='#']:not([href='#'])","autoSelectorMenuLinks":"true","excludeSelector":"a[href^='#tab-'], a[href^='#tabs-'], a[data-toggle]:not([data-toggle='tooltip']), a[data-slide], a[data-vc-tabs], a[data-vc-accordion], a.screen-reader-text.skip-link","scrollSpeed":800,"autoScrollSpeed":"true","scrollEasing":"easeInOutQuint","scrollingEasing":"easeOutQuint","forceScrollEasing":"false","pageEndSmoothScroll":"true","stopScrollOnUserAction":"false","autoCorrectScroll":"false","autoCorrectScrollExtend":"false","layout":"vertical","offset":"100","dummyOffset":"false","highlightSelector":"","clickedClass":"mPS2id-clicked","targetClass":"mPS2id-target","highlightClass":"mPS2id-highlight","forceSingleHighlight":"false","keepHighlightUntilNext":"false","highlightByNextTarget":"false","appendHash":"false","scrollToHash":"true","scrollToHashForAll":"true","scrollToHashDelay":0,"scrollToHashUseElementData":"true","scrollToHashRemoveUrlHash":"false","disablePluginBelow":0,"adminDisplayWidgetsId":"true","adminTinyMCEbuttons":"true","unbindUnrelatedClickEvents":"false","unbindUnrelatedClickEventsSelector":"","normalizeAnchorPointTargets":"false","encodeLinks":"false"}},"total_instances":"1","shortcode_class":"_ps2id"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://kamalaharris.com/_static/??/wp-content/plugins/page-scroll-to-id/js/page-scroll-to-id.min.js,/wp-includes/js/dist/hooks.min.js?m=1727375007j" ></script><script type="text/javascript" src="https://kamalaharris.com/wp-includes/js/dist/i18n.min.js?ver=5e580eb46a90c2b997e6" id="wp-i18n-js"></script>
+<script type="text/javascript" id="wp-i18n-js-after">
+/* <![CDATA[ */
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+/* ]]> */
+</script>
+<script type="text/javascript" id="wp-parsely-loader-js-before">
+/* <![CDATA[ */
+window.wpParselySiteId = 'kamalaharris.com';
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://kamalaharris.com/wp-content/mu-plugins/wp-parsely-3.16/build/loader.js?ver=71d37502d12f3838b80d" id="wp-parsely-loader-js"></script>
+<script type="text/javascript" data-parsely-site="kamalaharris.com" src="https://cdn.parsely.com/keys/kamalaharris.com/p.js?ver=3.16.4" id="parsely-cfg"></script>
+<script type="text/javascript" src="https://kamalaharris.com/wp-content/themes/hfp-theme/js/site-min.js?m=1726596059g" ></script><script type="text/javascript" src="https://stats.wp.com/e-202442.js" id="jetpack-stats-js" data-wp-strategy="defer"></script>
+<script type="text/javascript" id="jetpack-stats-js-after">
+/* <![CDATA[ */
+_stq = window._stq || [];
+_stq.push([ "view", JSON.parse("{\"v\":\"ext\",\"blog\":\"236719344\",\"post\":\"292\",\"tz\":\"0\",\"srv\":\"kamalaharris.com\",\"hp\":\"vip\",\"j\":\"1:13.8.2\"}") ]);
+_stq.push([ "clickTrackerInit", "236719344", "292" ]);
+/* ]]> */
+</script>
+	</body>
+</html>

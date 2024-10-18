@@ -1,0 +1,25 @@
+Ashley Cooper pics/Alamy Stock Photo
+Bird flu patient had no apparent contact with animals – and there’s still no evidence of sustained human-to-human spread
+Published: October 4, 2024 12:16pm EDT
+Disclosure statement
+Mark Fielder does not work for, consult, own shares in or receive funding from any company or organization that would benefit from this article, and has disclosed no relevant affiliations beyond their academic appointment.
+Partners
+Kingston University provides funding as a member of The Conversation UK.
+Six healthcare workers in the US who were in close contact with a patient known to have bird flu developed mild respiratory symptoms, according to the US Centers for Disease Control and Prevention (CDC). The patient was not known to have had contact with livestock or other animals, raising the possibility of human-to-human spread.
+Only one healthcare worker was tested for the H5N1 bird flu virus, but the results were negative. All of the healthcare workers provided blood samples to test for bird flu antibodies, but the results of those tests are not known.
+The CDC characterises the risk to the public at present to be low.
+Influenza (or flu) is a common respiratory infection caused by a group of viruses called the paramyxoviruses. These types of viruses have a genome that is made of RNA, which is vulnerable to mutation . This matters because changes in genetic material can change the characteristics of a virus, making it, say, more or less transmissible or more or less pathogenic (able to cause harm).
+There are four types of influenza virus: A, B, C and D. Influenza A is known to infect humans and other animals, including birds. Bird flu is type A. The different strains are denoted by receptor combinations on the viral surface called hemagglutinin (H) and neuraminidase (N) and these are defined by different numbers, such as H1N1 or H2N1.
+One strain of bird flu, H5N1, has been circulating since 1997, when it was first noted. However, it was particularly active in the UK between October 2021 and September 2022 , causing disease in both wild and domestic birds.
+In 2023, the H5N1 virus was detected in 37 countries with over 50 million birds culled, according to the European Food Standards agency. The virus is continuing to affect birds and has been observed in various mammals, including foxes and otters in the UK.
+The detection of the H5N1 virus in these mammals is not believed to be directly due to infection, but more likely due to the consumption of dead birds that had succumbed to the infection. There are no reported cases of transmission between mammals in the wild.
+Although, recently, there have been a handful of H5N1 cases in humans, they have been very mild cases. It should be noted that from 2003 to April 2024 there have been 463 deaths , globally. However, when compared with deaths recorded in humans annually from seasonal flu, the number of deaths caused by H5N1 in human beings is extremely small.
+Mammals in the UK that died of avian influenza probably caught the disease by eating an infected bird. bardzo photo/Shutterstock
+Luckily, not adapted to mammals
+The World Health Organization reports the number of human cases of H5N1 globally (24 countries reporting) from 2003 to July 2024 came to 896 cases. What this data shows is that the virus can cause disease in humans, but is not effective at transmission between humans.
+For effective human-to-human transmission, genetic reassortment is needed for the virus to adapt to the human host. However, the virus is currently adapted to an avian host, not a mammalian one.
+However, if a human-adapted influenza virus infected a human host alongside avian H5N1 virus, the viruses potentially could swap RNA in a “reassortment event” that might allow the bird flu virus (H5N1) to become more adapted to the human host. This is similar to what happened with H1N1 (swine flu), in which the virus developed genetic properties that allowed it to infect humans.
+So what can be done to protect humans? For one, annual flu vaccines should be updated to provide protection against H5N1, too. There also needs to be continued monitoring of how the virus is evolving to inform potential control measures and monitor any genetic changes within the virus that might permit spread into other non-avian hosts.
+There is no evidence that there are genetic changes in the virus that will allow it to establish an effective presence in humans, but scientists will continue to monitor the virus. The risk of infection developing and being sustained in the human population remains low. However, vigilance is required to ensure this situation remains the same.
+Want to write?
+Write an article and join a growing community of more than 191,400 academics and researchers from 5,063 institutions.

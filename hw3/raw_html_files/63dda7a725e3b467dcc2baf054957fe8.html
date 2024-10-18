@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="robots" content="noindex">
+    <title>PariPesa</title>
+    <link rel="shortcut icon" href="dist/images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/style3.css" />
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KH4PG3C');</script>
+    <!-- End Google Tag Manager -->
+    <!-- Eskimi DSP Pixel Code -->
+<script>
+    !function(f,e,t,u,n,s,p) {if(f.esk)return;n=f.esk=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f.___esk)f.___esk=n;n.push=n;n.loaded=!0;n.queue=[];s=e.createElement(t);s.async=!0;s.src=u;p=e.getElementsByTagName(t)[0];p.parentNode.insertBefore(s,p)}(window,document,'script', 'https://dsp-media.eskimi.com/assets/js/e/gtr.min.js?_=0.0.0.4');
+    esk('init', '32163');
+   </script>
+   <!-- End Eskimi DSP Pixel Code -->
+</head>
+
+<body><img src="https://requestkeeper.pro/track?t=page_load&ref=https://bonus.paripesa.com/betting-3/" style="display: none;">
+    <div style="display: none;" id="error-popup">
+        <div class="fancybox-wrap">
+            <img src="dist/images/error-icon.png" alt="error image" class="error-image">
+            <div class="error-text" id="error_message"></div>
+            <a id="forgot-btn" href="https://paripesa.com/" class="reset-btn">LOGIN
+            </a>
+            <button class="ok-button">
+                OK
+            </button>
+        </div>
+    </div>
+    <div style="display: none;" id="notif-popup">
+        <div class="fancybox-wrap">
+            <div class="error-text">
+                Registration for users from Nigeria is available at
+            </div>
+            <a id="link-btn" href="https://bonus.paripesa.ng/" class="ok-button">paripesa.ng</a>
+        </div>
+    </div>
+    <div style="display: none;" id="confirm-popup">
+        <div class="fancybox-wrap">
+            <div class="confirmText">A confirmation code has been sent to</div>
+            <div class="phoneValue"></div>
+            <button class="ok-button">
+                OK
+            </button>
+        </div>
+    </div>
+    <main>
+        <div id="registeredSection" class="registeredSection hideSection">
+            <div class="errorText">looks like you've been registered before</div>
+            <a href="https://paripesa.com/" id="loginBtn" class="loginBtn register">LOGIN</a>
+            <a href="https://paripesa.com/user/forgotpassword" id="forgotBtn" class="forgotBtn">Forgot your password?</a>
+        </div>
+        <section id="register">
+            <div class="content">
+                <div class="left-side">
+                    <div class="image-wrapper">
+
+                        <div class="bonus-wrapper">
+                            <picture>
+                                <source srcset="dist/images/bonus.webp" type="image/webp">
+                                <source srcset="dist/images/bonus.png" type="image/png">
+                                <img src="dist/images/bonus.webp">
+                            </picture>
+                        </div>
+
+                        <div class="crypto-wrapper">
+                            <picture>
+                                <source srcset="dist/images/woman.webp" type="image/webp">
+                                <source srcset="dist/images/woman.png" type="image/png">
+                                <img src="dist/images/woman.webp">
+                            </picture>
+                        </div>
+                        <div class="footer">
+                            <img src="dist/images/18+.png" alt="alt">
+                            <p>Copyright © 2019 - 2024 «PariPesa». Vezzali Limited (reg. number HE 410688) operated by Propus Holding B.V. (reg. number 154511). A company licensed and regulated by the law of Curacao under the Master License Holder Curacao eGaming with license number 1668/JAZ.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="register-form-wrapper one">
+                    <div class="register-form">
+                    	<div class="form-header">
+                    		<a id="loginL" href="https://paripesa.com/">
+                                <img src="dist/images/Logo.svg" alt="Paripesa Logo" class="form-logo" />
+                            </a>
+                    		<a href="https://paripesa.com/" class="login-btn" id="login">Log in</a>
+                    	</div>
+                        <div class="form-group group-code confirmSection hideSection">
+                            <label class="labelForConfirm">Confirmation code</label>
+                            <div class="code-input_wrapper">
+                                <input id="phone_confirmation" required="" value="" type="text" class="code-input input_text" placeholder="Code from SMS">
+                                <div class="resendWrap">
+                                    <button disabled class="resendBtn disabled" id="resend">Send Code again</button>
+                                    <div class="counterText disabled">(in <span class="timer">30</span> sec)</div>
+                                </div>
+                                <button disabled class="confirmBtn buttonStyles disabledConfirm" id="confirm">confirm number</button>
+                                <div class="loaderConf">Loading...</div>
+                            </div>
+                        </div>
+                        <div class="registrSection">
+                            <div class="form-group group-phone active">
+                            <input style="display: none" type="text" id="type" name="type" value="phone" required="">
+                            <label>PHONE NUMBER</label>
+                            <div class="phone-input_wrapper active phone-input-toggler" id="phone-code-dropdown">
+                                <input required="" value="" type="tel" id="phone" name="phone" class="phone-input input_text" placeholder="11 2345678" maxlength="10" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+                                <select name="code" id="code">
+                                </select>
+                            </div>
+                            <div class="invalid-phone">Incorrect phone number</div>
+                            </div>
+                            <div class="form-group pos-rltv">
+                            <label>Password</label>
+                            <input required="" type="password" id="password" name="password" class="password-input input_text" placeholder="Minimum 6 characters">
+                            <div class="invalid-password">Use both numbers and letters without spaces</div>
+                            <div class="eye-icon hidden-password">
+                                <img src="dist/images/hide.svg" class="show-password" />
+                                <img src="dist/images/show.svg" class="hide-password" />
+                            </div>
+                            </div>
+                            <div class="form-group">
+                            <label>Currency</label>
+                            <div class="phone-input_wrapper" id="currency-code-dropdown">
+                                <input style="display: none" type="text" id="country" name="country" placeholder="">
+                                <input class="input_text" type="text" id="currency" name="currency" placeholder="">
+                                <select name="currency-code" id="currency-code"></select>
+                            </div>
+                            </div>
+                            <div class="form-group">
+                            <label>Promocode</label>
+                            <input required="" type="text" id="promocode" name="promocode" class="promocode-input input_text" placeholder="Optional to fill">
+                            </div>
+                            <div class="checkbox-wrapper">
+                            <input id="checkbox" type="checkbox" class="checkbox" required checked>
+                            <label for="checkbox" class="checkbox-label">
+                                <p>You confirm that you've read and agree to the <a target="_blank" href="https://paripesa.com/information/rules/" class="privacy-policy">Terms and Conditions</a> and <a target="_blank" href="https://paripesa.com/information/rules/18/" class="privacy-policy">Privacy Policy</a> of the company and confirm that you are of legal age.</p>
+                            </label>
+                            </div>
+                            <div class="form-group flex centered reg-group">
+                            <button type="submit" id="register-button" class="register buttonStyles">
+                                CREATE ACCOUNT
+                            </button>
+                            <div class="loader">Loading...</div>
+                            </div>
+                        </div>
+                        <div class="footer-mobile">
+                            Copyright © 2019 - 2024 «PariPesa». Vezzali Limited (reg. number HE 410688) operated by Propus Holding B.V. (reg. number 154511). A company licensed and regulated by the law of Curacao under the Master License Holder Curacao eGaming with license number 1668/JAZ.
+                        </div>
+                        <div class="image18"><img src="dist/images/18+.svg" alt="alt"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+    function asyncCSS(href) {
+        var css = document.createElement('link');
+        css.rel = "stylesheet";
+        css.href = href;
+        document.head.appendChild(css);
+    }
+    asyncCSS('https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css');
+    asyncCSS('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+    asyncCSS('https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css');
+    </script>
+    <script async src="https://bonus.paripesa.com/dist/bundle.js"></script>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KH4PG3C"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+</body>
+
+</html>

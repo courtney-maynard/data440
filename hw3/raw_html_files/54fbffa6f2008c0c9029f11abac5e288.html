@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html><head><!-- Google Tag Manager --><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TS5DMCHD');</script><!-- End Google Tag Manager --><base href="http://go.pardot.com"><meta charset="utf-8"><meta name="description" content=""><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Tintri Geek Out!</title><link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script><style>
+    
+
+        /* --------------------------------------------------------------
+            FORM STYLES
+        ----------------------------------------------------------------- */
+
+            /* Border-box box model FTW! */
+            #pardot-form,
+            #pardot-form *,
+            #pardot-form *:before,
+            #pardot-form *:after {
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+            }
+
+            /* Override form margin and padding set in the default stylesheet. Inherit font and color from page. */
+            #pardot-form {
+                margin: 0;
+                padding: 0;
+                font: inherit;
+                color: inherit;
+            }
+
+            /* Override form field wrapper margin and padding set in the default stylesheet. */
+            #pardot-form .form-field,
+            #pardot-form .submit {
+                margin: 15px 0 15px 0;
+                padding: 0;
+            }
+
+            /* Remove top margin from first from field wrapper. */
+            #pardot-form .form-field:first-child {
+                margin-top: 0;
+            }
+
+            /* Set default input style. */
+            #pardot-form input {
+                border: 1px solid #ccc;
+                border-radius: 3px;
+                box-sizing: border-box;
+                color: #2c3e50;
+                font-size: 14px;
+                padding: 7px 15px;
+                width: 100%;
+            }
+
+            /* When labels are not floated left, set width on text inputs, textareas, and selects to 100%. */
+            #pardot-form input.text,
+            #pardot-form input.date,
+            #pardot-form textarea,
+            #pardot-form select {
+                width: 100%;
+                font-family: inherit;
+                color: inherit;
+            }
+
+            /* When labels are floated left, set width on field labels to a percentage of available width. In browsers that support calc(), use static label width instead and the form field will consume the remaining width. */
+            #pardot-form.label-left .field-label {
+                width: 35%;
+                width: calc(115px);
+            }
+
+            /* When labels are floated left, set width on text inputs, textareas, and selects to a percentage. In supported browsers, set width to 100% minus the width of the label instead. */
+            #pardot-form.label-left input.text,
+            #pardot-form.label-left input.date,
+            #pardot-form.label-left textarea,
+            #pardot-form.label-left select {
+                width: 65%;
+                width: calc(100% - 115px);
+            }
+
+            /* When labels are floated left, indent supporting form elements by the same amount as the field label. */
+            #pardot-form.label-left span.value,
+            #pardot-form.label-left .description,
+            #pardot-form.label-left .no-label > *,
+            #pardot-form.label-left .submit,
+            #pardot-form.label-left .error.no-label {
+                margin-left: 35%;
+                margin-left: calc(115px);
+            }
+
+            /* Remove unnecessary left padding on required radio/checkbox field labels when label alignment is set to above and the required symbol is set to default in form styling options. */
+            #pardot-form label.inline {
+                padding-left: 0;
+            }
+
+            /* Backup styles in case padding is added to text inputs. */
+            #pardot-form input.date {
+                padding-left: 20px;
+                background-position: left center;
+            }
+
+            #pardot-form .submit input {
+                background-color: #ec1844;
+                color: #fff;
+            }
+
+        /* --------------------------------------------------------------
+            BASE
+        ----------------------------------------------------------------- */
+
+            /* Set the base font */
+            body {
+                color: #444;
+                font-family: inherit;
+                line-height: 27px;
+                font-size: 15px;
+            }
+
+            /* Set heading fonts */
+            h1 {  }
+            h2 {  }
+            h3 { font-size:20px; }
+            h4 {  }
+
+            /* Set default background colour */
+            .bgcolour { background-color: #ffffff; }
+
+            /* Set custom background colours for specific blocks, also update font colours if dark BG  */
+            .header.bgcolour { /* background-color: #ffffff; */ }
+            .footer.bgcolour { /* background-color: #ffffff; */ }
+            .block-one.bgcolour { background-color: #ffffff; color: #fff; }
+            .block-two.bgcolour { /* background-color: #ffffff; */ }
+
+
+
+        /* --------------------------------------------------------------
+            TEMPLATE DETAILS
+        ----------------------------------------------------------------- */
+
+            .logo{
+                text-align: left;
+            }
+            img{
+                max-width: 100%;
+            }
+            .logo, .cta-container{
+                display:inline-block;
+                vertical-align: middle;
+                float:none;
+            }
+            .cta p {
+                margin-bottom: 0;
+                font-size: 21px;
+                font-weight: 200;
+            }
+
+            .block-two .thumbnail img {
+                max-width: 100%;
+            }
+            footer > div {
+                text-align:right;
+            }
+
+            /* White BG */
+            .white{
+                background-color:#ffffff;
+            }
+
+        /* --------------------------------------------------------------
+            SPACING
+        ----------------------------------------------------------------- */
+
+            /* make element edge to edge */
+            .flush {
+                padding-left: 0;
+                padding-right: 0;
+            }
+
+            /* vertical padding */
+            .vpadding {
+                padding-top: 20px;
+                padding-bottom: 20px;
+            }
+
+            /* top padding only */
+            .tpadding {
+                padding-top: 20px;
+                padding-bottom: 0px;
+            }
+
+            /* bottom padding only */
+            .bpadding {
+                padding-top:0px;
+                padding-bottom:20px;
+            }
+
+            /* large vertical padding */
+            .vpaddingLG {
+                padding-top:50px;
+                padding-bottom:50px;
+            }
+
+            /* spave below headings */
+            h1, h2, h3, h4, h5, h6 {
+                margin-bottom:15px;
+            }
+
+            /* space below paragraph */
+            p {
+                margin-bottom:20px;
+            }
+
+        /* --------------------------------------------------------------
+            SOCIAL
+        ----------------------------------------------------------------- */
+
+            /* Social container spacing */
+            .social {
+                padding-top:15px;
+                line-height: 20px;
+                float: left;
+            }
+
+                /* Make everything within social display next to one another */
+                .social * {
+                    display:inline;
+                    line-height: 20px;
+                }
+
+            /* Social list spacing */
+            .social-list {
+                padding-left:10px;
+                margin:0px;
+            }
+
+                /* Social list display next to one another */
+                .social-list li{
+                    display:inline;
+                }
+                
+                /* Disable underlines on image link hover */
+                .social-list a:hover{
+                    text-decoration: none;
+                }
+
+            /* Share button image specific style */
+            #share-buttons img {
+                width: 20px;
+                border: 0;
+                box-shadow: 0;
+                display: inline;
+            }
+
+        /* --------------------------------------------------------------
+            RESPONSIVE
+        ----------------------------------------------------------------- */
+            /* xs */
+            @media(max-width:767px){
+                .pull-right{
+                    float: none !important;
+                    text-align: center;
+                }
+                .social{
+                    text-align: center;
+                    float: none;
+                }
+                .cta{
+                    padding-top: 20px;
+                    text-align: center;
+                }
+                .logo{
+                    width:100%;
+                    text-align: center;
+                }
+                .cta-container{
+                    width: 100%;
+
+                }
+
+                .cta p{
+                    margin-bottom: 0;
+                }
+                .jumbotron{
+                    margin-bottom: 0;
+                }
+            }
+            /* sm */
+            @media(max-width:768px){
+                #pardot-form.label-left .field-label {
+                    width: 100%;
+                    text-align: left;
+                }
+                #pardot-form.label-left input.text, #pardot-form.label-left input.date, #pardot-form.label-left textarea, #pardot-form.label-left select {
+                    width: 100%;
+                }
+                #pardot-form.label-left span.value,
+                #pardot-form.label-left .description,
+                #pardot-form.label-left .no-label > *,
+                #pardot-form.label-left .submit,
+                #pardot-form.label-left .error.no-label {
+                    width: 100%;
+                }
+                #pardot-form.label-left span.value, #pardot-form.label-left .description, #pardot-form.label-left .no-label > *, #pardot-form.label-left .submit, #pardot-form.label-left .error.no-label {
+                    margin-left: 0;
+                }
+                form.form p {
+                    margin-left: 0px !important;
+                    padding-left:0px !important;
+                }
+            }
+            /* md */
+            @media(max-width:992px){
+
+            }
+            /* lg */
+            @media(min-width:1200px){
+
+            }
+            
+        </style><link rel="stylesheet" type="text/css" href="https://mkt.tintri.com/css/form.css?ver=2021-09-20"><script type="text/javascript" src="https://mkt.tintri.com/js/piUtils.js?ver=2021-09-20"></script><script type="text/javascript">
+piAId = '855013';
+piCId = '206508';
+piHostname = 'mkt.tintri.com';
+
+(function() {
+	function async_load(){
+		var s = document.createElement('script'); s.type = 'text/javascript';
+		s.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + piHostname + '/pd.js';
+		var c = document.getElementsByTagName('script')[0]; c.parentNode.insertBefore(s, c);
+	}
+	if(window.attachEvent) { window.attachEvent('onload', async_load); }
+	else { window.addEventListener('load', async_load, false); }
+})();
+</script></head><body>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TS5DMCHD" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="header bgcolour vpadding">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-3 col-sm-6 logo">
+                <div class="editable"><img src="https://mkt.tintri.com/l/854013/2021-03-29/9ywh6/854013/1617037871q3WKsovW/tintri_logo.jpg" width="130" alt="" placehold="logo" pardot-region="logo" pardot-region-type="image" height="50" data-id="35412"></div>
+              </div><!--
+             --><div class="cta-container col-md-9 col-sm-6 clearfix">
+                <div class="cta pull-right text-center">
+                  <div class="editable">
+                        <p pardot-region="secondary-cta" data-id="35415" data-hml-enabled="1"></p>
+                  </div><!-- editable -->
+                </div><!-- cta -->
+            </div><!-- col-md-9 -->
+          </div><!-- row -->
+      </div><!-- container -->
+    </div>
+
+    <div class="container">
+        <div class="row vpadding">
+            <div class="col-md-8">
+                <div class="editable">
+                    <h1 pardot-region="page-title" data-id="35418" data-hml-enabled="1"></h1>
+                </div>
+                <div class="editable">
+                    <h2 class="tagline" pardot-region="tagline" data-id="35421" data-hml-enabled="1"></h2>
+                </div>
+                <div class="editable" pardot-region="main-content" data-id="35424" data-hml-enabled="1"><p><img alt="" border="0" height="357" src="https://mkt.tintri.com/l/854013/2024-08-29/2pl12q/854013/1724972222SlrKwJAZ/MKTG_Webinars_GOW_LP_10.16.2024.jpg" style="width: 750px; height: 357px; border-width: 0px; border-style: solid;" width="750"></p>
+
+<p><span style="font-size:16px;"><span style='font-family:"Times New Roman",serif'><span style='font-family:"Calibri",sans-serif'><span style="color:#333333">Welcome to Camp Tintri's Geek Out demo! Plenty of fresh mountain air, sunshine glistening across Hyper-V Lake, and the sweet sounds of "Tin-tin-tin... Tri-tri-tri..." rustling through the bushes. At least we hope that's what's rustling in the bushes...</span></span></span></span></p>
+
+<p><span style="font-size:16px;"><span style='font-family:"Times New Roman",serif'><span style='font-family:"Calibri",sans-serif'><span style="color:#333333">Join us <strong>Wednesday October 16th 10 AM PT/1 PM ET/6 PM GMT for our <em>Geek Out! Technology Demo Series - Wednesday the 16th!</em></strong> Den Leader Chris Gallamore will take campers down to Hyper-V Lake for adventures and activities to help your organization avoid horrors in the data center!</span></span></span></span></p>
+
+<ul><li><span style="font-size:16px;"><span style='font-family:"Times New Roman",serif'><span style='font-family:"Calibri",sans-serif'><span style="color:#333333">Enhance your visibility across storage, host, network, and hypervisor to avoid running into any killer issues in your data center! </span></span></span></span></li>
+	<li><span style="font-size:16px;"><span style='font-family:"Times New Roman",serif'><span style='font-family:"Calibri",sans-serif'><span style="color:#333333">Be the last one standing as Tintri technology boosts your performance with sub-millisecond latencies and fully utilized capacity to curb VM sprawl! </span></span></span></span></li>
+	<li><span style="font-size:16px;"><span style='font-family:"Times New Roman",serif'><span style='font-family:"Calibri",sans-serif'><span style="color:#333333">Slash through your storage footprint with a 6x reduction in size with a 60x management reduction! </span></span></span></span></li>
+</ul><p><span style="font-size:16px;"><span style='font-family:"Times New Roman",serif'><span style='font-family:"Calibri",sans-serif'><span style="color:#333333">With Tintri technology for Hyper-V, your organization's data will be poised to outlast the competition and live to tell the tale. (Until the sequel, at least). Sign up today!</span></span></span></span></p>
+
+<p><span style="font-size:16px;"><strong>All attendees will be entered into a drawing for a chance to win a custom branded Nintendo Switch!&nbsp;</strong>(<strong><a href="https://mkt.tintri.com/l/854013/2021-06-03/flc98/854013/1622750668pB7spzDs/Geek_Out_Wed_TERMS_AND_CONDITIONS.pdf" style="color:#ea1e46;">Terms and conditions</a></strong>)</span></p>
+
+<table align="center"><tbody><tr><td><img alt="" border="0" height="249" src="https://mkt.tintri.com/l/854013/2021-06-03/fl74z/854013/16227377884gJZnU4P/Nintendo_Switch.png" style="width: 527px; height: 249px; border-width: 0px; border-style: solid;" width="527"></td>
+		</tr></tbody></table></div>
+            </div><!-- div-md-8 -->
+            <div class="col-md-4">
+                <div class="editable">
+                    <form accept-charset="UTF-8" method="post" action="https://mkt.tintri.com/geek-out/hyper-v/10.16.2024" class="form" id="pardot-form">
+
+<style type="text/css">
+form.form p label { color: #000000; font-size: 12pt; float: none; text-align: left; line-height: 1em; width: auto; }
+form.form p.submit { margin-left: 5px; }
+form.form p.no-label { margin-left: 50px; }
+form.form span.value { margin-left: 0px; }
+form.form p span.description { margin-left: 0px; }
+form.form p.required label, form.form span.required label { background-position: top left; padding-left: 15px; }
+form.form .pd-radio .value span { display: block !important; }
+</style><p class="form-field  first_name pd-text required    ">
+				
+					<label class="field-label" for="854013_290912pi_854013_290912">First Name</label>
+				
+
+				<input type="text" name="854013_290912pi_854013_290912" id="854013_290912pi_854013_290912" value="" class="text" size="30" maxlength="40" onchange="" onfocus=""></p>
+			<div id="error_for_854013_290912pi_854013_290912" style="display:none"></div>
+			
+		
+			<p class="form-field  last_name pd-text required    ">
+				
+					<label class="field-label" for="854013_290915pi_854013_290915">Last Name</label>
+				
+
+				<input type="text" name="854013_290915pi_854013_290915" id="854013_290915pi_854013_290915" value="" class="text" size="30" maxlength="80" onchange="" onfocus=""></p>
+			<div id="error_for_854013_290915pi_854013_290915" style="display:none"></div>
+			
+		
+			<p class="form-field  email pd-text required    ">
+				
+					<label class="field-label" for="854013_290918pi_854013_290918">Business Email</label>
+				
+
+				<input type="text" name="854013_290918pi_854013_290918" id="854013_290918pi_854013_290918" value="" class="text" size="30" maxlength="255" onchange="" onfocus="piAjax.loadEmailIndicator(this, 290918, 'https://mkt.tintri.com/images/indicator2.gif');"></p>
+			<div id="error_for_854013_290918pi_854013_290918" style="display:none"></div>
+			
+		
+			<p class="form-field  phone pd-text required    ">
+				
+					<label class="field-label" for="854013_290921pi_854013_290921">Phone</label>
+				
+
+				<input type="text" name="854013_290921pi_854013_290921" id="854013_290921pi_854013_290921" value="" class="text" size="30" maxlength="40" onchange="" onfocus=""></p>
+			<div id="error_for_854013_290921pi_854013_290921" style="display:none"></div>
+			
+		
+			<p class="form-field  company pd-text required    ">
+				
+					<label class="field-label" for="854013_290924pi_854013_290924">Company</label>
+				
+
+				<input type="text" name="854013_290924pi_854013_290924" id="854013_290924pi_854013_290924" value="" class="text" size="30" maxlength="255" onchange="" onfocus=""></p>
+			<div id="error_for_854013_290924pi_854013_290924" style="display:none"></div>
+			
+		
+			<p class="form-field  job_title pd-text required    ">
+				
+					<label class="field-label" for="854013_290927pi_854013_290927">Job Title</label>
+				
+
+				<input type="text" name="854013_290927pi_854013_290927" id="854013_290927pi_854013_290927" value="" class="text" size="30" maxlength="128" onchange="" onfocus=""></p>
+			<div id="error_for_854013_290927pi_854013_290927" style="display:none"></div>
+			
+		
+			<p class="form-field  country pd-select required    form-field-primary">
+				
+					<label class="field-label" for="854013_290930pi_854013_290930">Country</label>
+				
+
+				<select name="854013_290930pi_854013_290930" id="854013_290930pi_854013_290930" class="select" onchange=""><option value="3159569" selected></option><option value="3159572">United States</option><option value="3159575">Canada</option><option value="3159578">Afghanistan</option><option value="3159581">Albania</option><option value="3159584">Algeria</option><option value="3159587">American Samoa</option><option value="3159590">Andorra</option><option value="3159593">Angola</option><option value="3159596">Anguilla</option><option value="3159599">Antarctica</option><option value="3159602">Antigua and Barbuda</option><option value="3159605">Argentina</option><option value="3159608">Armenia</option><option value="3159611">Aruba</option><option value="3159614">Australia</option><option value="3159617">Austria</option><option value="3159620">Azerbaijan</option><option value="3159623">Bahamas</option><option value="3159626">Bahrain</option><option value="3159629">Bangladesh</option><option value="3159632">Barbados</option><option value="3159635">Belarus</option><option value="3159638">Belgium</option><option value="3159641">Belize</option><option value="3159644">Benin</option><option value="3159647">Bermuda</option><option value="3159650">Bhutan</option><option value="3159653">Bolivia</option><option value="3159656">Bosnia and Herzegovina</option><option value="3159659">Botswana</option><option value="3159662">Brazil</option><option value="3159665">British Indian Ocean Territory</option><option value="3159668">British Virgin Islands</option><option value="3159671">Brunei</option><option value="3159674">Bulgaria</option><option value="3159677">Burkina Faso</option><option value="3159680">Burundi</option><option value="3159683">Cambodia</option><option value="3159686">Cameroon</option><option value="3159689">Cape Verde</option><option value="3159692">Cayman Islands</option><option value="3159695">Central African Republic</option><option value="3159698">Chad</option><option value="3159701">Chile</option><option value="3159704">China</option><option value="3159707">Christmas Island</option><option value="3159710">Cocos (Keeling) Islands</option><option value="3159713">Colombia</option><option value="3159716">Comoros</option><option value="3159719">Congo</option><option value="3159722">Cook Islands</option><option value="3159725">Costa Rica</option><option value="3159728">Croatia</option><option value="3159731">Cuba</option><option value="3159734">Cura&ccedil;ao</option><option value="3159737">Cyprus</option><option value="3159740">Czech Republic</option><option value="3159743">C&ocirc;te d&rsquo;Ivoire</option><option value="3159746">Democratic Republic of the Congo</option><option value="3159749">Denmark</option><option value="3159752">Djibouti</option><option value="3159755">Dominica</option><option value="3159758">Dominican Republic</option><option value="3159761">Ecuador</option><option value="3159764">Egypt</option><option value="3159767">El Salvador</option><option value="3159770">Equatorial Guinea</option><option value="3159773">Eritrea</option><option value="3159776">Estonia</option><option value="3159779">Ethiopia</option><option value="3159782">Falkland Islands</option><option value="3159785">Faroe Islands</option><option value="3159788">Fiji</option><option value="3159791">Finland</option><option value="3159794">France</option><option value="3159797">French Guiana</option><option value="3159800">French Polynesia</option><option value="3159803">French Southern Territories</option><option value="3159806">Gabon</option><option value="3159809">Gambia</option><option value="3159812">Georgia</option><option value="3159815">Germany</option><option value="3159818">Ghana</option><option value="3159821">Gibraltar</option><option value="3159824">Greece</option><option value="3159827">Greenland</option><option value="3159830">Grenada</option><option value="3159833">Guadeloupe</option><option value="3159836">Guam</option><option value="3159839">Guatemala</option><option value="3159842">Guernsey</option><option value="3159845">Guinea</option><option value="3159848">Guinea-Bissau</option><option value="3159851">Guyana</option><option value="3159854">Haiti</option><option value="3159857">Honduras</option><option value="3159860">Hong Kong S.A.R., China</option><option value="3159863">Hungary</option><option value="3159866">Iceland</option><option value="3159869">India</option><option value="3159872">Indonesia</option><option value="3159875">Iran</option><option value="3159878">Iraq</option><option value="3159881">Ireland</option><option value="3159884">Isle of Man</option><option value="3159887">Israel</option><option value="3159890">Italy</option><option value="3159893">Jamaica</option><option value="3159896">Japan</option><option value="3159899">Jersey</option><option value="3159902">Jordan</option><option value="3159905">Kazakhstan</option><option value="3159908">Kenya</option><option value="3159911">Kiribati</option><option value="3159914">Kuwait</option><option value="3159917">Kyrgyzstan</option><option value="3159920">Laos</option><option value="3159923">Latvia</option><option value="3159926">Lebanon</option><option value="3159929">Lesotho</option><option value="3159932">Liberia</option><option value="3159935">Libya</option><option value="3159938">Liechtenstein</option><option value="3159941">Lithuania</option><option value="3159944">Luxembourg</option><option value="3159947">Macao S.A.R., China</option><option value="3159950">Macedonia</option><option value="3159953">Madagascar</option><option value="3159956">Malawi</option><option value="3159959">Malaysia</option><option value="3159962">Maldives</option><option value="3159965">Mali</option><option value="3159968">Malta</option><option value="3159971">Marshall Islands</option><option value="3159974">Martinique</option><option value="3159977">Mauritania</option><option value="3159980">Mauritius</option><option value="3159983">Mayotte</option><option value="3159986">Mexico</option><option value="3159989">Micronesia</option><option value="3159992">Moldova</option><option value="3159995">Monaco</option><option value="3159998">Mongolia</option><option value="3160001">Montenegro</option><option value="3160004">Montserrat</option><option value="3160007">Morocco</option><option value="3160010">Mozambique</option><option value="3160013">Myanmar</option><option value="3160016">Namibia</option><option value="3160019">Nauru</option><option value="3160022">Nepal</option><option value="3160025">Netherlands</option><option value="3160028">New Caledonia</option><option value="3160031">New Zealand</option><option value="3160034">Nicaragua</option><option value="3160037">Niger</option><option value="3160040">Nigeria</option><option value="3160043">Niue</option><option value="3160046">Norfolk Island</option><option value="3160049">North Korea</option><option value="3160052">Northern Mariana Islands</option><option value="3160055">Norway</option><option value="3160058">Oman</option><option value="3160061">Pakistan</option><option value="3160064">Palau</option><option value="3160067">Palestinian Territory</option><option value="3160070">Panama</option><option value="3160073">Papua New Guinea</option><option value="3160076">Paraguay</option><option value="3160079">Peru</option><option value="3160082">Philippines</option><option value="3160085">Pitcairn</option><option value="3160088">Poland</option><option value="3160091">Portugal</option><option value="3160094">Puerto Rico</option><option value="3160097">Qatar</option><option value="3160100">Romania</option><option value="3160103">Russia</option><option value="3160106">Rwanda</option><option value="3160109">R&eacute;union</option><option value="3160112">Saint Barth&eacute;lemy</option><option value="3160115">Saint Helena</option><option value="3160118">Saint Kitts and Nevis</option><option value="3160121">Saint Lucia</option><option value="3160124">Saint Pierre and Miquelon</option><option value="3160127">Saint Vincent and the Grenadines</option><option value="3160130">Samoa</option><option value="3160133">San Marino</option><option value="3160136">Sao Tome and Principe</option><option value="3160139">Saudi Arabia</option><option value="3160142">Senegal</option><option value="3160145">Serbia</option><option value="3160148">Seychelles</option><option value="3160151">Sierra Leone</option><option value="3160154">Singapore</option><option value="3160157">Slovakia</option><option value="3160160">Slovenia</option><option value="3160163">Solomon Islands</option><option value="3160166">Somalia</option><option value="3160169">South Africa</option><option value="3160172">South Korea</option><option value="3160175">South Sudan</option><option value="3160178">Spain</option><option value="3160181">Sri Lanka</option><option value="3160184">Sudan</option><option value="3160187">Suriname</option><option value="3160190">Svalbard and Jan Mayen</option><option value="3160193">Swaziland</option><option value="3160196">Sweden</option><option value="3160199">Switzerland</option><option value="3160202">Syria</option><option value="3160205">Taiwan</option><option value="3160208">Tajikistan</option><option value="3160211">Tanzania</option><option value="3160214">Thailand</option><option value="3160217">Timor-Leste</option><option value="3160220">Togo</option><option value="3160223">Tokelau</option><option value="3160226">Tonga</option><option value="3160229">Trinidad and Tobago</option><option value="3160232">Tunisia</option><option value="3160235">Turkey</option><option value="3160238">Turkmenistan</option><option value="3160241">Turks and Caicos Islands</option><option value="3160244">Tuvalu</option><option value="3160247">U.S. Virgin Islands</option><option value="3160250">Uganda</option><option value="3160253">Ukraine</option><option value="3160256">United Arab Emirates</option><option value="3160259">United Kingdom</option><option value="3160262">United States Minor Outlying Islands</option><option value="3160265">Uruguay</option><option value="3160268">Uzbekistan</option><option value="3160271">Vanuatu</option><option value="3160274">Vatican</option><option value="3160277">Venezuela</option><option value="3160280">Viet Nam</option><option value="3160283">Wallis and Futuna</option><option value="3160286">Western Sahara</option><option value="3160289">Yemen</option><option value="3160292">Zambia</option><option value="3160295">Zimbabwe</option></select></p>
+			<div id="error_for_854013_290930pi_854013_290930" style="display:none"></div>
+			
+		
+			<p class="form-field  state pd-select required    form-field-secondary dependentFieldSlave dependentField">
+				
+					<label class="field-label" for="854013_290933pi_854013_290933">State</label>
+				
+
+				<select name="854013_290933pi_854013_290933" id="854013_290933pi_854013_290933" class="select" onchange=""><option value="3160298" selected></option><option value="3160301">Alabama</option><option value="3160304">Alaska</option><option value="3160307">Alberta</option><option value="3160310">Arizona</option><option value="3160313">Arkansas</option><option value="3160316">British Columbia</option><option value="3160319">California</option><option value="3160322">Colorado</option><option value="3160325">Connecticut</option><option value="3160328">Delaware</option><option value="3160331">District Of Columbia</option><option value="3160334">Florida</option><option value="3160337">Georgia</option><option value="3160340">Hawaii</option><option value="3160343">Idaho</option><option value="3160346">Illinois</option><option value="3160349">Indiana</option><option value="3160352">Iowa</option><option value="3160355">Kansas</option><option value="3160358">Kentucky</option><option value="3160361">Louisiana</option><option value="3160364">Maine</option><option value="3160367">Manitoba</option><option value="3160370">Maryland</option><option value="3160373">Massachusetts</option><option value="3160376">Michigan</option><option value="3160379">Minnesota</option><option value="3160382">Mississippi</option><option value="3160385">Missouri</option><option value="3160388">Montana</option><option value="3160391">Nebraska</option><option value="3160394">Nevada</option><option value="3160397">New Brunswick</option><option value="3160400">New Hampshire</option><option value="3160403">New Jersey</option><option value="3160406">New Mexico</option><option value="3160409">New York</option><option value="3160412">Newfoundland</option><option value="3160415">North Carolina</option><option value="3160418">North Dakota</option><option value="3160421">Northwest Territories</option><option value="3160424">Nova Scotia</option><option value="3160427">Nunavut</option><option value="3160430">Ohio</option><option value="3160433">Oklahoma</option><option value="3160436">Ontario</option><option value="3160439">Oregon</option><option value="3160442">Pennsylvania</option><option value="3160445">Prince Edward Island</option><option value="3160448">Quebec</option><option value="3160451">Rhode Island</option><option value="3160454">Saskatchewan</option><option value="3160457">South Carolina</option><option value="3160460">South Dakota</option><option value="3160463">Tennessee</option><option value="3160466">Texas</option><option value="3160469">Utah</option><option value="3160472">Vermont</option><option value="3160475">Virginia</option><option value="3160478">Washington</option><option value="3160481">West Virginia</option><option value="3160484">Wisconsin</option><option value="3160487">Wyoming</option><option value="3160490">Yukon</option></select></p>
+			<div id="error_for_854013_290933pi_854013_290933" style="display:none"></div>
+			
+		
+			<p class="form-field  utm_campaign pd-hidden  hidden   ">
+				
+
+				<input type="hidden" name="854013_290939pi_854013_290939" id="854013_290939pi_854013_290939" value=""></p>
+			<div id="error_for_854013_290939pi_854013_290939" style="display:none"></div>
+			
+		
+			<p class="form-field  utm_medium pd-hidden  hidden   ">
+				
+
+				<input type="hidden" name="854013_290942pi_854013_290942" id="854013_290942pi_854013_290942" value=""></p>
+			<div id="error_for_854013_290942pi_854013_290942" style="display:none"></div>
+			
+		
+			<p class="form-field  utm_source pd-hidden  hidden   ">
+				
+
+				<input type="hidden" name="854013_290945pi_854013_290945" id="854013_290945pi_854013_290945" value=""></p>
+			<div id="error_for_854013_290945pi_854013_290945" style="display:none"></div>
+			
+		
+			<p class="form-field %%form-field-css-classes%% pd-captcha required hidden   %%form-field-dependency-css%%">
+				
+
+				</p><div class="g-recaptcha" data-sitekey="6LfVnCYTAAAAAB4x9xlkeTsV8CO6np5UMhNjRNNZ"></div>
+<script type="text/javascript" src="https://www.google.com/recaptcha/api.js">
+</script><div id="error_for_Recaptchapi_Recaptcha" style="display:none"></div>
+			
+		
+
+		
+	<p style="position:absolute; width:190px; left:-9999px; top: -9999px;visibility:hidden;">
+		<label for="pi_extra_field">Comments</label>
+		<input type="text" name="pi_extra_field" id="pi_extra_field"></p>
+		
+
+		<!-- forces IE5-8 to correctly submit UTF8 content  -->
+		<input name="_utf8" type="hidden" value="&#9731;"><p class="submit">
+			<input type="submit" accesskey="s" value="REGISTER NOW"></p>
+	<p><script type="text/javascript">
+function insertBefore(el, referenceNode) {
+    referenceNode.parentNode.insertBefore(el, referenceNode);
+}
+ 
+var newEl = document.createElement('div');
+// replace this line with your message
+newEl.innerHTML = '<p style="padding-top: 10px;"><span style="font-size:10px;">We will use your contact information (including your email address or telephone number) to contact you by these means for marketing matters about our products/services. For further information on how we use your information and to-opt out of this at any time, please see our <strong><a data-auth="NotApplicable" data-linkindex="0" href="https://tintri.com/company/legal/privacy-policy/" rel="noopener noreferrer" style="text-decoration:underline;color:#EB1544;" target="_blank">Privacy Policy.';
+
+ 
+var ref = document.querySelector('p.submit');
+ 
+insertBefore(newEl, ref);
+</script></p>
+
+<p><span style="font-size:10px;"><em>Tintri, a wholly owned subsidiary of DataDirect Networks (DDN), delivers purpose-built solutions to store and manage virtual machines in enterprise data centers. Thousands of customers have saved countless administrative hours using Tintri&rsquo;s innovative technologies. Explore the Tintri portfolio of solutions at <strong><a data-auth="NotApplicable" data-linkindex="0" href="https://www.tintri.com" rel="noopener noreferrer" style="text-decoration:underline;color:#EB1544;" target="_blank">https://www.tintri.com</a></strong>.</em></span></p>
+
+<p><script type="text/javascript"> 
+// Parse the URL
+function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+    results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+// Give the URL parameters variable names
+var source = getParameterByName('utm_source');
+var medium = getParameterByName('utm_medium');
+var campaign = getParameterByName('utm_campaign');
+ 
+// Put the variable names into the hidden fields in the form. selector should be "p.YOURFIELDNAME input"
+document.querySelector("p.source input").value = source;
+document.querySelector("p.utm_medium input").value = medium;
+document.querySelector("p.utm_campaign input").value = campaign;
+</script></p>
+
+
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+	var anchors = document.getElementsByTagName("a");
+	for (var i=0; i<anchors.length; i++) {
+		var anchor = anchors[i];
+		if(anchor.getAttribute("href")&&!anchor.getAttribute("target")) {
+			anchor.target = "_top";
+		}
+	}
+		
+//]]>
+</script><input type="hidden" name="hiddenDependentFields" id="hiddenDependentFields" value=""></form>
+<script type="text/javascript">(function(){ pardot.$(document).ready(function(){ (function() {
+	var $ = window.pardot.$;
+	window.pardot.FormDependencyMap = [{"primary_field_html_id":"854013_290930pi_854013_290930","secondary_field_html_id":"854013_290933pi_854013_290933","primary_field_value":"United States"},{"primary_field_html_id":"854013_290930pi_854013_290930","secondary_field_html_id":"854013_290933pi_854013_290933","primary_field_value":"Canada"}];
+
+	$('.form-field-primary input, .form-field-primary select').each(function(index, input) {
+		$(input).on('change', window.piAjax.checkForDependentField);
+		window.piAjax.checkForDependentField.call(input);
+	});
+})(); });})();</script></div>
+            </div>
+        </div><!-- row vpadding -->
+
+    </div><!--/.container-->
+    <div class="grey clearfix">
+        <div class="container vpadding">
+            <div class="row">
+                <footer><div class="col-sm-6 clearfix">
+                        <div class="social editable" pardot-region="social_text" data-id="35430" data-hml-enabled="1"><p><strong>Share This:</strong></p>
+
+<ul class="social-list" id="share-buttons"><!-- Facebook --><!-- Twitter --><li><a href="https://twitter.com/Tintri" target="_blank"><img alt="Twitter" height="25" src="https://d2fi4ri5dhpqd1.cloudfront.net/public/resources/social-networks-icon-sets/circle-gray/twitter@2x.png" style="height: 25px; width: 25px;" title="Twitter" width="25"></a></li>
+	<!-- LinkedIn -->
+	<li><a href="https://www.linkedin.com/company/tintri/" target="_blank"><img alt="LinkedIn" height="25" src="https://d2fi4ri5dhpqd1.cloudfront.net/public/resources/social-networks-icon-sets/circle-gray/linkedin@2x.png" style="height: 25px; width: 25px;" title="LinkedIn" width="25"></a></li>
+	<!-- Google+ -->
+	<li><a href="https://www.tintri.com/blog" target="_blank"><img alt="Blogger" height="25" src="https://d2fi4ri5dhpqd1.cloudfront.net/public/resources/social-networks-icon-sets/circle-gray/blogger@2x.png" style="height: 25px; width: 25px;" title="Blogger" width="25"></a></li>
+	<!-- Email -->
+	<li><a href="https://www.youtube.com/user/TintriInc" target="_blank"><img alt="YouTube" height="25" src="https://d2fi4ri5dhpqd1.cloudfront.net/public/resources/social-networks-icon-sets/circle-gray/youtube@2x.png" style="height: 25px; width: 25px;" title="YouTube" width="25"></a></li>
+	<li><a href="https://www.tintri.com/blog.xml" target="_blank"><img alt="XML" height="25" src="https://mkt.tintri.com/l/854013/2020-03-27/3h6q/854013/10107/tintri_social_icon_xml.png" style="height: 25px; width: 25px;" title="Blog XML" width="25"></a></li>
+</ul></div><!-- social -->
+                    </div><!-- col-md-9 -->
+                    <div class="col-sm-6 clearfix">
+                        <div class="editable pull-right" pardot-region="footer_text" data-id="35427" data-hml-enabled="1"><p><a href="https://tintri.com/company/legal/privacy-policy/" style="text-decoration:underline;color:#ea1e46;" target="_blank">Privacy Policy </a>| <a href="https://tintri.com/" style="text-decoration:underline;color:#ea1e46;" target="_blank">Tintri</a></p></div>
+                    </div>
+                </footer></div>
+        </div>
+        
+    </div><!-- grey -->
+
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha256-Sk3nkD6mLTMOF0EOpNtsIry+s1CsaqQC1rVLTAy+0yc= sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script><script>
+
+    /* --------------------------------------------------------------
+        FUNCTIONS
+    ----------------------------------------------------------------- */
+        /**
+         * Replace all occurences of https://simplesharebuttons.com in the
+         * social sharing list with the url of this page, and all occurrence
+         * of "Check this out" with the page title
+         */
+            $(".social-list a").each(function() {
+                // get values
+                var thisPage = window.location.href;
+                var url = $(this).attr('href');
+
+                // get title of this page
+                var title = $(document).find("title").text();
+              
+                // replace values
+                url = url.replace("http://www.pardot.com", thisPage);
+                url = url.replace("template-title", title);
+
+                //update value of the link anchor
+                $(this).attr('href', url);
+            });
+
+        /**
+         * Pardot label alignment fix
+         */
+            pardot.$(function() {
+                var $ = window.pardot.$;
+                // Add label-left class to the <form> if label alignment is set to Default or Left in form styling
+                var $labelAlignment = $('#pardot-form .field-label').css('float');
+                if ($labelAlignment == 'left') { $('#pardot-form').addClass('label-left'); }
+            });
+
+    </script></body></html>

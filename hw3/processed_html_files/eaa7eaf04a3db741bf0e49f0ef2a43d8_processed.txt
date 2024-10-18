@@ -1,0 +1,167 @@
+How to win a Nobel prize
+What subjects have past winners studied? What age were they when they won? Where do they live? Nature crunched the data on every science prizewinner to find out.
+By Kerri Smith & Chris Ryan
+3 October 2024
+Illustration credit: Chu-Chieh Lee
+Illustration credit: Chu-Chieh Lee
+The Nobel prize has been awarded in three scientific fields — chemistry , physics and physiology or medicine — almost every year since 1901, barring some disruptions mostly due to wars.
+Nature crunched the data on the 346 prizes and their 646 winners (Nobel prizes can be shared by up to three people) to work out which characteristics can be reliably linked to medals.
+However, if you are a female scientist, your chances have improved in recent years.
+In the entire twentieth century, only 11 Nobel prizes were awarded to women. Since 2000, women have won another 15 prizes.
+40
+35
+30
+25
+20
+15
+10
+5
+0
+1910
+1930
+1950
+1970
+1990
+2010
+You should expect to wait for your award — for about two decades after you produce your Nobel-worthy work 1 . So, on average, you should make a start on these projects by your 40s.
+The number of years between work and prize is lengthening as time goes by , with laureates before 1960 waiting an average of 14 years, and those honoured in the 2010s having to wait an average of 29 years. But there’s a time limit: prizes cannot be awarded posthumously.
+Physics
+Chemistry
+25
+20
+15
+10
+5
+0
+1901
+–10
+1911
+–20
+1921
+–30
+1931
+–40
+1941
+–50
+1951
+–60
+1961
+–70
+1971
+–80
+1981
+–90
+1991
+–00
+2001
+–10
+2011
+–19
+Physics
+Chemistry
+25
+20
+15
+10
+5
+0
+1901
+–10
+1911
+–20
+1921
+–30
+1931
+–40
+1941
+–50
+1951
+–60
+1961
+–70
+1971
+–80
+1981
+–90
+1991
+–00
+2001
+–10
+2011
+–19
+Physics
+Chemistry
+25
+20
+15
+10
+5
+0
+1901
+–10
+1921
+–30
+1941
+–50
+1961
+–70
+1981
+–90
+2001
+–10
+Physics
+Chemistry
+20
+15
+10
+5
+0
+1901
+–10
+1921
+–30
+1941
+–50
+1961
+–70
+1981
+–90
+2001
+–10
+Be prepared to share the prize.
+Winners in physiology or medicine share the prize most often, with 65% of prizes awarded to two or three laureates. In chemistry, 55% of the prizes have been awarded to one laureate.
+Physiology or medicine
+40
+47
+63
+63
+Two
+laureates
+25
+The proportion of solitary winners has dropped since the middle of the twentieth century.
+Physics
+Chemistry
+Location matters for would-be awardees.
+To give yourself the best chance of winning a Nobel, you should ideally be born in North America and stay there.
+You can greatly improve your chances of winning a Nobel by working in the laboratory of a scientist who already has one or will in the future, or by working with someone whose mentors won. Prizewinners often beget or emerge from the labs of other laureates 2 . They frequently share mentors or mentees — those who supervised them or their students, or their students’ students.
+Let’s start with an example of a particularly productive network in the bigger Nobel family tree.
+Zooming out, here we see the Thomson and Strutt tree with its connections to other academic lineages that feature Nobel winners up to 2023.
+This data set also includes winners of the economics prize, awarded since 1969.
+You might expect lots of separate clusters to emerge as distinct academic families. But it turns out that almost all Nobel laureates share some connection, however distant, as represented by this sprawling network.
+An incredible 702 out of 736 researchers who have won science and economics prizes up to 2023 are part of the same academic family — connected by an academic link in common somewhere in their history.
+Only 32 laureates, shown on the left, have no connection to the bigger academic family.
+Source: Ref. 2
+A possible explanation is that talent begets talent, or that previous winners nominate their scientific descendants (researchers must be nominated to be considered for a prize, and the Nobel committees choose who can make these nominations). Either way, academic genealogy makes a big difference.
+Aside from picking the right adviser, you can also increase your odds by choosing certain research areas.
+An analysis 3 of the 69 science prizes given from 1995 to 2017 found that a few disciplines are over-represented .
+Just five subject areas account for more than half of the prizes mapped.
+Physics
+Chemistry
+Source: Ref. 3
+When asked about the statistics, representatives from the committees that award the Nobel prizes in science told Nature that any trend can have several different explanations. The committee members “work continuously to improve the nomination process, with the aim of broadening nominations with respect to gender, nationality and topics within fields in physics, chemistry, and physiology or medicine”.
+As one last option, consider changing your name. The given names of 69 out of 642 science prize winners begin with J, and 62 with A. Good luck, Jennifer and Antonio!
+Data for all graphics from nobelprize.org unless stated otherwise.
+References
+Mitsis, P. Humanit. Soc. Sci. Commun. 9, 407 (2022).
+Tol, R. S. J. Scientometrics 129, 1329–1346 (2024).
+Ioannidis, J. P. A., Cristea, I.-A. & Boyack, K. W. PLoS ONE 15, e0234612 (2020).

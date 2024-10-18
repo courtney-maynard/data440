@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>Online Voter Registration</title>
+  <meta name="description" content="Exercise your right to vote by registering online with our quick and user-friendly voter registration tool. Don't miss your chance to make your voice heard in elections—register now!" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Rock the Vote - Building the Political Power of Young People" />
+  <meta property="og:description" content="You can't vote unless you register. Register to vote using our quick and easy online voter registration tool." />
+  <meta property="og:site_name" content="Rock the Vote" />
+  <meta property="og:image" content="https://rocky-ovr.s3.amazonaws.com/RocktheVote_Meta.png" />
+  <meta property="og:image:secure_url" content="https://rocky-ovr.s3.amazonaws.com/RocktheVote_Meta.png" />
+  <meta property="og:image:width" content="1024" />
+  <meta property="og:image:height" content="576" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:description" content="You can't vote unless you register. Register to vote using our quick and easy online voter registration tool." />
+  <meta name="twitter:title" content="Rock the Vote Online Voter Registration" />
+  <meta name="twitter:site" content="@rockthevote" />
+  <meta name="twitter:image" content="https://rocky-ovr.s3.amazonaws.com/RocktheVote_Meta.png" />
+  <meta name="twitter:creator" content="@rockthevote" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+
+  <link rel="stylesheet" media="screen" href="//s3.amazonaws.com/rocky-assets/assets/jquery.qtip.min-cae5ca2de5456a29dcfefb3cd5bb3615afab051aa49b0a9f35214e9bdd329cbf.css" />
+  <link rel="stylesheet" media="screen" href="//s3.amazonaws.com/rocky-assets/assets/qtip-custom-bf6eefc0c609cb54e43cb3ab05905e50b7ed93d6663badbeb4fc7dfd444ca903.css" />
+  <link rel="stylesheet" media="screen" href="//s3.amazonaws.com/rocky-assets/assets/application-bdd79ef3f95b4100b64719c98bfe34723e54893e59e3b2cc28fde2f65219641e.css" />
+<link rel="stylesheet" media="screen" href="//s3.amazonaws.com/rocky-assets/assets/registration2-1db706aec6c744cd3693ba08798d777c7f7857c93f5154cd49e4c40e94ef8f16.css" />
+<link rel="stylesheet" media="screen" href="https://rocky-partner-assets.s3.amazonaws.com/partners/38420/partner2.css" />
+
+  <script src="//s3.amazonaws.com/rocky-assets/assets/application-3a2df25645995b33ff780551390a5d195b6cb7419d9fb832fbd7021694d18cb3.js"></script>
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="iEtHqWZTpaiAC/+g0NKLP4LgQ6R7jZKk1IDGMHGWx7yGaOHh/sYg/Jh43sGHk3ChFMM9vf2ELcf1lJ9ltay4Rw==" />
+  <script type="text/javascript" charset="utf-8">
+    $(document).ready(function() {
+      hideErrors(); 
+      setTimeout('revealErrors();', 400); 
+    });
+  </script>
+  <script>
+    $(document).ready(function() {
+        $('#registrant_javascript_disabled').remove();
+    });
+</script>
+
+
+</head>
+
+<body class="registration-page en">
+    <script type="text/javascript">
+      window._registrantUID = "";
+    </script>
+  
+  <div id="container">
+    <div id="header">
+      <span role="img" aria-label="Rock the Vote logo"> </span>
+      <div class='header-text'>
+            Register To Vote
+      </div>
+      <div id="progress-bar">
+        <ol>
+          <li class="progress-title">Step:</li>
+          <li class="progress-current">1</li><li class="progress-todo">2</li><li class="progress-todo">3</li><li class="progress-todo">4</li><li class="progress-todo">5</li>
+        </ol>
+      </div>
+    </div>
+
+    <div id="main">
+      <div id="main_inner" class="step_1">
+        
+<script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const currentPath = window.location.pathname;
+
+    if (currentPath.includes('/registrants/new')) {
+        // Initialize Weglot with hide_switcher set to true
+        Weglot.initialize({
+            api_key: 'wg_d5046b896741ad8111fe59c1d93cb3a81',
+            hide_switcher: false,
+            cache: true
+        });
+
+        Weglot.on("languageChanged", function(newLang) {
+            // Convert 'il' to 'ilo'
+            if (newLang === 'il') {
+                newLang = 'ilo';
+            }
+
+            const currentUrl = new URL(window.location.href);
+
+            // Update URL with new locale
+            const currentLocale = currentUrl.searchParams.get('locale');
+            
+            // Only update if necessary
+            if (currentLocale !== newLang) {
+                currentUrl.searchParams.set('locale', newLang);
+
+                // Update the 'utm_medium' parameter by removing any existing '-weglot' suffix
+                let utm_medium = currentUrl.searchParams.get('utm_medium') || '';
+                utm_medium = utm_medium.replace(/(?:-weglot-[a-z]{2}|weglot-[a-z]{2}|-weglot|weglot)$/, '');
+
+                // Append '-weglot-LOCALE' only if utm_medium has a value
+                if (utm_medium) {
+                    if (!utm_medium.endsWith(`-weglot-${newLang}`)) {
+                        utm_medium += `-weglot-${newLang}`;
+                    }
+                } else {
+                    utm_medium = `weglot-${newLang}`;
+                }
+
+                // Set the updated 'utm_medium' value in the URL
+                currentUrl.searchParams.set('utm_medium', utm_medium);
+
+                // Redirect to the updated URL
+                window.location.replace(currentUrl.toString()); // Use replace to avoid adding to history
+            }
+        });
+    } else {
+        // Handle case where URL does not contain '/registrants/new'
+        // Hide Weglot switcher if it was initialized
+        if (typeof Weglot !== 'undefined' && Weglot.hide_switcher !== undefined) {
+            Weglot.hide_switcher = true; // Ensure Weglot is hidden
+        }
+
+        // Select all elements with the id 'other_language_link'
+        //const otherLanguageLinks = document.querySelectorAll('#other_language_link');
+
+        // Check if there are at least two elements and modify the second one
+        //if (otherLanguageLinks.length > 1) {
+        //    otherLanguageLinks[1].style.display = 'block'; // Show the second element
+        //}
+    }
+});
+</script>
+
+<div class='intro-message'>
+<p>Voter registration takes an average of two minutes or less.</p>
+</div>
+<h1>New Registrant</h1>
+<div id='other_language_link' style='display: none;'>
+<script>
+  function followOtherLanguageLink() {
+    var url = $("#other_language_link select").val();
+    window.location = $("#other_language_link select").val()
+  }
+</script>
+<select name='language_select' onchange='followOtherLanguageLink();'>
+<option>Select Language</option>
+<option value='/registrants/new?locale=es&amp;partner=38420&amp;source=owa&amp;tracking=oheve1044'>
+En español
+</option>
+<option value='/registrants/new?locale=ko&amp;partner=38420&amp;source=owa&amp;tracking=oheve1044'>
+한국어
+</option>
+<option value='/registrants/new?locale=tl&amp;partner=38420&amp;source=owa&amp;tracking=oheve1044'>
+sa Tagalog
+</option>
+<option value='/registrants/new?locale=ilo&amp;partner=38420&amp;source=owa&amp;tracking=oheve1044'>
+Ilocano (ilo)
+</option>
+<option value='/registrants/new?locale=hi&amp;partner=38420&amp;source=owa&amp;tracking=oheve1044'>
+हिंदी में
+</option>
+<option value='/registrants/new?locale=th&amp;partner=38420&amp;source=owa&amp;tracking=oheve1044'>
+ภาษาไทย
+</option>
+<option value='/registrants/new?locale=vi&amp;partner=38420&amp;source=owa&amp;tracking=oheve1044'>
+Bằng Tiếng Việt
+</option>
+<option value='/registrants/new?locale=zh&amp;partner=38420&amp;source=owa&amp;tracking=oheve1044'>
+简体中文
+</option>
+<option value='/registrants/new?locale=ja&amp;partner=38420&amp;source=owa&amp;tracking=oheve1044'>
+日本語
+</option>
+<option value='/registrants/new?locale=zh-tw&amp;partner=38420&amp;source=owa&amp;tracking=oheve1044'>
+繁體中文
+</option>
+<option value='/registrants/new?locale=ur&amp;partner=38420&amp;source=owa&amp;tracking=oheve1044'>
+اردو میں
+</option>
+<option value='/registrants/new?locale=bn&amp;partner=38420&amp;source=owa&amp;tracking=oheve1044'>
+বাংলা
+</option>
+</select>
+</div>
+<form class="new_registrant" id="new_registrant" action="/registrants" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="1qUSewtZTR1/raLs+iORSrFqCRMJ3XePK3jeY8VVrIB/4ekRO7UE+NKgSSpaLuB9SRnTDk9Umzhaef+FJd7hXA==" /><input type="hidden" name="partner" id="partner" value="38420" />
+<input type="hidden" name="locale" id="locale" value="en" />
+<input type="hidden" name="source" id="source" value="owa" />
+<input type="hidden" name="tracking" id="tracking" value="oheve1044" />
+<input type="hidden" name="short_form" id="short_form" value="true" />
+<input type="hidden" name="collectemailaddress" id="collectemailaddress" value="" />
+<input type="hidden" name="shift_id" id="shift_id" value="" />
+<input value="0" type="hidden" name="registrant[under_18_ok]" id="registrant_under_18_ok" />
+
+<input type="hidden" value="false" name="registrant[javascript_disabled]" id="registrant_javascript_disabled" />
+<input type="hidden" value="false" name="registrant[is_fake]" id="registrant_is_fake" />
+
+  <ul class="flat registrant-form__email">
+    <li class="width_f registrant-form__email__line">
+      <h3 class='registrant-form__email__line__label'><label for="registrant_email_address">Email Address</label><span class='required'>*<span class='required--text' style='display:none;'>Required</span></span></h3>
+      
+      <div class="registrant-form__email__line__input"><input autocomplete="email" type="email" data-client-validation-required="Required" value="" name="registrant[email_address]" id="registrant_email_address" /></div>
+      <div class="tooltip registrant-form__email__line__tooltip"><img mouseover="buttons/help_icon_over.png" alt="Help" class="tooltip" id="tooltip-email_address" title="We will email you a copy of your voter registration form." src="//s3.amazonaws.com/rocky-assets/assets/buttons/help_icon-256aea9c59165a2db6c9cd5868729b83d1427366c8d31df043448e1765532fc4.png" /></div>
+      <span class="error registrant-form__email__line__error"></span>
+    </li>
+  </ul>
+<ul class="flat registrant-form__home-zip">
+  <li class="width_f registrant-form__home-zip__line">
+    <h3 class='registrant-form__home-zip__line__label'><label for="registrant_home_zip_code">ZIP Code</label><span class='required'>*<span class='required--text' style='display:none;'>Required</span></span></h3>
+    <div class="registrant-form__home-zip__line__input"><input autocomplete="postal-code" data-client-validation-required="Required" type="text" value="" name="registrant[home_zip_code]" id="registrant_home_zip_code" /></div>
+    <div class="tooltip registrant-form__home-zip__line__tooltip"><img mouseover="buttons/help_icon_over.png" alt="Help" class="tooltip" id="tooltip-home_zip_code" title="Enter ZIP code for the address where you live, even if you don&#39;t receive mail there." src="//s3.amazonaws.com/rocky-assets/assets/buttons/help_icon-256aea9c59165a2db6c9cd5868729b83d1427366c8d31df043448e1765532fc4.png" /></div>
+    <span class="error registrant-form__home-zip__line__error"></span>
+  </li>
+    <li class="registrant-form__home-zip__button">
+            <div class="button rollover_button">
+        <a class="button_next_step_en button_next_step" href="#">
+          <button role="button" type="submit" id="registrant_submit" class=" registrant_submit">
+            <span>Next Step</span>
+          </button>
+        </a>
+      </div>
+
+    </li>  
+  
+</ul>
+
+<p class='privacy_policy_acceptance'>By continuing, you accept Rock the Vote's 
+<a href="https://www.rockthevote.org/about-rock-the-vote/privacy-policy/" target="_blank" rel="noopener">
+Privacy Policy</a> 
+and agree to receive occasional election reminder emails from 
+Rock the Vote. You can opt out from emails at any time.</p>
+</form><p class='overseas-instructions'>
+<b>Note</b>: Some states offer online voter registration. <a href='https://www.rockthevote.org/online/' target='_blank'>Learn more.</a>
+<br>
+<br>
+U.S. citizen living abroad or uniformed services member? <a href='https://www.usvotefoundation.org/vote/request-overseas-absentee-ballot?source=rockthevote' target='_blank'>Request your ballot with Overseas Vote</a>.
+</p>
+<p class='already-registered'>Already registered? <a href="/share?partner=38420&locale=en">Share with your friends</a>.</p>
+
+      </div>
+    </div>
+
+  </div>
+  <div id="sticky_footer">
+     <div id="footer">
+      <div id="powered_by_logo" class="powered-by-logo">
+        <span class='powered-by-text'>Powered By</span>
+        <a href="https://www.rockthevote.org" target="_blank">
+          <img alt="Rock the Vote" class="rtv-logo" src="//s3.amazonaws.com/rocky-assets/assets/rock-the-vote-horz-logo-rev-847c3106a285883f8f12d66dc5f2750df29fd69cad87f06f13a4906a9ef59ffd.png" />
+        </a>
+      </div>
+      <div id="powered_by_aws_logo" class="powered-by-logo">
+        <img alt="Powered by Amazon Web Services" src="//s3.amazonaws.com/rocky-assets/assets/powered-by-aws-logo-v3-1ac1a92aaa3480a7db263f4c3b8c60adb15d4840dadc170deef0e9458fc3eeb2.png" />
+      </div>
+    <p>
+      <span><a href="https://www.rockthevote.org/voting-information/voting-faqs/" target="_blank" title="FAQ">FAQ</a></span>
+      <span><a href="https://www.rockthevote.org/privacy-policy/" target="_blank" title="Privacy &amp; Security">Privacy &amp; Security</a></span>
+      <span><a href="https://www.rockthevote.org/contact-us/" target="_blank" title="Contact Us">Contact Us</a></span>
+      <span><a href="https://www.rockthevote.org/about-us/" target="_blank" title="About">About</a></span>
+      <span class="copyright">&copy; Copyright 2024, Rock the Vote</span>
+    </p>
+  </div>
+
+  </div>
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KM5G0D5Q58"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KM5G0D5Q58');
+</script>
+
+  <script src="//s3.amazonaws.com/rocky-assets/assets/iframeResizer.contentWindow.min-7186596d62ff11d9fcdc089e2b873ae6087938811b2ea8a3f2192f18c4b588c6.js"></script> 
+<script>
+  var ls = window.localStorage
+  window.IS_TOUCH_ENABLED = false;
+  if (ls && ls.getItem('IS_TOUCH_ENABLED')) {
+    window.IS_TOUCH_ENABLED = true;
+    window.registerTouch();
+  } else {
+    window.addEventListener('touchstart', function onFirstTouch() {
+      // or set some global variable
+      window.IS_TOUCH_ENABLED = true;
+      if (ls) {
+        ls.setItem('IS_TOUCH_ENABLED', true);
+      }
+      window.registerTouch();
+      // we only need to know once that a human touched the screen, so we can stop listening now
+      window.removeEventListener('touchstart', onFirstTouch, false);
+    }, false);
+  } 
+</script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+  <script>
+    WebFont.load({
+      google: {
+        families: ['Caveat:400', 'Fira Sans:400,700,700i']
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+Generative AI Fundamentals Specialization
+Unlock and leverage the potential of generative AI. Learn how you can use the capabilities of generative AI to enhance your work and daily life.
+4.7
+Flexible schedule
+4.7
+Flexible schedule
+Apply powerful prompt engineering techniques to write effective prompts and generate desired outcomes from AI models.
+Discuss the limitations of generative AI and explain the ethical concerns and considerations for the responsible use of generative AI.
+Recognize the ability of generative AI to enhance your career and help implement improvements at your workplace.
+Taught in English
+23 languages available
+See how employees at top companies are mastering in-demand skills
+Develop a deep understanding of key concepts
+Earn a career certificate from IBM
+Earn a career certificate
+Add this credential to your LinkedIn profile, resume, or CV
+Share it on social media and in your performance review
+Specialization - 5 course series
+Generative AI is revolutionizing our lives.
+This specialization provides a comprehensive understanding of the fundamental concepts, models, tools, and applications of generative AI to enable you to leverage the potential of generative AI toward a better workplace, career, and life.
+The specialization consists of five short, self-paced courses, each requiring 3–5 hours to complete.
+Understand powerful prompt engineering techniques and learn how to write effective prompts to produce desired outcomes using generative AI tools.
+Learn about the building blocks and foundation models of generative AI, such as the GPT, DALL-E, and IBM Granite models. Gain an understanding of the ethical implications, considerations, and issues of generative AI.
+Listen to experts share insights and tips for being successful with generative AI. Learn to leverage Generative AI to boost your career and become more productive.
+Practice what you learn using hands-on labs and projects, which are suitable for everyone and can be completed using a web browser. These labs will give you an opportunity to explore the use cases of generative AI through popular tools and platforms like IBM watsonx.ai, OpenAI ChatGPT, Stable Diffusion, and Hugging Face.
+This specialization is for anyone passionate about discovering the power of generative AI and requires no prior technical knowledge or a background in AI. It will benefit professionals from all walks of life.
+Applied Learning Project
+Throughout this specialization, you will complete hands-on labs and projects to help you gain practical experience with text, image, and code generation, prompt engineering tools, foundation models, AI applications, and IBM watsonx.ai.
+Some examples of the labs included are:
+Text generation using ChatGPT and Bard
+Image generation using GPT and Stable Diffusion
+Code generation in action
+Experimenting with prompts
+Generative AI foundation models
+(997 ratings)
+Course details
+Describe generative AI and distinguish it from discriminative AI.
+Describe the capabilities of generative AI and its use cases in the real world.
+Identify the applications of generative AI in different sectors and industries.
+Explore common generative AI models and tools for text, code, image, audio, and video generation.
+Skills you'll gain
+Category: Business Transformation
+(1,015 ratings)
+Course details
+What you'll learn
+Explain the concept and relevance of prompt engineering in generative AI models.
+Apply best practices for creating prompts and explore examples of impactful prompts.
+Practice common prompt engineering techniques and approaches for writing effective prompts.
+Explore commonly used tools for prompt engineering to aid with prompt engineering.
+Skills you'll gain
+Large Language Models (LLM)
+Category: Natural Language Generation
+(108 ratings)
+Course details
+What you'll learn
+Describe the fundamental concepts of generative AI and its core models
+Explain the concept of foundation models in generative AI
+Explore the capabilities of pre-trained models for AI-powered applications.
+Explore the features, capabilities, and applications of different generative AI platforms, such as IBM watsonx and Hugging Face
+Skills you'll gain
+Limitations of Generative AI
+Impact of Generative AI
+Ethics in Generative AI
+(87 ratings)
+Course details
+Describe the limitations of generative AI and the related concerns.
+Identify the ethical issues, concerns, and misuses associated with generative AI.
+Explain the considerations for the responsible use of generative AI.
+Discuss the economic and social impact of generative AI.
+Skills you'll gain
+Large Language Models (LLM)
+(72 ratings)
+Course details
+What you'll learn
+Explain the transformative impact of generative AI on the business and industry landscape.
+Explore potential career opportunities in generative AI.
+Analyze how generative AI can enhance existing careers in diverse fields.
+Apply generative AI to boost your productivity at work.
+Skills you'll gain
+OK
+Felipe M.
+Learner since 2018
+"To be able to take courses at my own pace and rhythm has been an amazing experience. I can learn whenever it fits my schedule and mood."
+Jennifer J.
+Learner since 2020
+"I directly applied the concepts and skills I learned from my courses to an exciting new project at work."
+Larry W.
+Learner since 2021
+"When I need courses on topics that my university doesn't offer, Coursera is one of the best places to go."
+Chaitanya A.
+"Learning isn't just about being better at your job: it's so much more than that. Coursera allows me to learn without limits."
+New to Machine Learning? Start here.
+Open new doors with Coursera Plus
+Unlimited access to 7,000+ world-class courses, hands-on projects, and job-ready certificate programs - all included in your subscription
+Earn a degree from world-class universities - 100% online
+Upskill your employees to excel in the digital economy
+How long does it take to complete the Specialization?
+This specialization is self-paced. On average, learners who spend 3–5 hours a week can complete it in 5 weeks.
+What background knowledge is necessary?
+This specialization does not require any specific prerequisites. Basic knowledge of the core concepts and application of artificial intelligence may be helpful but is not mandatory. No programming knowledge is required. This course is suitable for learners with or without a degree.
+Do I need to take the courses in a specific order?
+The courses in this specialization have been designed in a logical sequence. It is recommended that the courses be taken in the order they are presented to derive maximum learning.
+Will I earn university credit for completing the Specialization?
+Not at this time.
+What will I be able to do upon completing the Specialization?
+The specialization will prepare you with the comprehensive knowledge and practical skills to leverage the power of generative AI.
+After completing this specialization, you will be able to:
+Explain the concept, evolution, capabilities, and applications of generative AI in different domains, including text, image, audio, video, virtual worlds, code, and data.
+Discuss the features of common generative AI models and tools, such as GPT, DALL-E, Stable Diffusion, and Synthesia.
+Explain the building blocks of effective prompts and the concept of prompt engineering.
+Describe effective prompt techniques, approaches, and prompt engineering tools like IBM watsonx Prompt Lab, Spellbook, and Dust.
+Describe foundation models and how AI applications can be developed using pre-trained models and platforms.
+Explain how different generative AI platforms like IBM watsonx and Hugging Face can be used.
+Describe the emerging ethical concerns and considerations for the responsible use of Generative AI.
+Appreciate the economic and social impact of Generative AI.
+Discuss potential career opportunities and enhancements emerging from the innovative adoption of Generative AI.
+Is this course really 100% online? Do I need to attend any classes in person?
+This course is completely online, so there’s no need to show up to a classroom in person. You can access your lectures, readings and assignments anytime and anywhere via the web or your mobile device.
+What is the refund policy?
+If you subscribed, you get a 7-day free trial during which you can cancel at no penalty. After that, we don’t give refunds, but you can cancel your subscription at any time. See our full refund policy
+Can I just enroll in a single course?
+Yes! To get started, click the course card that interests you and enroll. You can enroll and complete the course to earn a shareable certificate, or you can audit it to view the course materials for free. When you subscribe to a course that is part of a Specialization, you’re automatically subscribed to the full Specialization. Visit your learner dashboard to track your progress.
+Is financial aid available?
+Yes. In select learning programs, you can apply for financial aid or a scholarship if you can’t afford the enrollment fee. If fin aid or scholarship is available for your learning program selection, you’ll find a link to apply on the description page.
+Can I take the course for free?
+When you enroll in the course, you get access to all of the courses in the Specialization, and you earn a certificate when you complete the work. If you only want to read and view the course content, you can audit the course for free. If you cannot afford the fee, you can apply for financial aid
+More questions

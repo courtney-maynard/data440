@@ -1,0 +1,1197 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<meta name="ProgId" content="SharePoint.WebPartPage.Document" />
+<meta name="WebPartPageExpansion" content="full" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link type="text/css" rel="stylesheet" href="basic.css" />
+
+<style type="text/css">
+TABLE.NUCAT, TD.NUCATACT, TD.NUCATACTOVER, A.NUCATACTINDA, TD.NUCATINACT
+{
+	color: #FFFFFF;
+	background-color: #27AAE1;
+}
+
+TR.NUCATBB, TR.NUCATBW, TR.NUCATBM, TD.NUCATBACT, TD.NUCATBACTOVER, A.NUCATBACTA
+{
+	color: #FFFFFF; 
+	background-color: #F15A29; 
+}
+
+TD.NUCATACTIND, TD.NUCATACTINDOVER
+{
+    padding-top:    1px; /* added for this look */
+    padding-bottom: 1px; /* added for this look */
+}
+
+</style>
+<title id="genericTitle">Newest Books, Movies &amp; Music - Top Choices in the Maynard Public Library for October 5, 2024</title>
+</head>
+<body style="position: relative;"><form name="form1" method="post" action="nu.aspx?p=3972-132&amp;tw" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJMTU4Mjk0NTQzD2QWBGYPFgIeCWlubmVyaHRtbAVgTmV3ZXN0IEJvb2tzLCBNb3ZpZXMgJmFtcDsgTXVzaWMgLSBUb3AgQ2hvaWNlcyBpbiB0aGUgTWF5bmFyZCBQdWJsaWMgTGlicmFyeSBmb3IgT2N0b2JlciA1LCAyMDI0ZAIBD2QWCGYPDxYCHgdWaXNpYmxlaGRkAgEPDxYCHwFoZGQCAg8PFgIfAWhkFgJmDxYEHgdvbmNsaWNrBVR0aGlzLmZvcm0uYWN0aW9uPSdodHRwczovL3dvd2JyYXJ5Lm9yZy9udS5hc3B4P3A9Mzk3Mi0xMzImdHcmbm9lJzt0aGlzLmZvcm0uc3VibWl0KCkeB2NoZWNrZWQFB2NoZWNrZWRkAgMPDxYCHwFnZGRkU4ylokZWAbDPdOdNGCO3MVW0HQs=" />
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="E8178F2D" /><div id="divall" class="ALL">
+<div id="content">
+<script type="text/javascript" language="JavaScript">
+<!--
+
+// sets a cookie, optionally with the number of days it will last
+function setCookie(strName,value,expiredays) {
+	var exdate=new Date();
+	exdate.setDate(exdate.getDate()+expiredays);
+	document.cookie = strName + "=" + escape(value) + ((expiredays==null) ? "" : ";expires=" + exdate.toGMTString());
+}
+
+// reads in a cookie
+function getCookie(strName) {
+	if (document.cookie.length > 0)  {
+		var iStart = document.cookie.indexOf(strName + "=");
+		if (iStart !=-1) { 
+			iStart = iStart + strName.length + 1;
+			var iEnd = document.cookie.indexOf(";",iStart);
+			if (iEnd==-1) iEnd=document.cookie.length;
+			return unescape(document.cookie.substring(iStart,iEnd))
+			} 
+		}
+	return "";
+}
+
+// when called from a button, disables it so users can't click on it again
+function SubmitAndDisable(buttonOriginal) {
+
+	// make a clone and put it at the same spot
+	var buttonClone = buttonOriginal.cloneNode();
+	buttonOriginal.parentNode.insertBefore(buttonClone, buttonOriginal);
+	 
+	// remove the clone's ID and name and disable it
+	buttonClone.removeAttribute('id');
+	buttonClone.removeAttribute('name');
+    buttonClone.disabled = true;
+
+	// hide the original button so it can't be clicked on again - but it still will handle the original click
+    buttonOriginal.style.visibility = "hidden";
+
+    // tell submit to proceed with that click
+    return true;
+}
+
+// returns the window height, if at all possible
+function getWindowHeight() {
+	if (window.innerHeight!=window.undefined) return window.innerHeight;
+	if (document.compatMode=='CSS1Compat') return document.documentElement.clientHeight;
+	if (document.body) return document.body.clientHeight;
+	return 440; // slightly less than 480
+}
+
+// set the footer to be at the bottom
+function setFooter() {
+
+	if (document.getElementById) {
+		var windowHeight = getWindowHeight();
+		if (windowHeight > 0) {
+
+			// get the elements		
+			var footerElement = document.getElementById('footer');
+			var sidepanelElement = document.getElementById('sidepanel');
+
+			// this fixes an obscure IE bug on the doc page that gives an incorrect offsetHeight if the footer is currently static
+			footerElement.style.position = 'relative';
+		
+			// take the height readings
+			var footerHeight  = footerElement.offsetHeight;
+			var contentHeight = document.getElementById('content').offsetHeight;
+			var extraitemHeight = (document.getElementById('ExtraItemToMeasure') ? document.getElementById('ExtraItemToMeasure').offsetHeight : 0);
+
+			// if there's extra room ...
+			if (windowHeight - (contentHeight + extraitemHeight + footerHeight) >= 0) {
+				
+					// ... force the footer to the bottom, ignoring any extra floating item
+					if (extraitemHeight > 0) document.getElementById('<%=strExtraItemToMeasure %>').className = "<%=strExtraItemToMeasure %>";
+					footerElement.style.position = 'relative';
+					footerElement.style.top = (windowHeight - (contentHeight + footerHeight)) + 'px';
+
+					if (sidepanelElement) sidepanelElement.style.height = windowHeight + 'px';
+					}
+
+			// otherwise, if we have overflow, make everything static					
+			else {			
+				if (extraitemHeight > 0) document.getElementById('<%=strExtraItemToMeasure %>').className = "<%=strExtraItemToMeasure %>" + 1;
+				footerElement.style.position = 'static';
+
+				if (sidepanelElement) sidepanelElement.style.height = '';
+				}
+			}
+		}
+}
+
+// adjusts the core BODY style size by fAdjustment; remembers the setting for a year, but extends it each visit
+function adjustText(fAdjustment)
+{
+	// ignore all changes for now TBD
+	return;
+
+	var sheet = document.styleSheets[0];
+	var rule1 = sheet.cssRules ? sheet.cssRules[0] : sheet.rules[0];
+	
+	// if can find font size of the first style, adjust it
+	if (rule1.style.fontSize != undefined) rule1.style.fontSize = parseFloat(rule1.style.fontSize)*fAdjustment + "pt";
+}
+
+// if the size is cookied, use it
+function adjustTextFromCookieAndFooter()
+{
+	if (getCookie("textsize") != "") adjustText(parseFloat(getCookie("textsize")));
+	setFooter();
+}
+
+// adjusts text; sets the footer; remembers the setting
+function adjustTextAndFooter(fAdjustment) 
+{
+	adjustText(fAdjustment);
+	setFooter();
+	
+	// save accumulated adjustment
+	setCookie("textsize",(getCookie("textsize") == "" ? 1 : parseFloat(getCookie("textsize")))*fAdjustment,365);
+}
+
+// adjust the footer when the text is laid out
+window.onload = adjustTextFromCookieAndFooter;
+window.onresize = setFooter;
+
+// creates a hyperlink for an email address from the name and domain, with a protected link being the same
+// unless strLink is specified
+function reference(strName, strDomain, strLink)
+{
+	if (strLink == "") strLink = strName.substring(0,1) + "<span></span>" + strName.substring(1) + "&#64;" + strDomain;
+	document.write("<a href='mailto:" + strName + "&#64;" + strDomain + "'>" + strLink + "</a>");
+}
+
+// if enter was pressed, press the strSubmit button; fill in the flag value too if a flag ID is available
+function submitPress(eventThis,strSubmitButton,strFlag) {
+
+	// in IE, events don't create an event in the scope of the call, so use the global windows.event
+	if (window.event ? (window.event && window.event.keyCode == 13) : (eventThis && eventThis.which == 13)) return submitClick(strSubmitButton,strFlag);
+    return true;
+}
+
+// simulate a click of strSubmit button; fill in the flag value too if a flag ID is available
+function submitClick(strSubmitButton,strFlag) {
+    var defaultButton = document.getElementById(strSubmitButton);
+    if (defaultButton && typeof(defaultButton.click) != 'undefined') {
+        
+		// set the flag field if possible
+		var inputFlag = document.getElementById("flag");
+		if (inputFlag) inputFlag.value = strFlag;
+			
+		// click the submit button
+		defaultButton.click();
+		window.event.cancelBubble = true;
+		if (window.event.stopPropagation) window.event.stopPropagation();
+		return false;
+    }
+    return true;
+}
+
+// returns the value of a parameter from the page url
+function getURLParameter(strParameterName) 
+{
+	var regex = new RegExp("[\\?&]"+strParameterName+"=([^&#]*)");  
+	var matchResults = regex.exec(window.location.href); 
+	return (matchResults ? matchResults[1] : "");
+}
+
+// the id of the currently displayed submenu, null if none
+var strCurrentSubmenuId;
+var bOnSubmenuPage = false;
+
+// highlights the current top menu and sub menu items (so the user knows
+// what page they are on
+function highlightCurrentMenu() 
+{
+	// highlight the main menu current item
+	var url = window.location.pathname;
+	var strPageName = url.substring(url.lastIndexOf('/')+1);
+	var row = document.getElementById("TOPMENUROW");
+	var cells = row.childNodes;
+	var pattern = new RegExp(strPageName, "i");
+	for (var i=0 ; i < cells.length ; i++) {
+		if (cells[i].tagName == "TD") {
+			if (pattern.test(cells[i].getAttribute("onclick").toString())) {
+				cells[i].className = "TOPMENUITEMCURRENT";
+				break;
+			}
+		}
+	}
+	
+	// search for a submenu for this page
+	strCurrentSubmenuId = strPageName.substring(0, strPageName.indexOf(".")).toUpperCase() + "_SUBMENU";
+	row = document.getElementById(strCurrentSubmenuId);
+	if (!row) {
+		strCurrentSubmenuId = null;
+		return;
+		}
+
+	// having found the submenu, make it visible
+	row.style.display = "block";
+	bOnSubmenuPage = true;
+
+	// then find the current submenu item to highlight
+	var view = getURLParameter("view");
+	// if (view == "") return;
+	row = document.getElementById(strCurrentSubmenuId + "ROW");
+	cells = row.childNodes;
+	pattern = new RegExp("view=" + view, "i");
+	for (var i=0 ; i < cells.length ; i++) {
+		if (cells[i].tagName == "TD") {
+			if (pattern.test(cells[i].getAttribute("onclick").toString()) || view == "") {
+				cells[i].className = "SUBMENUITEMCURRENT";
+				break;
+			}
+		}
+	}
+}
+
+// highlight topmenu items on mouse over and out
+function topMenuHover(nodeCurrent, bOver) 
+{
+	var bCurrent = nodeCurrent.className.indexOf("CURRENT") >= 0 ? true : false;
+	
+	if (bOver)
+		nodeCurrent.className = nodeCurrent.className == "TOPMENUITEMCURRENT" || bCurrent ? "TOPMENUITEMCURRENTOVER" : "TOPMENUITEMOVER";
+	else
+		nodeCurrent.className = nodeCurrent.className == "TOPMENUITEMCURRENTOVER" || bCurrent ? "TOPMENUITEMCURRENT" : "TOPMENUITEM";
+
+	// Don't change submenu if it is the current page
+	// BUG! Assumes there is one submenu for libraries
+	// if (!strCurrentSubmenuId) 
+	if (!bOnSubmenuPage) document.getElementById("LIBRARIES_SUBMENU").style.display = 
+		(nodeCurrent.getAttribute("onclick").match(/libraries.aspx/i) && bOver) ? "block" : "none";
+}
+
+// highlight submenu items on mouse over and out
+function subMenuHover(nodeCurrent, bOver) 
+{
+	// Might get two overs in a row
+	var bCurrent = nodeCurrent.className.indexOf("CURRENT") >= 0 ? true : false;
+	if (bOver)
+		nodeCurrent.className = nodeCurrent.className == "SUBMENUITEMCURRENT" || bCurrent ? "SUBMENUITEMCURRENTOVER" : "SUBMENUITEMOVER";
+	else
+		nodeCurrent.className = nodeCurrent.className == "SUBMENUITEMCURRENTOVER" || bCurrent ? "SUBMENUITEMCURRENT" : "SUBMENUITEM";
+	if (!bOnSubmenuPage) document.getElementById("LIBRARIES_SUBMENU").style.display = bOver ? "block" : "none";
+}
+
+
+document.body.style.backgroundImage = "url('bg.aspx?%2327AAE1')";
+
+//-->
+</script><a name=top></a>
+	<table cellpadding="0" border="0" cellspacing="0" width="900"><tr>
+		<td style="padding-left: 25px;"><a href="/index.aspx"><img src="/images/wowlogob.gif" border="0" width="154" height="57" title="Wowbrary: The newest stuff at your library" /></a></td>
+		<td width="50%"></td>
+		<td height="60px" style="padding-top: 5px;"><a href='/bannerlink.aspx?l=3972'><img id='imgBanner' src='/banner.aspx?l=3972' height='60' border='0' title='Click to learn more about this' alt='Click to learn more about this' ismap></a></td>
+		<td width="50%"></td>
+	</tr></table>	
+    <table class="TOPMENU" cellpadding="0" border="0" cellspacing="0"><tr><td>
+		<table cellpadding="0" border="0" cellspacing="0"><tr id="TOPMENUROW">
+			<td class="TOPMENUITEM" onmouseover="topMenuHover(this, true)" onmouseout="topMenuHover(this, false)" onclick="window.location = '/index.aspx';" >Home</td>
+			<td class="TOPMENUITEM" onmouseover="topMenuHover(this, true)" onmouseout="topMenuHover(this, false)" onclick="window.location = '/signup.aspx';">Sign Up</td>
+			<td class="TOPMENUITEM" onmouseover="topMenuHover(this, true)" onmouseout="topMenuHover(this, false)" onclick="window.location = '/recipients.aspx';">For Users</td>
+			<td class="TOPMENUITEM" onmouseover="topMenuHover(this, true)" onmouseout="topMenuHover(this, false)" onclick="window.location = '/libraries.aspx';">For Libraries <div class="arrow-down"></div></td>
+			<td class="TOPMENUITEM" onmouseover="topMenuHover(this, true)" onmouseout="topMenuHover(this, false)" onclick="window.location = '/sponsor.aspx';">For Sponsors</td>
+			<td class="TOPMENUITEM" onmouseover="topMenuHover(this, true)" onmouseout="topMenuHover(this, false)" onclick="window.location = '/about.aspx';" >About Us</td>
+			<td class="TOPMENUITEM" onmouseover="topMenuHover(this, true)" onmouseout="topMenuHover(this, false)" onclick="window.location = '/contact.aspx';">Contact</td>
+		</tr></table>
+		</td>
+	</tr></table>
+	<div style="position:relative">
+		<div id="LIBRARIES_SUBMENU" style="display:none;position:absolute;top:0px;left:40px;z-index:999;">
+			<table cellpadding="0" border="0" cellspacing="0"><tr id="LIBRARIES_SUBMENUROW">
+				<td class="SUBMENUITEM" onmouseover="subMenuHover(this, true)" onmouseout="subMenuHover(this, false)" onclick="window.location = '/libraries.aspx?view=overview';">Overview</td>
+				<td class="SUBMENUITEM" onmouseover="subMenuHover(this, true)" onmouseout="subMenuHover(this, false)" onclick="window.location = '/libraries.aspx?view=newsletter';">Newsletter</td>
+				<td class="SUBMENUITEM" onmouseover="subMenuHover(this, true)" onmouseout="subMenuHover(this, false)" onclick="window.location = '/libraries.aspx?view=widget';">Web Widget</td>
+				<td class="SUBMENUITEM" onmouseover="subMenuHover(this, true)" onmouseout="subMenuHover(this, false)" onclick="window.location = '/libraries.aspx?view=social';">Facebook, X, Instagram &amp; Pinterest</td>
+				<td class="SUBMENUITEM" onmouseover="subMenuHover(this, true)" onmouseout="subMenuHover(this, false)" onclick="window.location = '/libraries.aspx?view=easy';">Easy</td>
+				<td class="SUBMENUITEM" onmouseover="subMenuHover(this, true)" onmouseout="subMenuHover(this, false)" onclick="window.location = '/libraries.aspx?view=pricing';" style="border-right: 0px;">Affordable</td>
+				<td class="SUBMENUSHADOW"><img src="/1x1.gif" width="3"></td>
+			</tr>
+			<tr>
+				<td class="SUBMENUSHADOW" colspan="7" style="border-left: white 3px solid;"><img src="/1x1.gif" height="3"></td>
+			</tr>
+			</table>
+		</div>
+	</div>
+<script type="text/javascript" language="JavaScript">
+<!--
+highlightCurrentMenu();
+//-->
+</script>
+  
+  <table width="100%" cellpadding="0" border="0" cellspacing="0">
+    <tr>
+      <td class="LEFTCOLUMN">
+	  <div id="LEFTCOLUMNCONTAINER">
+      
+<table border="0" cellpadding="0" cellspacing="0" class='NUCAT'>
+<tr class='NUCATBW'><td style='width: 8px;' align='right'><img src='1x1.gif' style='vertical-align: bottom; height: 8px; width: 8px;' alt=''></td><td rowspan='2' class='NUCATBACT' onmouseover="this.className='NUCATBACTOVER'" onmouseout="this.className='NUCATBACT'"><a class='NUCATBACTA' href='nu.aspx?p=3972-132-GEN&tw'><b>Top Choices</b></a>&nbsp;(20)</td><td style='width: 8px;' align='left'><img src='1x1.gif' style='vertical-align: bottom; height: 8px; width: 8px;' alt=''></td></tr><tr class='NUCATBB'><td align='right'><img src='1x1.gif' style='vertical-align: top; height: 8px; width: 8px;' alt=''></td><td align='left'><img src='1x1.gif' style='vertical-align: top; height: 8px; width: 8px;' alt=''></td></tr>
+<tr><td class='NUCATBS' colspan='3'>&nbsp; </td></tr><tr class='NUCATBB'><td style='width: 8px;' align='right'><img src='1x1.gif' style='vertical-align: bottom; height: 8px; width: 8px;' alt=''></td><td rowspan='2' class='NUCATBACT' onmouseover="this.className='NUCATBACTOVER'" onmouseout="this.className='NUCATBACT'"><a class='NUCATBACTA' href='nu.aspx?p=3972-132-DVD&tw'><b>DVDs</b></a>&nbsp;(13)</td><td style='width: 8px;' align='left'><img src='1x1.gif' style='vertical-align: bottom; height: 8px; width: 8px;' alt=''></td></tr><tr class='NUCATBB'><td align='right'><img src='1x1.gif' style='vertical-align: top; height: 8px; width: 8px;' alt=''></td><td align='left'><img src='1x1.gif' style='vertical-align: top; height: 8px; width: 8px;' alt=''></td></tr>
+<tr><td class='NUCATBS' colspan='3'>&nbsp; </td></tr><tr class='NUCATBB'><td style='width: 8px;' align='right'><img src='1x1.gif' style='vertical-align: bottom; height: 8px; width: 8px;' alt=''></td><td rowspan='2' class='NUCATBACT' onmouseover="this.className='NUCATBACTOVER'" onmouseout="this.className='NUCATBACT'"><b>Non-Fiction</b></td><td style='width: 8px;' align='left'><img src='1x1.gif' style='vertical-align: bottom; height: 8px; width: 8px;' alt=''></td></tr><tr class='NUCATBB'><td align='right'><img src='1x1.gif' style='vertical-align: top; height: 8px; width: 8px;' alt=''></td><td align='left'><img src='1x1.gif' style='vertical-align: top; height: 8px; width: 8px;' alt=''></td></tr>
+<tr><td colspan='3' class='NUCATACTIND' onmouseover="this.className='NUCATACTINDOVER'" onmouseout="this.className='NUCATACTIND'"><a class='NUCATACTINDA' href='nu.aspx?p=3972-132-ART&tw'>Arts &amp; Photography</a></td></tr>
+<tr><td colspan='3' class='NUCATACTIND' onmouseover="this.className='NUCATACTINDOVER'" onmouseout="this.className='NUCATACTIND'"><a class='NUCATACTINDA' href='nu.aspx?p=3972-132-BIO&tw'>Biographies &amp; Memoirs</a></td></tr>
+<tr><td colspan='3' class='NUCATACTIND' onmouseover="this.className='NUCATACTINDOVER'" onmouseout="this.className='NUCATACTIND'"><a class='NUCATACTINDA' href='nu.aspx?p=3972-132-BUS&tw'>Business &amp; Investing</a></td></tr>
+<tr><td colspan='3' class='NUCATACTIND' onmouseover="this.className='NUCATACTINDOVER'" onmouseout="this.className='NUCATACTIND'"><a class='NUCATACTINDA' href='nu.aspx?p=3972-132-COM&tw'>Computers &amp; Internet</a></td></tr>
+<tr><td colspan='3' class='NUCATACTIND' onmouseover="this.className='NUCATACTINDOVER'" onmouseout="this.className='NUCATACTIND'"><a class='NUCATACTINDA' href='nu.aspx?p=3972-132-HIS&tw'>History</a></td></tr>
+<tr><td colspan='3' class='NUCATACTIND' onmouseover="this.className='NUCATACTINDOVER'" onmouseout="this.className='NUCATACTIND'"><a class='NUCATACTINDA' href='nu.aspx?p=3972-132-REF&tw'>Reference</a></td></tr>
+<tr><td colspan='3' class='NUCATACTIND' onmouseover="this.className='NUCATACTINDOVER'" onmouseout="this.className='NUCATACTIND'"><a class='NUCATACTINDA' href='nu.aspx?p=3972-132-SCI&tw'>Science</a>&nbsp;(1)</td></tr>
+<tr><td colspan='3' class='NUCATACTIND' onmouseover="this.className='NUCATACTINDOVER'" onmouseout="this.className='NUCATACTIND'"><a class='NUCATACTINDA' href='nu.aspx?p=3972-132-SOC&tw'>Society</a></td></tr>
+<tr class='NUCATBB'><td style='width: 8px;' align='right'><img src='1x1.gif' style='vertical-align: bottom; height: 8px; width: 8px;' alt=''></td><td rowspan='2' class='NUCATBACT' onmouseover="this.className='NUCATBACTOVER'" onmouseout="this.className='NUCATBACT'"><b>Recreation</b></td><td style='width: 8px;' align='left'><img src='1x1.gif' style='vertical-align: bottom; height: 8px; width: 8px;' alt=''></td></tr><tr class='NUCATBB'><td align='right'><img src='1x1.gif' style='vertical-align: top; height: 8px; width: 8px;' alt=''></td><td align='left'><img src='1x1.gif' style='vertical-align: top; height: 8px; width: 8px;' alt=''></td></tr>
+<tr><td colspan='3' class='NUCATACTIND' onmouseover="this.className='NUCATACTINDOVER'" onmouseout="this.className='NUCATACTIND'"><a class='NUCATACTINDA' href='nu.aspx?p=3972-132-AUD&tw'>Audiobooks &amp; Courses</a></td></tr>
+<tr><td colspan='3' class='NUCATACTIND' onmouseover="this.className='NUCATACTINDOVER'" onmouseout="this.className='NUCATACTIND'"><a class='NUCATACTINDA' href='nu.aspx?p=3972-132-CDS&tw'>CDs: Music &amp; Shows</a>&nbsp;(1)</td></tr>
+<tr><td colspan='3' class='NUCATACTIND' onmouseover="this.className='NUCATACTINDOVER'" onmouseout="this.className='NUCATACTIND'"><a class='NUCATACTINDA' href='nu.aspx?p=3972-132-COO&tw'>Cooking, Food &amp; Wine</a></td></tr>
+<tr><td colspan='3' class='NUCATACTIND' onmouseover="this.className='NUCATACTINDOVER'" onmouseout="this.className='NUCATACTIND'"><a class='NUCATACTINDA' href='nu.aspx?p=3972-132-ENT&tw'>Entertainment</a></td></tr>
+<tr><td colspan='3' class='NUCATACTIND' onmouseover="this.className='NUCATACTINDOVER'" onmouseout="this.className='NUCATACTIND'"><a class='NUCATACTINDA' href='nu.aspx?p=3972-132-HOM&tw'>Home &amp; Garden</a></td></tr>
+<tr><td colspan='3' class='NUCATACTIND' onmouseover="this.className='NUCATACTINDOVER'" onmouseout="this.className='NUCATACTIND'"><a class='NUCATACTINDA' href='nu.aspx?p=3972-132-OUT&tw'>Outdoors &amp; Nature</a></td></tr>
+<tr><td colspan='3' class='NUCATACTIND' onmouseover="this.className='NUCATACTINDOVER'" onmouseout="this.className='NUCATACTIND'"><a class='NUCATACTINDA' href='nu.aspx?p=3972-132-SPO&tw'>Sports</a></td></tr>
+<tr><td colspan='3' class='NUCATACTIND' onmouseover="this.className='NUCATACTINDOVER'" onmouseout="this.className='NUCATACTIND'"><a class='NUCATACTINDA' href='nu.aspx?p=3972-132-TRA&tw'>Travel</a></td></tr>
+<tr class='NUCATBB'><td style='width: 8px;' align='right'><img src='1x1.gif' style='vertical-align: bottom; height: 8px; width: 8px;' alt=''></td><td rowspan='2' class='NUCATBACT' onmouseover="this.className='NUCATBACTOVER'" onmouseout="this.className='NUCATBACT'"><b>Personal Growth</b></td><td style='width: 8px;' align='left'><img src='1x1.gif' style='vertical-align: bottom; height: 8px; width: 8px;' alt=''></td></tr><tr class='NUCATBB'><td align='right'><img src='1x1.gif' style='vertical-align: top; height: 8px; width: 8px;' alt=''></td><td align='left'><img src='1x1.gif' style='vertical-align: top; height: 8px; width: 8px;' alt=''></td></tr>
+<tr><td colspan='3' class='NUCATACTIND' onmouseover="this.className='NUCATACTINDOVER'" onmouseout="this.className='NUCATACTIND'"><a class='NUCATACTINDA' href='nu.aspx?p=3972-132-HEA&tw'>Health, Mind &amp; Body</a></td></tr>
+<tr><td colspan='3' class='NUCATACTIND' onmouseover="this.className='NUCATACTINDOVER'" onmouseout="this.className='NUCATACTIND'"><a class='NUCATACTINDA' href='nu.aspx?p=3972-132-PAR&tw'>Parenting &amp; Family</a></td></tr>
+<tr><td colspan='3' class='NUCATACTIND' onmouseover="this.className='NUCATACTINDOVER'" onmouseout="this.className='NUCATACTIND'"><a class='NUCATACTINDA' href='nu.aspx?p=3972-132-PRO&tw'>Professional &amp; Technical</a></td></tr>
+<tr><td colspan='3' class='NUCATACTIND' onmouseover="this.className='NUCATACTINDOVER'" onmouseout="this.className='NUCATACTIND'"><a class='NUCATACTINDA' href='nu.aspx?p=3972-132-REL&tw'>Religion &amp; Spirituality</a></td></tr>
+<tr class='NUCATBB'><td style='width: 8px;' align='right'><img src='1x1.gif' style='vertical-align: bottom; height: 8px; width: 8px;' alt=''></td><td rowspan='2' class='NUCATBACT' onmouseover="this.className='NUCATBACTOVER'" onmouseout="this.className='NUCATBACT'"><b>Fiction</b></td><td style='width: 8px;' align='left'><img src='1x1.gif' style='vertical-align: bottom; height: 8px; width: 8px;' alt=''></td></tr><tr class='NUCATBB'><td align='right'><img src='1x1.gif' style='vertical-align: top; height: 8px; width: 8px;' alt=''></td><td align='left'><img src='1x1.gif' style='vertical-align: top; height: 8px; width: 8px;' alt=''></td></tr>
+<tr><td colspan='3' class='NUCATACTIND' onmouseover="this.className='NUCATACTINDOVER'" onmouseout="this.className='NUCATACTIND'"><a class='NUCATACTINDA' href='nu.aspx?p=3972-132-LIT&tw'>Literature &amp; Fiction</a>&nbsp;(3)</td></tr>
+<tr><td colspan='3' class='NUCATACTIND' onmouseover="this.className='NUCATACTINDOVER'" onmouseout="this.className='NUCATACTIND'"><a class='NUCATACTINDA' href='nu.aspx?p=3972-132-MYS&tw'>Mysteries &amp; Thrillers</a>&nbsp;(1)</td></tr>
+<tr><td colspan='3' class='NUCATACTIND' onmouseover="this.className='NUCATACTINDOVER'" onmouseout="this.className='NUCATACTIND'"><a class='NUCATACTINDA' href='nu.aspx?p=3972-132-ROM&tw'>Romance</a></td></tr>
+<tr><td colspan='3' class='NUCATACTIND' onmouseover="this.className='NUCATACTINDOVER'" onmouseout="this.className='NUCATACTIND'"><a class='NUCATACTINDA' href='nu.aspx?p=3972-132-SFF&tw'>Science Fiction &amp; Fantasy</a></td></tr>
+<tr class='NUCATBB'><td style='width: 8px;' align='right'><img src='1x1.gif' style='vertical-align: bottom; height: 8px; width: 8px;' alt=''></td><td rowspan='2' class='NUCATBACT' onmouseover="this.className='NUCATBACTOVER'" onmouseout="this.className='NUCATBACT'"><b>Young People</b></td><td style='width: 8px;' align='left'><img src='1x1.gif' style='vertical-align: bottom; height: 8px; width: 8px;' alt=''></td></tr><tr class='NUCATBB'><td align='right'><img src='1x1.gif' style='vertical-align: top; height: 8px; width: 8px;' alt=''></td><td align='left'><img src='1x1.gif' style='vertical-align: top; height: 8px; width: 8px;' alt=''></td></tr>
+<tr><td colspan='3' class='NUCATACTIND' onmouseover="this.className='NUCATACTINDOVER'" onmouseout="this.className='NUCATACTIND'"><a class='NUCATACTINDA' href='nu.aspx?p=3972-132-CHI&tw'>Children's Books</a>&nbsp;(32)</td></tr>
+<tr><td colspan='3' class='NUCATACTIND' onmouseover="this.className='NUCATACTINDOVER'" onmouseout="this.className='NUCATACTIND'"><a class='NUCATACTINDA' href='nu.aspx?p=3972-132-CGR&tw'>Comics &amp; Graphic Novels</a>&nbsp;(6)</td></tr>
+<tr><td colspan='3' class='NUCATACTIND' onmouseover="this.className='NUCATACTINDOVER'" onmouseout="this.className='NUCATACTIND'"><a class='NUCATACTINDA' href='nu.aspx?p=3972-132-TEE&tw'>Teen</a>&nbsp;(1)</td></tr>
+<tr class='NUCATBB'><td style='width: 8px;' align='right'><img src='1x1.gif' style='vertical-align: bottom; height: 8px; width: 8px;' alt=''></td><td rowspan='2' class='NUCATBACT' onmouseover="this.className='NUCATBACTOVER'" onmouseout="this.className='NUCATBACT'"><a class='NUCATBACTA' href='nu.aspx?p=3972-132-EBO&tw'><b>eBooks &amp; eAudios</b></a>&nbsp;(4)</td><td style='width: 8px;' align='left'><img src='1x1.gif' style='vertical-align: bottom; height: 8px; width: 8px;' alt=''></td></tr><tr class='NUCATBB'><td align='right'><img src='1x1.gif' style='vertical-align: top; height: 8px; width: 8px;' alt=''></td><td align='left'><img src='1x1.gif' style='vertical-align: top; height: 8px; width: 8px;' alt=''></td></tr>
+<tr><td class='NUCATBS' colspan='3'>&nbsp; </td></tr><tr class='NUCATBB'><td style='width: 8px;' align='right'><img src='1x1.gif' style='vertical-align: bottom; height: 8px; width: 8px;' alt=''></td><td rowspan='2' class='NUCATBACT' onmouseover="this.className='NUCATBACTOVER'" onmouseout="this.className='NUCATBACT'"><a class='NUCATBACTA' href='nu.aspx?p=3972-132-LRG&tw'><b>Large Print</b></a>&nbsp;(6)</td><td style='width: 8px;' align='left'><img src='1x1.gif' style='vertical-align: bottom; height: 8px; width: 8px;' alt=''></td></tr><tr class='NUCATBB'><td align='right'><img src='1x1.gif' style='vertical-align: top; height: 8px; width: 8px;' alt=''></td><td align='left'><img src='1x1.gif' style='vertical-align: top; height: 8px; width: 8px;' alt=''></td></tr>
+<tr><td class='NUCATBS' colspan='3'>&nbsp; </td></tr><tr class='NUCATBB'><td style='width: 8px;' align='right'><img src='1x1.gif' style='vertical-align: bottom; height: 8px; width: 8px;' alt=''></td><td rowspan='2' class='NUCATBACT' onmouseover="this.className='NUCATBACTOVER'" onmouseout="this.className='NUCATBACT'"><a class='NUCATBACTA' href='nu.aspx?p=3972-132-NEN&tw'><b>Non-English</b></a></td><td style='width: 8px;' align='left'><img src='1x1.gif' style='vertical-align: bottom; height: 8px; width: 8px;' alt=''></td></tr><tr class='NUCATBW'><td align='right'><img src='1x1.gif' style='vertical-align: top; height: 8px; width: 8px;' alt=''></td><td align='left'><img src='1x1.gif' style='vertical-align: top; height: 8px; width: 8px;' alt=''></td></tr>
+<tr style='background: white;'><td></td><td><img src='1x1.gif' width='154' height='20' alt=''></td><td></td></tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" class='NUCAT' id='readersfavorites'>
+
+</table>
+<table border="0" cellpadding="0" cellspacing="0" class='NUCAT' id='useful'>
+<tr class='NUCATBW'><td style='width: 8px;' align='right'><img src='1x1.gif' style='vertical-align: bottom; height: 8px; width: 8px;' alt=''></td><td rowspan='2' class='NUCATBACT'><b>Useful Links</b></td><td style='width: 8px;' align='left'><img src='1x1.gif' style='vertical-align: bottom; height: 8px; width: 8px;' alt=''></td></tr><tr class='NUCATBB'><td align='right'><img src='1x1.gif' style='vertical-align: top; height: 8px; width: 8px;' alt=''></td><td align='left'><img src='1x1.gif' style='vertical-align: top; height: 8px; width: 8px;' alt=''></td></tr><tr><td class='NUCATACTIND' colspan='3'><a class='NUCATACTINDA' href='signup.aspx'>Sign Up for a Wowbrary Newsletter</a></td></tr><tr><td class='NUCATACTIND' colspan='3'><a class='NUCATACTINDA' href='tellafriend.aspx'>Tell your Friends about Wowbrary</a></td></tr><tr><td class='NUCATACTIND' colspan='3'><a class='NUCATACTINDA' href='suggest.aspx'>Suggest an Idea</a></td></tr><tr><td class='NUCATACTIND' colspan='3'><a class='NUCATACTINDA' href='reportaproblem.aspx'>Report a Problem</a></td></tr><tr><td class='NUCATACTIND' colspan='3'><a class='NUCATACTINDA' href='https://www.maynardpubliclibrary.org/'>Maynard Public Library</a></td></tr><tr><td class='NUCATACTIND' colspan='3'><a class='NUCATACTINDA' href='https://maynardpubliclibrary.assabetinteractive.com/calendar/'>Upcoming Events</a></td></tr><tr style='background: white;'><td></td><td><img src='1x1.gif' width='154' height='1' alt=''></td><td></td></tr>
+</table>
+
+      </DIV>
+      </td><td class="RIGHTCOLUMN">
+      
+<table class="NULIBRARYBANNER" style='background-image: url(/nubannerheader.aspx?%23F15A29-%23F15A29); background-color: #F15A29;' border="0" cellpadding="0" cellspacing="0" width="100%"><tr>
+<td class="NULIBRARYNAME" align="left" valign="middle" ><a class='NULIBRARYURL' href='https://www.maynardpubliclibrary.org/'>Maynard Public Library</a></td>
+<td class="NUDATE" align="right" valign="middle">October 5, 2024</td>
+</tr></table>
+<table  border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+
+<div class="NUINSTRUCTIONS"><a><span style="color: #BD2D18;">
+</span></a>
+
+<div style="xfloat: right;" id="google_translate_element"></div>
+<script type="text/javascript">
+    // run any special code - normally to set up cookiees
+    
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script type="text/javascript">
+function googleTranslateElementInit() { 
+
+    // change NUBUTTONS to exclude translation
+    var nodesButtons = document.getElementsByClassName("NUBUTTON");
+    var nodesButtonsCopy = [];
+    for (var i = nodesButtons.length - 1; i >= 0; i--) nodesButtonsCopy.push(nodesButtons[i]);
+    for (var i = nodesButtons.length - 1; i >= 0; i--) nodesButtonsCopy[i].className = "NUBUTTON notranslate";
+
+    // create some invisible nodes that contain More Info and Borrow text so we can obtain the translation for that
+    var divInvisible = document.createElement('div');
+    divInvisible.style.display = 'none';
+    divInvisible.innerHTML = '<div id="divMoreInfoTranslation">More Info</div><div id="divBorrowTranslation">Borrow</div>';
+    document.body.appendChild(divInvisible);
+
+    // create the translation dropdown
+    new google.translate.TranslateElement({ pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.VERTICAL}, 'google_translate_element'); 
+}
+
+// fixups for large fonts and broken buttons
+var strButtonText = "";
+function googleFixups() {
+
+    // don't bother if extra nodes don't exist yet
+    if (!document.getElementById('divMoreInfoTranslation')) return;
+
+    // see if MoreInfo/Borrow have been translated
+    var strButtonTextCurrent = document.getElementById('divMoreInfoTranslation').innerHTML + '/' + document.getElementById('divBorrowTranslation').innerHTML;
+
+    // if there's been no change, return
+    if (strButtonTextCurrent === strButtonText) return;
+
+    // save the new text to avoid further updates
+    strButtonText = strButtonTextCurrent;
+
+    // create the fixed-up text for the MoreInfo and Borrow buttons
+    var nodesFixed = {};
+    ['divMoreInfoTranslation','divBorrowTranslation'].map(function(strID) {
+
+        // this isn't ideal, but it's a possible step
+
+        // get the innerHTML for strID
+        var strInnerHTML = document.getElementById(strID).innerHTML;
+            
+        // get the part within all the tags
+        var strInnerHTMLTagLess = strInnerHTML.replace(/<.*?>/g,"");
+
+        // store the transformed version in nodesFixed
+        nodesFixed[strID] = strInnerHTML.replace(strInnerHTMLTagLess,strInnerHTML.replace(/ /g,"&nbsp;"));
+    });
+
+    // update the MoreInfo and Borrow buttons
+    var nodesButtons = document.getElementsByClassName("NUBUTTON notranslate");
+    for (var i = 0; i < nodesButtons.length; i++) {
+
+        // need to trim spaces and convert inner ones to &nbsp; 
+        nodesButtons[i].innerHTML = nodesFixed[(i & 1) ? 'divBorrowTranslation' : 'divMoreInfoTranslation'];
+    }
+
+
+    // if the non-phone menu is too wide, shrink its font
+    var nodeMenuRow = document.getElementById('TOPMENUROW');
+    if (nodeMenuRow) {
+
+        // helper function to set fontSize on TOPMENUITEMs
+        function SetMenuItems(strFontSize) {
+            var nodeMenuItems = document.getElementsByClassName('TOPMENUITEM');
+            for (var i = 0; i < nodeMenuItems.length; i++) nodeMenuItems[i].style.fontSize = strFontSize;
+        }
+
+        // reset the fontSize to empty (so it inherits the class setting
+        SetMenuItems('');
+
+        // if the width is too great, rachet down to a minimum of 5 points
+        var iFontSize = 10;
+        while (nodeMenuRow.offsetWidth > 900 && iFontSize > 5) SetMenuItems(--iFontSize + 'px');
+    }
+
+}
+setInterval(googleFixups,100);
+</script>
+
+</div><br style="line-height: 1em;" /><h1 class="BODY" style="margin-bottom: 0px;">Top Choices</h1>
+<p class="NUOTHERISSUES">
+
+<div id="panelElectronicOptions2" style="float: right; font-size: 90%;">
+	
+<select name="selectElectronicOptions" onChange="return ElectronicOptionsURL(this);" aria-label="Choose to show electronic and/or non-electronic items">
+<option value="https://wowbrary.org/nu.aspx?p=3972-132&tw" eopt="all">Show all items</option>
+<option value="https://wowbrary.org/nu.aspx?p=3972-132&tw&noe" eopt="noe" >Show no electronic items</option>
+<option value="https://wowbrary.org/nu.aspx?p=3972-132&tw&onlye"eopt="onlye" >Show only electronic items</option>
+</select>
+</div>
+<a href='nu.aspx?p=3972-131-GEN&tw' title='See Top Choices for the week of September 28, 2024'>Previous Week</a> - <a href='nu.aspx?p=3972-132-DVD&tw' title='See DVDs for the week of October 5, 2024'>Next Category</a> - <a href='nu.aspx?p=3972-133-GEN&tw' title='See Top Choices for the week of October 12, 2024'>Next Week</a><br />&nbsp;</p></td></tr></table>
+<table id='CONTENTPANE'><!-- descriptionstart --><tr>
+ <td align=right valign='top' style='padding-bottom: 10px; padding-right: 8px;'><a href='l.aspx?l=3972&c=4289670&i=9780316554732&u=&t=The+Millicent+Quibb+School+of+Etiquette+for+Young+Ladies+of+Mad+Science&tw'><img border='0' src='https://wowbrary.blob.core.windows.net/img/8281403487' alt='Click to see this item in the library catalog'></a></td>
+<td valign='top' style='padding-bottom: 10px;'><div id='divG4289670' style='float: right; display: none; padding-left: 25 px; margin-bottom: 15px;'><a id='linkG4289670' href='googlescript.aspx?l=3972&c=4289670'><img src='https://books.google.com/intl/en/googlebooks/images/gbs_preview_button1.gif' class='NUGBUTTON' title='Google Preview' alt='Google Preview'></a></div><a href='l.aspx?l=3972&c=4289670&i=9780316554732&u=&t=The+Millicent+Quibb+School+of+Etiquette+for+Young+Ladies+of+Mad+Science&tw'><B class='NUTITLE'>The Millicent Quibb School of Etiquette for Young Ladies of Mad Science</B></a> <a id='mid0316554731' href='#'onclick='MoreInfo(event,"The Millicent Quibb School of Etiquette for Young Ladies of Mad Science","9780316554732","","https://www.amazon.com/dp/product/0316554731?tag=interacscienc327-20&linkCode=ogi&th=1&psc=1"); return false;' class='NUBUTTON'>More&nbsp;Info</a>&nbsp;&nbsp;<a href='l.aspx?l=3972&c=4289670&i=9780316554732&u=&t=The+Millicent+Quibb+School+of+Etiquette+for+Young+Ladies+of+Mad+Science&tw' class='NUBUTTON'>Borrow</a><br>By Kate McKinnon.  <i>From Little, Brown Books for Young Readers.</i><BR><div style='display: inline;'><a href='grl.aspx?a=0316554731&i=9780316554732'><img src='/images/stars40.gif' border='0' width='55px' height='12px' style='padding: 0; margin: 0;' title='Click to see 140 GoodReads ratings, which gave this 4.1 out of 5 stars' alt='Click to see 140 GoodReads ratings, which gave this 4.1 out of 5 stars'></a></div> <div style='display: inline;'><a href='grl.aspx?a=0316554731&i=9780316554732' title='Click to see 41 GoodReads reviews' class='NUREVIEW'>(41 reviews)</a></div> &nbsp;<br>&nbsp;<br>From beloved Saturday Night Live alum Kate McKinnon comes a madcap new adventure about three sisters, a ravenous worm, and a mysterious mad scientist.<br><br>So, you want to be a young mad scientist. Congratulations! Admitting it is the first step. The second step is reading the (definitely true) tale of the Porch sisters…<br><br>Gertrude, Eugenia, and Dee-Dee Porch do not belong. They don&rsquo;t belong in the snooty town of Antiquarium, where all girls have to go to etiquette school and the only dog allowed is the bichon frise.</td>
+</tr>
+<tr><td colspan='2'><center><img src='/images/arrowtocategories.gif' title='Click on a category on the left to see more new titles' alt='Click on a category on the left to see more new titles'></center></td></tr>
+<tr>
+ <td align=right valign='top' style='padding-bottom: 10px; padding-right: 8px;'><a href='l.aspx?l=3972&c=4281604&i=9786319335538&u=043396637924&t=Inside+Out+2+&tw'><img border='0' src='https://wowbrary.blob.core.windows.net/img/MVPG5NNA5O' alt='Click to see this item in the library catalog'></a></td>
+<td valign='top' style='padding-bottom: 10px;'><div id='divG4281604' style='float: right; display: none; padding-left: 25 px; margin-bottom: 15px;'><a id='linkG4281604' href='googlescript.aspx?l=3972&c=4281604'><img src='https://books.google.com/intl/en/googlebooks/images/gbs_preview_button1.gif' class='NUGBUTTON' title='Google Preview' alt='Google Preview'></a></div><a href='l.aspx?l=3972&c=4281604&i=9786319335538&u=043396637924&t=Inside+Out+2+&tw'><B class='NUTITLE'>Inside Out 2 </B></a> <a id='midB0DCK6XSGF' href='#'onclick='MoreInfo(event,"Inside Out 2 ","9786319335538","043396637924","https://www.amazon.com/dp/product/B0DCK6XSGF?tag=interacscienc327-20&linkCode=ogi&th=1&psc=1"); return false;' class='NUBUTTON'>More&nbsp;Info</a>&nbsp;&nbsp;<a href='l.aspx?l=3972&c=4281604&i=9786319335538&u=043396637924&t=Inside+Out+2+&tw' class='NUBUTTON'>Borrow</a><br> <i>From SONY.</i><br>&nbsp;<br>Disney and Pixar&rsquo;s &ldquo;Inside Out 2&rdquo; returns to the mind of newly minted teenager Riley just as headquarters is disrupted by something entirely unexpected: new Emotions! Joy, Sadness, Anger, Fear and Disgust aren&rsquo;t sure how to feel when Anxiety and friends show up.</td>
+</tr>
+<tr>
+ <td align=right valign='top' style='padding-bottom: 10px; padding-right: 8px;'><a href='l.aspx?l=3972&c=4300697&i=9786319295993&u=602465530902&t=Cowboys+and+Dreamers&tw'><img border='0' src='https://wowbrary.blob.core.windows.net/img/3GEKXJ1A5O' alt='Click to see this item in the library catalog'></a></td>
+<td valign='top' style='padding-bottom: 10px;'><div id='divG4300697' style='float: right; display: none; padding-left: 25 px; margin-bottom: 15px;'><a id='linkG4300697' href='googlescript.aspx?l=3972&c=4300697'><img src='https://books.google.com/intl/en/googlebooks/images/gbs_preview_button1.gif' class='NUGBUTTON' title='Google Preview' alt='Google Preview'></a></div><a href='l.aspx?l=3972&c=4300697&i=9786319295993&u=602465530902&t=Cowboys+and+Dreamers&tw'><B class='NUTITLE'>Cowboys and Dreamers</B></a> <a id='midB0D4GGBHR6' href='#'onclick='MoreInfo(event,"Cowboys and Dreamers","9786319295993","602465530902","https://www.amazon.com/dp/product/B0D4GGBHR6?tag=interacscienc327-20&linkCode=ogi&th=1&psc=1"); return false;' class='NUBUTTON'>More&nbsp;Info</a>&nbsp;&nbsp;<a href='l.aspx?l=3972&c=4300697&i=9786319295993&u=602465530902&t=Cowboys+and+Dreamers&tw' class='NUBUTTON'>Borrow</a><br>George Strait.  <i>From UMG Nashville.</i></td>
+</tr>
+<tr>
+ <td align=right valign='top' style='padding-bottom: 10px; padding-right: 8px;'><a href='l.aspx?l=3972&c=4284928&i=9786319302677&u=191329266717&t=Reacher%3a+Season+Two+%5bDVD%5d&tw'><img border='0' src='https://wowbrary.blob.core.windows.net/img/MZP5IQ4A5O' alt='Click to see this item in the library catalog'></a></td>
+<td valign='top' style='padding-bottom: 10px;'><div id='divG4284928' style='float: right; display: none; padding-left: 25 px; margin-bottom: 15px;'><a id='linkG4284928' href='googlescript.aspx?l=3972&c=4284928'><img src='https://books.google.com/intl/en/googlebooks/images/gbs_preview_button1.gif' class='NUGBUTTON' title='Google Preview' alt='Google Preview'></a></div><a href='l.aspx?l=3972&c=4284928&i=9786319302677&u=191329266717&t=Reacher%3a+Season+Two+%5bDVD%5d&tw'><B class='NUTITLE'>Reacher: Season Two [DVD]</B></a> <a id='midB0D7NR8SKF' href='#'onclick='MoreInfo(event,"Reacher: Season Two [DVD]","9786319302677","191329266717","https://www.amazon.com/dp/product/B0D7NR8SKF?tag=interacscienc327-20&linkCode=ogi&th=1&psc=1"); return false;' class='NUBUTTON'>More&nbsp;Info</a>&nbsp;&nbsp;<a href='l.aspx?l=3972&c=4284928&i=9786319302677&u=191329266717&t=Reacher%3a+Season+Two+%5bDVD%5d&tw' class='NUBUTTON'>Borrow</a><br> <i>From PARAMOUNT.</i><br>&nbsp;<br>Reacher Season Two begins when veteran military police investigator Jack Reacher receives a coded message that the members of his former U. S. Army unit are being mysteriously and brutally murdered one by one. Pulled from his drifter lifestyle, Reacher reunites with three of his former teammates turned chosen family to investigate. Together, they begin to connect the dots in a mystery where the stakes get higher at every turn and bring about questions of who has betrayed them and who will die next.</td>
+</tr>
+<tr>
+ <td align=right valign='top' style='padding-bottom: 10px; padding-right: 8px;'><a href='l.aspx?l=3972&c=WOV10382620&i=9780593734247&u=&t=Nexus%3a+A+Brief+History+of+Information+Networks+from+the+Stone+Age+to+AI+(Electronic+Format)&tw'><img border='0' src='https://wowbrary.blob.core.windows.net/img/E131220207' alt='Click to see this item in the library catalog'></a></td>
+<td valign='top' style='padding-bottom: 10px;'><div id='divGWOV10382620' style='float: right; display: none; padding-left: 25 px; margin-bottom: 15px;'><a id='linkGWOV10382620' href='googlescript.aspx?l=3972&c=WOV10382620'><img src='https://books.google.com/intl/en/googlebooks/images/gbs_preview_button1.gif' class='NUGBUTTON' title='Google Preview' alt='Google Preview'></a></div><a href='l.aspx?l=3972&c=WOV10382620&i=9780593734247&u=&t=Nexus%3a+A+Brief+History+of+Information+Networks+from+the+Stone+Age+to+AI+(Electronic+Format)&tw'><B class='NUTITLE'>Nexus: A Brief History of Information Networks from the Stone Age to AI (Electronic Format)</B></a> <a id='mid059373422X' href='#'onclick='MoreInfo(event,"Nexus: A Brief History of Information Networks from the Stone Age to AI (Electronic Format)","9780593734247","","https://www.amazon.com/dp/product/059373422X?tag=interacscienc327-20&linkCode=ogi&th=1&psc=1"); return false;' class='NUBUTTON'>More&nbsp;Info</a>&nbsp;&nbsp;<a href='l.aspx?l=3972&c=WOV10382620&i=9780593734247&u=&t=Nexus%3a+A+Brief+History+of+Information+Networks+from+the+Stone+Age+to+AI+(Electronic+Format)&tw' class='NUBUTTON'>Borrow</a><br>By Yuval Noah Harari.  <i>From Random House.</i><BR><div style='display: inline;'><a href='grl.aspx?a=059373422X'><img src='/images/stars40.gif' border='0' width='55px' height='12px' style='padding: 0; margin: 0;' title='Click to see 2,301 GoodReads ratings, which gave this 4.2 out of 5 stars' alt='Click to see 2,301 GoodReads ratings, which gave this 4.2 out of 5 stars'></a></div> <div style='display: inline;'><a href='grl.aspx?a=059373422X' title='Click to see 347 GoodReads reviews' class='NUREVIEW'>(347 reviews)</a></div> &nbsp;<br>&nbsp;<br><a class='NUEITEM' href='l.aspx?l=3972&c=WOV10382620&i=9780593734247&u=&t=Nexus%3a+A+Brief+History+of+Information+Networks+from+the+Stone+Age+to+AI+(Electronic+Format)&tw' title='This item is either an eBook or readable online'>In Electronic Format</a> From the #1 New York Times bestselling author of Sapiens comes the groundbreaking story of how information networks have made, and unmade, our world.<br><br>For the last 100,000 years, we Sapiens have accumulated enormous power. But despite allour discoveries, inventions, and conquests, we now find ourselves in an existential crisis. The world is on the verge of ecological collapse. Misinformation abounds. And we are rushing headlong into the age of AI&mdash;a new information network that threatens to annihilate us. For all that we have accomplished, why are we so self-destructive?</td>
+</tr>
+<tr>
+ <td align=right valign='top' style='padding-bottom: 10px; padding-right: 8px;'><a href='l.aspx?l=3972&c=WOV10394152&i=9780593446102&u=&t=Tell+Me+Everything+(Electronic+Format)&tw'><img border='0' src='https://wowbrary.blob.core.windows.net/img/4813390207' alt='Click to see this item in the library catalog'></a></td>
+<td valign='top' style='padding-bottom: 10px;'><div id='divGWOV10394152' style='float: right; display: none; padding-left: 25 px; margin-bottom: 15px;'><a id='linkGWOV10394152' href='googlescript.aspx?l=3972&c=WOV10394152'><img src='https://books.google.com/intl/en/googlebooks/images/gbs_preview_button1.gif' class='NUGBUTTON' title='Google Preview' alt='Google Preview'></a></div><a href='l.aspx?l=3972&c=WOV10394152&i=9780593446102&u=&t=Tell+Me+Everything+(Electronic+Format)&tw'><B class='NUTITLE'>Tell Me Everything (Electronic Format)</B></a> <a id='mid0593446097' href='#'onclick='MoreInfo(event,"Tell Me Everything (Electronic Format)","9780593446102","","https://www.amazon.com/dp/product/0593446097?tag=interacscienc327-20&linkCode=ogi&th=1&psc=1"); return false;' class='NUBUTTON'>More&nbsp;Info</a>&nbsp;&nbsp;<a href='l.aspx?l=3972&c=WOV10394152&i=9780593446102&u=&t=Tell+Me+Everything+(Electronic+Format)&tw' class='NUBUTTON'>Borrow</a><br>By Elizabeth Strout.  <i>From Random House.</i><BR><div style='display: inline;'><a href='grl.aspx?a=0593446097'><img src='/images/stars45.gif' border='0' width='55px' height='12px' style='padding: 0; margin: 0;' title='Click to see 10,605 GoodReads ratings, which gave this 4.4 out of 5 stars' alt='Click to see 10,605 GoodReads ratings, which gave this 4.4 out of 5 stars'></a></div> <div style='display: inline;'><a href='grl.aspx?a=0593446097' title='Click to see 1,522 GoodReads reviews' class='NUREVIEW'>(1,522 reviews)</a></div> &nbsp;<br>&nbsp;<br><a class='NUEITEM' href='l.aspx?l=3972&c=WOV10394152&i=9780593446102&u=&t=Tell+Me+Everything+(Electronic+Format)&tw' title='This item is either an eBook or readable online'>In Electronic Format</a> From Pulitzer Prize-winning author Elizabeth Strout comes a hopeful, healing novel about new friendships, old loves, and the very human desire to leave a mark on the world.</td>
+</tr>
+<tr>
+ <td align=right valign='top' style='padding-bottom: 10px; padding-right: 8px;'><a href='l.aspx?l=3972&c=WOV10141759&i=9781250899569&u=&t=The+Wedding+People+(Electronic+Format)&tw'><img border='0' src='https://wowbrary.blob.core.windows.net/img/2666837878' alt='Click to see this item in the library catalog'></a></td>
+<td valign='top' style='padding-bottom: 10px;'><div id='divGWOV10141759' style='float: right; display: none; padding-left: 25 px; margin-bottom: 15px;'><a id='linkGWOV10141759' href='googlescript.aspx?l=3972&c=WOV10141759'><img src='https://books.google.com/intl/en/googlebooks/images/gbs_preview_button1.gif' class='NUGBUTTON' title='Google Preview' alt='Google Preview'></a></div><a href='l.aspx?l=3972&c=WOV10141759&i=9781250899569&u=&t=The+Wedding+People+(Electronic+Format)&tw'><B class='NUTITLE'>The Wedding People (Electronic Format)</B></a> <a id='mid1250899575' href='#'onclick='MoreInfo(event,"The Wedding People (Electronic Format)","9781250899569","","https://www.amazon.com/dp/product/1250899575?tag=interacscienc327-20&linkCode=ogi&th=1&psc=1"); return false;' class='NUBUTTON'>More&nbsp;Info</a>&nbsp;&nbsp;<a href='l.aspx?l=3972&c=WOV10141759&i=9781250899569&u=&t=The+Wedding+People+(Electronic+Format)&tw' class='NUBUTTON'>Borrow</a><br>By Alison Espach.  <i>From Henry Holt and Co..</i><BR><div style='display: inline;'><a href='grl.aspx?a=1250899575'><img src='/images/stars40.gif' border='0' width='55px' height='12px' style='padding: 0; margin: 0;' title='Click to see 75,130 GoodReads ratings, which gave this 4.2 out of 5 stars' alt='Click to see 75,130 GoodReads ratings, which gave this 4.2 out of 5 stars'></a></div> <div style='display: inline;'><a href='grl.aspx?a=1250899575' title='Click to see 10,619 GoodReads reviews' class='NUREVIEW'>(10,619 reviews)</a></div> &nbsp;<br>&nbsp;<br><a class='NUEITEM' href='l.aspx?l=3972&c=WOV10141759&i=9781250899569&u=&t=The+Wedding+People+(Electronic+Format)&tw' title='This item is either an eBook or readable online'>In Electronic Format</a> A propulsive and uncommonly wise novel about one unexpected wedding guest and the surprising people who help us start anew.<br><br>It's a beautiful day in Newport, Rhode Island, when Phoebe Stone arrives at the grand Cornwall Inn wearing a green dress and gold heels, not a bag in sight, alone. She's immediately mistaken by everyone in the lobby for one of the wedding people, but she&rsquo;s actually the only guest at the Cornwall who isn&rsquo;t here for the big event.</td>
+</tr>
+<tr>
+ <td align=right valign='top' style='padding-bottom: 10px; padding-right: 8px;'><a href='l.aspx?l=3972&c=4287721&i=9786319239546&u=191329264270&t=Knuckles+%5bDVD%5d&tw'><img border='0' src='https://wowbrary.blob.core.windows.net/img/EZI8H69A5O' alt='Click to see this item in the library catalog'></a></td>
+<td valign='top' style='padding-bottom: 10px;'><div id='divG4287721' style='float: right; display: none; padding-left: 25 px; margin-bottom: 15px;'><a id='linkG4287721' href='googlescript.aspx?l=3972&c=4287721'><img src='https://books.google.com/intl/en/googlebooks/images/gbs_preview_button1.gif' class='NUGBUTTON' title='Google Preview' alt='Google Preview'></a></div><a href='l.aspx?l=3972&c=4287721&i=9786319239546&u=191329264270&t=Knuckles+%5bDVD%5d&tw'><B class='NUTITLE'>Knuckles [DVD]</B></a> <a id='midB0D21Q1LKX' href='#'onclick='MoreInfo(event,"Knuckles [DVD]","9786319239546","191329264270","https://www.amazon.com/dp/product/B0D21Q1LKX?tag=interacscienc327-20&linkCode=ogi&th=1&psc=1"); return false;' class='NUBUTTON'>More&nbsp;Info</a>&nbsp;&nbsp;<a href='l.aspx?l=3972&c=4287721&i=9786319239546&u=191329264270&t=Knuckles+%5bDVD%5d&tw' class='NUBUTTON'>Borrow</a><br> <i>From PARAMOUNT.</i><br>&nbsp;<br>The new live-action series will follow Knuckles on a hilarious and action-packed journey of self-discovery as he agrees to train Wade as his protégé and teach him the ways of the Echidna warrior.</td>
+</tr>
+<tr>
+ <td align=right valign='top' style='padding-bottom: 10px; padding-right: 8px;'><a href='l.aspx?l=3972&c=4282774&i=9780593527542&u=&t=The+Bletchley+Riddle&tw'><img border='0' src='https://wowbrary.blob.core.windows.net/img/9364100207' alt='Click to see this item in the library catalog'></a></td>
+<td valign='top' style='padding-bottom: 10px;'><div id='divG4282774' style='float: right; display: none; padding-left: 25 px; margin-bottom: 15px;'><a id='linkG4282774' href='googlescript.aspx?l=3972&c=4282774'><img src='https://books.google.com/intl/en/googlebooks/images/gbs_preview_button1.gif' class='NUGBUTTON' title='Google Preview' alt='Google Preview'></a></div><a href='l.aspx?l=3972&c=4282774&i=9780593527542&u=&t=The+Bletchley+Riddle&tw'><B class='NUTITLE'>The Bletchley Riddle</B></a> <a id='mid0593527542' href='#'onclick='MoreInfo(event,"The Bletchley Riddle","9780593527542","","https://www.amazon.com/dp/product/0593527542?tag=interacscienc327-20&linkCode=ogi&th=1&psc=1"); return false;' class='NUBUTTON'>More&nbsp;Info</a>&nbsp;&nbsp;<a href='l.aspx?l=3972&c=4282774&i=9780593527542&u=&t=The+Bletchley+Riddle&tw' class='NUBUTTON'>Borrow</a><br>By Ruta Sepetys and Steve Sheinkin.  <i>From Viking Books for Young Readers.</i><BR><div style='display: inline;'><a href='grl.aspx?a=0593527542&i=9780593527542'><img src='/images/stars45.gif' border='0' width='55px' height='12px' style='padding: 0; margin: 0;' title='Click to see 403 GoodReads ratings, which gave this 4.4 out of 5 stars' alt='Click to see 403 GoodReads ratings, which gave this 4.4 out of 5 stars'></a></div> <div style='display: inline;'><a href='grl.aspx?a=0593527542&i=9780593527542' title='Click to see 206 GoodReads reviews' class='NUREVIEW'>(206 reviews)</a></div> &nbsp;<br>&nbsp;<br>A stunning collaboration between award-winning and bestselling authors Ruta Sepetys and Steve Sheinkin, this middle grade historical adventure follows two siblings at Bletchley Park, the home of WWII codebreakers, as they try to unravel a mystery surrounding their mother&rsquo;s death.<br><br>"Remember, you are bound by the Official Secrets Act..."<br><br>Summer, 1940. Nineteen-year-old Jakob Novis and his quirky younger sister Lizzie share a love of riddles and puzzles. And now they&rsquo;re living inside of one. The quarrelsome siblings find themselves amidst one of the greatest secrets of World War II&mdash;Britain&rsquo;s eccentric codebreaking factory at Bletchley Park.</td>
+</tr>
+<tr>
+ <td align=right valign='top' style='padding-bottom: 10px; padding-right: 8px;'><a href='l.aspx?l=3972&c=WOV10317238&i=9780593497227&u=&t=By+Any+Other+Name+(Electronic+Format)&tw'><img border='0' src='https://wowbrary.blob.core.windows.net/img/E034890207' alt='Click to see this item in the library catalog'></a></td>
+<td valign='top' style='padding-bottom: 10px;'><div id='divGWOV10317238' style='float: right; display: none; padding-left: 25 px; margin-bottom: 15px;'><a id='linkGWOV10317238' href='googlescript.aspx?l=3972&c=WOV10317238'><img src='https://books.google.com/intl/en/googlebooks/images/gbs_preview_button1.gif' class='NUGBUTTON' title='Google Preview' alt='Google Preview'></a></div><a href='l.aspx?l=3972&c=WOV10317238&i=9780593497227&u=&t=By+Any+Other+Name+(Electronic+Format)&tw'><B class='NUTITLE'>By Any Other Name (Electronic Format)</B></a> <a id='mid059349721X' href='#'onclick='MoreInfo(event,"By Any Other Name (Electronic Format)","9780593497227","","https://www.amazon.com/dp/product/059349721X?tag=interacscienc327-20&linkCode=ogi&th=1&psc=1"); return false;' class='NUBUTTON'>More&nbsp;Info</a>&nbsp;&nbsp;<a href='l.aspx?l=3972&c=WOV10317238&i=9780593497227&u=&t=By+Any+Other+Name+(Electronic+Format)&tw' class='NUBUTTON'>Borrow</a><br>By Jodi Picoult.  <i>From Ballantine Books.</i><BR><div style='display: inline;'><a href='grl.aspx?a=059349721X'><img src='/images/stars40.gif' border='0' width='55px' height='12px' style='padding: 0; margin: 0;' title='Click to see 20,593 GoodReads ratings, which gave this 4.1 out of 5 stars' alt='Click to see 20,593 GoodReads ratings, which gave this 4.1 out of 5 stars'></a></div> <div style='display: inline;'><a href='grl.aspx?a=059349721X' title='Click to see 3,519 GoodReads reviews' class='NUREVIEW'>(3,519 reviews)</a></div> &nbsp;<br>&nbsp;<br><a class='NUEITEM' href='l.aspx?l=3972&c=WOV10317238&i=9780593497227&u=&t=By+Any+Other+Name+(Electronic+Format)&tw' title='This item is either an eBook or readable online'>In Electronic Format</a> Two women, centuries apart&mdash;one of whom is the real author of Shakespeare&rsquo;s plays&mdash;are both forced to hide behind another name to make their voices heard.<br><br>In 1581, Emilia Bassano&mdash;like most young women of her day&mdash;is allowed no voice of her own. But as the Lord Chamberlain&rsquo;s mistress, she has access to all theater in England, and finds a way to bring her work to the stage secretly. And yet, creating some of the world&rsquo;s greatest dramatic masterpieces comes at great cost: by paying a man for the use of his name, she will write her own out of history.</td>
+</tr>
+<tr>
+ <td align=right valign='top' style='padding-bottom: 10px; padding-right: 8px;'><a href='l.aspx?l=3972&c=4283236&i=9781338891805&u=&t=I+Survived+the+Black+Death%2c+1348++&tw'><img border='0' src='https://wowbrary.blob.core.windows.net/img/1998835688' alt='Click to see this item in the library catalog'></a></td>
+<td valign='top' style='padding-bottom: 10px;'><div id='divG4283236' style='float: right; display: none; padding-left: 25 px; margin-bottom: 15px;'><a id='linkG4283236' href='googlescript.aspx?l=3972&c=4283236'><img src='https://books.google.com/intl/en/googlebooks/images/gbs_preview_button1.gif' class='NUGBUTTON' title='Google Preview' alt='Google Preview'></a></div><a href='l.aspx?l=3972&c=4283236&i=9781338891805&u=&t=I+Survived+the+Black+Death%2c+1348++&tw'><B class='NUTITLE'>I Survived the Black Death, 1348  </B></a> <a id='mid1338891804' href='#'onclick='MoreInfo(event,"I Survived the Black Death, 1348  ","9781338891805","","https://www.amazon.com/dp/product/1338891804?tag=interacscienc327-20&linkCode=ogi&th=1&psc=1"); return false;' class='NUBUTTON'>More&nbsp;Info</a>&nbsp;&nbsp;<a href='l.aspx?l=3972&c=4283236&i=9781338891805&u=&t=I+Survived+the+Black+Death%2c+1348++&tw' class='NUBUTTON'>Borrow</a><br>By Lauren Tarshis.  <i>From Scholastic Inc..</i><BR><div style='display: inline;'><a href='grl.aspx?a=1338891804&i=9781338891805'><img src='/images/stars35.gif' border='0' width='55px' height='12px' style='padding: 0; margin: 0;' title='Click to see 9 GoodReads ratings, which gave this 3.6 out of 5 stars' alt='Click to see 9 GoodReads ratings, which gave this 3.6 out of 5 stars'></a></div> <div style='display: inline;'><a href='grl.aspx?a=1338891804&i=9781338891805' title='Click to see 1 GoodReads review' class='NUREVIEW'>(1 review)</a></div> &nbsp;<br>&nbsp;<br>The Black Death was a pandemic of unimaginable propotions, taking the lives of 75 - 200 million people worldwide. Lauren Tarshis's story of one girl surviving the plague pulses with terror, action, and hope.<br><br>In this gripping story about the first wave of the plague, I Survived readers will travel to medieval England -- a time of knights and peasants; cathedrals and castles -- when the most deadly disease in world history sweeps across Europe and parts of Asia and Africa.</td>
+</tr>
+<tr>
+ <td align=right valign='top' style='padding-bottom: 10px; padding-right: 8px;'><a href='l.aspx?l=3972&c=4288555&i=9780316564526&u=&t=Knight+Owl+and+Early+Bird++&tw'><img border='0' src='https://wowbrary.blob.core.windows.net/img/1161503487' alt='Click to see this item in the library catalog'></a></td>
+<td valign='top' style='padding-bottom: 10px;'><div id='divG4288555' style='float: right; display: none; padding-left: 25 px; margin-bottom: 15px;'><a id='linkG4288555' href='googlescript.aspx?l=3972&c=4288555'><img src='https://books.google.com/intl/en/googlebooks/images/gbs_preview_button1.gif' class='NUGBUTTON' title='Google Preview' alt='Google Preview'></a></div><a href='l.aspx?l=3972&c=4288555&i=9780316564526&u=&t=Knight+Owl+and+Early+Bird++&tw'><B class='NUTITLE'>Knight Owl and Early Bird  </B></a> <a id='mid0316564524' href='#'onclick='MoreInfo(event,"Knight Owl and Early Bird  ","9780316564526","","https://www.amazon.com/dp/product/0316564524?tag=interacscienc327-20&linkCode=ogi&th=1&psc=1"); return false;' class='NUBUTTON'>More&nbsp;Info</a>&nbsp;&nbsp;<a href='l.aspx?l=3972&c=4288555&i=9780316564526&u=&t=Knight+Owl+and+Early+Bird++&tw' class='NUBUTTON'>Borrow</a><br>By Christopher Denise.  <i>From Christy Ottaviano Books.</i><BR><div style='display: inline;'><a href='grl.aspx?a=0316564524&i=9780316564526'><img src='/images/stars45.gif' border='0' width='55px' height='12px' style='padding: 0; margin: 0;' title='Click to see 7 GoodReads ratings, which gave this 4.7 out of 5 stars' alt='Click to see 7 GoodReads ratings, which gave this 4.7 out of 5 stars'></a></div> <div style='display: inline;'><a href='grl.aspx?a=0316564524&i=9780316564526' title='Click to see 3 GoodReads reviews' class='NUREVIEW'>(3 reviews)</a></div> &nbsp;<br>&nbsp;<br>Knight Owl makes an unlikely friend in the over-zealous Early Bird&mdash;who hopes to be a brave knight, too&mdash;in this exciting next adventure to the New York Times bestselling and Caldecott Honor award-winning classic.<br><br>Early Bird wants to be brave and protect the castle, just like Knight Owl. But she falls asleep on the job and then keeps her hero up during the day with her enthusiastic chattiness, well-meaning questions, and cheerful owl impersonations. But there are strange happenings in the forest, and soon Knight Owl and Early Bird find themselves in the throes of danger.</td>
+</tr>
+<tr>
+ <td align=right valign='top' style='padding-bottom: 10px; padding-right: 8px;'><a href='l.aspx?l=3972&c=4289662&i=9781665974608&u=&t=Dork+Diaries+16%3a+Tales+from+a+Not-so-bratty+Little+Sister&tw'><img border='0' src='https://wowbrary.blob.core.windows.net/img/2971642918' alt='Click to see this item in the library catalog'></a></td>
+<td valign='top' style='padding-bottom: 10px;'><div id='divG4289662' style='float: right; display: none; padding-left: 25 px; margin-bottom: 15px;'><a id='linkG4289662' href='googlescript.aspx?l=3972&c=4289662'><img src='https://books.google.com/intl/en/googlebooks/images/gbs_preview_button1.gif' class='NUGBUTTON' title='Google Preview' alt='Google Preview'></a></div><a href='l.aspx?l=3972&c=4289662&i=9781665974608&u=&t=Dork+Diaries+16%3a+Tales+from+a+Not-so-bratty+Little+Sister&tw'><B class='NUTITLE'>Dork Diaries 16: Tales from a Not-so-bratty Little Sister</B></a> <a id='mid1665974605' href='#'onclick='MoreInfo(event,"Dork Diaries 16: Tales from a Not-so-bratty Little Sister","9781665974608","","https://www.amazon.com/dp/product/1665974605?tag=interacscienc327-20&linkCode=ogi&th=1&psc=1"); return false;' class='NUBUTTON'>More&nbsp;Info</a>&nbsp;&nbsp;<a href='l.aspx?l=3972&c=4289662&i=9781665974608&u=&t=Dork+Diaries+16%3a+Tales+from+a+Not-so-bratty+Little+Sister&tw' class='NUBUTTON'>Borrow</a><br>By Rachel Renée Russell.  <i>From Aladdin.</i><BR><div style='display: inline;'><a href='grl.aspx?a=1665974605&i=9781665974608'><img src='/images/stars40.gif' border='0' width='55px' height='12px' style='padding: 0; margin: 0;' title='Click to see 13 GoodReads ratings, which gave this 3.9 out of 5 stars' alt='Click to see 13 GoodReads ratings, which gave this 3.9 out of 5 stars'></a></div> <div style='display: inline;'><a href='grl.aspx?a=1665974605&i=9781665974608' title='Click to see 2 GoodReads reviews' class='NUREVIEW'>(2 reviews)</a></div> &nbsp;<br>&nbsp;<br>Annnnd she&rsquo;s back! The much-adored Nikki returns for her sixteenth Dork Diaries adventure and has to deal with...a bratty younger sister.</td>
+</tr>
+<tr>
+ <td align=right valign='top' style='padding-bottom: 10px; padding-right: 8px;'><a href='l.aspx?l=3972&c=4288251&i=9780593946749&u=&t=Blue+Sisters&tw'><img border='0' src='https://wowbrary.blob.core.windows.net/img/E383340207' alt='Click to see this item in the library catalog'></a></td>
+<td valign='top' style='padding-bottom: 10px;'><div id='divG4288251' style='float: right; display: none; padding-left: 25 px; margin-bottom: 15px;'><a id='linkG4288251' href='googlescript.aspx?l=3972&c=4288251'><img src='https://books.google.com/intl/en/googlebooks/images/gbs_preview_button1.gif' class='NUGBUTTON' title='Google Preview' alt='Google Preview'></a></div><a href='l.aspx?l=3972&c=4288251&i=9780593946749&u=&t=Blue+Sisters&tw'><B class='NUTITLE'>Blue Sisters</B></a> <a id='mid059394674X' href='#'onclick='MoreInfo(event,"Blue Sisters","9780593946749","","https://www.amazon.com/dp/product/059394674X?tag=interacscienc327-20&linkCode=ogi&th=1&psc=1"); return false;' class='NUBUTTON'>More&nbsp;Info</a>&nbsp;&nbsp;<a href='l.aspx?l=3972&c=4288251&i=9780593946749&u=&t=Blue+Sisters&tw' class='NUBUTTON'>Borrow</a><br>By Coco Mellors.  <i>From Random House Large Print.</i><BR><div style='display: inline;'><a href='grl.aspx?a=059394674X&i=9780593946749'><img src='/images/stars40.gif' border='0' width='55px' height='12px' style='padding: 0; margin: 0;' title='Click to see 46,404 GoodReads ratings, which gave this 4.1 out of 5 stars' alt='Click to see 46,404 GoodReads ratings, which gave this 4.1 out of 5 stars'></a></div> <div style='display: inline;'><a href='grl.aspx?a=059394674X&i=9780593946749' title='Click to see 7,708 GoodReads reviews' class='NUREVIEW'>(7,708 reviews)</a></div> &nbsp;<br>&nbsp;<br>Three estranged siblings return to their family home in New York after their beloved sister&rsquo;s death in this unforgettable story of grief, hope, and the complexities of family, from the acclaimed author of Cleopatra and Frankenstein.<br><br>&ldquo;Sparkling with wit, shot through with longing, Blue Sisters is a beautiful novel, both dazzlingly joyful and achingly sad.&rdquo;<br>&mdash;Jenny Jackson, New York Times bestselling author of Pineapple Street<br><br>The three Blue sisters are exceptional&mdash;and exceptionally different.</td>
+</tr>
+<tr>
+ <td align=right valign='top' style='padding-bottom: 10px; padding-right: 8px;'><a href='l.aspx?l=3972&c=4282201&i=9780063410404&u=&t=The+Mighty+Red&tw'><img border='0' src='https://wowbrary.blob.core.windows.net/img/7957090957' alt='Click to see this item in the library catalog'></a></td>
+<td valign='top' style='padding-bottom: 10px;'><div id='divG4282201' style='float: right; display: none; padding-left: 25 px; margin-bottom: 15px;'><a id='linkG4282201' href='googlescript.aspx?l=3972&c=4282201'><img src='https://books.google.com/intl/en/googlebooks/images/gbs_preview_button1.gif' class='NUGBUTTON' title='Google Preview' alt='Google Preview'></a></div><a href='l.aspx?l=3972&c=4282201&i=9780063410404&u=&t=The+Mighty+Red&tw'><B class='NUTITLE'>The Mighty Red</B></a> <a id='mid0063410400' href='#'onclick='MoreInfo(event,"The Mighty Red","9780063410404","","https://www.amazon.com/dp/product/0063410400?tag=interacscienc327-20&linkCode=ogi&th=1&psc=1"); return false;' class='NUBUTTON'>More&nbsp;Info</a>&nbsp;&nbsp;<a href='l.aspx?l=3972&c=4282201&i=9780063410404&u=&t=The+Mighty+Red&tw' class='NUBUTTON'>Borrow</a><br>By Louise Erdrich.  <i>From Harper Large Print.</i><BR><div style='display: inline;'><a href='grl.aspx?a=0063410400&i=9780063410404'><img src='/images/stars40.gif' border='0' width='55px' height='12px' style='padding: 0; margin: 0;' title='Click to see 786 GoodReads ratings, which gave this 4 out of 5 stars' alt='Click to see 786 GoodReads ratings, which gave this 4 out of 5 stars'></a></div> <div style='display: inline;'><a href='grl.aspx?a=0063410400&i=9780063410404' title='Click to see 135 GoodReads reviews' class='NUREVIEW'>(135 reviews)</a></div> &nbsp;<br>&nbsp;<br>In this stunning novel, Pulitzer Prize and National Book Award–winning author Louise Erdrich tells a story of love, natural forces, spiritual yearnings, and the tragic impact of uncontrollable circumstances on ordinary people&rsquo;s lives.<br><br>History is a flood. The mighty red . . .<br><br>In Argus, North Dakota, a collection of people revolve around a fraught wedding.<br><br>Gary Geist, a terrified young man set to inherit two farms, is desperate to marry Kismet Poe, an impulsive, lapsed Goth who can't read her future but seems to resolve his.</td>
+</tr>
+<tr>
+ <td align=right valign='top' style='padding-bottom: 10px; padding-right: 8px;'><a href='l.aspx?l=3972&c=4286283&i=9780062956705&u=&t=A+Strange+Thing+Happened+in+Cherry+Hall&tw'><img border='0' src='https://wowbrary.blob.core.windows.net/img/8983449957' alt='Click to see this item in the library catalog'></a></td>
+<td valign='top' style='padding-bottom: 10px;'><div id='divG4286283' style='float: right; display: none; padding-left: 25 px; margin-bottom: 15px;'><a id='linkG4286283' href='googlescript.aspx?l=3972&c=4286283'><img src='https://books.google.com/intl/en/googlebooks/images/gbs_preview_button1.gif' class='NUGBUTTON' title='Google Preview' alt='Google Preview'></a></div><a href='l.aspx?l=3972&c=4286283&i=9780062956705&u=&t=A+Strange+Thing+Happened+in+Cherry+Hall&tw'><B class='NUTITLE'>A Strange Thing Happened in Cherry Hall</B></a> <a id='mid0062956701' href='#'onclick='MoreInfo(event,"A Strange Thing Happened in Cherry Hall","9780062956705","","https://www.amazon.com/dp/product/0062956701?tag=interacscienc327-20&linkCode=ogi&th=1&psc=1"); return false;' class='NUBUTTON'>More&nbsp;Info</a>&nbsp;&nbsp;<a href='l.aspx?l=3972&c=4286283&i=9780062956705&u=&t=A+Strange+Thing+Happened+in+Cherry+Hall&tw' class='NUBUTTON'>Borrow</a><br>By Jasmine Warga.  <i>From HarperCollins.</i><BR><div style='display: inline;'><a href='grl.aspx?a=0062956701&i=9780062956705'><img src='/images/stars40.gif' border='0' width='55px' height='12px' style='padding: 0; margin: 0;' title='Click to see 316 GoodReads ratings, which gave this 4.1 out of 5 stars' alt='Click to see 316 GoodReads ratings, which gave this 4.1 out of 5 stars'></a></div> <div style='display: inline;'><a href='grl.aspx?a=0062956701&i=9780062956705' title='Click to see 70 GoodReads reviews' class='NUREVIEW'>(70 reviews)</a></div> &nbsp;<br>&nbsp;<br>From the award-winning, New York Times bestselling author of A Rover's Story and Other Words for Home comes an extraordinary story about two friends, a ghost, a missing painting, and a turtle named Agatha. The perfect next read for fans of The Swifts, Kate DiCamillo, and Erin Entrada Kelly.<br><br>A painting has been stolen…!<br><br>When Rami sees a floating girl in the museum, he knows he has seen her somewhere before. Then he realizes: She looks just like the girl in the painting that has gone missing.</td>
+</tr>
+<tr>
+ <td align=right valign='top' style='padding-bottom: 10px; padding-right: 8px;'><a href='l.aspx?l=3972&c=4288499&i=9786319281323&u=843501042854&t=Babes&tw'><img border='0' src='https://wowbrary.blob.core.windows.net/img/Z458PE2A5O' alt='Click to see this item in the library catalog'></a></td>
+<td valign='top' style='padding-bottom: 10px;'><div id='divG4288499' style='float: right; display: none; padding-left: 25 px; margin-bottom: 15px;'><a id='linkG4288499' href='googlescript.aspx?l=3972&c=4288499'><img src='https://books.google.com/intl/en/googlebooks/images/gbs_preview_button1.gif' class='NUGBUTTON' title='Google Preview' alt='Google Preview'></a></div><a href='l.aspx?l=3972&c=4288499&i=9786319281323&u=843501042854&t=Babes&tw'><B class='NUTITLE'>Babes</B></a> <a id='midB0D5BY145S' href='#'onclick='MoreInfo(event,"Babes","9786319281323","843501042854","https://www.amazon.com/dp/product/B0D5BY145S?tag=interacscienc327-20&linkCode=ogi&th=1&psc=1"); return false;' class='NUBUTTON'>More&nbsp;Info</a>&nbsp;&nbsp;<a href='l.aspx?l=3972&c=4288499&i=9786319281323&u=843501042854&t=Babes&tw' class='NUBUTTON'>Borrow</a><br> <i>From Decal Neon.</i><br>&nbsp;<br>BABES follows childhood best friends Eden and Dawn, now in different phases of adulthood. When single Eden decides to have a baby on her own after a one-night stand, their friendship faces its greatest challenge.</td>
+</tr>
+<tr>
+ <td align=right valign='top' style='padding-bottom: 10px; padding-right: 8px;'><a href='l.aspx?l=3972&c=4288574&i=9780593570371&u=&t=Katie+the+Catsitter+4%3a+The+Purrfect+Plan+&tw'><img border='0' src='https://wowbrary.blob.core.windows.net/img/2647600207' alt='Click to see this item in the library catalog'></a></td>
+<td valign='top' style='padding-bottom: 10px;'><div id='divG4288574' style='float: right; display: none; padding-left: 25 px; margin-bottom: 15px;'><a id='linkG4288574' href='googlescript.aspx?l=3972&c=4288574'><img src='https://books.google.com/intl/en/googlebooks/images/gbs_preview_button1.gif' class='NUGBUTTON' title='Google Preview' alt='Google Preview'></a></div><a href='l.aspx?l=3972&c=4288574&i=9780593570371&u=&t=Katie+the+Catsitter+4%3a+The+Purrfect+Plan+&tw'><B class='NUTITLE'>Katie the Catsitter 4: The Purrfect Plan </B></a> <a id='mid0593570375' href='#'onclick='MoreInfo(event,"Katie the Catsitter 4: The Purrfect Plan ","9780593570371","","https://www.amazon.com/dp/product/0593570375?tag=interacscienc327-20&linkCode=ogi&th=1&psc=1"); return false;' class='NUBUTTON'>More&nbsp;Info</a>&nbsp;&nbsp;<a href='l.aspx?l=3972&c=4288574&i=9780593570371&u=&t=Katie+the+Catsitter+4%3a+The+Purrfect+Plan+&tw' class='NUBUTTON'>Borrow</a><br>By Colleen AF Venable.  <i>From Random House Graphic.</i><BR><div style='display: inline;'><a href='grl.aspx?a=0593570375&i=9780593570371'><img src='/images/stars45.gif' border='0' width='55px' height='12px' style='padding: 0; margin: 0;' title='Click to see 53 GoodReads ratings, which gave this 4.3 out of 5 stars' alt='Click to see 53 GoodReads ratings, which gave this 4.3 out of 5 stars'></a></div> <div style='display: inline;'><a href='grl.aspx?a=0593570375&i=9780593570371' title='Click to see 20 GoodReads reviews' class='NUREVIEW'>(20 reviews)</a></div> &nbsp;<br>&nbsp;<br>Katie the Catsitter is back with her next adventure, and this time she may need the help of an . . . elephant? This irresistibly fun, bestselling, girl&mdash;and cat&mdash;power graphic novel series is perfect for fans of Sweet Valley Twins and the Babysitters Club!<br><br>"A little evil and a whole lotta fun."<br>--Kirkus Reviews<br><br>WANTED: TOP SECRET PLAN<br><br>Katie is rocking 7th grade and being a superhero sidekick, so when a new threat puts the whole city in danger she's ready to spring into action!</td>
+</tr>
+<tr>
+ <td align=right valign='top' style='padding-bottom: 10px; padding-right: 8px;'><a href='l.aspx?l=3972&c=2959733&i=9780425245538&u=&t=Agony+of+the+Leaves+(A+Tea+Shop+Mystery)&tw'><img border='0' src='https://wowbrary.blob.core.windows.net/img/2262372597' alt='Click to see this item in the library catalog'></a></td>
+<td valign='top' style='padding-bottom: 10px;'><div id='divG2959733' style='float: right; display: none; padding-left: 25 px; margin-bottom: 15px;'><a id='linkG2959733' href='googlescript.aspx?l=3972&c=2959733'><img src='https://books.google.com/intl/en/googlebooks/images/gbs_preview_button1.gif' class='NUGBUTTON' title='Google Preview' alt='Google Preview'></a></div><a href='l.aspx?l=3972&c=2959733&i=9780425245538&u=&t=Agony+of+the+Leaves+(A+Tea+Shop+Mystery)&tw'><B class='NUTITLE'>Agony of the Leaves (A Tea Shop Mystery)</B></a> <a id='mid0425245535' href='#'onclick='MoreInfo(event,"Agony of the Leaves (A Tea Shop Mystery)","9780425245538","","https://www.amazon.com/dp/product/0425245535?tag=interacscienc327-20&linkCode=ogi&th=1&psc=1"); return false;' class='NUBUTTON'>More&nbsp;Info</a>&nbsp;&nbsp;<a href='l.aspx?l=3972&c=2959733&i=9780425245538&u=&t=Agony+of+the+Leaves+(A+Tea+Shop+Mystery)&tw' class='NUBUTTON'>Borrow</a><br>By Laura Childs.  <i>From Berkley Hardcover.</i><BR><div style='display: inline;'><a href='grl.aspx?a=0425245535&i=9780425245538'><img src='/images/stars40.gif' border='0' width='55px' height='12px' style='padding: 0; margin: 0;' title='Click to see 3,100 GoodReads ratings, which gave this 3.9 out of 5 stars' alt='Click to see 3,100 GoodReads ratings, which gave this 3.9 out of 5 stars'></a></div> <div style='display: inline;'><a href='grl.aspx?a=0425245535&i=9780425245538' title='Click to see 322 GoodReads reviews' class='NUREVIEW'>(322 reviews)</a></div> &nbsp;<br>&nbsp;<br><i>In the latest novel from the <I>New York Times</I> bestselling author of <I>Scones and Bones</I>, Indigo Tea Shop owner Theodosia Browning finds herself in hot water when a body surfaces at the grand opening of Charleston's Neptune Aquarium...<br><br></i>The opening of the aquarium is a major Charleston event, and Theodosia has been hired to cater tea, scones, and sandwiches for the private party to honor dignitaries and big buck donors.</td>
+</tr>
+<tr>
+ <td align=right valign='top' style='padding-bottom: 10px; padding-right: 8px;'><a href='l.aspx?l=3972&c=4250958&i=9781098293017&u=&t=Video+Game+Encyclopedia&tw'><img border='0' src='https://wowbrary.blob.core.windows.net/img/7010875258' alt='Click to see this item in the library catalog'></a></td>
+<td valign='top' style='padding-bottom: 10px;'><div id='divG4250958' style='float: right; display: none; padding-left: 25 px; margin-bottom: 15px;'><a id='linkG4250958' href='googlescript.aspx?l=3972&c=4250958'><img src='https://books.google.com/intl/en/googlebooks/images/gbs_preview_button1.gif' class='NUGBUTTON' title='Google Preview' alt='Google Preview'></a></div><a href='l.aspx?l=3972&c=4250958&i=9781098293017&u=&t=Video+Game+Encyclopedia&tw'><B class='NUTITLE'>Video Game Encyclopedia</B></a> <a id='mid1098293010' href='#'onclick='MoreInfo(event,"Video Game Encyclopedia","9781098293017","","https://www.amazon.com/dp/product/1098293010?tag=interacscienc327-20&linkCode=ogi&th=1&psc=1"); return false;' class='NUBUTTON'>More&nbsp;Info</a>&nbsp;&nbsp;<a href='l.aspx?l=3972&c=4250958&i=9781098293017&u=&t=Video+Game+Encyclopedia&tw' class='NUBUTTON'>Borrow</a><br>By Arnold Ringstad.  <i>From Abdo Reference.</i><BR><div style='display: inline;'><a href='grl.aspx?a=1098293010&i=9781098293017'><img src='/images/stars40.gif' border='0' width='55px' height='12px' style='padding: 0; margin: 0;' title='Click to see 2 GoodReads ratings, which gave this 4 out of 5 stars' alt='Click to see 2 GoodReads ratings, which gave this 4 out of 5 stars'></a></div> <br>&nbsp;<br>This title introduces readers to some of the most popular and influential video games of all time. Readers will learn about iconic characters, renowned game developers, and how the world of video games has changed from the 1950s to today. Features include a glossary, additional resources, and an index. Aligned to Common Core Standards and correlated to state standards.</td>
+</tr>
+<!-- descriptionend --><tr><td align='center' valign='top'><a href='#top'>Return to top</a></td><td><a href='nu.aspx?p=3972-131-GEN&tw' title='See Top Choices for the week of September 28, 2024'>Previous Week</a> - <a href='nu.aspx?p=3972-132-DVD&tw' title='See DVDs for the week of October 5, 2024'>Next Category</a> - <a href='nu.aspx?p=3972-133-GEN&tw' title='See Top Choices for the week of October 12, 2024'>Next Week</a><br>&nbsp;<br>See also <a href='nu.aspx?p=3972-132-DVD&tw'>DVDs</a> - <a href='nu.aspx?p=3972-132-MYS&tw'>Mysteries & Thrillers</a> - <a href='nu.aspx?p=3972-132-CHI&tw'>Children's Books</a></td></tr></table><br>&nbsp;
+
+  </td></tr></table>
+<div id="footer" style="position: relative;">
+<table class="FOOTER" width=100% border=0 cellpadding=0 cellspacing=0>
+ <tr>
+  <td class="FOOTER" align="left" width="30%">Copyright &copy; 2024 <SPAN title="209.59.156.95">by</SPAN> Wowbrary &nbsp;</td>
+  <td class="FOOTER" align="center" width="30%"><a href="/privacy.aspx">Privacy Policy</a>&nbsp;&nbsp; &nbsp;&nbsp;<a href="/termsofservice.aspx">Terms of Service</a></td>
+  <td class="FOOTER" align="right" width="40%">As an Amazon Associate, we earn from qualifying purchases.</td>
+ </tr>
+</table>
+</div>
+</div>
+</div>
+
+<!-- Universal Google Analytics -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-6158290-1");
+pageTracker._trackPageview();
+</script>
+
+<!-- Google Analytics 4-->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-86KNPY85MB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-86KNPY85MB');
+</script>
+
+</form>
+
+<script type="text/javascript">
+var strAmazonID="interacscienc327-20";
+var strAmazonQueries = [ ];
+var strOtherItems = "";
+
+// call nubackset
+var scriptNubackSet = document.createElement('script');
+scriptNubackSet.setAttribute('src', "nubackset.aspx?h=" + history.length + "&ip=128.239.196.165&t=" + Date.now());
+document.body.appendChild(scriptNubackSet);
+
+// process GBS info and update the dom
+function ProcessGBSBookInfo(booksInfo) {
+    for (var strISBN in booksInfo) {
+     var bookInfo = booksInfo[strISBN];
+     if (bookInfo && (bookInfo.preview == "full" || bookInfo.preview == "partial")) 
+        for (var iLibraryItem = 0; iLibraryItem < mapGoogleISBNToLibraryItem[strISBN].length; iLibraryItem++) {
+            var elementDiv = document.getElementById('divG' + mapGoogleISBNToLibraryItem[strISBN][iLibraryItem]);
+            var elementLink = document.getElementById('linkG' + mapGoogleISBNToLibraryItem[strISBN][iLibraryItem]);
+            elementDiv.style.display = 'inline';
+            elementLink.href = elementLink.href + "&g=" + encodeURIComponent(bookInfo.preview_url);
+        }
+    }
+}
+
+function getOffsetLeft(el) {
+    var ol = el.offsetLeft;
+    while ((el = el.offsetParent) != null)
+        ol += el.offsetLeft;
+    return ol;
+}
+function getOffsetTop(elem) {
+    var offsetTop = 0;
+    do {
+        if ( !isNaN( elem.offsetTop ) ) {
+            offsetTop += elem.offsetTop;
+        }
+    } while( elem = elem.offsetParent );
+
+    return offsetTop;
+}
+
+var mapGoogleISBNToLibraryItem = { '9780316554732':['4289670'],'9786319335538':['4281604'],'9786319295993':['4300697'],'9786319302677':['4284928'],'9780593734247':['WOV10382620'],'9780593446102':['WOV10394152'],'9781250899569':['WOV10141759'],'9786319239546':['4287721'],'9780593527542':['4282774'],'9780593497227':['WOV10317238'],'9781338891805':['4283236'],'9780316564526':['4288555'],'9781665974608':['4289662'],'9780593946749':['4288251'],'9780063410404':['4282201'],'9780062956705':['4286283'],'9786319281323':['4288499'],'9780593570371':['4288574'],'9780425245538':['2959733'],'9781098293017':['4250958'] };
+</script>
+<script type="text/javascript">
+
+// add an item to the MoreInfo panel (assuming it's visible)
+function MoreInfoAdd(strSortKey,strHTML) {
+
+    // get the DIV into which these go and abort if it's not there
+    var divMoreInfos = document.getElementById('divMoreInfoExtra');
+    if (!divMoreInfos) return;
+
+    // create a span node to insert
+    var span = document.createElement('span');
+    span.id = strSortKey;
+    span.innerHTML = strHTML;
+
+    // iterate over the other spans to find the proper slot
+    // if the key already exists, ignore it
+    // if a key sorting higher is found, add the new span right before it
+    var spanMoreInfos = divMoreInfos.childNodes;
+    for (var iSpot = 0; iSpot < spanMoreInfos.length; iSpot++)
+        if (spanMoreInfos[iSpot].id == strSortKey) return;
+        else if (spanMoreInfos[iSpot].id > strSortKey) {
+            divMoreInfos.insertBefore(span,spanMoreInfos[iSpot]);
+            return;
+        }
+
+    // if here, the new span node shoudl come after any existing ones, so append it
+    divMoreInfos.appendChild(span);
+}
+
+// if empty cover based on UPC loaded, try ISBN if it exists and wasn't used
+function MoreInfoCoverLoad(e,strISBN) {
+    var imgCover = document.getElementById('imgCover');
+    if (strISBN && imgCover.naturalWidth == 1 && imgCover.naturalHeight == 1 && !imgCover.src.includes(strISBN))
+        imgCover.src = imgCover.src.replace(/Value=.*/,'Value=' + strISBN);
+}
+
+// handle a MoreInfo click
+function MoreInfo(eventClick, strTitle, strISBN, strUPC, strLink) {
+
+    // dim everything else via a DIV - hide this div when you click on it
+    var div = document.createElement('div');
+    div.id = "MoreInfoDim";
+    div.style.position = 'fixed';
+    div.style.top = '0px';
+    div.style.left = '0px';
+    div.style.height = '100%';
+    div.style.width = '100%';
+    div.style.background = "rgba(0, 0, 0, 0.6)";
+    div.style.zindex = 99;
+    div.addEventListener('click', function() {MoreInfoRemove()}); 
+    document.body.appendChild(div);
+
+    // make no wider than 600 or 90% of the window
+    var iMoreInfoWidth = Math.min(600, Math.floor(0.9 * window.innerWidth));
+
+    // center the MoreInfo horizontally, but if we have an event, choose a left offset that aligns with where the user clicked
+    var iLeftOffset = Math.floor((window.innerWidth - iMoreInfoWidth) / 2);
+    /* if (eventClick) {
+        if (eventClick.pageX < iLeftOffset) iLeftOffset = eventClick.pageX;
+        else if (iLeftOffset + iMoreInfoWidth < eventClick.pageX) iLeftOffset = eventClick.pageX - iMoreInfoWidth;
+    } */
+
+    // predict maximum height based on typical ratio of book cover
+    var iMoreInfoHeight = Math.floor((iMoreInfoWidth / 2 - 20) / 107 * 160 + 20);
+
+    // center vertically if possible - otherwise put at the top; then adust to be under the mouse have an event
+    var iTopOffset = Math.max(20, Math.floor((window.innerHeight - iMoreInfoHeight) / 2));
+   // add window.scrollY if you change the popups position from fixed to absolute
+    /* if (eventClick) {
+        if (eventClick.pageY < iTopOffset) iTopOffset = eventClick.pageY;
+        else if (iTopOffset + iMoreInfoHeight < eventClick.pageY) iTopOffset = eventClick.pageY - iMoreInfoHeight;
+    } */
+
+    // create the DIV to hold the popup
+    div = document.createElement('div');
+    div.id = "MoreInfo";
+    div.style.position = 'fixed'; // was absolute
+    div.style.maxWidth = iMoreInfoWidth + 'px';
+    div.style.top = iTopOffset + 'px';
+    div.style.left = iLeftOffset + 'px';
+    div.style.zindex = 100;
+
+    // build the more screen - graphic is from https://giphy.com/ (see "loading")
+    div.innerHTML = "<div style='background: white; border: 2px solid black; font: 10pt Verdana, Sans-Serif; margin: 5px; max-width: 600px;'>" +
+                        "<div style='position: relative;'>" +
+                        "<div style='position: absolute; right: -27px; top: -27px; width: 50px; height: 50px; background: white; border-radius: 50%; " +
+                            "border: 2px solid black; border-bottom: 2px solid white; transform: rotate(45deg);'>" +
+                        "</div>" +
+                        "<div style='position: absolute; right: -27px; top: -27px; width: 50px; height: 50px; text-align: center; vertical-align: middle; font-size: 30px; line-height: 50px;'>" +
+                            "<span id='spanClose' onclick='MoreInfoRemove(); return false;' style='cursor: pointer; font-weight: bold;' aria-label='Close' tabindex='0'>X</span>" +
+                        "</div>" +
+                        "</div>" +
+                        "<table border='0' cellpadding='0' cellspacing='0'>" +
+                        "<tr><td style='width: 50%; max-width: 50%; vertical-align: top; padding: 10px;'>" +
+                        "<img id='imgCover' style='width: 100%;' onload='MoreInfoCoverLoad(event,\"" + strISBN + "\")' " + 
+                             "src='https://contentcafe2.btol.com/ContentCafe/Jacket.aspx?UserID=IASC82261&Password=CC93004&Return=E&Type=L&Value=" + 
+                                   (strUPC == "" ? strISBN : strUPC) + "' alt=''>" +
+                        "</td><td style='width: 50%;  max-width: 50%; vertical-align: top; padding: 10px;'>" +
+                        "More info about<br><span style='font-weight: bold; font-size: 120%;'>" + strTitle + '</span><br>&nbsp;' +
+                        "<div id='divMoreInfoExtra'></div>" +
+                        "<p id='pMoreInfoProgress' style='text-align: center;'><img src='/images/animatedloading.gif'></p>" +
+                        "</td></tr></table>" +
+                        "</div>";
+    document.body.appendChild(div);
+
+    // add in Amazon right away and set focus to it
+    MoreInfoAdd("spanAmazon","<a id='aAmazon' href='" + strLink + "' style=' border: 1px solid gray; padding: 1px;'>Amazon</a><br>" +
+                             "<small><div style='padding-top: 3px; padding-bottom: 3px;'>See details, reviews, and what people buy</div>" + 
+                             "As an Amazon Associate we earn from qualifying purchases</small><br>&nbsp;<br>");
+    document.getElementById('aAmazon').focus();
+
+    // monitor tabs to allow it to cycle through the dialog
+    div.addEventListener('keydown', function(e) {
+        if (e.key === 'Tab' || e.keyCode === 9 /* KEYCODE_TAB */) {
+
+            // establish the closing X as the first tabbed item and the final <a> tag as the final tabbeditem
+            var firstFocusableEl = document.getElementById('spanClose');
+            var aLinks = div.getElementsByTagName("A");
+            var lastFocusableEl = aLinks[aLinks.length - 1];
+            console.log(firstFocusableEl.innerHTML);
+            console.log(lastFocusableEl.innerHTML);
+
+            // if back-tab and on first element, go to the final one 
+            if (e.shiftKey && document.activeElement === firstFocusableEl) {
+                lastFocusableEl.focus();
+                e.preventDefault();
+                }
+
+            // else if forward tab and on final element, go to the first one
+            else if (!e.shiftKey && document.activeElement === lastFocusableEl) {
+                firstFocusableEl.focus();
+                e.preventDefault();
+                }
+        }
+    });
+
+    // allow escape to close popup
+    div.onkeydown = function(e) {
+        if (e.keyCode == 27) { 
+            MoreInfoRemove(); 
+            e.preventDefault();
+        }
+    };
+
+    // allow space or Enter on X to close popup
+    document.getElementById('spanClose').onkeydown = function(e) {
+        if (e.keyCode == 13 || e.keyCode == 32) {
+            MoreInfoRemove(); 
+            e.preventDefault();
+        }
+    };
+                             
+    // launch request for more information
+    // the AJAX data comes as JavaScript calls, so they merely need to be evaled
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "/moreinfo.aspx?i=" + strISBN + "&u=" + strUPC + "&h=" + encodeURIComponent(strLink), true);
+    xhr.onprogress = function () { eval(xhr.responseText); };
+    xhr.onloadend = function () { document.getElementById("pMoreInfoProgress").innerHTML = ""; };
+    xhr.send()
+}
+
+/* "<table border='0' cellpadding='0' cellspacing='0'><tr><td style='vertical-align: top;'><a href='" + strLink + "'>Amazon</a></td>" +
+"<td style='vertical-align: top; padding-left: 20px;'><small>Amazon has reviews and often previews - as an Amazon Associate we earn from qualifying purchases</small></td></tr></table>" +
+"</td></tr></table>" + */
+
+// remove the MoreInfo and the dimming
+function MoreInfoRemove() {
+    var div = document.getElementById('MoreInfo');
+    div.parentNode.removeChild(div);
+    div = document.getElementById('MoreInfoDim');
+    div.parentNode.removeChild(div);
+}
+</script>
+<script type='text/javascript' src='https://books.google.com/books?jscmd=viewapi&bibkeys=9780316554732,9786319335538,9786319295993,9786319302677,9780593734247,9780593446102,9781250899569,9786319239546,9780593527542,9780593497227,9781338891805,9780316564526,9781665974608,9780593946749,9780063410404,9780062956705,9786319281323,9780593570371,9780425245538,9781098293017&callback=ProcessGBSBookInfo'></script>
+
+    <script type="text/javascript">
+var leftMenuParent;
+var leftMenu;
+var rectMenuParent;
+var rectMenu;
+var contentPane;
+var footer;
+var lastScrollTop = 0;
+var spaceToLeftAtTop = 10;
+var menuParentTopPadding = 8;
+var footerSpace = 15;
+var unsupportedBrowser = isUnsupportedBrowser();
+
+(function () {
+    if (unsupportedBrowser) return;
+    OnInit();
+})();
+
+function attachEvents() {
+    if (window.addEventListener) {
+        window.addEventListener('scroll', OnWindowScroll, true);
+        window.addEventListener('resize', OnWindowResize, true);
+        window.addEventListener('load', OnWindowLoad, true);
+    }
+    else {
+        window.attachEvent('onscroll', OnWindowScroll, true);
+        window.attachEvent('onresize', OnWindowResize, true);
+        window.attachEvent('onload', OnWindowLoad, true);
+    }
+}
+
+function getElementByClassName(className) {
+    if (document.getElementsByClassName) {
+        return document.getElementsByClassName(className)[0];
+    }
+
+    // IE8 doesn't support getElementsByClassName
+    if (document.querySelectorAll) {
+        return document.querySelectorAll('.' + className)[0];
+    }
+
+    // IE7 doesn't support querySelectorAll :)
+    return getElementsByClassNameLegacy(className)[0];
+}
+
+function getElementsByClassNameLegacy(cl) {
+  var retnode = [];
+  var elem = document.getElementsByTagName('*');
+  for (var i = 0; i < elem.length; i++) {
+    if((' ' + elem[i].className + ' ').indexOf(' ' + cl + ' ') > -1) retnode.push(elem[i]);
+  }
+  return retnode;
+}
+
+function OnInit() {
+    attachEvents();
+    
+    leftMenuParent = getElementByClassName('LEFTCOLUMN');
+    leftMenu = document.getElementById('LEFTCOLUMNCONTAINER');
+    contentPane = document.getElementById('CONTENTPANE');
+    footer = document.getElementById('footer');
+    
+    OnWindowScroll();
+}
+
+/*
+* Moves menu to desired location. Helpful when you want to adjust menu to the
+* desired location on page load.
+*/
+function menuToAppropriateLocation() {
+    calculateBoundingRects();
+
+    var fullMenuVisible = canMenuFitWithinWindow();
+    if (fullMenuVisible) {
+         // Top of menu parent is no more visible so time to stick the menu to top of the window.
+        if (isMenuContainerTopHidden()) {
+            setMenuPosition('fixed', spaceToLeftAtTop + 'px', 'auto');
+        }
+        else {
+            resetIt();
+        }
+    }
+    else if (hasScrolledToBottom()) { // Fixed: When you scroll to bottom & refresh it doesn't move menu to bottom
+        stickToBottom();
+    }
+
+    adjustMenuLeftPosition();
+}
+
+function OnWindowLoad() {
+
+    // adjust borrow buttons
+    BorrowButtonsAdjust();
+
+    // Don't handle menu adjustment logic if content pane is smaller than menu
+    if (!isMenuSmallerThanContentPane()) return;
+
+    var isIE = /*@cc_on!@*/false || !!document.documentMode;
+    var isEdge = !isIE && !!window.StyleMedia;
+    // Kludge: In IE & Edge: OnWindowLoad is fired first so lets wait for 500 ms and try to set the menu position then.
+    // Fix for bug#52
+    setTimeout(menuToAppropriateLocation, isIE || isEdge ? 500 : 0);
+}
+
+function OnWindowScroll() {
+    // console.log('OnWindowScroll');
+    // Don't handle menu adjustment logic if content pane is smaller than menu
+    if (!isMenuSmallerThanContentPane()) return;
+    // console.log('OnWindowScroll: 1');
+    DoWindowScroll();
+}
+
+function OnWindowResize() {
+    // console.log('OnWindowResize');
+
+    // adjust borrow buttons
+    // BorrowButtonsAdjust();
+
+    // Don't handle menu adjustment logic if content pane is smaller than menu
+    if (!isMenuSmallerThanContentPane()) return;
+
+    menuToAppropriateLocation();
+}
+
+function isMenuSmallerThanContentPane() {
+    var contentHeight = contentPane.offsetTop + contentPane.offsetHeight;
+    return contentHeight - leftMenu.offsetHeight > 10;
+}
+
+function canMenuFitWithinWindow() {
+    var availableSpaceForMenu = getWindowHeight() - spaceToLeftAtTop - footerSpace;
+    return leftMenu.offsetHeight < availableSpaceForMenu;
+}
+
+function isMenuContainerTopHidden() {
+    return rectMenuParent.top + menuParentTopPadding <= spaceToLeftAtTop;
+}
+
+function getScrollDirection() {
+    var st = getScrollTop();
+    var direction = st != lastScrollTop 
+                      ? st > lastScrollTop ? 'down' : 'up'
+                      : 'none';
+    
+    lastScrollTop = st;
+    return direction;
+}
+
+function setMenuPosition(position, top, bottom) {
+    leftMenu.style.position = position;
+    leftMenu.style.top = top;
+    leftMenu.style.bottom = bottom;
+}
+
+function stickIt(reset) {
+    var top = findMenuTopPos();
+
+    if (!reset) {
+        var expectedMenuBottom = top + leftMenu.offsetHeight;
+        var contentPaneBottom = contentPane.offsetTop + contentPane.offsetHeight;
+
+        if (expectedMenuBottom > contentPaneBottom) {
+            top = contentPaneBottom - leftMenu.offsetHeight;
+        }
+    }
+
+    setMenuPosition('relative', reset ? 'auto' : top + 'px', 'auto');
+}
+
+function resetIt() {
+    stickIt(true);
+}
+
+function stickToBottom() {
+    setMenuPosition('fixed', 'auto', '0px'); 
+}
+
+var lastScrollDir = 'none';
+function OnScrollUp() {
+    // As we are scrolling up and parent container of the menu gets visible:
+    // at this point we reset the menu to it original position (i.e. Where it was initially on page load)
+    if (rectMenuParent.top > 0) {
+        resetIt();
+    }
+    else if (leftMenu.style.position == 'fixed' && leftMenu.style.bottom == '0px') {
+        stickIt();
+    }
+    else if (leftMenu.style.position == 'relative' && rectMenu.top > 0) {
+        setMenuPosition('fixed', spaceToLeftAtTop + 'px', 'auto');
+    }
+
+    lastScrollDir = 'up';
+}
+
+function OnScrollDown() {
+    var fullMenuVisible = canMenuFitWithinWindow();
+    if (fullMenuVisible) {
+        // Top of menu parent is no more visible so time to stick the menu to top of the window.
+        if (rectMenuParent.top + menuParentTopPadding <= spaceToLeftAtTop) {
+            setMenuPosition('fixed', spaceToLeftAtTop + 'px', 'auto');
+        }
+        return;
+    }
+    
+    // Logic below is for cases when menu is bigger than the current window
+    // If user has scrolled to the bottom of the page then we need to create room to display footer menu
+    if (hasScrolledToBottom()) {
+        stickToBottom();
+    }
+    // While scrolling down we have reached to the bottom of the menu so stick it to the bottom of the screen
+    else if (rectMenu.bottom <= getWindowHeight()) {
+        setMenuPosition('fixed', 'auto', '0px');
+    }
+    // 
+    else if (leftMenu.style.position == 'fixed' && lastScrollDir == 'up') {
+        stickIt();
+    }
+
+    lastScrollDir = 'down';
+}
+
+function hasScrolledToBottom() {
+    return getScrollTop() + getWindowHeight() >= getDocHeight();
+}
+
+function DoWindowScroll() {
+    // console.log('DoWindowScroll');
+    var scrollDir = getScrollDirection();
+    calculateBoundingRects();
+
+    if (scrollDir == 'down') {
+        OnScrollDown();
+    }
+    else if (scrollDir == 'up') {
+        OnScrollUp();
+    }
+
+    adjustMenuLeftPosition();
+}
+
+function calculateBoundingRects() {
+
+    // experimental line to force the width of the menu parent to 180 pixels
+    // leftMenuParent.style.width = '190px';
+
+    rectMenuParent = leftMenuParent.getBoundingClientRect();
+    rectMenu = leftMenu.getBoundingClientRect();
+    // console.log('menuParent = ' + JSON.stringify(rectMenuParent));
+    // console.log('menu = ' + JSON.stringify(rectMenu));
+    // console.log('menuParent = ' + rectMenuParent.width + '  menu = ' + rectMenu.width);
+}
+
+function findMenuTopPos() {
+    //var top = rectMenu.top - rectMenuParent.top;
+    var parentTopPos = getOffsetTop(leftMenuParent);
+    return getScrollTop() - parentTopPos - menuParentTopPadding + getOffsetSum(leftMenu).top;
+}
+
+function getOffsetSum(elem) {
+    var top=0, left=0;
+    while (elem) {
+        top = top + parseInt(elem.offsetTop);
+        left = left + parseInt(elem.offsetLeft);
+        elem = elem.offsetParent;
+    }
+    return {top: top, left: left}
+}
+
+function adjustMenuLeftPosition() {
+    // When a position is fixed and a user scroll horizontally we need to move menu to left based one 
+    // how much scrolled user did. Otherwise it blocks the main content.
+    // When position is not fixed (or no longer fixed) then we need to reset the position back to 0px.
+    leftMenu.style.left = (leftMenu.style.position === 'fixed' ? rectMenuParent.left + 10 : 0) + 'px';
+}
+
+function getDocHeight() {
+    var D = document;
+    return Math.max(
+        D.body.scrollHeight, D.documentElement.scrollHeight,
+        D.body.offsetHeight, D.documentElement.offsetHeight,
+        D.body.clientHeight, D.documentElement.clientHeight
+    );
+}
+
+function getScrollTop() {
+    return window.pageYOffset || document.documentElement.scrollTop;
+}
+
+function getWindowHeight() {
+    return window.innerHeight || document.documentElement.clientHeight;
+}
+
+function isUnsupportedBrowser() {
+    return navigator.appVersion.indexOf("MSIE 7.") != -1;
+}
+
+</script>
+
+<script type="text/javascript">
+
+function getDomain(url, subdomain) {
+    subdomain = subdomain || false;
+    url = url.replace(/(https?:\/\/)?(www.)?/i, '');
+    if (!subdomain) {
+        url = url.split('.');
+        url = url.slice(url.length - 2).join('.');
+    }
+    return (url.indexOf('/') !== -1) ? url.split('/')[0] : url;
+}
+
+// called when an electronic options dropdown changes on a SELECT to set the cookie and locations
+function ElectronicOptionsURL(nodeSelect) {
+    document.cookie = 'eopt3972=' + nodeSelect.form.selectElectronicOptions.options[nodeSelect.form.selectElectronicOptions.selectedIndex].getAttribute('eopt') + 
+                      '; Max-Age=99999999; domain=.' + getDomain(window.location.hostname) + ';';  
+    top.location.href = nodeSelect.form.selectElectronicOptions.options[nodeSelect.form.selectElectronicOptions.selectedIndex].value; 
+    return false;
+}
+
+// brings up MoreInfo
+function MoreInfoLaunch() {
+
+    // see if a library item is cookied
+    var strLibraryItem = getCookie('moreinfo');
+
+    // if there isn't a cookied item, we're done
+    if (!strLibraryItem) return;
+
+    // no matter what, clear that cookie
+    document.cookie = 'moreinfo=; Max-Age=-99999999; domain=.' + getDomain(window.location.hostname) + ';';  
+
+    // find the item on the page (it might not be there due to exclusions)
+    var regexLibraryItem = RegExp('c=' + strLibraryItem);
+    var links = document.getElementsByTagName("a");
+    for(var i = 0; i < links.length; i++) if (regexLibraryItem.test(links[i].href)) {
+
+        // find the enclosing table row (will this work on mobile?)
+        var elementRow = links[i];
+        while (elementRow.tagName != 'TR') elementRow = elementRow.parentElement;
+
+        // get the height of the item, figure out how to center it in the window or (if not possible), put it at the top of the window (with a little padding)
+        var iItemHeight = elementRow.offsetHeight;
+        var iWindowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight; 
+        var iPaddingFromTop = Math.floor(Math.max((iWindowHeight - iItemHeight) / 2,0));
+        window.scrollTo(0,getOffsetTop(elementRow) - iPaddingFromTop);
+
+        // find the More Info button there and call the MoreInfo(..) associated with it
+        var linksToItem = elementRow.getElementsByTagName("a");
+        for(var j = 0; j < linksToItem.length; j++) if (/MoreInfo\(/.test(linksToItem[j].onclick)) 
+            eval(/(MoreInfo\(.+"\)); return false;+/.exec(linksToItem[j].onclick)[1]);
+        
+        //  having found the item, no need to continue
+        return;
+        } 
+}
+
+
+function BorrowButtonsAdjust() {}
+
+
+MoreInfoLaunch();
+</script>
+<img height="1" width="1" src="1x1.gif" id="imgWarn" alt="">
+</body>
+</html>

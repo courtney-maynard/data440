@@ -1,0 +1,18 @@
+© 2024 El León de El Español Publicaciones S.A.
+WhatsApp se va a llenar de imágenes falsas: Meta va a por ChatGPT con una nueva IA con la voz de famosos
+Meta ha anunciado mejoras en Meta AI, su asistente de voz basado en Inteligencia Artificial integrado en apps como WhatsApp y Facebook.
+25 septiembre, 2024 19:58
+Mark Zuckerberg llegó con fuerza al Meta Connect, el mayor evento del año de la compañía. Apenas presentó las nuevas Meta Quest 3S , y saltó inmediatamente a la otra gran apuesta de Meta: la Inteligencia Artificial.
+En esta ocasión, Meta quiere hacer algo más que ponerse a la altura de los mejores modelos de lenguaje, con nuevas funciones que no encontramos en otras plataformas. Para empezar, Meta se ha evitado los problemas de ChatGPT con Scarlett Johansson , y ha contratado a actores y otras personalidades famosas para ceder su voz a Meta AI, que ahora será capaz de hablar con el usuario. Entre las voces disponibles se encuentran las de John Cena, Judi Bench, Kristen Bell y más.
+Continuando con la voz, tal vez una de las novedades más sorprendentes fue la traducción automática de vídeos en Reels. Meta está experimentando con la traducción por IA de los Reels que no sólo crea una voz falsa en nuestro idioma, también es capaz de modificar los labios de la persona para que hablen en nuestro idioma. Por el momento, es capaz de traducir del español latino al inglés, y en la demostración mostrada por Zuckerberg, el efecto dio algo de miedo.
+Meta AI está integrado en todas las apps de Meta, incluyendo Instagram, WhatsApp y Facebook Messenger, permitiendo iniciar conversaciones de texto o de voz con acceso a todas sus funcionalidades; sin embargo, estas funciones no se pueden disfrutar en España ni el resto de la Unión Europea, y Mark Zuckerberg envió un mensaje a la Comisión Europea, afirmando que es "eternamente optimista" de que se podrá solucionar. Entre estas funciones, ahora se encuentra la creación de imágenes por IA.
+Los usuarios sólo tendrán que escribir o decir una descripción de lo que quieren, y la IA les enviará un mensaje con la imagen creada, que puede ser compartida en otras apps o directamente en Instagram y Facebook; por lo tanto, podemos esperar encontrarnos incluso más imágenes falsas a partir de ahora en estas plataformas. Tal vez más interesante es la capacidad de la IA de editar nuestras fotos, añadiendo o quitando elementos, cambiando el fondo, o cambiando nuestra ropa. Sin embargo, eso también significa que cualquiera puede coger una foto nuestra y hacer lo mismo.
+Las nuevas funciones vienen de la mano de una nueva versión del modelo de lenguaje de Meta, Llama 3.2; es la primera con funciones de visión, y la compañía espera que sea capaz de comprender las imágenes como nunca, con la posibilidad de poner títulos a nuestras fotos o creaciones.
+Pixabay | OpenAI El Androide Libre
+NEWSLETTER - TECNOLOGÍA
+Recibe de lunes a viernes las noticias clave sobre tecnología
+Apuntarme
+De conformidad con el RGPD y la LOPDGDD, EL LEÓN DE EL ESPAÑOL
+                        PUBLICACIONES, S.A. tratará los datos facilitados con la finalidad de remitirle noticias de
+                        actualidad.
+cerrar

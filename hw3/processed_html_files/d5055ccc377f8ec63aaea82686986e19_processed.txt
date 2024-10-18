@@ -1,0 +1,79 @@
+GenAI Market Report: 10 Huge ROI, Top Use Cases, AI Costs And Benefits Results
+From what enterprises are seeing around GenAI ROI and the most popular GenAI use cases today, to the majority of enterprises using ChatGPT for software development, CRN breaks down the biggest results from ISG’s new 2024 State of The Generative AI Market report.
+Enterprises are spending on average $2.6 billion on their single largest generative AI use case in 2024.
+Approximately 70 percent of enterprises are using ChatGPT for software development activities, while 65 percent are hiring MSPs to drive many of their GenAI initiatives .
+The GenAI use case with the most financial investment is customer service chatbots with 53 percent of enterprises saying it’s their top GenAI priority, while the most common GenAI use case is automated IT testing.
+These are just some of the results from global technology research firm Information Services Group (ISG) new State of The Generative AI Market report.
+From what enterprises expect around return on investments ( ROIs ) on their GenAI solutions and exactly how much efficiency gains businesses are witnessing via generative AI, to the five biggest GenAI inhibitors facing enterprises—ISG’s new market report sheds light on the state of the GenAI market today.
+“Enterprises report they expect to increase their spending on GenAI by 50 percent in 2025,” said ISG researchers in the report. “Think your customer service chatbot will create a competitive advantage? More than half the participants in our research—53 percent—are creating customer service chatbots.”
+ISG’s 2024 GenAI Use Case Study was conducted in August 2024. Over 200 professionals—including C-level executives and leaders across sales, marketing, HR and financing—were surveyed from a cross-section on major industries across 10 regions.
+CRN breaks down the biggest GenAI market trends in the enterprise that every channel partner, vendor and customer needs to know about.
+Most Common And Highest Investment Enterprise GenAI Use Cases In 2024
+Highest Investment Use Cases:
+Customer Service Chatbots: 53%
+Visual/Audio Content Generation: 41%
+Customer Service Support: 41%
+Contact Center Management/Monitoring: 26%
+Most Common Use Cases:
+Automated IT Testing: 43%
+HR Support: 35%
+Customer Communications: 33%
+Documentation Creation: 31%
+IT Security: 30%
+ISG’s GenAI Use Case Study focused on which use cases global 2,000 companies have invested in and which have received the most funding.
+“While GenAI use cases span a broad range of business domains, three of the top five most well-funded areas are focused on contact center, efficiency gains and content generation,” said ISG researchers. “The use cases getting the most funding today are aimed at efficiency and profitability, not revenue.”
+The Most Popular GenAI Use Cases For 2025
+Highest Emerging Use Cases For 2025:
+Marketing Research/Customer Insights: 18%
+Software Code Generation/Translation: 18%
+Supply Chain Optimization: 16%
+Customer service chatbots: 28%
+Customer service support: 19%
+ISG said past research highlighted the importance of revenue growth as a top enterprise objective for the adoption of AI. However, higher-value use cases in the future will be those that do not involve HITL process so that enterprises can achieve more dramatic scaling.
+“Emerging use cases in 2025 will primarily focus on augmenting expertise. Supporting compliance, forecasting, market research, supply chain planning and software development are all domains in which human expertise— rather than human time—can be the limiting factors,” said ISG researchers.
+Enterprise Expected GenAI ROI Capture
+Enterprises expect to capture a significant share of the anticipated ROI from their current GenAI initiatives in 2025.
+There are five major areas enterprises expect to gain ROI on their GenAI initiatives: efficiency, innovation, customer service, cost savings and business growth.
+The results show that most enterprises expect to achieve most of their ROI by the end of 2025. Very few enterprises expect ROI to fall short of expectations.
+Enterprises spent $2.6 million on average this year on their single largest GenAI use case. These large companies expect to increase their spending on GenAI by 50 percent in 2025.
+Software Development A Leading GenAI Application
+IT departments are beginning to harness the power of GenAI to streamline operations, enhance innovation and optimize workflows within IT infrastructure.
+As a result, software development is emerging as a leading application for GenAI, with 70 percent of respondents report using ChatGPT for software development activities, with 33 percent using GitHub CoPilot.
+According to ISG research, GenAI delivers productivity gains estimated at between 30 percent to 42 percent.
+Productivity is gained by users automating predictive insights, facilitating robust and error-resistant coding practices, and enhancing software quality and security. AI-driven analytics streamline stakeholder interviews and requirements gathering, while automated tools improve system architectures and the design of user interfaces.
+Additionally, AI assistants support code generation and bug fixing, reducing manual efforts and improving overall code quality. AI can also generate and execute software test cases and improve regression testing.
+How Is GenAI Funding Being Spent?
+In terms of where GenAI money is being spent, ISG reports 36 percent is being spent on applications and software, including software-as-a-service.
+This is followed by 25 percent being spent on personnel, including contractors and staff augmentation.
+Approximately 21 percent of GenAI money is being spent on infrastructure such as storage and servers, while the remaining 18 percent is being spent on outsourcing such as paying for managed services.
+Number Of GenAI Apps Enterprises Have Implemented: 151
+On average, enterprises have implemented 151 GenAI-enabled applications.
+Enterprises say they expect to increase that number to 356 GenAI applications by the end of 2025.
+Using An MSP Vs. Doing It Alone
+Using An MSP: 65%
+Doing It Alone: 35%
+Regardless of the GenAI approach, 65 percent of enterprises rely on some form of external support—managed service providers (MSPs)—to implement their GenAI initiatives.
+Key reasons why enterprises are hiring MSPs include their expertise and knowledge, along with MSPs strategic management and ability to leverage AI technology. Other reasons include enterprises’ in-house capability limitations as well as MSPs’ speed and time efficiencies.
+Approximately 35 percent of enterprises are doing their own GenAI initiatives in-house.
+Major reasons enterprises are doing it themselves include building their own internal resource and capabilities, while also building specialized in-house expertise. Other reasons enterprises are not hiring MSPs for GenAI are due to cost considerations, data privacy and security, regulatory compliance and a desire for customization.
+On-Prem Vs. Public Cloud: Where To Host AI?
+28% Will Train LLMs In Private Clouds Or On-Premise
+21% Will Purchase GPUs For On-Premise AI Development
+Public cloud providers like Amazon Web Services, Microsoft and Google Cloud have been the de facto landing zone for AI workloads over the last two years.
+While most enterprises are looking to expand their AI capabilities will continue to increase their cloud footprint, many are looking at alternatives to the public cloud.
+Approximately 28 percent of enterprises expect to train large language models (LLMs) in private clouds or on-promise. Around 21 percent will purchase GPUs for on-premise AI development.
+“Public cloud providers have spent billions in capital investments in anticipation of massive AI adoption, and the ease of access has made provisioning this AI-ready infrastructure in the public cloud the easy choice for POCs,” said ISG researchers. “More recently, private cloud providers and niche AI cloud providers are entering the market to provide enterprises more options for additional security or performance.”
+AIOps Leads 28% To 50% Efficiency Increase
+The integration of AI in IT operations (AIOps) represents a transformative approach to managing and optimizing operations.
+On average, AIOps improvements lead to an estimated 28 percent to 50 percent increase in efficiency, translating to substantial cost savings and more reliable infrastructure performance, according to ISG data.
+“By automating tasks, predicting issues and providing actionable insights, AIOps helps enterprises proactively manage their IT environments, reduce downtime and improve overall performance,” said ISG researchers. “Implementing AIOps in infrastructure management can result in significant productivity savings. By automating monitoring and alerts, predictive maintenance, and resource planning and optimization, AIOps is reducing the need for constant manual oversight.”
+AIOps’ Three Biggest Benefits
+One of the three key benefits of AIOps includes lower labor costs. Automation and improved preventive maintenance eliminate labor-intensive tasks and enable more competitive pricing for outsourcing services.
+The second key benefit is enhanced service offerings. AIOps enables advanced services like real-time data analysis and predictive analytics, enhancing the provider’s service quality.
+The third important benefit is dynamic scalability and flexibility. AI-driven demand forecasting and resource allocation optimize scalability and responsiveness to client needs, reducing costs and improving service alignment.
+Top 5 Biggest GenAI Inhibitors
+Lack of Skills/Expertise: 56%
+Change Management: 35%
+Cost of LLMs: 33%
+The most-cited inhibitor to implementing GenAI within enterprises—by far—is the lack of AI expertise and skills within the organization.
+Closely related is the difficulty enterprises are having in hiring and retaining personnel with the requisite AI skills.

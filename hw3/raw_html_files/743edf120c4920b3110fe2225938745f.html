@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head><script type="text/javascript" src="/javascript/driver.js?cache"></script><script type="text/javascript" src="/javascript/driver.js?async" async></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title> ALASKA - Online Voter Registration  </title>
+    <script src=""></script>
+    <link href="/Content/css?v=" rel="stylesheet"/>
+
+    <script src="/bundles/modernizr?v="></script>
+
+    <script src="/bundles/jquery?v=KSDZSAXXTCKIg-QMsWUeFzEYhbLOgfLDunZXnJbrxlI1"></script>
+
+    <script src="/bundles/jqueryval?v=qBf8U6WPNI7GDAfcW7bUO-34o2FbXuVoR2hLReFt1DY1"></script>
+
+    <script src="/bundles/common?v="></script>
+
+    <link href="/Content/JQuery/css?v=iKbnzdBaB2BoQ0st98KSmNTfsYMqMouTSSxovnhOMsw1" rel="stylesheet"/>
+
+    <script src="/bundles/jQueryFiles?v=Kg9DbWz3ATx-5x4NVWY07ZwDkEIcucQR3uV7mFUq7Mk1"></script>
+
+
+    <script language="javascript" type="text/javascript" src="/JsClient/Messages"></script>
+</head>
+<body class="homebodybg">
+    <div id="container">
+        <div id="header">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tbody>
+                    <tr>
+                        <td width="7%" align="left">
+                            <img src="/Content/JQuery/Images/Header_logo.gif" /></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-----End of header--------->
+        <div id="banner">
+            <div id="form_left_col">
+                <div id="request_box">
+                    <div class="form">
+                        <div class="contentpane">
+                            <input type="hidden" id="hdnImageCurrent" name="hdnImageCurrent" />
+                            
+
+
+<table width="99%" border="0" cellspacing="0" cellpadding="6">
+    <tbody>
+        <tr>
+            <td width="100%" align="left" valign="top" class="content_title">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tbody>
+                        <tr>
+                            <td align="left">Welcome to the State of Alaska’s Online Voter Registration System</td>
+                            
+                        </tr>
+                    </tbody>
+                </table>
+
+            </td>
+        </tr>
+
+        <tr>
+            <td align="left" valign="top"><p>To use the Online Voter Registration System, you must have a valid Alaska driver's license or state ID card and 
+                the information you enter when registering must match the information on your Division of Motor Vehicles (DMV) record.  
+                If you do not have a valid Alaska driver's license or state ID, or your information cannot be validated, you may select to register 
+                using a paper registration form. </p><p></p></td>
+        </tr>
+        <tr>
+            <td align="left" valign="top">
+                <p>
+                    <strong>You may use this system to</strong> 1) Register to vote or 2) Update your Voter Registration. <br>
+
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td align="left" valign="top">
+                <p><strong>Registration Instructions</strong>:</p>
+                <ol class="list3" type="1">
+                    <li>Fill in all of the required fields on the application which are identified with <font color="red">*</font>.</li>
+                    <li>You are not officially registered to vote until this application is approved.</li>
+                    <li>You should receive an acknowledgment within two to four weeks after submitting or mailing your registration.&nbsp; Please contact your Division of Elections Region Office if you have not received any information by then.</li>
+                </ol>
+            </td>
+        </tr>
+        <tr>
+            <td align="left" valign="top">
+                <p>
+                    <strong>WARNING</strong>:&nbsp;If you provide false information on this application you can be convicted of a misdemeanor AS 15.56.050. <!--If you do not have a valid Alaska state issued ID, then you will be issued a manual registration form. commented on 11/09/2013 Wednesday 12.07pm --><br>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" valign="top">
+                <table border="0" cellspacing="0" cellpadding="3">
+                    <tbody>
+                        <tr>
+                            <td><div class="btn" onclick="window.location='/Registration/RegistrationDetails?haveValidAKDL=true'">Register Online with DMV Validation</div></td>
+                            <td><div class="btn" onclick="window.location='/Registration/RegistrationDetails?haveValidAKDL=false'">Register using Paper Form</div></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                    <!--Popup starts -->
+                    <div class="clear"></div>
+                    <!-- End of Popup -->
+                </div>
+                <div class="clear"></div>
+                <!-----End of banner--------->
+
+                <div id="footer_container">
+                    <div id="footer_menus">
+                        
+                        <span>Version: 5.0.0.32</span>
+                    </div>
+                    <div id="footer_text"></div>
+                    <div class="clear"></div>
+                </div><!-----End of footer_container--------->
+            </div>
+</body>
+</html>
+<script type="text/javascript" language="javascript">
+
+        var url = document.location.href;
+        var searchUrlIndex = url.search(/addvoter/i);
+        if (searchUrlIndex == -1) {
+            javascript: window.history.forward(1);
+        }
+
+        $(document).ajaxStart(function () {
+
+                //var userTheme = 'Default';
+
+                jsMin.showDialog("<div id='div_loading' style='overflow:hidden;font-family:Arial, verdana;font-size:12px;width: 300px; height: 50px; background-color: #FFFFFF;color:black; font-weight: bold;border: solid 1px #cccccc; vertical-align: middle; text-align: center; font-size: 11px'><br /><img src='../Images/Load_Progress.gif' alt='' align='absmiddle'  /><br /><label class='progessfont'>Please wait. Your request is being processed.</label></div>", 302, 50);
+        })
+
+            $(document).ajaxStop(function () {
+
+                jsMin.closeDialog();
+
+            });
+        
+        function adjustDivs() {
+            var df = document.getElementById('__div_layer___fordialog');
+            if (df != null) {
+                df.style.position = 'fixed';
+                df.style.valign = 'middle';
+                df.style.align = 'center';
+            }
+        }
+</script>

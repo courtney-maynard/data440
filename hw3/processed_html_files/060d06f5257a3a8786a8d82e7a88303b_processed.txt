@@ -1,0 +1,34 @@
+Enhance Supply Chain Security with Proactive SBOM Management
+Start managing application risk
+Mend.io gives you all the tools you need to build a mature, proactive AppSec program that effectively manages application risk.
+An approach to AppSec that helps developer AND security teams
+Developer and security teams have the same AppSec destination—but they use different routes to get there. And when each team has fundamentally different needs, one tool will not fit all. That’s why we offer different—but complementary—solutions for each team.
+For developer teams
+Automated dependency updates
+Reachability analysis in the repo
+Remediation suggestions in the repo
+For security teams
+A powerful platform that gives them the complete visibility and control over all tools and enviroments.
+Holistic view of code security
+Centralized scan configuration
+Designed for mass-deployment
+Best-in-class integrations to make “shift left” a way of life
+Cut security risks up to 70% with full-scale automated dependency updates.
+Equip your developers to proactively tackle open source security and compliance risks.
+Increase visibility and control over AI models used in your applications.
+MTTR
+“One of our most indicative KPIs is the amount of time for us to remediate vulnerabilities and also the amount of time developers spend fixing vulnerabilities in our code base, which has reduced significantly. We’re talking about at least 80% reduction in time.”
+Andrei Ungureanu, Security Architect
+“When the product you sell is an application you develop, your teams need to be fast, secure and compliant. These three factors often work in opposite directions. Mend provides the opportunity to align these often competing factors, providing Vonage with an advantage in a very competitive marketplace.”
+Chris Wallace, Senior Security Architect
+Rapid results
+“The biggest value we get out of Mend is the fast feedback loop, which enables our developers to respond rapidly to any vulnerability or license issues. When a vulnerability or a license is disregarded or blocked, and there is a policy violation, they get the feedback directly.”
+Markus Leutner, DevOps Engineer for Cloud Solutions
+Stop playing defense against alerts.
+Start building a proactive AppSec program.
+Application Security
+Transform your application security from reactive to effective white paper. Download your copy today.
+Supply Chain Security
+Threat hunting strategies for the software supply chain. Our report provides step-by-step instructions and real-world attack simulations.
+License Compliance
+Stay up to date on open source licenses with Mend.io’s complete guide for 2024. Learn about compliance, trends, and FAQs for popular licenses.

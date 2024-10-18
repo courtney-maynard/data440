@@ -1,0 +1,16 @@
+Karkidi: Data Science Jobs, Machine Learning Jobs, AI Jobs
+Karkidi is a job search and application platform for Data Science, Machine learning, and Artificial intelligence jobs to find roles in a research career.
+Step into the AI Jobs Hub, where we provide an extensive exploration of the thriving AI employment panorama. Delve into exciting prospects within generative AI, large language models (LLMs), responsible AI, machine learning, data science, natural language processing (NLP), computer vision, and deep learning. Immerse yourself in specialized domains like ML roles, NLP opportunities, computer vision positions, and beyond.
+Discover diverse roles in analytics and data, spanning from descriptive to prescriptive positions. Delve into big data analytics, ML algorithm roles, and various learning approaches such as supervised, unsupervised, reinforcement, semi-supervised, and self-supervised positions.
+Uncover the domain of AI ethics with dedicated roles and explore opportunities in infrastructure engineering. Navigate the future with insights into superintelligent AI ethics and emerging paradigms in comprehensive data science careers. Embark on a journey where innovation converges with opportunity, shaping the future of artificial intelligence.
+Stay ahead of the curve by exploring our platform's latest and most enticing job listings in technology. Karkidi is your portal to PhD fellowship jobs, early career opportunities, and internships designed for recent graduates in the dynamic fields of data science, machine learning, and artificial intelligence.
+Unlock your potential by showcasing expertise in programming languages such as Python, R, Java, and C – prerequisites for consideration in our Data Science, Machine Learning, and Artificial Intelligence job listings. A degree in computer science, mathematics, or statistics is your key to success in securing these coveted positions.
+Are you an employer seeking top talent? Post your job openings for Data Science, Machine Learning, and Artificial Intelligence roles on our site and connect with the best professionals in the industry. Hire skilled data scientists, machine learning experts, software engineers, and computer vision researchers effortlessly through our user-friendly platform.
+Seize the opportunity in the rapidly growing artificial intelligence industry. Major companies like Google, Amazon, Apple, Microsoft, and Meta actively recruit professionals skilled in machine learning, data science, big data, NLP, robotics, and computer vision.
+Ready for a career change? Navigate your path to success by utilizing our Job Search feature to find the perfect job in your field. Register now to access a plethora of job opportunities in data science, machine learning, and artificial intelligence – your future awaits!
+Send User Message
+Send Only Message
+What's My Password?
+If you have forgotten your password you can reset it here.
+Submit
+Cancel

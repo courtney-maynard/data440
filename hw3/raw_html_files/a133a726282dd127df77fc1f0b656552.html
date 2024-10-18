@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>:: Tennessee Election Division ::</title>
+    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+    <link href="/Content/JQuery/dialog_box.css" rel="stylesheet" />
+
+    <script src="/bundles/modernizr?v="></script>
+
+    <script src="/bundles/jquery?v=yLrUYw8wJsDVphfZd34hBbV8EDUqbXgqcJTvyPCUCRg1"></script>
+
+    <script src="/bundles/jqueryval?v=b-f2IWCff1Dp85sJVg8pBGZJHSS0iyRc7_-6sq-O67I1"></script>
+
+    <script src="/bundles/common?v="></script>
+
+    <link href="/Content/JQuery/css?v=Rq5gwsSOcPYFqRXnTL0xmn2vC1PKMwp6uGtoKgcThRQ1" rel="stylesheet"/>
+
+    <script src="/bundles/jQueryFiles?v=ikTFMo47nTKF-rbs4JDQ2bFY8YrSo1jG_hukPUq2Qzk1"></script>
+
+    <script src="/Scripts/dialog_box.js"></script>
+    <script language="javascript" type="text/javascript" src="/JsClient/Messages"></script>
+    <script type='text/javascript' language='javascript'>
+        /* Start Google Analytic Code */
+        var GoogleCode = '';
+        if (GoogleCode != '' && GoogleCode != null) {
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+            ga('create', GoogleCode, 'auto');
+            ga('send', 'pageview');
+
+        }
+        /* End Google Analytic Code */
+
+        // Ajax before send
+        /* To Set the Header for all ajax calls to send the key */
+        $(function () {
+            $.ajaxSetup({
+                headers: {
+                    '__RequestVerificationToken': $('[name=__RequestVerificationToken]').val()
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container" style="background:white;">
+                <header class="header">
+                    <div class="headerContainer">
+                        <div class="sosDepartment">
+                            <div class="departmentCEO">
+                                <a href="http://sos.tn.gov/elections" target="_blank"><img src="/Images/2845633c-ac1f-47c7-b3e5-720f14e335d4_5_20211214.png" alt="Tre Hargett" class="responsiveImage" height="auto" /></a></div>
+                            <div class="stateTitle">
+                                <p class="secretaryJob">
+                                    Tennessee Secretary of State
+                                </p>
+                                <p class="secretaryName">Tre Hargett</p>
+                            </div>
+                        </div>
+                        <div class="sosTitle">
+                            <div class="stateLogo">
+                                <img src="/Images/fa8c7511-8824-4ad9-8b09-325cf3436eba_1_20170616.png" class="responsiveImage" width="150" height="160" alt="Tennessee SecretaryofState">
+                            </div>
+                            <div class="headerTitle">
+                                <span><strong>GoVoteTN</strong></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p> </p>
+                    <div class="clr"></div>
+                    <div class="header_mobile_text2">
+                        Online Voter Registration System
+                    </div>
+                </header>
+
+
+        
+
+        <!--end of header part -->
+        <!-- start of contentpane-->
+        <div role="main">
+            <div id="skipToContent"><a href="#maincontent">skip to main content</a></div>
+            <div id="maincontent">
+                <div>
+                    <input type="hidden" id="hdnImageCurrent" name="hdnImageCurrent" />
+                    
+
+<script src="/Scripts/jquery.maskedinput.min.js"></script>
+<script src="/Scripts/jquery.inputmask.bundle.js"></script>
+<script src="/Scripts/common.js?1.003"></script>
+<script src="/Scripts/generic.js?1.002"></script>
+
+<link href="/Content/jQuery/ModalPopup/basic.css" rel="stylesheet" />
+<link href="/Content/jQuery/ModalPopup/demo.css" rel="stylesheet" />
+
+
+
+<script src="/Scripts/custom.js"></script>
+
+
+<div class="form" id="homeContent">
+</div>
+
+<div align="center">
+    <div class="homepageNav">
+        <div align="right" class="topdotted">
+            <div class="pageNavBlock pTop8">
+                <input id="homeBtn" name="Home Button" type="submit" value="Next" title="Click here to continue" class="button" />
+            </div>
+        </div>
+    </div>
+</div>
+<input type='hidden' value='BM' id='HdnKiosk' />
+<script>
+    $(document).ready(function () {
+        $.ajax({
+            url: "/Registration/HomePageContent",
+            type: "Get",
+			cache: false,
+            data: "",
+            success: function (data) {
+                $("#homeContent").html(data);
+            },
+            error: function () {
+                //$("#content").html("<div class='failed'>Error! Please try again</div>");
+            }
+        })
+
+        var x = $(window).width();
+        var x1 = (x / 2) - 151;
+        $('.top50').css('left', x1);
+    })
+    $(window).resize(function () {
+        var x = $(window).width();
+        var x1 = (x / 2) - 151;
+        $('.top50').css('left', x1);
+    });
+
+    //Homepage Instructions
+    $('#homeBtn').on('click', function () {
+        window.location = '/Registration/RegistrationDetails/' + $('#HdnKiosk').val();
+    });
+
+</script>
+
+
+                </div>
+
+                <div id="body"></div>
+            </div>
+        </div>
+        <!--end of contentpane -->
+        <!--end of bottom links -->
+        <div class="clr"></div>
+
+        <!-- end of container -->
+    </div>
+    <footer id="globalfooterlogin" class="globalFooter" role="contentinfo" style="">
+                <div class="footerText">
+                    <span style="font-size:14px;"> Division of Elections</span>
+                    <p>
+                        312 Rosa L. Parks Avenue, Snodgrass Tower, 7th Floor Nashville, TN 37243<br />
+                        615-741-7956<br />
+                        Voter Fraud Hotline: 1-877-850-4959. You may be eligible for a reward of up to $1,000 if you make a report of voter fraud that leads to a conviction.<br />
+                        tennessee.elections@tn.gov<br />
+                    </p>
+                    <div class="socialIcons">
+                                <a href="http://www.facebook.com/TennesseeSecretaryofState" target="_blank"><img src="/Images/cd9da54d-15ed-4303-ad6b-ca5aeddd3d9b_2_20170627.png" alt="Facebook Logo" width="40px" height="40px" /></a>
+                                <a href="http://twitter.com/sectrehargett" target="_blank"><img src="/Images/7607a3f3-88c5-48fa-87a0-cf1b2aced2a1_1_20170615.png" alt="Twitter Logo" width="40px" height="40px"></a>
+                                <a href="http://instagram.com/sectrehargett/" target="_blank"><img src="/Images/0ad0e923-80d6-426b-82ae-c893e0770354_1_20170616.png" alt="Instagram Logo" width="40px" height="40px"></a>
+
+                    </div>
+                </div>
+
+
+        
+
+    </footer>
+</body>
+
+</html>
+<script type="text/javascript" language="javascript">
+
+
+
+    jQuery().ready(function () {
+        /* Make All Data As Upper Case */
+        $("input[type='text']").on('blur', function () {
+            this.value = this.value.toUpperCase();
+        });
+        $(".help").hide();
+    });
+
+    
+
+    $(document).ajaxStart(function () {
+        var userTheme = 'Default';
+        jsMin.showDialog("<div id='div_loading' style='overflow:hidden;font-family:Arial, verdana;font-size:12px;width: 300px; height: 50px; background-color: #FFFFFF;color:black; font-weight: bold;border: solid 1px #cccccc; vertical-align: middle; text-align: center; font-size: 11px'><br /><img src='../Images/Load_Progress.gif' alt='' align='absmiddle' /><br /><span class='progessfont'>Please wait. Your request is being processed.</span></div>", 302, 50);
+    });
+
+    $(document).ajaxStop(function () {
+        jsMin.closeDialog();
+    });
+
+    function adjustDivs() {
+        var df = document.getElementById('__div_layer___fordialog');
+        if (df != null) {
+            df.style.position = 'fixed';
+            df.style.valign = 'middle';
+            df.style.align = 'center';
+        }
+    }
+
+
+    //Disable the Back space key
+    $(document).keydown(function (e) {
+        var nodeName = e.target.nodeName.toLowerCase();
+
+        if (e.which === 8) {
+            if ((nodeName === 'input' && e.target.type === 'text') ||
+            nodeName === 'textarea') {
+                // do nothing
+            } else {
+                e.preventDefault();
+            }
+        }
+    });
+
+    //Open help screen.
+
+</script>
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        //document.onmouseover = function () {
+        //    window.innerDocClick = true;
+        //}
+
+        //document.onmouseleave = function () {
+        //    window.innerDocClick = false;
+        //}
+
+        //window.onhashchange = function () {
+        //    debugger;
+        //    if (window.innerDocClick) {
+        //        alert("Button event");
+        //    } else {
+        //        $(window).on('popstate', function (event) {
+        //            alert("Browser Button");
+        //        });
+        //    }
+        //}
+
+        $(".close").click(function () {
+            $(this).keydown();
+        });
+        $(".close").keydown(function () {
+            $(this).addClass("");
+        });
+
+
+        // Help Page function
+        $('.helpPage').on('click', function () {
+            openHelpPage();
+        });
+
+
+        // On change for dropdowns
+        $('#ddlState, #ddlTNCounty, #ddlCounty').on('change', function () {
+            GetCounty();
+        });
+
+        $('#ddlRace').on('change', function () {
+            GetSelectedRaceText();
+        });
+        $('#mailAddressState').on('change', function () {
+            UncheckSameAsLegalAdd();
+        });
+        $('#ddlPreviousCounty').on('change', function () {
+            GetPreviousCounty();
+        });
+    });
+</script>

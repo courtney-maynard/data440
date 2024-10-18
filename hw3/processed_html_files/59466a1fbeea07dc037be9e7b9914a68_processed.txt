@@ -1,0 +1,24 @@
+Enterprise adoption of generative AI is accelerating
+More enterprises are using generative AI. There is no consensus on the best use case or if open or closed models work better. Organizations that used AI before ChatGPT are ahead.
+Share this item with your network:
+By
+Nearly two years after the mass consumerization of generative AI with the introduction of ChatGPT, the technology is now moving from experimentation to implementation.
+A recent survey by TechTarget's Enterprise Strategy Group found that generative AI adoption is growing. The analyst firm surveyed 832 professionals worldwide and found that adoption has increased in the last year.
+"We're in the acceleration phase," said Mark Beccue, an analyst at Enterprise Strategy Group and an author of the survey report, on the Targeting AI podcast.
+Organizations are using generative AI in areas such as software development, research, IT operations and customer service, according to the survey.
+However, there isn't a particular use case that is a top priority. Organizations are focusing on several applications of generative AI and still face some challenges when trying to adopt generative AI technology.
+One is a need for more infrastructure, Beccue said.
+"They feel that the changes are needed to support infrastructure before they can proceed with GenAI," he said.
+This might include adding platforms for enterprise generative AI projects or more development tools, he added. "It's really everything that gets you to being able to build an app," Beccue continued.
+Organizations also don't have consensus about what kind of AI model is best for their needs: open or closed source .
+We're in the acceleration phase.
+Mark BeccueAnalyst, Enterprise Strategy Group
+"It's probably both," Beccue said. "People are thinking about how to use these things and they're understanding that not one model fits everything that they need. So they're looking through to see what works for them in certain instances."
+The enterprises that have found quick success with generative AI are ones that invested in AI years before it was popularized by OpenAI's ChatGPT , Beccue said.
+He said these are companies like Adobe, ServiceNow -- which, for example, has been using machine learning, natural language understanding, process automation and AIOps since 2017 -- and Zoom.
+"They did it in a way where they said, 'We think there is potential here for this to help us do what we do better,'" he said. "That was their driver."
+This was what made them ready when generative AI hit the market.
+Esther Ajao is a TechTarget Editorial news writer and podcast host covering artificial intelligence software and systems. Shaun Sutner is senior news director for TechTarget Editorial's information management team, driving coverage of artificial intelligence, analytics and data management technologies. Together, they host the Targeting AI podcast series.
+Related Resources
+Sponsored News
+The longtime analytics vendor's latest release addresses the accuracy of artificial intelligence outputs and includes an ...

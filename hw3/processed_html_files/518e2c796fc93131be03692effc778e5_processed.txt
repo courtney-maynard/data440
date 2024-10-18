@@ -1,0 +1,33 @@
+15 Years of Advancing Machine Learning Research
+The New York Academy of Sciences has been at the forefront of machine learning and artificial intelligence since hosting the first Machine Learning Symposium nearly two decades ago.
+Published September 16, 2024
+By Nick Fetty
+Digital Content Manager
+In today’s digital age, an abundance of reliable data is readily available at our fingertips. This is, in part, because of significant advances in the field of machine learning in recent years.
+The New York Academy of Sciences (the Academy) has long played a role in advancing research in this subfield of artificial intelligence. In machine learning, researchers develop mathematical algorithms that extract knowledge from specific data sets. The machine then “learns” from the data in an iterative fashion that enables predictions to be made. It has a wide range of disparate practical applications from natural language processing and search engine function to stock market analysis and medical diagnosis.
+The first Machine Learning Symposium was hosted by the Academy in 2006. Collaborators included experts from Google, Rutgers University, Columbia University, and NYU’s Courant Institute of Mathematical Sciences.
+Continuing a Proud Tradition
+This proud tradition will continue when the Academy hosts the 15th annual Machine Learning Symposium at the New York Academy of Medicine (1216 5th Avenue, New York, NY 10029) on October 18, 2024. This year’s keynote speakers include:
+Pin-Yu Chen, PhD, IBM Research : Dr. Chen’s recent research focuses on adversarial machine learning of neural networks for robustness and safety. His long-term research vision is to build trustworthy machine learning systems.
+Furong Huang, PhD, University of Maryland : Dr. Huang works on statistical and trustworthy machine learning, foundation models and reinforcement learning, with specialization in domain adaptation, algorithmic robustness, and fairness.
+Daniel Russo, PhD, Columbia University : Dr. Russo’s research lies at the intersection of statistical machine learning and online decision making, mostly falling under the broad umbrella of reinforcement learning.
+Jon Schneider, PhD, Google Research New York : Dr. Schneider’s primary research interests include problems in online learning, game theory, and convex optimization/geometry. His recent work focuses on designing strategically robust algorithms for learning in game-theoretic environments.
+The symposium’s primary goal has always been to develop an active community of machine learning scientists. This includes experts from academic, government, and industrial institutions who can exchange ideas in a neutral setting.
+Graduate students and representatives from tech startups will also deliver a series of “Spotlight Talks.” Others will share their research during an interactive poster session.
+Promoting Impactful Machine Learning Applications
+Over its history, the symposium has highlighted several mainstream machine learning applications. This includes simulation, learning and optimization techniques for IBM Watson ‘s Jeopardy! game strategies, the role big data played in the 2012 U.S. presidential election, and a trainable vision system for off-road mobile robots.
+Corinna Cortes, PhD , VP of Google Research, Mehryar Mohri, PhD , Professor at NYU and a Research Director at Google Research, and Tony Jebara , PhD, VP of Engineering and Head of Machine Learning at Spotify, have been involved since the event’s inception. They continue to guide the event’s programming through their roles on the Scientific Organizing Committee. This year’s sponsors include Google Research and Cubist Systematic Strategies .
+Digital Content Manager
+Nick is the digital content manager for The New York Academy of Sciences. He has a BA and MA in journalism from the University of Iowa as well as more than a decade of experience in STEM communications. Nick is also an adjunct instructor in mass media at Kirkwood Community College.
+Subscribe to our newsletter
+Follow us on social
+Subscribe
+The mission of The New York Academy of Sciences is to drive innovative solutions to society's challenges by advancing scientific research, education and policy.
+© 2024  The New York Academy of Sciences
+Thank you for subscribing!
+We've sent you a confirmation email with credentials to manage your account.
+Close
+Sign-Up
+Login for Access
+Annals of The New York Academy of Sciences is hosted on the Wiley Online Library.  
+				Access to Annals is an Academy member benefit.

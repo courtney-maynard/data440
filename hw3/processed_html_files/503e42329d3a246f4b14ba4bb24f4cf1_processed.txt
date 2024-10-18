@@ -1,0 +1,121 @@
+Read More
+Read Less
+Asking the better questions that unlock new answers to the working world's most complex issues.
+Read More
+Read Less
+Read More
+Read Less
+EY helps clients create long-term value for all stakeholders. Enabled by data and technology, our services and solutions provide trust through assurance and help clients transform, grow and operate.
+Read More
+Read Less
+Read More
+Read Less
+Discover how EY insights and services are helping to reframe the future of your industry.
+Read More
+Read Less
+Consulting
+AI
+Read More
+Read Less
+We bring together extraordinary people, like you, to build a better working world.
+Read More
+Read Less
+Talent community
+Read More
+Read Less
+About us
+Read More
+Read Less
+At EY, our purpose is building a better working world. The insights and services we provide help to create long-term value for clients, people and society, and to build trust in the capital markets.
+Read More
+Read Less
+Search
+search
+close
+search
+Topics
+The future of consulting in the age of Generative AI
+7 minute read 29 Jun 2023
+Related topics
+Consulting can steer organizations Generative AI journey to gain a competitive edge, enhance efficiencies and accelerate innovation.
+Read More
+Read Less
+In brief
+Using Generative AI, consulting would tap into business value from hitherto distant segments.
+While the technology is still evolving, consulting could drive awareness about Gen AI’s advantages.
+C-suite decision-makers need help in ideating, experimenting and assessing the suitability of adoption.
+Read More
+Read Less
+Waves of disruptive change are urging organizations to embrace innovation and Generative AI is now recognized as a transformative force. Organizations that are able to swiftly embrace this technology are in a position to unlock avenues to unprecedented business value.
+At the helm of directing this change are consulting firms, owing their continual engagement and expertise to drive the innovation agenda for their clients. Therefore, it is imperative that consultants:
+a) recognize the immense potential of Generative AI, b) help clients revolutionize the way they do business, and
+c) incorporate Generative AI into their own ways of working.
+Being at the forefront will help unlock channels of business value that were earlier considered distant. While Generative AI has limitations and is still at a nascent stage, it cannot be denied that the technology’s potential is immense.
+Read More
+Read Less
+Industry megatrends
+The global Generative AI market is valued at US$13.7 billion1 in 2023 and is expected to increase to US$165 billion (CAGR 34.6%) by 20322. Venture capital (VC) investment in Generative AI was up 425%3 during 2020-22 and continues to grow.
+How are organizations gearing up to harness the power of Generative AI?
+Generative AI is easing its way into all areas of business across industries, as organizations continue to find diverse and powerful applications for their operations. This is leading to increased investments in research and development, strategic partnerships and alliances, organizations of ideation workshops, conduct proof-of-concepts (PoCs), establish business cases and institutionalize processes that integrate Generative AI.
+Forward-thinking organizations are planning to generate a first-mover advantage as they plug in Generative AI into various aspects of their business, across the front-middle-back office spectrum of functions. This will not only give them a competitive edge but also enhance operational efficiencies and accelerate innovation. First-movers have already set off on the journey to realize the benefits of Generative AI and potential disruption has started to become visible.
+Read More
+Read Less
+Potential disruption has started to become visible, given the following assessments:
+50% time reduction for accountants, auditors, and tax preparers on most tasks – UPenn
+44% time saving in professional writing tasks - MIT
+55% reduction in programming time - Microsoft
+Read More
+Read Less
+What does this mean for consulting?
+The consulting industry is at the helm of driving innovation. Hence, it is a significant responsibility to accelerate innovation by helping organizations define the pathways to adopt Generative AI. Furthermore, AI-powered large language model (LLM) and natural language processing (NLP) capabilities have the potential to unlock new levels of efficiency and accuracy, revolutionizing the way that business has been traditionally conducted.
+As clients continue to transform across areas like customer service, marketing and next-gen app build outs, there is huge potential to offer more powerful consulting solutions and capabilities that embed Generative AI at their core.
+Time to enable the C-suite agenda
+As the C-suite attempts to navigate through the challenges of this disruption, consulting firms need to help:
+ideate and experiment with new ideas, assess the right fitment, timing and pace for adoption and scale up the use of Generative AI,
+assure their workforce that the advent of the age of Generative AI will not result in job cuts – rather will create upskilling opportunities and new job roles involving a higher degree of the ‘human way of thinking’, and
+assure the C-suite that the technology does not threaten their own jobs but rather has the potential to be an enabler
+While we must embrace the alarming possibility that this technology may very soon be able to support critical thinking abilities, it would be more realistic to assume that Generative AI would make lives easier for the C-suite. It allows organizational leaders to distil and process data to gain a deeper understanding of market trends, customer behaviors, competitive landscape, macroeconomic conditions and workforce management, allowing them better quality information, more time to work on high-priority tasks, place more trust in and advocate data-led decisioning.
+Read More
+Read Less
+GenAI has the potential to not only transform the way we deliver value to clients but also the way we manage internal processes
+Enhancing problem-solving capabilities: The implementation of GenAI can greatly support consultants in rapidly generating ideas, exploring different scenarios, and evaluating potential solutions. Through the utilization of these tools, consulting firms can enhance their problem-solving capabilities and provide more robust and innovative strategies to their clients.
+Facilitating collaboration and knowledge management: GenAI can foster collaboration within consulting firms by providing a platform for knowledge sharing and capturing collective expertise. Consultants can collaborate more effectively on projects, exchange insights, and build upon each other's ideas, leading to more innovative and impactful client solutions.
+Accelerating innovation cycles: By incorporating GenAI, consulting firms can expedite their clients' innovation cycles by automating time-consuming tasks such as data analysis, market research, and trend identification. This automation allows consultants to focus more on higher-value activities like strategic thinking and creative problem-solving, enabling faster and more efficient innovation.
+Enabling data-driven insights: Consulting firms handle vast amounts of data from various sources. GenAI has the ability to analyze and extract valuable insights from datasets, uncovering hidden patterns and trends that can inform strategic decision-making. Consulting firms can leverage GenAI to provide data-driven insights and offer more well-informed recommendations.
+Driving responsible and ethical innovation: Consulting firms bear the responsibility of ensuring the responsible and ethical use of these technologies. By actively adopting and integrating GenAI into their innovation processes, consulting firms can set an example and establish standards for the responsible use of AI. This approach also addresses potential risks and biases associated with the implementation of AI, promoting responsible and ethical innovation.
+Read More
+Read Less
+Automotive: Assist with maintenance and repairs, provide technical support, and assist with vehicle selection.
+Telecommunications: Assist with network management, provide technical support, and help customers with billing and account management.
+Financial Services: Analyze financial data, generate reports, and provide personalized investment recommendations to customers.
+Education: Assist teachers and students by answering questions, providing explanations, and generating learning materials
+Important considerations
+Ensuring alignment to values and ethics is of utmost importance when adopting GenAI. Establishing the social legitimacy of GenAI relies on safeguarding the confidentiality and security of both company and customer data. Organizations should take into account the following aspects:
+Privacy and Security: Are adequate measures in place to protect sensitive information and prevent any compromise of security?
+Legal Compliance: Have appropriate steps been taken to adhere to all regulatory requirements?
+Ethics and Data Bias: What measures can be implemented to prevent biased outcomes and mitigate potential negative reputation effects?
+Copyright and Patents: Have the necessary licenses been obtained for training data? Can AI potentially generate new inventions?
+Mitigating Incorrect Consumption: How can the risk of GEN AI hallucinations be minimized to ensure safe usage?
+Read More
+Read Less
+As with any emerging technology , there are concerns about the ethical implications of GenAI due to its wide-ranging implications on individuals and society at large. However, they can be effectively managed through robust governance frameworks, transparent decision-making processes, and continuous evaluation to ensure the responsible development and deployment of GenAI.
+The key question for the consulting industry is if GenAI can reshape business models, unlock new realms of business value through enhanced customer experiences and drive unprecedented growth. While the future of Gen AI is difficult to predict at this point, the industry continues to take positive strides, such as the following:
+There is a huge market and opportunity to unlock, and we have only scratched the surface, with vast untapped potential awaiting exploration.
+Industries are ideating and realizing several use cases and the continuous discovery of new applications is fueling the boundless possibilities of GenAI.
+The understanding, planning, and management of risks and rewards associated with Generative AI are constantly improving, allowing for more informed decision-making and mitigation strategies.
+Read More
+Read Less
+Our Consulting approach to the adoption of AI and intelligent automation is human-centered, pragmatic, outcomes-focused and ethical.
+10m 32s
+14m 6s
+Previous
+Next
+Summary
+Generative AI is fast becoming a part of all businesses as companies generate multiple use cases. Many organizations are innovating to build powerful applications leading to increased investments in R&D.  Consulting must continually engage with different organizations to drive the clients’ innovation agenda and draw strategic alliances while incorporating Generative AI into their own functioning.
+Read More
+Read Less
+Technology Leader, transforming industries and driving innovation for a better working world
+Related topics
+modal-close-button
+You are visiting EY in (en)
+in en

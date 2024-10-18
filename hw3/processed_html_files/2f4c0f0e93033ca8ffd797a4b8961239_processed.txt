@@ -1,0 +1,24 @@
+Search by name to view your registration information, voting history, vote absentee or make updates to your registration. *=Required Field
+First Name*
+Field Required
+Last Name*
+Field Required
+Birth Date*
+Field Required
+Search by Name
+Search by Address
+Search by address to find your polling place, see what will be on your ballot, find your next election or learn about absentee voting. *=Required Field
+Street Address*
+Field Required
+Absentee Voting
+Interested in voting absentee by mail in the next election? Learn more about your options, get step-by-step instructions, and find helpful resources for voters.
+Military Voters
+For elections with a federal contest, a member of U.S. Military or a spouse or dependent of a member you are eligible to receive an absentee ballot online, by email, by fax or mailed until 5 p.m. on Election Day. For elections without a federal contests, you are eligible to receive an absentee ballot online, by email, by fax, or mailed until 5 p.m. the Friday before Election Day.
+Interested in helping elections in your community? Become a Poll Worker!
+How Your Vote Gets Counted
+Wisconsin counts all ballots on election day, but it can take up to 45 days to record that data in the voter registration system.
+In Wisconsin, unofficial election night results reported by the news media come from county clerks. You can get them, too!
+Contact the State of Wisconsin Elections Commission
+Office Address 201 W Washington Ave 2nd Floor Madison, WI 53703
+Mailing Address P.O. Box 7984 Madison, WI 53707
+Please click the button below if you want to continue.

@@ -1,0 +1,1985 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+<!--
+++++++++++++++++++++++++++++++++
+    Site Powered by Limecube
+    https://www.limecube.co
+++++++++++++++++++++++++++++++++
+-->
+
+                                                                    
+                                
+                                                
+                                                
+                                                
+                                                        
+                    
+                <!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '422776581775474');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=422776581775474&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+            
+                <meta name="facebook-domain-verification" content="nl5ppidzo32ulwyrcxd51jj7u7xypd" />
+            
+                <script type="text/javascript">  (function(w,d,s,j,o,a,b){    o=o||'delveAIOrgInfo';    w[o]=w[o] || function() {      (w[o].q = w[o].q || []).push(arguments);    };    a=d.createElement(s);a.async=1;a.src=j;    b=d.getElementsByTagName(s)[0];b.parentNode.insertBefore(a,b);  })(window,document,'script','//static.orginfo.io/js/plugin.js');  delveAIOrgInfo('gtag', 'dimension1', 'dimension2');</script>  
+            
+                <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KG8QR25D');</script>
+<!-- End Google Tag Manager -->
+            
+
+
+<link rel="canonical" href="https://www.limecube.co/the-ultimate-guide-to-ai-agents" />
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="icon" href="https://storage.googleapis.com/limecube-live-central/central%2Flimecube_v3%2FMisc%2Ffavicon.png" /><title>The Ultimate Guide to AI Agents in 2024</title>
+<meta name="description" content="Get ready for the future of AI agents. In this article we unpack their incredible capabilities, challenges and timelines for advanced AI agents." />
+
+<meta name="HandheldFriendly" content="True" />
+<meta name="MobileOptimized" content="320" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=6.0">
+
+<script type="text/javascript">
+    /*! onloadCSS. (onload callback for loadCSS) [c]2017 Filament Group, Inc. MIT License */
+    /* global navigator */
+    /* exported onloadCSS */
+    function onloadCSS( ss, callback ) {
+        var called;
+        function newcb(){
+            if( !called && callback ){
+                called = true;
+                callback.call( ss );
+            }
+        }
+        if( ss.addEventListener ){
+            ss.addEventListener( "load", newcb );
+        }
+        if( ss.attachEvent ){
+            ss.attachEvent( "onload", newcb );
+        }
+
+        // This code is for browsers that don’t support onload
+        // No support for onload (it'll bind but never fire):
+        //	* Android 4.3 (Samsung Galaxy S4, Browserstack)
+        //	* Android 4.2 Browser (Samsung Galaxy SIII Mini GT-I8200L)
+        //	* Android 2.3 (Pantech Burst P9070)
+
+        // Weak inference targets Android < 4.4
+        if( "isApplicationInstalled" in navigator && "onloadcssdefined" in ss ) {
+            ss.onloadcssdefined( newcb );
+        }
+    }
+
+    /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+    /* This file is meant as a standalone workflow for
+    - testing support for link[rel=preload]
+    - enabling async CSS loading in browsers that do not support rel=preload
+    - applying rel preload css once loaded, whether supported or not.
+    */
+    (function( w ){
+        "use strict";
+        // rel=preload support test
+        if( !w.loadCSS ){
+            w.loadCSS = function(){};
+        }
+        // define on the loadCSS obj
+        var rp = loadCSS.relpreload = {};
+        // rel=preload feature support test
+        // runs once and returns a function for compat purposes
+        rp.support = (function(){
+            var ret;
+            try {
+                ret = w.document.createElement( "link" ).relList.supports( "preload" );
+            } catch (e) {
+                ret = false;
+            }
+            return function(){
+                return ret;
+            };
+        })();
+
+        // if preload isn't supported, get an asynchronous load by using a non-matching media attribute
+        // then change that media back to its intended value on load
+        rp.bindMediaToggle = function( link ){
+            // remember existing media attr for ultimate state, or default to 'all'
+            var finalMedia = link.media || "all";
+
+            function enableStylesheet(){
+                link.media = finalMedia;
+            }
+
+            // bind load handlers to enable media
+            if( link.addEventListener ){
+                link.addEventListener( "load", enableStylesheet );
+            } else if( link.attachEvent ){
+                link.attachEvent( "onload", enableStylesheet );
+            }
+
+            // Set rel and non-applicable media type to start an async request
+            // note: timeout allows this to happen async to let rendering continue in IE
+            setTimeout(function(){
+                link.rel = "stylesheet";
+                link.media = "only x";
+            });
+            // also enable media after 3 seconds,
+            // which will catch very old browsers (android 2.x, old firefox) that don't support onload on link
+            setTimeout( enableStylesheet, 3000 );
+        };
+
+        // loop through link elements in DOM
+        rp.poly = function(){
+            // double check this to prevent external calls from running
+            if( rp.support() ){
+                return;
+            }
+            var links = w.document.getElementsByTagName( "link" );
+            for( var i = 0; i < links.length; i++ ){
+                var link = links[ i ];
+                // qualify links to those with rel=preload and as=style attrs
+                if( link.rel === "preload" && link.getAttribute( "as" ) === "style" && !link.getAttribute( "data-loadcss" ) ){
+                    // prevent rerunning on link
+                    link.setAttribute( "data-loadcss", true );
+                    // bind listeners to toggle media back
+                    rp.bindMediaToggle( link );
+                }
+            }
+        };
+
+        // if unsupported, run the polyfill
+        if( !rp.support() ){
+            // run once at least
+            rp.poly();
+
+            // rerun poly on an interval until onload
+            var run = w.setInterval( rp.poly, 500 );
+            if( w.addEventListener ){
+                w.addEventListener( "load", function(){
+                    rp.poly();
+                    w.clearInterval( run );
+                } );
+            } else if( w.attachEvent ){
+                w.attachEvent( "onload", function(){
+                    rp.poly();
+                    w.clearInterval( run );
+                } );
+            }
+        }
+
+
+        // commonjs
+        if( typeof exports !== "undefined" ){
+            exports.loadCSS = loadCSS;
+        }
+        else {
+            w.loadCSS = loadCSS;
+        }
+    }( typeof global !== "undefined" ? global : this ) );
+
+    /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+    (function(w){
+        "use strict";
+        /* exported loadCSS */
+        var loadCSS = function( href, before, media, attributes ){
+            // Arguments explained:
+            // `href` [REQUIRED] is the URL for your CSS file.
+            // `before` [OPTIONAL] is the element the script should use as a reference for injecting our stylesheet <link> before
+            // By default, loadCSS attempts to inject the link after the last stylesheet or script in the DOM. However, you might desire a more specific location in your document.
+            // `media` [OPTIONAL] is the media type or query of the stylesheet. By default it will be 'all'
+            // `attributes` [OPTIONAL] is the Object of attribute name/attribute value pairs to set on the stylesheet's DOM Element.
+            var doc = w.document;
+            var ss = doc.createElement( "link" );
+            var ref;
+            if( before ){
+                ref = before;
+            }
+            else {
+                var refs = ( doc.body || doc.getElementsByTagName( "head" )[ 0 ] ).childNodes;
+                ref = refs[ refs.length - 1];
+            }
+
+            var sheets = doc.styleSheets;
+            // Set any of the provided attributes to the stylesheet DOM Element.
+            if( attributes ){
+                for( var attributeName in attributes ){
+                    if( attributes.hasOwnProperty( attributeName ) ){
+                        ss.setAttribute( attributeName, attributes[attributeName] );
+                    }
+                }
+            }
+            ss.rel = "stylesheet";
+            ss.href = href;
+            // temporarily set media to something inapplicable to ensure it'll fetch without blocking render
+            ss.media = "only x";
+
+            // wait until body is defined before injecting link. This ensures a non-blocking load in IE11.
+            function ready( cb ){
+                if( doc.body ){
+                    return cb();
+                }
+                setTimeout(function(){
+                    ready( cb );
+                });
+            }
+            // Inject link
+            // Note: the ternary preserves the existing behavior of "before" argument, but we could choose to change the argument to "after" in a later release and standardize on ref.nextSibling for all refs
+            // Note: `insertBefore` is used instead of `appendChild`, for safety re: http://www.paulirish.com/2011/surefire-dom-element-insertion/
+            ready( function(){
+                ref.parentNode.insertBefore( ss, ( before ? ref : ref.nextSibling ) );
+            });
+            // A method (exposed on return object for external use) that mimics onload by polling document.styleSheets until it includes the new sheet.
+            var onloadcssdefined = function( cb ){
+                var resolvedHref = ss.href;
+                var i = sheets.length;
+                while( i-- ){
+                    if( sheets[ i ].href === resolvedHref ){
+                        return cb();
+                    }
+                }
+                setTimeout(function() {
+                    onloadcssdefined( cb );
+                });
+            };
+
+            function loadCB(){
+                if( ss.addEventListener ){
+                    ss.removeEventListener( "load", loadCB );
+                }
+                ss.media = media || "all";
+            }
+
+            // once loaded, set link's media back to `all` so that the stylesheet applies once it loads
+            if( ss.addEventListener ){
+                ss.addEventListener( "load", loadCB);
+            }
+            ss.onloadcssdefined = onloadcssdefined;
+            onloadcssdefined( loadCB );
+            return ss;
+        };
+        // commonjs
+        if( typeof exports !== "undefined" ){
+            exports.loadCSS = loadCSS;
+        }
+        else {
+            w.loadCSS = loadCSS;
+        }
+    }( typeof global !== "undefined" ? global : this ));
+
+    var limecube_ready = false;
+    var limecube_style_editor_css_ready = false;
+
+    function domReady() {
+        setTimeout(function () {
+            if (!limecube_ready) {
+                limecube_ready = true;
+
+                if (document.body) {
+                    document.body.className += " loaded";
+                } else {
+                    var bodyLoad = setInterval(function(){
+                        if (document.body) {
+                            document.body.className += " loaded";
+                            clearInterval(bodyLoad);
+                        }
+                    }, 500);
+                }
+
+                if (typeof $ !== 'undefined') {
+                    $("body").trigger("limecubeReady");
+                } else {
+                    window.addEventListener("load", function (event) {
+                        if (typeof $ !== 'undefined') $("body").trigger("limecubeReady");
+                    });
+                }
+            }
+        }, 500);
+    }
+
+    setTimeout(function () { domReady(); console.log('domReady by timeout'); }, 3000);
+
+    function styleEditorCssReady() {
+        limecube_style_editor_css_ready = true;
+    }
+</script>
+
+
+            <meta property="og:title" content="The Ultimate Guide to AI Agents in 2024" />
+                    <meta property="og:type" content="website">
+    
+            <meta property="fb:app_id" content="271979830799033">
+            
+                        <meta property="og:ttl" content="345600">
+                            <meta property="og:image" content="https://storage.googleapis.com/limecube-live-c29b24b1/root/Blog/2d-illustration-AI-Agents-Working.png" />
+                        <meta property="og:description" content="Get ready for the future of AI agents. In this article we unpack their incredible capabilities, challenges and timelines for advanced AI agents." />
+    
+            <meta name="twitter:card" content="summary" />
+        
+
+
+<link rel="stylesheet" href="/css/defaults.css?v=10.5.0.12" onload="domReady();">
+
+    <link rel="preload" as="style" href="/pe_page_sections_css/237697?v=1728890784" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="/pe_page_sections_css/237697?v=1728890784"></noscript>
+
+    <link rel="stylesheet" href="/components/page_editor/css/sections/min/headers/v2-header-standard.css?v=10.5.0.12" id="lc_header_section_css">
+    <link rel="stylesheet" href="/components/page_editor/css/sections/min/footer/standard_footer_5_col_2_2_2_2_2_2.stylesheet.css?v=10.5.0.12" id="lc_footer_section_css">
+
+<style id="module_css_b108c288-2997-475a-a58d-8425d4bc3662">
+#simple-image-module-b108c288-2997-475a-a58d-8425d4bc3662 {
+    padding: 0 0 0 0;
+}
+
+#simple-image-module-b108c288-2997-475a-a58d-8425d4bc3662 .qms-image-content {
+            border-radius: 20px;
+    }
+
+</style><style id="module_css_7cc9783e-8709-4ace-9a67-19a5a8a19cd4">
+    
+
+    #qms-simple-form-7cc9783e-8709-4ace-9a67-19a5a8a19cd4 form > h2,
+    #qms-simple-form-7cc9783e-8709-4ace-9a67-19a5a8a19cd4  form > h4  {
+
+                                    font-weight: 700;
+                            font-style: normal;
+                            font-size: 20px;
+                            letter-spacing: 1px;
+                            line-height: 1.1;
+                            text-decoration: none;
+                            text-transform: none;
+                            font-weight-back: 700;
+                        }
+
+    #qms-simple-form-7cc9783e-8709-4ace-9a67-19a5a8a19cd4  form > h2, #qms-simple-form-7cc9783e-8709-4ace-9a67-19a5a8a19cd4  form > h4 {
+                    margin-top: 0px;
+            margin-bottom: 0px;
+            }
+
+    #qms-simple-form-7cc9783e-8709-4ace-9a67-19a5a8a19cd4 .form-group .control-label {
+                    font-size: 1px;
+            }
+
+    #qms-simple-form-7cc9783e-8709-4ace-9a67-19a5a8a19cd4 .form-group .control-label,
+    #qms-simple-form-7cc9783e-8709-4ace-9a67-19a5a8a19cd4 .contactForm .cbx-label,
+    #qms-simple-form-7cc9783e-8709-4ace-9a67-19a5a8a19cd4 .contactForm .rx-label,
+    #qms-simple-form-7cc9783e-8709-4ace-9a67-19a5a8a19cd4 .contactForm .field_name,
+    #qms-simple-form-7cc9783e-8709-4ace-9a67-19a5a8a19cd4  .lc-form-recaptcha-branding,
+    #qms-simple-form-7cc9783e-8709-4ace-9a67-19a5a8a19cd4  .lc-form-recaptcha-branding a,
+    #qms-simple-form-7cc9783e-8709-4ace-9a67-19a5a8a19cd4 .checkbox-for-cbx .cbx-icon {
+        color: ;
+    }
+
+    #qms-simple-form-7cc9783e-8709-4ace-9a67-19a5a8a19cd4 form {
+        background-color: ;
+    }
+
+    @media screen and (max-width: 1024px) {
+
+        #qms-simple-form-7cc9783e-8709-4ace-9a67-19a5a8a19cd4  form > h2,
+        #qms-simple-form-7cc9783e-8709-4ace-9a67-19a5a8a19cd4  form > h4 {
+
+        font-weight: 700;
+        font-style: normal;
+        font-size: 16px;
+        letter-spacing: 0px;
+        line-height: 1;
+        text-decoration: none;
+        text-transform: none;
+        font-weight-back: 700;
+                }
+
+        #qms-simple-form-7cc9783e-8709-4ace-9a67-19a5a8a19cd4  form > h2,
+        #qms-simple-form-7cc9783e-8709-4ace-9a67-19a5a8a19cd4  form > h4 {
+         margin-top: 0px;
+            margin-bottom: 0px;
+                }
+
+        #qms-simple-form-7cc9783e-8709-4ace-9a67-19a5a8a19cd4 .form-group .control-label {
+                            font-size: 1px;
+                    }
+    }
+
+    @media screen and (max-width: 767px) {
+
+        #qms-simple-form-7cc9783e-8709-4ace-9a67-19a5a8a19cd4  form > h2,
+        #qms-simple-form-7cc9783e-8709-4ace-9a67-19a5a8a19cd4  form > h4 {
+
+                                                font-weight: 700;
+                                    font-style: normal;
+                                    font-size: 16px;
+                                    letter-spacing: 0px;
+                                    line-height: 1;
+                                    text-decoration: none;
+                                    text-transform: none;
+                                    font-weight-back: 700;
+                                    }
+
+        #qms-simple-form-7cc9783e-8709-4ace-9a67-19a5a8a19cd4  form > h2,
+        #qms-simple-form-7cc9783e-8709-4ace-9a67-19a5a8a19cd4  form > h4 {
+                            margin-top: 0px;
+                margin-bottom: 0px;
+                    }
+
+        #qms-simple-form-7cc9783e-8709-4ace-9a67-19a5a8a19cd4 .form-group .control-label {
+                            font-size: 1px;
+                    }
+
+    }
+
+    
+    #qms-simple-form-7cc9783e-8709-4ace-9a67-19a5a8a19cd4 .qms-form-button a.lc-button,
+    #qms-simple-form-7cc9783e-8709-4ace-9a67-19a5a8a19cd4 .qms-form-button a.lc-button::before,
+    #qms-simple-form-7cc9783e-8709-4ace-9a67-19a5a8a19cd4 .qms-form-button a.lc-button::after {
+        border-color: #fb7ef4;
+
+            background-color: #fb7ef4;
+        color: #ffffff;
+        }
+
+    #qms-simple-form-7cc9783e-8709-4ace-9a67-19a5a8a19cd4 .qms-form-button a.lc-button > span {
+            color: #ffffff;
+        }
+
+            #qms-simple-form-7cc9783e-8709-4ace-9a67-19a5a8a19cd4 .qms-form-button a.lc-button:hover {
+            background-color: #ffffff !important;
+            border-color: #ffffff;
+
+                    color: #ffffff;
+                }
+    
+    #qms-simple-form-7cc9783e-8709-4ace-9a67-19a5a8a19cd4 .qms-form-button a.lc-button:hover > span {
+        color: #0f0e1c;
+    }
+
+
+
+    </style><style id="module_css_988d94d8-fd84-40a2-b2d1-a57bc287cfc5">
+    #blog_summary_content_988d94d8-fd84-40a2-b2d1-a57bc287cfc5 .qms-blog-summary-post-container .qms-blog-post .qms-blog-post-picture img,
+    #blog_summary_content_988d94d8-fd84-40a2-b2d1-a57bc287cfc5 .qms-blog-summary-post-container .qms-blog-post {
+                    border-radius: 20px;
+            }
+
+</style><style id="module_css_ae88953f-a4f3-4ae9-8fcc-63fe95695d66">    
+    #lc-rct-ae88953f-a4f3-4ae9-8fcc-63fe95695d66 a.lc-button,
+    #lc-rct-ae88953f-a4f3-4ae9-8fcc-63fe95695d66 a.lc-button::before,
+    #lc-rct-ae88953f-a4f3-4ae9-8fcc-63fe95695d66 a.lc-button::after {
+        border-color: #7fc241;
+
+            background-color: #7fc241;
+        color: #ffffff;
+        }
+
+    #lc-rct-ae88953f-a4f3-4ae9-8fcc-63fe95695d66 a.lc-button > span {
+            color: #ffffff;
+        }
+
+            #lc-rct-ae88953f-a4f3-4ae9-8fcc-63fe95695d66 a.lc-button:hover {
+            background-color: #000000 !important;
+            border-color: #000000;
+
+                    color: #000000;
+                }
+    
+    #lc-rct-ae88953f-a4f3-4ae9-8fcc-63fe95695d66 a.lc-button:hover > span {
+        color: #ffffff;
+    }
+
+
+</style>
+
+
+        <link rel="preload" as="style" href="/css/checkbox-x.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="/css/checkbox-x.min.css"></noscript>
+    
+        <link rel="preload" as="style" href="/js/bootstrapdatepicker/bootstrap-datetimepicker.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="/js/bootstrapdatepicker/bootstrap-datetimepicker.min.css"></noscript>
+    
+        <link rel="preload" as="style" href="/css/fileinput.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="/css/fileinput.min.css"></noscript>
+    
+
+<!-- loader for site-->
+<style>
+    :root {
+        --theme-color-1: #21213b;
+        --theme-color-2: #0f0e1c;
+        --theme-color-3: #fb7ef4;
+        --theme-color-4: #000000;
+        --theme-color-5: #ffffff;
+    }
+
+    #owlreporter-preloader { position:fixed;top:0;left:0;width:100%;height:100%;z-index:1000;background:#fff;-webkit-transition:all .3s ease-out;transition:all .3s ease-out;}.loaded #owlreporter-preloader { visibility:hidden;opacity:0;}.no-js #owlreporter-preloader { display:none}.no-js h1 { color:#222}#site-loading-gif{ position: absolute;top: 50%;left: 50%;margin: -125px 0px 0px -125px;}
+    .container_preloader {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background-color: #ffffff;
+    }
+
+    .loader {
+        max-width: 80px;
+        width: 100%;
+        height: auto;
+        stroke-linecap: round;
+    }
+    circle {
+        fill: none;
+        stroke-width: 7;
+        animation-name: preloader;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        transform-origin: 170px 170px;
+        will-change: transform;
+    }
+    circle:nth-of-type(1) {
+        stroke-dasharray: 550px;
+        webkit-animation-delay: -0.15s;
+        animation-delay: -0.15s;
+    }
+
+    circle:nth-of-type(2) {
+        stroke-dasharray: 500px;
+        webkit-animation-delay: -0.3s;
+        animation-delay: -0.3s;
+    }
+
+    circle:nth-of-type(3) {
+        stroke-dasharray: 450px;
+        webkit-animation-delay: -0.4s;
+        animation-delay: -0.4s;
+    }
+
+    circle:nth-of-type(4) {
+        stroke-dasharray: 300px;
+        webkit-animation-delay: -0.5s;
+        animation-delay: -0.5s;
+    }
+
+    @keyframes preloader {
+        50% {
+            transform: rotate(360deg);
+        }
+    }
+</style>
+
+
+
+
+
+
+
+
+
+
+<link rel="preload" href="/css/fonts/fontawesome-webfont.woff2?v=10.5.0.12" as="font" crossorigin>
+<link rel="preload" href="/css/fonts/bootstrap/glyphicons-halflings-regular.woff2" as="font" crossorigin>
+    <!--link rel="preload" href="https://storage.googleapis.com/limecube-live-c29b24b1/root/Blog/2d-illustration-AI-Agents-Working.png" as="image" -->
+<!--qms_push_show.head_tag-->
+
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;700&display=swap"></noscript>
+
+    <!-- Custom styles for this template -->
+    <link rel="preload" as="style" href="/components/page_editor/templates/themes/limecube_v3/css/style.css?v=10.5.0.12" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="/components/page_editor/templates/themes/limecube_v3/css/style.css?v=10.5.0.12"></noscript>
+    <link rel="preload" as="style" href="/components/page_editor/templates/themes/limecube_v3/css/style-user.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="/components/page_editor/templates/themes/limecube_v3/css/style-user.css"></noscript>
+
+    
+
+
+
+
+<link rel="preload" as="style" href="/pe_style_editor_css/1728890787" as="style" onload="styleEditorCssReady();this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="/pe_style_editor_css/1728890787"></noscript>
+
+<style type="text/css">
+        </style>
+
+
+</head>
+
+<body class="fixed-header lc-client lc-page-background-size-full-width lc-page-background-repeat-no-repeat blog blog-post" itemscope itemtype="https://schema.org/Blog" data-aos-section="fade" data-aos-direction-section="InUpBig" >
+
+
+                <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KG8QR25D"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+            
+
+
+
+    <div style='z-index:100000' id='owlreporter-preloader'>
+        <div class="container_preloader">
+            <svg class="loader" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 340">
+                <circle cx="170" cy="170" r="160" stroke="#9dd16d"/>
+                <circle cx="170" cy="170" r="135" stroke="#8faaee"/>
+                <circle cx="170" cy="170" r="110" stroke="#b98fee"/>
+                <circle cx="170" cy="170" r="85" stroke="#f28ec2"/>
+            </svg>
+        </div>
+    </div>
+
+
+            <script type="text/javascript">
+
+            window.social_network_auth = false;
+
+            function enableCommentForm(user_data) {
+                var comment_form = $('form.lc-add-comment');
+
+                $('.lc-snet-signin', comment_form).hide();
+                $('textarea[name=comment]', comment_form).removeAttr('disabled').attr('placeholder', 'Your comment goes here');
+                $('.lc-comment-submit', comment_form).removeClass('hidden');
+            }
+
+            
+                        window.fbAsyncInit = function () {
+                FB.init({
+                    appId: '271979830799033',
+                    autoLogAppEvents: true,
+                    cookie: true,
+                    xfbml: true,
+                    version: 'v7.0'
+                });
+
+                $('#lcFacebookAuthButton').click(function() {
+                    FB.login(lc_facebook_signin, {
+                        scope: 'public_profile,email',
+                        return_scopes: true
+                    });
+                });
+            };
+
+            function lc_facebook_signin() {
+                FB.getLoginStatus(function (response) {
+
+                    if (response.status === 'connected') {
+
+                        $.ajax({
+                            url: ajax_prefix + 'SocialNetworkLogin/facebook',
+                            dataType: "json",
+                        }).done(function (data) {
+                            if (data.success) {
+
+                                window.social_network_auth = true;
+                                enableCommentForm(data.user_data);
+
+                            } else {
+                                if (data.errors) {
+                                    console.log(data.errors);
+                                }
+                            }
+
+                        });
+                    }
+                });
+            }
+            
+            
+                        function lc_google_init() {
+                gapi.load('auth2', function () {
+                    gapi.auth2.init({
+                        client_id: '498465203878-69io3d3a1s77n9394e9cjbq2p7u71qv9.apps.googleusercontent.com', 
+                        scope: 'profile email'
+                    }).then(function () {
+
+                        gapi.auth2.getAuthInstance().attachClickHandler(
+                            'lcGoogleAuthButton',
+                            {
+                                scope: 'profile email'
+                            },
+                            function (googleUser) {
+                                lc_google_signin(googleUser);
+                            },
+                            function (error) {
+                                console.log(error);
+                            }
+                        );
+
+                    });
+                });
+            }
+
+            function lc_google_signin(googleUser) {
+
+                $.ajax({
+                    method: 'POST',
+                    url: ajax_prefix + 'SocialNetworkLogin/google',
+                    dataType: "json",
+                    data: {
+                        id_token: googleUser.getAuthResponse().id_token
+                    }
+                }).done(function (data) {
+                    if (data.success) {
+
+                        window.social_network_auth = true;
+                        enableCommentForm(data.user_data);
+
+                    } else {
+                        if (data.errors) {
+                            console.log(data.errors);
+                        }
+                    }
+
+                });
+            }
+                    </script>
+
+        <div id="fb-root"></div>
+        <script src="https://connect.facebook.net/en_US/sdk.js" async defer></script>
+        <script src="https://apis.google.com/js/platform.js?onload=lc_google_init" async defer></script>
+        <script>window.twttr = (function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0],
+                        t = window.twttr || { };
+                if (d.getElementById(id)) return t;
+                js = d.createElement(s);
+                js.id = id;
+                js.src = "https://platform.twitter.com/widgets.js";
+                fjs.parentNode.insertBefore(js, fjs);
+
+                t._e = [];
+                t.ready = function (f) {
+                    t._e.push(f);
+                };
+
+                return t;
+            }(document, "script", "twitter-wjs"));</script>
+        <script type="text/javascript" src="//assets.pinterest.com/js/pinit.js" async defer></script>
+    
+
+
+<header id="header">
+    
+<div class="lc-sections-container lc-sections-header">
+    
+                            
+        <div id="lc-b39b3c83-deaf-4c5d-8427-c248385bf2a0" class="lc-section-wrapper">
+            <div class="lc-section-content lc-section-padding-top-none lc-section-padding-bottom-none">
+        <nav class="navbar header-standard">
+  <div class="container-fluid">
+      <div class="navbar-header">
+          
+<a class="navbar-brand navb logo-image" href="/" itemprop="url">
+	<span class="logo">
+					<img itemprop="logo" src="https://storage.googleapis.com/limecube-live-c29b24b1/root%2FMisc%2FLimecube-logo.png"
+				alt="logo"
+				border="0" height="52" />
+			</span>
+	<span class="button-in-anchor-wrapper">
+		<span class="pe-module-menu pe-main-menu">
+			<span class="button-in-anchor edit-btn"></span>
+            <span class="button-in-anchor img-tui-editor" data-logo-image="root/Misc/Limecube-logo.png"></span>
+		</span>
+	</span>
+</a>
+
+                    
+                        <div id="qms-btn-header-cta" class="lc-header-cta-button lc-button-module lc-button-alignment-center ms-auto me-2 mobile-only">
+    <a href="/registration-page"  class="lc-button lc-button-shape-pill lc-button-style-outline lc-button-size-medium button--calypso" onclick="reg.header_signup_btn_click(this, '138')">
+                    <span>Sign up</span>
+            </a>
+</div>
+
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar" aria-label="navigation bar toggle">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+          </button>
+      </div>
+      <div class="navbar-collapse collapse" id="navbar">
+          <ul id="navbar_menu_tree" class="nav navbar-nav  navbar-center">
+        <li class="lc-menu-type-root">
+        <a href="/">Home</a>
+    </li>
+    <li class="lc-menu-type-page">
+                    <a href="/features">Features</a>
+            </li>
+    <li class="lc-menu-type-page">
+                    <a href="/pricing-plan">Pricing</a>
+            </li>
+    <li class="lc-menu-type-page">
+                    <a href="/about-us">About Us</a>
+            </li>
+    <li class="lc-menu-type-blog">
+                    <a href="/blog">Blog</a>
+            </li>
+    <li class="lc-menu-type-placeholder dropdown">
+                    <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Support <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+            <li class="lc-menu-type-external-link">
+                            <a href="https://support.limecube.co/" target="_blank">Support Centre</a>
+                    </li>
+            <li class="lc-menu-type-external-link">
+                            <a href="https://limecube.atlassian.net/servicedesk/customer/portals" target="_blank">Log Support Request</a>
+                    </li>
+    </ul>
+
+            </li>
+
+</ul>
+
+
+      </div>
+            <div class="navbar-text lc-header-custom-text"><p><a href="/login-page">LOGIN</a></p></div>
+                <div id="qms-btn-header-cta" class="lc-header-cta-button lc-button-module lc-button-alignment-center ms-3 me-0">
+    <a href="/registration-page"  class="lc-button lc-button-shape-pill lc-button-style-outline lc-button-size-medium button--calypso" onclick="reg.header_signup_btn_click(this, '138')">
+                    <span>Sign up</span>
+            </a>
+</div>
+
+        </div>
+</nav>
+
+
+    </div>
+        <div class="lc-section-overlay"></div>
+            </div>
+
+        </div>
+
+    
+
+</header>
+
+<div id="content-wrapper">
+    
+<div class="lc-sections-container lc-sections-content">
+    
+                            
+        <div id="lc-44646f3e-b689-4670-94d1-a612be3d1bee" class="lc-section-wrapper">
+            <div class="lc-section-content lc-section-padding-top-medium lc-section-padding-bottom-medium">
+        <!--Narrow width 1 column-->
+<section class="lc-section-content lc-section-padding-bottom-small" itemscope itemtype="http://schema.org/BlogPosting">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1">
+              <h1 class="lc-blog-title" itemprop="headline">The Ultimate Guide to AI Agents</h1>
+            </div>
+            <div class="col-lg-12" itemprop="articleBody">
+                <div class="qms-client-template-area">
+<div id="simple-image-module-b108c288-2997-475a-a58d-8425d4bc3662" class="qms-image-module lc-image-module-resizing-mode-default" data-aos="fadeIn">
+    <div class="qms-image-content" style="">
+                                    <picture >
+<source type="image/webp" data-srcset="
+https://storage.googleapis.com/limecube-live-c29b24b1/thumb%2FBlog%2F2d-illustration-AI-Agents-Working_w320_fwidth.webp 320w,
+https://storage.googleapis.com/limecube-live-c29b24b1/thumb%2FBlog%2F2d-illustration-AI-Agents-Working_w480_fwidth.webp 480w,
+https://storage.googleapis.com/limecube-live-c29b24b1/thumb%2FBlog%2F2d-illustration-AI-Agents-Working_w768_fwidth.webp 768w,
+https://storage.googleapis.com/limecube-live-c29b24b1/thumb%2FBlog%2F2d-illustration-AI-Agents-Working_w1024_fwidth.webp 1024w,
+https://storage.googleapis.com/limecube-live-c29b24b1/thumb%2FBlog%2F2d-illustration-AI-Agents-Working_w1280_fwidth.webp 1280w,
+https://storage.googleapis.com/limecube-live-c29b24b1/thumb%2FBlog%2F2d-illustration-AI-Agents-Working_w1920_fwidth.webp 1920w" />
+
+<img itemprop="image"  class="" src="https://storage.googleapis.com/limecube-live-c29b24b1/root%2FBlog%2F2d-illustration-AI-Agents-Working.png"
+ srcset ="
+https://storage.googleapis.com/limecube-live-c29b24b1/thumb%2FBlog%2F2d-illustration-AI-Agents-Working_w320_fwidth.png 320w,
+https://storage.googleapis.com/limecube-live-c29b24b1/thumb%2FBlog%2F2d-illustration-AI-Agents-Working_w480_fwidth.png 480w,
+https://storage.googleapis.com/limecube-live-c29b24b1/thumb%2FBlog%2F2d-illustration-AI-Agents-Working_w768_fwidth.png 768w,
+https://storage.googleapis.com/limecube-live-c29b24b1/thumb%2FBlog%2F2d-illustration-AI-Agents-Working_w1024_fwidth.png 1024w,
+https://storage.googleapis.com/limecube-live-c29b24b1/thumb%2FBlog%2F2d-illustration-AI-Agents-Working_w1280_fwidth.png 1280w,
+https://storage.googleapis.com/limecube-live-c29b24b1/thumb%2FBlog%2F2d-illustration-AI-Agents-Working_w1920_fwidth.png 1920w"
+ content="https://storage.googleapis.com/limecube-live-c29b24b1/thumb%2FBlog%2F2d-illustration-AI-Agents-Working_w1920_fwidth.png"  title="" alt="AI Agents Working" style="width:100%" />
+</picture>
+                        </div>    </div>
+</div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/Full width content-->
+<section class="content spacing-narrow">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1">
+                <div class="row">
+                    <div class="col-lg-12">
+                                                <div class="qms-client-template-area"><div class="qms-text-module qms-simple-text-module"    data-aos="fadeInUpBig"
+><p>Get ready for the future of AI with this friendly and comprehensive guide to AI agents. Discover what they are, their incredible capabilities, and where we stand in developing real-world autonomous agent applications. Jump into the world of agentic workflows, explore current use cases, and understand the challenges and timelines for advanced AI agents.</p>
+<h2>What Exactly Are AI Agents?</h2>
+<p>To start your journey with AI agents, it's important to understand their core concept and functionality. AI agents are advanced AI assistants designed to autonomously perform tasks.</p>
+<h3>Defining AI Agents</h3>
+<p>Imagine having a super-efficient assistant you can delegate tasks to. AI agents can operate independently or collaboratively, using various tools and resources to achieve their objectives. They are designed to:</p>
+<ul>
+<li>Execute tasks autonomously</li>
+<li>Work individually or in teams</li>
+<li>Utilise various tools and resources</li>
+</ul>
+<p>These points highlight the independence, flexibility, and resourcefulness of AI agents, making them comparable to versatile human assistants.</p>
+<h3>Capabilities of AI Agents</h3>
+<p>AI agents are versatile, capable of handling tasks ranging from simple queries to complex problem-solving. They can adapt to their surroundings, learn from interactions, and even work with other agents. Their key capabilities include:</p>
+<ul>
+<li>Adapting to different environments</li>
+<li>Learning from interactions</li>
+<li>Collaborating with other agents</li>
+</ul>
+<p>These capabilities showcase the adaptive and collaborative nature of AI agents, making them suitable for a wide range of applications.</p>
+<h2>Unveiling Agentic Workflows</h2>
+<p>Agentic workflows are essential for enhancing AI agents' performance. These workflows involve breaking tasks into smaller, manageable steps, allowing the AI to refine its output continuously.</p>
+<h3>Understanding Agentic Workflows</h3>
+<p>Instead of expecting an AI to complete a task in one go (zero-shot prompting), agentic workflows divide tasks into iterative steps. This approach leads to higher quality and more accurate results. For example, consider asking an AI to write an essay. Instead of writing it in one go, you could have it:</p>
+<ol>
+<li>Outline the essay</li>
+<li>Conduct research on the topic</li>
+<li>Draft the essay</li>
+<li>Revise and improve the draft</li>
+</ol>
+<p>This step-by-step approach ensures a polished final product by allowing the AI to refine its work continuously.</p>
+<h2>Boosting AI Performance with Agentic Workflows</h2>
+<p>Implementing agentic workflows significantly improves AI agents' performance. These workflows enhance reasoning and accuracy, leading to superior results.</p>
+<h3>Performance Metrics</h3>
+<p>Studies have shown that AI models like GPT-3.5 perform much better when using agentic workflows. For instance, on the HumanEval coding benchmark, GPT-3.5 with an agentic workflow outperformed its standard version. This improvement can be attributed to the iterative loops that enable AI agents to:</p>
+<ul>
+<li>Think critically about each step</li>
+<li>Research thoroughly</li>
+<li>Revise and improve their output</li>
+</ul>
+<p>These iterative processes help produce higher-quality results, especially for complex tasks requiring detailed analysis.</p>
+<h2>Making AI Accessible with No-Code Tools</h2>
+<p>No-code tools like Cassidy AI simplify creating and implementing agentic workflows, making advanced AI capabilities accessible to non-technical users.</p>
+<h3>No-Code Implementation</h3>
+<p>With Cassidy AI, you can describe your workflow in natural language, and the tool will automatically create the agentic workflow for you. This process eliminates the need for coding skills, making it easier for anyone to create sophisticated AI-driven workflows. For instance, you could:</p>
+<ul>
+<li>Describe the workflow in natural language</li>
+<li>Automatically create the workflow using the tool</li>
+<li>Analyse and evaluate tasks based on the workflow</li>
+</ul>
+<h3>Benefits of No-Code Tools</h3>
+<p>No-code tools democratise access to advanced AI capabilities, allowing anyone, regardless of technical expertise, to harness the power of agentic workflows. The main benefits include:</p>
+<ul>
+<li>Ease of use: No complex coding required</li>
+<li>Accessibility: Available to non-technical users</li>
+<li>Quick implementation: Fast and efficient setup</li>
+</ul>
+<p>These benefits make it possible for small businesses and entrepreneurs to leverage AI technology without needing in-depth technical knowledge.</p>
+<h2>Real-World Applications of AI Agents</h2>
+<p>Let's explore some exciting real-world applications of AI agents, showcasing their potential and current limitations.</p>
+<h3>Web Browsing Agents</h3>
+<p>Multi-on is an AI agent that performs tasks within your web browser, such as booking reservations or searching for flights. This capability offers a glimpse into the future of AI agents, although it currently handles only niche tasks. Examples of what Multi-on can do include:</p>
+<ul>
+<li>Booking reservations</li>
+<li>Searching for flights</li>
+<li>Performing web searches</li>
+</ul>
+<p>These tasks demonstrate how AI agents can simplify everyday activities by automating routine online actions.</p>
+<h3>AI Agent Devices</h3>
+<p>Devices like the Rabbit R1 act as AI assistants wrapped in hardware. They can plan trips, book flights, and create itineraries. However, they face early criticism for not meeting high expectations. The Rabbit R1's functionalities include:</p>
+<ul>
+<li>Planning trips</li>
+<li>Booking flights</li>
+<li>Creating itineraries</li>
+</ul>
+<p>These features highlight the potential of AI agents to assist with travel planning, although there is room for improvement.</p>
+<h3>Customer Service Agents</h3>
+<p>Google's customer service agent can handle real-time inquiries, showcasing AI agents' practical utility in customer support. These agents can:</p>
+<ul>
+<li>Handle inquiries efficiently</li>
+<li>Apply discounts as needed</li>
+<li>Suggest additional products to customers</li>
+</ul>
+<p>This application demonstrates how AI agents can enhance customer service by providing quick and accurate responses.</p>
+<h3>Coding Agents</h3>
+<p>Devin AI from Cognition Labs and Meta's engineering agents assist with coding and software development. They offer advanced capabilities such as:</p>
+<ul>
+<li>Planning coding tasks</li>
+<li>Debugging code</li>
+<li>Deploying projects</li>
+</ul>
+<p>These coding agents show how AI can support developers in creating, refining, and implementing software solutions.</p>
+<h3>Device Control Agents</h3>
+<p>OpenAI is developing agents that can control a user's computer to automate complex tasks, like transferring data or filling out expense reports. These agents can:</p>
+<ul>
+<li>Transfer data efficiently</li>
+<li>Fill out reports accurately</li>
+<li>Perform automated actions seamlessly</li>
+</ul>
+<p>This development highlights the potential for AI agents to take over repetitive and time-consuming tasks, increasing productivity.</p>
+<h2>Overcoming Challenges in Building Reliable AI Agents</h2>
+<p>Creating reliable AI agents is no easy feat. Here are some major challenges developers face and the steps being taken to address them.</p>
+<h3>Multi-Step Tasks</h3>
+<p>AI agents struggle with multi-step tasks due to the high error rate in individual actions. Each step must be nearly perfect for the sequence to succeed, requiring:</p>
+<ul>
+<li>High precision in execution</li>
+<li>Reduction of error rates</li>
+<li>Management of complex sequences</li>
+</ul>
+<p>Addressing these challenges involves improving the accuracy and reliability of each action within the workflow.</p>
+<h3>Scalability</h3>
+<p>Scalability is another hurdle. Current models need further development to support long-term agentic workflows reliably. This requires:</p>
+<ul>
+<li>Larger models with more capacity</li>
+<li>Increased computational power</li>
+<li>Enhanced support for long-term workflows</li>
+</ul>
+<p>Scaling AI agents effectively ensures they can handle more complex and extended tasks.</p>
+<h3>Instruction Following</h3>
+<p>AI agents often fail to follow instructions with subtlety and nuance, especially over extended periods. Improving this aspect involves:</p>
+<ul>
+<li>Enhancing the agents' understanding of nuanced instructions</li>
+<li>Ensuring consistency over long tasks</li>
+<li>Reducing errors in extended instruction following</li>
+</ul>
+<p>These improvements are critical for making AI agents more dependable in complex scenarios.</p>
+<h3>Autonomy Risks</h3>
+<p>Fully autonomous AI agents pose significant risks, such as acting independently of human control and leading to unintended consequences. Mitigating these risks involves:</p>
+<ul>
+<li>Ensuring proper oversight and control mechanisms</li>
+<li>Preventing unintended actions</li>
+<li>Addressing security concerns</li>
+</ul>
+<p>Balancing autonomy with safety is essential for developing trustworthy AI agents.</p>
+<h2>Future Visions for AI Agents</h2>
+<p>What does the future hold for AI agents? Various tech leaders and companies have shared their visions, offering insights into potential advancements.</p>
+<h3>Google's Vision</h3>
+<p>Google aims to develop multimodal AI agents that understand different contexts and modalities, making them more versatile and useful. Their goal is to:</p>
+<ul>
+<li>Understand multiple contexts seamlessly</li>
+<li>Integrate various modalities effectively</li>
+<li>Enhance versatility and functionality</li>
+</ul>
+<p>This vision underscores the importance of creating adaptable AI agents that can handle diverse tasks.</p>
+<h3>Bill Gates' Perspective</h3>
+<p>Bill Gates envisions AI agents as executive assistants that handle a wide range of tasks by accessing all necessary information and providing useful advice. His vision includes:</p>
+<ul>
+<li>Acting as comprehensive executive assistants</li>
+<li>Managing a wide range of tasks</li>
+<li>Providing valuable insights and advice</li>
+</ul>
+<p>This perspective highlights the potential for AI agents to become indispensable aides in both personal and professional settings.</p>
+<h3>Nvidia's Approach</h3>
+<p>Nvidia's Jensen Huang talks about AI agents as team members that can collaborate with other agents and humans to complete complex tasks. Their approach involves:</p>
+<ul>
+<li>Facilitating collaboration with other agents</li>
+<li>Working effectively with human teammates</li>
+<li>Tackling complex tasks through teamwork</li>
+</ul>
+<p>This approach emphasizes the collaborative potential of AI agents in achieving complex goals.</p>
+<h3>Meta's Development</h3>
+<p>Meta is focusing on building AI agents that assist with coding, software development, and monetisation, aiming for both internal and customer use. Their focus areas are:</p>
+<ul>
+<li>Providing coding assistance</li>
+<li>Supporting software development</li>
+<li>Enhancing monetisation efforts</li>
+</ul>
+<p>Meta's development aims to make AI agents valuable tools in the tech industry.</p>
+<h2>Key Components of AI Agents</h2>
+<p>To understand how AI agents function, let's break down their key components.</p>
+<h3>Tools</h3>
+<p>AI agents use various tools to execute tasks, ranging from simple APIs to complex software systems. These tools enable them to:</p>
+<ul>
+<li>Perform specific tasks efficiently</li>
+<li>Access necessary resources</li>
+<li>Integrate with different systems</li>
+</ul>
+<h3>Memory</h3>
+<p>Memory is crucial for AI agents to store and retrieve information, enabling them to perform tasks requiring long-term planning and context. This component allows them to:</p>
+<ul>
+<li>Store important data</li>
+<li>Retrieve relevant information</li>
+<li>Plan and execute tasks over time</li>
+</ul>
+<h3>Planning</h3>
+<p>Effective planning allows AI agents to break down tasks into manageable steps, ensuring more accurate and efficient execution. This involves:</p>
+<ul>
+<li>Decomposing tasks into smaller actions</li>
+<li>Sequencing steps logically</li>
+<li>Enhancing task execution accuracy</li>
+</ul>
+<h3>Actions</h3>
+<p>Actions are the core of what AI agents do. They perform specific tasks based on the instructions and planning provided. This includes:</p>
+<ul>
+<li>Executing planned tasks</li>
+<li>Following detailed instructions</li>
+<li>Achieving desired outcomes</li>
+</ul>
+<p>Understanding these components helps you grasp the complexity and potential of AI agents. As technology advances, these agents will become more capable and integral to various industries.</p>
+<h2>Optimising AI Agents with Better Workflows</h2>
+<p>To get the best out of AI agents, focus on creating better workflows. These can significantly enhance coding performance and overall efficiency.</p>
+<h3>Flow Engineering</h3>
+<p>Flow engineering involves designing explicit steps for AI agents to follow. This approach isn't about better models or prompts but about planning workflows in a structured manner. Effective flow engineering includes:</p>
+<ul>
+<li>Creating explicit steps for tasks</li>
+<li>Structuring workflows systematically</li>
+<li>Enhancing overall efficiency</li>
+</ul>
+<h3>Alpha Codium Workflow</h3>
+<p>The Alpha Codium workflow is a prime example of achieving state-of-the-art coding performance through well-defined steps. This workflow includes:</p>
+<ul>
+<li>Planning coding tasks meticulously</li>
+<li>Executing steps efficiently</li>
+<li>Generating high-quality code</li>
+</ul>
+<h2>FAQ</h2>
+<p><strong>What are AI Agents?</strong></p>
+<p>AI agents are advanced AI assistants designed to autonomously execute tasks, either independently or as part of a team.</p>
+<p><strong>How do agentic workflows improve AI performance?</strong></p>
+<p>Agentic workflows break tasks into smaller steps, allowing the AI to refine its output continuously, resulting in higher quality and accuracy.</p>
+<p><strong>What is flow engineering?</strong></p>
+<p>Flow engineering involves designing structured workflows for AI agents, focusing on explicit steps to enhance task execution and efficiency.</p>
+<p><strong>Can non-technical users create AI agent workflows?</strong></p>
+<p>Yes, no-code tools like Cassidy AI make it easier for non-technical users to create and implement agentic workflows.</p>
+<p>Signup to our blog for ongoing updates!</p></div></div>
+                                                <div class="qms-blog-post-info">
+                            <div class="qms-blog-post-date">Posted on: <span itemprop="datePublished">10 July, 2024</span></div><div class="qms-blog-post-categories">
+    Category: 
+            <a href="/blog/category/business-tips">Business Tips</a>    </div>
+<div class="qms-blog-post-tags">
+    Tags: 
+    <span itemprop="keywords">
+            <a href="/blog/tag/artificial-intelligence">Artificial Intelligence</a>        </span>
+</div>
+
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/Narrow width 1 column-->
+
+    </div>
+        <div class="lc-section-overlay"></div>
+            </div>
+
+    
+                            
+        <div id="lc-3213c2aa-a11e-45fd-89da-3e2f55cac33a" class="lc-section-wrapper lc-stored-section-1752">
+            <div class="lc-section-content lc-section-padding-top-medium lc-section-padding-bottom-medium">
+        <!--Full width content-->
+<section class="content spacing-lg">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="qms-client-template-area"><div class="qms-text-module qms-simple-text-module"    data-aos="fadeInUpBig"
+><h2><span class="font-color" id="textLink-lf21gu1j1g52umlynq5" style="color: var(--theme-color-5) !important;">Build your site in 60 seconds with AI</span></h2>
+<p class="lc-text-font-size-medium"><strong><span class="font-color" id="textLink-lf21gqrztybktyrwb6s" style="color: var(--theme-color-5) !important;">Limecube's <a class="link-page" id="textLink-lhcnzfft8lxu7yz4itu" href="/" title="">AI Website Builder</a> can get you up and running fast!</span></strong></p>
+<p class="lc-text-font-size-medium"><span class="font-color" id="textLink-lf21gxacln2jjj6tkdk" style="color: var(--theme-color-5) !important;">Tell us about your website, choose a colour palette and BOOM! It's done!</span></p></div><div id="lc-rct-ae88953f-a4f3-4ae9-8fcc-63fe95695d66" class="lc-rct-wrapper lc-button-wrapper"></div></div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/Full width content-->
+    </div>
+        <div class="lc-section-overlay"></div>
+            </div>
+
+    
+                            
+        <div id="lc-c9e87af1-8320-4a56-b26c-da35395ca119" class="lc-section-wrapper lc-stored-section-222">
+            <div class="lc-section-content lc-section-padding-top-medium lc-section-padding-bottom-small">
+        <!--Standard width 1 column-->
+<section class="content spacing-default">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-sm-12">
+                <div class="qms-client-template-area"><div class="qms-blog-summary qms-blog-summary-module"    data-aos="fadeInUpBig"
+>
+    <div id="blog_summary_content_988d94d8-fd84-40a2-b2d1-a57bc287cfc5">
+        
+                
+<div class="qms-blog-summary-layout qms-blog-summary-horizontal qms-blog-summary-margin-medium">
+        <div class="qms-blog-summary-post-container qms-blog-summary-cols-2" itemscope itemtype="http://schema.org/Blog">
+                                                                        
+            <div class="qms-blog-post" style=""  itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting">
+                <div itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+                    <meta itemprop="name" content="" />
+                                            <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+                            <img itemprop="url image" src="https://storage.googleapis.com/limecube-live-c29b24b1/root%2FMisc%2FLimecube-logo.png" style="display:none;" />
+                        </div>
+                                    </div>
+                                    <div class="qms-blog-post-picture qms-blog-summary-image-with-menu">
+                                                <a href="/aligning-your-value-proposition-target-audiences" style="height:300px">
+                                                                                                <picture >
+<source type="image/webp" data-srcset="
+https://storage.googleapis.com/limecube-live-c29b24b1/thumb%2FBlog%2FM%2F2d-illustration-audience-value_w320_h180_frectangle.webp 320w,
+https://storage.googleapis.com/limecube-live-c29b24b1/thumb%2FBlog%2FM%2F2d-illustration-audience-value_w480_h270_frectangle.webp 480w,
+https://storage.googleapis.com/limecube-live-c29b24b1/thumb%2FBlog%2FM%2F2d-illustration-audience-value_w768_h432_frectangle.webp 768w,
+https://storage.googleapis.com/limecube-live-c29b24b1/thumb%2FBlog%2FM%2F2d-illustration-audience-value_w1024_h576_frectangle.webp 1024w,
+https://storage.googleapis.com/limecube-live-c29b24b1/thumb%2FBlog%2FM%2F2d-illustration-audience-value_w1280_h720_frectangle.webp 1280w,
+https://storage.googleapis.com/limecube-live-c29b24b1/thumb%2FBlog%2FM%2F2d-illustration-audience-value_w1920_h1080_frectangle.webp 1920w" />
+
+<img itemprop="image thumbnailUrl"  class=" lazy" data-src="https://storage.googleapis.com/limecube-live-c29b24b1/thumb%2FBlog%2FM%2F2d-illustration-audience-value_w1920_h1080_frectangle.png"
+data-srcset ="
+https://storage.googleapis.com/limecube-live-c29b24b1/thumb%2FBlog%2FM%2F2d-illustration-audience-value_w320_h180_frectangle.png 320w,
+https://storage.googleapis.com/limecube-live-c29b24b1/thumb%2FBlog%2FM%2F2d-illustration-audience-value_w480_h270_frectangle.png 480w,
+https://storage.googleapis.com/limecube-live-c29b24b1/thumb%2FBlog%2FM%2F2d-illustration-audience-value_w768_h432_frectangle.png 768w,
+https://storage.googleapis.com/limecube-live-c29b24b1/thumb%2FBlog%2FM%2F2d-illustration-audience-value_w1024_h576_frectangle.png 1024w,
+https://storage.googleapis.com/limecube-live-c29b24b1/thumb%2FBlog%2FM%2F2d-illustration-audience-value_w1280_h720_frectangle.png 1280w,
+https://storage.googleapis.com/limecube-live-c29b24b1/thumb%2FBlog%2FM%2F2d-illustration-audience-value_w1920_h1080_frectangle.png 1920w"
+ content="https://storage.googleapis.com/limecube-live-c29b24b1/thumb%2FBlog%2FM%2F2d-illustration-audience-value_w1920_h1080_frectangle.png"  title="Aligning Your Value Proposition with Your Target Audience&#039;s Needs" alt="Aligning Your Value Proposition with Your Target Audience&#039;s Needs." border="0" style="height:300px" data-height="300" />
+</picture>
+                                                                                                                </a>
+                    </div>
+                                <div class="qms-blog-post-description">
+                    <div class="space-around hor-none vert-medium">
+                        <h3 class="qms-blog-post-title" itemprop="headline"><a href="/aligning-your-value-proposition-target-audiences" itemprop="url">Aligning Your Value Proposition with Your Target Audience's Needs</a></h3>
+                        <p class="qms-blog-post-date">Posted on: <span itemprop="datePublished">02 October, 2024</span></p>                                                                            <div class="qms-blog-post-excerpt" itemprop="description">
+                                <p>Introduction
+In a crowded marketplace, having a strong value proposition is essential for standing o.....<br><a href="/aligning-your-value-proposition-target-audiences">Read more</a></p>
+                            </div>
+                                                                                            </div>
+                </div>
+            </div>
+                                                                
+            <div class="qms-blog-post" style=""  itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting">
+                <div itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+                    <meta itemprop="name" content="" />
+                                            <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+                            <img itemprop="url image" src="https://storage.googleapis.com/limecube-live-c29b24b1/root%2FMisc%2FLimecube-logo.png" style="display:none;" />
+                        </div>
+                                    </div>
+                                    <div class="qms-blog-post-picture qms-blog-summary-image-with-menu">
+                                                <a href="/common-pitfalls-in-target-audience-identification" style="height:300px">
+                                                                                                <picture >
+<source type="image/webp" data-srcset="
+https://storage.googleapis.com/limecube-live-c29b24b1/thumb%2FBlog%2FM%2F2d-illustration-audience-working_w320_h180_frectangle.webp 320w,
+https://storage.googleapis.com/limecube-live-c29b24b1/thumb%2FBlog%2FM%2F2d-illustration-audience-working_w480_h270_frectangle.webp 480w,
+https://storage.googleapis.com/limecube-live-c29b24b1/thumb%2FBlog%2FM%2F2d-illustration-audience-working_w768_h432_frectangle.webp 768w,
+https://storage.googleapis.com/limecube-live-c29b24b1/thumb%2FBlog%2FM%2F2d-illustration-audience-working_w1024_h576_frectangle.webp 1024w,
+https://storage.googleapis.com/limecube-live-c29b24b1/thumb%2FBlog%2FM%2F2d-illustration-audience-working_w1280_h720_frectangle.webp 1280w,
+https://storage.googleapis.com/limecube-live-c29b24b1/thumb%2FBlog%2FM%2F2d-illustration-audience-working_w1920_h1080_frectangle.webp 1920w" />
+
+<img itemprop="image thumbnailUrl"  class=" lazy" data-src="https://storage.googleapis.com/limecube-live-c29b24b1/thumb%2FBlog%2FM%2F2d-illustration-audience-working_w1920_h1080_frectangle.png"
+data-srcset ="
+https://storage.googleapis.com/limecube-live-c29b24b1/thumb%2FBlog%2FM%2F2d-illustration-audience-working_w320_h180_frectangle.png 320w,
+https://storage.googleapis.com/limecube-live-c29b24b1/thumb%2FBlog%2FM%2F2d-illustration-audience-working_w480_h270_frectangle.png 480w,
+https://storage.googleapis.com/limecube-live-c29b24b1/thumb%2FBlog%2FM%2F2d-illustration-audience-working_w768_h432_frectangle.png 768w,
+https://storage.googleapis.com/limecube-live-c29b24b1/thumb%2FBlog%2FM%2F2d-illustration-audience-working_w1024_h576_frectangle.png 1024w,
+https://storage.googleapis.com/limecube-live-c29b24b1/thumb%2FBlog%2FM%2F2d-illustration-audience-working_w1280_h720_frectangle.png 1280w,
+https://storage.googleapis.com/limecube-live-c29b24b1/thumb%2FBlog%2FM%2F2d-illustration-audience-working_w1920_h1080_frectangle.png 1920w"
+ content="https://storage.googleapis.com/limecube-live-c29b24b1/thumb%2FBlog%2FM%2F2d-illustration-audience-working_w1920_h1080_frectangle.png"  title="Avoiding Missteps: Common Pitfalls in Target Audience Identification" alt="Avoiding Missteps: Common Pitfalls in Target Audience Identification." border="0" style="height:300px" data-height="300" />
+</picture>
+                                                                                                                </a>
+                    </div>
+                                <div class="qms-blog-post-description">
+                    <div class="space-around hor-none vert-medium">
+                        <h3 class="qms-blog-post-title" itemprop="headline"><a href="/common-pitfalls-in-target-audience-identification" itemprop="url">Avoiding Missteps: Common Pitfalls in Target Audience Identification</a></h3>
+                        <p class="qms-blog-post-date">Posted on: <span itemprop="datePublished">13 October, 2024</span></p>                                                                            <div class="qms-blog-post-excerpt" itemprop="description">
+                                <p>Introduction
+Understanding your target audience is fundamental to successful marketing. However, the.....<br><a href="/common-pitfalls-in-target-audience-identification">Read more</a></p>
+                            </div>
+                                                                                            </div>
+                </div>
+            </div>
+            </div>
+</div>
+
+    </div>
+    </div></div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Standard width 1 column-->
+
+
+    </div>
+        <div class="lc-section-overlay"></div>
+            </div>
+
+    
+                            
+        <div id="lc-52221a4a-5d26-4fac-a84a-9d97afb9ca67" class="lc-section-wrapper lc-stored-section-221">
+            <div class="lc-section-content lc-section-padding-top-large lc-section-padding-bottom-large">
+        <!--Narrow width 1 column-->
+<section class="content spacing-narrow">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1">
+                <div class="row">
+                    <div class="col-lg-12">
+                    <div class="qms-client-template-area"><div class="qms-text-module qms-simple-text-module"    data-aos="fadeInUpBig"
+><h2 style="text-align: center;">SUBSCRIBE TO OUR NEWSLETTER</h2>
+<p style="text-align: center;">Subscribe to receive updates on new features, themes, tips and tricks to make your website better.<br>We promise not to spam you! :)</p></div><div id="lc-rct-7cc9783e-8709-4ace-9a67-19a5a8a19cd4" class="lc-rct-wrapper lc-simple-form-wrapper"></div><div class="qms-text-module qms-simple-text-module"    data-aos="fadeInUpBig"
+><p style="text-align: center;">View our <span style="text-decoration: underline;"><a class="link-page" id="textLink-lnawt28ghnnncf8j2ue" href="/privacy-policy" title="">privacy policy here</a></span>.</p></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/Narrow width 1 column-->
+    </div>
+        <div class="lc-section-overlay"></div>
+            </div>
+
+        </div>
+
+</div>
+
+<footer id="footer">
+    
+<div class="lc-sections-container lc-sections-footer">
+    
+                            
+        <div id="lc-c186b218-d887-4313-8202-8191940d04f4" class="lc-section-wrapper">
+            <div class="lc-section-content lc-section-padding-top-medium lc-section-padding-bottom-medium">
+        <div class="container">
+    <div class="row">
+        <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
+            <div class="qms-client-template-area"><div class="qms-text-module qms-simple-text-module"    data-aos="fadeInUpBig"
+><p class="texth4">Company</p>
+<p><a href="/about-us">About Us</a></p>
+<p><a href="/press-and-media">Press and Media</a></p>
+<p><a href="/agencies">Agency Partnerships</a></p>
+<p><a href="/terms-of-service">Terms of Service</a></p>
+<p><a href="/privacy-policy">Privacy Policy</a></p>
+<p><a class="link-page" id="textLink-lpitw4hpi2vggymgqgn" href="/security-policy" title="">Security Policy</a></p></div></div>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
+            <div class="qms-client-template-area"><div class="qms-text-module qms-simple-text-module"    data-aos="fadeInUpBig"
+><p class="texth4">Product</p>
+<p><a href="/"></a><a class="link-page" id="textLink-lg34c5bca1kqoh5twie" href="/" title="">AI Website Builder</a></p>
+<p><a class="link-page" id="textLink-lio12or0kwfxluxdvw" href="/themes" title="">Themes</a></p>
+<p><a href="/features">Features</a></p>
+<p><a href="/pricing-plan">Pricing Plans</a></p>
+<p><a href="/limecube-for-students">Limecube for Students</a></p></div></div>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
+            <div class="qms-client-template-area"><div class="qms-text-module qms-simple-text-module"    data-aos="fadeInUpBig"
+><p class="texth4">Support</p>
+<p><a rel="noopener" href="https://support.limecube.co/" target="_blank">Help and Support</a></p>
+<p><a href="/login-page">Login</a></p>
+<p><a href="/digital-marketing-guide">Digital Marketing Guide</a></p></div></div>
+        </div>
+        <div class="col-lg-2 col-lg-offset-0 col-md-2 col-md-offset-0 col-sm-3 col-sm-offset-0 col-xs-12 col-xs-offset-0">
+            <div class="qms-client-template-area"><div class="qms-text-module qms-simple-text-module"    data-aos="fadeInUpBig"
+><p class="texth4">Blog</p>
+<p><a href="/blog">Blog</a></p>
+<p><a href="/blog/category/helpful-tips">Helpful Tips</a></p>
+<p><a href="/blog/category/latest-news">Latest News</a></p>
+<p><a href="/blog/category/new-features">New Features</a></p></div></div>
+        </div>
+        <div class="col-lg-2 col-lg-offset-2 col-md-3 col-md-offset-1 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 margin-none-copyright-social">
+            <div class="qms-client-template-area"><div class="qms-text-module qms-simple-text-module"    data-aos="fadeInUpBig"
+><p class="texth4">Follow</p>
+<p><a rel="noopener" href="https://www.instagram.com/limecubesitebuilder/" target="_blank"><img itemprop="image" style="margin: 0px 15px 0px 0;" src="https://storage.googleapis.com/limecube-live-central/central%2Flimecube_v3%2FIcons%2Finstagram.png?lcc=gj36nno8h86" alt="instagram" width="30" height="29"></a> <a rel="noopener" href="https://www.facebook.com/limecube.co/" target="_blank"><img itemprop="image" style="margin: 0px 15px 0px 0;" src="https://storage.googleapis.com/limecube-live-central/central%2Flimecube_v3%2FIcons%2Ffacebook.png?lcc=u3c5t8h9xdi" alt="facebook" width="30" height="30"></a><a rel="noopener" href="https://twitter.com/limecubeco" target="_blank"><img itemprop="image" style="margin: 0px 15px 0px 0;" src="https://storage.googleapis.com/limecube-live-c29b24b1/root%2FIcons%2Fx-icon.png?lcc=9rymup03s15" alt="X" width="28" height="29"></a></p>
+<p>Copyright © 2024<br>All Rights Reserved</p></div></div>
+            <div class="footer-13-social-buttons"    data-aos="fadeInUpBig"
+>
+                            </div>
+        </div>
+    </div>
+    <div class="row footer-copyright-padding">
+        <div class="lc-copyright-center"    data-aos="fadeInUpBig"
+>
+                    </div>
+    </div>
+</div>
+
+    </div>
+        <div class="lc-section-overlay"></div>
+            </div>
+
+        </div>
+
+    
+
+
+</footer>
+
+
+
+<script type="text/javascript">
+    var script_url = '/';
+    var images_prefix = '/css/images/';
+    var ajax_prefix = '/';
+    var common_prefix = '';
+    var system_moment_format_date = 'L1';
+    var system_moment_format_time = 'LH';
+    var system_moment_format_datetime = 'L1 LH';
+    var bootstrap_format = {date: 'dd MM, yyyy', time: 'hh:ii'};
+
+    </script>
+
+<script type="text/javascript" src="/js/AJAX.js"></script>
+
+
+
+
+
+    <nav class="qms-blog-post-nav nav-growpop">
+                    <a class="prev" href="/strengthen-your-startups-brand-identity">
+                <span class="icon-wrap"><svg class="icon" width="24" height="24" viewBox="0 0 64 64"><path d="M26.667 10.667q1.104 0 1.885 0.781t0.781 1.885q0 1.125-0.792 1.896l-14.104 14.104h41.563q1.104 0 1.885 0.781t0.781 1.885-0.781 1.885-1.885 0.781h-41.563l14.104 14.104q0.792 0.771 0.792 1.896 0 1.104-0.781 1.885t-1.885 0.781q-1.125 0-1.896-0.771l-18.667-18.667q-0.771-0.813-0.771-1.896t0.771-1.896l18.667-18.667q0.792-0.771 1.896-0.771z" /></svg></span>
+                <div>
+                    <span>Previous Story</span>
+                    <h3>Strengthen Your Startup’s Presence:...</h3>
+                    <p>By:  Limecube </p>
+                    <img itemprop="image"  class=" lazy" data-src="https://storage.googleapis.com/limecube-live-c29b24b1/thumb%2FBlog%2F2d-illustration-busy-startup-branding_w104_h104_fcrop.png" content="https://storage.googleapis.com/limecube-live-c29b24b1/thumb%2FBlog%2F2d-illustration-busy-startup-branding_w104_h104_fcrop.png"  title="Strengthen Your Startup’s Presence: Building an Effective Brand Identity" alt="Strengthen Your Startup’s Presence: Building an Effective Brand Identity" />
+                </div>
+            </a>
+                            <a class="next" href="/ai-customer-service-a-game-changer">
+                <span class="icon-wrap"><svg class="icon" width="24" height="24" viewBox="0 0 64 64"><path d="M37.333 10.667q1.125 0 1.896 0.771l18.667 18.667q0.771 0.771 0.771 1.896t-0.771 1.896l-18.667 18.667q-0.771 0.771-1.896 0.771-1.146 0-1.906-0.76t-0.76-1.906q0-1.125 0.771-1.896l14.125-14.104h-41.563q-1.104 0-1.885-0.781t-0.781-1.885 0.781-1.885 1.885-0.781h41.563l-14.125-14.104q-0.771-0.771-0.771-1.896 0-1.146 0.76-1.906t1.906-0.76z" /></svg></span>
+                <div>
+                    <span>Next Story</span>
+                    <h3>AI and Customer Service: A Game-Changer...</h3>
+                    <p>By:  Limecube </p>
+                    <img itemprop="image"  class=" lazy" data-src="https://storage.googleapis.com/limecube-live-c29b24b1/thumb%2FBlog%2F2d-illustration-customer-service-bot_w104_h104_fcrop.png" content="https://storage.googleapis.com/limecube-live-c29b24b1/thumb%2FBlog%2F2d-illustration-customer-service-bot_w104_h104_fcrop.png"  title="AI and Customer Service: A Game-Changer for Small Businesses" alt="AI and Customer Service: A Game-Changer for Small Businesses" />
+                </div>
+            </a>
+            </nav>
+
+    <div class="gdbp_banner_wrapper" id="cookies-eu-banner" style="display: none;">
+        <div class="gdbp_banner_height">&nbsp;</div>
+        <div class="gdbp_banner">
+            <span class="gdbp_text">We use necessary cookies to make our site work. These essential cookies enable core functionality such as security, network management, and accessibility. They do not store any personal information and are automatically accepted as they are necessary for the website to function.             <a href="https://www.limecube.co/privacy-policy">Privacy Policy</a></span>
+            <div class="gdbp_buttons">
+              <button id="cookies-eu-reject">Reject</button>
+              <button id="cookies-eu-accept">Accept</button>
+            </div>
+        </div>
+        
+    </div>
+
+    <script type="text/javascript" src="/js/cookies-eu-banner.js" ></script>
+    <script type="text/javascript">
+                if (typeof fbq != 'undefined') fbq('consent', 'revoke');
+        new CookiesEuBanner(function () {
+            // Your code to launch when user accept cookies
+            console.log('cookie banner');
+                        if (typeof fbq != 'undefined') fbq('consent', 'grant');
+        }, true, true);
+    </script>
+
+
+
+
+
+<script type="text/javascript" src="/js/dist/scripts.single.bundle.js?v=10.5.0.12"></script>
+
+<script type="text/javascript" src="/js/dist/react.single.bundle.js?t=10.5.0.12"></script>
+
+<script type="text/javascript">
+    var ajax_prefix = '/';
+    var theme_epoch = '2';
+    var domain_hash = 'c29b24b1';
+
+    var bucket_mask = 'limecube-live-';
+            var full_url = 'https://www.limecube.co';
+        var site_full_url = 'https://www.limecube.co';
+        var FILE_STORAGE_THUMBS = [];
+        var module_content_space_sizes_values = {"none":"none","small":"one","medium":"two","large":"four","xlarge":"six"};
+    var site_pages_urls = {"248311":{"title":"Why Startups Love Using AI for Quick and Stunning Website Content","seo_url":"why-startups-love-using-ai-for-quick-and-stunning-website-content"},"248312":{"title":"Smart Web Creation: How Quality Content Powers AI-Driven Platforms","seo_url":"smart-web-creation-how-quality-content-powers-ai-driven-platforms"},"18610":{"title":"Home","seo_url":"index"},"18611":{"title":"Features","seo_url":"features"},"18612":{"title":"Feature Request","seo_url":"feature-request"},"18613":{"title":"Support","seo_url":"contact-us"},"18614":{"title":"Privacy Policy","seo_url":"privacy-policy"},"18615":{"title":"Press and Media","seo_url":"press-and-media"},"18616":{"title":"Terms of Service","seo_url":"terms-of-service"},"18617":{"title":"Security Policy","seo_url":"security-policy"},"18621":{"title":"Agencies","seo_url":"agencies"},"18622":{"title":"Digital Marketing Guide","seo_url":"digital-marketing-guide"},"18623":{"title":"Overview","seo_url":"overview"},"18624":{"title":"Is Digital Marketing Right for You?","seo_url":"is-it-for-you"},"18625":{"title":"Should You DIY or Invest in Specialists?","seo_url":"should-you-do-it-yourself-or-invest-in-specialists"},"18626":{"title":"The Importance of Research in Digital Marketing","seo_url":"research"},"18627":{"title":"How to Prioritise Your Marketing Efforts","seo_url":"setting-priorities"},"18628":{"title":"On-page SEO","seo_url":"on-page-seo"},"18629":{"title":"Off-Page SEO","seo_url":"off-page-seo"},"18630":{"title":"Local SEO","seo_url":"local-seo"},"18631":{"title":"Your Guide to Paid Media Advertising","seo_url":"ppc-search"},"18632":{"title":"The Google Display Network ","seo_url":"the-google-display-network"},"18633":{"title":"Re-Targeting","seo_url":"re-targeting"},"18634":{"title":"Google Shopping PPC","seo_url":"google-shopping-ppc"},"18635":{"title":"Content Marketing","seo_url":"content-marketing"},"18636":{"title":"Email Marketing","seo_url":"email-marketing"},"18637":{"title":"A Guide to Facebook Marketing","seo_url":"facebook"},"18638":{"title":"A Guide to Marketing on X","seo_url":"twitter"},"18639":{"title":"Getting Started with Content","seo_url":"getting-started-with-content"},"18640":{"title":"How to Write for a Website: Getting Noticed","seo_url":"how-to-write-a-website-getting-noticed"},"18641":{"title":"How to Write a Website: Dos and Don'ts","seo_url":"how-to-write-a-website-dos-and-donts"},"18642":{"title":"A Guide to Voice Search Optimisation","seo_url":"voice-search"},"18643":{"title":"Schema Markup","seo_url":"schema-markup"},"18645":{"title":"Blog","seo_url":"blog"},"18646":{"title":"From Seeing to Believing: A Brief Rundown on Virtual Reality","seo_url":"a-brief-rundown-on-virtual-reality"},"18647":{"title":"Augmented Reality Explained","seo_url":"augmented-reality-explained"},"18648":{"title":"Facebook Advertising: How Top Promoted Posts Get Picked","seo_url":"organic-value-and-facebook-advertising"},"18650":{"title":"Could Google's index division improve mobile search results?","seo_url":"googles-index-division-improve-mobile-search"},"18651":{"title":"SEO for ROI: How to rank and bank with the best","seo_url":"seo-for-roi-how-to-rank-and-bank-with-the-best"},"18652":{"title":"Open Source CMS Brings Major Security Risks","seo_url":"open-source-cms-brings-major-security-risks"},"18653":{"title":"Decoding UX: what it means and what it does","seo_url":"decoding-ux-what-it-means-and-what-it-does"},"18654":{"title":"Get AMP-ed: Accelerated Mobile Pages and why you need them","seo_url":"get-amp-ed-accelerated-mobile-pages"},"18655":{"title":"Data Driven Decisions: how to use analytics effectively","seo_url":"data-driven-decisions-use-analytics-effectively"},"18662":{"title":"Top Things to Know about AI in 2018","seo_url":"top-things-to-know-about-ai-in-2018"},"18663":{"title":"Generation Z Shopper: Understanding the Newest Wave of Upcoming Buyers","seo_url":"the-generation-z-shopper-how-to-understand"},"18675":{"title":"V4.1.5 | Released - April 30, 2018","seo_url":"version-415"},"18681":{"title":"V4.2.0 -  Release Date - Oct 3, 2018","seo_url":"version-420"},"18688":{"title":"Small business goals for 2019","seo_url":"small-business-goals-for-2019"},"18691":{"title":"Why Photos Matter: How to Use Images on Your Websites","seo_url":"why-photos-matter-how-to-use-images-on-websites"},"18692":{"title":"Influencer Marketing: 4 Tips to Find the Best KOL for Your Business","seo_url":"influencer-marketing-4-tips-to-find-the-best-kol"},"18695":{"title":"10 Facts about SEO You Must Know in 2019","seo_url":"10-facts-about-seo-you-must-know-in-2019"},"18696":{"title":"7 Useful Tips for Effective CRM","seo_url":"7-useful-tips-for-effective-crm"},"18702":{"title":"Top 10 Instagram Updates for Business in 2019","seo_url":"top-10-instagram-updates-for-business-in-2019"},"18703":{"title":"v7.0.2 | Released - November 20, 2019","seo_url":"version-702"},"18704":{"title":"How Your Website's Colors Influence Your Click Rate","seo_url":"how-your-websites-colors-influence-your-click-rate"},"18707":{"title":"The 10 Best Time Management Apps to Boost Your Productivity","seo_url":"10-time-management-apps-to-boost-your-productivity"},"18708":{"title":"7 Best Photo Editing Apps for Improving Your Website Images","seo_url":"7-best-photo-editing-apps-improving-your-website"},"18709":{"title":"SEO Titles 2020: How to Write a Good Page Title for SEO","seo_url":"seo-titles-2020-how-to-write-a-good-page-title"},"18710":{"title":"10 Most Important SEO Statistics to Know in 2020","seo_url":"10-most-important-seo-statistics-to-know-in-2020"},"18711":{"title":"Low Traffic? Follow These 10 Tips to Drive More People to Your Blog","seo_url":"low-traffic-follow-these-10-tips"},"18713":{"title":"Why You Should Update Your Website Regularly","seo_url":"why-you-should-update-your-website-regularly"},"18714":{"title":"How Digital Processes Can Help Grow Your Business","seo_url":"how-digital-processes-can-help-grow-your-business"},"18715":{"title":"v7.0.4 | Released - February 25, 2020","seo_url":"version-704"},"18717":{"title":"v7.1.1 | Released - April 8, 2020","seo_url":"version-711"},"18719":{"title":"v7.1.2 | Released - May 12, 2020","seo_url":"version-712"},"18720":{"title":"The Ultimate Blueprint for Local Link Building [A Starter\u2019s Guide]","seo_url":"the-blueprint-for-local-link-building"},"18722":{"title":"How to Write a Friendly Reminder Email","seo_url":"how-to-write-a-friendly-reminder-email"},"18723":{"title":"Should I Use a Light Theme or Dark Theme for My Website?","seo_url":"light-theme-or-dark-theme-for-my-website"},"18724":{"title":"Themes","seo_url":"themes"},"18725":{"title":"About Us","seo_url":"about-us"},"22021":{"title":"Success Help","seo_url":"success-help"},"22221":{"title":"Feature Request Help","seo_url":"feature-request-help"},"22234":{"title":"Success","seo_url":"success"},"22235":{"title":"Press Success","seo_url":"press-success"},"22487":{"title":"How to Start a Podcast for Your Business","seo_url":"how-to-start-a-podcast-for-your-business"},"22488":{"title":"Out Of The Box Link Building Strategies","seo_url":"out-of-the-box-link-building-strategies"},"23283":{"title":"Themes - Health landing","seo_url":"health-themes"},"23425":{"title":"Search Results","seo_url":"search-results"},"23463":{"title":"Instagram vs Facebook \u2013 which one is best? A brief guide","seo_url":"instagram-vs-facebook-which-one-is-best"},"23898":{"title":"Expression of interest Success","seo_url":"expression-of-interest-success"},"23927":{"title":"Login","seo_url":"login-page"},"23928":{"title":"Registration","seo_url":"registration-page"},"23929":{"title":"Remote working: 8 business ideas for work-from-home start-ups","seo_url":"remote-working-8-business-ideas-for-home-start-ups"},"24561":{"title":"All about hashtags \u2013 how to choose them and how to use them to maximise your social media marketing","seo_url":"how-to-choose-the-best-hashtags"},"24773":{"title":"3 Simple Steps To Use Your Website To Get More Customer Calls","seo_url":"3-simple-steps-for-your-website-to-get-more-calls"},"25215":{"title":"5 tips to be successful at social media marketing","seo_url":"5-tips-to-be-successful-at-social-media-marketing"},"25393":{"title":"SEO v SEM","seo_url":"seo-v-sem"},"25597":{"title":"7 Super-Easy Ways To Market Your Wedding Business","seo_url":"7-super-easy-ways-to-market-your-wedding-business"},"25833":{"title":"v7.3.2 | Released - 15th December 2020","seo_url":"version-732"},"25846":{"title":"Themes - Copywriters landing","seo_url":"copywriters-themes"},"25847":{"title":"Themes - Tutors landing","seo_url":"tutors-themes"},"26054":{"title":"5 ways to build audience and customers in 2021 and beyond","seo_url":"5-ways-to-build-audience-customers-in-2021-beyond"},"26280":{"title":"7 ways to modify your business to adapt to the pandemic","seo_url":"7-ways-to-modify-your-business-for-the-pandemic"},"27064":{"title":"HKBU Event","seo_url":"hkbu-event"},"27274":{"title":"Not found","seo_url":"not-found"},"27779":{"title":"How to brand your business on a budget","seo_url":"how-to-brand-your-business-on-a-budget"},"27907":{"title":"The relationship between exposure and customer awareness","seo_url":"relationship-between-exposure-customer-awareness"},"28332":{"title":"Why is a good marketing strategy so important to a brand?","seo_url":"why-is-a-good-marketing-strategy-so-important"},"28624":{"title":"Keywords are Key in SEO: Our Quick-Start Guide","seo_url":"keywords-are-key-in-seo-our-quick-start-guide"},"28900":{"title":"The benefits of updating your site regularly","seo_url":"the-benefits-of-updating-your-site-regularly"},"29138":{"title":"What are brand colours, and how do they affect customer perception?","seo_url":"brand-colours-how-they-affect-customer-perception"},"29506":{"title":"Pros and cons of a business partner","seo_url":"pros-and-cons-of-a-business-partner"},"29620":{"title":"Limecube for students","seo_url":"limecube-for-students"},"29646":{"title":"Find a Designer","seo_url":"find-a-designer"},"29719":{"title":"Target Audiences: Our Guide to Identifying Your Customer Markets","seo_url":"target-audiences-our-guide"},"30666":{"title":"Communication Accommodation Theory (CAT): Bridging the Gap in Conversations and Marketing","seo_url":"communication-accommodation-theory"},"31424":{"title":"Gen Z Marketing: How to Secure the Sceptical Consumer","seo_url":"gen-z-marketing-how-to-secure-sceptical-consumer"},"31942":{"title":"Finding your voice: Guidelines for finding the personality of your brand","seo_url":"voice-guidelines-finding-the-brand-personality"},"31960":{"title":"SM Quick Links","seo_url":"sm-ql"},"32029":{"title":"Themes - WeWork landing","seo_url":"ww"},"32237":{"title":"Themes - G Brochure","seo_url":"br"},"32844":{"title":"Spotify","seo_url":"spotify-05"},"33887":{"title":"5 Tips for Business Beginners Looking to Get Started","seo_url":"5-tips-for-business-beginners-to-get-started"},"34369":{"title":"New Business Checklist: 12 Steps to Get Started","seo_url":"new-business-checklist-12-steps-to-get-started"},"35629":{"title":"The importance of diversifying your marketing strategies in today's market","seo_url":"importance-of-diversifying-marketing-strategies"},"38153":{"title":"Website gathering cobwebs? Here's why you need an upgrade today","seo_url":"website-gathering-cobwebs"},"39700":{"title":"5 ways entrepreneurs can boost their productivity","seo_url":"5-ways-entrepreneurs-boost-productivity"},"41644":{"title":"7 Best Stock Photo Websites for Graphic Designers (Paid &amp; Free)","seo_url":"6-best-stock-photo-websites"},"42492":{"title":"v8.1.0 - Released - 2nd November 2021","seo_url":"version-810"},"42560":{"title":"How to calculate ROI","seo_url":"how-to-calculate-roi"},"42565":{"title":"8 ways to stand out in a crowded market","seo_url":"8-ways-to-stand-out-in-a-crowded-market"},"42567":{"title":"4 Ways To Optimise Content And Ensure That It Connects With A Global Audience","seo_url":"4-ways-to-optimise-content"},"42692":{"title":"Survey thank you","seo_url":"survey-thank-you"},"42742":{"title":"Black Friday","seo_url":"black-friday"},"43780":{"title":"v8.1.1 - Released - 15 December 2021","seo_url":"version-811"},"44145":{"title":"How to create an optimal website for your business","seo_url":"how-to-create-an-optimal-website-for-your-business"},"44893":{"title":"5 Reasons Why Subscription-Based Financial Planning Is Effective","seo_url":"5-reasons-why-subscription-based-financial-planning"},"45176":{"title":"v8.1.2 - Released - 25 January 2022","seo_url":"version-812"},"45348":{"title":"7 Things You Should Know Before Writing Your First Blog Post","seo_url":"7-things-to-know-before-writing-your-first-blog"},"45813":{"title":"Colour palette preview - Content","seo_url":"colour-palette-preview-content"},"45814":{"title":"Registration Wizard","seo_url":"registration-wizard"},"47006":{"title":"v8.2.0 - Released - 9th March 2022","seo_url":"version-820"},"48131":{"title":"How to Increase Website Traffic With Long-tail Keywords","seo_url":"how-to-increase-website-traffic-long-tail-keywords"},"49185":{"title":"v8.2.1 - Released - 29th April 2022","seo_url":"version-821"},"53456":{"title":"How to Plan and Budget for a Digital Marketing Campaign","seo_url":"how-to-plan-budget-for-a-digital-marketing-campaign"},"54847":{"title":"How to target your audience on social media","seo_url":"how-to-target-your-audience-on-social-media"},"55441":{"title":"v8.3.0 - Released - 2nd August 2022","seo_url":"version-830"},"55460":{"title":"How to build your first website","seo_url":"how-to-build-your-first-website"},"55461":{"title":"A Step-by-Step Guide on How to Build a Blog in 30 Days","seo_url":"step-by-step-guide-on-how-to-build-a-blog-30-days"},"55462":{"title":"7 ways to improve your visibility on social media, and why it\u2019s important.","seo_url":"7-ways-to-improve-your-visibility-on-social-media"},"55600":{"title":"How to Accelerate Your Career in SEO: 8 Tips for Freelancers","seo_url":"how-to-accelerate-career-seo-8-tips-freelancers"},"55710":{"title":"v8.4.0 - Released - 1st November 2022","seo_url":"version-840"},"58117":{"title":"Tips for Designing a Great Looking Website","seo_url":"tips-for-designing-a-great-looking-website"},"58220":{"title":"What is accessibility, and why is it important for a website","seo_url":"what-is-accessibility-and-why-is-it-important-for-a-website"},"58221":{"title":"The ABCs of Web Design: Understanding Key Terms and Concepts","seo_url":"the-abcs-of-web-design-understanding-key-terms-and-concepts"},"58222":{"title":"Top Tips for Optimising Your Website for Global Audiences","seo_url":"top-tips-for-optimising-your-website-for-global-audiences"},"58227":{"title":"Creative Ideas for Sharing Your Family's Story Online","seo_url":"creative-ideas-for-sharing-your-familys-story-online"},"59470":{"title":"v9.0.0 - Released - 31st March 2023","seo_url":"version-900"},"60179":{"title":"Charity Terms","seo_url":"charity-terms"},"60263":{"title":"Common Website-Building Mistakes to Avoid","seo_url":"common-website-building-mistakes-to-avoid"},"60264":{"title":"Maximising Your Website's Impact on Your Business's Bottom Line","seo_url":"maximising-your-websites-impact-on-your-businesss-bottom-line"},"60265":{"title":"How to Use Your Website to Build Your Personal Brand","seo_url":"how-to-use-your-website-to-build-your-personal-brand"},"60266":{"title":"Using Color Theory to Create Emotion and Impact on Your Website","seo_url":"using-color-theory-to-create-emotion-and-impact-on-your-website"},"60278":{"title":"Mobile Login","seo_url":"mobile-login-m"},"63527":{"title":"The Future of AI in Social Media Advertising: What to Expect","seo_url":"future-of-ai-social-media-ads-what-to-expect"},"67575":{"title":"v9.1.0 - Released - 25th May 2023","seo_url":"version-910"},"76288":{"title":"Supercharge Your Business with these Top 10 ChatGPT+ Plugins","seo_url":"supercharge-business-top-10-chatgpt-plugins"},"78498":{"title":"Latest Blog Posts Agency Page","seo_url":"ap-ql"},"83871":{"title":"AI Video Creation: A Comparison of Top 10 Platforms","seo_url":"ai-video-creation-a-comparison-of-top-10-platforms"},"87115":{"title":"V 10.0.0 - Released","seo_url":"v-10-release"},"108153":{"title":"When the Storm Hits: Navigating Crisis Management for Startups Like a Pro","seo_url":"navigating-crisis-management-for-startups"},"108431":{"title":"Building the Digital Bridge of Trust: How to Win Hearts and Minds Online","seo_url":"building-the-digital-bridge-of-trust"},"108998":{"title":"The Zen Way to Content Planning: Destress and Impress!","seo_url":"the-zen-way-to-content-planning-destress-impress"},"109020":{"title":"The Review Revolution: Why Customer Reviews are the Unsung Heroes of Business Success","seo_url":"the-review-revolution"},"109809":{"title":"The Time Alchemist: Transforming Minutes into Moments of Success","seo_url":"the-time-alchemist-transforming-minutes-into-moment"},"109810":{"title":"Igniting the Entrepreneurial Spark: The Ultimate Guide to Staying Motivated in Business","seo_url":"igniting-the-entrepreneurial-spark"},"110532":{"title":"Elevate Your Ideas: Crafting an Elevator Pitch That Reaches for the Stars","seo_url":"elevate-your-ideas-crafting-an-elevator-pitch"},"110554":{"title":"Stretching Dollars, Making Impact: The Essential Guide to Bootstrap Marketing for Small Businesses","seo_url":"guide-to-bootstrap-marketing-for-small-businesses"},"110555":{"title":"From Dreams to Reality: Setting SMART Goals for Your New Business Venture","seo_url":"setting-smart-goals-for-your-new-business-venture"},"110788":{"title":"AI: Your Startup's Invisible Workhorse - Streamlining Operations Seamlessly","seo_url":"ai-your-startups-invisible-workhorse"},"111314":{"title":"Navigating the Competitive Landscape: How AI Elevates Market Research for Startups","seo_url":"how-ai-elevates-market-research-for-startups"},"111424":{"title":"Chatting Up Success: Unveiling the Synergy of ChatGPT and Small Business Growth","seo_url":"chatting-up-success-the-synergy-of-chatgpt-business"},"112542":{"title":"Exit Survey","seo_url":"exit-survey"},"113761":{"title":"V10.1.0 - Released","seo_url":"v1010-released"},"115267":{"title":"ChatGPT: Your Invisible Content Creation Assistant: Unveiling the Power of ChatGPT for Streamlining Blog and Social Media Posts","seo_url":"chatgpt-your-invisible-content-creation-assistant"},"116184":{"title":"Deciphering the Digital Code: 6 Must-Know Marketing Metrics for Small Businesses","seo_url":"6-must-know-marketing-metrics-for-small-businesses"},"130386":{"title":"Welcome to the Future of Connection: An Introduction to AI-Powered Personalisation","seo_url":"ai-powered-personalisation"},"130612":{"title":"V10.2.0 - Released","seo_url":"v1020"},"135239":{"title":"Harnessing Time: Discover AI-Powered Scheduling","seo_url":"harnessing-time-discover-ai-powered-scheduling"},"139202":{"title":"Welcome to the Future: The AI Revolution in Recruitment","seo_url":"the-future-the-ai-revolution-in-recruitment"},"162680":{"title":"V10.3.0 - Released","seo_url":"v1030-released"},"179009":{"title":"AI and the Future of Web Design: What Entrepreneurs Need to Know","seo_url":"ai-future-of-web-design-entrepreneurs-need-to-know"},"179413":{"title":"Staying Ahead: How Small Businesses Can Keep Up with Tech Trends","seo_url":"how-small-businesses-can-keep-up-with-tech-trends"},"182165":{"title":"Harnessing the Power of Social Media: A Blueprint for Small Business Success","seo_url":"harnessing-the-power-of-social-media"},"185526":{"title":"V10.4.0 - Released","seo_url":"v1040-released"},"187688":{"title":"Mastering the Art of Engaging Content: The Limecube Way","seo_url":"mastering-the-art-of-engaging-content"},"216606":{"title":"V10.4.1 - Released","seo_url":"v1041-released"},"218295":{"title":"9 Incredible Sora Features That Will Revolutionise Video Creation","seo_url":"9-sora-features-will-revolutionise-video-creation"},"218713":{"title":"Unlock the Power of ChatGPT's Memory: A Comprehensive Guide","seo_url":"unlock-the-power-of-chatgpts-memory-guide"},"219629":{"title":"Unleashing the Power of GPT-4: OpenAI's Revolutionary AI Collaboration Tool","seo_url":"gpt-4-openais-revolutionary-ai-collaboration-tool"},"229153":{"title":"Prompt Engineering Made Easy: Unlock Powerful AI Prompts with This New Tool","seo_url":"prompt-engineering-made-easy"},"234311":{"title":"V10.4.2 - Released","seo_url":"v1042"},"234997":{"title":"AI and Customer Service: A Game-Changer for Small Businesses","seo_url":"ai-customer-service-a-game-changer"},"234998":{"title":"How AI is Revolutionising Website Building for Start-ups","seo_url":"ai-revolutionising-website-building-for-start-ups"},"235238":{"title":"Strengthen Your Startup\u2019s Presence: Building an Effective Brand Identity","seo_url":"strengthen-your-startups-brand-identity"},"235348":{"title":"The Beginner's Guide to Colour Psychology for Startup Websites","seo_url":"beginners-guide-to-colour-psychology"},"237649":{"title":"5 Web Design Trends in 2024 That'll Inspire Your Next Website","seo_url":"5-web-design-trends-thatll-inspire-your-website"},"237697":{"title":"The Ultimate Guide to AI Agents","seo_url":"the-ultimate-guide-to-ai-agents"},"240118":{"title":"Top UX Design Tips to Enhance Your Website","seo_url":"top-ux-design-tips-to-enhance-your-website"},"241624":{"title":"How to Prepare Your Website for Black Friday and Cyber Monday","seo_url":"prepare-your-website-for-black-friday-cyber-monday"},"244020":{"title":"Decoding Google Analytics: A Guide to Understanding Your Website Data","seo_url":"decoding-google-analytics"},"245959":{"title":"A Guide to Crafting User-Friendly Menus on Your Website","seo_url":"guide-to-crafting-user-friendly-menus"},"246329":{"title":"V10.5.0 - Released","seo_url":"v1050"},"246707":{"title":"Keyword Research","seo_url":"keyword-research"},"247679":{"title":"Pricing","seo_url":"pricing-plan"},"248310":{"title":"Boost Your Business: Easy Content Planning Tips for Entrepreneurs","seo_url":"boost-your-business-easy-content-planning-tips-for-entrepreneurs"},"248972":{"title":"Beyond the Buzzwords: The Singular Importance of ROI in Effective Marketing","seo_url":"importance-of-roi-in-effective-marketing"},"250468":{"title":"Innovate and Grow: The Role of GenAI in Modern Entrepreneurship","seo_url":"innovate-grow-role-of-genai-in-entrepreneurship"},"250962":{"title":"Smart Strategies: Leveraging AI as Your Personal Business Coach","seo_url":"leveraging-ai-as-your-personal-business-coach"},"251065":{"title":"Effective Strategies for Using Social Forums in Business Promotion","seo_url":"effective-strategies-for-using-social-forums"},"252107":{"title":"Simple Strategies to Drive More Traffic to Your Website","seo_url":"simple-strategies-to-drive-more-traffic-to-your-website"},"252269":{"title":"An introduction to SEO","seo_url":"an-introduction-to-seo"},"252449":{"title":"Beyond Basics: Advanced Segmentation Strategies for Identifying Your Target Audience","seo_url":"advanced-strategies-identifying-target-audience"},"252810":{"title":"Themes V2 (Not Used)","seo_url":"copy-1-themes"},"252849":{"title":"Essential Tools for Effective Target Audience Research","seo_url":"essential-tools-effective-target-audience-research"},"252850":{"title":"Tailoring Your Approach: Strategies for B2B vs. B2C Target Audiences","seo_url":"strategies-for-b2b-vs-b2c-target-audiences"},"253239":{"title":"How Search Engines Work","seo_url":"how-search-engines-work"},"253264":{"title":"Small Business Growth Fueled by AI Workplace Innovations","seo_url":"small-business-growth-fueled-by-ai-workplace-innovations"},"253802":{"title":"Aligning Your Value Proposition with Your Target Audience's Needs","seo_url":"aligning-your-value-proposition-target-audiences"},"253833":{"title":"Copy Tailoring Your Approach: Strategies for B2B vs. B2C Target","seo_url":"copy-strategies-for-b2b-vs-b2c-target-audiences"},"254168":{"title":"Ethical Marketing: Navigating Cultural Nuances in Audience Targeting","seo_url":"navigating-cultural-nuances-in-audience-targeting"},"254177":{"title":"8 AI Prompts Libraries for Unlimited Inspiration","seo_url":"8-ai-prompts-libraries-for-unlimited-inspiration"},"255544":{"title":"Fine-Tuning Your Audience: Methods for Testing and Validation","seo_url":"fine-tuning-audience-methods-for-testing-validation"},"255688":{"title":"A Guide to TikTok Marketing","seo_url":"guide-to-tiktok-marketing"},"255689":{"title":"A Guide to Instagram Marketing","seo_url":"guide-to-instagram-marketing"},"255830":{"title":"A Guide to LinkedIn Marketing","seo_url":"a-guide-to-linkedin-marketing"},"255831":{"title":"A Guide to Pinterest Marketing","seo_url":"guide-to-pinterest-marketing"},"255832":{"title":"An Overview of Social Media Marketing","seo_url":"overview-of-social-media-marketing"},"255841":{"title":"A Guide to Native Advertising","seo_url":"a-guide-to-native-advertising"},"255941":{"title":"A Guide to AI in Digital Marketing","seo_url":"a-guide-to-ai-in-digital-marketing"},"255942":{"title":"Avoiding Missteps: Common Pitfalls in Target Audience Identification","seo_url":"common-pitfalls-in-target-audience-identification"},"255943":{"title":"A Guide to Analytics and Data-Driven Marketing","seo_url":"a-guide-to-analytics-and-data-driven-marketing"},"255974":{"title":"A Guide to Legal and Ethical Considerations in Digital Marketing","seo_url":"guide-to-legal-ethical-considerations-marketing"},"256055":{"title":"A Guide to Online Public Relations (PR)","seo_url":"guide-to-online-public-relations-pr"},"256056":{"title":"A Guide to Emerging Trends in Digital Marketing","seo_url":"guide-to-emerging-trends-in-digital-marketing"},"256059":{"title":"A Guide to Creating a Digital Marketing Strategy","seo_url":"guide-to-creating-a-digital-marketing-strategy"},"256337":{"title":"Staying Ahead: The Role of Continuous Audience Analysis in Marketing Success","seo_url":"the-role-of-continuous-audience-analysis-marketing"},"256338":{"title":"V10.5.1 - Released","seo_url":"v1051"},"256305":{"title":"(Copy) - Features","seo_url":"copy-features"},"18618":{"title":"Hidden from Sitemap","seo_url":"hidden-from-sitemap"},"23325":{"title":"Landing Pages","seo_url":"landing-pages"},"24053":{"title":"Black Friday Terms","seo_url":"black-friday-terms"},"33960":{"title":"(Copy) - Login","seo_url":"copy-login-page"},"27063":{"title":"Events","seo_url":"events"},"251113":{"title":"layout_default_pages","seo_url":"layoutdefaultpages"},"18649":{"title":"Structuring Your Page Content for SEO","seo_url":"structuring-your-page-content-for-seo"},"18656":{"title":"The Top 8 Free Web Analytics Tools","seo_url":"the-top-8-free-web-analytics-tools"},"18657":{"title":"Five Industries Vulnerable to Disruption","seo_url":"five-industries-vulnerable-to-disruption"},"18658":{"title":"Biometric Authentication Leading the Future","seo_url":"biometric-authentication-leading-the-future"},"18659":{"title":"Robotic Future: Google's Patents Robot Personality","seo_url":"robotic-future-googles-patents-robot-personality"},"18660":{"title":"5 Ways VR Is Being Transformed Into Everyday Life","seo_url":"5-ways-vr-is-being-transformed-into-everyday-life"},"18661":{"title":"New Release: Blog Version 7.0!","seo_url":"new-release-blog-version-7"},"18664":{"title":"The Difficulty of Open Source Site Updates","seo_url":"the-difficulty-of-open-source-site-updates"},"18665":{"title":"Social Media Buttons Release","seo_url":"social-media-buttons-release"},"18666":{"title":"Version 4.0.5","seo_url":"version-405"},"18667":{"title":"Version 4.1.0","seo_url":"version-410"},"18668":{"title":"Version 4.1.1","seo_url":"version-411"},"18669":{"title":"Does your clinic's website need a health check?","seo_url":"does-your-clinics-website-need-a-health-check"},"18670":{"title":"Food blogging recipe for success","seo_url":"food-blogging-recipe-for-success"},"18671":{"title":"V4.1.2 | Date of Release - March 5, 2018","seo_url":"version-412"},"18672":{"title":"V4.1.3 | Date of Release - March 26, 2018","seo_url":"version-413"},"18673":{"title":"Why Your Cafe Or Restaurant Needs A Website","seo_url":"why-your-cafe-or-restaurant-needs-a-website"},"18674":{"title":"How to attract happy couples to your wedding site","seo_url":"how-to-attract-happy-couples-to-your-wedding-site"},"18676":{"title":"V4.1.6 | Released - May 29, 2018","seo_url":"version-416"},"18677":{"title":"V4.1.4 | Released - April 9, 2018","seo_url":"version-414"},"18678":{"title":"V4.1.7 | Released - June 18, 2018","seo_url":"version-417"},"18679":{"title":"V4.1.8 | Released - July 12, 2018","seo_url":"version-418"},"18680":{"title":"V4.1.9 | Released - Sept 3, 2018","seo_url":"version-419"},"18682":{"title":"V4.3.0 | Released - Nov 27, 2018","seo_url":"version-430"},"18683":{"title":"V5.0.0 | Released - Jan 30, 2019","seo_url":"version-500"},"18684":{"title":"V5.0.1 | Released - February 21, 2019","seo_url":"version-501"},"18685":{"title":"V5.0.2 | Released - March 12, 2019","seo_url":"version-502"},"18686":{"title":"V5.0.3 | Released - April 1, 2019","seo_url":"version-503"},"18687":{"title":"Tips for freshening up your business website","seo_url":"tips-for-freshening-up-your-business-website"},"18689":{"title":"V5.0.4 | Released - April 22, 2019","seo_url":"version-504"},"18690":{"title":"V6.0.0 | Released - June 4, 2019","seo_url":"version-600"},"18693":{"title":"5 Questions You Must Ask About Video Marketing","seo_url":"5-questions-you-must-ask-about-video-marketing"},"18694":{"title":"10 Ways to Greatly Improve Your Website Performance","seo_url":"10-ways-to-greatly-improve-your-website-performance"},"18697":{"title":"15 Dos and Don'ts of Facebook Ads","seo_url":"15-dos-and-donts-of-facebook-ads"},"18698":{"title":"How to Boost Your Business with an Email List","seo_url":"how-to-boost-your-business-with-an-email-list"},"18699":{"title":"V7.0.0 | Released - July 18, 2019","seo_url":"version-700"},"18700":{"title":"V7.0.1 | Released - August 14, 2019","seo_url":"version-701"},"18701":{"title":"Top 10 Facebook Updates for Business in 2019","seo_url":"top-10-facebook-updates-for-business-in-2019"},"18705":{"title":"v7.0.3 | Released - January 28, 2020","seo_url":"version-703"},"18706":{"title":"9 Things Visitors Expect on a Website in 2020","seo_url":"9-things-visitors-expect-on-a-website-in-2020"},"18712":{"title":"Home Business Ideas to Beat the Coronavirus Recession","seo_url":"home-business-ideas-beat-the-coronavirus-recession"},"18716":{"title":"Branding Basics: How to Create Brand Guidelines","seo_url":"branding-basics-how-to-create-brand-guidelines"},"18718":{"title":"5 Common Remote Working Challenges and Ways to Overcome Them","seo_url":"5-common-remote-working-challenges"},"18721":{"title":"v7.2.0 | Released - June 2, 2020","seo_url":"version-720"},"22485":{"title":"v7.2.1 | Released - August 26, 2020","seo_url":"version-721"},"22486":{"title":"6 Reasons to Start a Podcast for Your Business","seo_url":"6-reasons-to-start-a-podcast-for-your-business"},"23470":{"title":"v7.3.0 | Released - October 20, 2020","seo_url":"version-730"},"24812":{"title":"Do you have suitable photos for your website?","seo_url":"do-you-have-suitable-photos-for-your-website"},"25832":{"title":"v7.3.1 | Released - 17th November 2020","seo_url":"version-731"},"27149":{"title":"v7.3.3 - Released - 27th January 2021","seo_url":"version-733"},"27313":{"title":"Why and How to add Video Marketing Content on Website?","seo_url":"why-how-to-add-video-marketing-content-on-website"},"27613":{"title":"5 SEO lies to watch out for!","seo_url":"5-seo-lies-to-watch-out-for"},"27708":{"title":"How a website and social media should work together","seo_url":"how-a-website-and-social-media-should-work-together"},"28146":{"title":"Blogging for revenue","seo_url":"blogging-for-revenue"},"28590":{"title":"v7.4.0 - Released - 24th February 2021","seo_url":"version-740"},"30525":{"title":"What are consumer insights, and why should you care?","seo_url":"what-are-consumer-insights-and-why-should-you-care"},"30855":{"title":"v7.4.1 - Released - 13th April 2021","seo_url":"version-741"},"30856":{"title":"How to Use SEO-Focused Web Design to Improve Your Search Engine Rankings","seo_url":"seo-focused-web-design-to-improve-search-rankings"},"31692":{"title":"Social media or website - which is best?","seo_url":"social-media-or-website-which-is-best"},"32614":{"title":"7 Reasons Why You Need Google My Business","seo_url":"7-reasons-why-you-need-google-my-business"},"32656":{"title":"How to Set Up Google My Business","seo_url":"how-to-set-up-google-my-business"},"32885":{"title":"v7.5.0 - Released - 18th May 2021","seo_url":"version-750"},"34569":{"title":"The Differences Between Traditional Marketing and Digital Marketing","seo_url":"differences-between-traditional-digital-marketing"},"34691":{"title":"v7.5.1 - Released - 29th June 2021","seo_url":"version-751"},"34746":{"title":"Digital Processes for your Workplace","seo_url":"digital-processes-for-your-workplace"},"36868":{"title":"v7.6.0 - Released - 10th August 2021","seo_url":"version-760"},"35316":{"title":"5 Tips for Improving your Web Design","seo_url":"5-tips-for-improving-your-web-design"},"35628":{"title":"How to utilise CRO to boost your business","seo_url":"how-to-utilise-cro-to-boost-your-business"},"35851":{"title":"7 strategies to help you decide whether or not you want to start a business","seo_url":"7-strategies-to-help-you"},"35997":{"title":"8 online tutorials to master your content marketing skills","seo_url":"8-tutorials-to-master-content-marketing"},"37720":{"title":"10 amazing benefits of local SEO (with definitions)","seo_url":"10-amazing-benefits-of-local-seo"},"39045":{"title":"v8.0.0 - Released - 15th September 2021","seo_url":"version-800"}};
+    var current_page_id = '237697';
+    var captcha_settings = {
+        'captcha_type' : 'recaptcha' ,
+        'captcha_public' : '6Le3G2scAAAAAL7dLgPcejk7Wxe80koknWBMiue-' ,
+        'hcaptcha_public' : '' ,
+    };
+    var bootstrap_format = {
+        date: 'dd MM, yyyy',
+        time: 'hh:ii'
+    };
+
+    var QMS_SITE_OPTIONS_CURRENT_COLOR_PALETTE = {"palette_preset_id":"52","color_1":{"palette_number":"1","background_color":"#21213b","heading_color":"#ffffff","font_color":"#ffffff","links_color":"#fb7ef4"},"color_2":{"palette_number":"2","background_color":"#0f0e1c","heading_color":"#ffffff","font_color":"#ffffff","links_color":"#ffffff"},"color_3":{"palette_number":"3","background_color":"#fb7ef4","heading_color":"#ffffff","font_color":"#ffffff","links_color":"#ffffff"},"color_4":{"palette_number":"4","background_color":"#000000","heading_color":"#ffffff","font_color":"#ffffff","links_color":"#ffffff"},"color_5":{"palette_number":"5","background_color":"#ffffff","heading_color":"#0f0e1c","font_color":"#0f0e1c","links_color":"#fb7ef4"}};
+
+    function is_animated(entry) {
+        return $(entry).hasClass('animated') && !$(entry).hasClass('animating');
+    }
+
+    function activate_animation(entry) {
+        var animation = $(entry).data('aos'),
+            anim_duration = 1000;
+
+        if ($(entry).hasClass('fast')) anim_duration = 800;
+        if ($(entry).hasClass('faster')) anim_duration = 500;
+        if ($(entry).hasClass('slow')) anim_duration = 2000;
+        if ($(entry).hasClass('slower')) anim_duration = 3000;
+
+        if (animation) {
+            $(entry).addClass(['animated', 'animating', animation].join(' '));
+            setTimeout(function() {
+                $(entry).removeClass('animating');
+                $(entry).trigger('lc-aos-completed');
+            }, anim_duration);
+        }
+    }
+
+    function deactivate_animation(entry) {
+        var animation = $(entry).data('aos');
+
+        if (animation) {
+            $(entry).removeClass(['animated', animation].join(' '));
+        }
+    }
+
+    function do_limecube_search(module_guid, results_page_url) {
+        var search_query = $("input[name=q]", "#qms-search-" + module_guid).val();
+        document.location.href = ajax_prefix + results_page_url + '/' + search_query;
+    }
+
+        </script>
+
+    
+            
+
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+                    
+        
+                    
+
+        
+
+
+    
+
+
+
+    
+    
+
+
+    
+
+
+
+    
+    
+    <script type="text/javascript">
+        $(function() {
+            var lc_sections_js_interval = setInterval(function () {
+                if (limecube_ready && limecube_style_editor_css_ready) {
+                    clearInterval(lc_sections_js_interval);
+
+                    var first_section = $('.lc-sections-content > .lc-section-wrapper').first(),
+                        body = $('body'),
+                        notification_bar = $('.notification-bar');
+
+                    if (first_section.hasClass('lc-section-height100')) {
+                        function update_section_height() {
+                            var lc_body_padding_top;
+
+                            if (body.hasClass('fixed-header')) {
+                                lc_body_padding_top = body.css("padding-top");
+                            } else {
+                                let is_header_on_top = ($('#header .header-side').length === 0);
+                                lc_body_padding_top = is_header_on_top ? $('#header').outerHeight() : 0;
+                                if (notification_bar.length) {
+                                    lc_body_padding_top += notification_bar.outerHeight()
+                                }
+                                lc_body_padding_top += 'px';
+                            }
+
+                            first_section.css("min-height", "calc(100vh - " + lc_body_padding_top + ")");
+                        }
+
+                        update_section_height();
+
+                        $(window).on('resize', update_section_height);
+                        body.on('notification-bar-recalculated', update_section_height);
+                    }
+                }
+            }, 300);
+        });
+    </script>
+
+    <script async>
+        (function() {
+            try {
+                let referrerDomain = document.referrer ? new URL(document.referrer).hostname : "No referrer";
+                let currentDomain = window.location.hostname;
+                let trackingData = {
+                    referrer: referrerDomain,
+                    current: currentDomain
+                };
+                fetch('https://www.limecube.co/lc-tracking', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(trackingData)
+                });
+            } catch (error) {
+            }
+        })();
+    </script>
+
+
+
+                <!-- Google Code for Remarketing Tag -->
+<!--------------------------------------------------
+Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. See more information and instructions on how to setup the tag on: http://google.com/ads/remarketingsetup
+--------------------------------------------------->
+<script type="text/javascript">
+    /* <![CDATA[ */
+    var google_conversion_id = 828134454;
+    var google_custom_params = window.google_tag_params;
+    var google_remarketing_only = true;
+    /* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+    <div style="display:inline;">
+        <img height="1" width="1" style="border-style:none;" alt="view through conversion" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/828134454/?guid=ON&amp;script=0"/>
+    </div>
+</noscript>
+            
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#lc-rct-dd6da572-ce67-4db7-90e6-66b7bb1d1c5e").on('click', '.lc-button', function(ev) {
+            ev.preventDefault();
+            ev.stopPropagation();
+            reg.ga_button_clicked(this, "AI Builder", "Click", "Home Page Get Started", "");
+            reg.open_registration(138);
+        });
+    });
+</script>
+
+    <script type="text/javascript">
+        function fit_rectangle (element_size, container_size) {
+            let width, height,
+                elementRatio = element_size.width / element_size.height,
+                containerRatio = container_size.width / container_size.height;
+
+            if (containerRatio > elementRatio) {
+                width = container_size.width;
+                height = container_size.width / elementRatio;
+            } else {
+                height = container_size.height;
+                width = container_size.height * elementRatio;
+            }
+
+            return { width: width, height: height };
+        }
+        function is_img_loaded (img) {
+            return img.complete && img.naturalHeight !== 0;
+        }
+    </script>
+
+        <script src="/js/checkbox-x.js"></script>
+    
+        <script src="/js/radiobutton-x.js"></script>
+    
+        <script type="text/javascript" src="/js/bootstrapdatepicker/bootstrap-datetimepicker.min.js"></script>
+    
+        <script type="text/javascript" src="/js/jquery/validator.js"></script>
+    
+        <script src="/js/uploader-x.min.js"></script>
+    
+        <script type="text/javascript" src="/js/isotope/imagesloaded.pkgd.min.js"></script>
+    
+        
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
+    
+
+<script type="text/javascript">
+    var dom_ready = false,
+        AOSObserver = null;
+
+    $(document).ready(function () {
+        $('.navbar a.dropdown-toggle').on('click', function (e) {
+            var $el = $(this);
+
+            if ($el.parent("li").hasClass('open')) {
+                document.location.href = $el.attr('href');
+            } else {
+                $('.nav li.open').not($el.parents("li")).removeClass("open");
+                $el.parent("li").addClass('open');
+            }
+
+            if ($(window).width() > 1024) {
+                document.location.href = $el.attr('href');
+            }
+            return false;
+        });
+
+        $('.navbar li.dropdown').on('mouseenter', function (e) {
+            if ($(window).width() > 1024) {
+                $(this).children(".dropdown-menu").stop(true, true).fadeIn();
+            }
+        }).on('mouseleave', function (e) {
+            if ($(window).width() > 1024) {
+                $(this).children(".dropdown-menu").stop(true, true).fadeOut();
+            }
+        });
+	dom_ready = true;
+    });
+
+    function not_in_header_and_unset_aos(value, el) {
+        if($(el).closest('#header').length == 0){
+            return true;
+        }
+        el.removeAttribute('data-aos');
+        return false;
+    }
+
+    function not_rct_module(value, el) {
+        return ($(el).closest('.lc-rct-wrapper').length === 0);
+    }
+
+    function observer_initialize() {
+        var entries = $('[data-aos]').filter(not_in_header_and_unset_aos).filter(not_rct_module);
+        if ("IntersectionObserver" in window) {
+            AOSObserver = new IntersectionObserver(
+                    function (entries, observer) {
+                        entries.forEach(function (entry) {
+                            if (entry.isIntersecting && !is_animated(entry.target)) {
+                                activate_animation(entry.target);
+                            }
+                        });
+                    },
+                    {
+                        rootMargin: '0% 50%',
+                        threshold: 0
+                    }
+            );
+
+            entries.each(function () {
+                AOSObserver.observe($(this).get(0));
+            });
+        } else {
+            // Possibly fall back to a more compatible method here
+            let scrollAnimThrottleTimeout;
+
+            function scroll_animation() {
+                if (scrollAnimThrottleTimeout) {
+                    clearTimeout(scrollAnimThrottleTimeout);
+                }
+
+                scrollAnimThrottleTimeout = setTimeout(function () {
+                    let scrollAnimNodes = document.querySelectorAll("[data-aos]");
+                    let scrollTop = window.pageYOffset;
+
+                    for (let i in scrollAnimNodes) {
+                        if (!scrollAnimNodes.hasOwnProperty(i)) continue;
+                        let node = scrollAnimNodes[i];
+                        if ($(node).offset().top < (window.innerHeight + scrollTop)) {
+                            if (!is_animated(node)) {
+                                activate_animation(node);
+                            }
+                        }
+                    }
+
+                }, 20);
+            }
+
+            document.addEventListener("scroll", scroll_animation);
+            window.addEventListener("resize", scroll_animation);
+            window.addEventListener("orientationChange", scroll_animation);
+
+            scroll_animation();
+        }
+    }
+
+    function scroll_animation_initialize() {
+        if (dom_ready) {
+            observer_initialize();
+        } else {
+            $(document).ready(function () {
+                observer_initialize();
+            });
+        }
+    }
+
+    if (limecube_ready) {
+        scroll_animation_initialize()
+    } else {
+        $(document).on("limecubeReady", function () {
+            scroll_animation_initialize()
+        });
+    }
+
+setTimeout(function () { scroll_animation_initialize(); console.log('scroll animation by timeout'); }, 1500);
+
+    
+    
+    var limecube_notification_bar = false;
+
+                function CFormCheckRecaptchaForm(form) {
+                    if (typeof(grecaptcha) !== 'undefined') {
+                        grecaptcha.form = form;
+                        grecaptcha.execute($('.reg-modal-captcha', grecaptcha.form).data('widget-id'));
+                    } else {
+                        setTimeout(function(){ CFormCheckRecaptchaForm(form);}, 500);
+                    }
+                }
+                function onSuccessRecaptchaCForm() {
+                    if(!$(grecaptcha.form).find('.lc-form-error-recaptcha').hasClass('hidden')) {
+                        $(grecaptcha.form).find('.lc-form-error-recaptcha').addClass('hidden');
+                    }
+                    grecaptcha.form.submit();
+                }
+                function onErrorRecaptchaCForm() {
+                    if(arguments.length > 0) {
+                        //var captcha_list = document.getElementsByClassName('reg-modal-captcha');
+                        $('.lc-form-error-recaptcha', arguments[0]).removeClass('hidden');
+                    } else if(grecaptcha.form) {
+                        $(grecaptcha.form).find('.lc-form-error-recaptcha').removeClass('hidden');
+                    }
+                }
+            
+    setTimeout(function(){
+        var head = document.getElementsByTagName('head')[0];
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = "https://www.google.com/recaptcha/api.js?onload=onLoadRecaptchaForm&render=explicit'";
+        head.appendChild(script);
+    }, 3000);
+    function onLoadRecaptchaForm() {
+        var captcha_list = document.getElementsByClassName('reg-modal-captcha'),
+            opt_widget_id = "";
+        for(var i = 0, l = captcha_list.length; i < l; i++) {
+            if (!captcha_list[i].dataset.widgetId) {
+                opt_widget_id = grecaptcha.render(captcha_list[i], {
+                    'sitekey' : '6Le3G2scAAAAAL7dLgPcejk7Wxe80koknWBMiue-',
+                    'callback' : captcha_list[i].dataset.callback,
+                    'error-callback': onErrorRecaptchaCForm.bind(event, i),
+                    'size': 'invisible',
+                    'badge': 'inline'
+                });
+                captcha_list[i].dataset.widgetId = opt_widget_id;
+            }
+        }
+    }
+
+        $(document).ready(function () {
+            window.modules_store.dispatch({
+                'type': 'ADD_MODULE',
+                'module_uid': 'simple_form_module',
+                'module_id': '7cc9783e-8709-4ace-9a67-19a5a8a19cd4',
+                'module_config': {"0":{"params_":{"text_":{"color_type":"custom","color":"#1c1c26"},"label_":{"font_size":"20","tablet_font_size":"20","mobile_font_size":"20"},"title_":{"top_space":"0","bottom_space":"20","tablet_top_space":"0","tablet_bottom_space":"20","mobile_top_space":"0","mobile_bottom_space":"20"}}},"form_name":"Newsletter","from_name":"Limecube","from_email":"hello@limecube.co","subject":"New Contact Form","mail_text":"","thank_you_page":"22234","cc_addresses":"","bcc_addresses":"","webhook_zapier":"","columns_count":"2","field_title_position":"inside","unique_mail":"0","dont_send_to_admin":"0","dont_allow_urls":"0","spreadsheet_enabled":"1","spreadsheet_id":"19pKIAacJCQVEmDyzLWmMHJsBl7FDretsxUlHpUG1Vuw","spreadsheet_url":"","spreadsheet_title_row":"{}","fields_json":{"f_0":{"field_name":"Name","field_type":"str","field_validation":"string","row_n":"0","col_n":"0","show_date_only":"0","label_class":"","select":{"values":[{"email":"","name":""}],"send_to_emails":"0"},"radio":[""],"field_error":"","accept_terms":"0","accept_terms_content":"","full_row":"0"},"f_2":{"field_name":"Email","field_type":"email","field_validation":"email","field_error":"Enter valid email","row_n":"0","col_n":"1","full_row":"0","label_class":"","show_date_only":"0","accept_terms":"0","accept_terms_content":"","select":{"send_to_emails":"0"}}},"params_":{"show_title":"0","background_":{"color":"","file":"","color_type":""},"text_":{"color":"","color_type":""},"submit_text":"Submit","title_":{"top_space":"0","bottom_space":"0","tablet_top_space":"0","tablet_bottom_space":"0","mobile_top_space":"0","mobile_bottom_space":"0"},"label_":{"font_size":"1","tablet_font_size":"1","mobile_font_size":"1"}},"spreadsheet_tab":"-1","font_styles":{"font-weight":"700","font-style":"normal","font-size":"20px","letter-spacing":"1px","line-height":"1.1","text-decoration":"none","text-transform":"none","font-weight-back":"700"},"tablet_font_styles":{"font-weight":"700","font-style":"normal","font-size":"16px","letter-spacing":"0px","line-height":"1","text-decoration":"none","text-transform":"none","font-weight-back":"700"},"mobile_font_styles":{"font-weight":"700","font-style":"normal","font-size":"16px","letter-spacing":"0px","line-height":"1","text-decoration":"none","text-transform":"none","font-weight-back":"700"},"button_background_color_type":"color_number","button_background_color":"3","button_text_color":"5","button_layout":"lc-button-shape-pill lc-button-style-solid","button_size":"lc-button-size-medium","padding_top":"none","padding_bottom":"none","button_hover_color_type":"color_number","button_hover_color":"5","button_hover_text_color":"4","button_hover_animation":"button--mimas","alignment":"center"},
+                'module_data': {"0":{"params_":{"text_":{"color_type":"custom","color":"#1c1c26"},"label_":{"font_size":"20","tablet_font_size":"20","mobile_font_size":"20"},"title_":{"top_space":"0","bottom_space":"20","tablet_top_space":"0","tablet_bottom_space":"20","mobile_top_space":"0","mobile_bottom_space":"20"}}},"form_name":"Newsletter","from_name":"Limecube","from_email":"hello@limecube.co","subject":"New Contact Form","mail_text":"","thank_you_page":"22234","cc_addresses":"","bcc_addresses":"","webhook_zapier":"","columns_count":"2","field_title_position":"inside","unique_mail":"0","dont_send_to_admin":"0","dont_allow_urls":"0","spreadsheet_enabled":"1","spreadsheet_id":"19pKIAacJCQVEmDyzLWmMHJsBl7FDretsxUlHpUG1Vuw","spreadsheet_url":"","spreadsheet_title_row":"{}","fields_json":{"f_0":{"field_name":"Name","field_type":"str","field_validation":"string","row_n":"0","col_n":"0","show_date_only":"0","label_class":"","select":{"values":[{"email":"","name":""}],"send_to_emails":"0"},"radio":[""],"field_error":"","accept_terms":"0","accept_terms_content":"","full_row":"0","first_in_row":1,"col_width":6},"f_2":{"field_name":"Email","field_type":"email","field_validation":"email","field_error":"Enter valid email","row_n":"0","col_n":"1","full_row":"0","label_class":"","show_date_only":"0","accept_terms":"0","accept_terms_content":"","select":{"send_to_emails":"0"},"first_in_row":0,"col_width":6}},"params_":{"show_title":"0","background_":{"color":"","file":"","color_type":""},"text_":{"color":"","color_type":""},"submit_text":"Submit","title_":{"top_space":"0","bottom_space":"0","tablet_top_space":"0","tablet_bottom_space":"0","mobile_top_space":"0","mobile_bottom_space":"0"},"label_":{"font_size":"1","tablet_font_size":"1","mobile_font_size":"1"}},"spreadsheet_tab":"-1","font_styles":{"font-weight":"700","font-style":"normal","font-size":"20px","letter-spacing":"1px","line-height":"1.1","text-decoration":"none","text-transform":"none","font-weight-back":"700"},"tablet_font_styles":{"font-weight":"700","font-style":"normal","font-size":"16px","letter-spacing":"0px","line-height":"1","text-decoration":"none","text-transform":"none","font-weight-back":"700"},"mobile_font_styles":{"font-weight":"700","font-style":"normal","font-size":"16px","letter-spacing":"0px","line-height":"1","text-decoration":"none","text-transform":"none","font-weight-back":"700"},"button_background_color_type":"color_number","button_background_color":"3","button_text_color":"5","button_layout":"lc-button-shape-pill lc-button-style-solid","button_size":"lc-button-size-medium","padding_top":"none","padding_bottom":"none","button_hover_color_type":"color_number","button_hover_color":"5","button_hover_text_color":"4","button_hover_animation":"button--mimas","alignment":"center"},
+                'module_response': {"data":{"email_repeat":"honeypot@qmswebsitebuilder.com"},"err":[]}
+            });
+
+
+            let lc_simple_form_interval = setInterval(function () {
+                if (limecube_ready && limecube_style_editor_css_ready) {
+                    clearInterval(lc_simple_form_interval);
+                    let module_content = $("#lc-rct-7cc9783e-8709-4ace-9a67-19a5a8a19cd4"),
+                        animation_el = module_content.closest("[data-aos-section]"),
+                        animation = animation_el.data('aos-section'),
+                        animation_direction = animation_el.data('aos-direction-section');
+
+                    if (module_content.children().length > 0) {
+                        hydrateRoot(module_content.get(0), React.createElement(Provider, { 'store': window.modules_store },
+                            React.createElement(ReactSimpleFormModule, { 'module_id': "7cc9783e-8709-4ace-9a67-19a5a8a19cd4", 'animation': animation, 'animation_direction': animation_direction }, null)
+                        ));
+                    } else {
+                        createRoot(module_content.get(0)).render(React.createElement(Provider, { 'store': window.modules_store },
+                            React.createElement(ReactSimpleFormModule, { 'module_id': "7cc9783e-8709-4ace-9a67-19a5a8a19cd4", 'animation': animation, 'animation_direction': animation_direction }, null)
+                        ));
+                    }
+                }
+            }, 300);
+        });
+    
+	$(document).ready(function () {
+        var context = $('#qms-simple-form-7cc9783e-8709-4ace-9a67-19a5a8a19cd4');
+        if ($(".form_date", context).datetimepicker != undefined) {
+            $(".form_date", context).datetimepicker( {
+                minView: 2,
+                format: 'dd MM, yyyy',
+                autoclose: true,
+                todayBtn: true,
+                pickerPosition: "bottom-left"
+            });
+        }
+        if ($(".form_datetime", context).datetimepicker != undefined) {
+            $(".form_datetime", context).datetimepicker( {
+                format: 'dd MM, yyyy hh:ii',
+                autoclose: true,
+                todayBtn: true,
+                pickerPosition: "bottom-left"
+            });
+        }
+        if ($(".custom-radiobuttons-x", context).radiobuttonX != undefined) {
+            $(".custom-radiobuttons-x", context).radiobuttonX();
+        }
+        if ($(".custom-checkboxes-x", context).checkboxX != undefined) {
+            $(".custom-checkboxes-x", context).checkboxX( { threeState: false});
+        }
+        if ($(".custom-input-x", context).fileinput != undefined) {
+            $(".custom-input-x", context).each(function (i, o) {
+                $(o).fileinput( {
+                    initialCaption: o.hasAttribute('placeholder') ? o.getAttribute('placeholder') : '',
+                    showRemove: false, showUpload: false, showPreview: false,
+                    browseLabel: 'Browse', browseIcon: '', browseClass: 'btn btn-basic-gray form-control'
+                });
+            });
+        }
+        $('.contactForm', context).validator();
+    });
+
+        function ga_button_new_clicked(button, et_category, et_action, et_label, et_value) {
+            if (window.gtag) {
+                gtag('event', et_action, {
+                    'event_category': et_category,
+                    'event_label': et_label,
+                    'event_value': et_value
+                });
+            } else if (typeof(ga) !== "undefined") {
+                ga('send', 'event', et_category, et_action, et_label, et_value);
+            }
+        }
+    
+    $(document).ready(function () {
+        window.modules_store.dispatch({
+            'type': 'ADD_MODULE',
+            'module_uid': 'button_new_module',
+            'module_id': 'ae88953f-a4f3-4ae9-8fcc-63fe95695d66',
+            'module_config': {"text":"Get Started Now","cms_url":"23928","external_url":"","size":"lc-button-size-large","padding_top":"small","padding_bottom":"none","alignment":"left","event_tracking":"1","et_category":"AI_Builder_Blog_Article","et_action":"AI_Builder_Blog_Article","et_label":"AI_Builder_Blog_Article","et_value":"","background_color":"#7fc241","background_color_type":"custom","text_color":"#ffffff","layout":"lc-button-shape-pill lc-button-style-solid","hover_animation":"button--pan","hover_color_type":"color_number","hover_color":"4","hover_text_color":"#ffffff"},
+            'module_data': {"text":"Get Started Now","cms_url":"registration-page","external_url":"","size":"lc-button-size-large","padding_top":"small","padding_bottom":"none","alignment":"left","event_tracking":"1","et_category":"AI_Builder_Blog_Article","et_action":"AI_Builder_Blog_Article","et_label":"AI_Builder_Blog_Article","et_value":"","background_color":"#7fc241","background_color_type":"custom","text_color":"#ffffff","layout":"lc-button-shape-pill lc-button-style-solid","hover_animation":"button--pan","hover_color_type":"color_number","hover_color":"4","hover_text_color":"#ffffff"}
+        });
+
+
+        let lc_rct_init_interval = setInterval(function () {
+            if (limecube_ready && limecube_style_editor_css_ready) {
+                clearInterval(lc_rct_init_interval);
+                let module_content = $("#lc-rct-ae88953f-a4f3-4ae9-8fcc-63fe95695d66"),
+                    animation_el = module_content.closest("[data-aos-section]"),
+                    animation = animation_el.data('aos-section'),
+                    animation_direction = animation_el.data('aos-direction-section');
+
+                if (module_content.children().length > 0) {
+                    hydrateRoot(module_content.get(0), React.createElement(Provider, { 'store': window.modules_store },
+                        React.createElement(ReactButtonModule, { 'module_id': "ae88953f-a4f3-4ae9-8fcc-63fe95695d66", 'animation': animation, 'animation_direction': animation_direction }, null)
+                    ));
+                } else {
+                    createRoot(module_content.get(0)).render(React.createElement(Provider, { 'store': window.modules_store },
+                        React.createElement(ReactButtonModule, { 'module_id': "ae88953f-a4f3-4ae9-8fcc-63fe95695d66", 'animation': animation, 'animation_direction': animation_direction }, null)
+                    ));
+                }
+
+                                    module_content.on('click', "a.lc-button", function() {
+                        ga_button_new_clicked(this, "AI_Builder_Blog_Article", "AI_Builder_Blog_Article", "AI_Builder_Blog_Article", "");
+                    });
+                            }
+        }, 300);
+    });
+
+</script>
+
+
+
+<script type="text/javascript" src="/components/page_editor/templates/themes/limecube_v3/js/custom.js?v=10.5.0.12"></script>
+<script type="text/javascript" src="/js/registration.js?v=10.5.0.12"></script>
+
+</body>
+</html>

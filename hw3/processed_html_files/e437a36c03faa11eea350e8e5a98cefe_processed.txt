@@ -1,0 +1,59 @@
+Would you like to sign up?
+{{ email }}
+Your First Name is too long.
+No special Characters allowed!
+Your Last Name is too long.
+No special Characters allowed!
+Please create a password!
+Your Password is too long.
+I agree to the Eventcombo Terms & Conditions
+Please accept the Eventcombo Terms & Conditions
+{{signupError}}
+CANCEL
+{{ email }}
+Password
+{{ email }}
+Password
+{{ email }}
+Please create a password!
+Your Password is too long.
+Repeat password
+Your Password is too long.
+Passwords did not match, please retype
+LOG IN
+#Literary Arts
+Join us in Downers Grove for our monthly Banned Book Club! Our next meeting will be held on Thursday, October 17th at 6:00 pm, and we will be discussing Speak. This will be a free event, but we highly encourage the purchase of the monthly book from our store.  Please note that the author will not be present at this event.
+More about Speak:
+The groundbreaking National Book Award Finalist and Michael L. Printz Honor Book with more than 3.5 million copies sold, Speak is a bestselling modern classic about consent, healing, and finding your voice.
+"Speak up for yourself—we want to know what you have to say." From the first moment of her freshman year at Merryweather High, Melinda knows this is a big lie, part of the nonsense of high school. She is friendless, an outcast, because she busted an end-of-summer party by calling the cops. Now nobody will talk to her, let alone listen to her. As time passes, Melinda becomes increasingly isolated and practically stops talking altogether. Only her art class offers any solace, and it is through her work on an art project that she is finally able to face what really happened at that terrible party: she was raped by an upperclassman, a guy who still attends Merryweather and is still a threat to her. Her healing process has just begun when she has another violent encounter with him. But this time Melinda fights back—and refuses to be silent.
+From Astrid Lindgren Memorial Award laureate Laurie Halse Anderson comes the extraordinary landmark novel that has spoken to millions of readers. Powerful and utterly unforgettable, Speak has been translated into 35 languages, was the basis for the major motion picture starring Kristen Stewart, and is now a stunning graphic novel adapted by Laurie Halse Anderson herself, with artwork from Eisner-Award winner Emily Carroll.
+About the Author:
+Laurie Halse Anderson is the New York Times-bestselling author of many award-winning books including the groundbreaking modern classic Speak, a National Book Award finalist which has sold over 3.5 million copies and been translated into 35 languages. In 2023, Anderson was named the laureate of the Astrid Lindgren Memorial Award, which is given annually to authors, illustrators, oral storytellers, and reading promoters "for their outstanding contribution to children's and young adult literature." In 2009, Anderson was selected by the American Library Association for the Margaret A. Edwards Award for her "significant and lasting contribution to young adult literature." A passionate spokesperson for the need to combat censorship and promote diversity in publishing, she has been honored for her battles for intellectual freedom by the National Coalition Against Censorship and the National Council of Teachers of English. Mother of four, grandmother of dragons, and wife of one, she lives in Pennsylvania.
+Please read these Event Policies carefully:
+Anderson’s Bookshop reserves the right to change the format of this event to a virtual one at any time if it becomes necessary. Please be advised that Anderson’s Bookshop assumes no responsibility or liability for any personal injury or other loss you may incur as a result of your decision to attend an event, including the transmission of Covid-19 or related illnesses. We expect that for the protection of everyone, all applicable Covid-related protocols will be followed.
+Failure to treat all participants and staff with courtesy and respect may result in your expulsion from the event.
+Accessibility:
+We strive to host inclusive, accessible events that enable all individuals to engage fully. To request an accommodation or for inquiries about accessibility, after purchasing your ticket(s), please contact us at andersons@andersonsbookshop.com.
+{{eventInfo.SpeakerLabel}}
+Refund Policy
+Please note that tickets are non-refundable. Once your payment has been submitted, your purchase is final. This includes changes to the status of signed books and instances where you cannot attend an event at the scheduled time.
+{{item.TimeZoneName}}{{item.RoomName}}
+Tickets are available for {{selectedVenue.VenueName}} for {{selectedDate.Description}}.
+Select a different venue
+View {{eventInfo.ScheduleName}} keyboard_arrow_down
+Bundle Your Order And Save ?
+Buy together and save money! We have exclusive deals to make your event experience more convenient, cheaper and fun.
+Teams are subsets of attendees who collaborate in the event with each other. Each team has its own members. When an event attendee purchases a ticket, they are not automatically added to a team; each attendee must join a specific team within an event.
+{{team.TeamName}}
+Message
+Your Name
+Message
+CANCEL
+SEND
+{{LoadingMessage}}
+clear
+{{InfoMessage}}
+Password
+No
+Yes
+No matter what size event, we are your turnkey partner. Eventcombo gives you access to next-gen technology with unmatched customer service.

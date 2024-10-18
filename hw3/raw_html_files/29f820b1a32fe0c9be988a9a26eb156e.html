@@ -1,0 +1,1497 @@
+<!doctype html>
+<html lang="en_US">
+<head>
+    <title>How to Use FastAPI for Machine Learning | The PyCharm Blog</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Cache-Control" content="no-cache">
+        <link rel="preload" href="https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Regular.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-SemiBold.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/wp-content/themes/jetbrains/assets/fonts/JetBrainsMono-Regular.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="/wp-content/themes/jetbrains/assets/fonts/JetBrainsMono-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <style type="text/css">
+        /*
+ * Core styles for PriorityNav.js
+ * These styles are not optional and should always be included
+ *
+ * Free to use under the MIT License.
+ * http://twitter.com/GijsRoge
+ */
+.priority-nav {
+  white-space: nowrap;
+  /*
+    * Makes sure the menu's are inline-block so they don't take up
+    * the entire width of its parent. This will break the plugin.
+    */
+}
+
+.priority-nav > ul {
+  display: inline-block;
+}
+
+.priority-nav > ul > li {
+  display: inline-block;
+}
+
+.priority-nav-has-dropdown .priority-nav__dropdown-toggle {
+  position: relative;
+}
+
+.priority-nav__wrapper {
+  position: relative;
+}
+
+.priority-nav__dropdown {
+  position: absolute;
+  visibility: hidden;
+}
+
+.priority-nav__dropdown.show {
+  visibility: visible;
+}
+
+.priority-nav__dropdown-toggle {
+  visibility: hidden;
+  position: absolute;
+}
+
+.priority-nav-is-visible {
+  visibility: visible;
+}
+
+.priority-nav-is-hidden {
+  visibility: hidden;
+}
+/* light weight */
+@font-face {
+    font-family: "JetBrains Sans";
+    src: url("https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Light.woff2")
+            format("woff2"),
+        url("https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Light.woff")
+            format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Regular weight */
+@font-face {
+    font-family: "JetBrains Sans";
+    src: url("https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Regular.woff2")
+            format("woff2"),
+        url("https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Regular.woff")
+            format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+/* SemiBold weight */
+@font-face {
+    font-family: "JetBrains Sans";
+    src: url("https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-SemiBold.woff2")
+            format("woff2"),
+        url("https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-SemiBold.woff")
+            format("woff");
+    font-weight: 530;
+    font-style: normal;
+    font-display: swap;
+}
+.custom-select-container {
+  position: relative;
+  box-sizing: border-box;;
+}
+.custom-select-container * {
+  box-sizing: border-box;
+}
+.custom-select-container.is-disabled {
+  opacity: .333;
+}
+.custom-select-opener {
+  background-color: #ccc;
+  padding: 0.5em;
+  display: block;
+  cursor: pointer;
+  width: 100%;
+}
+.custom-select-container select {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.custom-select-panel {
+  max-height: 0;
+  transition: max-height .5s ease-out, overflow-y 0.1s 0.5s;
+  overflow: hidden;
+  background-color: #e9e9e9;
+  position: absolute;
+  top: 100%;
+  z-index: 1;
+  width: 100%;
+}
+.custom-select-container.is-open .custom-select-panel {
+  max-height: 10.7em;
+  overflow-y: auto
+}
+.custom-select-option {
+  padding: 0.5em;
+}
+.custom-select-option.has-focus {
+  background-color: LightBlue;
+}
+.custom-select-option.is-selected::before {
+  content: "✔";
+  padding-right: 0.5em;
+}
+.custom-select-optgroup > .custom-select-option {
+  padding-left: 2em;
+}
+.custom-select-optgroup::before {
+  content: attr(data-label);
+  display: block;
+  padding: 0.5em;
+  color: #888;
+}
+.menu-list,.dropdown-language,.navbar ul.row,.navbar ul.row>li ul,.sub-menu,main .article-section .content ol:not([class]):not([id]),main ul:not([class]):not([id]),.menu__nav>ul,.priority-nav__dropdown,.social{margin:0;padding:0;list-style:none}.clearfix:after{content:'';display:block;clear:both}.ellipsis{white-space:nowrap;text-overflow:ellipsis;overflow:hidden}.alert-notification{padding:16px 0 0}@media (min-width: 1024px){.alert-notification{padding:32px 0 0}}.alert-notification__box{padding:16px;background:rgba(250,92,74,0.2)}@media (min-width: 1024px){.alert-notification__box{padding:24px}}.alert-notification p{margin:0}.alert-notification p strong{font-weight:600}.space-notification{padding:16px 0 0;width:100vw}@media (min-width: 1024px){.space-notification{padding:24px 0 0;margin-bottom:-34px}}.space-notification__box{padding:16px;background-color:#6B57FF;max-width:100%}@media (min-width: 1024px){.space-notification__box{padding:14px}}.space-notification p{margin:0;color:#ffffff;text-align:center}.space-notification p a{color:#ffffff;border:unset;display:inline-block}html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}*{max-height:1000000px}body{color:#19191C;background:#fff;font:16px/1.2 "Arial","Helvetica Neue","Helvetica",sans-serif;min-width:320px;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}img{max-width:100%;height:auto;vertical-align:top}.gm-style img{max-width:none}h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6,.h{font-family:"Arial","Helvetica Neue","Helvetica",sans-serif;font-weight:530;margin:0 0 0.5em;color:#19191C}h1,.h1{font-size:35px}h2,.h2{font-size:28px}h3,.h3{font-size:20px}h4,.h4{font-size:17px}h5,.h5{font-size:14px}h6,.h6{font-size:16px}p{margin:0 0 1em}a{color:#19191C}a:hover,a:focus{text-decoration:none}form,fieldset{margin:0;padding:0;border-style:none}input[type='text'],input[type='tel'],input[type='email'],input[type='search'],input[type='password'],textarea{-webkit-appearance:none;-webkit-border-radius:0;box-sizing:border-box;outline:none;border:1px solid rgba(39,40,44,0.15);padding:0.4em 0.7em}input[type='text']::-webkit-input-placeholder,input[type='tel']::-webkit-input-placeholder,input[type='email']::-webkit-input-placeholder,input[type='search']::-webkit-input-placeholder,input[type='password']::-webkit-input-placeholder,textarea::-webkit-input-placeholder{color:#19191C}input[type='text']::-moz-placeholder,input[type='tel']::-moz-placeholder,input[type='email']::-moz-placeholder,input[type='search']::-moz-placeholder,input[type='password']::-moz-placeholder,textarea::-moz-placeholder{opacity:1;color:#19191C}input[type='text']:-moz-placeholder,input[type='tel']:-moz-placeholder,input[type='email']:-moz-placeholder,input[type='search']:-moz-placeholder,input[type='password']:-moz-placeholder,textarea:-moz-placeholder{color:#19191C}input[type='text']:-ms-input-placeholder,input[type='tel']:-ms-input-placeholder,input[type='email']:-ms-input-placeholder,input[type='search']:-ms-input-placeholder,input[type='password']:-ms-input-placeholder,textarea:-ms-input-placeholder{color:#19191C}input[type='text'].placeholder,input[type='tel'].placeholder,input[type='email'].placeholder,input[type='search'].placeholder,input[type='password'].placeholder,textarea.placeholder{color:#19191C}select{-webkit-border-radius:0}textarea{resize:vertical;vertical-align:top}button,input[type='button'],input[type='reset'],input[type='file'],input[type='submit']{-webkit-appearance:none;-webkit-border-radius:0;cursor:pointer}/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}mark{background:#ff00;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace, monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}input[type="search"]{-webkit-appearance:textfield}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:bold}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}[class^="icon-"],[class*=" icon-"]{font-family:"icomoon" !important;speak:never;font-style:normal;font-weight:normal;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.icon-heart:before{content:"\e928"}.icon-thumbs-up:before{content:"\e927"}.icon-merchandise:before{content:"\e926"}.icon-arrow-up:before{content:"\e925"}.icon-twitter:before{content:"\e902"}.icon-date:before{content:"\e923"}.icon-link:before{content:"\e922"}.icon-tiktok:before{content:"\e921"}.icon-warning:before{content:"\e91f"}.icon-alert:before{content:"\e920"}.icon-dots:before{content:"\e91e"}.icon-vk:before{content:"\e915"}.icon-notification:before{content:"\e91d"}.icon-facebook:before{content:"\e904"}.icon-instagram:before{content:"\e907"}.icon-linkedin:before{content:"\e914"}.icon-rss-feed:before{content:"\e918"}.icon-language:before{content:"\e919"}.icon-union:before{content:"\e91a"}.icon-pocket:before{content:"\e906"}.icon-reddit:before{content:"\e908"}.icon-search:before{content:"\e909"}.icon-share:before{content:"\e911"}.icon-slack:before{content:"\e912"}.icon-stackoverflow:before{content:"\e913"}.icon-weibo:before{content:"\e916"}.icon-email:before{content:"\e917"}.icon-cart:before{content:"\e900"}.icon-comments:before{content:"\e901"}.icon-globus:before{content:"\e903"}.icon-like:before{content:"\e905"}.icon-user:before{content:"\e90a"}.icon-wechat:before{content:"\e90b"}.icon-youtube:before{content:"\e90c"}.icon-arrow-left:before{content:"\e90d"}.icon-arrow-right:before{content:"\e90e"}.icon-bag:before{content:"\e90f"}.icon-down:before{content:"\e910"}.icon-django:before{content:"\e924"}.icon-close:before{content:"\e91c"}.icon-menu:before{content:"\e91b"}.icon-play:before{content:"\ea1c"}.icon-stop:before{content:"\ea1e"}.quiz{position:relative;padding:64px 0 96px;color:#fff}@media (min-width: 768px){.quiz{padding:96px 0 145px}}@media (min-width: 1024px){.quiz{padding:134px 0 145px}}.quiz:before{content:"";position:absolute;top:-600px;left:-625px;width:1249px;height:1145px;background:radial-gradient(ellipse at center, #6101bf 0%, #6101bf 30%, #4400d5 55%, #000 80%);filter:blur(240px);opacity:0.6}@media (min-width: 768px){.quiz:before{left:-417px}}@media (min-width: 1200px){.quiz:before{left:-141px}}.quiz:after{content:"";position:absolute;bottom:-550px;right:-342px;width:1004px;height:921px;background:radial-gradient(ellipse at center, #5e00d5 1%, #000356 73%, #000 100%);filter:blur(240px);opacity:0.7}@media (min-width: 768px){.quiz:after{right:-323px}}@media (min-width: 1200px){.quiz:after{right:-190px;bottom:-550px}}.quiz .container{position:relative;z-index:10;max-width:1544px}.quiz h1{font-size:42px;line-height:1.2;color:#fff;margin:0 0 32px}@media (min-width: 768px){.quiz h1{font-size:72px;line-height:1;letter-spacing:-0.8px;margin:0 0 50px}}@media (min-width: 1024px){.quiz h1{font-size:92px}}.quiz__head{font-size:23px;line-height:1.3044;font-weight:300;max-width:1015px;margin:0 0 96px}@media (min-width: 768px){.quiz__head{font-size:39px;line-height:1.26}}.quiz__head h1{margin:0 0 32px}@media (min-width: 768px){.quiz__head h1{margin:0 0 50px}}.quiz__head p{margin:0 0 24px}@media (min-width: 768px){.quiz__head p{margin:0 0 32px}}.quiz h2{font-size:28px;letter-spacing:-0.05px;color:#fff}@media (min-width: 768px){.quiz h2{font-size:43px}}.quiz__works{background:#5244bb;border-radius:16px;padding:16px;margin:0 0 25px}@media (max-width: 767px){.quiz__works .js-slide-hidden{position:unset !important}}@media (min-width: 768px){.quiz__works{border-radius:24px;padding:32px 32px 16px}}.quiz__works-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;padding:0 0 24px}@media (min-width: 768px){.quiz__works-head{padding:0 0 16px}}.quiz__works-head h2{margin:0}.quiz__works-opener{display:none}@media (min-width: 768px){.quiz__works-opener{font-size:20px;display:inline-block;vertical-align:middle;background:#fff;border-radius:3em;color:#19191C;padding:11px 32px;text-align:center}}.quiz__works-opener--hide{display:none}.active .quiz__works-opener--hide{display:block}.quiz__works-opener--reveal{display:block}.active .quiz__works-opener--reveal{display:none}.quiz__works-items{counter-reset:counter;padding:0 10px}@media (min-width: 768px){.quiz__works-items{padding:0 16px}}.quiz__works-item{position:relative;font-size:20px;line-height:1.4;counter-increment:counter;padding:0 0 17px;margin:0 0 32px;border-bottom:1px solid rgba(255,255,255,0.95)}@media (min-width: 768px){.quiz__works-item{padding:32px 0 17px 82px;margin:0}}.quiz__works-item:before{content:counter(counter) ". ";display:block;font-size:40px;line-height:1.1;margin:0 0 16px}@media (min-width: 768px){.quiz__works-item:before{font-size:69px;line-height:1.03;position:absolute;top:32px;left:0;letter-spacing:-0.47px;margin:0}}@media (min-width: 768px){.quiz__works-item:first-child{padding-top:16px}}@media (min-width: 768px){.quiz__works-item:first-child:before{top:16px}}.quiz__works-item:last-child{border:none}@media (max-width: 767px){.quiz__works-item:last-child{padding:0;margin:0}}@media (max-width: 767px){.quiz__works-item:last-child p:last-of-type{margin:0}}.quiz__works-item-wrap{max-width:970px}.quiz__works-item-wrap p{margin:0 0 15px}.quiz__media{position:relative;width:100%;margin:0 0 32px}@media (min-width: 1024px){.quiz__media{margin:0 0 69px}}.quiz__media:before{content:"";display:block;padding-top:56.25%}.quiz__media iframe{position:absolute;top:0;left:0;width:100%;height:100%}.quiz__row{position:relative}@media (min-width: 1024px){.quiz__row{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-start}}.quiz__questions{position:relative;padding:16px;background:#303033;border-radius:16px}@media (min-width: 768px){.quiz__questions{padding:32px 33px;border-radius:24px}}@media (min-width: 1024px){.quiz__questions{width:calc(55% - 8px)}}@media (min-width: 1200px){.quiz__questions{width:calc(58.5% - 16px)}}.quiz__questions h2{margin:0 0 29px}@media (min-width: 768px){.quiz__questions h2{margin:0 0 48px}}@media (min-width: 1024px){.quiz__questions h2{margin:0 0 29px}}.quiz__questions .quiz__box-count{display:inline-block;margin:0 0 18px}@media (min-width: 1024px){.quiz__questions .quiz__box-count{display:none}}.quiz__questions textarea{font-size:16px;width:100%;color:#fff;border:1px solid rgba(255,255,255,0.2);height:112px;padding:8px;background:transparent;resize:none}.quiz__questions textarea::-webkit-input-placeholder{color:rgba(255,255,255,0.5)}.quiz__questions textarea::-moz-placeholder{opacity:1;color:rgba(255,255,255,0.5)}.quiz__questions textarea:-moz-placeholder{color:rgba(255,255,255,0.5)}.quiz__questions textarea:-ms-input-placeholder{color:rgba(255,255,255,0.5)}.quiz__questions textarea.placeholder{color:rgba(255,255,255,0.5)}@media (min-width: 768px){.quiz__questions textarea{font-size:20px;padding:12px 16px;height:136px}}.quiz__questions button[type="submit"]{font-size:16px;padding:8px 24px;color:#19191C;background:#fff;border-radius:3em}@media (min-width: 768px){.quiz__questions button[type="submit"]{font-size:20px;padding:11px 32px}}.quiz__questions button[type="submit"].disabled{background:#59595b;color:rgba(255,255,255,0.5)}.quiz__slider{position:relative}.quiz__slider-wrapper{position:relative;overflow:hidden;height:112px;margin:0 0 32px}@media (min-width: 768px){.quiz__slider-wrapper{height:136px}}.quiz__slider-prev,.quiz__slider-next{font-size:21px;position:absolute;display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;border:1px solid #fff;color:#fff;bottom:0;right:0}.quiz__slider-prev.hidden,.quiz__slider-next.hidden{opacity:0}@media (min-width: 768px){.quiz__slider-prev,.quiz__slider-next{font-size:23px;width:52px;height:52px}}.quiz__slider-prev.disabled,.quiz__slider-next.disabled{color:rgba(255,255,255,0.5);border-color:rgba(255,255,255,0.2)}.quiz__slider-prev{right:56px;transform:rotate(180deg)}@media (min-width: 768px){.quiz__slider-prev{right:68px}}.quiz__slide{position:absolute;top:0;left:0;right:0;bottom:0;transition:transform 0.6s ease-in-out}.quiz__slide:not(.active):not(.correct):not(.hidden):not(:first-child){display:none}.quiz__slide.active{transform:translateX(0)}.quiz__slide.hidden{transform:translateX(calc(100% + 32px))}.quiz__slide.correct{transform:translateX(-100%)}.quiz__slide.correct.active{transform:translateX(0)}.quiz__slide.correct textarea{pointer-events:none}.quiz .quiz__slide.correct.active+.quiz__slide.correct.hidden{transform:translateX(calc(100% + 32px))}.quiz .quiz__slide.correct.active:first-child+.quiz__slide.correct.hidden{transform:translateX(calc(100% + 32px))}.quiz__box{position:absolute;top:0;left:0;right:0;bottom:0;border-radius:16px;padding:16px;background:#303033;transform:translateX(calc(100% + 32px));transition:transform 0.6s ease-in-out}@media (min-width: 768px){.quiz__box{border-radius:24px;padding:32px;min-height:384px}}@media (min-width: 1024px){.quiz__box{position:relative;border:solid #fff;border-width:2px 2px 0;background:transparent;width:calc(45% - 8px);min-height:364px;transform:none}}@media (min-width: 1200px){.quiz__box{width:calc(41.5% - 16px)}}@media (max-width: 1023px){.quiz__box--correct{transform:translateX(0)}}@media (max-width: 1023px){.quiz__box--correct .btn.btn--correct{display:block}}@media (max-width: 1023px){.quiz__box--next{transform:translateX(calc(-100% - 32px))}}@media (max-width: 1023px){.quiz__box--not-correct{transform:translateX(0)}}@media (max-width: 1023px){.quiz__box--not-correct .btn.btn--not-correct{display:block}}@media (min-width: 1024px){.quiz__box:before{content:"";position:absolute;left:-2px;bottom:-2px;width:36px;height:50px;border-bottom-left-radius:24px;border:solid #fff;border-width:0 0 2px 2px}}@media (min-width: 1024px){.quiz__box:after{content:"";position:absolute;right:-2px;bottom:-2px;width:calc(100% - 94px);height:50px;border-bottom-right-radius:24px;border:solid #fff;border-width:0 2px 2px 0}}@media (min-width: 1024px){.quiz__box .arrow{position:absolute;top:100%;left:32px;width:64px;height:64px;border:solid #fff;border-width:0 0 2px 2px;transform:skewY(-45deg);transform-origin:0 0;margin-top:2px}}.quiz__box h2{margin:0 0 32px}@media (min-width: 768px){.quiz__box h2{margin:0 0 18px}}@media (min-width: 1024px){.quiz__box h2{display:none}}.quiz__box-head{display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:space-between;margin:0 0 16px}@media (min-width: 768px){.quiz__box-head{margin:0 0 30px}}.quiz__box-img{display:flex;align-items:center;justify-content:center;width:68px;height:68px;border-radius:50%;border:2px solid #fff;margin:-4px 0 0 -4px}@media screen and (min-width: 768px) and (max-width: 1023px){.quiz__box-img{position:absolute;top:132px;left:36px}}@media (min-width: 768px){.quiz__box-img{width:132px;height:132px}}.quiz__box-img img{width:100%}.quiz__box-count{font-size:20px;line-height:1.1;font-weight:300;padding:10px;color:rgba(255,255,255,0.5);border-radius:8px;background:rgba(255,255,255,0.2)}@media screen and (min-width: 768px) and (max-width: 1024px){.quiz__box-count{position:absolute;top:32px;right:32px;min-width:114px}}@media (min-width: 768px){.quiz__box-count{font-size:40px;padding:12px}}.quiz__box-count.updated{background:#5244bb;color:#fff}.quiz__box-message{font-size:16px;line-height:1.5;font-weight:300;color:#fff;border-radius:8px;background:rgba(255,255,255,0.05);padding:8px;min-height:88px;margin:0 0 36px}@media (min-width: 768px){.quiz__box-message{font-size:20px;line-height:1.4;padding:16px;border-radius:16px;min-height:136px;margin:0 0 32px 152px}}@media (min-width: 1024px){.quiz__box-message{font-size:29px;line-height:1.345;min-height:141px;margin:0}}.quiz__box-message p{margin:0}.quiz__box .btn{display:none;background:#fff;color:#19191C}@media (min-width: 768px){.quiz__box .btn{font-size:20px;padding:11px 32px}}@media (min-width: 1024px){.quiz__box .btn{display:none}}.quiz__done{font-size:23px;line-height:1.30435;font-weight:300}@media (min-width: 768px){.quiz__done{font-size:29px;line-height:1.345}}@media (min-width: 1200px){.quiz__done{padding:0 35% 0 0}}@media (min-width: 1366px){.quiz__done{padding:0 28% 0 0}}@media (min-width: 1440px){.quiz__done{padding:0 32% 0 0}}.quiz__done p{margin:0 0 24px}@media (min-width: 768px){.quiz__done p{margin:0 0 32px}}.quiz .form-subscribe{background:transparent;max-width:544px;padding:24px 0 0}@media (min-width: 768px){.quiz .form-subscribe{padding:32px 0 0}}@media (min-width: 1200px){.quiz .form-subscribe{max-width:598px}}.quiz .form-subscribe input[type="text"],.quiz .form-subscribe input[type="tel"],.quiz .form-subscribe input[type="email"],.quiz .form-subscribe input[type="search"],.quiz .form-subscribe input[type="password"],.quiz .form-subscribe input[type="url"],.quiz .form-subscribe input[type="date"],.quiz .form-subscribe textarea{font-size:16px;line-height:1.5;width:100%;color:#fff;border:1px solid rgba(255,255,255,0.2);height:40px;padding:4px 7px;background:#303033}.quiz .form-subscribe input[type="text"]::-webkit-input-placeholder,.quiz .form-subscribe input[type="tel"]::-webkit-input-placeholder,.quiz .form-subscribe input[type="email"]::-webkit-input-placeholder,.quiz .form-subscribe input[type="search"]::-webkit-input-placeholder,.quiz .form-subscribe input[type="password"]::-webkit-input-placeholder,.quiz .form-subscribe input[type="url"]::-webkit-input-placeholder,.quiz .form-subscribe input[type="date"]::-webkit-input-placeholder,.quiz .form-subscribe textarea::-webkit-input-placeholder{color:rgba(255,255,255,0.5)}.quiz .form-subscribe input[type="text"]::-moz-placeholder,.quiz .form-subscribe input[type="tel"]::-moz-placeholder,.quiz .form-subscribe input[type="email"]::-moz-placeholder,.quiz .form-subscribe input[type="search"]::-moz-placeholder,.quiz .form-subscribe input[type="password"]::-moz-placeholder,.quiz .form-subscribe input[type="url"]::-moz-placeholder,.quiz .form-subscribe input[type="date"]::-moz-placeholder,.quiz .form-subscribe textarea::-moz-placeholder{opacity:1;color:rgba(255,255,255,0.5)}.quiz .form-subscribe input[type="text"]:-moz-placeholder,.quiz .form-subscribe input[type="tel"]:-moz-placeholder,.quiz .form-subscribe input[type="email"]:-moz-placeholder,.quiz .form-subscribe input[type="search"]:-moz-placeholder,.quiz .form-subscribe input[type="password"]:-moz-placeholder,.quiz .form-subscribe input[type="url"]:-moz-placeholder,.quiz .form-subscribe input[type="date"]:-moz-placeholder,.quiz .form-subscribe textarea:-moz-placeholder{color:rgba(255,255,255,0.5)}.quiz .form-subscribe input[type="text"]:-ms-input-placeholder,.quiz .form-subscribe input[type="tel"]:-ms-input-placeholder,.quiz .form-subscribe input[type="email"]:-ms-input-placeholder,.quiz .form-subscribe input[type="search"]:-ms-input-placeholder,.quiz .form-subscribe input[type="password"]:-ms-input-placeholder,.quiz .form-subscribe input[type="url"]:-ms-input-placeholder,.quiz .form-subscribe input[type="date"]:-ms-input-placeholder,.quiz .form-subscribe textarea:-ms-input-placeholder{color:rgba(255,255,255,0.5)}.quiz .form-subscribe input[type="text"].placeholder,.quiz .form-subscribe input[type="tel"].placeholder,.quiz .form-subscribe input[type="email"].placeholder,.quiz .form-subscribe input[type="search"].placeholder,.quiz .form-subscribe input[type="password"].placeholder,.quiz .form-subscribe input[type="url"].placeholder,.quiz .form-subscribe input[type="date"].placeholder,.quiz .form-subscribe textarea.placeholder{color:rgba(255,255,255,0.5)}@media (min-width: 768px){.quiz .form-subscribe input[type="text"],.quiz .form-subscribe input[type="tel"],.quiz .form-subscribe input[type="email"],.quiz .form-subscribe input[type="search"],.quiz .form-subscribe input[type="password"],.quiz .form-subscribe input[type="url"],.quiz .form-subscribe input[type="date"],.quiz .form-subscribe textarea{font-size:20px;line-height:1.4;height:52px;padding:7px 14px}}.quiz .form-subscribe input[type="text"]:focus,.quiz .form-subscribe input[type="tel"]:focus,.quiz .form-subscribe input[type="email"]:focus,.quiz .form-subscribe input[type="search"]:focus,.quiz .form-subscribe input[type="password"]:focus,.quiz .form-subscribe input[type="url"]:focus,.quiz .form-subscribe input[type="date"]:focus,.quiz .form-subscribe textarea:focus{border-color:rgba(255,255,255,0.6);outline:1px solid rgba(255,255,255,0.6)}.quiz .form-subscribe label{font-size:13px;color:rgba(255,255,255,0.7)}@media (min-width: 768px){.quiz .form-subscribe label{font-size:16px}}.quiz .form-subscribe label a{color:#fff;box-shadow:inset 0 -1px 0 #fff;border:none}@media (min-width: 768px){.quiz .form-subscribe label a{margin:0 0 0 4px}}.quiz .form-subscribe label a:hover{box-shadow:inset 0 -1px 0 transparent}.quiz .form-subscribe label a i{top:0;font-size:13px;right:-20px}@media (min-width: 768px){.quiz .form-subscribe label a i{top:4px}}@media (min-width: 768px){.quiz .form-subscribe__group-checkbox{margin-top:-6px}}.quiz .form-subscribe button{transition:background .15s ease-in-out;font-size:16px;line-height:1.5;background:#fff;color:#19191C;border-radius:3em;padding:8px 24px;margin:30px 0 0}@media (min-width: 768px){.quiz .form-subscribe button{font-size:20px;line-height:1.4;padding:12px 32px}}.quiz .form-subscribe button:hover{background:rgba(255,255,255,0.8)}.quiz .form-subscribe #checkbox+label{position:relative;cursor:pointer;padding:0 0 16px 0}.quiz .form-subscribe #subscribe-checkbox,.quiz .form-subscribe #agree-to-enter-the-Easter-Egg-Hunt-Challenge{position:absolute;z-index:-1;opacity:0}.quiz .form-subscribe #subscribe-checkbox+label,.quiz .form-subscribe #agree-to-enter-the-Easter-Egg-Hunt-Challenge+label{position:relative;cursor:pointer;padding:0 0 16px 24px}.quiz .form-subscribe #subscribe-checkbox+label::before,.quiz .form-subscribe #agree-to-enter-the-Easter-Egg-Hunt-Challenge+label::before{content:"";position:absolute;top:1px;left:0;width:16px;height:16px;background-color:#303033;border:1px solid rgba(255,255,255,0.2);cursor:pointer;-webkit-appearance:none}@media (min-width: 768px){.quiz .form-subscribe #subscribe-checkbox+label::before,.quiz .form-subscribe #agree-to-enter-the-Easter-Egg-Hunt-Challenge+label::before{top:2px}}.quiz .form-subscribe #subscribe-checkbox:checked+label:before,.quiz .form-subscribe #agree-to-enter-the-Easter-Egg-Hunt-Challenge:checked+label:before{background:#fff}.quiz .form-subscribe #subscribe-checkbox:checked+label:after,.quiz .form-subscribe #agree-to-enter-the-Easter-Egg-Hunt-Challenge:checked+label:after{content:"";display:block;position:absolute;top:3px;left:6px;width:5px;height:10px;border:solid #19191C;border-width:0 2px 2px 0;transform:rotate(45deg)}@media (min-width: 768px){.quiz .form-subscribe #subscribe-checkbox:checked+label:after,.quiz .form-subscribe #agree-to-enter-the-Easter-Egg-Hunt-Challenge:checked+label:after{top:4px}}.quiz .form_massage{font-size:20px;padding:30px 0 0 4px}.quiz .form_massage p i{margin:0 12px 0 0}.quiz__img{position:relative;width:288px;height:288px;background:rgba(107,87,255,0.9);border-radius:50%;margin:64px auto 0}@media (min-width: 768px){.quiz__img{width:346px;height:346px;margin:96px auto 0}}@media (min-width: 1200px){.quiz__img{position:absolute;top:0;right:32px;margin:0}}.quiz__img .heart{display:flex;align-items:center;justify-content:center;position:absolute;top:2px;right:8px;width:80px;height:80px;background:#fff;border-radius:50%;cursor:pointer}@media (min-width: 768px){.quiz__img .heart{width:96px;height:96px}}.quiz__img .heart i{font-size:32px;color:#6b57ff}@media (min-width: 768px){.quiz__img .heart i{font-size:38px}}.quiz__img .heart .heart-animate{position:absolute;width:80px;top:-104px;right:8px}@media (min-width: 768px){.quiz__img .heart .heart-animate{width:96px}}.quiz__terms{text-align:center;margin:0 0 20px}@media (min-width: 768px){.quiz__terms{margin:0 0 40px}}.quiz__terms a{color:#ffffff}.header{position:relative;flex-shrink:0;background:#27282c;z-index:999;padding:10px 0}@media (min-width: 769px){.header{padding:14px 0}}.header>.container{display:flex;flex-wrap:wrap;align-items:center}.logo{display:block;width:172px}@media (min-width: 769px){.logo{width:221px}}.logo a{display:flex;flex-wrap:wrap;align-items:center;color:#fff;font-size:16px;line-height:1.5;border:none}@media (min-width: 769px){.logo a{font-size:20px;line-height:1.4}}.logo img{display:block;width:100%;max-height:26px;max-width:max-content}.logo p{margin:0}.menu-list{position:relative;display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-end;width:calc(100% - 172px);padding:0 40px 0 0}@media (min-width: 641px){.menu-list{padding:0 24px 0 0}}@media (min-width: 769px){.menu-list{width:calc(100% - 221px);padding:0 6px 0 30px}}.menu-list>li{margin-left:18px}@media (min-width: 768px){.menu-list>li{margin-left:26px}}.menu-list>li:first-child{margin-left:0}@media (min-width: 769px){.menu-list>li:first-child{margin-left:26px}}@media (min-width: 1024px){.menu-list>li:first-child{margin-right:14px}}.menu-list a{display:inline-block;vertical-align:middle;line-height:1;color:rgba(255,255,255,0.7);border:none;box-shadow:none}.menu-list a .mobile-hidden{display:none}@media (min-width: 769px){.menu-list a .mobile-hidden{display:block}}.menu-list a:hover{color:#fff;text-decoration:none;box-shadow:none}.menu-list a:hover i:not(.burger-icon){color:#fff}.menu-list a:hover i:not(.burger-icon):after{background:rgba(255,255,255,0.1)}.menu-list i:not(.burger-icon){transition:color .15s ease-in-out;position:relative;font-size:16px;color:rgba(255,255,255,0.7)}.menu-list i:not(.burger-icon).icon-search{font-size:22px}.menu-list i:not(.burger-icon):after{transition:background .15s ease-in-out;content:"";position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);width:35px;height:35px;border-radius:50%}@media (min-width: 769px){.menu-list i:not(.burger-icon):after{width:40px;height:40px}}.dropdown-language{transition:opacity .15s ease-in-out,visibility .15s ease-in-out;font-size:14px;position:absolute;top:100%;right:-15px;transform:none;background:#27282c;margin:8px 0 0;border:1px solid #5e5e60;opacity:0;visibility:hidden;width:180px}@media (min-width: 481px){.dropdown-language{margin:22px 0 0}}@media (min-width: 1024px){.dropdown-language{font-size:16px;right:0;width:auto;display:inline-grid;grid-auto-flow:column;grid-template-rows:auto auto auto auto;grid-template-columns:auto auto auto auto}}@media (min-width: 769px){.dropdown-language li{display:flex;min-width:120px}}.dropdown-language a{transition:background .15s ease-in-out,color .15s ease-in-out;display:block;padding:8px 16px;color:rgba(255,255,255,0.7);border:none;box-shadow:none}@media (min-width: 769px){.dropdown-language a{padding:12px 16px;flex-grow:1}}.dropdown-language a.active{background:rgba(22,125,255,0.2);color:#fff;text-decoration:none}.dropdown-language a:hover{background:rgba(255,255,255,0.1);color:#fff;text-decoration:none}.navbar{transition:opacity .15s ease-in-out,visibility .15s ease-in-out;position:absolute;top:100%;left:0;right:0;z-index:99;background:#fff;padding:24px 0 32px;opacity:0;visibility:hidden}@media (min-width: 481px){.navbar{padding-bottom:0}}@media (min-width: 768px){.navbar{padding-top:32px}}.navbar ul.row{display:flex;flex-wrap:wrap;font-size:13px;line-height:1.5}@media (min-width: 1280px){.navbar ul.row{justify-content:space-between}}@media (min-width: 1540px){.navbar ul.row{flex-wrap:nowrap;font-size:16px}}.navbar ul.row>li{padding:0 24px 16px 0;width:100%}@media (min-width: 481px){.navbar ul.row>li{width:50%}}@media (min-width: 768px){.navbar ul.row>li{width:33.332%}}@media (min-width: 1024px){.navbar ul.row>li{width:25%;padding-right:30px}}@media (min-width: 1280px){.navbar ul.row>li{width:auto}}@media (min-width: 1540px){.navbar ul.row>li{padding-right:38px}}.navbar ul.row>li:last-child{padding-right:0}.navbar ul.row>li ul{letter-spacing:0.0015em;font-feature-settings:"tnum" on, "lnum" on}@media (min-width: 640px){.navbar ul.row>li ul{width:57%}}@media (min-width: 1024px){.navbar ul.row>li ul{width:auto}}.navbar ul.row>li ul.column-count{display:grid;grid-template-columns:1fr 1fr;column-gap:46px}@media (min-width: 481px){.navbar ul.row>li ul.column-count{grid-template-columns:repeat(2, auto);column-gap:24px}}.navbar ul.row>li ul li{padding:0 0 16px}.navbar ul.row>li ul a{border:none;white-space:nowrap;color:rgba(25,25,28,0.7)}.navbar ul.row>li ul a:hover{color:#19191C}.navbar h4{font-size:13px !important;line-height:1.5;margin:0 0 16px;white-space:nowrap}@media (min-width: 1540px){.navbar h4{font-size:16px !important}}.sub-menu{display:flex;flex-wrap:wrap;margin-bottom:16px}.sub-menu li{margin:0 0 10px;width:50%;padding:6px 0 0}@media (min-width: 641px){.sub-menu li{width:25%}}@media (min-width: 769px){.sub-menu li{width:100%}}@media (min-width: 1025px){.sub-menu li.columns .sub-menu{display:block;column-count:2}}@media (min-width: 1025px){.sub-menu li.columns .sub-menu li{width:auto}}.sub-menu a{position:relative;color:rgba(25,25,28,0.7);border:none;box-shadow:none}.sub-menu a:hover{color:#19191C;text-decoration:none}@media (min-width: 769px){.sub-menu a:hover img{opacity:1;visibility:visible}}.sub-menu a img{transition:opacity .15s ease-in-out,visibility .15s ease-in-out;position:absolute;width:32px;height:32px;left:-40px;top:-6px;opacity:0;visibility:hidden}.burger-icon{position:absolute;top:50%;transform:translateY(-50%);right:16px;width:16px;height:18px;text-indent:-9999px;overflow:hidden;text-decoration:none;z-index:999}@media (min-width: 769px){.burger-icon{display:none}}.burger-icon:before,.burger-icon:after,.burger-icon span{background:rgba(255,255,255,0.7);position:absolute;top:10px;left:0;right:0;height:2px;margin-top:-2px;transition:all 0.2s linear}.burger-icon:before,.burger-icon:after{content:"";top:4px}.burger-icon:after{top:16px}.nav-active .burger-icon:before,.nav-active .burger-icon:after{transform:rotate(45deg);top:10px}.nav-active .burger-icon span{opacity:0}.nav-active .burger-icon:after{transform:rotate(-45deg)}.resize-active *{transition:none !important}html body{font-family:"JetBrains Sans","Arial","Helvetica Neue","Helvetica",sans-serif}html body h1,html body .h1,html body h2,html body .h2,html body h3,html body .h3,html body h4,html body .h4,html body h5,html body .h5,html body h6,html body .h6,html body .h{font-family:inherit}body.admin-bar #wp-admin-bar-customize,body.admin-bar #wp-admin-bar-comments,body.admin-bar #wp-admin-bar-all-in-one-seo-pack{display:none}body.admin-bar #wp-admin-bar-new-content>.ab-item{pointer-events:none}body.admin-bar #wp-admin-bar-new-content #wp-admin-bar-new-post{display:none}body{font-size:16px;line-height:1.5}body.nav-active .navbar{opacity:1;visibility:visible}body.nav-active .overlay{opacity:1;visibility:visible}body.lang-active .header .dropdown-language{opacity:1;visibility:visible}body.toc-active{overflow:hidden}body.hide-menu .menu,body.hideScrollUp .menu{opacity:0;visibility:hidden;transition:none}@media (min-width: 1025px){body.post-type-archive .promo__img{width:calc(50% - 13px)}}body.page-template-template-easter-egg main{background:#000}body.footer-lang-active .footer .dropdown-language{opacity:1;visibility:visible}body .tag{transition:border-color .15s ease-in-out,background .15s ease-in-out;font-size:13px;line-height:1.54;padding:1px 15px;display:inline-block;border:1px solid rgba(25,25,28,0.3);border-radius:4px;margin:0 8px 8px 0;white-space:nowrap;cursor:pointer}body .tag:hover{background:rgba(25,25,28,0.1);border-color:rgba(25,25,28,0.4);text-decoration:none;box-shadow:none}@media (max-width: 767px){body.search .top-page{padding-bottom:35px}}@media (max-width: 767px){body.search .menu{display:none}}#wrapper{min-height:100vh;width:100%;display:flex;flex-direction:column;overflow:hidden;position:relative}a{transition:color .15s ease-in-out,box-shadow .15s ease-in-out,border-color .15s ease-in-out;text-decoration:none;border-bottom:1px solid rgba(25,25,28,0.4)}a:hover{border-color:#19191C}h1{line-height:1.22}@media (min-width: 641px){h1{font-size:43px;line-height:1.14}}h2{line-height:1.143}@media (min-width: 641px){h2{font-size:35px;line-height:1.2}}h3{line-height:1.4;margin:0 0 16px}h4{font-size:17px;line-height:1.412;margin:0 0 16px}h5{font-size:14px;line-height:1.43;margin:0 0 8px}.btn,.jb-download-button{transition:background .15s ease-in-out,color .15s ease-in-out;font-size:16px;line-height:1.5;display:inline-block;vertical-align:middle;text-align:center;border-radius:2em;color:#fff;background:#6B57FF;padding:8px 24px;border:none}.btn:hover,.jb-download-button:hover{text-decoration:none;box-shadow:none;background:rgba(107,87,255,0.8)}pre,code{font-family:"JetBrainsMono","Times","Baskerville","Georgia",serif;font-style:normal;font-weight:400;font-size:15px;line-height:23px;background:#f4f4f4;border-radius:4px;padding:12px 16px}pre code{padding:0}code{padding:4px 6px}input[type="search"]{-webkit-appearance:none}.container{max-width:1534px;margin:0 auto;padding:0 15px}@media (min-width: 641px){.container{padding:0 32px}}main{flex-grow:1}main .article-section .content ul a:hover{box-shadow:inset 0 -1px 0 #19191c}main .article-section .content ol:not([class]):not([id]){list-style:none;counter-reset:counter;margin-top:16px}@media (min-width: 769px){main .article-section .content ol:not([class]):not([id]){margin-top:32px}}main .article-section .content ol:not([class]):not([id])>li{position:relative;counter-increment:counter;padding:0 0 16px 24px}@media (min-width: 769px){main .article-section .content ol:not([class]):not([id])>li{padding-bottom:24px}}main .article-section .content ol:not([class]):not([id])>li:before{content:counter(counter) ". ";position:absolute;top:0;left:2px}main .article-section .content ol:not([class]):not([id])>li:last-child{padding-bottom:0}main .article-section .content ol:not([class]):not([id])>li a:hover{box-shadow:inset 0 -1px 0 #19191c}main .article-section .content ol:not([class]):not([id])>li ol:not([class]):not([id]){margin-top:16px;margin-bottom:0}@media (min-width: 769px){main .article-section .content ol:not([class]):not([id])>li ol:not([class]):not([id]){margin-top:24px}}main .article-section .content ol:not([class]):not([id])>li ol:not([class]):not([id]) li{padding:0 0 16px 25px}main .article-section .content ol:not([class]):not([id])>li ol:not([class]):not([id]) li:last-child{padding-bottom:0}main .article-section .content ol:not([class]):not([id]) img{margin:22px 0 24px}main .article-section .content ul:not([class]):not([id]){margin-bottom:24px}main .article-section .content ul:not([class]):not([id]) li:last-child{padding-bottom:0}main .article-section .content ul:not([class]):not([id]) li ul:not([class]):not([id]){margin-top:16px;margin-bottom:0}@media (min-width: 769px){main .article-section .content ul:not([class]):not([id]) li ul:not([class]):not([id]){margin-top:24px}}main .article-section .content ul:not([class]):not([id]) li ul:not([class]):not([id]) li{padding-bottom:16px}main .article-section .content ul:not([class]):not([id]) li ul:not([class]):not([id]) li:last-child{padding-bottom:0}main .article-section .content ul:not([class]):not([id]) img{margin:22px 0 24px}main .article-section .content ul:not([class]):not([id])+h2{margin-top:32px}main .article-section table{margin-bottom:16px;min-width:600px}main .article-section table+figcaption{font-style:italic;font-size:16px}main .article-section table,main .article-section th,main .article-section td{border-bottom:1px solid rgba(25,25,28,0.2);border-collapse:collapse;padding:8px 8px 8px 0;border-right:none;border-left:none;border-top:none;vertical-align:baseline;font-size:16px;line-height:24px}main .article-section figure.wp-block-table{overflow-x:scroll}main .article-section figure.wp-block-table::-webkit-scrollbar{width:0;height:0}main .article-section figure.wp-block-table table{margin-bottom:16px;min-width:600px;width:100%}main .article-section figure.wp-block-table table+figcaption{font-style:italic;font-size:16px}main .article-section figure.wp-block-table table,main .article-section figure.wp-block-table th,main .article-section figure.wp-block-table td{border-bottom:1px solid rgba(25,25,28,0.2);border-collapse:collapse;padding:8px 8px 8px 0;border-right:none;border-left:none;border-top:none;vertical-align:baseline;font-size:16px;line-height:24px}main .article-section .has-text-align-center:not(td){display:flex;flex-wrap:wrap;align-items:center;justify-content:center;margin:0 0 16px}main ul:not([class]):not([id]) li{position:relative;padding:0 0 16px 25px}@media (min-width: 769px){main ul:not([class]):not([id]) li{padding-bottom:24px}}main ul:not([class]):not([id]) li:before{content:"";position:absolute;top:8px;left:2px;width:5px;height:5px;background:#19191C;border-radius:50%}@media (min-width: 769px){main ul:not([class]):not([id]) li:before{top:10px}}main ul:not([class]):not([id]) li ul:not([class]):not([id]){margin-top:24px}main ul:not([class]):not([id]) li ul:not([class]):not([id]) li{padding-left:32px}main ul:not([class]):not([id]) li ul:not([class]):not([id]) li:before{left:8px;background:transparent;border:1px solid #19191C}button{background:transparent;border:none;outline:none}.form-group{position:relative}.found-wrap{padding:0 16px}@media (min-width: 769px){.row{display:flex;flex-wrap:wrap;margin:0 -16px}}@media (min-width: 769px){.row.card_container .col:nth-child(4n+4){display:flex}}@media (min-width: 769px){.col{display:flex;width:50%;padding:0 16px}}@media (min-width: 1025px){.col{width:33.332%}}@media (min-width: 1281px){.col{width:25%}}@media (min-width: 1025px){.col:nth-child(4n+4){display:none}}@media (min-width: 1281px){.col:nth-child(4n+4){display:flex}}@media (max-width: 767px){.col:last-child .card{margin:0}}.col--double{display:block;width:100%}@media (min-width: 1281px){.col--double{width:66.664%}}.col--double img{border-radius:10px}@media (min-width: 1025px){.row.last-col-home .col:nth-child(4n+4){display:flex}}@media (min-width: 1025px){.row.last-col-home .col:nth-child(4n+7),.row.last-col-home .col:nth-child(4n+8){display:none}}@media (min-width: 1281px){.row.last-col-home .col:nth-child(4n+7),.row.last-col-home .col:nth-child(4n+8){display:flex}}@media (min-width: 1025px){.row.last-col-home.show_all .col:nth-child(4n+7),.row.last-col-home.show_all .col:nth-child(4n+8){display:flex}}@media (min-width: 1281px){.row.last-col-home.show_all .col:nth-child(4n+7),.row.last-col-home.show_all .col:nth-child(4n+8){display:flex}}@media (min-width: 1025px){.row.latest_posts .col:nth-child(4n+6){display:none}}@media (min-width: 1281px){.row.latest_posts .col:nth-child(4n+6){display:flex}}@media (min-width: 1025px){.row.latest_posts .col:nth-child(4n+5){display:none}}@media (min-width: 1281px){.row.latest_posts .col:nth-child(4n+5){display:flex}}@media (min-width: 1025px){.row.latest_posts .col:nth-child(4n+4){display:flex}}.row.latest_posts .col--double{display:block;width:100%}@media (min-width: 1025px){.row.latest_posts .col--double{width:66.66%}}@media (min-width: 1281px){.row.latest_posts .col--double{width:50%}}.dark-theme{background:#19191C;color:white}.light-gray-bg{background:#F4F4F4}.light-gray-bg .card{background:#fff}.top-page{position:relative;padding:35px 0 66px}@media (min-width: 768px){.top-page{min-height:199px}}@media (min-width: 1024px){.top-page{padding:30px 0 90px}}.top-page .social-opener{display:block;position:relative;padding:7px 24px 6px 32px;border-radius:3em;border:1px solid rgba(25,25,28,0.3);text-align:center}.top-page .social-opener:hover{box-shadow:none}.top-page .social-opener:after{content:"\e910";font-size:24px;line-height:1;font-family:"icomoon";cursor:pointer;pointer-events:none;display:inline-block;vertical-align:middle;margin:0 0 0 8px}.top-page h1{font-size:28px;line-height:1.143;color:#000;margin:0}@media (min-width: 641px){.top-page h1{font-size:35px;line-height:1.2}}.top-page h1+p{margin-top:10px}.top-page__row{display:flex;flex-wrap:wrap;align-items:flex-start}.top-page__head{position:relative;z-index:15}@media (min-width: 1024px){.top-page__head{width:50%}}.top-page__wrap a{display:flex;align-items:center;border:none;margin:0 0 8px}@media (min-width: 1025px){.top-page__wrap a{margin:0 0 16px}}.top-page__wrap a:hover{box-shadow:none}.top-page__wrap p{width:100%;margin:0}.top-page__wrap img{width:48px;height:48px;margin:0 16px 0 0}.top-page__hold{color:rgba(25,25,28,0.7)}@media (min-width: 1025px){.top-page__hold{color:#19191C}}.top-page__hold a{display:inline-block;vertical-align:top;text-decoration:none;border:none;margin:0 0 8px}@media (min-width: 1025px){.top-page__hold a{margin:0 0 16px}}.top-page__hold a img{max-width:79%}@media (min-width: 1025px){.top-page__hold a img{max-width:100%}}.top-page .hidden-heading{position:absolute;left:-9999px}.top-page__social-wrap{position:relative;order:2}@media (min-width: 461px){.top-page__social-wrap{margin:0 0 0 16px}}@media (min-width: 1200px){.top-page__social-wrap{order:1;margin:0}}.top-page__right{display:flex;flex-direction:column;width:100%;margin:16px 0}@media (min-width: 461px){.top-page__right{flex-direction:row;align-items:center}}@media (min-width: 1024px){.top-page__right{justify-content:flex-end;width:50%;margin:0}}@media (max-width: 1199px){.top-page__right.social-active .social{opacity:1;visibility:visible}}@media (max-width: 1199px){.top-page__right .social{position:absolute;top:calc(100% + 8px);left:0;right:0;background:#fff;display:flex;flex-direction:column;border:1px solid #d1d1d2;z-index:10;align-items:flex-start;margin:0;opacity:0;visibility:hidden}}@media (min-width: 1024px){.top-page__right .social{margin:0 -6px}}@media (max-width: 1199px){.top-page__right .social li{padding:0;width:100%}}.top-page__right .social li:first-child{display:none}@media (min-width: 1200px){.top-page__right .social li:first-child{display:block;padding-right:20px}}@media (max-width: 1199px){.top-page__right .social li a{align-items:center;padding:8px 11px}}.top-page__right .social li a:hover{box-shadow:none}@media (max-width: 1023px){.top-page__right .social li a:hover{background:rgba(25,25,28,0.1)}}@media (max-width: 1023px){.top-page__right .social li a:hover i:after{background:transparent}}@media (max-width: 1199px){.top-page__right .social li a i{margin:-3px 10px 0 0}}@media (min-width: 1200px){.top-page__right .social li a span{display:none}}.top-page__right .btn{order:1;margin:0 0 16px}@media (min-width: 461px){.top-page__right .btn{margin:0}}@media (min-width: 1200px){.top-page__right .btn{margin:0 0 0 38px;order:2}}@media (min-width: 768px){.top-page__right .social-opener{text-align:left}}@media (min-width: 1200px){.top-page__right .social-opener{display:none}}.menu{transition:transform .15s ease-in-out;display:flex;justify-content:space-between;padding:17px 0 0;position:absolute;bottom:0;left:15px;right:15px;background:#fff;z-index:9;max-width:1470px;margin:0 auto;transform:translateY(0)}@media (min-width: 641px){.menu{left:32px;right:32px}}@media (min-width: 768px){.menu{align-items:flex-end;padding:24px 0 0}}@media (min-width: 1501px){.menu{width:100%;left:auto;right:auto}}@media (min-width: 1024px){.menu:before{content:"";position:absolute;top:0;left:0;bottom:0;background:#fff;padding:0 0 0 9999px;margin:0 0 0 -9999px}}.menu:after{content:"";position:absolute;top:0;right:-16px;bottom:2px;background:-webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0.6) 50%, #fff 100%);width:115px;pointer-events:none}@media (min-width: 768px){.menu:after{right:-32px}}@media (min-width: 1024px){.menu:after{top:0;right:0;bottom:0;padding:0 9999px 0 0;margin:0 -9999px 0 0;background:#fff;width:auto}}.menu__border{position:absolute;bottom:0;left:0;right:0;height:1px;background:rgba(39,40,44,0.15)}.menu__border:before{content:"";position:absolute;bottom:0;right:0;padding:0 9999px 0 0;margin:0 -9999px 0 0;height:1px;background:rgba(39,40,44,0.15);z-index:99}.menu__border:after{content:"";position:absolute;bottom:0;left:0;padding:0 0 0 9999px;margin:0 0 0 -9999px;height:1px;background:rgba(39,40,44,0.15);z-index:99}.menu.fixed{position:fixed;top:0;bottom:auto;z-index:991;padding-top:13px}.menu__wrapper{display:flex;justify-content:space-between;width:100%}.menu__nav{overflow-x:auto;white-space:nowrap;flex:1 0 0}@media (min-width: 1024px){.menu__nav{padding:0 40px 0 0}}@media (min-width: 1201px){.menu__nav{padding:0}}.menu__nav>ul{display:inline-block;margin:0 -10px;white-space:nowrap}@media (min-width: 1024px){.menu__nav>ul{margin:0 -14px}}.menu__nav>ul li{display:inline-block;padding:0 10px}@media (min-width: 1024px){.menu__nav>ul li{padding:0 14px}}.menu__nav>ul a{position:relative;display:block;color:rgba(25,25,28,0.7);border:none;box-shadow:none;padding:0 0 8px;font-feature-settings:"ss19" on}.menu__nav>ul a:hover{color:#19191C;text-decoration:none}.menu__nav>ul a:hover:after{background:#19191C}.menu__nav>ul a:after{content:"";position:absolute;bottom:0;left:0;right:0;height:1px;background:transparent}.menu__nav>ul a.curent_tax{color:#6B57FF;text-decoration:none}.menu__nav>ul a.curent_tax:after{background:#6B57FF;height:2px}.menu__nav .priority-nav__wrapper{font-size:16px;line-height:1.5;padding:0 0 0 16px}.menu__nav .nav__dropdown-toggle{transition:color .15s ease-in-out;color:rgba(25,25,28,0.7)}.menu__nav .nav__dropdown-toggle:hover{color:#19191C}.menu__nav .nav__dropdown-toggle:hover:after{color:#19191C}.menu__nav .nav__dropdown-toggle:after{transition:color .15s ease-in-out;content:"\e910";font-size:24px;font-family:"icomoon";display:inline-block;vertical-align:middle;color:rgba(25,25,28,0.7)}.menu__right{display:none}@media (min-width: 1024px){.menu__right{position:relative;display:flex;justify-content:flex-end;width:20%;align-items:center;padding:0 0 13px}}.menu__right *{position:relative;z-index:10}@media (min-width: 1024px){.menu__right:after{content:"";position:absolute;top:0;left:-36px;right:0;bottom:2px;background:linear-gradient(270deg, #fff 90.63%, rgba(255,255,255,0) 99.17%)}}@media (max-width: 767px){.menu__right .btn{font-size:13px}}.menu__cta{display:none}@media (min-width: 1025px){.menu__cta{display:flex;align-items:center;position:relative;z-index:99;justify-content:flex-end;text-decoration:none;border:none;white-space:nowrap;margin:0 0 6px}}@media (min-width: 1200px){.menu__cta{padding-left:62px}}@media (min-width: 1025px){.menu__cta:after{content:"";position:absolute;top:-2px;left:-40px;right:0;bottom:-2px;background:linear-gradient(270deg, #fff 90.63%, rgba(255,255,255,0) 99.17%)}}.menu__cta-mobile{font-size:18px;position:fixed;display:flex;align-items:center;justify-content:center;bottom:72px;right:16px;width:40px;height:40px;border-radius:50%;border:1px solid rgba(25,25,28,0.3);background:#fff;z-index:99}@media (min-width: 1025px){.menu__cta-mobile{display:none}}.menu__cta-mobile:before{content:"";position:absolute;top:-1px;right:4px;width:8px;height:8px;border-radius:50%;background:#6B57FF}.menu__cta-mobile i{margin:0 0 0 -2px}.menu__cta:hover i{color:#19191C}.menu__cta:hover .menu__cta-text{color:#19191C}.menu__cta i{transition:color .15s ease-in-out}@media (min-width: 1025px){.menu__cta i{position:relative;z-index:10;font-size:18px;color:rgba(25,25,28,0.7)}}.menu__cta-text{transition:color .15s ease-in-out}@media (min-width: 1025px){.menu__cta-text{position:relative;z-index:10;margin:0 4px 0 10px;color:rgba(25,25,28,0.7)}}@media (min-width: 1025px){.menu__cta .label{position:relative;z-index:10;font-size:13px;line-height:1.54;display:inline-block;vertical-align:middle;background:#6B57FF;color:#fff;padding:2px 8px;border-radius:3px}}.priority-nav__dropdown{top:100%;left:16px;border:1px solid #d1d1d2;background-color:white;margin:35px 0 0;z-index:99;width:320px}@media (min-width: 768px){.priority-nav__dropdown{margin-top:28px}}@media (min-width: 1024px){.priority-nav__dropdown{margin-top:35px}}.priority-nav__dropdown li:last-child{margin:0}.priority-nav__dropdown a{display:block;color:#19191c;border:none;padding:8px 16px}.priority-nav__dropdown a.curent_tax{background:#19191C;color:#fff}.priority-nav__dropdown a.curent_tax:hover{background:#19191C;color:#fff}.priority-nav__dropdown a:hover{color:#19191C;text-decoration:none;box-shadow:none;background:rgba(25,25,28,0.1)}.social{display:flex;flex-wrap:wrap;align-items:center;margin:0 -11px}.social li{padding:0 11px}.social a{display:flex;color:#19191C;border:none;box-shadow:none}.social a:hover i:after{background:rgba(25,25,28,0.1)}.social a i{position:relative;font-size:17px}.social a i.icon-twitter{font-size:15px}.social a i.icon-youtube{font-size:13px}.social a i.icon-link{font-size:11px}.social a i:after{transition:background .15s ease-in-out;content:"";position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);width:35px;height:35px;border-radius:50%}@media (min-width: 769px){.social a i:after{width:40px;height:40px}}.social a:hover{text-decoration:none}.intro{padding:72px 0 56px;background:#F4F4F4}.intro h1{margin:0 0 24px}.intro h2{max-width:720px}.promo{padding:32px 0 0}.promo .tag{margin:0 8px 16px 0}.promo__row{display:flex;flex-wrap:wrap;flex-direction:column;position:relative;overflow:hidden}@media (min-width: 1024px){.promo__row{align-items:center;flex-direction:row}}.promo__img{width:100%;overflow:hidden;border-radius:8px;border:none}@media (min-width: 1025px){.promo__img{width:calc(50% - 16px)}}.promo__img:hover{border:none;box-shadow:none}.promo__img:only-child{width:100%}.promo__img img{width:100%}.promo__text{font-size:16px;line-height:1.5;padding:16px 0}@media (min-width: 641px){.promo__text{padding:32px 0}}@media (min-width: 1025px){.promo__text{width:51%;padding:0 0 0 32px}}@media (min-width: 1201px){.promo__text{font-size:20px;line-height:1.4;width:42%}}.promo__text:only-child{width:100%;padding:0}@media (min-width: 1280px){.promo__text:only-child{width:74.5%}}.promo__text h1,.promo__text h2,.promo__text .h1{font-size:28px;line-height:1.143;letter-spacing:0;margin-top:0;margin-bottom:16px}@media (min-width: 1201px){.promo__text h1,.promo__text h2,.promo__text .h1{font-size:35px;line-height:1.2;margin-bottom:32px}}.promo__text h1 a,.promo__text h2 a,.promo__text .h1 a{display:inline-block;color:inherit;-webkit-line-clamp:3;display:-webkit-box;-webkit-box-orient:vertical;overflow:hidden;border:none;box-shadow:none}@media (min-width: 769px){.promo__text h1 a,.promo__text h2 a,.promo__text .h1 a{-webkit-line-clamp:2}}@media (min-width: 1201px){.promo__text h1 a,.promo__text h2 a,.promo__text .h1 a{-webkit-line-clamp:4}}.promo__text h1 a:hover,.promo__text h2 a:hover,.promo__text .h1 a:hover{text-decoration:none}.promo__text p{margin:0 0 16px;opacity:0.7}@media (min-width: 1200px){.promo__text p{margin:0 0 32px}}.promo__text .tag{display:none}.promo__link a{border:none;box-shadow:none}.promo__link a:hover{text-decoration:underline}.promo__link a i{display:inline-block;vertical-align:middle;font-size:15px;margin:0 0 0 4px}.promo__link .btn{padding:10px 30px;margin:0 22px 0 0}@media (min-width: 769px){.promo+.section{padding:32px 0 96px}}.overlay{transition:opacity .15s ease-in-out,visibility .15s ease-in-out;position:fixed;top:0;left:0;right:0;bottom:0;background-color:rgba(0,0,0,0.8);z-index:11;opacity:0;visibility:hidden}.tag-list{display:flex;flex-wrap:wrap;align-items:baseline}.subscribe{font-size:20px;line-height:1.6;background-color:#F4F4F4;background-image:url(./edfb9b9971efea6f04ad75dc85db7c3a.svg);background-repeat:no-repeat;background-position-x:390%;background-position-y:25%;background-size:93%;width:100%;padding:32px}.subscribe h2{margin:0}.subscribe p{margin:0 0 15px}.subscribe form input[type="email"]{font-size:16px;line-height:1.5;max-width:328px;width:100%;height:42px;padding:6px 15px;margin:0 0 9px}.subscribe form .checkbox{padding:0 4px 28px}.subscribe form label{font-size:13px;line-height:1.54}.subscribe form button,.subscribe form input[type="submit"],.subscribe form .btn{transition:opacity .15s ease-in-out;font-size:16px;line-height:1.5;border-radius:2em;outline:none;background:#19191C;color:#fff;border:none;padding:8px 24px}.subscribe form button:hover,.subscribe form input[type="submit"]:hover,.subscribe form .btn:hover{opacity:0.8}.form-subscribe{width:100%}@media (min-width: 769px){.form-subscribe{max-width:472px;background:#f4f4f4;padding:16px 16px 22px}}.form-subscribe__group-input{position:relative;margin:0 0 16px}@media (min-width: 768px){.form-subscribe__group-input{margin:0 0 24px}}.form-subscribe__group-input button{transition:color .15s ease-in-out;position:absolute;top:50%;transform:translateY(-50%);right:10px;padding:0;font-size:22px;line-height:1;color:rgba(25,25,28,0.7)}.form-subscribe__group-input button:hover{color:#19191C}.form-subscribe__group-input button:focus{outline:2px solid #19191C}.form-subscribe__group-checkbox{position:relative}.form-subscribe input[type="text"],.form-subscribe input[type="tel"],.form-subscribe input[type="email"],.form-subscribe input[type="search"],.form-subscribe input[type="password"],.form-subscribe input[type="url"],.form-subscribe input[type="date"],.form-subscribe textarea{font-size:16px;line-height:1.5;width:100%;color:#19191C;border:1px solid rgba(25,25,28,0.2);height:40px;padding:7px 46px 7px 7px}.form-subscribe input[type="text"]::-webkit-input-placeholder,.form-subscribe input[type="tel"]::-webkit-input-placeholder,.form-subscribe input[type="email"]::-webkit-input-placeholder,.form-subscribe input[type="search"]::-webkit-input-placeholder,.form-subscribe input[type="password"]::-webkit-input-placeholder,.form-subscribe input[type="url"]::-webkit-input-placeholder,.form-subscribe input[type="date"]::-webkit-input-placeholder,.form-subscribe textarea::-webkit-input-placeholder{color:rgba(25,25,28,0.5)}.form-subscribe input[type="text"]::-moz-placeholder,.form-subscribe input[type="tel"]::-moz-placeholder,.form-subscribe input[type="email"]::-moz-placeholder,.form-subscribe input[type="search"]::-moz-placeholder,.form-subscribe input[type="password"]::-moz-placeholder,.form-subscribe input[type="url"]::-moz-placeholder,.form-subscribe input[type="date"]::-moz-placeholder,.form-subscribe textarea::-moz-placeholder{opacity:1;color:rgba(25,25,28,0.5)}.form-subscribe input[type="text"]:-moz-placeholder,.form-subscribe input[type="tel"]:-moz-placeholder,.form-subscribe input[type="email"]:-moz-placeholder,.form-subscribe input[type="search"]:-moz-placeholder,.form-subscribe input[type="password"]:-moz-placeholder,.form-subscribe input[type="url"]:-moz-placeholder,.form-subscribe input[type="date"]:-moz-placeholder,.form-subscribe textarea:-moz-placeholder{color:rgba(25,25,28,0.5)}.form-subscribe input[type="text"]:-ms-input-placeholder,.form-subscribe input[type="tel"]:-ms-input-placeholder,.form-subscribe input[type="email"]:-ms-input-placeholder,.form-subscribe input[type="search"]:-ms-input-placeholder,.form-subscribe input[type="password"]:-ms-input-placeholder,.form-subscribe input[type="url"]:-ms-input-placeholder,.form-subscribe input[type="date"]:-ms-input-placeholder,.form-subscribe textarea:-ms-input-placeholder{color:rgba(25,25,28,0.5)}.form-subscribe input[type="text"].placeholder,.form-subscribe input[type="tel"].placeholder,.form-subscribe input[type="email"].placeholder,.form-subscribe input[type="search"].placeholder,.form-subscribe input[type="password"].placeholder,.form-subscribe input[type="url"].placeholder,.form-subscribe input[type="date"].placeholder,.form-subscribe textarea.placeholder{color:rgba(25,25,28,0.5)}.form-subscribe input[type="text"]:focus,.form-subscribe input[type="tel"]:focus,.form-subscribe input[type="email"]:focus,.form-subscribe input[type="search"]:focus,.form-subscribe input[type="password"]:focus,.form-subscribe input[type="url"]:focus,.form-subscribe input[type="date"]:focus,.form-subscribe textarea:focus{border-color:#19191C;outline:1px solid #19191C}.form-subscribe input[type="checkbox"]{position:absolute;width:1px;height:1px;padding:0;margin:-1px;clip:rect(0, 0, 0, 0);border:0}.form-subscribe label{display:block;font-size:13px;line-height:1.54;position:relative}.form-subscribe label a{position:relative;display:inline-block;vertical-align:middle}.form-subscribe label a:hover{box-shadow:inset 0 -1px 0 #19191c}.form-subscribe label a i{font-size:12px;position:absolute;top:4px;right:-18px}.form-subscribe .tooltip{font-size:13px;line-height:1.54;letter-spacing:0.0045em;position:absolute;top:100%;left:28px;right:0;border:1px solid rgba(255,255,255,0.1);background:#303033;box-shadow:0px 6px 12px rgba(0,0,0,0.1);border-radius:4px;color:#fff;z-index:99;padding:8px 6px 6px 8px;margin-top:5px;display:none}@media (min-width: 768px){.form-subscribe .tooltip{right:auto;max-width:380px;width:100%}}.form-subscribe .tooltip p{margin:0}.form-subscribe .tooltip p a{color:#fff;border-bottom:1px solid #fff}.form-subscribe .tooltip p a:hover{border-color:#fff;box-shadow:inset 0 -1px 0 #fff}.follow h4{font-size:16px;line-height:1.5;margin:0 0 8px}.select-row{margin:0 0 32px}@media (min-width: 481px){.select-row{display:flex;flex-wrap:wrap}}@media (max-width: 767px){.select-row .select{width:100%;margin:0 0 16px}}@media (min-width: 481px){.select-row .select{width:calc(50% - 8px)}}@media (min-width: 769px){.select-row .select{width:calc(50% - 16px)}}@media (min-width: 1025px){.select-row .select{width:calc(33.332% - 21px)}}@media (min-width: 1281px){.select-row .select{width:calc(25% - 24px)}}@media (min-width: 481px){.select-row .select+.select{margin:0 0 0 16px}}@media (min-width: 769px){.select-row .select+.select{margin:0 0 0 32px}}@media (max-width: 767px){.select-row .select:only-child{width:100%}}select{-webkit-appearance:none;-moz-appearance:none;-ms-appearance:none;appearance:none;outline:0;box-shadow:none;border:1px solid rgba(39,40,44,0.15);background-image:none}select:focus{border-color:#19191C}select::-ms-expand{display:none}select{flex:1;padding:8px 48px 8px 17px;cursor:pointer}.select{position:relative;display:flex}.custom-select-container{width:100%}.custom-select-container:after{content:"\e910";font-family:"icomoon";position:absolute;top:3px;right:8px;font-size:24px;cursor:pointer;pointer-events:none}.custom-select-container.is-open .custom-select-opener{border-color:#19191C}.custom-select-container.is-open .custom-select-panel{border:1px solid #d1d1d2;max-height:202px}.custom-select-opener{transition:border-color .15s ease-in-out;background:#fff;padding:7px;border:1px solid rgba(25,25,28,0.3)}.custom-select-opener:hover{border-color:rgba(25,25,28,0.5)}.custom-select-panel{transition:none;top:calc(100% + 8px);background:#fff}.custom-select-option{cursor:pointer}.custom-select-option.is-selected{background:#19191C;color:#fff}.custom-select-option.is-selected:before{display:none}.custom-select-option.is-selected.has-focus{background:#19191C}.custom-select-option.has-focus{background:rgba(25,25,28,0.1)}.scrollUp .menu{transform:translate3d(0, -100%, 0)}.page-not-found{padding:60px 0}.page-not-found .container{max-width:800px}.page-not-found form{position:relative;display:flex;flex-wrap:wrap;justify-content:space-between}.page-not-found input[type="text"]{width:100%;height:40px;padding:5px 15px;margin:0 0 16px}@media (min-width: 769px){.page-not-found input[type="text"]{width:calc(100% - 118px);margin:0}}.page-not-found input[type="submit"]{border:none;outline:none;border-radius:2em;color:#fff;background:#167dff;padding:8px 24px}.disabled{pointer-events:none}.buttons__row{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;margin:0 0 16px}@media (min-width: 769px){.buttons__row{margin:0 0 24px}}.buttons .btn{margin:0 25px 0 0}.buttons .btn:only-child{margin:0}.buttons .btn--transparent{border:1px solid rgba(25,25,28,0.3);background:transparent;color:#19191c}.buttons .btn--transparent:hover{background:rgba(25,25,28,0.1);border-color:rgba(25,25,28,0.4)}.fake-hash{position:absolute;top:-9999px;left:-9999px;opacity:0;visibility:hidden}.sr-only{border:0;clip:rect(0, 0, 0, 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.skip-content{font-size:16px;line-height:1.5;left:-10000px;opacity:0;position:absolute;top:auto;background-color:rgba(107,87,255,0.9);border:2px solid #fff;border-radius:2em;color:#fff;display:inline-block;padding:8px 24px;text-align:center;transition:opacity 0.2s ease}.skip-content:focus{left:50%;margin:0 0 0 -100px;opacity:1;top:80px}.blockquote{position:relative;padding:16px 0 32px}@media (min-width: 768px){.blockquote{padding:24px 0 48px 120px}}.blockquote blockquote{color:rgba(25,25,28,0.7);margin:0 0 24px;padding:0;border:none}@media (min-width: 769px){.blockquote blockquote{font-size:20px;line-height:1.4;margin:0 0 16px}}.blockquote blockquote p{margin:0 0 16px}.blockquote__author{font-size:16px;line-height:1.5;display:flex;flex-wrap:wrap;align-items:center}.blockquote__author-img{display:block;border-radius:50%;width:64px}@media (min-width: 768px){.blockquote__author-img{position:absolute;top:24px;left:0;width:96px}}.blockquote__author-info{flex:1;padding:0 0 0 8px}@media (min-width: 768px){.blockquote__author-info{padding:0}}.blockquote__author-title{display:block;font-weight:600}.twitter-timeline.twitter-timeline-rendered{border:1px solid rgba(25,25,28,0.2);overflow:hidden;border-radius:10px}.rider-code-highlight{position:relative}.rider-code-highlight:hover .rider-code-highlight-btn-copy{display:block}.rider-code-highlight .rider-code-highlight-btn-copy{background-image:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMTE1Ljc3IDEyMi44OCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMTE1Ljc3IDEyMi44OCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHN0eWxlIHR5cGU9InRleHQvY3NzIj4uc3Qwe2ZpbGwtcnVsZTpldmVub2RkO2NsaXAtcnVsZTpldmVub2RkO308L3N0eWxlPjxnPjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik04OS42MiwxMy45NnY3LjczaDEyLjE5aDAuMDF2MC4wMmMzLjg1LDAuMDEsNy4zNCwxLjU3LDkuODYsNC4xYzIuNSwyLjUxLDQuMDYsNS45OCw0LjA3LDkuODJoMC4wMnYwLjAyIHY3My4yN3YwLjAxaC0wLjAyYy0wLjAxLDMuODQtMS41Nyw3LjMzLTQuMSw5Ljg2Yy0yLjUxLDIuNS01Ljk4LDQuMDYtOS44Miw0LjA3djAuMDJoLTAuMDJoLTYxLjdINDAuMXYtMC4wMiBjLTMuODQtMC4wMS03LjM0LTEuNTctOS44Ni00LjFjLTIuNS0yLjUxLTQuMDYtNS45OC00LjA3LTkuODJoLTAuMDJ2LTAuMDJWOTIuNTFIMTMuOTZoLTAuMDF2LTAuMDJjLTMuODQtMC4wMS03LjM0LTEuNTctOS44Ni00LjEgYy0yLjUtMi41MS00LjA2LTUuOTgtNC4wNy05LjgySDB2LTAuMDJWMTMuOTZ2LTAuMDFoMC4wMmMwLjAxLTMuODUsMS41OC03LjM0LDQuMS05Ljg2YzIuNTEtMi41LDUuOTgtNC4wNiw5LjgyLTQuMDdWMGgwLjAyaDYxLjcgaDAuMDF2MC4wMmMzLjg1LDAuMDEsNy4zNCwxLjU3LDkuODYsNC4xYzIuNSwyLjUxLDQuMDYsNS45OCw0LjA3LDkuODJoMC4wMlYxMy45Nkw4OS42MiwxMy45NnogTTc5LjA0LDIxLjY5di03Ljczdi0wLjAyaDAuMDIgYzAtMC45MS0wLjM5LTEuNzUtMS4wMS0yLjM3Yy0wLjYxLTAuNjEtMS40Ni0xLTIuMzctMXYwLjAyaC0wLjAxaC02MS43aC0wLjAydi0wLjAyYy0wLjkxLDAtMS43NSwwLjM5LTIuMzcsMS4wMSBjLTAuNjEsMC42MS0xLDEuNDYtMSwyLjM3aDAuMDJ2MC4wMXY2NC41OXYwLjAyaC0wLjAyYzAsMC45MSwwLjM5LDEuNzUsMS4wMSwyLjM3YzAuNjEsMC42MSwxLjQ2LDEsMi4zNywxdi0wLjAyaDAuMDFoMTIuMTlWMzUuNjUgdi0wLjAxaDAuMDJjMC4wMS0zLjg1LDEuNTgtNy4zNCw0LjEtOS44NmMyLjUxLTIuNSw1Ljk4LTQuMDYsOS44Mi00LjA3di0wLjAyaDAuMDJINzkuMDRMNzkuMDQsMjEuNjl6IE0xMDUuMTgsMTA4LjkyVjM1LjY1di0wLjAyIGgwLjAyYzAtMC45MS0wLjM5LTEuNzUtMS4wMS0yLjM3Yy0wLjYxLTAuNjEtMS40Ni0xLTIuMzctMXYwLjAyaC0wLjAxaC02MS43aC0wLjAydi0wLjAyYy0wLjkxLDAtMS43NSwwLjM5LTIuMzcsMS4wMSBjLTAuNjEsMC42MS0xLDEuNDYtMSwyLjM3aDAuMDJ2MC4wMXY3My4yN3YwLjAyaC0wLjAyYzAsMC45MSwwLjM5LDEuNzUsMS4wMSwyLjM3YzAuNjEsMC42MSwxLjQ2LDEsMi4zNywxdi0wLjAyaDAuMDFoNjEuN2gwLjAyIHYwLjAyYzAuOTEsMCwxLjc1LTAuMzksMi4zNy0xLjAxYzAuNjEtMC42MSwxLTEuNDYsMS0yLjM3aC0wLjAyVjEwOC45MkwxMDUuMTgsMTA4LjkyeiIvPjwvZz48L3N2Zz4=);background-repeat:no-repeat;display:none;position:absolute;right:10px;top:10px;z-index:10;color:#717171;font-size:1em;padding:0;margin:0 0 0 8px;text-decoration:none;width:23px;height:23px;cursor:pointer;background-size:18px;background-position:center;border-radius:3px}.rider-code-highlight .rider-code-highlight-btn-copy:hover .rider-code-highlight-tooltip{visibility:visible}.rider-code-highlight .rider-code-highlight-btn-copy .rider-code-highlight-tooltip{font-size:15px;font-family:inherit;visibility:hidden;width:140px;background-color:#000;color:#fff;text-align:center;padding:8px 0;border-radius:5px;position:absolute;z-index:10;bottom:30px;transform:translateX(-42%)}.rider-code-highlight__dark .transparent{opacity:0.5}.rider-code-highlight__dark pre{background-color:#262626;color:#d0d0d0;padding:24px;font-family:JetBrains Mono;font-size:medium;border:1px solid rgba(25,25,28,0.5);border-radius:6px}.rider-code-highlight__dark pre code{background-color:inherit}.rider-code-highlight__dark .keyword{color:#6c95eb}.rider-code-highlight__dark .keyword-control{color:#6c95eb}.rider-code-highlight__dark .preprocessor-keyword{color:#6c95eb}.rider-code-highlight__dark .namespace-name{color:#c191ff}.rider-code-highlight__dark .class-name{color:#c191ff}.rider-code-highlight__dark .struct-name{color:#e1bfff}.rider-code-highlight__dark .record-class-name{color:#c191ff}.rider-code-highlight__dark .record-struct-name{color:#e1bfff}.rider-code-highlight__dark .interface-name{color:#c191ff}.rider-code-highlight__dark .type-parameter-name{color:#c191ff}.rider-code-highlight__dark .delegate-name{color:#e1bfff}.rider-code-highlight__dark .enum-name{color:#e1bfff}.rider-code-highlight__dark .event-name{color:#ed94c0}.rider-code-highlight__dark .field-name{color:#66c3cc}.rider-code-highlight__dark .property-name{color:#66c3cc}.rider-code-highlight__dark .enum-member-name{color:#e1bfff}.rider-code-highlight__dark .constant-name{color:#66c3cc;font-weight:bold}.rider-code-highlight__dark .parameter-name{color:#bdbdbd}.rider-code-highlight__dark .local-name{color:#bdbdbd}.rider-code-highlight__dark .reassigned-variable{color:#bdbdbd;border-color:#787878;text-decoration:underline}.rider-code-highlight__dark .method-name{color:#39cc8f}.rider-code-highlight__dark .extension-method-name{color:#39cc8f}.rider-code-highlight__dark .number{color:#ed94c0}.rider-code-highlight__dark .string{color:#c9a26d}.rider-code-highlight__dark .string-verbatim{color:#c9a26d}.rider-code-highlight__dark .string-escape-character{color:#d688d4}.rider-code-highlight__dark .string-escape-character1{color:#d688d4}.rider-code-highlight__dark .string-escape-character2{color:#66c3cc}.rider-code-highlight__dark .comment{color:#85c46c;font-style:italic}.rider-code-highlight__dark .xml-doc-comment-text{color:#85c46c;font-style:italic}.rider-code-highlight__dark .xml-doc-comment-delimiter{color:#85c46c;font-style:italic}.rider-code-highlight__dark .xml-doc-comment-name{color:#487d34}.rider-code-highlight__dark .xml-doc-comment-attribute-name{color:#487d34}.rider-code-highlight__dark .xml-doc-comment-attribute-quotes{color:#c9a26d}.rider-code-highlight__dark .xml-doc-comment-attribute-value{color:#c9a26d}.rider-code-highlight__dark .rider-code-highlight-btn-copy{background-image:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMTE1Ljc3IDEyMi44OCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMTE1Ljc3IDEyMi44OCIgZmlsbD0iI2ZmZiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+ICAgIDxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+LnN0MHtmaWxsLXJ1bGU6ZXZlbm9kZDtjbGlwLXJ1bGU6ZXZlbm9kZDt9PC9zdHlsZT48Zz48cGF0aCBjbGFzcz0ic3QwIiBkPSJNODkuNjIsMTMuOTZ2Ny43M2gxMi4xOWgwLjAxdjAuMDJjMy44NSwwLjAxLDcuMzQsMS41Nyw5Ljg2LDQuMWMyLjUsMi41MSw0LjA2LDUuOTgsNC4wNyw5LjgyaDAuMDJ2MC4wMiB2NzMuMjd2MC4wMWgtMC4wMmMtMC4wMSwzLjg0LTEuNTcsNy4zMy00LjEsOS44NmMtMi41MSwyLjUtNS45OCw0LjA2LTkuODIsNC4wN3YwLjAyaC0wLjAyaC02MS43SDQwLjF2LTAuMDIgYy0zLjg0LTAuMDEtNy4zNC0xLjU3LTkuODYtNC4xYy0yLjUtMi41MS00LjA2LTUuOTgtNC4wNy05LjgyaC0wLjAydi0wLjAyVjkyLjUxSDEzLjk2aC0wLjAxdi0wLjAyYy0zLjg0LTAuMDEtNy4zNC0xLjU3LTkuODYtNC4xIGMtMi41LTIuNTEtNC4wNi01Ljk4LTQuMDctOS44Mkgwdi0wLjAyVjEzLjk2di0wLjAxaDAuMDJjMC4wMS0zLjg1LDEuNTgtNy4zNCw0LjEtOS44NmMyLjUxLTIuNSw1Ljk4LTQuMDYsOS44Mi00LjA3VjBoMC4wMmg2MS43IGgwLjAxdjAuMDJjMy44NSwwLjAxLDcuMzQsMS41Nyw5Ljg2LDQuMWMyLjUsMi41MSw0LjA2LDUuOTgsNC4wNyw5LjgyaDAuMDJWMTMuOTZMODkuNjIsMTMuOTZ6IE03OS4wNCwyMS42OXYtNy43M3YtMC4wMmgwLjAyIGMwLTAuOTEtMC4zOS0xLjc1LTEuMDEtMi4zN2MtMC42MS0wLjYxLTEuNDYtMS0yLjM3LTF2MC4wMmgtMC4wMWgtNjEuN2gtMC4wMnYtMC4wMmMtMC45MSwwLTEuNzUsMC4zOS0yLjM3LDEuMDEgYy0wLjYxLDAuNjEtMSwxLjQ2LTEsMi4zN2gwLjAydjAuMDF2NjQuNTl2MC4wMmgtMC4wMmMwLDAuOTEsMC4zOSwxLjc1LDEuMDEsMi4zN2MwLjYxLDAuNjEsMS40NiwxLDIuMzcsMXYtMC4wMmgwLjAxaDEyLjE5VjM1LjY1IHYtMC4wMWgwLjAyYzAuMDEtMy44NSwxLjU4LTcuMzQsNC4xLTkuODZjMi41MS0yLjUsNS45OC00LjA2LDkuODItNC4wN3YtMC4wMmgwLjAySDc5LjA0TDc5LjA0LDIxLjY5eiBNMTA1LjE4LDEwOC45MlYzNS42NXYtMC4wMiBoMC4wMmMwLTAuOTEtMC4zOS0xLjc1LTEuMDEtMi4zN2MtMC42MS0wLjYxLTEuNDYtMS0yLjM3LTF2MC4wMmgtMC4wMWgtNjEuN2gtMC4wMnYtMC4wMmMtMC45MSwwLTEuNzUsMC4zOS0yLjM3LDEuMDEgYy0wLjYxLDAuNjEtMSwxLjQ2LTEsMi4zN2gwLjAydjAuMDF2NzMuMjd2MC4wMmgtMC4wMmMwLDAuOTEsMC4zOSwxLjc1LDEuMDEsMi4zN2MwLjYxLDAuNjEsMS40NiwxLDIuMzcsMXYtMC4wMmgwLjAxaDYxLjdoMC4wMiB2MC4wMmMwLjkxLDAsMS43NS0wLjM5LDIuMzctMS4wMWMwLjYxLTAuNjEsMS0xLjQ2LDEtMi4zN2gtMC4wMlYxMDguOTJMMTA1LjE4LDEwOC45MnoiLz48L2c+PC9zdmc+Cg==)}.rider-code-highlight__light .transparent{opacity:0.5}.rider-code-highlight__light pre{background-color:#ffffff;color:#202020;padding:24px;font-family:JetBrains Mono;font-size:medium;border:1px solid rgba(25,25,28,0.5);border-radius:6px}.rider-code-highlight__light pre code{background-color:inherit}.rider-code-highlight__light .keyword{color:#0f54d6}.rider-code-highlight__light .keyword-control{color:#0f54d6}.rider-code-highlight__light .preprocessor-keyword{color:#0f54d6}.rider-code-highlight__light .namespace-name{color:#6b2fba}.rider-code-highlight__light .class-name{color:#6b2fba}.rider-code-highlight__light .struct-name{color:#300073}.rider-code-highlight__light .record-class-name{color:#6b2fba}.rider-code-highlight__light .record-struct-name{color:#300073}.rider-code-highlight__light .interface-name{color:#6b2fba}.rider-code-highlight__light .type-parameter-name{color:#6b2fba}.rider-code-highlight__light .delegate-name{color:#300073}.rider-code-highlight__light .enum-name{color:#300073}.rider-code-highlight__light .event-name{color:#ab2f6b}.rider-code-highlight__light .field-name{color:#0093a1}.rider-code-highlight__light .property-name{color:#0093a1}.rider-code-highlight__light .enum-member-name{color:#300073}.rider-code-highlight__light .constant-name{color:#0093a1;font-weight:bold}.rider-code-highlight__light .parameter-name{color:#383838}.rider-code-highlight__light .local-name{color:#383838}.rider-code-highlight__light .reassigned-variable{color:#383838;border-color:#949494;text-decoration:underline}.rider-code-highlight__light .method-name{color:#00855f}.rider-code-highlight__light .extension-method-name{color:#00855f}.rider-code-highlight__light .number{color:#ab2f6b}.rider-code-highlight__light .string{color:#8c6c41}.rider-code-highlight__light .string-verbatim{color:#8c6c41}.rider-code-highlight__light .string-escape-character{color:#941290}.rider-code-highlight__light .string-escape-character1{color:#941290}.rider-code-highlight__light .string-escape-character2{color:#0093a1}.rider-code-highlight__light .comment{color:#248700;font-style:italic}.rider-code-highlight__light .xml-doc-comment-text{color:#248700;font-style:italic}.rider-code-highlight__light .xml-doc-comment-delimiter{color:#248700;font-style:italic}.rider-code-highlight__light .xml-doc-comment-name{color:#8bc775}.rider-code-highlight__light .xml-doc-comment-attribute-name{color:#8bc775}.rider-code-highlight__light .xml-doc-comment-attribute-quotes{color:#8c6c41}.rider-code-highlight__light .xml-doc-comment-attribute-value{color:#8c6c41}
+
+/*# sourceMappingURL=app.min.css.map*/    </style>
+    <script>
+        var ALGOLIA_INSIGHTS_SRC = "https://cdn.jsdelivr.net/npm/search-insights@2.0.2";
+
+        !function(e,a,t,n,s,i,c){e.AlgoliaAnalyticsObject=s,e[s]=e[s]||function(){
+        (e[s].queue=e[s].queue||[]).push(arguments)},i=a.createElement(t),c=a.getElementsByTagName(t)[0],
+        i.async=1,i.src=n,c.parentNode.insertBefore(i,c)
+        }(window,document,"script",ALGOLIA_INSIGHTS_SRC,"aa");
+    </script>
+    <link rel="icon" href="https://blog.jetbrains.com/wp-content/themes/jetbrains/assets/img/favicons/favicon.ico" sizes="any"><!-- 32×32 -->
+    <link rel="icon" href="https://blog.jetbrains.com/wp-content/themes/jetbrains/assets/img/favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="https://blog.jetbrains.com/wp-content/themes/jetbrains/assets/img/favicons/apple-touch-icon.png"><!-- 180×180 -->
+    <link rel="manifest" href="https://blog.jetbrains.com/wp-content/themes/jetbrains/assets/img/favicons/site.webmanifest">
+
+    <meta name="apple-mobile-web-app-title" content="JetBrains Blog">
+    <meta name="application-name" content="JetBrains Blog">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="theme-color" content="#000000">
+    <link rel="alternate" hreflang="en" href="https://blog.jetbrains.com/pycharm/2024/09/how-to-use-fastapi-for-machine-learning/" />
+<link rel="alternate" hreflang="x-default" href="https://blog.jetbrains.com/pycharm/2024/09/how-to-use-fastapi-for-machine-learning/" />
+
+<!-- Search Engine Optimization by Rank Math PRO - https://rankmath.com/ -->
+<meta name="description" content="Learn how to use FastAPI for machine learning. Explore the framework&#039;s benefits and why it&#039;s popular, and understand how to integrate it into your ML workflows."/>
+<meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"/>
+<link rel="canonical" href="https://blog.jetbrains.com/pycharm/2024/09/how-to-use-fastapi-for-machine-learning/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="How to Use FastAPI for Machine Learning | The PyCharm Blog" />
+<meta property="og:description" content="Learn how to use FastAPI for machine learning. Explore the framework&#039;s benefits and why it&#039;s popular, and understand how to integrate it into your ML workflows." />
+<meta property="og:url" content="https://blog.jetbrains.com/pycharm/2024/09/how-to-use-fastapi-for-machine-learning/" />
+<meta property="og:site_name" content="The JetBrains Blog" />
+<meta property="article:publisher" content="https://www.facebook.com/JetBrains" />
+<meta property="article:section" content="Data Science" />
+<meta property="og:updated_time" content="2024-09-19T09:59:14+01:00" />
+<meta property="og:image" content="https://blog.jetbrains.com/wp-content/uploads/2024/09/pc-social_share_blog_1280x720_en.png" />
+<meta property="og:image:secure_url" content="https://blog.jetbrains.com/wp-content/uploads/2024/09/pc-social_share_blog_1280x720_en.png" />
+<meta property="og:image:alt" content="How to Use FastAPI for Machine Learning" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="How to Use FastAPI for Machine Learning | The PyCharm Blog" />
+<meta name="twitter:description" content="Learn how to use FastAPI for machine learning. Explore the framework&#039;s benefits and why it&#039;s popular, and understand how to integrate it into your ML workflows." />
+<meta name="twitter:site" content="@jetbrains" />
+<meta name="twitter:creator" content="@jetbrains" />
+<meta name="twitter:image" content="https://blog.jetbrains.com/wp-content/uploads/2024/09/pc-social_share_blog_1280x720_en.png" />
+<!-- /Rank Math WordPress SEO plugin -->
+
+<link rel='dns-prefetch' href='//maxcdn.bootstrapcdn.com' />
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}body .is-layout-grid{display: grid;}body .is-layout-grid > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='wpml-blocks-css' href='https://blog.jetbrains.com/wp-content/plugins/sitepress-multilingual-cms/dist/css/blocks/styles.css?ver=4.6.3' type='text/css' media='all' />
+<link rel='stylesheet' id='pb-accordion-blocks-style-css' href='https://blog.jetbrains.com/wp-content/plugins/accordion-blocks/build/index.css?ver=1.5.0' type='text/css' media='all' />
+<link rel='stylesheet' id='ppress-frontend-css' href='https://blog.jetbrains.com/wp-content/plugins/wp-user-avatar/assets/css/frontend.min.css?ver=4.15.4' type='text/css' media='all' />
+<link rel='stylesheet' id='ppress-flatpickr-css' href='https://blog.jetbrains.com/wp-content/plugins/wp-user-avatar/assets/flatpickr/flatpickr.min.css?ver=4.15.4' type='text/css' media='all' />
+<link rel='stylesheet' id='ppress-select2-css' href='https://blog.jetbrains.com/wp-content/plugins/wp-user-avatar/assets/select2/select2.min.css?ver=1d837425d173a9a11b4b5bc34ccb3401' type='text/css' media='all' />
+<link rel='stylesheet' id='cms-navigation-style-base-css' href='https://blog.jetbrains.com/wp-content/plugins/wpml-cms-nav/res/css/cms-navigation-base.css?ver=1.5.5' type='text/css' media='screen' />
+<link rel='stylesheet' id='cms-navigation-style-css' href='https://blog.jetbrains.com/wp-content/plugins/wpml-cms-nav/res/css/cms-navigation.css?ver=1.5.5' type='text/css' media='screen' />
+<link rel='stylesheet' id='font-awesome-css' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css?ver=4.7.0' type='text/css' media='all' />
+<link rel='stylesheet' id='enlighterjs-css' href='https://blog.jetbrains.com/wp-content/plugins/enlighter/cache/enlighterjs.min.css?ver=ZGyDHRSQPMewFUQ' type='text/css' media='all' />
+<link rel='stylesheet' id='icomoon_font-css' href='https://blog.jetbrains.com/wp-content/themes/jetbrains/assets/dist/icomoon_font.min.css?ver=2.12.0' type='text/css' media='all' />
+<link rel='stylesheet' id='font-jetbrains-mono-css' href='https://blog.jetbrains.com/wp-content/themes/jetbrains/assets/dist/fontjetbrainsmono.min.css?ver=2.12.0' type='text/css' media='all' />
+<link rel='stylesheet' id='single-post-css' href='https://blog.jetbrains.com/wp-content/themes/jetbrains/assets/dist/singlepost.min.css?ver=2.12.0' type='text/css' media='all' />
+<script type='text/javascript' src='https://blog.jetbrains.com/wp-content/themes/jetbrains/assets/jquery/jquery.min.js' id='jquery-js'></script>
+<script type='text/javascript' id='wpml-cookie-js-extra'>
+/* <![CDATA[ */
+var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":"\/"}};
+var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":"\/"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://blog.jetbrains.com/wp-content/plugins/sitepress-multilingual-cms/res/js/cookies/language-cookie.js?ver=4.6.3' id='wpml-cookie-js'></script>
+<script type='text/javascript' src='https://blog.jetbrains.com/wp-content/plugins/wp-user-avatar/assets/flatpickr/flatpickr.min.js?ver=4.15.4' id='ppress-flatpickr-js'></script>
+<script type='text/javascript' src='https://blog.jetbrains.com/wp-content/plugins/wp-user-avatar/assets/select2/select2.min.js?ver=4.15.4' id='ppress-select2-js'></script>
+<link rel="https://api.w.org/" href="https://blog.jetbrains.com/wp-json/" /><link rel="alternate" type="application/json" href="https://blog.jetbrains.com/wp-json/wp/v2/pycharm/509778" /><link rel='shortlink' href='https://blog.jetbrains.com/?p=509778/' />
+<link rel="alternate" type="application/json+oembed" href="https://blog.jetbrains.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fblog.jetbrains.com%2Fpycharm%2F2024%2F09%2Fhow-to-use-fastapi-for-machine-learning%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://blog.jetbrains.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fblog.jetbrains.com%2Fpycharm%2F2024%2F09%2Fhow-to-use-fastapi-for-machine-learning%2F&#038;format=xml" />
+<meta name="generator" content="WPML ver:4.6.3 stt:60,9,1,4,3,28,29,43,46,2,54;" />
+                <!-- Google+ / Schema.org -->
+                    <meta itemprop="name" content="How to Use FastAPI for Machine Learning | The PyCharm Blog"/>
+                            <meta itemprop="headline" content="How to Use FastAPI for Machine Learning | The PyCharm Blog"/>
+                            <meta itemprop="image" content="https://blog.jetbrains.com/wp-content/uploads/2024/09/pc-social_share_blog_1280x720_en.png"/>
+                            <meta name="image" content="https://blog.jetbrains.com/wp-content/uploads/2024/09/pc-social_share_blog_1280x720_en.png"/>
+        
+    <link rel="icon" href="https://blog.jetbrains.com/wp-content/uploads/2024/01/cropped-mstile-310x310-1-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://blog.jetbrains.com/wp-content/uploads/2024/01/cropped-mstile-310x310-1-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://blog.jetbrains.com/wp-content/uploads/2024/01/cropped-mstile-310x310-1-180x180.png" />
+<meta name="msapplication-TileImage" content="https://blog.jetbrains.com/wp-content/uploads/2024/01/cropped-mstile-310x310-1-270x270.png" />
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5P98');</script>
+<!-- End Google Tag Manager -->
+
+		<style type="text/css" id="wp-custom-css">
+			/* blog.jetbrains.com-theme/blob/master/custom.css */
+
+#extendify-templates-inserter {
+	display: none !important; 
+}
+
+.enlighter-k3{
+	background-color: transparent !important;
+}
+
+.enlighter-t-enlighter div.enlighter>div.enlighter-special, .enlighter-t-wpcustom div.enlighter>div.enlighter-special{
+	background-color: #FFEBCC;
+}
+
+a[href*="/tag/newsletter"],
+a[href*="/tag/newsletter"],
+a[href*="/tag/how2pro"],
+a[href*="/tag/sendtoall"],
+a[href*="/tag/newsletter-resharper"],
+a[href*="/tag/newsletter-rider"],
+a[href*="/tag/newsletter-cpp"],
+a[href*="/tag/newsletter-rust"],
+a[href*="/webstorm/tag/digest"],
+a[href*="/category/uncategorized"],
+a[href*="/category/newsletter"],a[href*="/category/java-annotated"],a[href*="/tag/news-company/"],a[href*="/tag/major-news/"],
+a[href*="/category/newsletter"],
+a[href*="/category/how2pro"],
+a[href*="/category/sendtoall"],
+a[href*="/category/newsletter-resharper"],
+a[href*="/category/newsletter-rider"],
+a[href*="/category/newsletter-cpp"],
+a[href*="/category/newsletter-rust"] {
+	display: none !important;
+}
+
+#wrapper > main > section.promo div.promo__text > a.tag {
+	display: none !important;
+}
+
+table, th, td {
+  border: 1px solid rgba(50,50,93,.1);
+  border-collapse: collapse;
+  padding: 8px;
+}
+
+.wp-block-image figcaption {
+    font-size: .7em;
+    margin-top: .5em;
+    margin-bottom: 1em;
+    text-align: center;
+    font-style: italic;
+}
+
+div.content>p[data-nosnippet] {
+    font-size: 80%;
+}
+
+blockquote,
+blockquote.wp-block-quote {
+	font-size: 100%;
+	line-height: 1.5;
+	margin: 32px 0px;
+	padding: 0px 18px;
+	border-left: 2px solid rgba(0, 0, 0, 0.12);
+}
+
+figure.wp-block-embed.is-type-video .wp-block-embed__wrapper, figure.wp-block-embed.is-type-video .wp-block-embed__wrapper {
+position: relative;
+width: 100%;
+height: 0;
+padding-bottom: 56.25%;
+}
+
+
+.navbar h3 {
+	font-size:20px !important;
+}
+
+h2, h3, h4, h5 {
+	margin-top: 20px;
+}
+
+h4, h5 {
+	font-size: 20px !important;
+}
+
+figure.wp-block-embed.is-type-video iframe {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+}
+
+div.content > ul > li > img {
+	margin: 0.5em 0;
+}
+
+.alignright {
+   float: right;
+}
+.single-space .content__form {
+    display: none;
+}
+.post-type-archive-space .form-subscribe {
+    display: none;
+}
+.single .top-page h2.h1 + p {
+    margin-top: 10px;
+}
+.single .top-page h2.h1 {
+    margin-bottom: 0;
+}
+@media (min-width: 1281px) {
+			.post-type-archive-space .product-blog .product-blog__content .col {
+			width: 25%;
+	}
+	.post-type-archive-space .product-blog__content {
+    width: 100%;
+}
+}
+main .article-section .content>ol:not([class]):not([id])[start] {
+    counter-reset: start;
+}
+
+.wp-block-video {
+    margin: 0 0 1em !important;
+}
+
+video {
+	max-width: 100%;
+}
+
+.copy-heading {
+    margin-top: 20px;
+}
+.border+div .slick-list {
+    border: solid 1px #aeaeaf;
+}
+.wp-block-image.aligncenter__image>figure.aligncenter {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+main .article-section .content ol:not([class]):not([id]) {
+    margin-bottom: 24px;
+}
+.js-toc {
+    overflow-y: hidden; 
+    scrollbar-width: none;
+}
+
+.js-toc::-webkit-scrollbar {
+    display: none; 
+}
+section.article-section .content .copy-heading h4.font-size-18 {
+	font-size:18px!important;
+}		</style>
+		    <link rel="alternate" type="application/rss+xml" title="PyCharm : The Python IDE for data science and web development | The JetBrains Blog" href="https://blog.jetbrains.com/pycharm/feed/">
+</head>
+
+
+<body class="pycharm-template-default single single-pycharm postid-509778 wp-embed-responsive"><!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5P98"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+<div id="wrapper">
+    <header class="header">
+        <div class="container">
+            <strong class="logo">
+                <a href="https://blog.jetbrains.com/">
+                                            <img src="https://blog.jetbrains.com/wp-content/uploads/2024/06/JETBRAINS-Blog.svg" alt="">
+                                                        </a>
+            </strong>
+            <a href="#main" class="skip-content">Skip to content</a>
+            <ul class="menu-list">
+                <li>
+                    <a href="#" class="nav-opener">
+                        <span class="mobile-hidden">Topics</span>
+                    </a>
+                </li>
+                                                        <li><a href="https://blog.jetbrains.com/search/"><i class="icon-search"><span class="sr-only">Search</span></i></a></li>
+                                            </ul>
+            <a href="#" class="burger-icon"><span class="sr-only">Burger menu icon</span><span></span></a>
+            <nav class="navbar">
+                <div class="container">
+
+                    <ul class="row"><li id="menu-item-284" class="columns menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-284"><h4>IDEs</h4>
+<ul class="sub-menu">
+	<li id="menu-item-286" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-286"><a title="CLion Blog" href="/clion/">CLion</a></li>
+	<li id="menu-item-287" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-287"><a title="DataGrip Blog" href="/datagrip/">DataGrip</a></li>
+	<li id="menu-item-231265" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-231265"><a href="/dataspell/">DataSpell</a></li>
+	<li id="menu-item-217910" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-217910"><a href="/fleet/">Fleet</a></li>
+	<li id="menu-item-288" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-288"><a title="GoLand Blog" href="/go/">GoLand</a></li>
+	<li id="menu-item-289" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-289"><a title="IntelliJ IDEA Blog" href="/idea/">IntelliJ IDEA</a></li>
+	<li id="menu-item-291" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-291"><a title="PhpStorm Blog" href="/phpstorm/">PhpStorm</a></li>
+	<li id="menu-item-292" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-292"><a title="PyCharm Blog" href="/pycharm/">PyCharm</a></li>
+	<li id="menu-item-155027" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-155027"><a href="/rust/">RustRover</a></li>
+	<li id="menu-item-293" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-293"><a title="Rider Blog" href="/dotnet/tag/rider/">Rider</a></li>
+	<li id="menu-item-294" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-294"><a title="RubyMine Blog" href="/ruby/">RubyMine</a></li>
+	<li id="menu-item-296" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-296"><a title="WebStorm Blog" href="/webstorm/">WebStorm</a></li>
+</ul>
+</li>
+<li id="menu-item-155084" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-155084"><h4>Plugins &#038; Services</h4>
+<ul class="sub-menu">
+	<li id="menu-item-126770" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-126770"><a href="/big-data-tools/">Big Data Tools</a></li>
+	<li id="menu-item-136584" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-136584"><a href="https://blog.jetbrains.com/blog/tag/codewithme/">Code With Me</a></li>
+	<li id="menu-item-170477" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-170477"><a href="/qa/">Quality Assurance</a></li>
+	<li id="menu-item-310" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-310"><a title="JetBrains Platform Blog" href="/platform/">JetBrains Platform</a></li>
+	<li id="menu-item-123129" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-123129"><a href="/scala/">Scala</a></li>
+	<li id="menu-item-295" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-295"><a title="Toolbox App Blog" href="/toolbox-app/">Toolbox App</a></li>
+	<li id="menu-item-268151" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-268151"><a href="/writerside/">Writerside</a></li>
+	<li id="menu-item-434711" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-434711"><a href="/ai/">JetBrains AI</a></li>
+	<li id="menu-item-472822" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-472822"><a href="/grazie/">Grazie</a></li>
+</ul>
+</li>
+<li id="menu-item-305" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-305"><h4>Team Tools</h4>
+<ul class="sub-menu">
+	<li id="menu-item-65109" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-65109"><a href="/datalore/">Datalore</a></li>
+	<li id="menu-item-753" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-753"><a title="JetBrains Space Blog" href="/space/">Space</a></li>
+	<li id="menu-item-306" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-306"><a title="TeamCity Blog" href="/teamcity/">TeamCity</a></li>
+	<li id="menu-item-307" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-307"><a title="Upsource Blog" href="/upsource/">Upsource</a></li>
+	<li id="menu-item-308" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-308"><a title="YouTrack Blog" href="/youtrack/">YouTrack</a></li>
+	<li id="menu-item-309" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-309"><a title="Hub Blog" href="/hub/">Hub</a></li>
+	<li id="menu-item-165129" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-165129"><a href="/qodana/">Qodana</a></li>
+</ul>
+</li>
+<li id="menu-item-297" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-297"><h4>.NET &#038; Visual Studio</h4>
+<ul class="sub-menu">
+	<li id="menu-item-304" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-304"><a title=".NET Tools" href="/dotnet/">.NET Tools</a></li>
+	<li id="menu-item-300" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-300"><a title="ReSharper C++ Blog" href="/rscpp/">ReSharper C++</a></li>
+</ul>
+</li>
+<li id="menu-item-63316" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-63316"><h4>Languages &#038; Frameworks</h4>
+<ul class="sub-menu">
+	<li id="menu-item-311" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-311"><a title="Kotlin Blog" href="/kotlin/">Kotlin</a></li>
+	<li id="menu-item-63315" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-63315"><a href="/ktor/">Ktor</a></li>
+	<li id="menu-item-290" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-290"><a title="MPS Blog" href="/mps/">MPS</a></li>
+	<li id="menu-item-422188" class="menu-item menu-item-type-post_type_archive menu-item-object-amper menu-item-422188"><a href="https://blog.jetbrains.com/amper/">Amper</a></li>
+</ul>
+</li>
+<li id="menu-item-63314" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-63314"><h4>Education &#038; Research</h4>
+<ul class="sub-menu">
+	<li id="menu-item-118360" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-118360"><a href="/education/">JetBrains Academy</a></li>
+	<li id="menu-item-285585" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-285585"><a href="/research/">Research</a></li>
+</ul>
+</li>
+<li id="menu-item-312" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-312"><h4>Company</h4>
+<ul class="sub-menu">
+	<li id="menu-item-313" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-313"><a title="JetBrains Company Blog" href="/blog/">Company Blog</a></li>
+	<li id="menu-item-227873" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-227873"><a href="/security/">Security</a></li>
+</ul>
+</li>
+</ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+<main id="main">
+    <div class="top-page">
+    <div class="container">
+        <div class="top-page__row">
+            <div class="top-page__head">
+                                    <div class="top-page__hold">
+                        <a href="https://blog.jetbrains.com/pycharm/">
+                            <img src="https://blog.jetbrains.com/wp-content/uploads/2019/01/PyCharm-1.svg" alt="Pycharm logo">
+                                                                                                <h2 class="hidden-heading">PyCharm</h2>
+                                                                                    </a>
+                                                    <p>The Python IDE for data science and web development</p>
+                                            </div>
+                            </div>
+            <div class="top-page__right">
+                                    <div class="top-page__social-wrap">
+                        <a href="#" class="social-opener">Follow</a>
+                        <ul class="social">
+                            <li><span>Follow:</span></li>
+                                                                                                                                    <li><a href="https://twitter.com/pycharm" target="_blank" aria-label="Twitter"><i class="icon-twitter"><span class="sr-only">Twitter</span></i> <span>Twitter</span></a></li>
+                                                                                                                                                                    <li><a href="https://www.youtube.com/c/pycharmide" target="_blank" aria-label="Youtube"><i class="icon-youtube"><span class="sr-only">Youtube</span></i> <span>Youtube</span></a></li>
+                                                                                                                                                                    <li><a href="https://blog.jetbrains.com/pycharm/feed/" target="_blank" aria-label="RSS"><i class="icon-rss-feed"><span class="sr-only">RSS</span></i> <span>RSS</span></a></li>
+                                                                                    </ul>
+                    </div>
+                                                    <a href="https://www.jetbrains.com/pycharm/download/" class="btn">Download</a>
+                            </div>
+        </div>
+                <div class="menu">
+            <span class="menu__border"></span>
+            <div class="menu__wrapper">
+                                    <nav class="menu__nav">
+                        <ul class="menu__nav-list">
+                                                            <li>
+                                    <a href="/pycharm/"  >All</a>
+                                </li>
+                                                                                                                            <li><a href="/pycharm/category/releases/" >Releases</a></li>
+                                                                                                                                                                                                                            <li><a href="/pycharm/category/tutorials/" >Tutorials</a></li>
+                                                                                                                                                                                                                            <li><a href="/pycharm/category/web-development/" >Web Development</a></li>
+                                                                                                                                                                                                                            <li><a href="/pycharm/category/data-science/" attr-class="curent_tax">Data Science</a></li>
+                                                                                                                                                                                                                            <li><a href="/pycharm/category/livestreams/" >Livestreams</a></li>
+                                                                                                                                                        </ul>
+                    </nav>
+                                                                                </div>
+        </div>
+                                </div>
+</div>
+                            <section class="article-section" data-clarity-region="article">
+                <div class="content js-toc-content">
+                    				<a href="/pycharm/category/data-science/" class="tag">Data Science</a>
+			<a href="/pycharm/category/how-tos/" class="tag">How-To's</a>
+	                    <h1 id="major-updates">How to Use FastAPI for Machine Learning</h1>                    <div class="author-post">
+                                                <div class="author-post__info">
+                            <div class="author-post__info-avatars ">
+                                                                                                                                                    <img src="https://blog.jetbrains.com/wp-content/uploads/2021/03/evgenia-200x200.jpg" width="200" height="200" alt="Evgenia Verbina" loading="lazy"  class="avatar">
+                                                                                                </div>
+                            <div class="author-post__text">
+                                <div class="author-post__text-title">
+                                                                            <a href="https://blog.jetbrains.com/author/evgenia-verbina-jetbrains-com">Evgenia Verbina</a>
+                                                                    </div>
+                                                                    <time class="publish-date" data-year="2024" data-month="09" data-day="19" data-hours="09" data-minutes="59" datetime="2024-09-19"></time>
+                                                            </div>
+                        </div>
+                                            </div>
+                    
+<p><em>This is a guest post from <a href="https://blog.jetbrains.com/pycharm/2024/09/how-to-use-fastapi-for-machine-learning/#author" data-type="link" data-id="https://blog.jetbrains.com/pycharm/2024/09/how-to-use-fastapi-for-machine-learning/#author">Cheuk Ting Ho</a>, a data scientist who contributes to multiple open-source libraries, such as pandas, Polars, and Jupyter Notebook.</em></p>
+
+
+
+<figure class="wp-block-image size-full"><img decoding="async" fetchpriority="high" width="2560" height="1440" src="https://blog.jetbrains.com/wp-content/uploads/2024/09/pc-featured_blog_1280x720_en-1.png" alt="How to Use FastAPI for Machine Learning" class="wp-image-509816"/></figure>
+
+
+
+<p>FastAPI provides a quick way to build a backend service with Python. With a few decorators, you can turn your Python function into an API application. </p>
+
+
+
+<p>It is widely used by many companies including Microsoft, Uber, and Netflix. According to the <a href="https://lp.jetbrains.com/python-developers-survey-2023/" target="_blank" rel="noopener">Python Developers Survey</a>, FastAPI usage has grown from 21% in 2021 to 29% in 2023. For data scientists, it&#8217;s the second most popular framework, with 31% using it. </p>
+
+
+
+<p>In this blog post, we will cover the basics of FastAPI for data scientists who may want to build a quick prototype for their project.&nbsp;</p>
+
+
+
+<h2 class="wp-block-heading">What is FastAPI?</h2>
+
+
+
+<p>FastAPI is a popular web framework for building APIs with Python, based on standard Python type hints. It is intuitive and easy to use, and it can provide a production-ready application in a short period of time. It is fully compatible with <a href="https://github.com/OAI/OpenAPI-Specification" target="_blank" rel="noopener">OpenAPI</a> and <a href="https://json-schema.org/" target="_blank" rel="noopener">JSON Schema</a>.</p>
+
+
+
+<h2 class="wp-block-heading">Why use FastAPI for machine learning?</h2>
+
+
+
+<p>Most teams working on machine learning projects consist of data scientists whose domains and professions lie on the statistics side of things. They may not have experience developing software or applications to ship their machine learning projects. FastAPI enables data scientists to easily create APIs for the following projects:</p>
+
+
+
+<p><strong>Deploying prediction models</strong></p>
+
+
+
+<p>The data science team may have trained a model for the prediction of the sales demand in a warehouse. To make it useful, they have to provide an API interface so other parts of the stock management system can use this new prediction functionality.</p>
+
+
+
+<p><strong>Suggestion engines</strong></p>
+
+
+
+<p>One of the very common uses of machine learning is as a system that provides suggestions based on the users&#8217; choices. For example, if someone puts certain products in their shopping cart, more items can be suggested to that user. Such an e-commerce system requires an API call to the suggestion engine that takes input parameters.</p>
+
+
+
+<p><strong>Dynamic dashboards and reporting systems</strong></p>
+
+
+
+<p>Sometimes, reports for data science projects need to be presented as dashboards so users can inspect the results themselves. One possible approach is to have the data model provide an API. Frontend developers can use this API to create applications that allow users to interact with the data.</p>
+
+
+
+<h2 class="wp-block-heading">Advantages of using FastAPI</h2>
+
+
+
+<p>Compared to other Python web frameworks, FastAPI is simple yet fully functional. Mainly using decorators and type hints, it allows you to build a web application without the complexity of building a whole ORM (<a href="https://en.wikipedia.org/wiki/Object-relational_mapping" target="_blank" rel="noopener">object-relational mapping</a>) model and with the <a href="https://fastapi.tiangolo.com/tutorial/sql-databases/" target="_blank" rel="noopener">flexibility of using any database</a>, including any SQL and NoSQL databases. FastAPI also provides automatic documentation generation, support for additional information and validation for query parameters, and good async support.</p>
+
+
+
+<p><strong>Fast development</strong></p>
+
+
+
+<p>Creating API calls in FastAPI is as easy as adding decorators in the Python code. Little to no backend experience is needed for anyone who wants to turn a Python function into an application that will respond to API calls.</p>
+
+
+
+<p><strong>Fast documentation</strong></p>
+
+
+
+<p>FastAPI provides automatic interactive API documentation using <a href="https://github.com/swagger-api/swagger-ui" target="_blank" rel="noopener">Swagger UI</a>, which is an industry standard. No extra effort is required to build clear documentation with API call examples. This creates an advantage for busy data science teams who may not have the energy and expertise to write technical specifications and documentation.</p>
+
+
+
+<p><strong>Easy testing</strong></p>
+
+
+
+<p>Writing tests is one of the most important steps in software development, but it can also be one of the most tedious, especially when the time of the data science team is valuable. Testing FastAPI is made simple thanks to <a href="https://www.starlette.io/testclient/" target="_blank" rel="noopener">Starlette</a> and <a href="https://www.python-httpx.org/" target="_blank" rel="noopener">HTTPX</a>. Most of the time no monkey patching is needed and tests are easy to write and understand.</p>
+
+
+
+<p><strong>Fast deployment</strong></p>
+
+
+
+<p>FastAPI comes with a <a href="https://fastapi.tiangolo.com/fastapi-cli/" target="_blank" rel="noopener">CLI tool</a> that can bridge development and deployment smoothly. It allows you to switch between development mode and production mode easily. Once development is completed, the code can be easily deployed using a <a href="https://fastapi.tiangolo.com/deployment/docker/" target="_blank" rel="noopener">Docker container</a> with images that have Python prebuilt.</p>
+
+
+
+<h2 class="wp-block-heading">How to use FastAPI for a machine learning project</h2>
+
+
+
+<p>In this example, we will turn a classification prediction model that uses the <a href="https://scikit-learn.org/stable/modules/neighbors.html" target="_blank" rel="noopener">Nearest Neighbors algorithm</a> to predict the species of various penguins based on their bill and flipper length into a backend application. We will provide an API that takes parameters from the query parameters of a URL and gives back the prediction. This shows how a prototype can be made quickly by any data scientist with no backend development experience.</p>
+
+
+
+<p>We will use a simple `<a href="https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html" target="_blank" rel="noopener">KNeighborsClassifier</a>` on the <a href="https://www.kaggle.com/code/parulpandey/penguin-dataset-the-new-iris" target="_blank" rel="noopener">penguin data set</a> as an example. Details of how to build the model will be omitted, but feel free to check out the <a href="https://github.com/Cheukting/FastAPI-ml-demo/blob/main/penguins_predict.ipynb" target="_blank" rel="noopener">relevant notebook here</a>. In the following tutorial, we will focus on the usage of FastAPI and explain some fundamental concepts. We will be building a prototype to do so.&nbsp;</p>
+
+
+
+<h3 class="wp-block-heading"><strong>1. Start a FastAPI project with PyCharm<br></strong></h3>
+
+
+
+<p>In this blog post, we will be using PyCharm Professional 2024.1. The best way to start using FastAPI is to <a href="https://www.jetbrains.com/help/pycharm/fastapi-project.html" target="_blank" rel="noopener">create a FastAPI project with PyCharm</a>. When you click <em>New Project</em> in PyCharm, you will be presented with a large selection of projects to choose from. Select the <em>FastAPI</em> tab:<br><br><img decoding="async" width="624" height="505" src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXcXg0ydrDqTUAn3ymmERQmAoV_qLFJ05payAjEsBkGx6b74YxGu9gvP26Qo_y0wW0GXCUJ1DpwkkEse5bTuKZMMsYnHnquO4NU8bKk_DbP0giqKvZjKHJF9re7DKIjgzwENo7s_LV40IMd3_KRzt99heu2r?key=vdKmDp43h4267nMJJr3DrQ"><br><br>From here, you can put in the name of your project and take advantage of other options such as initializing Git and the virtual environment that you want to use.<br><br>After doing so, you will see the basic structure of a FastAPI project set up for you.<br><br><img decoding="async" width="624" height="369" src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXeSOPOjjaQNOFGvlFgvrv_e434hpL8nCTtgzU3H8cd_eTbOhKTbhwWqdztL88hGdEH-1_atdJcAKUQNzC2XZaTUrGkNsrW-uVnFWjpr2FzLHLxG2ZJp9rBQM-pqEPqgHwh_37km9svOyCifpf95LR19ss4q?key=vdKmDp43h4267nMJJr3DrQ"><br><br>There is also a `<code>test_main.http</code>` file set up for you to quickly test all the endpoints.<br><br><img decoding="async" loading="lazy" width="624" height="328" src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXeIcvsbT4t0rpVnH-9LWY6hpxXR5cyFIv3xIumNXQKV8jSbv_Cc9b7F8ce1vetA7bwkAhzuygPeIu_1UhQITIbnm347gUudXrh_pXp-s49mP4aqfMDDt2Bc600Nk89YfsyvbmDl-dLgAu3w9Qc-GS0mHWM?key=vdKmDp43h4267nMJJr3DrQ"><br></p>
+
+
+
+<h3 class="wp-block-heading"><strong>2. Set up environment dependencies</strong></h3>
+
+
+
+<p>Next, set up our environment dependency with `<code>requirements.txt</code>` by selecting <a href="https://www.jetbrains.com/help/pycharm/managing-dependencies.html" target="_blank" rel="noopener">​​<em>Sync Python Requirements</em></a> under PyCarm’s <em>Tool</em> menu.<br><br><img decoding="async" loading="lazy" width="314" height="542" src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXccO5ZpgBQ8xj8SGza3OR7E61Qg_8Y1MBNlW2cYwyhzmtkFvN6kyg0cKTXQF6ofyXk8JaS7_Gk3018gyhT-zik9cBX2VLtXernqyGHIloJM41avMZLH75siACXXzzjMCS9BRwGDxEPYDCUF4pGgJI7m6fyR?key=vdKmDp43h4267nMJJr3DrQ"><br><br>Then you can select the `<code>requirements.txt</code>` file to be used.<br><br><img decoding="async" loading="lazy" width="455" height="262" src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXef3bAg0oWF8B26HpHgBfbbpO7VXV79OuDEENpHPyEmhmYmW2CSdDRlQV4y-9496Y0hu9OQXSeZWVCIoU2ZNyUCX9wrsybBoarI5YVl79SKgcW5oCSSp0RiVEtD6ld1APRae-jsC0gFT2DYvUrjdMZCqqGr?key=vdKmDp43h4267nMJJr3DrQ"><br><br>You can copy and use this `<a href="https://github.com/Cheukting/FastAPI-ml-demo/blob/main/requirements.txt" target="_blank" rel="noopener">requirements.txt</a>` file. We will be using pandas and scikit-learn for the machine learning part of the project. Also, add the `<a href="https://github.com/Cheukting/FastAPI-ml-demo/blob/main/penguins.csv" target="_blank" rel="noopener">penguins.csv</a>` file to your project directory.</p>
+
+
+
+<h3 class="wp-block-heading"><strong>3. Set up your machine learning model</strong></h3>
+
+
+
+<p>Arrange your machine learning code in the `<code>main.py</code>` file. We will start with a script that trains our model:</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="python" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn import preprocessing
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import StandardScaler
+
+data = pd.read_csv('penguins.csv')
+data = data.dropna()
+
+le = preprocessing.LabelEncoder()
+X = data[["bill_length_mm", "flipper_length_mm"]]
+le.fit(data["species"])
+y = le.transform(data["species"])
+X_train, X_test, y_train, y_test = train_test_split(X, y, stratify=y, random_state=0)
+clf = Pipeline(
+    steps=[("scaler", StandardScaler()), ("knn", KNeighborsClassifier(n_neighbors=11))]
+)
+clf.set_params().fit(X_train, y_train)</pre>
+
+
+
+<p>We can place the above code after `<code>app = FastAPI()</code>`. All of it will be run when we start the application.<br><br><img decoding="async" loading="lazy" width="624" height="411" src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXfCiG8OY_xW5ITZwfPYCjh-IVbcM9i2T5fj12uiIi8OqxbyaDUsokGeYa1tMswK13Sae7_flr4ExHo12NOk_mTBM9o8f_eRUwTxjozoo8UEhFQY7F4OSvDwuStgbz03nNa6UKhUVBOuQ5ol9CwoEWKqnmNc?key=vdKmDp43h4267nMJJr3DrQ"><br><br>However, there is a better way to run the start-up code we used to set up our model. We will cover that <a href="https://blog.jetbrains.com/pycharm/2024/09/how-to-use-fastapi-for-machine-learning/#setup" data-type="link" data-id="https://blog.jetbrains.com/pycharm/2024/09/how-to-use-fastapi-for-machine-learning/#setup">in a later part of the blog post</a>.</p>
+
+
+
+<h3 class="wp-block-heading"><strong>4. Request a response</strong></h3>
+
+
+
+<p>Next we will look at how to add our model to FastAPI functionality. As a first step, we will add a response to the root of the URL and just simply return a message about our model in JSON format. Change the code in `<code>async def root():</code>` from “Hello world” to our message like this:</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="python" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">@app.get("/")
+async def root():
+    return {
+        "Name": "Penguins Prediction",
+        "description": "This is a penguins prediction model based on the bill length and flipper length of the bird.",
+    }</pre>
+
+
+
+<p>Now, test our application. First, we will start our application, which is easy in PyCharm. Just press the arrow button (<img decoding="async" loading="lazy" width="16" height="16" src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXc0LiYi_rXCHDApg8w6BegZcjsWLgehi6PBIrRpJ4zPftksMIzCfs47_pI-vZrweWVcIiRJdUpabGzit3V0CRAG5ie5y-rbViIhChPVFFhFrxiyuCjTD3NGx7RqH-U2od_7ZZHFX2EoW4AM4Ubt2J3qBYvd?key=vdKmDp43h4267nMJJr3DrQ">) next to your project name at the top.<br><br><img decoding="async" loading="lazy" width="624" height="187" src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXeKzc7TFPb_VNjfob2Lk7EnsjbiCa4-PUnTlkSQ0YDU3z1uJL9CCq-_gY8F6awyFCCrmW3XNkWqM5iWHIAfRF64ZXUzG6nNfB4eMF72pHKpwrHa9MvrbQ59BfVpcE0IZKB4UPpDU9i3WCyOe3myK6AqQ_ET?key=vdKmDp43h4267nMJJr3DrQ"><br><br>If you are using the default settings, your application will run on <a href="http://127.0.0.1:8000" target="_blank">http://127.0.0.1:8000</a>. You can double-check that by looking at the prompt from the <em>Run </em>window.<br><br><img decoding="async" loading="lazy" width="624" height="191" src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXecnLB8N5ac5zTUWtyLook3mTf_gXUyI8xv_-XjxBObQTitn3e19b1dROsT9bIbQOtKoOvwsMRC3HrTMuZenT98xabZpjv8euX2fYOi2U9cRJahqt69AK7WoVJLLg8nM3QRb4HzMzDYA8ldn1NTXvzoS_VN?key=vdKmDp43h4267nMJJr3DrQ"></p>
+
+
+
+<p>Once the process has started, let’s go to `<code>test_main.http</code>` and press the first arrow button (<img decoding="async" loading="lazy" width="16" height="16" src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXc0LiYi_rXCHDApg8w6BegZcjsWLgehi6PBIrRpJ4zPftksMIzCfs47_pI-vZrweWVcIiRJdUpabGzit3V0CRAG5ie5y-rbViIhChPVFFhFrxiyuCjTD3NGx7RqH-U2od_7ZZHFX2EoW4AM4Ubt2J3qBYvd?key=vdKmDp43h4267nMJJr3DrQ">) next to `<code>GET</code>`. From the <a href="https://www.jetbrains.com/help/pycharm/http-client-in-product-code-editor.html" target="_blank" rel="noopener">HTTP Client</a> in the <em>Services </em>window, you will see the response message that we put in.<br><br><img decoding="async" loading="lazy" width="624" height="147" src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXceMBLb9PaWs9fcHiWZlvaPrjP-4I1EgzTlSMhBaz6iLhpcj59PVvPR3KdD34UYVyxXZZHtg6bVUERP3P9jSneVFHKt3-dtjJL18bezSLMFn5fw5JavFmtzFKmxD534m0SPH5b-nNTBcu4OuFi_v8zaK7rg?key=vdKmDp43h4267nMJJr3DrQ"><br><br>The response JSON file is also saved for future inspection.</p>
+
+
+
+<h3 class="wp-block-heading"><strong>5. Request with query parameters</strong></h3>
+
+
+
+<p>Next, we would like to let users make predictions by providing <a href="https://fastapi.tiangolo.com/tutorial/query-params/" target="_blank" rel="noopener">query parameters</a> in the URL. Let’s add the code below after the `<code>root</code>` function.</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="python" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">@app.get("/predict/")
+async def predict(bill_length_mm: float = 0.0, flipper_length_mm: float = 0.0):
+    param = {
+                "bill_length_mm": bill_length_mm,
+                "flipper_length_mm": flipper_length_mm
+            }
+    if bill_length_mm &lt;=0.0 or flipper_length_mm &lt;=0.0:
+        return {
+            "parameters": param,
+            "error message": "Invalid input values",
+        }
+    else:
+        result = clf.predict([[bill_length_mm, flipper_length_mm]])
+        return {
+            "parameters": param,
+            "result": le.inverse_transform(result)[0],
+        }</pre>
+
+
+
+<p>Here we set the default value of the `<code>bill_length_mm</code>` and `<code>flipper_length_mm</code>` to be 0 if the user didn’t input a value. We also add a check to see if either of the values is 0 and return an error message instead of trying to predict which penguin the input refers to.<br><br>If the inputs are not 0, we will use the model to make a prediction and use the encoder to do an inverse transformation to get the label of the predicted target, i.e. the name of the penguin species.<br><br>This is not the only way you can verify inputs. You can also consider using <a href="https://docs.pydantic.dev/latest/" target="_blank" rel="noopener">Pydantic</a> for input verification.</p>
+
+
+
+<p>If you are using the same version of FastAPI as stated in `<code>requirements.txt</code>`, FastAPI automatically refreshes the service and applies changes on save. Now put in a new URL in `<code>test_main.http</code>` to test (separated from the URL before with ###):</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="python" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">###
+
+GET http://127.0.0.1:8000/predict/?bill_length_mm=40.3&amp;flipper_length_mm=195
+Accept: application/json</pre>
+
+
+
+<p>Press the arrow button (<img decoding="async" loading="lazy" width="16" height="16" src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXc0LiYi_rXCHDApg8w6BegZcjsWLgehi6PBIrRpJ4zPftksMIzCfs47_pI-vZrweWVcIiRJdUpabGzit3V0CRAG5ie5y-rbViIhChPVFFhFrxiyuCjTD3NGx7RqH-U2od_7ZZHFX2EoW4AM4Ubt2J3qBYvd?key=vdKmDp43h4267nMJJr3DrQ">) next to our new URL and see the output.<br><br><img decoding="async" loading="lazy" width="624" height="188" src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXeYkMnT_haEQMxSRk_h4PkmwJAlZR2IVvMMOBx7UvTaNWQtN8wq-RapQj3XOXDvtsVYZFjIH7byKvZBU-eDnmAfaO40Va7GzK64aROh88YC71llKuUJKmzT_O44bwjjIB3uGkAuUBSDbwzAVu0VUEEJ9ob0?key=vdKmDp43h4267nMJJr3DrQ"><br><br>Next you can try a URL with one or both of the parameters removed to see the error message:</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="python" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">###
+
+GET http://127.0.0.1:8000/predict/?bill_length_mm=40.3
+Accept: application/json</pre>
+
+
+
+<p><br><img decoding="async" loading="lazy" width="624" height="215" src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXdjD96fac_PpLDGlSQ87cC72oVVDuPprpQ-86ptWUYiprblyLTxAYrxY0cq22N90p0Foohp4hQNFsznzl701MHnuabW4SHpoVSbHWjCTfKtZCRvwPY7tK1fWoutWSYnYpzCaUkpaO5Gd4dbSP2DwtvrIl4I?key=vdKmDp43h4267nMJJr3DrQ"></p>
+
+
+
+<h3 class="wp-block-heading" id="setup"><strong>6. Set up a machine learning model with lifespan events</strong></h3>
+
+
+
+<p>Last, let’s look at how we can set up our model with <a href="https://fastapi.tiangolo.com/advanced/events/" target="_blank" rel="noopener">FastAPI lifespan events</a>. The advantage of doing that is we can make sure no request will be accepted while the model is still being set up and the memory used will be cleaned up afterward. To do that, we will use an `<a href="https://docs.python.org/3/library/contextlib.html#contextlib.asynccontextmanager" target="_blank" rel="noopener">asynccontextmanager</a>`. Before `<code>app = FastAPI()</code>` we will add:</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="python" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">from contextlib import asynccontextmanager
+
+ml_models = {}
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    # Set up the ML model here
+    
+    yield
+    # Clean up the models and release resources
+
+
+    ml_models.clear()</pre>
+
+
+
+<p>Now we will move the import of pandas and scikit-learn to be alongside the other imports. We will also move our setup code inside the `<code>lifespan</code>` function, setting the machine learning model and <em>LabelEncoder</em> inside `<code>ml_models</code>` like this:</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="python" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">from fastapi import FastAPI
+from contextlib import asynccontextmanager
+
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn import preprocessing
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import StandardScaler
+
+ml_models = {}
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    # Set up the ML model here
+
+    data = pd.read_csv('penguins.csv')
+    data = data.dropna()
+
+    le = preprocessing.LabelEncoder()
+    X = data[["bill_length_mm", "flipper_length_mm"]]
+    le.fit(data["species"])
+    y = le.transform(data["species"])
+    X_train, X_test, y_train, y_test = train_test_split(X, y, stratify=y, random_state=0)
+    clf = Pipeline(
+        steps=[("scaler", StandardScaler()), ("knn", KNeighborsClassifier(n_neighbors=11))]
+    )
+    clf.set_params().fit(X_train, y_train)
+
+    ml_models["clf"] = clf
+    ml_models["le"] = le
+
+    yield
+    # Clean up the models and release resources
+
+    ml_models.clear()</pre>
+
+
+
+<p>After that we will add the `<code>lifespan=lifespan</code>` parameter in `<code>app = FastAPI()</code>`:</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="python" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">app = FastAPI(lifespan=lifespan)</pre>
+
+
+
+<p>Now save and test again. Everything should work and we should see the same result as before.</p>
+
+
+
+<h3 class="wp-block-heading">Afterthought: When to train the model?</h3>
+
+
+
+<p>From our example, you may wonder when the model is trained. Since `<code>clf</code>` is trained at the beginning, i.e. when the service is launched, you may wonder why we do not train the model every time someone makes a prediction.</p>
+
+
+
+<p>We do not want the model to be trained every time someone makes a call, because it costs way more resources to re-train everything. Additionally, it may cause race conditions since our FastAPI application is working concurrently. This is especially the case if we use live data that changes all the time.</p>
+
+
+
+<p>Technically, we can set up an API to collect data and re-train the model (which we will demonstrate in the next example). Other options would be to schedule a re-train at a certain time when a certain amount of new data has been collected or to let a super user upload new data and trigger the re-training.</p>
+
+
+
+<p>So far, we are aiming to build a prototype that runs locally. <a href="https://fastapi.tiangolo.com/deployment/" target="_blank" rel="noopener">Check out this article on deploying a FastAPI project</a> on a cloud service for more information.</p>
+
+
+
+<h4 class="wp-block-heading">What is concurrency?</h4>
+
+
+
+<p>To put it simply, concurrency is like when you are cooking in the kitchen, and while waiting for the water to boil, you go ahead and chop the vegetables. Since, in the web service world, the server is talking to many terminals, and the communication between the server and the terminals is slower than most internal applications, so the server will not talk to and serve the terminals one by one. Instead, it will talk to and serve many of them at the same time while fulfilling their requests. You may want to check out <a href="https://fastapi.tiangolo.com/async/" target="_blank" rel="noopener">this explanation</a> in the FastAPI documentation.</p>
+
+
+
+<p>In Python, this is achieved by using async code. In our FastAPI code, the use of `<code>async def</code>` instead of `<code>def</code>` is obvious evidence that FastAPI is working concurrently. There are other keywords used in Python async code, like `<code>await</code>` and `<code>asyncio.get_event_loop</code>`, but we won’t be able to cover them in this blog post.&nbsp;</p>
+
+
+
+<h2 class="wp-block-heading">How to use FastAPI for an image classification project</h2>
+
+
+
+<p>To discover more FastAPI functionality, we will add an image classification model based on the <a href="https://keras.io/examples/vision/mnist_convnet/" target="_blank" rel="noopener">MNIST example</a> in Keras to our application as well (we are using the TensorFlow backend). If you installed the `<code>requirements.txt</code>` provided, you should have Keras and Pillow installed for image processing and building a <a href="https://en.wikipedia.org/wiki/Convolutional_neural_network" target="_blank" rel="noopener">convolutional neural network (CNN)</a>.</p>
+
+
+
+<h3 class="wp-block-heading">1. <strong>Refactoring</strong></h3>
+
+
+
+<p>Before we start, let’s refactor our code. To make the code more organized, we will put the model setup for the penguins prediction in a function:</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="python" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">def penguins_pipeline():
+    data = pd.read_csv('penguins.csv')
+    data = data.dropna()
+
+    le = preprocessing.LabelEncoder()
+    X = data[["bill_length_mm", "flipper_length_mm"]]
+    le.fit(data["species"])
+    y = le.transform(data["species"])
+    X_train, X_test, y_train, y_test = train_test_split(X, y, stratify=y, random_state=0)
+    clf = Pipeline(
+        steps=[("scaler", StandardScaler()), ("knn", KNeighborsClassifier(n_neighbors=11))]
+    )
+    clf.set_params().fit(X_train, y_train)
+
+    return clf, le</pre>
+
+
+
+<p>Then we rewrite the lifespan function. With <a href="https://www.jetbrains.com/help/pycharm/full-line-code-completion.html" target="_blank" rel="noopener">full-line code completion</a> in PyCharm, it is very easy:</p>
+
+
+
+<figure class="wp-block-image"><img decoding="async" loading="lazy" width="852" height="550" src="https://blog.jetbrains.com/wp-content/uploads/2024/09/image-2.gif" alt="" class="wp-image-511837"/></figure>
+
+
+
+<h3 class="wp-block-heading">2. <strong>Set up a CNN model for MNIST prediction</strong></h3>
+
+
+
+<p>In similar fashion as the penguin prediction model, we create a function for <a href="https://en.wikipedia.org/wiki/MNIST_database#:~:text=The%20MNIST%20database%20(Modified%20National,the%20field%20of%20machine%20learning." target="_blank" rel="noopener">MNIST</a> prediction (and we will store the meta parameters globally):</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="python" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group=""># MNIST model meta parameters
+num_classes = 10
+input_shape = (28, 28, 1)
+batch_size = 128
+epochs = 15
+
+def mnist_pipeline():
+    # Load the data and split it between train and test sets
+    (x_train, y_train), _ = keras.datasets.mnist.load_data()
+
+    # Scale images to the [0, 1] range
+    x_train = x_train.astype("float32") / 255
+
+    # Make sure images have shape (28, 28, 1)
+    x_train = np.expand_dims(x_train, -1)
+
+    # convert class vectors to binary class matrices
+    y_train = keras.utils.to_categorical(y_train, num_classes)
+
+    model = keras.Sequential(
+        [
+            keras.Input(shape=input_shape),
+            layers.Conv2D(32, kernel_size=(3, 3), activation="relu"),
+            layers.MaxPooling2D(pool_size=(2, 2)),
+            layers.Conv2D(64, kernel_size=(3, 3), activation="relu"),
+            layers.MaxPooling2D(pool_size=(2, 2)),
+            layers.Flatten(),
+            layers.Dropout(0.5),
+            layers.Dense(num_classes, activation="softmax"),
+        ]
+    )
+
+    model.compile(loss="categorical_crossentropy", optimizer="adam", metrics=["accuracy"])
+
+    model.fit(x_train, y_train, batch_size=batch_size, epochs=epochs, validation_split=0.1)
+
+    return model</pre>
+
+
+
+<p>Then add the model setup in the lifespan function:</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="python" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">ml_models["cnn"] = mnist_pipeline()</pre>
+
+
+
+<p>Note that since this is added, every time you make changes to `<code>main.py</code>` and save, the model will be trained again. It can take a bit of time. So in development you may want to use a dummy model that requires no training time at all or a pre-trained model instead. After training, the CNN model will be ready to go.</p>
+
+
+
+<h3 class="wp-block-heading">3. <strong>Set up a <code>POST</code> endpoint for uploading an image file for prediction</strong></h3>
+
+
+
+<p>To set up an endpoint that takes an upload file, we have to use <a href="https://fastapi.tiangolo.com/tutorial/request-files/#file-parameters-with-uploadfile" target="_blank" rel="noopener">UploadFile in FastAPI</a>:</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="python" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">@app.post("/predict-image/")
+async def predicct_upload_file(file: UploadFile):
+    img = await file.read()
+    
+    # process image for prediction
+    img = Image.open(BytesIO(img)).convert('L')
+    img = np.array(img).astype("float32") / 255
+    img = np.expand_dims(img, (0, -1))
+    
+    # predict the result
+    result = ml_models["cnn"].predict(img).argmax(axis=-1)[0]
+    return {"filename": file.filename,
+            "result": str(result)}</pre>
+
+
+
+<p>Please note that this is a <code>POST</code> endpoint (so far we have only set up <code>GET</code> endpoints).</p>
+
+
+
+<p>Don’t forget to import `<code>UploadFile</code>` from `<code>fastapi</code>`:</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="python" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">from fastapi import FastAPI, UploadFile</pre>
+
+
+
+<p>And `<code>Image</code>` from Pillow. We are also using `<code>BytesIO</code>` from the `<code>io</code>` module:</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="python" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">from PIL import Image
+from io import BytesIO</pre>
+
+
+
+<p>To test this using the PyCharm HTTP Client with a <a href="https://github.com/Cheukting/FastAPI-ml-demo/blob/main/test_img0.png" target="_blank" rel="noopener">test image file</a>, we will make use of the `<code>multipart/form-data</code>` encoding. You can check out the <a href="https://www.jetbrains.com/help/pycharm/exploring-http-syntax.html#use-multipart-form-data" target="_blank" rel="noopener">HTTP request syntax here</a>. This is what you will put in the `<code>test_in.http</code>` file:</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="python" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">###
+
+POST http://127.0.0.1:8000/predict-image/ HTTP/1.1
+Content-Type: multipart/form-data; boundary=boundary
+
+--boundary
+Content-Disposition: form-data; name="file"; filename="test_img0.png"
+
+&lt; ./test_img0.png
+
+--boundary–</pre>
+
+
+
+<h3 class="wp-block-heading">4. <strong>Add an API to collect data and trigger retraining</strong></h3>
+
+
+
+<p>Now, here comes the retraining. We set up a <code>POST</code> endpoint like above to accept a zip file which contains training images and labels. The zip file will then be processed and the training data will be prepared. After that we will fit the CNN model again:</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="python" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">@app.post("/upload-images/")
+async def retrain_upload_file(file: UploadFile):
+
+    img_files = []
+    labels_file = None
+    train_img = None
+
+    with ZipFile(BytesIO(await file.read()), 'r') as zfile:
+        for fname in zfile.namelist():
+            if fname[-4:] == '.txt' and fname[:2] != '__':
+                labels_file = fname
+            elif fname[-4:] == '.png':
+                img_files.append(fname)
+
+        if len(img_files) == 0:
+            return {"error": "No training images (png files) found."}
+        else:
+            for fname in sorted(img_files):
+                with zfile.open(fname) as img_file:
+                    img = img_file.read()
+
+                    # process image
+                    img = Image.open(BytesIO(img)).convert('L')
+                    img = np.array(img).astype("float32") / 255
+                    img = np.expand_dims(img, (0, -1))
+
+                    if train_img is None:
+                        train_img = img
+                    else:
+                        train_img = np.vstack((train_img, img))
+
+        if labels_file is None:
+            return {"error": "No training labels file (txt file) found."}
+        else:
+            with zfile.open(labels_file) as labels:
+                labels_data = labels.read()
+                labels_data = labels_data.decode("utf-8").split()
+                labels_data = np.array(labels_data).astype("int")
+                labels_data = keras.utils.to_categorical(labels_data, num_classes)
+
+    # retrain model
+    ml_models["cnn"].fit(train_img, labels_data, batch_size=batch_size, epochs=epochs, validation_split=0.1)
+
+    return {"message": "Model trained successfully."}</pre>
+
+
+
+<p>Remember to import `<code>ZipFile</code>`:</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="python" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">from zipfile import ZipFile</pre>
+
+
+
+<p>If we now try the endpoint with this <a href="https://github.com/Cheukting/FastAPI-ml-demo/blob/main/retrain_img.zip" target="_blank" rel="noopener">zip file of 1000 retraining images and labels, </a>you will see that it takes a moment for the response to come, as the training is taking a while:</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="generic" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">POST http://127.0.0.1:8000/upload-images/ HTTP/1.1
+Content-Type: multipart/form-data; boundary=boundary
+
+--boundary
+Content-Disposition: form-data; name="file"; filename="training_data.zip"
+
+&lt; ./retrain_img.zip
+
+--boundary--</pre>
+
+
+
+<p>Imagine the zip files contain more training data or you’re retraining a more complicated model. The user would then have to wait for a long time and it would seem like things are not working for them.</p>
+
+
+
+<h3 class="wp-block-heading">5. <strong>Retrain the model with <code>BackgroundTasks</code></strong></h3>
+
+
+
+<p>A better way to handle retraining is, after receiving the training data, we process it and check if the data is in the right format, then give a response saying that the retraining has restarted and train the model in `<a href="https://fastapi.tiangolo.com/tutorial/background-tasks/" target="_blank" rel="noopener">BackgroundTasks</a>`. Here is how to do it. First, we will add `<code>BackgroundTasks</code>` to our `upload-images` endpoint:</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="python" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">@app.post("/upload-image/")
+async def retrain_upload_file(file: UploadFile, background_tasks: BackgroundTasks):
+	...</pre>
+
+
+
+<p>Remember to import it from `<code>fastapi</code>`:</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="python" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">from fastapi import FastAPI, UploadFile, BackgroundTasks</pre>
+
+
+
+<p>Then, we will put the fitting of the model into the `<code>background_tasks</code>`:</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="python" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group=""># retrain model
+    background_tasks.add_task(
+        ml_models["cnn"].fit,
+        train_img,
+        labels_data,
+        batch_size=batch_size,
+        epochs=epochs,
+        validation_split=0.1
+    )</pre>
+
+
+
+<p>Also, we will update the message in the response:</p>
+
+
+
+<pre class="EnlighterJSRAW" data-enlighter-language="python" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">return {"message": "Data received successfully, model training has started."}</pre>
+
+
+
+<p>Now test the endpoint again. You will see that the response has arrived much quicker, and if you look at the <em>Run </em>window, you’ll see that the training is running after the response has arrived.<br><br>At this point, more functionality can be added, for example, an option to notify the user later (e.g. via email) when the training is finished or track the training progress in a dashboard when a full application is built.</p>
+
+
+
+<h2 class="wp-block-heading">Develop ML FastAPI applications with PyCharm</h2>
+
+
+
+<p>FastAPI provides an easy way to convert your data science project into a working application in several easy steps. It is perfect for data science teams that want to provide an application prototype for their machine learning model which can be further developed into a professional web application if needed.&nbsp;</p>
+
+
+
+<p>PyCharm Professional is the Python IDE that allows you to develop FastAPI applications more easily with a preconfigured project for FastAPI, coding assistance, tailored run/debug configurations, and the <em>Endpoints </em>tool window for managing API endpoints efficiently.</p>
+
+
+    <div class="buttons">
+        <div class="buttons__row">
+                                                <a href="https://www.jetbrains.com/pycharm/data-science" class="btn" target="" rel="noopener">Get a free trial of PyCharm Professional</a>
+                                                    </div>
+    </div>
+
+
+
+
+
+
+
+<p>In this blog post, we showed the process of providing a simple API for a pre-trained prediction model. To learn more about FastAPI, I would suggest checking out the <a href="https://fastapi.tiangolo.com/" target="_blank" rel="noopener">official FastAPI documentation</a>. If you&#8217;re choosing between different frameworks, explore how <a href="https://blog.jetbrains.com/pycharm/2023/12/django-vs-fastapi-which-is-the-best-python-web-framework/">FastAPI differs from Django</a>.</p>
+
+
+
+<h2 class="wp-block-heading" id="author"><strong>About the author</strong></h2>
+
+
+    <div class="about-author ">
+        <div class="about-author__box">
+            <div class="row">
+                                                            <div class="about-author__box-img">
+                            <img decoding="async" src="https://blog.jetbrains.com/wp-content/uploads/2024/06/IMG_1037-1.jpg" alt="" loading="lazy">
+                        </div>
+                                        <div class="about-author__box-text">
+                                                    <h4>Cheuk Ting Ho</h4>
+                                                <p><span style="font-weight: 400;">Cheuk has been a Data Scientist at various companies – a job that demands high numerical and programming skills, especially in Python. Following her passion for the tech community, Cheuk has been a Developer Advocate for three years. She also contributes to multiple open-source libraries like Hypothesis, Pytest, pandas, Polars, PyO3, Jupyter Notebook, and Django. Cheuk is currently a consultant and trainer at CMD Limes.</span></p>
+                    </div>
+                            </div>
+        </div>
+    </div>
+                    <div class="content__row">
+                                                <ul class="social">
+    <li><span>Share</span></li>
+    <li><a target="_blank" href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fblog.jetbrains.com%2Fpycharm%2F2024%2F09%2Fhow-to-use-fastapi-for-machine-learning%2F?facebook_en_US" rel="noopener noreferrer"><i class="icon-facebook"><span class="sr-only">Facebook</span></i></a></li>
+    <li><a target="_blank" href="https://twitter.com/intent/tweet?source=https%3A%2F%2Fblog.jetbrains.com%2Fpycharm%2F2024%2F09%2Fhow-to-use-fastapi-for-machine-learning%2F&text=https%3A%2F%2Fblog.jetbrains.com%2Fpycharm%2F2024%2F09%2Fhow-to-use-fastapi-for-machine-learning%2F&via=pycharm?twitter_en_US" rel="noopener noreferrer"><span class="sr-only">Twitter</span><i class="icon-twitter"></i></a></li>
+    <li><a target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fblog.jetbrains.com%2Fpycharm%2F2024%2F09%2Fhow-to-use-fastapi-for-machine-learning%2F?linkedin_en_US" rel="noopener noreferrer"><i class="icon-linkedin"><span class="sr-only">Linkedin</span></i></a></li>
+    </ul>
+                    </div>
+                    <div class="content__pagination"><a class="content__pagination-prev" href="https://blog.jetbrains.com/pycharm/2024/09/7-ways-to-use-jupyter-notebooks-inside-pycharm/"><i class="icon-arrow-left"><span class="sr-only">Prev post</span></i> 7 Ways To Use Jupyter Notebooks inside PyCharm</a><a class="content__pagination-next" href="https://blog.jetbrains.com/pycharm/2024/09/pycharm-2024-2-2/">What’s New in PyCharm 2024.2.2!  <i class="icon-arrow-right"><span class="sr-only">Next post</span></i></a></div>                                            <div class="banner">
+                <a href="https://www.jetbrains.com/pycharm/download/?utm_source=blog&utm_medium=banner&utm_campaign=mobile-apps#apps"><img src="https://blog.jetbrains.com/wp-content/uploads/2023/12/PyCharm_Python-IDE-for-data-and-web_970x250-2x.png"></a>            </div>
+                                                                                                                                <div class="content__form">
+                                <div class="form-subscribe">
+                                                                            <h4>Subscribe to PyCharm Blog updates</h4>
+                                                                                                            <form action="#" class="form-subscribe__form js-form-subscribe__form">
+                                        <input type="hidden" name="formid" value="consent/2554">
+                                        <input type="hidden" class="fieldName1" name="pyCharmBlog" value=true>
+                                        <input type="hidden" name="locale" value="en_US">
+                                                                                                                        <input type="hidden" name="privacyConsentType[]" value="mkt.general.jb-intention">
+                                                                                                                        <input type="hidden" name="subscriptionTopicWelcomeEmail" value="PyCharm Blog">
+
+                                        <div class="form-subscribe__group-input">
+                                            <label for="email" class="sr-only">Subscribe form</label>
+                                            <input  id="email" type="email" placeholder="Your email" name="email">
+                                        </div>
+                                        <div class="form-subscribe__group-checkbox">
+                                            <input type="hidden" id="checkbox" name="privacyConsent" value="true">
+                                            <label for="checkbox">By submitting this form, I agree to the JetBrains <a href="https://www.jetbrains.com/company/privacy.html" class="tooltip-opener">Privacy Policy <i class="icon-notification"><span class="sr-only">Notification icon</span></i></a></label>
+                                            <div class="tooltip">
+                                                <p>By submitting this form, I agree that JetBrains s.r.o. ("JetBrains") may use my name, email address, and location data to send me newsletters, including commercial communications, and to process my personal data for this purpose. I agree that JetBrains may process said data using <a href="https://www.jetbrains.com/legal/privacy/third-parties.html">third-party</a> services for this purpose in accordance with the <a href="https://www.jetbrains.com/company/privacy.html" target="_blank">JetBrains Privacy Policy</a>. I understand that I can revoke this consent at any time in <a href="https://account.jetbrains.com/profile-details/privacy" target="_blank">my profile</a>. In addition, an unsubscribe link is included in each email.</p>
+                                            </div>
+                                        </div>
+                                        <button type="submit">Submit</button>
+                                    </form>
+                                </div>
+                                <div class="form_massage" style="display: none"><p>Thanks, we've got you!</p></div>
+                                <div class="content__form-img">
+                                                                            <img src="https://blog.jetbrains.com/wp-content/themes/jetbrains/assets/img/img-form.svg" alt="image description">
+                                                                    </div>
+                            </div>
+                                                            </div>
+                <a href="#" class="toc-opener"></a>
+                <div class="js-toc"></div>
+                <div class="container comments-container">
+                    
+<div class="content">
+    <div id="remark42"></div>
+</div>
+                </div>
+            </section>
+                    <div class="section light-gray-bg">
+            <div class="container">
+                <div class="section__head">
+                    <h2>Discover more</h2>
+                </div>
+                <div class="row">
+                                                                                                                                                            <div class="col" post_id="516844">
+    <a class="card img-visible" href="https://blog.jetbrains.com/pycharm/2024/10/how-to-get-data/">
+                    <img width="2560" height="1440" src="https://blog.jetbrains.com/wp-content/uploads/2024/10/pc-featured_blog_1280x720_en-2.png" class="attachment-full size-full wp-post-image" alt="Where to get data for your data science projects" decoding="async" loading="lazy" sizes="(max-width: 768px) 768px , 525px" />                <div class="card__header">
+            <h4>Where To Get Data for Your Data Science Projects</h4>        </div>
+        <div class="card__body">
+                        <p>Whether you’re starting a new project or expanding an existing one, as a data scientist, you’re always on the lookout for new material to explore. Knowing where to get data for data science projects can be challenging, and finding “good data” can be even more difficult. In this article, we’ll look at what makes “good data”, what format that data might be in, where to find it, and what the next steps are. </p>
+        </div>
+        <div class="card__footer">
+            <div class="author">
+                                                    <img class="avatar" src="https://secure.gravatar.com/avatar/193dd3accbb2e467f1b46a7f38ea929d?s=50&r=g" width="50" height="50" alt="Helen Scott" loading="lazy">
+                                                    <div class="author__info">
+                    <span>Helen Scott</span>
+                    <time class="publish-date" data-year="2024" data-month="10" data-day="09" data-hours="10" data-minutes="00" datetime="2024-10-09"></time>
+                </div>
+            </div>
+            <span class="remark42__counter icon-comments" data-url="https://blog.jetbrains.com/pycharm/2024/10/how-to-get-data/"></span>
+        </div>
+    </a>
+</div>
+                                                                                                                                                                                                                <div class="col" post_id="514000">
+    <a class="card img-visible" href="https://blog.jetbrains.com/pycharm/2024/09/django-project-ideas/">
+                    <img width="2560" height="1440" src="https://blog.jetbrains.com/wp-content/uploads/2024/09/pc-featured_blog_1280x720_en-5.png" class="attachment-full size-full wp-post-image" alt="Django Project Ideas" decoding="async" loading="lazy" sizes="(max-width: 768px) 768px , 525px" />                <div class="card__header">
+            <h4>Django Project Ideas</h4>        </div>
+        <div class="card__body">
+                        <p>Looking to experiment or build your portfolio? Discover creative Django project ideas for all skill levels, from beginner apps to advanced full-stack projects.</p>
+        </div>
+        <div class="card__footer">
+            <div class="author">
+                                                    <img class="avatar" src="https://blog.jetbrains.com/wp-content/uploads/2021/03/evgenia-50x50.jpg" width="50" height="50" alt="Evgenia Verbina" loading="lazy">
+                                                    <div class="author__info">
+                    <span>Evgenia Verbina</span>
+                    <time class="publish-date" data-year="2024" data-month="09" data-day="26" data-hours="10" data-minutes="04" datetime="2024-09-26"></time>
+                </div>
+            </div>
+            <span class="remark42__counter icon-comments" data-url="https://blog.jetbrains.com/pycharm/2024/09/django-project-ideas/"></span>
+        </div>
+    </a>
+</div>
+                                                                                                                                                                                                                <div class="col" post_id="512812">
+    <a class="card img-visible" href="https://blog.jetbrains.com/pycharm/2024/09/pycharm-vs-jupyter-notebook/">
+                    <img width="2560" height="1440" src="https://blog.jetbrains.com/wp-content/uploads/2024/09/pc-featured_blog_1280x720_en-4.png" class="attachment-full size-full wp-post-image" alt="PyCharm vs. Jupyter Notebook" decoding="async" loading="lazy" sizes="(max-width: 768px) 768px , 525px" />                <div class="card__header">
+            <h4>PyCharm vs. Jupyter Notebook</h4>        </div>
+        <div class="card__body">
+                        <p>Read this article to learn the difference between vanilla Jupyter notebooks and Jupyter Notebook support in PyCharm, a professional data science IDE.</p>
+        </div>
+        <div class="card__footer">
+            <div class="author">
+                                                    <img class="avatar" src="https://blog.jetbrains.com/wp-content/uploads/2023/05/IMG_1977-e1683538789993-50x50.jpeg" width="50" height="50" alt="Stanislav Garkusha" loading="lazy">
+                                                    <div class="author__info">
+                    <span>Stanislav Garkusha</span>
+                    <time class="publish-date" data-year="2024" data-month="09" data-day="24" data-hours="13" data-minutes="52" datetime="2024-09-24"></time>
+                </div>
+            </div>
+            <span class="remark42__counter icon-comments" data-url="https://blog.jetbrains.com/pycharm/2024/09/pycharm-vs-jupyter-notebook/"></span>
+        </div>
+    </a>
+</div>
+                                                                                                                                                                                                                <div class="col" post_id="504467">
+    <a class="card img-visible" href="https://blog.jetbrains.com/pycharm/2024/09/7-ways-to-use-jupyter-notebooks-inside-pycharm/">
+                    <img width="2560" height="1440" src="https://blog.jetbrains.com/wp-content/uploads/2024/09/pc-featured_blog_1280x720_en-2.png" class="attachment-full size-full wp-post-image" alt="7 Ways to Use Jupyter Notebooks Inside PyCharm" decoding="async" loading="lazy" sizes="(max-width: 768px) 768px , 525px" />                <div class="card__header">
+            <h4>7 Ways To Use Jupyter Notebooks inside PyCharm</h4>        </div>
+        <div class="card__body">
+                        <p>Discover seven ways you can use Jupyter notebooks in PyCharm to explore and work with your data more quickly and effectively.</p>
+        </div>
+        <div class="card__footer">
+            <div class="author">
+                                                    <img class="avatar" src="https://secure.gravatar.com/avatar/193dd3accbb2e467f1b46a7f38ea929d?s=50&r=g" width="50" height="50" alt="Helen Scott" loading="lazy">
+                                                    <div class="author__info">
+                    <span>Helen Scott</span>
+                    <time class="publish-date" data-year="2024" data-month="09" data-day="16" data-hours="11" data-minutes="48" datetime="2024-09-16"></time>
+                </div>
+            </div>
+            <span class="remark42__counter icon-comments" data-url="https://blog.jetbrains.com/pycharm/2024/09/7-ways-to-use-jupyter-notebooks-inside-pycharm/"></span>
+        </div>
+    </a>
+</div>
+                                                                                        </div>
+            </div>
+        </div>
+                </main>
+<footer class="footer" id="footer">
+    <div class="container">
+        <div class="footer__top">
+            <ul class="footer__nav"><li id="menu-item-118361" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-118361"><a href="https://www.jetbrains.com/privacy-security/">Privacy &#038; Security</a></li>
+<li id="menu-item-118362" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-118362"><a href="https://www.jetbrains.com/company/useterms.html">Terms of Use</a></li>
+<li id="menu-item-118363" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-118363"><a href="https://www.jetbrains.com/legal/">Legal</a></li>
+<li id="menu-item-118364" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-118364"><a href="https://www.jetbrains.com/genuine-tools/">Genuine tools</a></li>
+</ul>                    </div>
+        <div class="footer__row">
+                                        <ul class="social">
+                                                                                                    <li>
+                                <a href="https://twitter.com/jetbrains"><i class="icon-twitter"><span class="sr-only">Twitter</span></i></a>
+                            </li>
+                                                                                                                            <li>
+                                <a href="https://www.facebook.com/JetBrains"><i class="icon-facebook"><span class="sr-only">Facebook</span></i></a>
+                            </li>
+                                                                                                                            <li>
+                                <a href="https://www.linkedin.com/company/jetbrains"><i class="icon-linkedin"><span class="sr-only">Linkedin</span></i></a>
+                            </li>
+                                                                                                                            <li>
+                                <a href="https://www.instagram.com/jetbrains/"><i class="icon-instagram"><span class="sr-only">Instagram</span></i></a>
+                            </li>
+                                                                                                                            <li>
+                                <a href="https://www.youtube.com/user/JetBrainsTV"><i class="icon-youtube"><span class="sr-only">Youtube</span></i></a>
+                            </li>
+                                                                                                                            <li>
+                                <a href="https://blog.jetbrains.com/feed/"><i class="icon-rss-feed"><span class="sr-only">RSS</span></i></a>
+                            </li>
+                                                                                                                            <li>
+                                <a href="https://www.tiktok.com/@jetbrains?lang=en"><i class="icon-tiktok"><span class="sr-only">Tiktok</span></i></a>
+                            </li>
+                                                            </ul>
+                                        <a href="https://jb.gg/jetbrainsgearblog" class="footer__merch-link" ><i class="icon-merchandise"><span class="sr-only">Merchandise store icon</span></i>Merchandise store</a>
+                    </div>
+                    <span class="copyright">Copyright © 2000 JetBrains s.r.o.</span>
+            </div>
+</footer>
+<span class="overlay"></span>
+</div>
+
+
+<script>
+                var remark_config = {
+                    host: "https://comments.blog.jetbrains.com",
+                    site_id: "remark",
+                    components: ["counter","embed"],
+                    max_shown_comments: 150,
+                    locale: "en"
+                    };
+                                            </script><script>!function(e,n){for(var o=0;o<e.length;o++){var r=n.createElement("script"),c=".js",d=n.head||n.body;"noModule"in r?(r.type="module",c=".mjs"):r.async=!0,r.defer=!0,r.src=remark_config.host+"/web/"+e[o]+c,d.appendChild(r)}}(remark_config.components||["embed"],document);</script><script type='text/javascript' src='https://blog.jetbrains.com/wp-content/plugins/accordion-blocks/js/accordion-blocks.min.js?ver=1.5.0' id='pb-accordion-blocks-frontend-script-js'></script>
+<script type='module' src='https://blog.jetbrains.com/wp-content/plugins/instant-page/instantpage.js?ver=5.6.1' id='instantpage-js'></script>
+<script type='text/javascript' src='https://blog.jetbrains.com/wp-content/plugins/map-shortcode//map.js?ver=1d837425d173a9a11b4b5bc34ccb3401' id='gmaps-js'></script>
+<script type='text/javascript' id='ppress-frontend-script-js-extra'>
+/* <![CDATA[ */
+var pp_ajax_form = {"ajaxurl":"\/ajax-admin\/admin-ajax.php","confirm_delete":"Are you sure?","deleting_text":"Deleting...","deleting_error":"An error occurred. Please try again.","nonce":"5f0979331e","disable_ajax_form":"false","is_checkout":"0","is_checkout_tax_enabled":"0"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://blog.jetbrains.com/wp-content/plugins/wp-user-avatar/assets/js/frontend.min.js?ver=4.15.4' id='ppress-frontend-script-js'></script>
+<script type='text/javascript' src='https://blog.jetbrains.com/wp-content/plugins/enlighter/cache/enlighterjs.min.js?ver=ZGyDHRSQPMewFUQ' id='enlighterjs-js'></script>
+<script id="enlighterjs-js-after" type="text/javascript">
+!function(e,n){if("undefined"!=typeof EnlighterJS){var o={"selectors":{"block":"pre.EnlighterJSRAW","inline":"code.EnlighterJSRAW"},"options":{"indent":4,"ampersandCleanup":true,"linehover":true,"rawcodeDbclick":false,"textOverflow":"scroll","linenumbers":false,"theme":"wpcustom","language":"generic","retainCssClasses":false,"collapse":false,"toolbarOuter":"","toolbarTop":"{BTN_RAW}{BTN_COPY}{BTN_WINDOW}{BTN_WEBSITE}","toolbarBottom":""}};(e.EnlighterJSINIT=function(){EnlighterJS.init(o.selectors.block,o.selectors.inline,o.options)})()}else{(n&&(n.error||n.log)||function(){})("Error: EnlighterJS resources not loaded yet!")}}(window,console);
+</script>
+<script type='text/javascript' id='app-js-extra'>
+/* <![CDATA[ */
+var loadmore_params = {"ajaxurl":"\/ajax-admin\/admin-ajax.php?wpml_lang=en","post_data":{"post_type":"pycharm"},"current_page":"1","max_page":"0","nonce":"859c935188","form_nonce":"9822326f09"};
+var current_lang = "en-us";
+var nonce = "7769f06520";
+var jetbrains_texts = {"loadmore":{"load_more":"Load more","loading":"Loading..."}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://blog.jetbrains.com/wp-content/themes/jetbrains/assets/dist/app.min.js?ver=2.12.0' id='app-js'></script>
+<script type='text/javascript' src='https://blog.jetbrains.com/wp-content/themes/jetbrains/assets/dist/singlepost.min.js?ver=2.12.0' id='single-post-js'></script>
+<script>
+    if(jQuery('.subscribe-form').length>0){
+        ui.subscribeForm('.subscribe-form');
+    }
+    // if(jQuery('img[data-gif-src]').length>0){
+    //     ui.gifPlayer('img[data-gif-src]');
+    // }
+</script>
+<!-- Build # -->
+</body>
+</html>

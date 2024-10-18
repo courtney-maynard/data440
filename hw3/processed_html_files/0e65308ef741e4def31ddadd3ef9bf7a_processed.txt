@@ -1,0 +1,252 @@
+Toggle Menu
+Home / Tools & Guides / The Best Time to Send Emails in 2024: Day, Hour, and Industry Insights
+By Divya Shakhti
+December 21, 2023
+October 8, 2024
+As we step into 2024, hitting your recipients’ inboxes is more crucial than ever. You must find the best time to send emails and optimize them according to your audience preferences and industry trends.
+Your email send times can vary depending on factors like time zones, office hours, and holidays. And setting a time for every individual recipient can be an overwhelming experience for you. Luckily, we have gathered industry data to help you decide the right time to send your email marketing campaigns .
+Let’s look at the best times to send different types of emails, the best email send times for various industries and general email timing rules.
+Table of Contents
+General Timing Guidelines for Sending Emails
+There is no one-size-fits-all approach to sending your emails at the right time. However, the timing determines your email open rates and conversion rate .
+Follow these guidelines that will help you decide on a time to send emails:
+Know your audience: Understand your audience’s location, their likes, and their past purchase behavior.
+Segment your audience: Use an email segmentation strategy to divide your audiences into groups and tailor your timing strategy to each audience group. Use demographic segmentation , psychographic data , geographic and behavioral segmentation methods for micro-level targeting.
+Consider time zones: If your audiences are spread across different time zones, use their local time to send your email marketing campaigns.
+Avoid peak hours: Stay away from busy hours like Monday mornings or Friday evenings, when people are usually traveling or spending time with family.
+Consider industry trends: Research timing trends in your industry and compare them with your current email sending time. Additionally, follow general email marketing trends to improve relevance and email engagement .
+Timing for different campaigns: Different types of emails have different optimal timings. For example, a transactional email will have a different timing than promotional emails .
+Monitor seasonal changes: Monitor and closely notice any change in your subscribers’ behavior and adjust your email send times accordingly.
+Notice engagement metrics: Pay attention to open rates , click-through rates , and conversion rates.
+Your email send times can vary depending on your email campaign type , industry and business type, and seasonal factors. To make it easier for you, we have divided emails by their types and the best time to send each.
+Types of Email Campaigns
+Best Days to Send
+Best Time to Send
+Email newsletters
+Abandoned cart emails
+Follow-up email in 24 hours
+Immediately after the customer leaves the site ❌
+Re-engagement emails
+Survey and feedback emails
+3 pm – 6 pm6 pm – 10 pm
+Tuesdays 😠
+7-10 days reminder before the event
+On the day of the event
+Drip email campaigns
+B2C – 2-5 times per month
+No more than 5 emails
+Too frequently 👎
+Educational emails
+During the day
+Cold emails
+Cold emailing is generally not recommended ❌
+B2B emails
+9 am – 12 pm
+Nil
+Best day and time to send different types of email marketing campaigns
+The Best Time to Send Marketing Emails
+Marketing emails are broadly categorized into promotional emails or any email that requires some form of selling. Deciding on the timing for your marketing emails is based on your audience type and segmentation.
+For example, if you are an E-commerce company selling officewear , your target audience will likely be office-goers aged between 25-40 years. This set of audiences frequently check their emails, and the best time to send a marketing email will be between 10 am – 1 pm.
+Choosing a time to send marketing emails will vary across businesses, so it’s helpful to know the industry benchmarks and timings for these emails.
+The Difference Between Marketing Emails and Non-marketing Emails
+Marketing emails align with promotional email content , while non-marketing emails are sent to inform and update subscribers. Let’s see the different forms of the above email types:
+Marketing Emails
+Non-marketing Emails
+Marketing emails vs non-marketing emails
+Let’s first look at the types of marketing emails and move to non-marketing emails.
+The Best Time to Send Promotional Emails
+Promotional emails include product information, deals, email coupons , and discounts. The goal of promotional emails is to inform the customer about the products or services and lead them to a purchase.
+Promotional emails are more effective when you send them during the weekdays. Here’s more information to help you determine the best time to send these emails:
+Best Time to Send Promotional Emails
+Day & Time
+These days have lower email volume and higher open rates.
+Morning and early afternoon
+People are more likely to check emails during work breaks.
+Lunch break
+12 pm -1 pm
+This could be a perfect time to send offers and discounts as more people check their emails during lunch breaks.
+Best time to send promotional emails
+Although you may have tempting offers and discounts, avoid sending emails early morning or late at night. This is when most people are away from their phones, and your promotional email will likely be buried under a pile of other emails.
+Best Time to Send Email Newsletters
+Email marketing newsletters help you stay connected with your subscribers by sending them the latest news, product updates, brand changes, and other relevant information. These emails are scheduled beforehand and are a gateway to building lasting customer relationships.
+Newsletter timings and frequency depend on your business type and goals. Some businesses send newsletters every few weeks, while the rest send them twice a week or more. Studies show that the best time to send an email newsletter is between 8 am and  9 am on Thursdays. While 8 am is pretty early in the day, users have reported a 25% increase in open rates during this time.
+The worst time to send your newsletters is Tuesday and Wednesday between 8 am and 10 am. It’s because your competitors are eyeing the same day, and your recipients’ inboxes are likely to be cluttered.
+Eventually, your email newsletter timings will rely on your audience demographics, time zone, location, and preferences. For example, if your audience is Gen-Z, sending newsletters at night wouldn’t interfere with your email campaign metrics .
+The Best Time to Send Abandoned Cart Emails
+Abandoned cart emails are about recovering potential sales — you want to send enough reminders without frustrating your customers.
+Here are recommended times to send abandoned cart emails:
+Reminder email 1: Within 30 minutes after your customer leaves the site
+Reminder email 2: 24 hours after the abandonment
+Reminder email 3: 3-7 days after the initial emails.
+If your customers do not take action despite these emails, it’s better to stop sending them emails altogether. Too many email reminders can lead to lower open and click-through rates. And in worse cases, your customers might unsubscribe from receiving your emails .
+When customers haven’t interacted with your brand for a while, they become inactive. In this case, re-engagement emails help you reconnect with these subscribers. Brands often use compelling win-back messages and exclusive promotions to re-ignite subscribers’ interests.
+It’s good to wait for 30-60 days after a subscriber becomes inactive to send emails. As for the timing, send re-engagement emails during mid-week, ideally between  9 am – 11 am or 1 pm – 3 pm. Be mindful of people tuning out because of receiving too many emails. It’s always better to know the reasons for audience disengagement and fine-tune your timings consequently.
+Best Time to Send Survey and Feedback Emails
+Email surveys help you gather customer insights and improve your products and services. Here’s a guideline on the best time to send survey emails .
+Business Type
+B2C
+Best time to send survey emails
+Note that highly engaged users participate regardless of the day and time of the survey email. The success of your survey depend on recipient’s email response rates . Hence, including a clear subject line and an incentive in these emails will increase the chances of higher response rates.
+When to Send Event and Webinar Emails
+Event invitation emails and webinar emails contain critical information regarding the events. The main purpose of this email type is to build anticipation and drive engagement. Sending webinar and event emails are subject to your brand goals and user interests.
+Ideally, you must send these invites as a teaser one month before the event. The invite for registration usually opens 7-10 days before the actual date. Follow-up with reminder emails 1 day and 1 hour before the event.
+In your emails, include the benefits of participating in these events and provide an incentive where possible. For example, you can give subscribers who couldn’t attend the event free access or download to the webinar.
+Drip Email Campaigns and When to Send Them
+Not enough studies show the best times to send drip email campaigns. However, we can tell you the number of times you should be sending your drip emails .
+Business Type
+Maximum Drip Emails
+No more than 5 drip email sequences
+B2C
+Do not cross over the bi-weekly limit
+Best time to send drip email campaigns
+If you are uncertain about your drip email timings, stick to the normal email marketing campaign timings — Tuesdays and Thursdays between 8 am- 9 am.
+The Best Time to Send Educational Email Campaigns
+Educational emails provide value for subscribers and help you establish authority in your industry. An email series of ongoing learning can help your subscribers stay on top of industry news and trends.
+But, what’s the best time and how often should you send them? It depends on your audience preferences and the nature of your educational content. However, we explore the timings based on assumptions that individuals may spend more time during the work week.
+Day of the Week
+Considerations
+Monday
+10 am – 12 pm
+Most people focus on professional development during the start of the week.
+Wednesday
+9 am – 11 am
+Mid-week motivation and subscribers are likely seeking new information to use at work.
+Friday
+Wrap up the work week with insightful content.
+Best time to send educational emails based on general subscriber behavior
+You can also schedule the educational emails for Sunday evenings, so it maximizes the chances of people opening them on Monday mornings.
+When to Send Seasonal and Holiday Emails?
+Holiday emails are a great way to capitalize on the festive season and leverage urgency and exclusivity. While there are no perfect times to send these emails, here’s a guideline for increasing your ROI during these seasons.
+Holidays
+Average Open Rates
+13%14.7%
+12.3%15.1%
+Black Friday
+12.9%14.2%
+Cyber Monday
+Best time to send holiday emails
+Popular holidays like Christmas saw higher open rates compared to the other holidays. It’s best to send holiday-themed emails a few weeks before the holiday season and one to two days before the actual holiday.
+Now, you might wonder why trigger emails aren’t included in this list. There’s a reason we haven’t, so keep reading!
+Why Trigger Emails Don’t Work With These Timing Strategies?
+Trigger emails are automated email messages that you send to customers after a certain action such as sign-up. Email triggers closely resemble auto-responders but they are not the same.
+Since trigger emails are timely and relevant to subscriber interests, you cannot predict a good time to send them. These emails are automatically triggered upon user action. However, you can use a reliable ESP to automate your trigger campaigns and maximize your reach.
+Campaign Refinery offers a simple editor, smart goal triggers , and evergreen flash sales to make your trigger emails more effective. You can do more with our built-in tools and features, which we tell you further down.
+But first, let’s know the best time to send transactional emails so you can strategize your email campaign timings accordingly.
+The Best Time to Send Transactional Email Campaigns
+Transactional emails are sent in response to a user action such as sign-ups or purchases. For example, an order confirmation after a recipient purchases from your brand.
+Since the recipient fires the automation and is waiting for the information, your transactional emails must be timely. However, not all transactional emails demand an immediate response from the sender.
+For example, order confirmations must be sent immediately upon trigger (after purchase).
+Here are more circumstances that demand immediate delivery of transactional emails:
+Password reset,
+Shipping updates,
+Event registration.
+In few cases, transactional emails do not require you to send an email instantly such as:
+Invoice emails,
+Sending transactional emails promptly will help you build meaningful customer relationships.
+Knowing these differences will help you segregate email campaigns and allot timings respectively.
+Did you know there’s a third type of email campaign that’s not talked about much? Yes, it’s cold emailing!
+Best Time to Send Cold Emails
+Cold emailing has been a hot debate for years now. While a few businesses believe it’s fine to email people without their consent, others think it’s a bad email marketing practice .
+We think the same, too. At Campaign Refinery, we have a stringent policy against cold emailing and immediately terminate accounts that do so. Cold emailing people can have adverse effects on your sender reputation and email deliverability , which are the key factors that determine your email ROI.
+Although we don’t encourage it, we’ll still tell you the best times to send cold emails — send them between 6-9 am PST (9 am -12 pm EST). A few studies suggest that 10 am is more effective to reach people.
+With that, let’s move to the more crucial aspects of emailing — when to send B2B emails to increase open rates?
+Best Time to Send B2B Emails
+B2B emails contain sales messages and business updates for other businesses. Typically, you would send these emails mid-week (Tuesdays, Wednesdays, or Thursdays) between 5-7 am . The sooner you send B2B emails, the better the chances your recipients will open them in the morning. Avoid sending your emails on Mondays and Fridays as people are likely catching up with emails from the weekend.
+You can also set your timing based on experimentation and previous customer data. For example, if you find your emails to perform well during late afternoons, you can schedule them to fit this criteria.
+Best Time to Send B2C Emails
+In a survey, 30.9% of B2C marketers reported their emails worked best between 9 am and 12 pm. However, the timing comes down to customer behavior and business nature. So, you must constantly test and refine the timings as per customer behavior.
+Best Time to Send Emails Across Different Industries (B2B & B2C)
+Only 4% of the emails sent between midnight and early morning are opened by recipients. That means your email send times can impact your sender reputation and other email metrics. To help you navigate this process, we have outlined the best times to send emails, listed for different industries .
+Industry
+Technology
+Travel
+Best time to send emails across industries
+While these are the nominal timings, you must also review the peak shopping days, consumer behavior patterns, ideal engagement timings, and time zones based on your industry and business type.
+As we move toward the best days to send emails, here’s another aspect to consider — business hours. Studies reveal that emails sent during business hours have higher open and click-through rates.
+Best Days and Time to Send Emails
+While you might think weekends are perfect for sending your email newsletter, it’s time to reconsider that thought. Weekends are the worst times to send any type of email since your subscribers are away from their devices.
+Instead, sending them on Tuesdays can be more effective (as pointed out by 27% of email marketers in the U.S.). Here’s more information from the survey:
+Day of the Week
+Engagement Rate
+13%
+Saturday
+Best days to send emails
+Ensure to schedule your emails ahead of time to avoid confusion. You might also want to test your email campaigns to figure out the best times to send your emails according to audience preferences. Let’s show you how.
+Test and Measure Your Email Campaigns to Find the Best Times to Send
+While you can use email metrics to measure your email campaign success , the most prominent factor is your brand goal.
+Your brand goal will tell you which email metric to focus on. For example, if you are sending a product promotion email, you would want to measure the number of click-throughs to understand your audience’s interests.
+Here are common email metrics to measure any type of email campaign:
+Open rate: Open rate shows the number of people who opened your emails against the number of subscribers your emails were delivered to. Provide compelling subject lines, preview text, and preheaders to increase your email open rates.
+Click-through rate: It measures the number of people who click on an image or link within an email you send. Click-through rate is the most important factor in understanding your email content performance.
+Conversions: Conversion rates show when your subscribers take specific actions after reading your emails. For example, purchasing a product through your email link implies a recipient has converted from a lead into a paying customer.
+The best way to know when to send your emails is to test them — send emails at different times and record them. Then, analyze the data to understand what works best for your brand and audience.
+General Trends in Email Timing
+Understanding trends in email timing can help you unlock higher open rates, click-through rates, and conversions. Let’s look at the popular trends that will shape optimal timings for your email campaigns.
+Historical Data Analysis
+A study used regression and classification models to determine the email open rates based on the time sent. It was found that 43% of email opens occur between 6 am to 12 pm. Past midnight, the email open rates decreased, with 90% of emails being ignored by the recipients.
+However, another experiment shows that most subscribers opened emails at 10 – 11 am, 6-7 am, and 6-11 pm. This recipient behavior shows that most emails are opened as soon as they receive them or one hour later. It’s also more effective to segment your audience based on recency, frequency, and monetary value.
+Marketers often turn to past data analysis to define the best times to send emails. The data provides email timing patterns and customer behavior trends.
+Peak Email Engagement Times
+Consistently, the peak email engagement times have been 9 am – 12 pm and 12 pm – 3 pm.
+However, if your brand requires other email send times, use the following:
+Morning: 9 am – 11 am,
+Noon: 1 pm – 2 pm,
+Evening: 5 pm – 6 pm.
+For certain B2C brands, weekends may see more engagement compared to mid-week emails. It depends on your audience segment and when they are the most receptive to emails.
+Time-Zone Considerations
+Your audience’s time zone plays a vital role in determining your email timings. While it’s difficult to schedule emails according to every subscriber’s timezone, calculate the highest percentage of subscribers in a region and schedule your emails to their local time.
+To do this, enter a value in the IP Timezone property when you schedule your emails.
+Since it takes time to set up the email process for all time zones, you must schedule them a full day in advance.
+Your ESP usually provides options to schedule email timings. With Campaign Refinery you can schedule your email campaigns just the way you want. The point is to use dedicated email software to automate your scheduling times according to your subscribers’ time zones.
+Tools and Analytics for Email Timing
+While you can always A/B test your email campaigns, we recommend using an email service platform to allocate email dates and times for different email campaigns.
+For example, with Campaign Refinery, you can measure and use:
+Data analytics and reporting: Our robust reporting tools and analytics help marketers compare their past email campaign performance to the current ones. Data analytics tools help you find out the optimal times to send your emails effortlessly.
+User-behavior tracking: You can track your subscribers’ behavior such as engagement times, unique opens and clicks, and other crucial email metrics. The Tags feature comes in handy to divide your subscribers based on key characteristics. This makes your segmentation and data reading job straightforward.
+Automation and scheduling: By combining different triggers and actions, you can create highly targeted email automation workflows . With that, you can also use the campaign links feature to update links in all your email campaigns with just one click.
+Segmentation and personalization: You have the freedom to set any type of criteria for different audience segments using filters. This tool ensures you send emails to the right audience segment at the right time. Clients can also use our latest audience groups feature to combine different customer segments for the same email campaign.
+Cleaning and validation: Our automatic email list cleaning tool removes harmful and inactive email addresses to create a healthy email list for you. The best part is you can set a cleaning interval according to your requirements instead of following the schedule we mentioned.
+Integrations: If your email marketing involves third-party platforms, no problem — you can integrate them right from your Campaign Refinery dashboard. We support 800+ marketing tools and services on our platform.
+Best Practices for Email Timing in 2024
+Your email timing also depends on the general email best practices. Cause when you follow email etiquette , it solidifies your email marketing agenda, including the timing.
+So, let’s go over the basic email marketing rules you should follow:
+Segment your email list: If you do not want to send the same email content to all your subscriber lists, segment them based on their interests, preferences, and purchase behavior.
+Consider industry trends: While it’s okay to set your timing, knowing the industry standards will help you adapt your email marketing strategies. For example, if you are in the B2B space , sending emails during weekends is unprofessional.
+Test different timing strategies: Regularly monitor your email performance metrics to identify patterns and trends.
+Mobile optimization: Since more people are active on their mobile devices , ensure your email send time matches the time they are the most active. Research your subscribers’ mobile usage trends and compare them with your email campaign metrics to get a clearer picture.
+Consistency in communication: Use email content calendar and build a consistent email marketing schedule to drive anticipation with your subscribers. Schedule your emails in intervals to ensure your emails reach your subscribers at the correct time.
+Personalization: Use personalized elements based on your audience’s behavior . For instance, you can send a cart reminder email after 3-4 hours of customer interaction with your site. Apply your timing strategies wisely to avoid frustrating the reader.
+Maintaining your email timing schedule comes down to following these email best practices alongside using reputable email automation software.
+Schedule Your Email Marketing Campaigns With Campaign Refinery
+Timing decides the success rate of your email marketing campaigns, but it’s not the only factor to focus on. Your email deliverability rate, sender reputation, and engagement metrics are more important to determine your email marketing ROI.
+We understand this, and that’s why we built pivotal tools to help you succeed. You can use our automatic email list cleaning feature to maintain a healthy email list. This translates to high deliverability rates and better sender reputation.
+We are laser-focused on elevating your email deliverability rate to ensure your email campaigns reach the right audience at the right time. And to boost engagement, you can use our unique gamification feature and flash sales.
+Flash sales allow you to offer the perfect offer accompanied by scarcity to boost your email engagement rate. You can also integrate a third-party countdown timer to emphasize urgency. The good news is we are building a native countdown timer that will help you build evergreen countdown offers for your email campaigns.
+Look at our user reviews to understand what we can do for you.
+Want to know more about how we can increase your email marketing revenue?
+By Divya Shakhti
+October 29, 2023
+October 2, 2024
+Did you know that 57% of consumers prefer to shop online during the holidays? And 43% of people plan to shop at stores?  This is a unique opportunity for email marketers to expand their reach and increase sales during the last quarter of the year through holiday email campaigns. A whopping 196.7 million customers shop…
+By Divya Shakhti
+December 30, 2023
+April 1, 2024
+If you’re constantly struggling to build a quality email list and attract the right audience, it’s time to fine-tune your email lead generation strategies. If you’re a B2B company, it might be extra challenging for you to get in front of key decision-makers through lead generation marketing. But, when you refine lead magnet offerings, provide…
+By Pradeep Menon
+December 7, 2023
+April 1, 2024
+A big part of the internet and digital communications today is visual — there are more images, infographics, designs, and videos than ever before. Websites are vibrant, social media is dynamic, and interactive content is everywhere — modern marketing is all about eye-catching elements.  In an age like this, why do email clients block images?…
+By Casper Feeney
+May 10, 2024
+May 10, 2024
+Email was invented in the early 1970s as a way to communicate on ARPANET, the precursor to the internet. It gained widespread popularity in the 1990s as personal computers became more common in homes and workplaces.  This surge was largely due to the convenience and efficiency that email brought to everyday communication. Understanding when email…
+By Casper Feeney
+June 24, 2024
+October 2, 2024
+Running a medical practice isn’t just about providing excellent care; it’s also about maintaining a thriving business. To stay afloat, you need a steady stream of patients.  With 77 percent of patients finding their doctors online, you need a strong online presence.  And what better way to achieve this than through email marketing? It’s cost-effective…
+By Pradeep Menon
+January 7, 2024
+April 1, 2024
+Email isn’t just about typing stuff; it’s a tool, a strategy, a direct connection to your audience. And the email content you share should resonate, engage, and ultimately drive meaningful actions. We’ll be digging into the depths of email content to uncover its complexities; we shall also explore how it can positively impact your email…
+© 2024 Campaign Refinery
+Big Give Media LLC d/b/a Campaign Refinery 10016 Edmonds Way Suite C #191 Edmonds, WA 98020

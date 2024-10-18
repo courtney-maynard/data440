@@ -1,0 +1,74 @@
+Thomas Reiner, Altimeter
+Skift Take
+After a history of false starts with Tellme, Alexa, and Siri, will ChatGPT Advanced Voice Mode unlock the holy grail: booking a flight?
+Thomas Reiner
+What impact could AI have on the privacy concerns of travelers?
+How is ChatGPT's Advanced Voice Mode changing the landscape of travel bookings?
+What are the potential challenges AI faces in replacing traditional OTAs?
+Summary
+ChatGPT's Advanced Voice Mode is revolutionizing the travel booking process by providing rapid, customized answers, potentially posing a threat to traditional OTAs like Booking and Expedia. While AI offers significant advantages in managing inventory and bookings, challenges such as privacy concerns and latency remain. The role of OTAs may evolve, with possibilities ranging from becoming obsolete to leveraging brand loyalty to stay competitive in an AI-driven booking environment.
+Share
+If you haven’t experienced ChatGPT’s Advanced Voice Mode yet, you’re missing out on a glimpse of the future of travel booking.
+There’s a long history of tech trying to disrupt the travel booking path. Tellme, Alexa, and Siri were all seen as hopefuls to unlock the holy grail: booking a vacation, flight, and hotel over voice. I think we’re far closer to that than we’ve ever been with OAI. Here’s a sample of using ChatGPT as a travel agent for a family trip to Italy:
+If you don’t care to listen, I asked ChatGPT, ‘Find me a 4-5 star resort in Puglia, with a kids club, near an airport that United flies to, with Hertz EV rentals available. What Marriott options can I use points for?’ In seconds, ChatGPT provided tailored answers that would take far longer to piece together manually on Booking or Expedia.
+It’s not difficult to envision OpenAI connecting the pipes on the backend to enable real time inventory and pricing, payment rails, and eventually even calling up the hotel or interacting with a hotel or cruise line agent on the other side to get specific details or hard to answer questions. But does this completely disintermediate the OTAs like Booking, Expedia, and Airbnb?
+To level set, I want to bring back a flow chart I previously made for my post on the Impact of AI/LLMs on Travel Distribution but updated for a potential future with voice bookings:
+Previously, I had discussed the big losers as being Google, metasearch, NDC aggregators and the GDS, but with the advancements in AI what does that look like today?
+What Capabilities and Challenges Will AI Have?
+First, let’s envision a future 12-24 months from now. Everybody will have a phone in their pocket with an AI agent capable of booking travel for them. Envision the audio recording I made at the start but with the ability to book. My credit card, frequent flyer numbers, passport information, and preferences will all be stored as LLMs develop memory, and natural conversational voice AI will make it so everybody has a personal assistant. It’s becoming painfully obvious that this capability will exist in the near future, but if we start with that assumption, we can dig into what the challenges are:
+Inventory
+It’s not terribly difficult for OpenAI to just plug into the GDS and get access to around 40-50% of global hotel inventory. More importantly, this is the fat part of the demand curve, and although you’re missing a lot of the long-tail and alternative accommodations, that’s potentially solvable, too. LLMs have advanced to a point where they can navigate and manually fill out a hotel booking form on a website, potentially unlocking all non-GDS inventory as well. And for the even longer tail where it’s difficult, voice agents will have the ability to call up the hotel for you and book over the phone.
+What happens to the OTA supply moat when the LLM can just autofill out a form to make a reservation for the long tail of supply:
+Data
+The biggest question is whether an LLM approaching things from a horizontal perspective will have the accuracy to surpass a fine-tuned or RAG-assisted model from an OTA. Will the frontier model from OpenAI be good enough or out-compete something Expedia or Tripadvisor spins up that can utilize all the extensive review, booking patterns, and other proprietary data they’ve been collecting for the past 20 years? Will we see a return of lawsuits around content parity and full content agreements like we had with SABR -2.29%↓ and AAL 2.50%↑ ?
+Servicing
+Ok, I book a trip using my voice agent but then something goes wrong and I need to cancel, or do something complex like adding people to the reservation and adjusting the price or deposit. Can my agent handle all of the complexities or is there a requirement to have a servicing team somewhere full of real people? We’re likely to see a hybrid model for servicing which means OpenAI needs to either hire a team, outsource it, or just act as lead gen and not complete bookings directly.
+Visual Discovery
+Booking over audio is a bit of a back-to-the-future moment for a call center travel agent. Consumers like looking at pictures and maps and getting a visual sense of where they are going. This is probably the easiest solvable challenge because instead of a blue bubble showing the voice agent the UX can pop up images or maps or eventually utilize the screen of a potential AR device I may be wearing.
+Privacy
+Will consumers trust an LLM to hold their booking data, have email access, know their credit card and passport numbers, their address and names? I expect grumpiness and pushback at first, but the inevitable time savings and efficiency and magic of the experience will get consumers used to it.
+Maybe there’s a wedge here for Apple and Google to push Apple and Android Payment rails on behalf of OpenAI in a safe and secure manner.
+Latency
+Normal human conversation is around 200-300 ms and ChatGPT Advanced Voice Mode does a great job of feeling super natural. The problem with sourcing real-time inventory and pricing from a GDS is that given their legacy tech the latency is 500-3000 ms. Even direct connects to an airline or hotel can be 300-500 ms. If the latency is 2-3x longer than normal human conversation then the value of the voice AI goes down materially. OTAs get around this by caching, load balancing, and pre-fetching techniques where the first results are served quickly and then additional detail and refinements come a couple of seconds later (go load Booking.com and you’ll notice it)
+Rate Parity / Metasearch
+If my AI agent books me a hotel how do I know that I got the best rate or at least the best combo of flexibility and price? A generation of consumers have been trained by Google, Trivago, and Kayak that there is always a deal to be had and that prices are different. This may require some sort of adwords-esque marketplace developing where my agent will read off the options for where I want to book it (direct through hotel, through Expedia to get loyalty points, through the sketchy room wholesaler who is somehow 5% cheaper). Will Expedia or Booking bid to get their booking option ahead of the direct hotel choice?
+Agents for Every Hotel
+In a future where every question I have can either be pulled from the LLM/Internet or my voice agent can call up a hotel and ask, you’ll face the conundrum of hotel desks or concierges being overwhelmed with AI calls. Maybe Marriott will set up their own informational agent that can interact with ChatGPT and provide nuanced data, but what about the 10-room bed and breakfast? Will they be overwhelmed with 40 calls a day asking super detailed questions? Who will help stand-up agents for every hotel or service provider?
+There’s a big opportunity for either a new AI native startup, Meta over WhatsApp, some of the existing PMS like Oracle, Cloudbeds, or Mews, or even Booking to offer 3P services or platforms to the long tail of hotels, B&Bs, and STRs to have an agent.
+Selection Bias and Breadth
+With a conversational travel agent AI, you might run into the same selection issues a real travel agent does: they tend to recommend the same 3-5 places. Websites and mobile apps are great for showing a large amount of information at once while conversational discovery will be challenged to help users find new and unique hotels. What does this mean if the long tail of demand gets cut off just because people are impatient or never discover all the options through conversation?
+Regulatory / Antitrust
+If OpenAI can truly dominate and be the leader for all hotel and travel bookings globally there’s a 0% chance there isn’t regulatory and antitrust concerns. Remember that Google back in 2017 was slapped down for abusing their position as a dominant search engine in giving advantage to its own hotel price comparison features vs. rivals. Could OpenAI be forced by regulators to just be the API provider and be agnostic on the actual booking service?
+What Happens to OTAs?
+Let’s lay out a few scenarios and follow the thread of what happens to the online travel agencies in each:
+OpenAI dominates with >99% accuracy and is front end for all lead gen
+In this scenario, the best case for Booking and Expedia is that they are forced down the value stack to inventory and supply management. Much like the GDS manage 40-50% of global travel inventory, the OTAs will be the middlemen for the long tail of non-GDS supply that they’ve built up over 20 years.
+Maybe there’s an opportunity for them to run the payments and servicing for bookings and to be more of an IT facilitator helping hotels setup their own agents and manage OpenAI bookings.
+If this happens margins get absolutely decimated much like what happened to the GDS when OTAs and direct connect became more mainstream. OpenAI becomes a critical gatekeeper for travel by controlling the primary channel through which consumers make bookings. OTAs probably try to remain competitive through cutting fees and trying to create strategies to integrate but it likely ends like Tripadvisor: left for dead.
+Winners: OpenAI, Suppliers (Hotels and Airlines)
+Losers: OTAs, Google
+OpenAI is good, but brand loyalty to OTAs and supply provides a moat
+Customers use ChatGPT voice to do discovery and booking but customers remain loyal to the OTA brands as a result of trust, payments, privacy, and advertising. You end up with OpenAI disrupting Google Hotel/Flight Search but just like that is lead-gen for the OTAs. The voice agent asks you or just knows that you’re an Expedia loyalty customer and you want to book there. OTAs can act as the system of record and the pipes get connected or Expedia/Booking agents can interact with OpenAI to book, manage, cancel, pay, and generally handle everything.
+Take rates likely come down as you add an additional competitive layer to the value stack but if OTAs can prove loyalty there’s potential savings on sales and marketing as the portion paid to Google comes down and commissions to OpenAI goes up but not by as much. (Reminder Expedia and Booking are spending a cumulative $14B+ a year on sales and marketing).
+Margins overall are probably stable for the big players if they can convince customers to choose the Booking AI Agent over OpenAI’s more generic offerings. You’ll likely see Airbnb and Booking transform their loyalty programs to be more similar to Expedia and the airline/hotel industry where there is an economic incentive to stay loyal.
+Winners: OpenAI
+Losers: Google
+OpenAI just isn’t there because proprietary supply and data held by OTAs makes a better agent
+There’s a lot of claims around the proprietary consumer behavior, review, and other data the OTAs hold being a competitive moat. If we assume that’s true and that combining the OpenAI voice API with fine-tuning and RAG results in a better agent for Booking or Expedia then you have a scenario where OTAs thread the needle and survive into the next big phase change the same way they did from Desktop → Mobile.
+We probably don’t see take rates change much as you just swap out Google lead gen commissions in the value stack for OpenAI as your personal Agent from OpenAI just works together with a native OTA agent. Google also through Gemini or other consumer AI products likely survives and holds onto some share. Maybe there is some compression in take-rate as Agents can more easily go direct and cut out the middleman, but the potential savings on sales and marketing is still big.
+OpenAI here likely still generates a ton of incremental revenue as their voice API is what will power the native OTA agents. That cost will be borne by the OTAs but the cost savings from headcount reduction, marketing, and efficiency should more than offset that.
+Winners: OTAs
+Losers: Suppliers may struggle to continue gaining direct share
+Airbnb Wild Card
+The big wild card in all of this is Airbnb given their closed ecosystem and unique supply. While the other OTAs have significant exposure to traditional hotels which is somewhat commoditized, none of Airbnb’s properties are easily available anywhere else (beyond some overlap with Booking and VRBO).
+Although AI Voice Agents booking our travel may become commonplace, in order to access Airbnb inventory either short term rental owners will need to en-masse move to a different platform, or OpenAI will be forced to work out some sort of deal with Airbnb. The likelihood of Airbnb operating their own successful STR AI Agent as a standalone is far higher than it is for Expedia or Booking.
+Not All Will Change
+There will definitely be a few segments of travel that will be resistant to this at first. Corporate travel is locked up under contracts, group travel is likely too complex, multi-country super long term travel itineraries aren’t ideal for voice, etc. But for the core leisure traveler going to one place, on two non-stop flights, and doing typical experiences, voice will unlock a lot.
+Whether OTAs will adapt or become obsolete in the age of AI remains to be seen. But one thing is clear: consumers stand to benefit from more personalized, efficient, and even cheaper travel planning, as AI takes the wheel.
+Thomas Reiner is a Partner at Altimeter Capital and first published this post on his Substack newsletter Platform Aeronaut . Republished with permission.
+Share
+Thomas Reiner, Altimeter
+Loading next story
+Early Check-In Newsletter
+Keep up with the latest in hotels and hospitality. Checking in to your email every Thursday.
+Up Next

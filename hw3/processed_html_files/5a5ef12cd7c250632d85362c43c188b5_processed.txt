@@ -1,0 +1,76 @@
+$29.99
+Learning Pandas 2.0
+A Comprehensive Guide to Data Manipulation and Analysis for Data Scientists and Machine Learning Professionals
+This book is 100% complete
+Using Pandas 2.0, setting you on the path to becoming a data analysis powerhouse
+$29.99
+This Book + Extras Downloadable (Google JAX Essentials)
+This Book + Extras Downloadable (Parallel Python with Dask + Google JAX Essentials)
+You Pay in US $
+EU customers: Price excludes VAT. VAT is added during checkout.
+Add Ebook to Cart
+Add to Wish List
+About the Book
+"Learning Pandas 2.0" is an essential guide for anyone looking to harness the power of Python's premier data manipulation library. With this comprehensive resource, you will not only master core Pandas 2.0 concepts but also learn how to employ its advanced features to perform efficient data manipulation and analysis.
+Throughout the book, you will acquire a deep understanding of Pandas 2.0's data structures, indexing, and selection techniques. Gain expertise in loading, storing, and cleaning data from various file formats and sources, ensuring data integrity and consistency. As you progress, you will delve into advanced data transformation, merging, and aggregation methods to extract meaningful insights and generate insightful reports.
+"Learning Pandas 2.0" also covers specialized data processing needs like time series data, DateTime operations, and geospatial analysis. Furthermore, this book demonstrates how to integrate Pandas 2.0 with machine learning libraries like Scikit-learn, TensorFlow, and PyTorch for predictive analytics. This will empower you to build powerful data-driven models to solve complex problems and enhance your decision-making capabilities.
+Key Learnings
+Master core Pandas 2.0 concepts, including data structures, indexing, and selection for efficient data manipulation.
+Load, store, and clean data from various file formats and sources, ensuring data integrity and consistency.
+Perform advanced data transformation, merging, and aggregation techniques for insightful analysis and reporting.
+Harness time series data, DateTime operations, and geospatial analysis for specialized data processing needs.
+Visualize data effectively using Seaborn, Plotly, and advanced geospatial visualization tools.
+Integrate Pandas 2.0 with machine learning libraries like Scikit-learn, TensorFlow, and PyTorch for predictive analytics.
+Table of Content
+Indexing and Selecting Data
+Data Manipulation and Transformation
+Performance Optimization and Scaling
+Text Data and Natural Language Processing
+Geospatial Data Analysis
+Share this book
+Packages
+This Book + Extras Downloadable (Parallel Python with Dask)
+This package consists of 2 Books. The primary purchased book is available in your library and to download the extra ebooks, go to your Leanpub Library, select the book you purchased. Then, you will see a link (or links) to download the Extras included with the book
+Includes:
+extras
+Make code reusable and deployed for high performance web apps
+PDF
+EPUB
+English
+$56.99
+This Book + Extras Downloadable (Google JAX Essentials)
+This package consists of 2 Books. The primary purchased book is available in your library and to download the extra ebooks, go to your Leanpub Library, select the book you purchased. Then, you will see a link (or links) to download the Extras included with the book
+Includes:
+extras
+Google JAX Essentials
+Quick practical learning of blazing-fast library for machine learning and deep learning projects
+PDF
+EPUB
+English
+$56.99
+Add To Cart
+This Book + Extras Downloadable (Parallel Python with Dask + Google JAX Essentials)
+This package consists of 3 Books. The primary purchased book is available in your library and to download the extra ebooks, go to your Leanpub Library, select the book you purchased. Then, you will see a link (or links) to download the Extras included with the book
+Includes:
+extras
+Make code reusable and deployed for high performance web apps
+extras
+Google JAX Essentials
+Quick practical learning of blazing-fast library for machine learning and deep learning projects
+PDF
+EPUB
+English
+$79.99
+2 Books
+The Leanpub 60 Day 100% Happiness Guarantee
+Within 60 days of purchase you can get a 100% refund on any Leanpub purchase, in two clicks.Now, this is technically risky for us, since you'll have the book or course files either way. But we're so confident in our products and services, and in our authors and readers, that we're happy to offer a full money back guarantee for everything we sell.You can only find out how good something is by trying it, and because of our 100% money back guarantee there's literally no risk to do so!So, there's no reason not to click the Add to Cart button, is there? See full terms...
+Earn $8 on a $10 Purchase, and $16 on a $20 Purchase
+We pay 80% royalties on purchases of $7.99 or more, and 80% royalties minus a 50 cent flat fee on purchases between $0.99 and $7.98. You earn $8 on a $10 sale, and $16 on a $20 sale. So, if we sell 5000 non-refunded copies of your book for $20, you'll earn $80,000.(Yes, some authors have already earned much more than that on Leanpub.)In fact, authors have earned over $13 million writing, publishing and selling on Leanpub. Learn more about writing on Leanpub
+Free Updates. DRM Free.
+If you buy a Leanpub book, you get free updates for as long as the author updates the book! Many authors use Leanpub to publish their books in-progress, while they are writing them. All readers get free updates, regardless of when they bought the book or how much they paid (including free).Most Leanpub books are available in PDF (for computers) and EPUB (for phones, tablets and Kindle). The formats that a book includes are shown at the top right corner of this page.Finally, Leanpub books don't have any DRM copy-protection nonsense, so you can easily read them on any supported device.
+Write and Publish on Leanpub
+You can use Leanpub to easily write, publish and sell in-progress and completed ebooks and online courses!Leanpub is a powerful platform for serious authors, combining a simple, elegant writing and publishing workflow with a store focused on selling in-progress ebooks.Leanpub is a magical typewriter for authors: just write in plain text, and to publish your ebook, just click a button. (Or, if you are producing your ebook your own way, you can even upload your own PDF and/or EPUB files and then publish with one click!) It really is that easy.
+Path
+There are many paths, but the one you're on right now on Leanpub is...
+› Learningpandas2 › C › Leanpubsocialpostsale20241005
+Leanpub is copyright © 2010-2024 Ruboss Technology Corp. All rights reserved.

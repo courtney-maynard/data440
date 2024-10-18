@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+
+  <meta property="og:site_name" content="Open Problems in Technical AI Governance" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Open Problems in Technical AI Governance" />
+  <meta property="og:description" content="Open Problems in Technical AI Governance" />
+  <meta property="og:url" content="https://taig.stanford.edu/" />
+  <meta property="og:image" content="https://web.stanford.edu/class/cs120//images/stanfordlogo.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Open Problems in Technical AI Governance" />
+  <meta name="twitter:description" content="Open Problems in Technical AI Governance" />
+  <meta name="twitter:url" content="https://taig.stanford.edu/" />
+  <meta name="twitter:image" content="https://web.stanford.edu/class/cs329h/images/stanfordlogo.jpg" />
+  <meta name="twitter:site" content="@ankareuel" />
+
+  <title>Open Problems in Technical AI Governance (TAIG)</title>
+
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+  <!-- Google fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-MQGJWPF');</script>
+  <!-- End Google Tag Manager -->
+
+  <link rel="stylesheet" type="text/css" href="taig_style.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MQGJWPF" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- <script src="header.js"></script> -->
+  <!-- Navbar -->
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand brand" href="index.html">TAIG</a>
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+          data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <div class="centered-nav">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Overview</a></li>
+            <li><a href="taig_database.html">Database</a></li>
+            <li><a href="https://arxiv.org/abs/2407.14981">Paper</a></li>
+            <li><a href="taig_contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+  </nav>
+
+
+  <!-- Header -->
+  <div class="container sec" id="header" style="text-align:center">
+    <div class="container sec" id="logos" style="text-align:center">
+      <a href="https://www.oxfordmartin.ox.ac.uk/ai-governance">
+        <img src="images/AIGI updated logo.png" class="logo-left">
+      </a>
+      <a href="http://stanford.edu/">
+        <img src="images/stanfordlogo.png" class="logo-right">
+      </a>
+  </div>
+    <h1>Open Problems in Technical AI Governance</h1>
+    <h4>A repository of open problems in technical AI governance</h4>
+    <h5>Anka Reuel*, Ben Bucknall*,</h5>
+    <h5>Stephen Casper, Tim Fist, Lisa Soder, Onni Aarne, Lewis Hammond, Lujain Ibrahim, Alan Chan, Peter Wills, Markus Anderljung, Ben Garfinkel, Lennart Heim, Andrew Trask, Gabriel Mukobi, Rylan Schaeffer, Mauricio Baker, Sara Hooker, Irene Solaiman, Alexandra Sasha Luccioni, Nitarshan Rajkumar, Nicolas Moës, Jeffrey Ladish, Neel Guha, Jessica Newman, Yoshua Bengio, Tobin South, Alex Pentland, Sanmi Koyejo, Mykel J. Kochenderfer, Robert Trager</h5>
+    <div class="header-buttons">
+      <a href="https://arxiv.org/abs/2407.14981" class="header-button">Paper</a>
+      <a href="taig_database.html" class="header-button">Database</a>
+    </div>
+  </div>
+
+
+  <div class="container sec" id="course">
+    <h2>The Problem</h2>
+    <p>
+      Key decision-makers seeking to govern AI often have insufficient information for identifying the need for intervention and assessing the efficacy of different governance options. Furthermore, the technical tools necessary for successfully implementing governance proposals are often lacking <a href="https://openreview.net/pdf?id=Be2B6f0ps1">[1]</a>, leaving uncertainty regarding how policies are to be implemented. For example, while the concept of watermarking AI-generated content has gained traction among policymakers <a href="{https://data.consilium.europa.eu/doc/document/PE-24-2024-INIT/en/pdf">[2]</a> <a href="https://www.whitehouse.gov/briefing-room/statements-releases/2023/10/30/fact-sheet-president-biden-issues-executive-order-on-safe-secure-and-trustworthy-artificial-intelligence/">[3]</a> <a href="https://www.mofa.go.jp/files/100573473.pdf">[4]</a> <a href="https://assets.publishing.service.gov.uk/media/653aabbd80884d000df71bdc/emerging-processes-frontier-ai-safety.pdf">[5]</a>, it is unclear whether current methods are sufficient for achieving policymakers' desired outcomes, nor how future-proof such methods will be to improvements in AI capabilities <a href="https://arxiv.org/pdf/2311.04378">[6]</a> <a href="https://openreview.net/pdf?id=AXtFeYjboj">[7]</a>. Addressing these and similar issues will require further targeted technical advances.
+  </p>
+
+  </div>
+
+  <div class="container sec" id="course">
+  <div class="header-image-taig">
+    <img src="images/taxonomy_overview.png" alt="Description of the image">
+    <figcaption>Figure 1: An overview of the open problem areas covered in this report, organized according to our taxonomy.</figcaption>
+    <br>
+  </div>
+</div>
+
+  <div class="container sec" id="course">
+    <h2>How We're Contributing To A Solution</h2>
+    <p>
+      As such, in this paper we aim to provide an overview of <strong>technical AI governance (TAIG)</strong>, defined as <em>technical analysis and tools for supporting the effective governance of AI</em>. By this definition, TAIG can contribute to AI governance in a number of ways, such as by identifying opportunities for governance intervention, informing key decisions, and enhancing options for implementation. For example, deployment evaluations that assess the downstream impacts of a system could help identify a need for policy interventions to address these impacts. Alternatively, being able to design models that are robust to malicious modifications could add to the menu of governance options available to prevent downstream misuse.
+  </p>
+  <p>In particular, we make the following contributions:</p>
+
+<ul>
+    <li>
+        We introduce the emerging field of TAIG and motivate the need for such work.
+    </li>
+    <li>
+        We present a taxonomy of TAIG arranged along two dimensions: 
+        <em>capacities</em>, which refer to actions such as access and verification 
+        that are useful for governance, and <em>targets</em>, which refer to key 
+        elements in the AI value chain, such as data and models, to which capacities 
+        can be applied.
+    </li>
+    <li>
+        Finally, we outline open problems within each category of our taxonomy, 
+        along with concrete example questions for future research.
+    </li>
+</ul>
+<p>
+  Figure 1 provides an overview of the open problem areas, organized 
+  according to the taxonomy. We hope that this paper serves as a resource 
+  and inspiration for technical researchers aiming to direct their 
+  expertise towards policy-relevant topics.
+</p>
+  </div>
+
+  <div class="container sec" id="course">
+    <h2>Where to Start</h2>
+    <p>You can find our searchable repository of open problems&nbsp;<a href="taig_database.html" style="color: inherit; text-decoration: underline;">here</a>.​</p>
+    <p>If you have a resource that we haven't mentioned or if you think a problem has been solved, please reach out&nbsp;<a href="taig_contact.html" style="color: inherit; text-decoration: underline;">here</a>.
+  </div>
+
+  <div class="container sec" id="course">
+    <h2>How To Cite Us</h2>
+    <p>As with every research project, a lot of time and passion were put into this initiative. If you found our work useful, we'd appreciate it if you'd cite us. Some standard citations can be found below:</p>
+    <pre class="citation-block">@misc{reuelbucknall2024open,
+<span class="indent-1">title={Open Problems in Technical AI Governance},</span>
+<span class="indent-1">author={Reuel, Anka and Bucknall, Ben and Casper, Stephen and Fist, Tim and</span>
+<span class="indent-2">Soder, Lisa and Aarne, Onni and Hammond, Lewis and Ibrahim, Lujain and</span>
+<span class="indent-2">Chan, Alan and Wills, Peter and Anderljung, Markus and Garfinkel, Ben and</span>
+<span class="indent-2">Heim, Lennart and Trask, Andrew and Mukobi, Gabriel and Schaeffer, Rylan and</span>
+<span class="indent-2">Baker, Mauricio and Hooker, Sara and Solaiman, Irene and Luccioni, Alexandra Sasha and</span>
+<span class="indent-2">Rajkumar, Nitarshan and Mo{\"e}s, Nicolas and Ladish, Jeffrey and Guha, Neel and</span>
+<span class="indent-2">Newman, Jessica and Bengio, Yoshua and South, Tobin and Pentland, Alex and</span>
+<span class="indent-2">Koyejo, Sanmi and Kochenderfer, Mykel J and Trager, Robert},</span>
+<span class="indent-1">journal={arXiv preprint arXiv:2407.14981},</span>
+<span class="indent-1">url={https://taig.stanford.edu},</span>
+<span class="indent-1">year={2024}</span>
+}
+</pre>
+</div>
+
+  <div class="sec" id="course">
+    <div class="overview-box">
+        
+<hr>
+    </div>
+</div>
+
+  <div class="sechighlight">
+    <div class="container sec" id="instructors">
+      <h3>Contact</h3>
+      <div class="col-md-3">
+        <div class="instructor">
+            <div class="instructorphoto"><img src="images/benbucknall.jpeg"></div>
+            <div class="instructor-info">
+              <div class="instructor-name"><a href="https://www.linkedin.com/in/ben-s-bucknall/" target="_blank">Ben Bucknall</a></div>
+              <div class="instructor-email">ben.bucknall@governance.ai</div>
+            </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="instructor">
+            <div class="instructorphoto"><img src="images/Anka.jpeg"></div>
+            <div class="instructor-info">
+              <div class="instructor-name"><a href="https://ankareuel.com" target="_blank">Anka Reuel</a></div>
+              <div class="instructor-email">anka.reuel@stanford.edu</div>
+            </div>
+        </div>
+      </div> 
+    </div>
+  </div>
+
+  <!-- jQuery and Bootstrap -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+by Jason Rainbow
+September 20, 2024
+September 20, 2024
+TAMPA, Fla. — Executives discussing emerging space-based computing capabilities Sept. 20 called for stronger collaboration between policymakers and technology leaders to accelerate artificial intelligence’s societal benefits.
+Rika Nakazawa, chief of commercial innovation at Japanese telecoms giant NTT, proposed tech providers use private forums to educate policymakers and industry players about AI advancements.
+This approach, she said during World Satellite Business Week in Paris, would avoid stirring up the misconceptions that often arise in public discussions about AI.
+Industry players engaged in these talks could provide real-time insights on key issues and platforms, according to Nakazawa, helping emerging AI gain better access to funding.
+“So thinking about this as a system design is critical,” she added, “and having forums where industry, policy and technology are all sitting at the table is also really key for us.”
+She also highlighted the transformative role AI could play in addressing global challenges such as climate change, which demands real-time processing of data that can only be gained from the vantage of space.
+AI’s expanding space role
+Clint Crosier, director of aerospace and satellite at Amazon Web Services, told the conference how the cloud computing behemoth partnered with French geospatial analytics company Alteia in November to assess global infrastructure from space for the World Bank.
+Using AI-based prediction capabilities, he said the companies were able to provide the World Bank with a set of areas that need to be targeted for infrastructure improvements, particularly in underdeveloped nations, to help grow their economies.
+“The examples are just numerous about how you can use this technology in ways that we didn’t even really think of two or three years ago,” Crosier said, “and we’ll see we’ll be using it ways two or three years from now that we didn’t envision today.”
+“We are at the cusp of understanding the power of generative AI,” according to Crosier.
+Adding more capability to orbit
+Crosier said the increasing demand for advanced AI and machine learning (ML) tools across sectors such as environmental management, agriculture, healthcare, insurance and energy is driving a need for more computing power in orbit.
+“We’re going to be bringing down so much data,” he said, “it will be physically impossible for us as humans to organize the data,” analyze, disseminate and “make real-time insights of the data without the use of AI ML.”
+While the space industry once prioritized increasing image resolution from orbit, he said the focus has shifted to minimizing latency and enhancing real-time data processing capabilities.
+In a recent experiment using AWS cloud services and computing technology from Sweden’s Unibap, he said a satellite from D-Orbit of Italy almost doubled available bandwidth by using AI to only send relevant hyperspectral data from orbit back to Earth.
+Related
+Monday, October 21 @ 8:00 am - Thursday, October 24 @ 5:00 pm
+Sign up for a SpaceNews newsletter
+Get top stories, military space news and more delivered to your inbox.

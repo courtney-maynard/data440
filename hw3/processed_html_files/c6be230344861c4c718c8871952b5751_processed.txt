@@ -1,0 +1,37 @@
+hbspt.forms.create({
+    portalId: '1865444',
+    formId: '2db28ac9-d988-42c8-bf91-29f8f7fcfac1'
+  });
+adroll_adv_id = "XDCO6MZFKZB6HAQENDPVJ4";
+    adroll_pix_id = "WXI33UTPCNAORJUY22JFZS";
+
+    (function () {
+        var _onload = function(){
+            if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
+            if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
+            var scr = document.createElement("script");
+            var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+            scr.setAttribute('async', 'true');
+            scr.type = "text/javascript";
+            scr.src = host + "/j/roundtrip.js";
+            ((document.getElementsByTagName('head') || [null])[0] ||
+                document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+        };
+        if (window.addEventListener) {window.addEventListener('load', _onload, false);}
+        else {window.attachEvent('onload', _onload)}
+    }());
+document.addEventListener( 'wpcf7mailsent', function( event ) {
+        if( "fb_pxl_code" in event.detail.apiResponse){
+          eval(event.detail.apiResponse.fb_pxl_code);
+        }
+      }, false );
+/* <![CDATA[ */
+var codePrettifyLoaderBaseUrl = "https:\/\/opendatascience.com\/wp-content\/plugins\/code-prettify\/prettify";
+/* ]]> */
+/* <![CDATA[ */
+var leadin_wordpress = {"userRole":"visitor","pageType":"post","leadinPluginVersion":"11.1.60"};
+/* ]]> */
+/* <![CDATA[ */
+var pp_ajax_form = {"ajaxurl":"https:\/\/opendatascience.com\/wp-admin\/admin-ajax.php","confirm_delete":"Are you sure?","deleting_text":"Deleting...","deleting_error":"An error occurred. Please try again.","nonce":"b137042109","disable_ajax_form":"false","is_checkout":"0","is_checkout_tax_enabled":"0","is_checkout_autoscroll_enabled":"true"};
+/* ]]> */
+jQuery( '#request' ).val( '' );

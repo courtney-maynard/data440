@@ -1,0 +1,2644 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    
+        
+<meta name="description" content="Posted by Sharan Narang and Aakanksha Chowdhery, Software Engineers, Google Research In recent years, large neural networks trained for language un..."><meta name="keywords" content="Natural Language Processing,Machine Learning,Self-Supervised Learning"><link rel="canonical" href="http://research.google/blog/pathways-language-model-palm-scaling-to-540-billion-parameters-for-breakthrough-performance/" /><meta property="og:title" content="Pathways Language Model (PaLM): Scaling to 540 Billion Parameters for Breakthrou"><meta property="og:url" content="http://research.google/blog/pathways-language-model-palm-scaling-to-540-billion-parameters-for-breakthrough-performance/"><meta property="og:description" content="Posted by Sharan Narang and Aakanksha Chowdhery, Software Engineers, Google Research In recent years, large neural networks trained for language un..."><meta property="og:image" content="https://storage.googleapis.com/gweb-research2023-media/images/07ef38036e86f81ac74829e59384929b-i.width-800.format-jpeg.jpg"><meta property="og:image:secure_url" content="https://storage.googleapis.com/gweb-research2023-media/images/07ef38036e86f81ac74829e59384929b-i.width-800.format-jpeg.jpg"><meta property="og:type" content="Website">
+
+    
+    
+    <title>Pathways Language Model (PaLM): Scaling to 540 Billion Parameters for Breakthrou</title>
+    
+    <meta name="description" content="Posted by Sharan Narang and Aakanksha Chowdhery, Software Engineers, Google Research In recent years, large neural networks trained for language un..." />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1 viewport-fit=cover"/>
+
+    
+    
+
+    <link rel="icon" type="image/png" href="/gr/static/assets/favicon.ico">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Product+Sans&family=Google+Sans+Display:ital@0;1&family=Google+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Google+Sans+Text:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
+        as="style">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Product+Sans&family=Google+Sans+Display:ital@0;1&family=Google+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Google+Sans+Text:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    
+    <link href="https://www.gstatic.com/glue/cookienotificationbar/cookienotificationbar.min.css" rel="stylesheet" />
+    <link href="https://www.gstatic.com/glue/v27_1/glue-material.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/gr/static/css/googleresearch.css?id=d622e8e949079b0d65dda5817836e6c4">
+
+    
+    
+    
+
+    
+    
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            dataLayer.push({
+                publishDate: '20220404',
+                wordCount: '1757'
+            });
+        </script>
+    
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K8QBZ7Q');
+    </script>
+    <!-- End Google Tag Manager -->
+</head>
+
+<body class=" js-google-tag-wrapper" data-gt-page-path="http://research.google/blog/pathways-language-model-palm-scaling-to-540-billion-parameters-for-breakthrough-performance/" data-env="production">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8QBZ7Q"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
+    
+        
+
+
+
+
+
+
+
+<header class="global-header glue-header glue-header--single not-glue">
+  <a href="#page-content" class="glue-header__skip-content">Jump to Content</a>
+  <div class="glue-header__bar glue-header__bar--mobile not-glue">
+    <div class="glue-header__tier not-glue">
+      <!-- mobile lockup component -->
+      <div class="glue-header__container">
+        <div class="glue-header__lock-up">
+          <!-- Hamburger button component -->
+          <div class="glue-header__hamburger">
+            <button class="glue-header__drawer-toggle-btn" aria-label="Open the navigation drawer">
+              <svg class="glue-icon glue-icon--24px" role="presentation" aria-hidden="true">
+                <use href="/gr/static/assets/icons/glue-icons.svg#menu"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="glue-header__logo">
+            <a class="glue-header__logo-link" href="/" title="Google Research">
+              <!-- Logo component -->
+              <div class="glue-header__logo-container">
+                
+                
+
+
+
+  
+
+<svg role="presentation" aria-hidden="true" alt='Google' class="glue-icon  glue-icon glue-header__logo-svg">
+  <use href="/gr/static/assets/icons/glue-icons.svg#google-color-logo"></use>
+</svg>
+
+                
+
+              </div>
+              <span class="glue-header__logo--product">Research</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="glue-header__bar glue-header__bar--desktop glue-header__drawer">
+    <div class="glue-header__tier">
+      <!-- desktop lockup component -->
+      <div class="glue-header__container">
+        <div class="glue-header__lock-up">
+          <div class="glue-header__logo">
+            <a class="glue-header__logo-link" href="/" title="Google Research">
+              <!-- Logo component -->
+              <div class="glue-header__logo-container">
+                
+
+
+
+  
+
+<svg role="presentation" aria-hidden="true" alt='Google' class="glue-icon  glue-icon glue-header__logo-svg not-glue --dark-logo">
+  <use href="/gr/static/assets/icons/glue-icons.svg#google-solid-logo"></use>
+</svg>
+
+                
+
+
+
+  
+
+<svg role="presentation" aria-hidden="true" alt='Google' class="glue-icon  glue-icon glue-header__logo-svg --light-logo">
+  <use href="/gr/static/assets/icons/glue-icons.svg#google-color-logo"></use>
+</svg>
+
+              </div>
+              <span class="glue-header__logo--product">Research</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- linkbar component -->
+      <div class="glue-header__container glue-header__container--linkbar">
+        <nav class="glue-header__link-bar navigation js-gt-global-nav-wrapper">
+          <ul class="glue-header__list">
+            
+              
+
+
+
+  
+  
+  <li
+    class="glue-header__item  js-sub-nav-parent --parent"
+    data-gt-primary="Who we are"
+  >
+  
+    <button
+      class="glue-header__link js-sub-nav-target"
+      aria-haspopup="true"
+      aria-expanded="false"
+      
+    >
+      
+      <span class="">
+        Who we are
+        
+          <span class="icon icon--caret"></span>
+        
+      </span>
+    
+    </button>
+    
+    
+      <div class="navigation__sub js-sub-nav" role="menu">
+        <div class="navigation__sub__container">
+          <div class="navigation__sub__mobile-heading">
+            <button class="glue-header__link js-sub-nav-close-mobile">
+              <span class="sr-text">Back to</span>
+              <span class="icon icon--caret"></span> Who we are
+              <span class="sr-text">menu</span>
+            </button>
+            <hr/>
+          </div>
+          <div class="block-nav_drawer_columns_content">
+
+<div class="navigation__sub--content" data-gt-secondary="Defining the technology of today and tomorrow.">
+    <div class="navigation__sub__wrapper">
+        
+            <div class="navigation__sub__heading">
+                <h2 class="headline-3">Defining the technology of today and tomorrow.</h2>
+                
+            </div>
+        
+
+        <ul class="navigation__sub__columns">
+            
+                
+
+<li data-gt-secondary="Philosophy">
+    <div class="navigation__sub__columns__desktop">
+        
+            <h2 class="headline-6 navigation__sub__columns__heading">
+                Philosophy
+            </h2>
+        
+        <p class="navigation__sub__columns__description caption">We strive to create an environment conducive to many different types of research across many different time scales and levels of risk.</p>
+        
+            <a
+            href="http://research.google/philosophy/"
+            class="glue-inline-link js-drawer-link"
+            >
+                <span class="sr-text">Learn more about our Philosophy</span>
+                <span aria-hidden="true">Learn more</span>
+            </a>
+        
+    </div>
+    <div class="navigation__sub__columns__mobile">
+        
+            <a
+                class="glue-header__link"
+                href="http://research.google/philosophy/" 
+                
+            >
+                Philosophy
+            </a>
+        
+    </div>
+</li>
+
+            
+                
+
+<li data-gt-secondary="People">
+    <div class="navigation__sub__columns__desktop">
+        
+            <h2 class="headline-6 navigation__sub__columns__heading">
+                People
+            </h2>
+        
+        <p class="navigation__sub__columns__description caption">Our researchers drive advancements in computer science through both fundamental and applied research.</p>
+        
+            <a
+            href="http://research.google/people/"
+            class="glue-inline-link js-drawer-link"
+            >
+                <span class="sr-text">Learn more about our People</span>
+                <span aria-hidden="true">Learn more</span>
+            </a>
+        
+    </div>
+    <div class="navigation__sub__columns__mobile">
+        
+            <a
+                class="glue-header__link"
+                href="http://research.google/people/" 
+                
+            >
+                People
+            </a>
+        
+    </div>
+</li>
+
+            
+                
+
+<li data-gt-secondary="Teams">
+    <div class="navigation__sub__columns__desktop">
+        
+            <h2 class="headline-6 navigation__sub__columns__heading">
+                Teams
+            </h2>
+        
+        <p class="navigation__sub__columns__description caption">Our research teams have the opportunity to impact technology used by billions of people every day.</p>
+        
+            <a
+            href="http://research.google/teams/"
+            class="glue-inline-link js-drawer-link"
+            >
+                <span class="sr-text">Learn more about our Teams</span>
+                <span aria-hidden="true">Learn more</span>
+            </a>
+        
+    </div>
+    <div class="navigation__sub__columns__mobile">
+        
+            <a
+                class="glue-header__link"
+                href="http://research.google/teams/" 
+                
+            >
+                Teams
+            </a>
+        
+    </div>
+</li>
+
+            
+        </ul>
+
+        
+    </div>
+</div>
+</div>
+        </div>
+      </div>
+    
+  </li>
+
+
+            
+              
+
+
+
+  
+  
+  <li
+    class="glue-header__item  js-sub-nav-parent --parent"
+    data-gt-primary="Research areas"
+  >
+  
+    <button
+      class="glue-header__link js-sub-nav-target"
+      aria-haspopup="true"
+      aria-expanded="false"
+      
+    >
+      
+      <span class="">
+        Research areas
+        
+          <span class="icon icon--caret"></span>
+        
+      </span>
+    
+    </button>
+    
+    
+      <div class="navigation__sub js-sub-nav" role="menu">
+        <div class="navigation__sub__container">
+          <div class="navigation__sub__mobile-heading">
+            <button class="glue-header__link js-sub-nav-close-mobile">
+              <span class="sr-text">Back to</span>
+              <span class="icon icon--caret"></span> Research areas
+              <span class="sr-text">menu</span>
+            </button>
+            <hr/>
+          </div>
+          <div class="block-nav_drawer_columns_link_list">
+
+
+<div class="navigation__sub--list">
+    <div class="navigation__sub__wrapper">
+        <ul class="navigation__sub__columns">
+            
+                
+
+
+<li data-gt-secondary="AI/ML Foundations  &amp; Capabilities">
+    <div class="navigation__sub__columns__desktop">
+        
+            <h2 class="headline-6 navigation__sub__columns__heading">AI/ML Foundations  &amp; Capabilities</h2>
+        
+
+        
+            <ul>
+                
+                    <li>
+                        
+                            <a
+                                class="navigation__sub__columns__list-link caption js-drawer-link"
+                                href="http://research.google/research-areas/machine-intelligence/"
+                                
+                            >
+                                Machine Intelligence
+                            </a>
+                        
+                    </li>
+                
+                    <li>
+                        
+                            <a
+                                class="navigation__sub__columns__list-link caption js-drawer-link"
+                                href="http://research.google/research-areas/machine-perception/"
+                                
+                            >
+                                Machine Perception
+                            </a>
+                        
+                    </li>
+                
+                    <li>
+                        
+                            <a
+                                class="navigation__sub__columns__list-link caption js-drawer-link"
+                                href="http://research.google/research-areas/machine-translation/"
+                                
+                            >
+                                Machine Translation
+                            </a>
+                        
+                    </li>
+                
+                    <li>
+                        
+                            <a
+                                class="navigation__sub__columns__list-link caption js-drawer-link"
+                                href="http://research.google/research-areas/natural-language-processing/"
+                                
+                            >
+                                Natural Language Processing
+                            </a>
+                        
+                    </li>
+                
+                    <li>
+                        
+                            <a
+                                class="navigation__sub__columns__list-link caption js-drawer-link"
+                                href="http://research.google/research-areas/speech-processing/"
+                                
+                            >
+                                Speech Processing
+                            </a>
+                        
+                    </li>
+                
+            </ul>
+        
+    </div>
+    <div class="navigation__sub__columns__mobile">
+        <button class="glue-header__link js-sub-nav-target" data-panel="nested" role="menuitem" aria-haspopup="true">
+            AI/ML Foundations  &amp; Capabilities <span class="icon icon--caret"></span>
+        </button>
+
+        <div class="navigation__nested-sub js-sub-nav-parent">
+            
+              <div class="navigation__sub__mobile-heading">
+                <button class="glue-header__link js-sub-nav-close-mobile" role="menuitem" aria-haspopup="true">
+                  <span class="sr-text">Back to</span>
+                  <span class="icon icon--caret"></span> AI/ML Foundations  &amp; Capabilities
+                  <span class="sr-text">menu</span>
+                </button>
+                <hr/>
+              </div>
+              <ul>
+                    
+                        <li role="menuitem">
+                            
+                            <a href="http://research.google/research-areas/machine-intelligence/"
+                            class="navigation__sub__columns__mobile__link"
+                            >
+                                    Machine Intelligence
+                                    <span>
+                                        
+                                    </span>
+                                </a>
+                            
+                        </li>
+                    
+                        <li role="menuitem">
+                            
+                            <a href="http://research.google/research-areas/machine-perception/"
+                            class="navigation__sub__columns__mobile__link"
+                            >
+                                    Machine Perception
+                                    <span>
+                                        
+                                    </span>
+                                </a>
+                            
+                        </li>
+                    
+                        <li role="menuitem">
+                            
+                            <a href="http://research.google/research-areas/machine-translation/"
+                            class="navigation__sub__columns__mobile__link"
+                            >
+                                    Machine Translation
+                                    <span>
+                                        
+                                    </span>
+                                </a>
+                            
+                        </li>
+                    
+                        <li role="menuitem">
+                            
+                            <a href="http://research.google/research-areas/natural-language-processing/"
+                            class="navigation__sub__columns__mobile__link"
+                            >
+                                    Natural Language Processing
+                                    <span>
+                                        
+                                    </span>
+                                </a>
+                            
+                        </li>
+                    
+                        <li role="menuitem">
+                            
+                            <a href="http://research.google/research-areas/speech-processing/"
+                            class="navigation__sub__columns__mobile__link"
+                            >
+                                    Speech Processing
+                                    <span>
+                                        
+                                    </span>
+                                </a>
+                            
+                        </li>
+                    
+                </ul>
+            
+        </div>
+    </div>
+</li>
+
+            
+                
+
+
+<li data-gt-secondary="Algorithms &amp; Optimization">
+    <div class="navigation__sub__columns__desktop">
+        
+            <h2 class="headline-6 navigation__sub__columns__heading">Algorithms &amp; Optimization</h2>
+        
+
+        
+            <ul>
+                
+                    <li>
+                        
+                            <a
+                                class="navigation__sub__columns__list-link caption js-drawer-link"
+                                href="http://research.google/research-areas/algorithms-and-theory/"
+                                
+                            >
+                                Algorithms &amp; Theory
+                            </a>
+                        
+                    </li>
+                
+                    <li>
+                        
+                            <a
+                                class="navigation__sub__columns__list-link caption js-drawer-link"
+                                href="http://research.google/research-areas/data-management/"
+                                
+                            >
+                                Data Management
+                            </a>
+                        
+                    </li>
+                
+                    <li>
+                        
+                            <a
+                                class="navigation__sub__columns__list-link caption js-drawer-link"
+                                href="http://research.google/research-areas/data-mining-and-modeling/"
+                                
+                            >
+                                Data Mining &amp; Modeling
+                            </a>
+                        
+                    </li>
+                
+                    <li>
+                        
+                            <a
+                                class="navigation__sub__columns__list-link caption js-drawer-link"
+                                href="http://research.google/research-areas/information-retrieval-and-the-web/"
+                                
+                            >
+                                Information Retrieval &amp; the Web
+                            </a>
+                        
+                    </li>
+                
+            </ul>
+        
+    </div>
+    <div class="navigation__sub__columns__mobile">
+        <button class="glue-header__link js-sub-nav-target" data-panel="nested" role="menuitem" aria-haspopup="true">
+            Algorithms &amp; Optimization <span class="icon icon--caret"></span>
+        </button>
+
+        <div class="navigation__nested-sub js-sub-nav-parent">
+            
+              <div class="navigation__sub__mobile-heading">
+                <button class="glue-header__link js-sub-nav-close-mobile" role="menuitem" aria-haspopup="true">
+                  <span class="sr-text">Back to</span>
+                  <span class="icon icon--caret"></span> Algorithms &amp; Optimization
+                  <span class="sr-text">menu</span>
+                </button>
+                <hr/>
+              </div>
+              <ul>
+                    
+                        <li role="menuitem">
+                            
+                            <a href="http://research.google/research-areas/algorithms-and-theory/"
+                            class="navigation__sub__columns__mobile__link"
+                            >
+                                    Algorithms &amp; Theory
+                                    <span>
+                                        
+                                    </span>
+                                </a>
+                            
+                        </li>
+                    
+                        <li role="menuitem">
+                            
+                            <a href="http://research.google/research-areas/data-management/"
+                            class="navigation__sub__columns__mobile__link"
+                            >
+                                    Data Management
+                                    <span>
+                                        
+                                    </span>
+                                </a>
+                            
+                        </li>
+                    
+                        <li role="menuitem">
+                            
+                            <a href="http://research.google/research-areas/data-mining-and-modeling/"
+                            class="navigation__sub__columns__mobile__link"
+                            >
+                                    Data Mining &amp; Modeling
+                                    <span>
+                                        
+                                    </span>
+                                </a>
+                            
+                        </li>
+                    
+                        <li role="menuitem">
+                            
+                            <a href="http://research.google/research-areas/information-retrieval-and-the-web/"
+                            class="navigation__sub__columns__mobile__link"
+                            >
+                                    Information Retrieval &amp; the Web
+                                    <span>
+                                        
+                                    </span>
+                                </a>
+                            
+                        </li>
+                    
+                </ul>
+            
+        </div>
+    </div>
+</li>
+
+            
+                
+
+
+<li data-gt-secondary="Computing Paradigms">
+    <div class="navigation__sub__columns__desktop">
+        
+            <h2 class="headline-6 navigation__sub__columns__heading">Computing Paradigms</h2>
+        
+
+        
+            <ul>
+                
+                    <li>
+                        
+                            <a
+                                class="navigation__sub__columns__list-link caption js-drawer-link"
+                                href="http://research.google/research-areas/distributed-systems-and-parallel-computing/"
+                                
+                            >
+                                Distributed Systems &amp; Parallel Computing
+                            </a>
+                        
+                    </li>
+                
+                    <li>
+                        
+                            <a
+                                class="navigation__sub__columns__list-link caption js-drawer-link"
+                                href="http://research.google/research-areas/hardware-and-architecture/"
+                                
+                            >
+                                Hardware &amp; Architecture
+                            </a>
+                        
+                    </li>
+                
+                    <li>
+                        
+                            <a
+                                class="navigation__sub__columns__list-link caption js-drawer-link"
+                                href="http://research.google/research-areas/mobile-systems/"
+                                
+                            >
+                                Mobile Systems
+                            </a>
+                        
+                    </li>
+                
+                    <li>
+                        
+                            <a
+                                class="navigation__sub__columns__list-link caption js-drawer-link"
+                                href="http://research.google/research-areas/networking/"
+                                
+                            >
+                                Networking
+                            </a>
+                        
+                    </li>
+                
+                    <li>
+                        
+                            <a
+                                class="navigation__sub__columns__list-link caption js-drawer-link"
+                                href="http://research.google/research-areas/quantum-computing/"
+                                
+                            >
+                                Quantum Computing
+                            </a>
+                        
+                    </li>
+                
+                    <li>
+                        
+                            <a
+                                class="navigation__sub__columns__list-link caption js-drawer-link"
+                                href="http://research.google/research-areas/robotics/"
+                                
+                            >
+                                Robotics
+                            </a>
+                        
+                    </li>
+                
+                    <li>
+                        
+                            <a
+                                class="navigation__sub__columns__list-link caption js-drawer-link"
+                                href="http://research.google/research-areas/security-privacy-and-abuse-prevention/"
+                                
+                            >
+                                Security, Privacy, &amp; Abuse Prevention
+                            </a>
+                        
+                    </li>
+                
+                    <li>
+                        
+                            <a
+                                class="navigation__sub__columns__list-link caption js-drawer-link"
+                                href="http://research.google/research-areas/software-engineering/"
+                                
+                            >
+                                Software Engineering
+                            </a>
+                        
+                    </li>
+                
+                    <li>
+                        
+                            <a
+                                class="navigation__sub__columns__list-link caption js-drawer-link"
+                                href="http://research.google/research-areas/software-systems/"
+                                
+                            >
+                                Software Systems
+                            </a>
+                        
+                    </li>
+                
+            </ul>
+        
+    </div>
+    <div class="navigation__sub__columns__mobile">
+        <button class="glue-header__link js-sub-nav-target" data-panel="nested" role="menuitem" aria-haspopup="true">
+            Computing Paradigms <span class="icon icon--caret"></span>
+        </button>
+
+        <div class="navigation__nested-sub js-sub-nav-parent">
+            
+              <div class="navigation__sub__mobile-heading">
+                <button class="glue-header__link js-sub-nav-close-mobile" role="menuitem" aria-haspopup="true">
+                  <span class="sr-text">Back to</span>
+                  <span class="icon icon--caret"></span> Computing Paradigms
+                  <span class="sr-text">menu</span>
+                </button>
+                <hr/>
+              </div>
+              <ul>
+                    
+                        <li role="menuitem">
+                            
+                            <a href="http://research.google/research-areas/distributed-systems-and-parallel-computing/"
+                            class="navigation__sub__columns__mobile__link"
+                            >
+                                    Distributed Systems &amp; Parallel Computing
+                                    <span>
+                                        
+                                    </span>
+                                </a>
+                            
+                        </li>
+                    
+                        <li role="menuitem">
+                            
+                            <a href="http://research.google/research-areas/hardware-and-architecture/"
+                            class="navigation__sub__columns__mobile__link"
+                            >
+                                    Hardware &amp; Architecture
+                                    <span>
+                                        
+                                    </span>
+                                </a>
+                            
+                        </li>
+                    
+                        <li role="menuitem">
+                            
+                            <a href="http://research.google/research-areas/mobile-systems/"
+                            class="navigation__sub__columns__mobile__link"
+                            >
+                                    Mobile Systems
+                                    <span>
+                                        
+                                    </span>
+                                </a>
+                            
+                        </li>
+                    
+                        <li role="menuitem">
+                            
+                            <a href="http://research.google/research-areas/networking/"
+                            class="navigation__sub__columns__mobile__link"
+                            >
+                                    Networking
+                                    <span>
+                                        
+                                    </span>
+                                </a>
+                            
+                        </li>
+                    
+                        <li role="menuitem">
+                            
+                            <a href="http://research.google/research-areas/quantum-computing/"
+                            class="navigation__sub__columns__mobile__link"
+                            >
+                                    Quantum Computing
+                                    <span>
+                                        
+                                    </span>
+                                </a>
+                            
+                        </li>
+                    
+                        <li role="menuitem">
+                            
+                            <a href="http://research.google/research-areas/robotics/"
+                            class="navigation__sub__columns__mobile__link"
+                            >
+                                    Robotics
+                                    <span>
+                                        
+                                    </span>
+                                </a>
+                            
+                        </li>
+                    
+                        <li role="menuitem">
+                            
+                            <a href="http://research.google/research-areas/security-privacy-and-abuse-prevention/"
+                            class="navigation__sub__columns__mobile__link"
+                            >
+                                    Security, Privacy, &amp; Abuse Prevention
+                                    <span>
+                                        
+                                    </span>
+                                </a>
+                            
+                        </li>
+                    
+                        <li role="menuitem">
+                            
+                            <a href="http://research.google/research-areas/software-engineering/"
+                            class="navigation__sub__columns__mobile__link"
+                            >
+                                    Software Engineering
+                                    <span>
+                                        
+                                    </span>
+                                </a>
+                            
+                        </li>
+                    
+                        <li role="menuitem">
+                            
+                            <a href="http://research.google/research-areas/software-systems/"
+                            class="navigation__sub__columns__mobile__link"
+                            >
+                                    Software Systems
+                                    <span>
+                                        
+                                    </span>
+                                </a>
+                            
+                        </li>
+                    
+                </ul>
+            
+        </div>
+    </div>
+</li>
+
+            
+                
+
+
+<li data-gt-secondary="Responsible Human-Centric Technology">
+    <div class="navigation__sub__columns__desktop">
+        
+            <h2 class="headline-6 navigation__sub__columns__heading">Responsible Human-Centric Technology</h2>
+        
+
+        
+            <ul>
+                
+                    <li>
+                        
+                            <a
+                                class="navigation__sub__columns__list-link caption js-drawer-link"
+                                href="http://research.google/research-areas/human-computer-interaction-and-visualization/"
+                                
+                            >
+                                Human-Computer Interaction &amp; Visualization
+                            </a>
+                        
+                    </li>
+                
+                    <li>
+                        
+                            <a
+                                class="navigation__sub__columns__list-link caption js-drawer-link"
+                                href="http://research.google/research-areas/responsible-ai/"
+                                
+                            >
+                                Responsible AI
+                            </a>
+                        
+                    </li>
+                
+            </ul>
+        
+    </div>
+    <div class="navigation__sub__columns__mobile">
+        <button class="glue-header__link js-sub-nav-target" data-panel="nested" role="menuitem" aria-haspopup="true">
+            Responsible Human-Centric Technology <span class="icon icon--caret"></span>
+        </button>
+
+        <div class="navigation__nested-sub js-sub-nav-parent">
+            
+              <div class="navigation__sub__mobile-heading">
+                <button class="glue-header__link js-sub-nav-close-mobile" role="menuitem" aria-haspopup="true">
+                  <span class="sr-text">Back to</span>
+                  <span class="icon icon--caret"></span> Responsible Human-Centric Technology
+                  <span class="sr-text">menu</span>
+                </button>
+                <hr/>
+              </div>
+              <ul>
+                    
+                        <li role="menuitem">
+                            
+                            <a href="http://research.google/research-areas/human-computer-interaction-and-visualization/"
+                            class="navigation__sub__columns__mobile__link"
+                            >
+                                    Human-Computer Interaction &amp; Visualization
+                                    <span>
+                                        
+                                    </span>
+                                </a>
+                            
+                        </li>
+                    
+                        <li role="menuitem">
+                            
+                            <a href="http://research.google/research-areas/responsible-ai/"
+                            class="navigation__sub__columns__mobile__link"
+                            >
+                                    Responsible AI
+                                    <span>
+                                        
+                                    </span>
+                                </a>
+                            
+                        </li>
+                    
+                </ul>
+            
+        </div>
+    </div>
+</li>
+
+            
+                
+
+
+<li data-gt-secondary="Science &amp; Societal Impact">
+    <div class="navigation__sub__columns__desktop">
+        
+            <h2 class="headline-6 navigation__sub__columns__heading">Science &amp; Societal Impact</h2>
+        
+
+        
+            <ul>
+                
+                    <li>
+                        
+                            <a
+                                class="navigation__sub__columns__list-link caption js-drawer-link"
+                                href="http://research.google/research-areas/climate-and-sustainability/"
+                                
+                            >
+                                Climate &amp; Sustainability
+                            </a>
+                        
+                    </li>
+                
+                    <li>
+                        
+                            <a
+                                class="navigation__sub__columns__list-link caption js-drawer-link"
+                                href="http://research.google/research-areas/economics-and-electronic-commerce/"
+                                
+                            >
+                                Economics &amp; Electronic Commerce
+                            </a>
+                        
+                    </li>
+                
+                    <li>
+                        
+                            <a
+                                class="navigation__sub__columns__list-link caption js-drawer-link"
+                                href="http://research.google/research-areas/education-innovation/"
+                                
+                            >
+                                Education Innovation
+                            </a>
+                        
+                    </li>
+                
+                    <li>
+                        
+                            <a
+                                class="navigation__sub__columns__list-link caption js-drawer-link"
+                                href="http://research.google/research-areas/general-science/"
+                                
+                            >
+                                General Science
+                            </a>
+                        
+                    </li>
+                
+                    <li>
+                        
+                            <a
+                                class="navigation__sub__columns__list-link caption js-drawer-link"
+                                href="http://research.google/research-areas/health-bioscience/"
+                                
+                            >
+                                Health &amp; Bioscience
+                            </a>
+                        
+                    </li>
+                
+            </ul>
+        
+    </div>
+    <div class="navigation__sub__columns__mobile">
+        <button class="glue-header__link js-sub-nav-target" data-panel="nested" role="menuitem" aria-haspopup="true">
+            Science &amp; Societal Impact <span class="icon icon--caret"></span>
+        </button>
+
+        <div class="navigation__nested-sub js-sub-nav-parent">
+            
+              <div class="navigation__sub__mobile-heading">
+                <button class="glue-header__link js-sub-nav-close-mobile" role="menuitem" aria-haspopup="true">
+                  <span class="sr-text">Back to</span>
+                  <span class="icon icon--caret"></span> Science &amp; Societal Impact
+                  <span class="sr-text">menu</span>
+                </button>
+                <hr/>
+              </div>
+              <ul>
+                    
+                        <li role="menuitem">
+                            
+                            <a href="http://research.google/research-areas/climate-and-sustainability/"
+                            class="navigation__sub__columns__mobile__link"
+                            >
+                                    Climate &amp; Sustainability
+                                    <span>
+                                        
+                                    </span>
+                                </a>
+                            
+                        </li>
+                    
+                        <li role="menuitem">
+                            
+                            <a href="http://research.google/research-areas/economics-and-electronic-commerce/"
+                            class="navigation__sub__columns__mobile__link"
+                            >
+                                    Economics &amp; Electronic Commerce
+                                    <span>
+                                        
+                                    </span>
+                                </a>
+                            
+                        </li>
+                    
+                        <li role="menuitem">
+                            
+                            <a href="http://research.google/research-areas/education-innovation/"
+                            class="navigation__sub__columns__mobile__link"
+                            >
+                                    Education Innovation
+                                    <span>
+                                        
+                                    </span>
+                                </a>
+                            
+                        </li>
+                    
+                        <li role="menuitem">
+                            
+                            <a href="http://research.google/research-areas/general-science/"
+                            class="navigation__sub__columns__mobile__link"
+                            >
+                                    General Science
+                                    <span>
+                                        
+                                    </span>
+                                </a>
+                            
+                        </li>
+                    
+                        <li role="menuitem">
+                            
+                            <a href="http://research.google/research-areas/health-bioscience/"
+                            class="navigation__sub__columns__mobile__link"
+                            >
+                                    Health &amp; Bioscience
+                                    <span>
+                                        
+                                    </span>
+                                </a>
+                            
+                        </li>
+                    
+                </ul>
+            
+        </div>
+    </div>
+</li>
+
+            
+        </ul>
+
+        
+            <div class="navigation__sub__cta ">
+                <a class="glue-button glue-button--high-emphasis js-drawer-link"
+                href="http://research.google/research-areas/"
+                
+            >
+                    Explore research areas 
+                </a>
+            </div>
+        
+    </div>
+</div></div>
+        </div>
+      </div>
+    
+  </li>
+
+
+            
+              
+
+
+
+  
+  
+  <li
+    class="glue-header__item  js-sub-nav-parent --parent"
+    data-gt-primary="Our work"
+  >
+  
+    <button
+      class="glue-header__link js-sub-nav-target"
+      aria-haspopup="true"
+      aria-expanded="false"
+      
+    >
+      
+      <span class="">
+        Our work
+        
+          <span class="icon icon--caret"></span>
+        
+      </span>
+    
+    </button>
+    
+    
+      <div class="navigation__sub js-sub-nav" role="menu">
+        <div class="navigation__sub__container">
+          <div class="navigation__sub__mobile-heading">
+            <button class="glue-header__link js-sub-nav-close-mobile">
+              <span class="sr-text">Back to</span>
+              <span class="icon icon--caret"></span> Our work
+              <span class="sr-text">menu</span>
+            </button>
+            <hr/>
+          </div>
+          <div class="block-nav_drawer_columns_content">
+
+<div class="navigation__sub--content" data-gt-secondary="">
+    <div class="navigation__sub__wrapper">
+        
+
+        <ul class="navigation__sub__columns">
+            
+                
+
+<li data-gt-secondary="Projects">
+    <div class="navigation__sub__columns__desktop">
+        
+            <h2 class="headline-6 navigation__sub__columns__heading">
+                Projects
+            </h2>
+        
+        <p class="navigation__sub__columns__description caption">We regularly open-source projects with the broader research community and apply our developments to Google products.</p>
+        
+            <a
+            href="http://research.google/resources/our-projects/"
+            class="glue-inline-link js-drawer-link"
+            >
+                <span class="sr-text">Learn more about our Projects</span>
+                <span aria-hidden="true">Learn more</span>
+            </a>
+        
+    </div>
+    <div class="navigation__sub__columns__mobile">
+        
+            <a
+                class="glue-header__link"
+                href="http://research.google/resources/our-projects/" 
+                
+            >
+                Projects
+            </a>
+        
+    </div>
+</li>
+
+            
+                
+
+<li data-gt-secondary="Publications">
+    <div class="navigation__sub__columns__desktop">
+        
+            <h2 class="headline-6 navigation__sub__columns__heading">
+                Publications
+            </h2>
+        
+        <p class="navigation__sub__columns__description caption">Publishing our work allows us to share ideas and work collaboratively to advance the field of computer science.</p>
+        
+            <a
+            href="http://research.google/pubs/"
+            class="glue-inline-link js-drawer-link"
+            >
+                <span class="sr-text">Learn more about our Publications</span>
+                <span aria-hidden="true">Learn more</span>
+            </a>
+        
+    </div>
+    <div class="navigation__sub__columns__mobile">
+        
+            <a
+                class="glue-header__link"
+                href="http://research.google/pubs/" 
+                
+            >
+                Publications
+            </a>
+        
+    </div>
+</li>
+
+            
+                
+
+<li data-gt-secondary="Resources">
+    <div class="navigation__sub__columns__desktop">
+        
+            <h2 class="headline-6 navigation__sub__columns__heading">
+                Resources
+            </h2>
+        
+        <p class="navigation__sub__columns__description caption">We make products, tools, and datasets available to everyone with the goal of building a more collaborative ecosystem.</p>
+        
+            <a
+            href="http://research.google/resources/"
+            class="glue-inline-link js-drawer-link"
+            >
+                <span class="sr-text">Learn more about our Resources</span>
+                <span aria-hidden="true">Learn more</span>
+            </a>
+        
+    </div>
+    <div class="navigation__sub__columns__mobile">
+        
+            <a
+                class="glue-header__link"
+                href="http://research.google/resources/" 
+                
+            >
+                Resources
+            </a>
+        
+    </div>
+</li>
+
+            
+        </ul>
+
+        
+    </div>
+</div>
+</div>
+        </div>
+      </div>
+    
+  </li>
+
+
+            
+              
+
+
+
+  
+  
+  <li
+    class="glue-header__item  js-sub-nav-parent --parent"
+    data-gt-primary="Programs &amp; events"
+  >
+  
+    <button
+      class="glue-header__link js-sub-nav-target"
+      aria-haspopup="true"
+      aria-expanded="false"
+      
+    >
+      
+      <span class="">
+        Programs &amp; events
+        
+          <span class="icon icon--caret"></span>
+        
+      </span>
+    
+    </button>
+    
+    
+      <div class="navigation__sub js-sub-nav" role="menu">
+        <div class="navigation__sub__container">
+          <div class="navigation__sub__mobile-heading">
+            <button class="glue-header__link js-sub-nav-close-mobile">
+              <span class="sr-text">Back to</span>
+              <span class="icon icon--caret"></span> Programs &amp; events
+              <span class="sr-text">menu</span>
+            </button>
+            <hr/>
+          </div>
+          <div class="block-nav_drawer_columns_content">
+
+<div class="navigation__sub--content" data-gt-secondary="Shaping the future, together.">
+    <div class="navigation__sub__wrapper">
+        
+            <div class="navigation__sub__heading">
+                <h2 class="headline-3">Shaping the future, together.</h2>
+                
+                    <a
+                        href="http://research.google/programs-and-events/" 
+                        
+                        class="js-drawer-link"
+                        >
+                        Collaborate with us
+                    </a>
+                
+            </div>
+        
+
+        <ul class="navigation__sub__columns">
+            
+                
+
+<li data-gt-secondary="Student programs">
+    <div class="navigation__sub__columns__desktop">
+        
+            <h2 class="headline-6 navigation__sub__columns__heading">
+                Student programs
+            </h2>
+        
+        <p class="navigation__sub__columns__description caption">Supporting the next generation of researchers through a wide range of programming.</p>
+        
+            <a
+            href="http://research.google/programs-and-events/student-engagement/"
+            class="glue-inline-link js-drawer-link"
+            >
+                <span class="sr-text">Learn more about our Student programs</span>
+                <span aria-hidden="true">Learn more</span>
+            </a>
+        
+    </div>
+    <div class="navigation__sub__columns__mobile">
+        
+            <a
+                class="glue-header__link"
+                href="http://research.google/programs-and-events/student-engagement/" 
+                
+            >
+                Student programs
+            </a>
+        
+    </div>
+</li>
+
+            
+                
+
+<li data-gt-secondary="Faculty programs">
+    <div class="navigation__sub__columns__desktop">
+        
+            <h2 class="headline-6 navigation__sub__columns__heading">
+                Faculty programs
+            </h2>
+        
+        <p class="navigation__sub__columns__description caption">Participating in the academic research community through meaningful engagement with university faculty.</p>
+        
+            <a
+            href="http://research.google/programs-and-events/faculty-engagement/"
+            class="glue-inline-link js-drawer-link"
+            >
+                <span class="sr-text">Learn more about our Faculty programs</span>
+                <span aria-hidden="true">Learn more</span>
+            </a>
+        
+    </div>
+    <div class="navigation__sub__columns__mobile">
+        
+            <a
+                class="glue-header__link"
+                href="http://research.google/programs-and-events/faculty-engagement/" 
+                
+            >
+                Faculty programs
+            </a>
+        
+    </div>
+</li>
+
+            
+                
+
+<li data-gt-secondary="Conferences &amp; events">
+    <div class="navigation__sub__columns__desktop">
+        
+            <h2 class="headline-6 navigation__sub__columns__heading">
+                Conferences &amp; events
+            </h2>
+        
+        <p class="navigation__sub__columns__description caption">Connecting with the broader research community through events is essential for creating progress in every aspect of our work.</p>
+        
+            <a
+            href="http://research.google/conferences-and-events/"
+            class="glue-inline-link js-drawer-link"
+            >
+                <span class="sr-text">Learn more about our Conferences &amp; events</span>
+                <span aria-hidden="true">Learn more</span>
+            </a>
+        
+    </div>
+    <div class="navigation__sub__columns__mobile">
+        
+            <a
+                class="glue-header__link"
+                href="http://research.google/conferences-and-events/" 
+                
+            >
+                Conferences &amp; events
+            </a>
+        
+    </div>
+</li>
+
+            
+        </ul>
+
+        
+            <div class="navigation__sub__cta">
+                <a  class="glue-button glue-button--high-emphasis js-drawer-link"
+                href="http://research.google/programs-and-events/"
+                target="_blank" rel="noreferrer noopener"
+                >
+                    Collaborate with us
+                </a>
+            </div>
+        
+    </div>
+</div>
+</div>
+        </div>
+      </div>
+    
+  </li>
+
+
+            
+              
+
+
+
+  
+  
+  <li
+    class="glue-header__item  "
+    data-gt-primary="Careers"
+  >
+  
+    <a
+      class="glue-header__link "
+      href="http://research.google/careers/"
+      
+      
+    >
+    
+      <span class="">
+        Careers
+        
+      </span>
+    
+    </a>
+    
+    
+  </li>
+
+
+            
+              
+
+
+
+  
+  
+  <li
+    class="glue-header__item  "
+    data-gt-primary="Blog"
+  >
+  
+    <a
+      class="glue-header__link "
+      href="http://research.google/blog/"
+      
+      
+    >
+    
+      <span class="">
+        Blog
+        
+      </span>
+    
+    </a>
+    
+    
+  </li>
+
+
+            
+          </ul>
+        </nav>
+      </div>
+      <!-- search (hide on search page) -->
+      
+      
+      <div class="glue-header__search js-header-search">
+        <div class="glue-header__search__input">
+          
+
+
+
+
+
+
+
+
+<div class="search-input " data-type="header">
+  <input type="search" class="caption --empty-search js-search-bar js-gt-search-input"
+    placeholder="Search">
+  <button class="search-input__button --search js-gt-search-btn">
+    
+
+
+
+  
+
+<svg role="presentation" aria-hidden="true"  class="glue-icon glue-icon--18px ">
+  <use href="/gr/static/assets/icons/glue-icons.svg#search"></use>
+</svg>
+
+  </button>
+  <button class="search-input__button --clear">
+    
+
+
+
+  
+
+<svg role="presentation" aria-hidden="true"  class="glue-icon glue-icon--18px ">
+  <use href="/gr/static/assets/icons/glue-icons.svg#close"></use>
+</svg>
+
+  </button>
+</div>
+
+        </div>
+        <button class="glue-header__search__btn js-header-search-btn">
+          
+
+
+
+  
+
+<svg role="presentation" aria-hidden="true" aria-hidden="true" class="glue-icon glue-icon--24px search">
+  <use href="/gr/static/assets/icons/glue-icons.svg#search"></use>
+</svg>
+
+          
+
+
+
+  
+
+<svg role="presentation" aria-hidden="true" aria-hidden="true" class="glue-icon glue-icon--24px close">
+  <use href="/gr/static/assets/icons/glue-icons.svg#close"></use>
+</svg>
+
+          <span class="sr-text js-header-search-sr-text">Search</span>
+        </button>
+      </div>
+      
+    </div>
+  </div>
+  <div class="glue-header__drawer-backdrop">
+    <div class="glue-header__mobile_close">
+      <button class="glue-header__drawer-toggle-btn js-mobile-nav-close" aria-label="Close the navigation drawer">
+        <svg class="glue-icon glue-icon--24px" role="presentation" aria-hidden="true">
+          <use href="/gr/static/assets/icons/glue-icons.svg#close"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+    
+
+    <main id="page-content">
+        
+<div class="blog-detail-page --legacy " >
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="basic-hero bhoig --theme-dark  --large-image" data-gt-id="basic_hero" data-gt-component-name="">
+  <div class="glue-page">
+    <div class="glue-grid">
+      <div class="bhoig__image-wrapper glue-grid__col--span-4 glue-grid__col--span-5-md glue-grid__col--span-4-lg">
+      
+        
+        
+          
+            <div class="bhoig__image-bg" style="">
+              
+                <picture>
+                  <img src="https://storage.googleapis.com/gweb-research2023-media/original_images/07ef38036e86f81ac74829e59384929b-image8.gif" alt="" class=""/>
+                </picture>
+              
+            </div>
+        
+      
+    </div>
+
+        
+        <div class="bhoig__breadcrumb-wrapper glue-grid__col--span-10 glue-grid__col--span-9-md glue-grid__col--span-10-lg">
+          
+
+
+
+
+<nav class="glue-breadcrumbs" aria-label="Breadcrumbs">
+    
+    <ol class="glue-breadcrumbs__list">
+        
+        
+        
+        
+        <li class="glue-breadcrumbs__item">
+            <a class="glue-breadcrumbs__link attribution" href="/">Home</a>
+            
+
+
+
+  
+
+<svg role="presentation" aria-hidden="true"  class="glue-icon  ">
+  <use href="/gr/static/assets/icons/glue-icons.svg#chevron-right"></use>
+</svg>
+
+        </li>
+        
+        
+        
+        <li class="glue-breadcrumbs__item">
+            <a class="glue-breadcrumbs__link attribution" href="/blog/">Blog</a>
+            
+
+
+
+  
+
+<svg role="presentation" aria-hidden="true"  class="glue-icon  ">
+  <use href="/gr/static/assets/icons/glue-icons.svg#chevron-right"></use>
+</svg>
+
+        </li>
+        
+        
+    </ol>
+    
+</nav>
+        </div>
+
+        <h1 class="headline-1 bhoig__headline glue-grid__col--span-8 glue-grid__col--span-7-md glue-grid__col--span-8-lg">Pathways Language Model (PaLM): Scaling to 540 Billion Parameters for Breakthrough Performance</h1>
+
+        
+
+          <div class="basic-hero__description bhoig__description glue-grid__col--span-8 glue-grid__col--span-7-md glue-grid__col--span-8-lg">
+            <div class="basic-hero--blog-detail__description"><p>April 4, 2022</p><span class="dot-separator"></span><p>Posted by Sharan Narang and Aakanksha Chowdhery, Software Engineers, Google Research</p></div>
+          </div>
+
+        
+
+        <div class="bhoig__cta glue-grid__col--span-8 glue-grid__col--span-7-md glue-grid__col--span-8-lg">
+          
+        </div>
+    </div>
+  </div>
+</section>
+
+
+    <div class="glue-page">
+        <div class="glue-grid blog-detail-page__grid">
+            <div class="glue-grid__col glue-grid__col--span-4-sm glue-grid__col--span-12-md  glue-grid__col--span-9-lg">
+                
+                
+                <div class="quicklinks-wrapper--mobile">
+                    <div class="block-quick_links">
+
+
+<section class="quicklinks">
+    
+        <h2 class="eyebrow">Quick links</h2>
+        <ul class="quicklinks__list">
+            
+            
+            <li class="quicklinks__item quicklinks__item--share js-quicklinks-share">
+                <button 
+                    class="quicklinks__share-button js-quicklinks-share__button" 
+                    aria-expanded="false"
+                    aria-controls="js-quicklinks-share__list">
+                    <span class="icon icon--share"></span>
+                    <span class="quicklinks__item__text">Share</span>
+                </button>
+                
+
+
+
+<section class="glue-social glue-social--monochrome quicklinks__share-list js-quicklinks-share__list glue-elevation-level-1 js-gt-share-wrapper">
+  <div class="glue-social__group">
+    <ul class="glue-social__list" role="list">
+
+      <li class="glue-social__item">
+        <a class="glue-social__link" href="https://twitter.com/intent/tweet?text=http%3A//research.google/blog/pathways-language-model-palm-scaling-to-540-billion-parameters-for-breakthrough-performance/"
+            title="Share on Twitter" target="_blank" rel="noopener" data-gt-method="x">
+            <svg role="presentation" aria-hidden="true"
+              class="glue-icon glue-icon--social glue-icon--24px">
+              <use href="/gr/static/assets/icons/twitter-x.svg#twitter-x"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="glue-social__item">
+        <a class="glue-social__link" href="https://www.facebook.com/sharer/sharer.php?u=http%3A//research.google/blog/pathways-language-model-palm-scaling-to-540-billion-parameters-for-breakthrough-performance/"
+            title="Share on Facebook" target="_blank" rel="noopener" data-gt-method="facebook">
+          <svg role="presentation" aria-hidden="true"
+              class="glue-icon glue-icon--social glue-icon--color-facebook glue-icon--24px">
+            <use href="/gr/static/assets/icons/facebook.svg#facebook"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="glue-social__item">
+        <a class="glue-social__link" href="https://www.linkedin.com/shareArticle?url=http%3A//research.google/blog/pathways-language-model-palm-scaling-to-540-billion-parameters-for-breakthrough-performance/&amp;mini=true" title="Share on LinkedIn" target="_blank" rel="noopener" data-gt-method="linkedin">
+          <svg role="presentation" aria-hidden="true"
+              class="glue-icon glue-icon--social glue-icon--color-linkedin glue-icon--24px">
+            <use href="/gr/static/assets/icons/glue-icons.svg#post-linkedin"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="glue-social__item">
+        <a class="glue-social__link" href="mailto:name@example.com?subject=Check%20out%20this%20site&body=Check%20out%20http%3A//research.google/blog/pathways-language-model-palm-scaling-to-540-billion-parameters-for-breakthrough-performance/" title="Send via Email" data-gt-method="email">
+          <svg role="presentation" aria-hidden="true"
+              class="glue-icon glue-icon--social glue-icon--color-sharemail glue-icon--24px">
+            <use href="/gr/static/assets/icons/glue-icons.svg#email"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="glue-social__item">
+        <div class="glue-social__popover">
+          <div class="glue-social__icon-trigger" aria-label="Get shareable link" title="Get shareable link" id="share-static-popover-trigger">
+            <svg role="presentation" aria-hidden="true"
+                class="glue-icon glue-icon--social glue-icon--color-sharelink glue-icon--24px">
+              <use href="/gr/static/assets/icons/glue-icons.svg#link"></use>
+            </svg>
+          </div>
+
+          <div class="glue-social__dialog" id="share-popover-dialog">
+            <svg role="presentation" aria-hidden="true"
+                class="glue-icon glue-icon--social glue-icon--color-sharelink glue-icon--24px">
+              <use href="/public/icons/glue-icons.svg#link"></use>
+            </svg>
+            <div class="glue-social__copy" glue-copy-success="Copied to clipboard"
+                glue-copy-fail="Press Ctrl+C or ⌘+C to copy">
+              <input class="glue-social__copy-input" readonly="" type="text"
+                  value="http://research.google/blog/pathways-language-model-palm-scaling-to-540-billion-parameters-for-breakthrough-performance/" aria-label="URL">
+              <button class="glue-social__copy-btn" id="share-copy-btn" data-gt-method="link-copied">Copy link</button>
+            </div>
+            <div aria-label="Close" class="glue-social__close-btn">
+              ×
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+            </li>
+            
+        </ul>
+    
+</section>
+</div>
+                </div>
+
+                <div class="blog-detail-wrapper js-gt-blog-detail-wrapper" data-gt-publish-date="20220404">
+                    
+                    
+    <div class="rich-text --theme- --mode-" data-gt-id="rich_text" data-gt-component-name="">
+    
+
+
+
+
+    
+
+<p>
+In recent years, large neural networks trained for language understanding and generation have achieved impressive results across a wide range of tasks. <a href="https://arxiv.org/abs/2005.14165" target="_blank" rel="noopener noreferrer">GPT-3</a> first showed that large language models (LLMs) can be used for <em>few-shot</em> <i>learning</i> and can achieve impressive results without large-scale task-specific data collection or model parameter updating. More recent LLMs, such as <a href="https://ai.googleblog.com/2021/12/more-efficient-in-context-learning-with.html" target="_blank" rel="noopener noreferrer">GLaM</a>, <a href="https://ai.googleblog.com/2022/01/lamda-towards-safe-grounded-and-high.html" target="_blank" rel="noopener noreferrer">LaMDA</a>, <a href="https://arxiv.org/abs/2112.11446" target="_blank" rel="noopener noreferrer">Gopher</a>, and <a href="https://arxiv.org/abs/2201.11990" target="_blank" rel="noopener noreferrer">Megatron-Turing NLG</a>, achieved state-of-the-art few-shot results on many tasks by scaling model size, using sparsely activated modules, and training on larger datasets from more diverse sources. Yet much work remains in understanding the capabilities that emerge with few-shot learning as we push the limits of model scale.
+</p><a name='more'></a>
+<p>
+Last year Google Research announced our vision for <a href="https://blog.google/technology/ai/introducing-pathways-next-generation-ai-architecture/" target="_blank" rel="noopener noreferrer">Pathways</a>, a single model that could generalize across domains and tasks while being highly efficient. An important milestone toward realizing this vision was to develop the new <a href="https://arxiv.org/abs/2203.12533" target="_blank" rel="noopener noreferrer">Pathways system</a> to orchestrate distributed computation for accelerators. In “<a href="https://goo.gle/palm-paper" target="_blank" rel="noopener noreferrer">PaLM: Scaling Language Modeling with Pathways</a>”, we introduce the Pathways Language Model (PaLM), a 540-billion parameter, dense decoder-only <a href="https://ai.googleblog.com/2017/08/transformer-novel-neural-network.html" target="_blank" rel="noopener noreferrer">Transformer</a> model trained with the <a href="https://arxiv.org/abs/2203.12533" target="_blank" rel="noopener noreferrer">Pathways system</a>, which enabled us to efficiently train a single model across multiple <a href="https://cloud.google.com/blog/topics/tpus/google-showcases-cloud-tpu-v4-pods-for-large-model-training" target="_blank" rel="noopener noreferrer">TPU v4 Pods</a>. We evaluated PaLM on hundreds of language understanding and generation tasks, and found that it achieves state-of-the-art few-shot performance across most tasks, by significant margins in many cases. 
+</p>
+<table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto;"><tbody><tr><td style="text-align: center;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgLXCWMlipdu0gFF6hsiJHbxg1zSaEkdDWfl-8RakQuW__8RPvlOS9KGIScNCytxT4jz9isnx0GLMwbS1G0Q4WdXzT42GszgfwIIAVX1H3J-43lVWWqcb--q9cPsxCsJFFz2dRfpKgEmLe-xfIyBqQuPq1BPYcK9CtAK1_xnhgvgAAx0GeZmODJxGNMYQ/s1600/image8.gif" target="_blank" rel="noopener noreferrer"><img border="0" data-original-height="583" data-original-width="1600" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgLXCWMlipdu0gFF6hsiJHbxg1zSaEkdDWfl-8RakQuW__8RPvlOS9KGIScNCytxT4jz9isnx0GLMwbS1G0Q4WdXzT42GszgfwIIAVX1H3J-43lVWWqcb--q9cPsxCsJFFz2dRfpKgEmLe-xfIyBqQuPq1BPYcK9CtAK1_xnhgvgAAx0GeZmODJxGNMYQ/s16000/image8.gif" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">As the scale of the model increases, the performance improves across tasks while also unlocking new capabilities.</td></tr></tbody></table>
+<div style="line-height:40%;">
+    <br>
+</div>
+<h2>Training a 540-Billion Parameter Language Model with Pathways</h2><p>
+PaLM demonstrates the first large-scale use of the Pathways system to scale training to 6144 chips, the largest TPU-based system configuration used for training to date. The training is scaled using <a href="https://en.wikipedia.org/wiki/Data_parallelism" target="_blank" rel="noopener noreferrer">data parallelism</a> at the Pod level across two <a href="https://cloud.google.com/blog/topics/tpus/google-showcases-cloud-tpu-v4-pods-for-large-model-training" target="_blank" rel="noopener noreferrer">Cloud TPU v4 Pods</a>, while using standard data and model parallelism within each Pod. This is a significant increase in scale compared to most previous LLMs, which were either trained on a single TPU v3 Pod (e.g., <a href="https://arxiv.org/abs/2112.06905" target="_blank" rel="noopener noreferrer">GLaM</a>, <a href="https://arxiv.org/abs/2201.08239" target="_blank" rel="noopener noreferrer">LaMDA</a>), used pipeline parallelism to scale to 2240 A100 GPUs across GPU clusters (<a href="https://arxiv.org/abs/2201.11990.pdf" target="_blank" rel="noopener noreferrer">Megatron-Turing NLG</a>) or used multiple TPU v3 Pods (<a href="https://arxiv.org/abs/2112.11446" target="_blank" rel="noopener noreferrer">Gopher</a>) with a maximum scale of 4096 TPU v3 chips.
+</p>
+<p>
+PaLM achieves a training efficiency of 57.8% hardware FLOPs utilization, <em>the highest yet achieved for LLMs at this scale</em>. This is due to a combination of the parallelism strategy and a reformulation of the <a href="https://arxiv.org/abs/1706.03762.pdf" target="_blank" rel="noopener noreferrer">Transformer block</a> that allows for <a href="https://en.wikipedia.org/wiki/Attention_(machine_learning)" target="_blank" rel="noopener noreferrer">attention</a> and <a href="https://en.wikipedia.org/wiki/Feedforward_neural_network" target="_blank" rel="noopener noreferrer">feedforward</a> layers to be computed in parallel, enabling speedups from TPU compiler optimizations.
+</p>
+<p>
+PaLM was trained using a combination of English and multilingual datasets that include high-quality web documents, books, Wikipedia, conversations, and GitHub code. We also created a “lossless” vocabulary that preserves all whitespace (especially important for code), splits out-of-vocabulary Unicode characters into bytes, and splits numbers into individual tokens, one for each digit.
+</p>
+<div style="line-height:40%;">
+    <br>
+</div>
+<h2>Breakthrough Capabilities on Language, Reasoning, and Code Tasks</h2><p>
+PaLM shows breakthrough capabilities on numerous very difficult tasks. We highlight a few examples for language understanding and generation, reasoning, and code-related tasks below.
+</p>
+<div style="line-height:40%;">
+    <br>
+</div>
+<h3>Language Understanding and Generation</h3><p>
+We evaluated PaLM on 29 widely-used English natural language processing (NLP) tasks. PaLM 540B surpassed few-shot performance of prior large models, such as <a href="https://arxiv.org/abs/2112.06905.pdf" target="_blank" rel="noopener noreferrer">GLaM</a>, <a href="https://arxiv.org/abs/2005.14165" target="_blank" rel="noopener noreferrer">GPT-3</a>, <a href="https://arxiv.org/abs/2201.11990.pdf" target="_blank" rel="noopener noreferrer">Megatron-Turing NLG</a>, <a href="https://arxiv.org/abs/2112.11446" target="_blank" rel="noopener noreferrer">Gopher</a>, <a href="https://arxiv.org/abs/2203.15556" target="_blank" rel="noopener noreferrer">Chinchilla</a>, and <a href="https://arxiv.org/abs/2201.08239.pdf" target="_blank" rel="noopener noreferrer">LaMDA</a>, on 28 of 29 of tasks that span question-answering tasks (open-domain closed-book variant), <a href="https://en.wikipedia.org/wiki/Cloze_test" target="_blank" rel="noopener noreferrer">cloze</a> and sentence-completion tasks, <a href="https://en.wikipedia.org/wiki/Winograd_schema_challenge" target="_blank" rel="noopener noreferrer">Winograd</a>-style tasks, in-context reading comprehension tasks, common-sense reasoning tasks, <a href="https://arxiv.org/abs/1905.00537" target="_blank" rel="noopener noreferrer">SuperGLUE</a> tasks, and natural language inference tasks.</p>
+<table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto;"><tbody><tr><td style="text-align: center;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhJ0IurIGscLmiuGVKNqXv3G_vKjlSpRbL_wkMSSiva3SGwOtHcHKWGab324yW6-TpmfnsNNlO9fqw2KtqFPa6X4AwAqdLSlEkPsF22NZSu1HaaOImnshjq0ahMlr6C1sh5NlvnZ2OqFg0D-7FY5w1KR-mqy3IJPOvqe6hrRfGcabJa7xSjhtYbWv4SiA/s1312/chart.png" target="_blank" rel="noopener noreferrer"><img border="0" data-original-height="590" data-original-width="1312" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhJ0IurIGscLmiuGVKNqXv3G_vKjlSpRbL_wkMSSiva3SGwOtHcHKWGab324yW6-TpmfnsNNlO9fqw2KtqFPa6X4AwAqdLSlEkPsF22NZSu1HaaOImnshjq0ahMlr6C1sh5NlvnZ2OqFg0D-7FY5w1KR-mqy3IJPOvqe6hrRfGcabJa7xSjhtYbWv4SiA/s16000/chart.png" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">PaLM 540B performance improvement over prior state-of-the-art (SOTA) results on 29 English-based NLP tasks.</td></tr></tbody></table>
+<p>
+In addition to English NLP tasks, PaLM also shows strong performance on multilingual NLP benchmarks, including translation, even though only 22% of the training corpus is non-English.
+</p>
+<p>
+We also probe emerging and future capabilities of PaLM on the <a href="https://github.com/google/BIG-bench" target="_blank" rel="noopener noreferrer">Beyond the Imitation Game Benchmark</a> (BIG-bench), a recently released suite of more than 150 new language modeling tasks, and find that PaLM achieves breakthrough performance. We compare the performance of PaLM to <a href="https://arxiv.org/abs/2112.11446" target="_blank" rel="noopener noreferrer">Gopher</a> and <a href="https://arxiv.org/abs/2203.15556.pdf" target="_blank" rel="noopener noreferrer">Chinchilla</a>, averaged across a common subset of 58 of these tasks. Interestingly, we note that PaLM’s performance as a function of scale follows a log-linear behavior similar to prior models, suggesting that <em>performance improvements from scale have not yet plateaued</em>. PaLM 540B 5-shot also does better than the average performance of people asked to solve the same tasks.
+</p>
+<table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto;"><tbody><tr><td style="text-align: center;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgz-gW-L-HTRNa4FFX_HrnUnoQhXc2b7tjd-NFV_3KqG0n2pDrPzAhP-3Zx70jtygkDZV_VeE6u-XCjRWgY3ec_Ise8lK02iRuv6VzhJcayGnze6fv65oc3TgZ6JvfRso_xCW56-xI4xnScI0-oVsOu2kH3mBoU1CvtBVD99twdUtqsxyJj1DlAt3m1nQ/s1172/Screenshot%202022-04-01%205.25.47%20PM.png" target="_blank" rel="noopener noreferrer"><img border="0" data-original-height="642" data-original-width="1172" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgz-gW-L-HTRNa4FFX_HrnUnoQhXc2b7tjd-NFV_3KqG0n2pDrPzAhP-3Zx70jtygkDZV_VeE6u-XCjRWgY3ec_Ise8lK02iRuv6VzhJcayGnze6fv65oc3TgZ6JvfRso_xCW56-xI4xnScI0-oVsOu2kH3mBoU1CvtBVD99twdUtqsxyJj1DlAt3m1nQ/s16000/Screenshot%202022-04-01%205.25.47%20PM.png" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Scaling behavior of PaLM on a subset of 58 BIG-bench tasks.&nbsp;</td></tr></tbody></table>
+<p>
+PaLM demonstrates impressive natural language understanding and generation capabilities on several BIG-bench tasks. For example, the model can distinguish cause and effect, understand conceptual combinations in appropriate contexts, and even guess the movie from an emoji.
+</p>
+<table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto;"><tbody><tr><td style="text-align: center;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhLmQjS3gOQ2x7ru3xovYjVw-Yr2fKDCqhDHByQZitD92Yu4L-v2BBa5f_VMfpWM4D0930Dmk35EY1TqGrYUtMQqJO41hkLqXuu51eOpXZ3PvYPSjf5stfEJNJn2idWnRYCCEgBiJuLDTXX5Fgt-Mk13kCKdO12JShGvDO_cArtLKv8U8obJaHiL5ASQg/s1320/Big%20Bench%20Sped%20Up%20Cropped.gif" target="_blank" rel="noopener noreferrer"><img border="0" data-original-height="732" data-original-width="1320" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhLmQjS3gOQ2x7ru3xovYjVw-Yr2fKDCqhDHByQZitD92Yu4L-v2BBa5f_VMfpWM4D0930Dmk35EY1TqGrYUtMQqJO41hkLqXuu51eOpXZ3PvYPSjf5stfEJNJn2idWnRYCCEgBiJuLDTXX5Fgt-Mk13kCKdO12JShGvDO_cArtLKv8U8obJaHiL5ASQg/s16000/Big%20Bench%20Sped%20Up%20Cropped.gif" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Examples that showcase PaLM 540B 1-shot performance on BIG-bench tasks: labeling cause and effect, conceptual understanding, guessing movies from emoji, and finding synonyms and counterfactuals.</td></tr></tbody></table>
+<div style="line-height:40%;">
+    <br>
+</div>
+<h3>Reasoning</h3><p>
+By combining model scale with <a href="https://arxiv.org/abs/2201.11903.pdf" target="_blank" rel="noopener noreferrer">chain-of-thought prompting</a><em>, </em>PaLM shows breakthrough capabilities on reasoning tasks that require multi-step arithmetic or common-sense reasoning. Prior LLMs, like <a href="https://arxiv.org/abs/2112.11446" target="_blank" rel="noopener noreferrer">Gopher</a>, saw less benefit from model scale in improving performance.
+</p>
+<table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto;"><tbody><tr><td style="text-align: center;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiCZkpChUnyojDE_nPmg-xZyTFgjo4qgBB7Pmbi0ZlIVNiiD2DXV1dcMW-QMIn-CTNNTA7bJlln0p8wuNju06E62adtn4C-sRngwKhvhA1-f0-8knYuWB-m3MyIXclYAQNkojWaf-kfibm1OjFfhC45EHkeJkVNKid-K2dd_O1c5H-rVx8ypOTuQv8ELQ/s1228/Screenshot%202022-04-01%205.34.54%20PM.png" target="_blank" rel="noopener noreferrer"><img border="0" data-original-height="704" data-original-width="1228" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiCZkpChUnyojDE_nPmg-xZyTFgjo4qgBB7Pmbi0ZlIVNiiD2DXV1dcMW-QMIn-CTNNTA7bJlln0p8wuNju06E62adtn4C-sRngwKhvhA1-f0-8knYuWB-m3MyIXclYAQNkojWaf-kfibm1OjFfhC45EHkeJkVNKid-K2dd_O1c5H-rVx8ypOTuQv8ELQ/s16000/Screenshot%202022-04-01%205.34.54%20PM.png" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Standard prompting versus chain-of-thought prompting for an example grade-school math problem. Chain-of-thought prompting decomposes the prompt for a multi-step reasoning problem into intermediate steps (highlighted in yellow), similar to how a person would approach it.</td></tr></tbody></table>
+<p>
+We observed strong performance from PaLM 540B combined with chain-of-thought prompting on three arithmetic datasets and two commonsense reasoning datasets. For example, with 8-shot prompting, PaLM solves 58% of the problems in <a href="https://github.com/openai/grade-school-math" target="_blank" rel="noopener noreferrer">GSM8K</a>, a benchmark of thousands of challenging grade school level math questions, outperforming the <a href="https://arxiv.org/abs/2110.14168" target="_blank" rel="noopener noreferrer">prior top score</a> of 55% achieved by fine-tuning the GPT-3 175B model with a training set of 7500 problems and combining it with an external calculator and verifier. 
+</p>
+<p>
+This new score is especially interesting, as it approaches the 60% average of problems solved by 9-12 year olds, who are the target audience for the question set. We suspect that separate encoding of digits in the PaLM vocabulary helps enable these performance improvements.
+</p>
+<p>
+Remarkably, PaLM can even generate explicit explanations for scenarios that require a complex combination of multi-step logical inference, world knowledge, and deep language understanding. For example, it can provide high quality explanations for novel jokes not found on the web.
+</p>
+<table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto;"><tbody><tr><td style="text-align: center;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgHKfA6Vxw9li1vDfDChv-yzCp4ubKpOR2D62IMui3mAe5Un0jZ3P2_60stEZdtJNUt1b2XNzXbPoM0EO6B7UGneMd-2Bq0JK0gC5rIMSgQM02jwe5VmGxYLo_jz78vnG79oDIpv3mNu6kD0tqAUT6pcYkbkRpeoO9P-92I5O8ZsZefCpcxfIfEJREAyA/s1999/image5.png" target="_blank" rel="noopener noreferrer"><img border="0" data-original-height="1206" data-original-width="1999" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgHKfA6Vxw9li1vDfDChv-yzCp4ubKpOR2D62IMui3mAe5Un0jZ3P2_60stEZdtJNUt1b2XNzXbPoM0EO6B7UGneMd-2Bq0JK0gC5rIMSgQM02jwe5VmGxYLo_jz78vnG79oDIpv3mNu6kD0tqAUT6pcYkbkRpeoO9P-92I5O8ZsZefCpcxfIfEJREAyA/s16000/image5.png" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">PaLM explains an original joke with two-shot prompts.</td></tr></tbody></table>
+<div style="line-height:40%;">
+    <br>
+</div>
+<h3>Code Generation</h3><p>
+LLMs have also been shown [<a href="https://arxiv.org/abs/2107.03374.pdf" target="_blank" rel="noopener noreferrer">1</a>, <a href="https://arxiv.org/abs/2108.07732.pdf" target="_blank" rel="noopener noreferrer">2</a>, <a href="https://www.deepmind.com/blog/competitive-programming-with-alphacode" target="_blank" rel="noopener noreferrer">3</a>, <a href="https://arxiv.org/abs/2112.02969" target="_blank" rel="noopener noreferrer">4</a>] to generalize well to coding tasks, such as writing code given a natural language description (text-to-code), translating code from one language to another, and fixing compilation errors (code-to-code).
+</p>
+<p>
+PaLM 540B shows strong performance across coding tasks and natural language tasks in a single model, even though it has only 5% code in the pre-training dataset. Its few-shot performance is especially remarkable because it is on par with the fine-tuned <a href="https://arxiv.org/abs/2107.03374.pdf" target="_blank" rel="noopener noreferrer">Codex 12B</a> while using <em>50 times less <a href="https://en.wikipedia.org/wiki/Python_(programming_language)" target="_blank" rel="noopener noreferrer">Python</a> code</em> for training. This result reinforces <a href="https://arxiv.org/abs/2001.08361" target="_blank" rel="noopener noreferrer">earlier findings</a> that larger models can be more sample efficient than smaller models because they transfer learning from both other programming languages and natural language data more effectively.
+</p>
+<table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto;"><tbody><tr><td style="text-align: center;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj6gdPPoicGB0nweCccX9zN8mEwp8Nye503s604BUI1EO36-iTJNe3cJptm1lpWX5oEvXRoQl8cCRtYI1UkD5bfkN5zModWSoxMOGIlxBbNvI-g4SMsdEWZTDbR-ifbV7HQK0VX0yWXsSqGbR_vu_gtAUJ5BgJyAODkxiqA6I2GKkFn3mrKzKbd0aZVzA/s1200/Coding%20Examples%20v2%20Cropped.gif" target="_blank" rel="noopener noreferrer"><img border="0" data-original-height="666" data-original-width="1200" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj6gdPPoicGB0nweCccX9zN8mEwp8Nye503s604BUI1EO36-iTJNe3cJptm1lpWX5oEvXRoQl8cCRtYI1UkD5bfkN5zModWSoxMOGIlxBbNvI-g4SMsdEWZTDbR-ifbV7HQK0VX0yWXsSqGbR_vu_gtAUJ5BgJyAODkxiqA6I2GKkFn3mrKzKbd0aZVzA/s16000/Coding%20Examples%20v2%20Cropped.gif" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Examples of a fine-tuned PaLM 540B model on text-to-code tasks, such as <a href="https://github.com/openai/grade-school-math" target="_blank" rel="noopener noreferrer">GSM8K-</a>Python and <a href="https://arxiv.org/abs/2107.03374.pdf" target="_blank" rel="noopener noreferrer">HumanEval</a>, and code-to-code tasks, such as <a href="https://github.com/facebookresearch/TransCoder" target="_blank" rel="noopener noreferrer">Transcoder</a>.</td></tr></tbody></table>
+<p>
+We also see a further increase in performance by fine-tuning PaLM on a Python-only code dataset, which we refer to as PaLM-Coder. For an example code repair task called <a href="https://ojs.aaai.org/index.php/AAAI/article/view/10742" target="_blank" rel="noopener noreferrer">DeepFix</a>, where the objective is to modify initially broken <a href="https://en.wikipedia.org/wiki/C_(programming_language)" target="_blank" rel="noopener noreferrer">C</a> programs until they compile successfully, PaLM-Coder 540B demonstrates impressive performance, achieving a compile rate of 82.1%, which outperforms the prior 71.7% <a href="https://arxiv.org/abs/2106.06600.pdf" target="_blank" rel="noopener noreferrer">state of the art</a>. This opens up <a href="https://arxiv.org/abs/1911.01205" target="_blank" rel="noopener noreferrer">opportunities for fixing more complex errors</a> that arise during software development.
+</p><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto;"><tbody><tr><td style="text-align: center;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjU6EWTNme8i8UftAzTxGA9X0n8nLzA5pkVV0BgzCRrxqddh7A65r4_svL5vYJl49HWN2QYNRFQgF6TrGpncz2Q_TuLvA2ynGZq9wnFP7wEnhSbkS-_viwhHtdahGozhCxHeILT7XS4w4cfGkJtum5nbUk6Mi9TP5s_OWRkvPAznhfWIOsvuVX8QgoisA/s2951/deepfix_task_879.png" target="_blank" rel="noopener noreferrer"><img border="0" data-original-height="968" data-original-width="2951" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjU6EWTNme8i8UftAzTxGA9X0n8nLzA5pkVV0BgzCRrxqddh7A65r4_svL5vYJl49HWN2QYNRFQgF6TrGpncz2Q_TuLvA2ynGZq9wnFP7wEnhSbkS-_viwhHtdahGozhCxHeILT7XS4w4cfGkJtum5nbUk6Mi9TP5s_OWRkvPAznhfWIOsvuVX8QgoisA/s16000/deepfix_task_879.png" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">An example from the DeepFix Code Repair task. The fine-tuned PaLM-Coder 540B fixes compilation errors (<b>left</b>, in red) to a version of code that compiles (<b>right</b>).</td></tr></tbody></table>
+<div style="line-height:40%;">
+    <br>
+</div>
+<h2>Ethical Considerations</h2><p>
+Recent research has highlighted various potential risks associated with LLMs trained on web text. It is crucial to analyze and document such potential undesirable risks through transparent artifacts such as <a href="https://modelcards.withgoogle.com/about" target="_blank" rel="noopener noreferrer">model cards</a> and datasheets, which also include information on intended use and testing. To this end, our <a href="https://goo.gle/palm-paper" target="_blank" rel="noopener noreferrer">paper</a> provides a datasheet, model card and Responsible AI benchmark results, and it reports thorough analyses of the dataset and model outputs for biases and risks. While the analysis helps outline some potential risks of the model, domain- and task-specific analysis is essential to truly calibrate, contextualize, and mitigate possible harms. Further understanding of risks and benefits of these models is a topic of ongoing research, together with developing scalable solutions that can put guardrails against malicious uses of language models. 
+</p>
+<div style="line-height:40%;">
+    <br>
+</div>
+<h2>Conclusion and Future Work</h2><p>
+PaLM demonstrates the scaling capability of the <a href="https://arxiv.org/abs/2203.12533" target="_blank" rel="noopener noreferrer">Pathways system</a> to thousands of accelerator chips across two TPU v4 Pods by training a 540-billion parameter model efficiently with a well-studied, well-established recipe of a dense decoder-only Transformer model. Pushing the limits of model scale enables breakthrough few-shot performance of PaLM across a variety of natural language processing, reasoning, and code tasks. 
+</p>
+<p>
+PaLM paves the way for even more capable models by combining the scaling capabilities with novel architectural choices and training schemes, and brings us closer to the <a href="https://blog.google/technology/ai/introducing-pathways-next-generation-ai-architecture/" target="_blank" rel="noopener noreferrer">Pathways</a> vision: 
+</p>
+<p></p>
+<br>
+<table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: 3em; margin-right: 3em; text-align: center;"><tbody>
+<tr><td style="color: #4f4f4f; text-align: center;"><em>“Enable a single AI system to generalize across thousands or millions of tasks, to understand different types of data, and to do so with remarkable efficiency."</em></td></tr>
+</tbody></table>
+<div style="line-height:40%;">
+    <br>
+</div>
+<br>
+<h2>Acknowledgements</h2><p>
+<em>PaLM is the result of a large, collaborative effort by many teams within Google Research and across Alphabet. We’d like to thank the entire PaLM team for their contributions: Jacob Devlin, Maarten Bosma, Gaurav Mishra, Adam Roberts, Paul Barham, Hyung Won Chung, Charles Sutton, Sebastian Gehrmann, Parker Schuh, Kensen Shi, Sasha Tsvyashchenko, Joshua Maynez, Abhishek Rao, Parker Barnes, Yi Tay, Noam Shazeer, Vinodkumar Prabhakaran, Emily Reif, Nan Du, Ben Hutchinson, Reiner Pope, James Bradbury, Jacob Austin, Michael Isard, Guy Gur-Ari, Pengcheng Yin, Toju Duke, Anselm Levskaya, Sanjay Ghemawat, Sunipa Dev, Henryk Michalewski, Xavier Garcia, Vedant Misra, Kevin Robinson, Liam Fedus, Denny Zhou, Daphne Ippolito, David Luan, Hyeontaek Lim, Barret Zoph, Alexander Spiridonov, Ryan Sepassi, David Dohan, Shivani Agrawal, Mark Omernick, Andrew Dai, Thanumalayan Sankaranarayana Pillai, Marie Pellat, Aitor Lewkowycz, Erica Moreira, Rewon Child, Oleksandr Polozov, Katherine Lee, Zongwei Zhou, Xuezhi Wang, Brennan Saeta, Mark Diaz, Orhan Firat, Michele Catasta, and Jason Wei. PaLM builds on top of work by many, many teams at Google and we would especially like to recognize the T5X&nbsp;</em><em>team, the Pathways infrastructure team, the JAX team, the Flaxformer team, the XLA team, the Plaque team, the Borg team, and the Datacenter networking infrastructure team. We’d like to thank our co-authors on this blog post, Alexander Spiridonov and Maysam Moussalem, as well as Josh Newlan and Tom Small for the images and animations in this blog post. Finally, we would like to thank our advisors for the project: Noah Fiedel, Slav Petrov, Jeff Dean, Douglas Eck, and Kathy Meier-Hellstern.</em></p>
+</div>
+
+                    
+                </div>
+
+                
+    
+
+
+<section aria-label="List of footnotes" data-gt-id="footnotes" data-gt-component-name="Footnotes">
+  <ol class="js-footnotes footnotes">
+    
+  </ol>
+</section>
+
+
+                
+<section class="blog-labels" data-gt-id="blog_labels" data-gt-component-name="Blog Labels">
+    <ul class="blog-labels__list">
+        <span class="caption">Labels:</span> 
+        
+        <li class="caption">
+            <a class="caption" href="/blog/label/machine-intelligence">Machine Intelligence</a>
+            
+            <div class="blog-labels__spacer"></div>
+            
+        </li>
+        
+        <li class="caption">
+            <a class="caption" href="/blog/label/natural-language-processing">Natural Language Processing</a>
+            
+        </li>
+        
+    </ul>
+</section>
+
+            </div>
+            
+                <div class="glue-grid__col glue-grid__col--span-4-sm glue-grid__col--span-12-md glue-grid__col--span-3-lg">
+                    <div class="quicklinks-wrapper--desktop quicklinks-wrapper--sticky">
+                        <div class="block-quick_links">
+
+
+<section class="quicklinks">
+    
+        <h2 class="eyebrow">Quick links</h2>
+        <ul class="quicklinks__list">
+            
+            
+            <li class="quicklinks__item quicklinks__item--share js-quicklinks-share">
+                <button 
+                    class="quicklinks__share-button js-quicklinks-share__button" 
+                    aria-expanded="false"
+                    aria-controls="js-quicklinks-share__list">
+                    <span class="icon icon--share"></span>
+                    <span class="quicklinks__item__text">Share</span>
+                </button>
+                
+
+
+
+<section class="glue-social glue-social--monochrome quicklinks__share-list js-quicklinks-share__list glue-elevation-level-1 js-gt-share-wrapper">
+  <div class="glue-social__group">
+    <ul class="glue-social__list" role="list">
+
+      <li class="glue-social__item">
+        <a class="glue-social__link" href="https://twitter.com/intent/tweet?text=http%3A//research.google/blog/pathways-language-model-palm-scaling-to-540-billion-parameters-for-breakthrough-performance/"
+            title="Share on Twitter" target="_blank" rel="noopener" data-gt-method="x">
+            <svg role="presentation" aria-hidden="true"
+              class="glue-icon glue-icon--social glue-icon--24px">
+              <use href="/gr/static/assets/icons/twitter-x.svg#twitter-x"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="glue-social__item">
+        <a class="glue-social__link" href="https://www.facebook.com/sharer/sharer.php?u=http%3A//research.google/blog/pathways-language-model-palm-scaling-to-540-billion-parameters-for-breakthrough-performance/"
+            title="Share on Facebook" target="_blank" rel="noopener" data-gt-method="facebook">
+          <svg role="presentation" aria-hidden="true"
+              class="glue-icon glue-icon--social glue-icon--color-facebook glue-icon--24px">
+            <use href="/gr/static/assets/icons/facebook.svg#facebook"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="glue-social__item">
+        <a class="glue-social__link" href="https://www.linkedin.com/shareArticle?url=http%3A//research.google/blog/pathways-language-model-palm-scaling-to-540-billion-parameters-for-breakthrough-performance/&amp;mini=true" title="Share on LinkedIn" target="_blank" rel="noopener" data-gt-method="linkedin">
+          <svg role="presentation" aria-hidden="true"
+              class="glue-icon glue-icon--social glue-icon--color-linkedin glue-icon--24px">
+            <use href="/gr/static/assets/icons/glue-icons.svg#post-linkedin"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="glue-social__item">
+        <a class="glue-social__link" href="mailto:name@example.com?subject=Check%20out%20this%20site&body=Check%20out%20http%3A//research.google/blog/pathways-language-model-palm-scaling-to-540-billion-parameters-for-breakthrough-performance/" title="Send via Email" data-gt-method="email">
+          <svg role="presentation" aria-hidden="true"
+              class="glue-icon glue-icon--social glue-icon--color-sharemail glue-icon--24px">
+            <use href="/gr/static/assets/icons/glue-icons.svg#email"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="glue-social__item">
+        <div class="glue-social__popover">
+          <div class="glue-social__icon-trigger" aria-label="Get shareable link" title="Get shareable link" id="share-static-popover-trigger">
+            <svg role="presentation" aria-hidden="true"
+                class="glue-icon glue-icon--social glue-icon--color-sharelink glue-icon--24px">
+              <use href="/gr/static/assets/icons/glue-icons.svg#link"></use>
+            </svg>
+          </div>
+
+          <div class="glue-social__dialog" id="share-popover-dialog">
+            <svg role="presentation" aria-hidden="true"
+                class="glue-icon glue-icon--social glue-icon--color-sharelink glue-icon--24px">
+              <use href="/public/icons/glue-icons.svg#link"></use>
+            </svg>
+            <div class="glue-social__copy" glue-copy-success="Copied to clipboard"
+                glue-copy-fail="Press Ctrl+C or ⌘+C to copy">
+              <input class="glue-social__copy-input" readonly="" type="text"
+                  value="http://research.google/blog/pathways-language-model-palm-scaling-to-540-billion-parameters-for-breakthrough-performance/" aria-label="URL">
+              <button class="glue-social__copy-btn" id="share-copy-btn" data-gt-method="link-copied">Copy link</button>
+            </div>
+            <div aria-label="Close" class="glue-social__close-btn">
+              ×
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+            </li>
+            
+        </ul>
+    
+</section>
+</div>
+                    </div>
+                </div>
+            
+        </div>
+    </div>
+    
+    
+
+<section class="related-posts offset-two-up --theme-dark" data-gt-id="related_blog_posts" data-gt-component-name="Related Blog Posts">
+    <div class="glue-page glue-grid">
+        <div
+            class="offset-two-up__left-col glue-grid__col glue-grid__col--span-4-sm glue-grid__col--span-12-md glue-grid__col--span-3-lg">
+            <h3 class="offset-two-up__headline headline-3">Other posts of interest</h3>
+        </div>
+        <div class="glue-grid__col glue-grid__col--span-4-sm glue-grid__col--span-12-md glue-grid__col--span-9-lg">
+            <ul class="card-stack--basic nested-glue-grid-override">
+                
+                <li class="glue-grid__col glue-grid__col--span-4-md glue-grid__col--span-4-sm">
+                    
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+    <a class="glue-card not-glue " href="/blog/validating-random-circuit-sampling-as-a-benchmark-for-measuring-quantum-progress/" aria-label="" >
+
+        <div class="glue-card__inner">
+            
+    
+
+
+
+<div class="related-posts__image">
+    
+    
+    
+    <img src="https://storage.googleapis.com/gweb-research2023-media/original_images/RCS_Quantum_2.png" alt="" />
+</div>
+
+
+
+            <div class="glue-card__content --no-media">
+  
+    <p class="glue-label glue-spacer-1-bottom">October 10, 2024</p>
+  
+
+  <span class="headline-5 js-gt-item-id">
+    Validating random circuit sampling as a benchmark for measuring quantum progress
+  </span>
+
+  
+</div>
+
+
+            
+    <ul class="glue-card__link-list">
+        
+            <li class="glue-card__link-list__item">
+                <span class="not-glue caption">
+                    Algorithms &amp; Theory
+                    
+                    <span class="glue-card__link-list__spacer">&#183;</span>
+                    
+                </span>
+            </li>
+        
+            <li class="glue-card__link-list__item">
+                <span class="not-glue caption">
+                    Machine Intelligence
+                    
+                    <span class="glue-card__link-list__spacer">&#183;</span>
+                    
+                </span>
+            </li>
+        
+            <li class="glue-card__link-list__item">
+                <span class="not-glue caption">
+                    Quantum
+                    
+                </span>
+            </li>
+        
+    </ul>
+
+
+
+        
+            
+
+        
+        </div>
+
+    </a>
+
+
+
+                </li>
+                
+                <li class="glue-grid__col glue-grid__col--span-4-md glue-grid__col--span-4-sm">
+                    
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+    <a class="glue-card not-glue " href="/blog/tx-llm-supporting-therapeutic-development-with-large-language-models/" aria-label="" >
+
+        <div class="glue-card__inner">
+            
+    
+
+
+
+<div class="related-posts__image">
+    
+    
+    
+    <img src="https://storage.googleapis.com/gweb-research2023-media/original_images/TxLLM-1b-UseCases.png" alt="" />
+</div>
+
+
+
+            <div class="glue-card__content --no-media">
+  
+    <p class="glue-label glue-spacer-1-bottom">October 9, 2024</p>
+  
+
+  <span class="headline-5 js-gt-item-id">
+    Tx-LLM: Supporting therapeutic development with large language models
+  </span>
+
+  
+</div>
+
+
+            
+    <ul class="glue-card__link-list">
+        
+            <li class="glue-card__link-list__item">
+                <span class="not-glue caption">
+                    Health &amp; Bioscience
+                    
+                    <span class="glue-card__link-list__spacer">&#183;</span>
+                    
+                </span>
+            </li>
+        
+            <li class="glue-card__link-list__item">
+                <span class="not-glue caption">
+                    Machine Intelligence
+                    
+                </span>
+            </li>
+        
+    </ul>
+
+
+
+        
+            
+
+        
+        </div>
+
+    </a>
+
+
+
+                </li>
+                
+                <li class="glue-grid__col glue-grid__col--span-4-md glue-grid__col--span-4-sm">
+                    
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+    <a class="glue-card not-glue " href="/blog/augmented-object-intelligence-with-xr-objects/" aria-label="" >
+
+        <div class="glue-card__inner">
+            
+    
+
+
+
+<div class="related-posts__image">
+    
+    
+    
+    <img src="https://storage.googleapis.com/gweb-research2023-media/original_images/XR-Objects_user_prompt.png" alt="" />
+</div>
+
+
+
+            <div class="glue-card__content --no-media">
+  
+    <p class="glue-label glue-spacer-1-bottom">October 1, 2024</p>
+  
+
+  <span class="headline-5 js-gt-item-id">
+    Augmented object intelligence with XR-Objects
+  </span>
+
+  
+</div>
+
+
+            
+    <ul class="glue-card__link-list">
+        
+            <li class="glue-card__link-list__item">
+                <span class="not-glue caption">
+                    Generative AI
+                    
+                    <span class="glue-card__link-list__spacer">&#183;</span>
+                    
+                </span>
+            </li>
+        
+            <li class="glue-card__link-list__item">
+                <span class="not-glue caption">
+                    Human-Computer Interaction and Visualization
+                    
+                    <span class="glue-card__link-list__spacer">&#183;</span>
+                    
+                </span>
+            </li>
+        
+            <li class="glue-card__link-list__item">
+                <span class="not-glue caption">
+                    Natural Language Processing
+                    
+                </span>
+            </li>
+        
+    </ul>
+
+
+
+        
+            
+
+        
+        </div>
+
+    </a>
+
+
+
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</section>
+
+    
+</div>
+
+
+    </main>
+
+    
+
+<footer class="glue-footer">
+    
+    <div class="glue-page">
+        <section class="glue-social">
+            <div class="glue-social__group glue-social--monochrome">
+                <p class="glue-social__title glue-social__title--inline">
+                    Follow us
+                </p>
+                <nav class="js-gt-follow-us-wrapper" aria-label="Social media links">
+                    <ul class="glue-social__list" role="list">
+                        
+                        <li class="glue-social__item">
+                            <a class="glue-social__link"
+                                href="https://twitter.com/GoogleAI"
+                                title="Follow us on x"
+                                target="_blank"
+                                rel="noopener"
+                                data-gt-method="x""
+                            >
+                                <svg role="presentation" aria-hidden="true"
+                                    class="glue-icon glue-icon--social glue-icon--24px">
+                                    
+                                    <use href="/gr/static/assets/icons/twitter-x.svg#twitter-x"></use>
+                                    
+                                </svg>
+                            </a>
+                        </li>
+                        
+                        <li class="glue-social__item">
+                            <a class="glue-social__link"
+                                href="https://www.linkedin.com/showcase/googleresearch/"
+                                title="Follow us on linkedin"
+                                target="_blank"
+                                rel="noopener"
+                                data-gt-method="linkedin""
+                            >
+                                <svg role="presentation" aria-hidden="true"
+                                    class="glue-icon glue-icon--social glue-icon--24px">
+                                    
+                                    <use href="/gr/static/assets/icons/glue-icons.svg#post-linkedin"></use>
+                                    
+                                </svg>
+                            </a>
+                        </li>
+                        
+                        <li class="glue-social__item">
+                            <a class="glue-social__link"
+                                href="https://www.youtube.com/c/GoogleResearch"
+                                title="Follow us on youtube"
+                                target="_blank"
+                                rel="noopener"
+                                data-gt-method="youtube""
+                            >
+                                <svg role="presentation" aria-hidden="true"
+                                    class="glue-icon glue-icon--social glue-icon--24px">
+                                    
+                                    <use href="/gr/static/assets/icons/glue-icons.svg#video-youtube"></use>
+                                    
+                                </svg>
+                            </a>
+                        </li>
+                        
+                        <li class="glue-social__item">
+                            <a class="glue-social__link"
+                                href="https://github.com/google-research"
+                                title="Follow us on github"
+                                target="_blank"
+                                rel="noopener"
+                                data-gt-method="github""
+                            >
+                                <svg role="presentation" aria-hidden="true"
+                                    class="glue-icon glue-icon--social glue-icon--24px">
+                                    
+                                    <use href="/gr/static/assets/icons/github.svg#github"></use>
+                                    
+                                </svg>
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </nav>
+            </div>
+        </section>
+    </div>
+    <div class="glue-fullbleed"></div>
+    
+    <section class="glue-page">
+        <nav class="glue-footer__global" aria-label="Footer resource links">
+            <div class="glue-footer__logo">
+                <a href="https://www.google.com" title="Google" class="glue-footer__link">
+                    
+
+
+
+  
+
+<svg role="presentation" aria-hidden="true"  class="glue-icon  glue-footer__logo-img">
+  <use href="/gr/static/assets/icons/glue-icons.svg#google-solid-logo"></use>
+</svg>
+
+                </a>
+            </div>
+            <ul class="glue-footer__global-links glue-no-bullet js-gt-global-nav-wrapper" role="list">
+                
+                <li class="glue-footer__global-links-list-item" data-gt-primary="About Google">
+                    <a class="glue-footer__link" href="https://about.google/" target="_blank" rel="noopener">
+                        About Google
+                    </a>
+                </li>
+                
+                <li class="glue-footer__global-links-list-item" data-gt-primary="Google Products">
+                    <a class="glue-footer__link" href="https://about.google/intl/en/products/" target="_blank" rel="noopener">
+                        Google Products
+                    </a>
+                </li>
+                
+                <li class="glue-footer__global-links-list-item" data-gt-primary="Privacy">
+                    <a class="glue-footer__link" href="https://policies.google.com/privacy" target="_blank" rel="noopener">
+                        Privacy
+                    </a>
+                </li>
+                
+                <li class="glue-footer__global-links-list-item" data-gt-primary="Terms">
+                    <a class="glue-footer__link" href="https://policies.google.com/terms" target="_blank" rel="noopener">
+                        Terms
+                    </a>
+                </li>
+                
+            </ul>
+            <ul class="glue-footer__global-links glue-footer__global-links--extra glue-no-bullet" role="list">
+                <li class="glue-footer__global-links-list-item
+            glue-footer__global-links-list-item--extra">
+                    <a class="glue-footer__link" href="https://support.google.com/?hl=en">
+                        
+
+
+
+  
+
+<svg role="presentation" aria-hidden="true" aria-hidden="true" class="glue-icon glue-icon--24px glue-icon--footer-help">
+  <use href="/gr/static/assets/icons/glue-icons.svg#help"></use>
+</svg>
+
+                        Help
+                    </a>
+                </li>
+                <li class="glue-footer__global-links-list-item
+            glue-footer__global-links-list-item--extra">
+                    
+                        <button
+                            class="glue-footer__link google-feedback js-feedback-button"
+                            href=""
+                            data-product-id="5137383"
+                        >
+                            Submit feedback
+                        </button>
+                    
+                </li>
+            </ul>
+        </nav>
+    </section>
+</footer>
+
+
+    
+    <script src="https://www.gstatic.com/glue/v27_1/material-components-web.min.js"></script>
+    <script src="https://www.youtube.com/player_api"></script>
+    <script type="text/javascript" src="/gr/static/js/googleresearch.js?id=b70549917812130af912601ad763f13e"></script>
+    <script type="text/javascript" src="https://support.google.com/inapp/api.js"></script>
+
+    
+    
+    
+
+    <script src="https://www.gstatic.com/glue/cookienotificationbar/cookienotificationbar.min.js"
+        data-glue-cookie-notification-bar-category="2B">
+    </script>
+</body>
+
+</html>
+

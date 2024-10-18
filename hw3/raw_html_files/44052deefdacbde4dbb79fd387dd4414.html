@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0S64LXX5WF"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-0S64LXX5WF');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/app.css?1728930412" />
+    <script src="https://kit.fontawesome.com/f892e50f7b.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="/images/updated-logo.png" type="image/x-icon">
+    <meta name="description" content="Founded in 2009, LIFE is a worldwide membership organisation, non-political and non-religious, for Lebanese professionals in the diaspora. Initially open to Finance professionals, in 2020 LIFE expanded to include the fields of Consultancy, Law and Technology.">
+    <meta property="og:title" content="LIFE Lebanon">
+    <meta property="og:description" content="LIFE is a worldwide membership organisation.">
+    
+    <meta property="og:image" content="https://lifelebanon.com/storage/uploads/about/c219f09b4c30b29b05217bef9439b918.jpg">
+    <title>LIFE</title>
+    <script type="text/javascript"> _linkedin_partner_id = "3665514"; window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || []; window._linkedin_data_partner_ids.push(_linkedin_partner_id); </script><script type="text/javascript"> (function(l) { if (!l){window.lintrk = function(a,b){window.lintrk.q.push([a,b])}; window.lintrk.q=[]} var s = document.getElementsByTagName("script")[0]; var b = document.createElement("script"); b.type = "text/javascript";b.async = true; b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js"; s.parentNode.insertBefore(b, s);})(window.lintrk); </script> <noscript> <img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=3665514&fmt=gif" /> </noscript>
+    <script async crossorigin
+        src="https://applepay.cdn-apple.com/jsapi/1.latest/apple-pay-sdk.js"
+        ></script>
+</head>
+<body>
+    <div id="app">
+    </div>
+
+    <div class="js-cookie-consent cookie-consent">
+
+    <span class="cookie-consent__message">
+        We use cookies to improve your experience on our site. For more information, please read our <a href="https://lifelebanon.com/storage/pdfs/f37da8ea485c5061ccbf90d9763001ac.pdf" target="_blank">cookie policy</a>.
+    </span>
+
+    <button class="js-cookie-consent-agree cookie-consent__agree">
+        Allow cookies
+    </button>
+
+</div>
+
+    <script>
+
+        window.laravelCookieConsent = (function () {
+
+            const COOKIE_VALUE = 1;
+            const COOKIE_DOMAIN = 'lifelebanon.com';
+
+            function consentWithCookies() {
+                setCookie('laravel_cookie_consent', COOKIE_VALUE, 7300);
+                hideCookieDialog();
+            }
+
+            function cookieExists(name) {
+                return (document.cookie.split('; ').indexOf(name + '=' + COOKIE_VALUE) !== -1);
+            }
+
+            function hideCookieDialog() {
+                const dialogs = document.getElementsByClassName('js-cookie-consent');
+
+                for (let i = 0; i < dialogs.length; ++i) {
+                    dialogs[i].style.display = 'none';
+                }
+            }
+
+            function setCookie(name, value, expirationInDays) {
+                const date = new Date();
+                date.setTime(date.getTime() + (expirationInDays * 24 * 60 * 60 * 1000));
+                document.cookie = name + '=' + value
+                    + ';expires=' + date.toUTCString()
+                    + ';domain=' + COOKIE_DOMAIN
+                    + ';path=/'
+                    + ';samesite=lax';
+            }
+
+            if (cookieExists('laravel_cookie_consent')) {
+                hideCookieDialog();
+            }
+
+            const buttons = document.getElementsByClassName('js-cookie-consent-agree');
+
+            for (let i = 0; i < buttons.length; ++i) {
+                buttons[i].addEventListener('click', consentWithCookies);
+            }
+
+            return {
+                consentWithCookies: consentWithCookies,
+                hideCookieDialog: hideCookieDialog
+            };
+        })();
+    </script>
+
+
+    <script>var headerToken = "";</script>
+    <script src="/js/app.js?1728930412"></script>
+</body>
+</html>

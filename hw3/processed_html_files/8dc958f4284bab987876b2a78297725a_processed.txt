@@ -1,0 +1,23 @@
+Get started now
+The All-In-One AI Creative toolkit
+Generate images from text in seconds, edit photos with words, expand pictures beyond their borders, animate images or train custom AI models. Type words, get pictures — imagination is the only limit.
+As seen on
+AI Generator · Text to Image
+Generate original images at scale.
+Unleash your imagination and create any type of image or art with text. Use your creativity to mix different art styles, or just describe what you want to see and watch the AI bring your ideas to life. Use one of 60+ community-trained models to apply a unique style to your creations, or train custom model based on your own art.
+Add motion to images.
+Image to Video is a simple-to-use online tool for turning static images into short, 4-second videos. Our AI technology is designed to enhance motion fluidity. Experience the ultimate ease of transforming your photos into short videos with just a few clicks.
+Load more
+Real-Time · Text to Image
+Lightning fast image generator.
+Real-Time AI Generator is so fast that the image changes before your eyes while writing a prompt! Upload your pictures and edit them using prompts. Switch between three styles: Photorealism, Art, and Anime, to find the one that best fits your vision. Finally, if you don’t like what’s generated, just change the seed to get something new.
+Expand pictures beyond their borders.
+Make your artwork creation process faster thanks to AI. With our advanced Editor, you can generate missing parts of any photo or create stunning large art pieces on infinitely sized canvas. There are literally no limits here.
+Edit images with only text.
+Easily modify small details or change whole visual features on any picture. Use AI inpainting to remove unwanted objects from images, or alter any other elements. Just draw a mask on the image and tell AI what to render in that place.
+Create your custom AI model.
+Get a personalized AI model. It's as easy as uploading 10 pictures. Whether you want to create AI avatars for yourself or your team, need to render beautiful images of your product in different scenarios, or just want to have your own AI model to generate ideas with your style. We've got you covered. Every model is hosted on getimg.ai and available to use in seconds.
+Guide AI using your own images.
+Take your creative workflow to the next level by controlling AI image generation with the source images and different ControlNet models. Explore it yourself, or see available pipelines.
+Integrate with simple and flexible API.
+Generate and edit images with the latest Stable Diffusion based models using our easy-to-use REST API. Focus on building next-gen AI experiences rather than on maintaining own GPU infrastructure.

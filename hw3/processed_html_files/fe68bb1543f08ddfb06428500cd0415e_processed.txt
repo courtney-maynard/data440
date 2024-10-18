@@ -1,0 +1,184 @@
+Instructor ratings
+We asked all learners to give feedback on our instructors based on the quality of their teaching style.
+Close
+4.8
+4.8
+Recommended experience
+Intermediate level
+This is an intermediate course, so you should have some experience coding in Python to get the most out of it.
+OK
+95%
+4.8
+Recommended experience
+Intermediate level
+This is an intermediate course, so you should have some experience coding in Python to get the most out of it.
+OK
+95%
+Gain foundational knowledge, practical skills, and a functional understanding of how generative AI works
+Dive into the latest research on Gen AI to understand how companies are creating value with cutting-edge technology
+Instruction from expert AWS AI practitioners who actively build and deploy AI in business use-cases today
+Skills you'll gain
+Assessments
+See how employees at top companies are mastering in-demand skills
+Add this credential to your LinkedIn profile, resume, or CV
+Share it on social media and in your performance review
+There are 3 modules in this course
+In Generative AI with Large Language Models (LLMs), you’ll learn the fundamentals of how generative AI works, and how to deploy it in real-world applications.
+By taking this course, you'll learn to:
+- Deeply understand generative AI, describing the key steps in a typical LLM-based generative AI lifecycle, from data gathering and model selection, to performance evaluation and deployment
+- Describe in detail the transformer architecture that powers LLMs, how they’re trained, and how fine-tuning enables LLMs to be adapted to a variety of specific use cases
+- Use empirical scaling laws to optimize the model's objective function across dataset size, compute budget, and inference requirements
+- Apply state-of-the art training, tuning, inference, tools, and deployment methods to maximize the performance of models within the specific constraints of your project 
+- Discuss the challenges and opportunities that generative AI creates for businesses after hearing stories from industry researchers and practitioners
+
+Developers who have a good foundational understanding of how LLMs work, as well the best practices behind training and deploying them, will be able to make good decisions for their companies and more quickly build working prototypes. This course will support learners in building practical intuition about how to best utilize this exciting new technology.
+
+This is an intermediate course, so you should have some experience coding in Python to get the most out of it. You should also be familiar with the basics of machine learning, such as supervised and unsupervised learning, loss functions, and splitting data into training, validation, and test sets. If you have taken the Machine Learning Specialization or Deep Learning Specialization from DeepLearning.AI, you’ll be ready to take this course and dive deeper into the fundamentals of generative AI.
+Week 1
+Module details
+What's included
+17 videos
+7 readings
+1 assignment
+Introduction - Week 1•5 minutes
+Generative AI & LLMs•4 minutes
+LLM use cases and tasks•2 minutes
+Text generation before transformers•2 minutes
+Transformers architecture•7 minutes
+Generative configuration•7 minutes
+Lab 1 walkthrough•14 minutes
+Pre-training large language models•9 minutes
+Computational challenges of training LLMs•10 minutes
+Optional video: Efficient multi-GPU compute strategies•8 minutes
+Scaling laws and compute-optimal models•8 minutes
+Pre-training for domain adaptation•5 minutes
+7 readings•Total 52 minutes
+Contributor Acknowledgments•10 minutes
+[IMPORTANT] Have questions, issues or ideas? Join our Forum!•2 minutes
+Transformers: Attention is all you need•10 minutes
+[IMPORTANT] Guidelines before you start the labs in this course•5 minutes
+Domain-specific training: BloombergGPT•10 minutes
+Week 1 resources•10 minutes
+Lecture Notes Week 1•5 minutes
+1 assignment•Total 60 minutes
+Week 1 quiz•60 minutes
+2 app items•Total 121 minutes
+Intake Survey•1 minute
+Lab 1 - Generative AI Use Case: Summarize Dialogue•120 minutes
+Week 2
+Module details
+What's included
+10 videos
+3 readings
+1 assignment
+Introduction - Week 2•4 minutes• Preview module
+Instruction fine-tuning•7 minutes
+Multi-task instruction fine-tuning•8 minutes
+Model evaluation•10 minutes
+PEFT techniques 2: Soft prompts•7 minutes
+Lab 2 walkthrough•17 minutes
+3 readings•Total 25 minutes
+Scaling instruct models•10 minutes
+Week 2 Resources•10 minutes
+Lecture Notes Week 2•5 minutes
+1 assignment•Total 60 minutes
+Week 2 quiz•60 minutes
+1 app item•Total 120 minutes
+Lab 2 - Fine-tune a generative AI model for dialogue summarization•120 minutes
+Week 3
+Module details
+What's included
+21 videos
+7 readings
+1 assignment
+Introduction - Week 3•4 minutes• Preview module
+Aligning models with human values•3 minutes
+Reinforcement learning from human feedback (RLHF)•8 minutes
+RLHF: Obtaining feedback from humans•6 minutes
+RLHF: Reward model•2 minutes
+RLHF: Fine-tuning with reinforcement learning•3 minutes
+Optional video: Proximal policy optimization•13 minutes
+RLHF: Reward hacking•6 minutes
+Scaling human feedback•5 minutes
+Lab 3 walkthrough•18 minutes
+Model optimizations for deployment•7 minutes
+Generative AI Project Lifecycle Cheat Sheet•2 minutes
+Using the LLM in applications•9 minutes
+Interacting with external applications•4 minutes
+Helping LLMs reason and plan with chain-of-thought•5 minutes
+Program-aided language models (PAL)•7 minutes
+ReAct: Combining reasoning and action•9 minutes
+LLM application architectures•5 minutes
+Optional video: AWS Sagemaker JumpStart•5 minutes
+Responsible AI•9 minutes
+Course conclusion•3 minutes
+KL divergence•10 minutes
+[IMPORTANT] Reminder about end of access to Lab Notebooks•2 minutes
+ReAct: Reasoning and action•10 minutes
+Week 3 resources•10 minutes
+Lecture Notes Week 3•5 minutes
+Acknowledgments•1 minute
+1 assignment•Total 60 minutes
+Week 3 Quiz•60 minutes
+1 app item•Total 120 minutes
+Lab 3 - Fine-tune FLAN-T5 with reinforcement learning to generate more-positive summaries•120 minutes
+Instructors
+Instructor ratings
+We asked all learners to give feedback on our instructors based on the quality of their teaching style.
+OK
+4.8
+Instructor ratings
+We asked all learners to give feedback on our instructors based on the quality of their teaching style.
+Close
+4.8
+OK
+OK
+Recommended
+E
+Edureka
+Felipe M.
+Learner since 2018
+"To be able to take courses at my own pace and rhythm has been an amazing experience. I can learn whenever it fits my schedule and mood."
+Jennifer J.
+Learner since 2020
+"I directly applied the concepts and skills I learned from my courses to an exciting new project at work."
+Larry W.
+Learner since 2021
+"When I need courses on topics that my university doesn't offer, Coursera is one of the best places to go."
+Chaitanya A.
+"Learning isn't just about being better at your job: it's so much more than that. Coursera allows me to learn without limits."
+Learner reviews
+Reviewed on Jul 10, 2023
+Generative AI with LLMs course enables individuals with the latest tools & techniques to adopt LLMs for your business application. This is one of the most comprehensive training available as on today.
+M
+MB
+4
+Reviewed on Jan 4, 2024
+This course has been an extra addition in enhancing my understanding of the Generative AI project lifecycle, particularly in the context of architecture and implementation strategies.
+A
+AV
+5
+Reviewed on Feb 27, 2024
+This course is so insightful and remains one of the best courses that I have taken. I enjoyed it so much. Big thanks to all the people that organized to put this great course together.
+Open new doors with Coursera Plus
+Unlimited access to 7,000+ world-class courses, hands-on projects, and job-ready certificate programs - all included in your subscription
+Earn a degree from world-class universities - 100% online
+Upskill your employees to excel in the digital economy
+Why should I take this course?
+Developers who have a good foundational understanding of how LLMs work, as well the best practices behind training and deploying them, will be able to make good decisions for their companies and more quickly build working prototypes. This course will support learners in building practical intuition about how to best utilize this exciting new technology.
+I don’t have any programming experience, can I take this course?
+We recommend starting with a beginner course such as Machine Learning Specialization.
+I already have Python experience, is this course for me?
+Yes! This course is perfect for anyone with a background in Python ready to dive deeper into large language models and generative AI.
+When will I have access to the lectures and assignments?
+Access to lectures and assignments depends on your type of enrollment. If you take a course in audit mode, you will be able to see most course materials for free. To access graded assignments and to earn a Certificate, you will need to purchase the Certificate experience, during or after your audit. If you don't see the audit option:
+The course may not offer an audit option. You can try a Free Trial instead, or apply for Financial Aid.
+The course may offer 'Full Course, No Certificate' instead. This option lets you see all course materials, submit required assessments, and get a final grade. This also means that you will not be able to purchase a Certificate experience.
+What will I get if I purchase the Certificate?
+When you purchase a Certificate you get access to all course materials, including graded assignments. Upon completing the course, your electronic Certificate will be added to your Accomplishments page - from there, you can print your Certificate or add it to your LinkedIn profile.  If you only want to read and view the course content, you can audit the course for free.
+What is the refund policy?
+You will be eligible for a full refund until two weeks after your payment date, or (for courses that have just launched) until two weeks after the first session of the course begins, whichever is later. You cannot receive a refund once you’ve earned a Course Certificate, even if you complete the course within the two-week refund period. See our full refund policy
+Is financial aid available?
+Yes. In select learning programs, you can apply for financial aid or a scholarship if you can’t afford the enrollment fee. If fin aid or scholarship is available for your learning program selection, you’ll find a link to apply on the description page.
+Show all 7 frequently asked questions
+More questions

@@ -1,0 +1,160 @@
+Educators should consider incorporating AI tools like Google Translate and ChatGPT to enhance student learning and foster innovation.
+Continuous professional development is essential for educators to stay updated with emerging AI technologies and effectively integrate them into their teaching practices.
+Subscribe to Our Podcast
+In this episode of the Getting Smart Podcast, Tom Vander Ark is joined by Rachelle Dené Poth, an experienced educator, author, and ed tech expert. With nearly three decades of teaching, Rachelle teaches Spanish and a STEAM Emerging Technology course in the Riverview School District near Pittsburgh. She is also a prolific writer, having authored nine books, with her latest, How to Teach AI: Weaving Strategies and Activities into Any Content Area, focusing on integrating artificial intelligence into classrooms. Rachelle’s hands-on experience and passion for ed tech make her a valuable voice in the conversation about AI’s role in education.
+Throughout the episode, Tom and Rachelle explore the intersection of AI and learning, discussing how AI tools like Google Translate have been in classrooms for years and how the explosion of generative AI is reshaping teaching and learning. Rachelle shares insights into how educators can responsibly incorporate AI to enhance, rather than replace, student learning, and the importance of developing guidelines for AI use in schools. They also dive into AI’s potential to foster creativity and innovation in students, and the need for educators to stay proactive as AI continues to evolve.
+Discover the latest in learning innovations
+Sign up for our weekly newsletter.
+Email *
+Submit
+Outline:
+Introduction and Guest Welcome
+Tom Vander Ark: How can we foster creators and innovators with AI? It’s my favorite question. I’m Tom Vander Ark, and you’re listening to the Getting Smart Podcast. Today, we’re joined by a friend of the show, Rachelle Dené Poth—a teacher, author, and ed tech expert. Rachelle has a great new book out, How to Teach AI: Weaving Strategies and Activities into Any Content Area. Rachelle, welcome to the show.
+Rachelle Dené Poth: Thank you so much, Tom. Glad to be here.
+Tom Vander Ark: This fall, it’ll be 29 years. Is that right?
+Rachelle Dené Poth: I stopped counting a little while ago, but I think you’re pretty close. I know it’s up there for sure. Yeah, a long time.
+Tom Vander Ark: This is awesome. This is one of the things we really appreciate about you. You’re a prolific author, but the fact that your advice and observations are always rooted in classroom work makes you super special and valued nationally. We appreciate your three decades of teaching and the fact that you’re learning out loud with and for the rest of us. So, Riverview School District is right outside Pittsburgh, right?
+Rachelle Dené Poth: Pittsburgh, yeah. It’s about 15 minutes from downtown, so not too bad of a drive.
+Tom Vander Ark: Are you still teaching Spanish?
+Rachelle Dené Poth: Yes, Spanish at all levels. I also have a course for eighth graders—STEAM Emerging Technology—that I’ve been teaching for about eight years. It’s great for me because I love technology, and it’s fun to look through the eyes of an eighth grader. I think back to my eighth-grade self, so it keeps everything interesting and fun each day.
+Tom Vander Ark: I have a 726-day streak going on Duolingo.
+Rachelle Dené Poth: Oh, I hear that a lot too.
+Language Learning and AI
+Tom Vander Ark: What’s your take on language acquisition and AI? How much do you use it in class? Are you excited about it, or is it largely a bust?
+Rachelle Dené Poth: It’s been interesting because, as a language educator, we’ve eased into this whole AI explosion more than maybe other educators, though not necessarily realizing it. Students have had access to Google Translate and similar tools for years. That’s not new. For many years, students have been able to take a picture of their paper and have it translate right into Spanish or English. We’ve seen this coming a little bit, so I’ve been excited about it.
+I actually worked on the ISTE’s hands-on project guides. I helped write one of the lessons for the electives in 2020. It focused on using a tool like Google Translate. My students were shocked that I let some of them use the translator, but they quickly realized it doesn’t always understand human speech, teenage slang, or context. It’s about helping them understand how to use it.
+In my classroom, especially in the past year and a half, I’ve used AI even more. I aim to get it into the students’ hands to show them how to use it to enhance—not replace—their learning and to use it responsibly. I don’t know if they’re getting these opportunities in other classrooms. They might be starting to, but I want to show them that sometimes they can use AI to help them along the way. When ChatGPT came out in 2022, I spent three hours on a Saturday night testing every prompt. It’s been exciting to work with teachers and see their responses to AI and how they’re using it.
+Tom Vander Ark: Will translation capabilities just keep getting better, and since they’re nearly immediate, will that reduce the demand for language learning?
+Rachelle Dené Poth: I would hope not because we definitely need educators, especially language educators. There is a shortage of them worldwide. I had a conversation recently about these different tools, and I said, “No matter how good the tool gets, there are more than 7,000 languages spoken throughout the world.” Some languages are spoken only by a handful of people, but these tools are helpful for languages not offered in schools.
+If someone is told they’re being sent somewhere where they don’t know the language, they’ll need to figure out how to get around. Will they learn it quickly, take a translator, or leverage technology? Language acquisition, regardless of the language, is still essential. It has applicability in fields like legal and medical. I hope language teaching and acquisition don’t go away. Instead, I hope people use these tools to support their learning.
+Tom Vander Ark: As a language teacher and tech expert, how would you learn a new language? Is it different if it’s an adjacent language like French or Portuguese compared to Chinese?
+Rachelle Dené Poth: It is difficult. I started with French in high school and college. When I graduated, I couldn’t get a job teaching just French, so I went back and learned Spanish. That’s where my interest in law grew, and I’ve been teaching since. In the process, I tried to teach myself Italian. I had the audio tapes, books, and took a class. I could understand some of it, but it was still difficult, even though there are commonalities.
+I can read Portuguese, but when I look at languages like Russian or Chinese, it’s really difficult for me to process because of how I’ve been trained with Latin-based languages. Tools like Duolingo are awesome for learning in little increments. But I tell my students, “When I was in Ukraine, we didn’t have Google Translate.” I drop a big, heavy dictionary on their desk and say, “There’s your Google Translate from the ’80s and ’90s.” They liked it by the end of the school year—opening the book, turning the pages, finding the words. A dictionary is just a tool, just like AI. It’s about how you use it to develop those skills.
+I ask my students, “Do you want to know this just for now or long-term? Will it matter to you in five years that you didn’t put the time in now?” There are lots of considerations.
+Tom Vander Ark: That’s great advice. We’re talking to our friend Rachelle Dené Poth. She’s been a long time Getting Smart contributor. You’ve written for Getting Smart and other areas for more than 10 years.
+Rachelle Dené Poth: It’s been a long time. My start with AI was because of Getting Smart. I talk about it a couple of times a week, Tom, to be honest.
+Tom Vander Ark: I think you and I spotted AI around the end of 2015. We both had this “holy cow, this is going to be a big deal” moment and started tracking what was happening. We love your new book, How to Teach AI: Weaving Strategies and Activities into Any Content Area. Is this your sixth or seventh book, or am I a couple behind?
+Rachelle Dené Poth: This one’s the ninth of my own.
+Tom Vander Ark: That’s awesome. We haven’t talked about this for a while, but do you still use a lot of speech-to-text when you write?
+Rachelle Dené Poth: I do. I love that you said “the RDP” because I tell people I’m “notorious RDP.” That name was given to me by one person named Tom. I’ve done that for years, and it’s good for thinking out loud and reflecting. It’s not perfect; it doesn’t pick up every word you say. The way you enunciate words is different, but it is improving over time. Sometimes, the writing I do starts by talking about it, and then I clean it up.
+AI in Education: Strategies and Impact
+Tom Vander Ark: We’re going to dive into your new book, How to Teach AI. You start with an intro chapter and then cover ethics. I’d like to have you talk about chapters three and four, which are the core of the book: the impact of AI in education and putting generative AI to work. What’s your take on what leading school systems will do, not just next year but over the next two years? What are the primary ways you think leading systems will make good use of AI?
+Rachelle Dené Poth: I think the biggest thing—and I was just speaking about this last week—is AI and the law, an area I’ve been researching. My doctoral work was focused on the need for professional development specific to AI but also encompassing other areas to help teachers keep up with emerging technologies.
+Recently, at an AI symposium, I did a session on AI and the law. A big question is: what are the policies and guidelines for teachers to use? There’s a lot of uncertainty about that, but we’re actually seeing more states adopting K–12 guidelines. As of the beginning of August, the 21st state adopted these guidelines; by the end of 2023, there were two states. Schools can now look to their state for information as well as to other organizations.
+I think that’s a big starting point—understanding what teachers are using in the classroom, the guidelines in place, what teachers need, the questions they have, and what training is offered. A lot of schools and administrators are focusing on how to provide for all their teachers, especially when there are so many options out there.
+With elementary teachers, it’s even more complex. They cover so many different areas and have various responsibilities, so fitting AI in is a challenge. But because AI is not going away, I’ve had some funny conversations about why we need to learn about AI as educators. Some say, “It’s not going anywhere. We’re surrounded by it.”
+Schools need to think about what’s available to support teachers, students, and families. They need to ensure that what’s being used in the classroom is safe, especially with AI, which brings additional concerns about data privacy and safety. The short answer is starting with training, information, guidelines, and involving various stakeholders. Evaluating and conducting audits throughout the year is also important because it’s changing so fast. Every day, thousands of AI apps are added, not all specific to education, but there are many concerns. Being mindful and intentional about planning ahead is key. As someone in my session said, “Be proactive, not reactive.”
+Tom Vander Ark: Are you more optimistic about AI as a student learning assistant or as a teacher’s assistant?
+Rachelle Dené Poth: I don’t know. I can never pick one. I like being able to show both sides to teachers, especially because there’s never enough time to do everything. Many tasks involved in being an educator can be replaced by AI, and some already have been. Two years ago, the prediction was that 40% of clerical tasks by elementary teachers could be replaced by AI. When I shared that, I got cheers from elementary teachers.
+However, students also need to understand how to use it. When ChatGPT came out, students could access it outside school, but they didn’t really know how to use it. They saw it as a tool that could do their homework and write essays. Many went into the workforce or higher education relying on ChatGPT without guidance, leading to various consequences.
+My focus is on helping students use AI safely, enhancing their learning without replacing it. Struggling with learning is essential, too.
+Tom Vander Ark: Do you advise schools to use large language models directly, or do you recommend AI app platforms like Magic School?
+Rachelle Dené Poth: Both. Through the lens of safety, I run sessions discussing large language models like ChatGPT, where we do different prompts. Then we explore platforms like Magic School and Eduaide.Ai, based out of Pittsburgh. Teachers shouldn’t have to go on a scavenger hunt to find out what’s happening with the information they’re putting in. There should be clear disclaimers and privacy policies.
+If a teacher is using AI at home to generate lesson plans and is not putting students’ or personal information at risk, that’s fine. But in the classroom, we need to ensure compliance with relevant laws to keep everyone safe. Even if a platform says it doesn’t use your data, we need to question if others on the platform could be using it. Safety and understanding the purpose of using the tool are crucial.
+Tom Vander Ark: I was talking to Chris Hagel from the Peninsula School District near Tacoma. He said they have some courses for all their teachers to develop AI literacy. About 75% of their teachers use Magic School, along with directly using large language models. We might see more of that “both” approach.
+Rachelle, I want to talk about chapter five because I stood up and cheered when I got to it. You talk about fostering creators and innovators with AI. How do you do that? Why is it important, and can you give us some examples?
+Rachelle Dené Poth: Years ago, I started doing presentations at technology conferences on moving students from consumers to creators and innovators. For example, project-based learning can be uncomfortable for some students because they have to decide what to do and figure out how to share their learning.
+In my classroom, I’ve shifted from talking at students to giving them ideas and letting them explore. If I’m only teaching them what I know, I’m limiting their potential. So, I give them a tool or an activity and say, “How can you improve this?” It’s about getting them to think, collaborate, and build those essential 21st-century skills.
+One example is a local event focused on belonging in STEM. Students explored AI, augmented reality, coding, and more. At the end of the week, they had to work together and use one of these technologies to solve a real-world problem, like sustainability. Students who had never met each other before came up with solutions to challenges using AI.
+That’s the essence of that chapter—finding resources that get students to think differently, identify needs, and leverage their knowledge and their classmates’ to do good with technology.
+Relational AI and Voice Interfaces
+Tom Vander Ark: Two relatively recent developments I’d love to have you talk about are relational AI and voice interfaces. We’re seeing relational AI move into the support and guidance space in both high school and college applications, as well as in the counseling space. There’s also the informal space—like the recently introduced Friends app, which seems particularly creepy to me. Then there’s the voice interface. OpenAI previewed a spectacularly good voice interface recently. The combination of relational AI with a voice interface seems to signal a new horizon for us and young people. What are your thoughts? Are you excited or freaked out by this development?
+Rachelle Dené Poth: I’d say a little bit of both. I’ve kept up with the news on this, and I’ve seen people posting on social media about it. Someone recently tweeted about having conversations with AI, saying, “I don’t need to talk to my friends anymore. Once this is released, I can just talk to it. It’ll tell me everything I need to know, and it won’t get mad at me.” It was interesting to hear that part of the conversation.
+I think it’s interesting, especially if you want a thought partner or if you’re traveling alone and just want a conversation. It’s not as far-fetched as people might think. If you remember back to AOL chat rooms, you were having conversations online with people you couldn’t see. You didn’t know if they lived three blocks or 3,000 miles away. Similarly, forming relationships through social media networks is now commonplace.
+Sometimes, it may be hard to tell if you’re actually having a conversation with AI. There’s even a website called “Human or AI” where you guess if you’re talking to a human or AI. So, while I had some initial reservations, it’s not entirely new. There were stories a few years ago about people having partners or best friendships with AI just for conversation.
+Now, with these advancements, we’ll see where it goes. I want to try it out myself. I was excited just when my own app started reading responses to me. I thought that was cool.
+Tom Vander Ark: This spring in Cajon Valley School District in San Diego, I saw middle school students using SchoolJoy to have mentorship conversations with an AI bot—an avatar of their choosing. They could pick someone who looked like them in a profession of interest and even dial up the year to the present or five years from now. For a young person interested in nursing, they could talk to someone in that field. They could have these useful dialogues with a professional, which would be difficult to set up in real life. As Cajon Valley always does, students had these conversations and then reflected on what they learned. To me, that seemed like a useful application of relational AI with a voice interface. However, as we’ve both remarked, there are ways this could become both creepy and dangerous.
+Rachelle Dené Poth: I agree. I like the example you just mentioned because sometimes having those conversations with someone is valuable. It’s similar to why I like virtual reality, where you can immerse students in an experience that might be otherwise costly, dangerous, or impossible. It exposes them to an experience or engages them differently than what we can offer in schools.
+Tom Vander Ark: It’s a brave new world. For school policymakers, it’s hard to keep up with how fast this is moving. Do you see schools generally responding well and staying open to possibilities, or are most schools you’ve encountered still in reactive mode and locking down usage?
+Rachelle Dené Poth: It varies. I see more schools being receptive now than they were six months or a year ago. However, I’m also surprised by the number of teachers throughout the United States who have yet to receive training on AI or are unaware of the tools available.
+When I do sessions or go to conferences, I always survey teachers about their awareness and training. There are tools in use in schools, like Magic School and Eduaide.Ai, but many educators don’t know how to bring them into the classroom safely.
+I’ve been contacted by schools across the country seeking guidance on training teachers. They may have policies in place, and some are in states where policies have been enacted, like California and Oregon. Administrators at least have those policies to look to, or they can reference toolkits provided by larger organizations.
+So, it feels more settled now. There was an article referring to the “honeymoon phase” of generative AI, where everyone was excited and saying, “This is great! What do we do?” Now it’s settled in a bit. People realize AI isn’t going away, so they’re starting to take action. Conversations have started, training is in place, and there’s more of a plan than there was a year ago. It’s moving in the right direction, but it’s an evolving process.
+Future of AI in Education and Conclusion
+Tom Vander Ark: As you think about the journey that was this book, Rachelle, who or what was really helpful as you studied this rapidly emerging subject? Any shout-outs for people who helped you on this learning journey?
+Rachelle Dené Poth: Definitely you, for starters—and I’m not just saying that because I’m talking to you, but it’s the truth. When I started blogging for Getting Smart years ago, I wrote about conferences and things I did, which was easy. But then, seven years ago, AI was the topic for January, and I dove in. So, shout-out to you and the Getting Smart team for sure. I’ve had many opportunities over the years to write, even in 2020 when I helped research with ChatGPT-3. It’s been awesome to see it evolve.
+ISTE also played a big part. They piloted a course I was involved in, and it was phenomenal. It gave me more confidence. My doctoral work focused on AI, and the faculty gave me feedback and helped with research. It takes a lot of work to keep up with everything happening.
+My motivation has always been: what can I do to help others get started with AI in a way that feels comfortable? So, those are my initial shout-outs. If it hadn’t been for that first article, who knows? I often refer to characters like C-3PO and the Terminator when talking about AI. Some things have changed a lot, while others remain the same in some regards. So, thank you.
+Tom Vander Ark: I see that book, How to Teach AI, sitting right next to you. You must be well into book number 10. What’s it about?
+Rachelle Dené Poth: Yes, book number 10. I love the title; I came up with it on the way home from school one day. It’s about AI, augmented and virtual reality, blockchain, the metaverse, NFTs, cybersecurity—all these emerging technologies we’ve been seeing. The title is What the Tech, because as I was driving home, I thought, “There’s AI, there’s this—what the tech?” And then I realized that could be the title for a book.
+It will be available in early 2025. It’s in peer review with ISTE right now. It’s exciting because there’s a lot coming to us in education. Teachers need to know how to protect themselves, their students, and the families they serve. So, I’m going to do my best to inform everyone about what’s up with blockchain, the metaverse, and especially cybersecurity.
+Tom Vander Ark: That’s a very RDP title. I love it. It’s catchy and timely, as you always are. Thanks for being with us. It’s good to see you.
+Speaking of shout-outs to the Getting Smart team, our producer, Mason Pasha, has been leading our exploration of AI and always helps publish great contributions by RDP. So, thanks to him and the whole Getting Smart team that makes this possible. Until next week, keep learning, keep leading, and keep using AI to innovate for equity.
+Rachelle Dené Poth
+Dr. Rachelle Dené Poth is an edtech consultant, presenter, attorney, author, and teacher of Spanish and STEAM: Emerging Technology. Rachelle has a Juris Doctor degree from Duquesne University School of Law, a Master’s, and a Doctorate in Instructional Technology. Rachelle specializes in AI, AI and the Law, AR/VR, Cybersecurity, SEL, and STEM, in addition to other topics as requested. She has more than six years of teaching and presenting on AI in her classroom and working with educators worldwide.
+Rachelle is an ISTE-certified educator and recipient of the ISTE Making IT Happen Award and several presidential gold and silver awards for volunteer service. She presents regularly at state, national, and international conferences and provides professional development and coaching for educators on a variety of topics, including assessments and emerging technologies such as AI, AR and VR, and STEM. She is the author of nine books and a blogger for Defined Learning, Edutopia, and Getting Smart.
+Links:
+Subscribe to Our Podcast
+This podcast highlights developing trends in K-12 education, postsecondary and lifelong learning. Each week, Getting Smart team members interview students, leading authors, experts and practitioners in research, tech, entrepreneurship and leadership to bring listeners innovative and actionable strategies in education leadership.
+Find us on:
+Competency-Based Education
+Leave a Comment
+Your email address will not be published. All fields are required.
+Comment
+Email
+Name
+Submit Comment
+Smart Update
+Sign up to receive our weekly innovations in learning email newsletter:
+Email *
+Submit
+Info
+Name *
+First
+Last
+Email
+Organization *
+URL *
+Submit
+Stay on the cutting edge!
+Subscribe to our Smart Update for weekly coverage of innovations in learning.
+Email *
+Name *
+Organization
+Submit
+What if?
+Enter your email to get our weekly What If? questions sent to directly to your inbox!
+Email *
+Subscribe
+Smart Update
+Enter the information below to get signed up for our weekly Smart Update newsletter below so you don’t miss any learning innovations. The more information, the more we will be able to personalize your email!
+Name *
+First
+Last
+Email *
+What is PBE (Spanish)
+Please submit the following information and you will be given a link to download our free guide: What is Place-Based Education and Why Does it Matter?
+Name *
+First
+Last
+Email *
+Designing Microschools Download
+Please submit the following information and you will be given a link to download our free guide: Designing Microschools: Why Launching Small Learning Environments Is a Big Idea
+Name *
+First
+Last
+Email *
+Download Quick Start Guide to Implementing Place-Based Education
+Please submit the following information and you will be given a link to download our free guide: Quick Start Guide to Implementing Place-Based Education.
+Name *
+First
+Last
+Email *
+Download Quick Start Guide to Place-Based Professional Learning
+Please submit the following information and you will be given a link to download our free guide: Quick Start Guide to Place-Based Professional Learning.
+Name *
+First
+Last
+Email *
+Download What is Place-Based Education and Why Does it Matter?
+Please submit the following information and you will be given a link to download our free guide: What is Place-Based Education and Why Does it Matter?
+Name *
+First
+Last
+Email *
+Download 20 Invention Opportunities in Learning & Development
+Please submit the following information and you will be given a link to download our free 20 Invention Opportunities in Learning and Development Report.
+Name *
+First
+Last
+Email *

@@ -1,0 +1,5 @@
+Before beginning, please choose a language from the list below:
+Antes de comenzar, elija por favor un lenguaje de la lista debajo:
+English
+Español
+Continue

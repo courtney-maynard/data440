@@ -1,0 +1,31 @@
+Search
+05/31/2024
+Each day it seems like a new innovative AI tool comes out and alters the way we live — and that’s partly because this technology is a wellspring for creativity. You’ve probably thought up tons of potential uses for AI in your daily life, from automating mundane work tasks to using generative AI as a remixing and brainstorming tool.
+With the right coding skills , you can make these AI project ideas a reality. In our courses and paths, you get to work on projects that help you put your skills into practice. Exploring our projects library is a great way to get inspired and think about real-life applications for AI and other technologies. (Heads up: You need a Pro or Plus account to access our full library of projects.)
+Ahead we’ve gathered our AI and machine learning projects that will help you hone key AI techniques and skills. Remember, a project doesn’t need to be academic for it to provide value in your learning journey! We hope these projects expand your view of what’s possible with AI and get you inspired to keep experimenting with code.
+Learn something new for free
+Find the Flag
+The 2024 Summer Olympics are coming up, and during the iconic Opening Ceremonies, flags from countries around the world will sail down the Siene River in Paris. See some flags you don’t recognize? In this project , you’ll use decision trees in Python to try to predict the continent of flags based on several design features like the colors and shapes. This project introduces you to a practical application of decision trees in data classification and gives you a chance to experiment with key data science techniques, like data preparation, model training, evaluation, and fine-tuning.
+Analyze Texts with NLP
+Deciphering the actual meaning behind a curt “k” text message can be excruciating. Why not harness the power of natural language processing and sentiment analysis to help figure out the meaning behind a text message? For this project , we’ll give you a dataset of text messages (you can also use your own text messages if you’d like) and you’ll examine it in Jupyter Notebooks. Using NLP techniques like sentiment analysis, language parsing, word vectorization, and topic modeling, you’ll get deeper insights into the content of the text messages.
+Echo Chatbot
+When you’re multitasking in meetings all day, it’s easy to lose track of your to-do list. Use Python to build an Echo Chatbot that you can use to jot down thoughts or ideas during meetings. Type an idea or note, and the chatbot immediately repeats it back, so you can ensure that your input is captured and recorded correctly. In this project, you’ll get to show off your beginner Python knowledge of variables, string concatenation, output, and user input. The Echo Chatbot project is part of the path Build Chatbots with Python , which will give you an in-depth look at how to build rules-based and generative AI chatbots.
+Predict Wine Quality with Regularization
+You don’t need a sommelier’s palate to be able to assess the quality of a type of wine — you can use Python for data science to do it. Classify a dataset of wine ratings as “good” or “bad” using specific input variables (like fixed acidity, residual sugar, and sulphates). In this project , you’ll implement different logistic regression classifiers, find the best ridge-regularized classifier using hyperparameter tuning, and implement a tuned lasso-regularized feature selection method.
+Handwriting Recognition using K-Means
+Whether you’re writing postcards on vacation or addressing wedding invites, this project will take you behind the scenes of how the U.S. Postal Service uses machine learning to read and understand handwritten addresses. (Fun fact: This is the same sort of technology that ATMs and apps like Evernote and Expensify utilize to read handwriting!) Some key concepts covered in this project include using K-means clustering for handwriting recognition and using scikit-learn to cluster images of handwritten digits. You’ll see why visualizing and understanding data are crucial steps before applying machine learning algorithms.
+More ways to grow your AI skills
+Related courses
+7 courses
+Subscribe
+By Risa Takenaka
+Recommendations for courses and paths that complement your team’s workload and skills.
+By Codecademy Team
+Set your team up for success with technical training from Codecademy Teams.
+Use this checklist to kick off learning with Codecademy Teams.
+By Cory Stieg
+A new survey from GitHub looked at the everyday tools developers use for coding.
+Get AI-ready for the school year by learning these concepts.
+By Codecademy Team
+High schoolers who attend the bootcamps will receive free Pro annual subscriptions.
+Follow us

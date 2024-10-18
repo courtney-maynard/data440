@@ -1,0 +1,38 @@
+Marketing & CX Leadership
+CMSWire's Marketing & Customer Experience Leadership channel is the go-to hub for actionable research, editorial and opinion for CMOs, aspiring CMOs and today's customer experience innovators. Our dedicated editorial and research teams focus on bringing you the data and information you need to navigate today's complex customer, organizational and technical landscapes. We've got you covered.
+5 minute read
+By Jonathan Moran
+June 12, 2019
+Three areas where machine learning will improve your marketing efforts.
+One of my favorite topics to discuss with other marketers is how both the art and science of marketing are changing. While the design and creativity of marketing is very exciting to me — new interactive ways of creating and producing content, in this article I want to focus on the science of marketing — the techniques used behind the scenes to improve marketing results for organizations. Specifically, I would like to focus on how machine learning intersects with the marketing function.
+Machine learning, as a technique, involves predictive and prescriptive techniques of data analysis to identify patterns and detect behaviors. The massive data volumes that are accessible to marketers — whether Instagram or Twitter activity data, vehicle or device data, home automation data, or even spending and transaction data — is data that can be collected and used for marketing purposes. As this data grows, most marketing teams and their techniques are not advancing at the same pace.  Small marketing teams often have tons of data that can be tough to wrangle and derive insight from. And they have limited hours — what do they work on and when?
+As a marketer, I ask these kinds of questions all the time. And answering them often requires making tough decisions. But what if I could automate and add precision to a lot of things I am doing? With machine learning I can.
+In marketing, a lot of time is spent processing and enriching data, predicting customer activity, and then personalizing content based on those predictions — which can all be done using machine learning. Doing these three things allows marketers to focus on the correct content, customer journeys, and digital campaigns to deploy.
+Processing and Enriching Data With Machine Learning
+An analytical model is only as good as the data beneath it. Customer and marketing data, as we all know, is often incomplete. Machine learning tree-based models, such as Gradient Boosting Machines (GBM) or Random Forest (RF) models, can predict and impute data better than any other method today. And not only customer data, but product and price data as well.
+Machine learning models can sort through data, recognize patterns and behaviors, and impute values in an automated and accurate fashion. More complete data then provides predictive models better prediction fit on customer conversion, renewal and attrition.
+Prediction With Machine Learning
+For years, marketing technologists and data scientists have used Generalized Linear Models (GLMs) to build retention models, or models which predict if a customer will “retain” or “renew” a product or service. While these models can predict renewal relatively well, they don’t always do a good job in accurately predicting the customer's specific product choice, especially if more than one renewal product option exists.
+With machine learning models, such as GBMs, organizations can more accurately predict what a customer’s product choice will be once renewal happens. This allows organizations to understand product volumes and associated product variables — such as renewal rates, terms and fees — in a more accurate manner. The ability to anticipate and predict product choices and volumes is important for marketing, sales and other parts of the organization.
+Personalization With Machine Learning
+The concept of personalization really focuses on tailoring a product or service offer, sometimes down to the individual customer level. Traditionally, and for the majority of companies today, GLMs are used to predict, forecast, and segment. However, GLMs often use broad segments that are no longer sufficient — as digital leaders like Netflix and Amazon have changed the personalization game.
+Individualization is much more of a requirement, and as a result, larger customer data volumes must be distilled down to a more granular level to reach this level of personalization. New technologies, such as open source model creation and coding platforms, automated machine learning model creation platforms, and scripting tools are being used to add more scale, automation and precision with regard to matching prospects and customers to content.
+Learning Opportunities
+The result of more targeted, proactive content is higher click through rates, conversion and ultimately sales leads.
+Marketing will continue to evolve. It's exciting to see the latest technologies come to life inside of the marketing function. To all of the marketers out there, hopefully this gives you some concrete examples of how you can introduce more of the science around machine learning into your departments. I hope infusing some of these scenarios into your marketing content, journeys, campaigns and programs helps you to become more efficient as a team — and drive more leads for sales. I would love to chat with any of you about how to improve your marketing programs using analytics — drop a line in the comments below.
+About the Author
+Jonathan Moran, Head of MarTech Solutions Marketing, covers global product marketing activities at SAS, with a focus on customer experience and marketing technologies. Prior to SAS, Jon gained over 20 years of marketing and analytics industry experience at both Earnix and the Teradata Corporation in pre-sales, consulting and marketing roles. Connect with Jonathan Moran:
+About CMSWire
+For over two decades CMSWire, produced by Simpler Media Group , has been the world's leading community of digital customer experience professionals.
+Today the CMSWire community consists of over 5 million influential customer experience, customer service and digital experience leaders, the majority of whom are based in North America and employed by medium to large organizations.
+Our sister community, Reworked , gathers the world's leading employee experience and digital workplace professionals. And our newest community, VKTR , is home for AI practitioners and forward thinking leaders focused on the business of enterprise AI .
+Explore CMSWIRE
+Popular Articles
+Join the Community
+Not yet a CMSWire member? We serve over 5 million of the world's top customer experience practitioners. Join us today — unlock member benefits and accelerate your career, all for free.
+Join us
+About CMSWire
+For over two decades CMSWire, produced by Simpler Media Group , has been the world's leading community of digital customer experience professionals.
+Today the CMSWire community consists of over 5 million influential customer experience, customer service and digital experience leaders, the majority of whom are based in North America and employed by medium to large organizations.
+Our sister community, Reworked , gathers the world's leading employee experience and digital workplace professionals. And our newest community, VKTR , is home for AI practitioners and forward thinking leaders focused on the business of enterprise AI .
+Join the Community

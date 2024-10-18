@@ -1,0 +1,11 @@
+Sign up
+Sign in
+Member-only story
+ARTIFICIAL INTELLIGENCE
+The Future of Generative AI: OpenAI’s Latest Updates to Catch Up with Rivals
+In a bid to stay ahead of its competitors, OpenAI has recently rolled out several updates to its API, aimed at simplifying the development of generative AI-based applications. The company has introduced model distillation and prompt caching capabilities, both of which are already offered by its rivals.
+Generative AI has been gaining immense popularity in recent times, with various companies vying to create innovative applications that utilize this technology. OpenAI’s latest updates come as an attempt to stay competitive and offer developers more tools to build seamless generative AI experiences.
+Model Distillation: The Key to Reducing Costs of Gen AI Applications
+In the world of generative AI, model distillation is a technique used in large language model training. It involves teaching a smaller model desired or required knowledge from a larger model, allowing developers to maintain performance while reducing computation requirements and costs.
+--
+--

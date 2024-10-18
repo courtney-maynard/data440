@@ -1,0 +1,115 @@
+5' 9" • 165LBS
+Tell us where
+You must be logged in to send a commitment request.
+This Area is only available to PBR Premium Content Subscribers.
+60 Yard Dash
+The athlete's fastest 60-yard dash time in the given event year. Measured in seconds (s)
+7.07
+Infield Velocity
+The athlete's maximum throwing velocity from an infield position in the given event year. Measured in miles per hour (MPH).
+86.0
+Power / Speed Score
+A simple calculation that divides the athlete’s Exit Velocity Max by the athlete’s 60 Yard Dash time for the given event year. For example, 98 MPH / 7.00s = 14.00.
+12.3
+Exit Velocity Max
+The highest exit velocity of any batted ball in the given event year. Measured in miles per hour (MPH).
+86.8
+Exit Velocity Avg
+Average exit velocity of all batted balls in the given event year. Measured in miles per hour (MPH).
+77.3
+Distance Max
+The highest flight distance of any batted ball in the given event year. Measured in feet (ft).
+287
+Distance Avg
+Average flight distance of all batted balls in the given event year. Measured in feet (ft).
+182
+Launch Angle Avg
+Average launch angle of all batted balls in the given event year. Measured in degrees.
+19.4
+Hard Hit %
+Percentage of batted balls with exit velocities over 95 MPH in the given event year.
+Sweet Spot %
+Percentage of batted balls in the given event year with a launch angle between 8° and 32°.
+Line Drive %
+Percentage of batted balls with launch angles between 10 and 25 degrees in the given event year.
+Fly Ball %
+Percentage of batted balls with launch angles between 25 and 50 degrees in the given event year.
+Ground Ball %
+Percentage of batted balls with launch angles below 10 degrees in the given event year.
+Velocity Max
+The maximum observed fastball velocity in the given event year. Measured in miles per hour (MPH).
+84.4
+Fastball
+Velocity Avg
+The average velocity for all pitches of this type in the given event year. Measured in miles per hour (MPH).
+83.2
+Fastball
+Spin Rate Avg
+The average rate of spin for all pitches of this type in the given event year. Measured in rotations per minute (RPM).
+2043
+Fastball
+Spin Score Avg
+The average Bauer Units value of all fastballs in the given event year. Bauer Units are calculated for each pitch by dividing Spin Rate by Velocity.
+24.6
+Fastball
+Total Movement Avg
+The average total non-gravity movement for all pitches of this type in the given event year. Measured in inches (in).
+Curveball
+Velocity Avg
+The average velocity for all pitches of this type in the given event year. Measured in miles per hour (MPH).
+67.1
+Curveball
+Spin Rate Avg
+The average rate of spin for all pitches of this type in the given event year. Measured in rotations per minute (RPM).
+2051
+Curveball
+Total Movement Avg
+The average total non-gravity movement for all pitches of this type in the given event year. Measured in inches (in).
+Changeup
+Velocity Avg
+The average velocity for all pitches of this type in the given event year. Measured in miles per hour (MPH).
+71.5
+Changeup
+Spin Rate Avg
+The average rate of spin for all pitches of this type in the given event year. Measured in rotations per minute (RPM).
+1577
+Changeup
+Total Movement Avg
+The average total non-gravity movement for all pitches of this type in the given event year. Measured in inches (in).
+Velocity Max
+The maximum observed fastball velocity in the given event year. Measured in miles per hour (MPH).
+84.0
+Fastball
+Velocity Avg
+The average velocity for all pitches of this type in the given event year. Measured in miles per hour (MPH)
+79.0
+Curveball
+Velocity Avg
+The average velocity for all pitches of this type in the given event year. Measured in miles per hour (MPH)
+67.0
+Changeup
+Velocity Avg
+The average velocity for all pitches of this type in the given event year. Measured in miles per hour (MPH)
+71.8
+Slider
+Velocity Avg
+The average velocity for all pitches of this type in the given event year. Measured in miles per hour (MPH)
+62.5
+Fastball
+Velocity Max
+The maximum observed fastball velocity in the given event year. Measured in miles per hour (MPH).
+78.0
+Fastball
+Velocity Avg
+The average velocity for all pitches of this type in the given event year. Measured in miles per hour (MPH)
+75.0
+Curveball
+Velocity Avg
+The average velocity for all pitches of this type in the given event year. Measured in miles per hour (MPH)
+66.0
+60 Yard Dash
+The athlete's fastest 0-60-yard time in the given event year. Measured in seconds.
+7.08
+The athlete's fastest split time converted to miles per hour.
+Premium Content Area
+To unlock contact information, you need to purchase a ScoutPLUS subscription.

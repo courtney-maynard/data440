@@ -1,0 +1,1704 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+<head>
+<meta charset="UTF-8"><script type="9f73ee8431844a79dcd191c6-text/javascript">(window.NREUM||(NREUM={})).init={privacy:{cookies_enabled:true},ajax:{deny_list:["bam.nr-data.net"]},distributed_tracing:{enabled:true}};(window.NREUM||(NREUM={})).loader_config={agentID:"718314957",accountID:"45104",trustKey:"45104",xpid:"UAMGUVJADgQBVFBSAgUH",licenseKey:"ee2f5cf74e",applicationID:"671010540"};;/*! For license information please see nr-loader-spa-1.268.0.min.js.LICENSE.txt */
+(()=>{var e,t,r={8122:(e,t,r)=>{"use strict";r.d(t,{a:()=>i});var n=r(944);function i(e,t){try{if(!e||"object"!=typeof e)return(0,n.R)(3);if(!t||"object"!=typeof t)return(0,n.R)(4);const r=Object.create(Object.getPrototypeOf(t),Object.getOwnPropertyDescriptors(t)),o=0===Object.keys(r).length?e:r;for(let a in o)if(void 0!==e[a])try{if(null===e[a]){r[a]=null;continue}Array.isArray(e[a])&&Array.isArray(t[a])?r[a]=Array.from(new Set([...e[a],...t[a]])):"object"==typeof e[a]&&"object"==typeof t[a]?r[a]=i(e[a],t[a]):r[a]=e[a]}catch(e){(0,n.R)(1,e)}return r}catch(e){(0,n.R)(2,e)}}},2555:(e,t,r)=>{"use strict";r.d(t,{Vp:()=>c,fn:()=>s,x1:()=>u});var n=r(384),i=r(8122);const o={beacon:n.NT.beacon,errorBeacon:n.NT.errorBeacon,licenseKey:void 0,applicationID:void 0,sa:void 0,queueTime:void 0,applicationTime:void 0,ttGuid:void 0,user:void 0,account:void 0,product:void 0,extra:void 0,jsAttributes:{},userAttributes:void 0,atts:void 0,transactionName:void 0,tNamePlain:void 0},a={};function s(e){try{const t=c(e);return!!t.licenseKey&&!!t.errorBeacon&&!!t.applicationID}catch(e){return!1}}function c(e){if(!e)throw new Error("All info objects require an agent identifier!");if(!a[e])throw new Error("Info for ".concat(e," was never set"));return a[e]}function u(e,t){if(!e)throw new Error("All info objects require an agent identifier!");a[e]=(0,i.a)(t,o);const r=(0,n.nY)(e);r&&(r.info=a[e])}},9417:(e,t,r)=>{"use strict";r.d(t,{D0:()=>h,gD:()=>p,xN:()=>g});var n=r(993);const i=e=>{if(!e||"string"!=typeof e)return!1;try{document.createDocumentFragment().querySelector(e)}catch{return!1}return!0};var o=r(2614),a=r(944),s=r(384),c=r(8122);const u="[data-nr-mask]",d=()=>{const e={mask_selector:"*",block_selector:"[data-nr-block]",mask_input_options:{color:!1,date:!1,"datetime-local":!1,email:!1,month:!1,number:!1,range:!1,search:!1,tel:!1,text:!1,time:!1,url:!1,week:!1,textarea:!1,select:!1,password:!0}};return{ajax:{deny_list:void 0,block_internal:!0,enabled:!0,harvestTimeSeconds:10,autoStart:!0},distributed_tracing:{enabled:void 0,exclude_newrelic_header:void 0,cors_use_newrelic_header:void 0,cors_use_tracecontext_headers:void 0,allowed_origins:void 0},feature_flags:[],generic_events:{enabled:!0,harvestTimeSeconds:30,autoStart:!0},harvest:{tooManyRequestsDelay:60},jserrors:{enabled:!0,harvestTimeSeconds:10,autoStart:!0},logging:{enabled:!0,harvestTimeSeconds:10,autoStart:!0,level:n.p_.INFO},metrics:{enabled:!0,autoStart:!0},obfuscate:void 0,page_action:{enabled:!0},user_actions:{enabled:!0},page_view_event:{enabled:!0,autoStart:!0},page_view_timing:{enabled:!0,harvestTimeSeconds:30,autoStart:!0},privacy:{cookies_enabled:!0},proxy:{assets:void 0,beacon:void 0},session:{expiresMs:o.wk,inactiveMs:o.BB},session_replay:{autoStart:!0,enabled:!1,harvestTimeSeconds:60,preload:!1,sampling_rate:10,error_sampling_rate:100,collect_fonts:!1,inline_images:!1,fix_stylesheets:!0,mask_all_inputs:!0,get mask_text_selector(){return e.mask_selector},set mask_text_selector(t){i(t)?e.mask_selector="".concat(t,",").concat(u):""===t||null===t?e.mask_selector=u:(0,a.R)(5,t)},get block_class(){return"nr-block"},get ignore_class(){return"nr-ignore"},get mask_text_class(){return"nr-mask"},get block_selector(){return e.block_selector},set block_selector(t){i(t)?e.block_selector+=",".concat(t):""!==t&&(0,a.R)(6,t)},get mask_input_options(){return e.mask_input_options},set mask_input_options(t){t&&"object"==typeof t?e.mask_input_options={...t,password:!0}:(0,a.R)(7,t)}},session_trace:{enabled:!0,harvestTimeSeconds:10,autoStart:!0},soft_navigations:{enabled:!0,harvestTimeSeconds:10,autoStart:!0},spa:{enabled:!0,harvestTimeSeconds:10,autoStart:!0},ssl:void 0}},l={},f="All configuration objects require an agent identifier!";function h(e){if(!e)throw new Error(f);if(!l[e])throw new Error("Configuration for ".concat(e," was never set"));return l[e]}function g(e,t){if(!e)throw new Error(f);l[e]=(0,c.a)(t,d());const r=(0,s.nY)(e);r&&(r.init=l[e])}function p(e,t){if(!e)throw new Error(f);var r=h(e);if(r){for(var n=t.split("."),i=0;i<n.length-1;i++)if("object"!=typeof(r=r[n[i]]))return;r=r[n[n.length-1]]}return r}},5603:(e,t,r)=>{"use strict";r.d(t,{a:()=>c,o:()=>s});var n=r(384),i=r(8122);const o={accountID:void 0,trustKey:void 0,agentID:void 0,licenseKey:void 0,applicationID:void 0,xpid:void 0},a={};function s(e){if(!e)throw new Error("All loader-config objects require an agent identifier!");if(!a[e])throw new Error("LoaderConfig for ".concat(e," was never set"));return a[e]}function c(e,t){if(!e)throw new Error("All loader-config objects require an agent identifier!");a[e]=(0,i.a)(t,o);const r=(0,n.nY)(e);r&&(r.loader_config=a[e])}},3371:(e,t,r)=>{"use strict";r.d(t,{V:()=>f,f:()=>l});var n=r(8122),i=r(384),o=r(6154),a=r(9324);let s=0;const c={buildEnv:a.F3,distMethod:a.Xs,version:a.xv,originTime:o.WN},u={customTransaction:void 0,disabled:!1,isolatedBacklog:!1,loaderType:void 0,maxBytes:3e4,onerror:void 0,origin:""+o.gm.location,ptid:void 0,releaseIds:{},appMetadata:{},session:void 0,denyList:void 0,timeKeeper:void 0,obfuscator:void 0},d={};function l(e){if(!e)throw new Error("All runtime objects require an agent identifier!");if(!d[e])throw new Error("Runtime for ".concat(e," was never set"));return d[e]}function f(e,t){if(!e)throw new Error("All runtime objects require an agent identifier!");d[e]={...(0,n.a)(t,u),...c},Object.hasOwnProperty.call(d[e],"harvestCount")||Object.defineProperty(d[e],"harvestCount",{get:()=>++s});const r=(0,i.nY)(e);r&&(r.runtime=d[e])}},9324:(e,t,r)=>{"use strict";r.d(t,{F3:()=>i,Xs:()=>o,Yq:()=>a,xv:()=>n});const n="1.268.0",i="PROD",o="CDN",a="2.0.0-alpha.12"},6154:(e,t,r)=>{"use strict";r.d(t,{A4:()=>s,OF:()=>d,RI:()=>i,Vr:()=>h,WN:()=>g,bv:()=>o,gm:()=>a,lR:()=>f,m:()=>u,mw:()=>c,sb:()=>l});var n=r(1863);const i="undefined"!=typeof window&&!!window.document,o="undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self.navigator instanceof WorkerNavigator||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis.navigator instanceof WorkerNavigator),a=i?window:"undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis),s="complete"===a?.document?.readyState,c=Boolean("hidden"===a?.document?.visibilityState),u=""+a?.location,d=/iPad|iPhone|iPod/.test(a.navigator?.userAgent),l=d&&"undefined"==typeof SharedWorker,f=(()=>{const e=a.navigator?.userAgent?.match(/Firefox[/\s](\d+\.\d+)/);return Array.isArray(e)&&e.length>=2?+e[1]:0})(),h=!!a.navigator?.sendBeacon,g=Date.now()-(0,n.t)()},4777:(e,t,r)=>{"use strict";r.d(t,{J:()=>o});var n=r(944);const i={agentIdentifier:"",ee:void 0};class o{constructor(e){try{if("object"!=typeof e)return(0,n.R)(8);this.sharedContext={},Object.assign(this.sharedContext,i),Object.entries(e).forEach((([e,t])=>{Object.keys(i).includes(e)&&(this.sharedContext[e]=t)}))}catch(e){(0,n.R)(9,e)}}}},7295:(e,t,r)=>{"use strict";r.d(t,{Xv:()=>a,gX:()=>i,iW:()=>o});var n=[];function i(e){if(!e||o(e))return!1;if(0===n.length)return!0;for(var t=0;t<n.length;t++){var r=n[t];if("*"===r.hostname)return!1;if(s(r.hostname,e.hostname)&&c(r.pathname,e.pathname))return!1}return!0}function o(e){return void 0===e.hostname}function a(e){if(n=[],e&&e.length)for(var t=0;t<e.length;t++){let r=e[t];if(!r)continue;0===r.indexOf("http://")?r=r.substring(7):0===r.indexOf("https://")&&(r=r.substring(8));const i=r.indexOf("/");let o,a;i>0?(o=r.substring(0,i),a=r.substring(i)):(o=r,a="");let[s]=o.split(":");n.push({hostname:s,pathname:a})}}function s(e,t){return!(e.length>t.length)&&t.indexOf(e)===t.length-e.length}function c(e,t){return 0===e.indexOf("/")&&(e=e.substring(1)),0===t.indexOf("/")&&(t=t.substring(1)),""===e||e===t}},1687:(e,t,r)=>{"use strict";r.d(t,{Ak:()=>c,Ze:()=>l,x3:()=>u});var n=r(7836),i=r(3606),o=r(860),a=r(2646);const s={};function c(e,t){const r={staged:!1,priority:o.P[t]||0};d(e),s[e].get(t)||s[e].set(t,r)}function u(e,t){e&&s[e]&&(s[e].get(t)&&s[e].delete(t),h(e,t,!1),s[e].size&&f(e))}function d(e){if(!e)throw new Error("agentIdentifier required");s[e]||(s[e]=new Map)}function l(e="",t="feature",r=!1){if(d(e),!e||!s[e].get(t)||r)return h(e,t);s[e].get(t).staged=!0,f(e)}function f(e){const t=Array.from(s[e]);t.every((([e,t])=>t.staged))&&(t.sort(((e,t)=>e[1].priority-t[1].priority)),t.forEach((([t])=>{s[e].delete(t),h(e,t)})))}function h(e,t,r=!0){const o=e?n.ee.get(e):n.ee,s=i.i.handlers;if(!o.aborted&&o.backlog&&s){if(r){const e=o.backlog[t],r=s[t];if(r){for(let t=0;e&&t<e.length;++t)g(e[t],r);Object.entries(r).forEach((([e,t])=>{Object.values(t||{}).forEach((t=>{t[0]?.on&&t[0]?.context()instanceof a.y&&t[0].on(e,t[1])}))}))}}o.isolatedBacklog||delete s[t],o.backlog[t]=null,o.emit("drain-"+t,[])}}function g(e,t){var r=e[1];Object.values(t[r]||{}).forEach((t=>{var r=e[0];if(t[0]===r){var n=t[1],i=e[3],o=e[2];n.apply(i,o)}}))}},7836:(e,t,r)=>{"use strict";r.d(t,{P:()=>c,ee:()=>u});var n=r(384),i=r(8990),o=r(3371),a=r(2646),s=r(5607);const c="nr@context:".concat(s.W),u=function e(t,r){var n={},s={},d={},l=!1;try{l=16===r.length&&(0,o.f)(r).isolatedBacklog}catch(e){}var f={on:g,addEventListener:g,removeEventListener:function(e,t){var r=n[e];if(!r)return;for(var i=0;i<r.length;i++)r[i]===t&&r.splice(i,1)},emit:function(e,r,n,i,o){!1!==o&&(o=!0);if(u.aborted&&!i)return;t&&o&&t.emit(e,r,n);for(var a=h(n),c=p(e),d=c.length,l=0;l<d;l++)c[l].apply(a,r);var g=v()[s[e]];g&&g.push([f,e,r,a]);return a},get:m,listeners:p,context:h,buffer:function(e,t){const r=v();if(t=t||"feature",f.aborted)return;Object.entries(e||{}).forEach((([e,n])=>{s[n]=t,t in r||(r[t]=[])}))},abort:function(){f._aborted=!0,Object.keys(f.backlog).forEach((e=>{delete f.backlog[e]}))},isBuffering:function(e){return!!v()[s[e]]},debugId:r,backlog:l?{}:t&&"object"==typeof t.backlog?t.backlog:{},isolatedBacklog:l};return Object.defineProperty(f,"aborted",{get:()=>{let e=f._aborted||!1;return e||(t&&(e=t.aborted),e)}}),f;function h(e){return e&&e instanceof a.y?e:e?(0,i.I)(e,c,(()=>new a.y(c))):new a.y(c)}function g(e,t){n[e]=p(e).concat(t)}function p(e){return n[e]||[]}function m(t){return d[t]=d[t]||e(f,t)}function v(){return f.backlog}}(void 0,"globalEE"),d=(0,n.Zm)();d.ee||(d.ee=u)},2646:(e,t,r)=>{"use strict";r.d(t,{y:()=>n});class n{constructor(e){this.contextId=e}}},9908:(e,t,r)=>{"use strict";r.d(t,{d:()=>n,p:()=>i});var n=r(7836).ee.get("handle");function i(e,t,r,i,o){o?(o.buffer([e],i),o.emit(e,t,r)):(n.buffer([e],i),n.emit(e,t,r))}},3606:(e,t,r)=>{"use strict";r.d(t,{i:()=>o});var n=r(9908);o.on=a;var i=o.handlers={};function o(e,t,r,o){a(o||n.d,i,e,t,r)}function a(e,t,r,i,o){o||(o="feature"),e||(e=n.d);var a=t[o]=t[o]||{};(a[r]=a[r]||[]).push([e,i])}},3878:(e,t,r)=>{"use strict";function n(e,t){return{capture:e,passive:!1,signal:t}}function i(e,t,r=!1,i){window.addEventListener(e,t,n(r,i))}function o(e,t,r=!1,i){document.addEventListener(e,t,n(r,i))}r.d(t,{DD:()=>o,jT:()=>n,sp:()=>i})},5607:(e,t,r)=>{"use strict";r.d(t,{W:()=>n});const n=(0,r(9566).bz)()},9566:(e,t,r)=>{"use strict";r.d(t,{LA:()=>s,ZF:()=>c,bz:()=>a,el:()=>u});var n=r(6154);const i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx";function o(e,t){return e?15&e[t]:16*Math.random()|0}function a(){const e=n.gm?.crypto||n.gm?.msCrypto;let t,r=0;return e&&e.getRandomValues&&(t=e.getRandomValues(new Uint8Array(30))),i.split("").map((e=>"x"===e?o(t,r++).toString(16):"y"===e?(3&o()|8).toString(16):e)).join("")}function s(e){const t=n.gm?.crypto||n.gm?.msCrypto;let r,i=0;t&&t.getRandomValues&&(r=t.getRandomValues(new Uint8Array(e)));const a=[];for(var s=0;s<e;s++)a.push(o(r,i++).toString(16));return a.join("")}function c(){return s(16)}function u(){return s(32)}},2614:(e,t,r)=>{"use strict";r.d(t,{BB:()=>a,H3:()=>n,g:()=>u,iL:()=>c,tS:()=>s,uh:()=>i,wk:()=>o});const n="NRBA",i="SESSION",o=144e5,a=18e5,s={STARTED:"session-started",PAUSE:"session-pause",RESET:"session-reset",RESUME:"session-resume",UPDATE:"session-update"},c={SAME_TAB:"same-tab",CROSS_TAB:"cross-tab"},u={OFF:0,FULL:1,ERROR:2}},1863:(e,t,r)=>{"use strict";function n(){return Math.floor(performance.now())}r.d(t,{t:()=>n})},7485:(e,t,r)=>{"use strict";r.d(t,{D:()=>i});var n=r(6154);function i(e){if(0===(e||"").indexOf("data:"))return{protocol:"data"};try{const t=new URL(e,location.href),r={port:t.port,hostname:t.hostname,pathname:t.pathname,search:t.search,protocol:t.protocol.slice(0,t.protocol.indexOf(":")),sameOrigin:t.protocol===n.gm?.location?.protocol&&t.host===n.gm?.location?.host};return r.port&&""!==r.port||("http:"===t.protocol&&(r.port="80"),"https:"===t.protocol&&(r.port="443")),r.pathname&&""!==r.pathname?r.pathname.startsWith("/")||(r.pathname="/".concat(r.pathname)):r.pathname="/",r}catch(e){return{}}}},944:(e,t,r)=>{"use strict";function n(e,t){"function"==typeof console.debug&&console.debug("New Relic Warning: https://github.com/newrelic/newrelic-browser-agent/blob/main/docs/warning-codes.md#".concat(e),t)}r.d(t,{R:()=>n})},5284:(e,t,r)=>{"use strict";r.d(t,{t:()=>c,B:()=>s});var n=r(7836),i=r(6154);const o="newrelic";const a=new Set,s={};function c(e,t){const r=n.ee.get(t);s[t]??={},e&&"object"==typeof e&&(a.has(t)||(r.emit("rumresp",[e]),s[t]=e,a.add(t),function(e={}){try{i.gm.dispatchEvent(new CustomEvent(o,{detail:e}))}catch(e){}}({loaded:!0})))}},8990:(e,t,r)=>{"use strict";r.d(t,{I:()=>i});var n=Object.prototype.hasOwnProperty;function i(e,t,r){if(n.call(e,t))return e[t];var i=r();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:i,writable:!0,enumerable:!1}),i}catch(e){}return e[t]=i,i}},6389:(e,t,r)=>{"use strict";function n(e,t=500,r={}){const n=r?.leading||!1;let i;return(...r)=>{n&&void 0===i&&(e.apply(this,r),i=setTimeout((()=>{i=clearTimeout(i)}),t)),n||(clearTimeout(i),i=setTimeout((()=>{e.apply(this,r)}),t))}}function i(e){let t=!1;return(...r)=>{t||(t=!0,e.apply(this,r))}}r.d(t,{J:()=>i,s:()=>n})},3304:(e,t,r)=>{"use strict";r.d(t,{A:()=>o});var n=r(7836);const i=()=>{const e=new WeakSet;return(t,r)=>{if("object"==typeof r&&null!==r){if(e.has(r))return;e.add(r)}return r}};function o(e){try{return JSON.stringify(e,i())??""}catch(e){try{n.ee.emit("internal-error",[e])}catch(e){}return""}}},5289:(e,t,r)=>{"use strict";r.d(t,{GG:()=>o,sB:()=>a});var n=r(3878);function i(){return"undefined"==typeof document||"complete"===document.readyState}function o(e,t){if(i())return e();(0,n.sp)("load",e,t)}function a(e){if(i())return e();(0,n.DD)("DOMContentLoaded",e)}},384:(e,t,r)=>{"use strict";r.d(t,{NT:()=>o,US:()=>d,Zm:()=>a,bQ:()=>c,dV:()=>s,nY:()=>u,pV:()=>l});var n=r(6154),i=r(1863);const o={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net"};function a(){return n.gm.NREUM||(n.gm.NREUM={}),void 0===n.gm.newrelic&&(n.gm.newrelic=n.gm.NREUM),n.gm.NREUM}function s(){let e=a();return e.o||(e.o={ST:n.gm.setTimeout,SI:n.gm.setImmediate,CT:n.gm.clearTimeout,XHR:n.gm.XMLHttpRequest,REQ:n.gm.Request,EV:n.gm.Event,PR:n.gm.Promise,MO:n.gm.MutationObserver,FETCH:n.gm.fetch,WS:n.gm.WebSocket}),e}function c(e,t){let r=a();r.initializedAgents??={},t.initializedAt={ms:(0,i.t)(),date:new Date},r.initializedAgents[e]=t}function u(e){let t=a();return t.initializedAgents?.[e]}function d(e,t){a()[e]=t}function l(){return function(){let e=a();const t=e.info||{};e.info={beacon:o.beacon,errorBeacon:o.errorBeacon,...t}}(),function(){let e=a();const t=e.init||{};e.init={...t}}(),s(),function(){let e=a();const t=e.loader_config||{};e.loader_config={...t}}(),a()}},2843:(e,t,r)=>{"use strict";r.d(t,{u:()=>i});var n=r(3878);function i(e,t=!1,r,i){(0,n.DD)("visibilitychange",(function(){if(t)return void("hidden"===document.visibilityState&&e());e(document.visibilityState)}),r,i)}},8139:(e,t,r)=>{"use strict";r.d(t,{u:()=>f});var n=r(7836),i=r(3434),o=r(8990),a=r(6154);const s={},c=a.gm.XMLHttpRequest,u="addEventListener",d="removeEventListener",l="nr@wrapped:".concat(n.P);function f(e){var t=function(e){return(e||n.ee).get("events")}(e);if(s[t.debugId]++)return t;s[t.debugId]=1;var r=(0,i.YM)(t,!0);function f(e){r.inPlace(e,[u,d],"-",g)}function g(e,t){return e[1]}return"getPrototypeOf"in Object&&(a.RI&&h(document,f),h(a.gm,f),h(c.prototype,f)),t.on(u+"-start",(function(e,t){var n=e[1];if(null!==n&&("function"==typeof n||"object"==typeof n)){var i=(0,o.I)(n,l,(function(){var e={object:function(){if("function"!=typeof n.handleEvent)return;return n.handleEvent.apply(n,arguments)},function:n}[typeof n];return e?r(e,"fn-",null,e.name||"anonymous"):n}));this.wrapped=e[1]=i}})),t.on(d+"-start",(function(e){e[1]=this.wrapped||e[1]})),t}function h(e,t,...r){let n=e;for(;"object"==typeof n&&!Object.prototype.hasOwnProperty.call(n,u);)n=Object.getPrototypeOf(n);n&&t(n,...r)}},3434:(e,t,r)=>{"use strict";r.d(t,{Jt:()=>o,YM:()=>c});var n=r(7836),i=r(5607);const o="nr@original:".concat(i.W);var a=Object.prototype.hasOwnProperty,s=!1;function c(e,t){return e||(e=n.ee),r.inPlace=function(e,t,n,i,o){n||(n="");const a="-"===n.charAt(0);for(let s=0;s<t.length;s++){const c=t[s],u=e[c];d(u)||(e[c]=r(u,a?c+n:n,i,c,o))}},r.flag=o,r;function r(t,r,n,s,c){return d(t)?t:(r||(r=""),nrWrapper[o]=t,function(e,t,r){if(Object.defineProperty&&Object.keys)try{return Object.keys(e).forEach((function(r){Object.defineProperty(t,r,{get:function(){return e[r]},set:function(t){return e[r]=t,t}})})),t}catch(e){u([e],r)}for(var n in e)a.call(e,n)&&(t[n]=e[n])}(t,nrWrapper,e),nrWrapper);function nrWrapper(){var o,a,d,l;try{a=this,o=[...arguments],d="function"==typeof n?n(o,a):n||{}}catch(t){u([t,"",[o,a,s],d],e)}i(r+"start",[o,a,s],d,c);try{return l=t.apply(a,o)}catch(e){throw i(r+"err",[o,a,e],d,c),e}finally{i(r+"end",[o,a,l],d,c)}}}function i(r,n,i,o){if(!s||t){var a=s;s=!0;try{e.emit(r,n,i,t,o)}catch(t){u([t,r,n,i],e)}s=a}}}function u(e,t){t||(t=n.ee);try{t.emit("internal-error",e)}catch(e){}}function d(e){return!(e&&"function"==typeof e&&e.apply&&!e[o])}},9300:(e,t,r)=>{"use strict";r.d(t,{T:()=>n});const n=r(860).K.ajax},3333:(e,t,r)=>{"use strict";r.d(t,{TZ:()=>n,Zp:()=>i,mq:()=>s,nf:()=>a,qN:()=>o});const n=r(860).K.genericEvents,i=["auxclick","click","copy","keydown","paste","scrollend"],o=["focus","blur"],a=4,s=1e3},6774:(e,t,r)=>{"use strict";r.d(t,{T:()=>n});const n=r(860).K.jserrors},993:(e,t,r)=>{"use strict";r.d(t,{ET:()=>o,TZ:()=>a,p_:()=>i});var n=r(860);const i={ERROR:"ERROR",WARN:"WARN",INFO:"INFO",DEBUG:"DEBUG",TRACE:"TRACE"},o="log",a=n.K.logging},3785:(e,t,r)=>{"use strict";r.d(t,{R:()=>c,b:()=>u});var n=r(9908),i=r(1863),o=r(860),a=r(3969),s=r(993);function c(e,t,r={},c=s.p_.INFO){(0,n.p)(a.xV,["API/logging/".concat(c.toLowerCase(),"/called")],void 0,o.K.metrics,e),(0,n.p)(s.ET,[(0,i.t)(),t,r,c],void 0,o.K.logging,e)}function u(e){return"string"==typeof e&&Object.values(s.p_).some((t=>t===e.toUpperCase().trim()))}},3969:(e,t,r)=>{"use strict";r.d(t,{TZ:()=>n,XG:()=>s,rs:()=>i,xV:()=>a,z_:()=>o});const n=r(860).K.metrics,i="sm",o="cm",a="storeSupportabilityMetrics",s="storeEventMetrics"},6630:(e,t,r)=>{"use strict";r.d(t,{T:()=>n});const n=r(860).K.pageViewEvent},782:(e,t,r)=>{"use strict";r.d(t,{T:()=>n});const n=r(860).K.pageViewTiming},6344:(e,t,r)=>{"use strict";r.d(t,{BB:()=>d,G4:()=>o,Qb:()=>l,TZ:()=>i,Ug:()=>a,_s:()=>s,bc:()=>u,yP:()=>c});var n=r(2614);const i=r(860).K.sessionReplay,o={RECORD:"recordReplay",PAUSE:"pauseReplay",REPLAY_RUNNING:"replayRunning",ERROR_DURING_REPLAY:"errorDuringReplay"},a=.12,s={DomContentLoaded:0,Load:1,FullSnapshot:2,IncrementalSnapshot:3,Meta:4,Custom:5},c={[n.g.ERROR]:15e3,[n.g.FULL]:3e5,[n.g.OFF]:0},u={RESET:{message:"Session was reset",sm:"Reset"},IMPORT:{message:"Recorder failed to import",sm:"Import"},TOO_MANY:{message:"429: Too Many Requests",sm:"Too-Many"},TOO_BIG:{message:"Payload was too large",sm:"Too-Big"},CROSS_TAB:{message:"Session Entity was set to OFF on another tab",sm:"Cross-Tab"},ENTITLEMENTS:{message:"Session Replay is not allowed and will not be started",sm:"Entitlement"}},d=5e3,l={API:"api"}},5270:(e,t,r)=>{"use strict";r.d(t,{Aw:()=>c,CT:()=>u,SR:()=>s});var n=r(384),i=r(9417),o=r(7767),a=r(6154);function s(e){return!!(0,n.dV)().o.MO&&(0,o.V)(e)&&!0===(0,i.gD)(e,"session_trace.enabled")}function c(e){return!0===(0,i.gD)(e,"session_replay.preload")&&s(e)}function u(e,t){const r=t.correctAbsoluteTimestamp(e);return{originalTimestamp:e,correctedTimestamp:r,timestampDiff:e-r,originTime:a.WN,correctedOriginTime:t.correctedOriginTime,originTimeDiff:Math.floor(a.WN-t.correctedOriginTime)}}},3738:(e,t,r)=>{"use strict";r.d(t,{He:()=>i,Kp:()=>s,Lc:()=>u,Rz:()=>d,TZ:()=>n,bD:()=>o,d3:()=>a,jx:()=>l,uP:()=>c});const n=r(860).K.sessionTrace,i="bstResource",o="resource",a="-start",s="-end",c="fn"+a,u="fn"+s,d="pushState",l=1e3},3962:(e,t,r)=>{"use strict";r.d(t,{AM:()=>o,O2:()=>s,Qu:()=>c,TZ:()=>a,ih:()=>u,tC:()=>i});var n=r(860);const i=["click","keydown","submit"],o="api",a=n.K.softNav,s={INITIAL_PAGE_LOAD:"",ROUTE_CHANGE:1,UNSPECIFIED:2},c={INTERACTION:1,AJAX:2,CUSTOM_END:3,CUSTOM_TRACER:4},u={IP:"in progress",FIN:"finished",CAN:"cancelled"}},7378:(e,t,r)=>{"use strict";r.d(t,{$p:()=>R,BR:()=>b,Kp:()=>x,L3:()=>y,Lc:()=>c,NC:()=>o,SG:()=>d,TZ:()=>i,U6:()=>g,UT:()=>m,d3:()=>w,dT:()=>f,e5:()=>A,gx:()=>v,l9:()=>l,oW:()=>h,op:()=>p,rw:()=>u,tH:()=>E,uP:()=>s,wW:()=>T,xq:()=>a});var n=r(384);const i=r(860).K.spa,o=["click","submit","keypress","keydown","keyup","change"],a=999,s="fn-start",c="fn-end",u="cb-start",d="api-ixn-",l="remaining",f="interaction",h="spaNode",g="jsonpNode",p="fetch-start",m="fetch-done",v="fetch-body-",b="jsonp-end",y=(0,n.dV)().o.ST,w="-start",x="-end",R="-body",T="cb"+x,A="jsTime",E="fetch"},4234:(e,t,r)=>{"use strict";r.d(t,{W:()=>i});var n=r(7836);class i{constructor(e,t,r){this.agentIdentifier=e,this.aggregator=t,this.ee=n.ee.get(e),this.featureName=r,this.blocked=!1}}},7767:(e,t,r)=>{"use strict";r.d(t,{V:()=>o});var n=r(9417),i=r(6154);const o=e=>i.RI&&!0===(0,n.gD)(e,"privacy.cookies_enabled")},425:(e,t,r)=>{"use strict";r.d(t,{j:()=>j});var n=r(860),i=r(2555),o=r(3371),a=r(9908),s=r(7836),c=r(1687),u=r(5289),d=r(6154),l=r(944),f=r(3969),h=r(384),g=r(6344);const p=["setErrorHandler","finished","addToTrace","addRelease","addPageAction","setCurrentRouteName","setPageViewName","setCustomAttribute","interaction","noticeError","setUserId","setApplicationVersion","start",g.G4.RECORD,g.G4.PAUSE,"log","wrapLogger"],m=["setErrorHandler","finished","addToTrace","addRelease"];var v=r(1863),b=r(2614),y=r(993),w=r(3785),x=r(2646),R=r(3434);function T(e,t,r,n){if("object"!=typeof t||!t||"string"!=typeof r||!r||"function"!=typeof t[r])return(0,l.R)(29);const i=function(e){return(e||s.ee).get("logger")}(e),o=(0,R.YM)(i),a=new x.y(s.P);return a.level=n.level,a.customAttributes=n.customAttributes,o.inPlace(t,[r],"wrap-logger-",a),i}function A(){const e=(0,h.pV)();p.forEach((t=>{e[t]=(...r)=>function(t,...r){let n=[];return Object.values(e.initializedAgents).forEach((e=>{e&&e.api?e.exposed&&e.api[t]&&n.push(e.api[t](...r)):(0,l.R)(38,t)})),n.length>1?n:n[0]}(t,...r)}))}const E={};var S=r(9417),N=r(5603),O=r(5284);const I=e=>{const t=e.startsWith("http");e+="/",r.p=t?e:"https://"+e};let _=!1;function j(e,t={},p,x){let{init:R,info:j,loader_config:P,runtime:C={},exposed:k=!0}=t;C.loaderType=p;const L=(0,h.pV)();j||(R=L.init,j=L.info,P=L.loader_config),(0,S.xN)(e.agentIdentifier,R||{}),(0,N.a)(e.agentIdentifier,P||{}),j.jsAttributes??={},d.bv&&(j.jsAttributes.isWorker=!0),(0,i.x1)(e.agentIdentifier,j);const D=(0,S.D0)(e.agentIdentifier),H=[j.beacon,j.errorBeacon];_||(D.proxy.assets&&(I(D.proxy.assets),H.push(D.proxy.assets)),D.proxy.beacon&&H.push(D.proxy.beacon),A(),(0,h.US)("activatedFeatures",O.B),e.runSoftNavOverSpa&&=!0===D.soft_navigations.enabled&&D.feature_flags.includes("soft_nav")),C.denyList=[...D.ajax.deny_list||[],...D.ajax.block_internal?H:[]],C.ptid=e.agentIdentifier,(0,o.V)(e.agentIdentifier,C),e.ee=s.ee.get(e.agentIdentifier),void 0===e.api&&(e.api=function(e,t,h=!1){t||(0,c.Ak)(e,"api");const p={};var x=s.ee.get(e),R=x.get("tracer");E[e]=b.g.OFF,x.on(g.G4.REPLAY_RUNNING,(t=>{E[e]=t}));var A="api-",S=A+"ixn-";function N(t,r,n,o){const a=(0,i.Vp)(e);return null===r?delete a.jsAttributes[t]:(0,i.x1)(e,{...a,jsAttributes:{...a.jsAttributes,[t]:r}}),_(A,n,!0,o||null===r?"session":void 0)(t,r)}function O(){}p.log=function(e,{customAttributes:t={},level:r=y.p_.INFO}={}){(0,a.p)(f.xV,["API/log/called"],void 0,n.K.metrics,x),(0,w.R)(x,e,t,r)},p.wrapLogger=(e,t,{customAttributes:r={},level:i=y.p_.INFO}={})=>{(0,a.p)(f.xV,["API/wrapLogger/called"],void 0,n.K.metrics,x),T(x,e,t,{customAttributes:r,level:i})},m.forEach((e=>{p[e]=_(A,e,!0,"api")})),p.addPageAction=_(A,"addPageAction",!0,n.K.genericEvents),p.setPageViewName=function(t,r){if("string"==typeof t)return"/"!==t.charAt(0)&&(t="/"+t),(0,o.f)(e).customTransaction=(r||"http://custom.transaction")+t,_(A,"setPageViewName",!0)()},p.setCustomAttribute=function(e,t,r=!1){if("string"==typeof e){if(["string","number","boolean"].includes(typeof t)||null===t)return N(e,t,"setCustomAttribute",r);(0,l.R)(40,typeof t)}else(0,l.R)(39,typeof e)},p.setUserId=function(e){if("string"==typeof e||null===e)return N("enduser.id",e,"setUserId",!0);(0,l.R)(41,typeof e)},p.setApplicationVersion=function(e){if("string"==typeof e||null===e)return N("application.version",e,"setApplicationVersion",!1);(0,l.R)(42,typeof e)},p.start=()=>{try{(0,a.p)(f.xV,["API/start/called"],void 0,n.K.metrics,x),x.emit("manual-start-all")}catch(e){(0,l.R)(23,e)}},p[g.G4.RECORD]=function(){(0,a.p)(f.xV,["API/recordReplay/called"],void 0,n.K.metrics,x),(0,a.p)(g.G4.RECORD,[],void 0,n.K.sessionReplay,x)},p[g.G4.PAUSE]=function(){(0,a.p)(f.xV,["API/pauseReplay/called"],void 0,n.K.metrics,x),(0,a.p)(g.G4.PAUSE,[],void 0,n.K.sessionReplay,x)},p.interaction=function(e){return(new O).get("object"==typeof e?e:{})};const I=O.prototype={createTracer:function(e,t){var r={},i=this,o="function"==typeof t;return(0,a.p)(f.xV,["API/createTracer/called"],void 0,n.K.metrics,x),h||(0,a.p)(S+"tracer",[(0,v.t)(),e,r],i,n.K.spa,x),function(){if(R.emit((o?"":"no-")+"fn-start",[(0,v.t)(),i,o],r),o)try{return t.apply(this,arguments)}catch(e){const t="string"==typeof e?new Error(e):e;throw R.emit("fn-err",[arguments,this,t],r),t}finally{R.emit("fn-end",[(0,v.t)()],r)}}}};function _(e,t,r,i){return function(){return(0,a.p)(f.xV,["API/"+t+"/called"],void 0,n.K.metrics,x),i&&(0,a.p)(e+t,[(0,v.t)(),...arguments],r?null:this,i,x),r?void 0:this}}function j(){r.e(478).then(r.bind(r,8778)).then((({setAPI:t})=>{t(e),(0,c.Ze)(e,"api")})).catch((e=>{(0,l.R)(27,e),x.abort()}))}return["actionText","setName","setAttribute","save","ignore","onEnd","getContext","end","get"].forEach((e=>{I[e]=_(S,e,void 0,h?n.K.softNav:n.K.spa)})),p.setCurrentRouteName=h?_(S,"routeName",void 0,n.K.softNav):_(A,"routeName",!0,n.K.spa),p.noticeError=function(t,r){"string"==typeof t&&(t=new Error(t)),(0,a.p)(f.xV,["API/noticeError/called"],void 0,n.K.metrics,x),(0,a.p)("err",[t,(0,v.t)(),!1,r,!!E[e]],void 0,n.K.jserrors,x)},d.RI?(0,u.GG)((()=>j()),!0):j(),p}(e.agentIdentifier,x,e.runSoftNavOverSpa)),void 0===e.exposed&&(e.exposed=k),_=!0}},8374:(e,t,r)=>{r.nc=(()=>{try{return document?.currentScript?.nonce}catch(e){}return""})()},860:(e,t,r)=>{"use strict";r.d(t,{K:()=>n,P:()=>i});const n={ajax:"ajax",genericEvents:"generic_events",jserrors:"jserrors",logging:"logging",metrics:"metrics",pageAction:"page_action",pageViewEvent:"page_view_event",pageViewTiming:"page_view_timing",sessionReplay:"session_replay",sessionTrace:"session_trace",softNav:"soft_navigations",spa:"spa"},i={[n.pageViewEvent]:1,[n.pageViewTiming]:2,[n.metrics]:3,[n.jserrors]:4,[n.spa]:5,[n.ajax]:6,[n.sessionTrace]:7,[n.softNav]:8,[n.sessionReplay]:9,[n.logging]:10,[n.genericEvents]:11}}},n={};function i(e){var t=n[e];if(void 0!==t)return t.exports;var o=n[e]={exports:{}};return r[e](o,o.exports,i),o.exports}i.m=r,i.d=(e,t)=>{for(var r in t)i.o(t,r)&&!i.o(e,r)&&Object.defineProperty(e,r,{enumerable:!0,get:t[r]})},i.f={},i.e=e=>Promise.all(Object.keys(i.f).reduce(((t,r)=>(i.f[r](e,t),t)),[])),i.u=e=>({212:"nr-spa-compressor",249:"nr-spa-recorder",478:"nr-spa"}[e]+"-1.268.0.min.js"),i.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),e={},t="NRBA-1.268.0.PROD:",i.l=(r,n,o,a)=>{if(e[r])e[r].push(n);else{var s,c;if(void 0!==o)for(var u=document.getElementsByTagName("script"),d=0;d<u.length;d++){var l=u[d];if(l.getAttribute("src")==r||l.getAttribute("data-webpack")==t+o){s=l;break}}if(!s){c=!0;var f={478:"sha512-bjdCR8n9LQBegnlzuzuIEHsaT9AodeqLLuPeO694mIy66nuuLVs4YfdocwMLwg01cJXbQCvR/SUEO6bZapVERA==",249:"sha512-HkzmyWwSGuSChOkFt8Y9uj6eNtWyYiRe7xyMhV28/Nt68/HUwqj8bQJ04hX6XaDUmcuBqX2bOPBoISyzfTJJdw==",212:"sha512-XdMlZDJzTn+0V9I0WYb3+v/0Uu051H0U8UI0EA3Xj4a3rQHkZYIxc6Fj5zDmenNMmH9huns5X1dpyfboksWiGw=="};(s=document.createElement("script")).charset="utf-8",s.timeout=120,i.nc&&s.setAttribute("nonce",i.nc),s.setAttribute("data-webpack",t+o),s.src=r,0!==s.src.indexOf(window.location.origin+"/")&&(s.crossOrigin="anonymous"),f[a]&&(s.integrity=f[a])}e[r]=[n];var h=(t,n)=>{s.onerror=s.onload=null,clearTimeout(g);var i=e[r];if(delete e[r],s.parentNode&&s.parentNode.removeChild(s),i&&i.forEach((e=>e(n))),t)return t(n)},g=setTimeout(h.bind(null,void 0,{type:"timeout",target:s}),12e4);s.onerror=h.bind(null,s.onerror),s.onload=h.bind(null,s.onload),c&&document.head.appendChild(s)}},i.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},i.p="https://js-agent.newrelic.com/",(()=>{var e={38:0,788:0};i.f.j=(t,r)=>{var n=i.o(e,t)?e[t]:void 0;if(0!==n)if(n)r.push(n[2]);else{var o=new Promise(((r,i)=>n=e[t]=[r,i]));r.push(n[2]=o);var a=i.p+i.u(t),s=new Error;i.l(a,(r=>{if(i.o(e,t)&&(0!==(n=e[t])&&(e[t]=void 0),n)){var o=r&&("load"===r.type?"missing":r.type),a=r&&r.target&&r.target.src;s.message="Loading chunk "+t+" failed.\n("+o+": "+a+")",s.name="ChunkLoadError",s.type=o,s.request=a,n[1](s)}}),"chunk-"+t,t)}};var t=(t,r)=>{var n,o,[a,s,c]=r,u=0;if(a.some((t=>0!==e[t]))){for(n in s)i.o(s,n)&&(i.m[n]=s[n]);if(c)c(i)}for(t&&t(r);u<a.length;u++)o=a[u],i.o(e,o)&&e[o]&&e[o][0](),e[o]=0},r=self["webpackChunk:NRBA-1.268.0.PROD"]=self["webpackChunk:NRBA-1.268.0.PROD"]||[];r.forEach(t.bind(null,0)),r.push=t.bind(null,r.push.bind(r))})(),(()=>{"use strict";i(8374);var e=i(944),t=i(6344),r=i(9566);class n{agentIdentifier;constructor(e=(0,r.LA)(16)){this.agentIdentifier=e}#e(t,...r){if("function"==typeof this.api?.[t])return this.api[t](...r);(0,e.R)(35,t)}addPageAction(e,t){return this.#e("addPageAction",e,t)}setPageViewName(e,t){return this.#e("setPageViewName",e,t)}setCustomAttribute(e,t,r){return this.#e("setCustomAttribute",e,t,r)}noticeError(e,t){return this.#e("noticeError",e,t)}setUserId(e){return this.#e("setUserId",e)}setApplicationVersion(e){return this.#e("setApplicationVersion",e)}setErrorHandler(e){return this.#e("setErrorHandler",e)}finished(e){return this.#e("finished",e)}addRelease(e,t){return this.#e("addRelease",e,t)}start(e){return this.#e("start",e)}recordReplay(){return this.#e(t.G4.RECORD)}pauseReplay(){return this.#e(t.G4.PAUSE)}addToTrace(e){return this.#e("addToTrace",e)}setCurrentRouteName(e){return this.#e("setCurrentRouteName",e)}interaction(){return this.#e("interaction")}log(e,t){return this.#e("log",e,t)}wrapLogger(e,t,r){return this.#e("wrapLogger",e,t,r)}}var o=i(860),a=i(9417);const s=Object.values(o.K);function c(e){const t={};return s.forEach((r=>{t[r]=function(e,t){return!0===(0,a.gD)(t,"".concat(e,".enabled"))}(r,e)})),t}var u=i(425);var d=i(1687),l=i(4234),f=i(5289),h=i(6154),g=i(5270),p=i(7767),m=i(6389);class v extends l.W{constructor(e,t,r,n=!0){super(e,t,r),this.auto=n,this.abortHandler=void 0,this.featAggregate=void 0,this.onAggregateImported=void 0,!1===(0,a.gD)(this.agentIdentifier,"".concat(this.featureName,".autoStart"))&&(this.auto=!1),this.auto?(0,d.Ak)(e,r):this.ee.on("manual-start-all",(0,m.J)((()=>{(0,d.Ak)(this.agentIdentifier,this.featureName),this.auto=!0,this.importAggregator()})))}importAggregator(t={}){if(this.featAggregate||!this.auto)return;let r;this.onAggregateImported=new Promise((e=>{r=e}));const n=async()=>{let n;try{if((0,p.V)(this.agentIdentifier)){const{setupAgentSession:e}=await i.e(478).then(i.bind(i,6526));n=e(this.agentIdentifier)}}catch(t){(0,e.R)(20,t),this.ee.emit("internal-error",[t]),this.featureName===o.K.sessionReplay&&this.abortHandler?.()}try{if(!this.#t(this.featureName,n))return(0,d.Ze)(this.agentIdentifier,this.featureName),void r(!1);const{lazyFeatureLoader:e}=await i.e(478).then(i.bind(i,6103)),{Aggregate:o}=await e(this.featureName,"aggregate");this.featAggregate=new o(this.agentIdentifier,this.aggregator,t),r(!0)}catch(t){(0,e.R)(34,t),this.abortHandler?.(),(0,d.Ze)(this.agentIdentifier,this.featureName,!0),r(!1),this.ee&&this.ee.abort()}};h.RI?(0,f.GG)((()=>n()),!0):n()}#t(e,t){switch(e){case o.K.sessionReplay:return(0,g.SR)(this.agentIdentifier)&&!!t;case o.K.sessionTrace:return!!t;default:return!0}}}var b=i(6630);class y extends v{static featureName=b.T;constructor(e,t,r=!0){super(e,t,b.T,r),this.importAggregator()}}var w=i(4777);class x extends w.J{constructor(e){super(e),this.aggregatedData={}}store(e,t,r,n,i){var o=this.getBucket(e,t,r,i);return o.metrics=function(e,t){t||(t={count:0});return t.count+=1,Object.entries(e||{}).forEach((([e,r])=>{t[e]=R(r,t[e])})),t}(n,o.metrics),o}merge(e,t,r,n,i){var o=this.getBucket(e,t,n,i);if(o.metrics){var a=o.metrics;a.count+=r.count,Object.keys(r||{}).forEach((e=>{if("count"!==e){var t=a[e],n=r[e];n&&!n.c?a[e]=R(n.t,t):a[e]=function(e,t){if(!t)return e;t.c||(t=T(t.t));return t.min=Math.min(e.min,t.min),t.max=Math.max(e.max,t.max),t.t+=e.t,t.sos+=e.sos,t.c+=e.c,t}(n,a[e])}}))}else o.metrics=r}storeMetric(e,t,r,n){var i=this.getBucket(e,t,r);return i.stats=R(n,i.stats),i}getBucket(e,t,r,n){this.aggregatedData[e]||(this.aggregatedData[e]={});var i=this.aggregatedData[e][t];return i||(i=this.aggregatedData[e][t]={params:r||{}},n&&(i.custom=n)),i}get(e,t){return t?this.aggregatedData[e]&&this.aggregatedData[e][t]:this.aggregatedData[e]}take(e){for(var t={},r="",n=!1,i=0;i<e.length;i++)t[r=e[i]]=Object.values(this.aggregatedData[r]||{}),t[r].length&&(n=!0),delete this.aggregatedData[r];return n?t:null}}function R(e,t){return null==e?function(e){e?e.c++:e={c:1};return e}(t):t?(t.c||(t=T(t.t)),t.c+=1,t.t+=e,t.sos+=e*e,e>t.max&&(t.max=e),e<t.min&&(t.min=e),t):{t:e}}function T(e){return{t:e,min:e,max:e,sos:e*e,c:1}}var A=i(384);var E=i(9908),S=i(2843),N=i(3878),O=i(782),I=i(1863);class _ extends v{static featureName=O.T;constructor(e,t,r=!0){super(e,t,O.T,r),h.RI&&((0,S.u)((()=>(0,E.p)("docHidden",[(0,I.t)()],void 0,O.T,this.ee)),!0),(0,N.sp)("pagehide",(()=>(0,E.p)("winPagehide",[(0,I.t)()],void 0,O.T,this.ee))),this.importAggregator())}}var j=i(3969);class P extends v{static featureName=j.TZ;constructor(e,t,r=!0){super(e,t,j.TZ,r),this.importAggregator()}}var C=i(6774),k=i(3304);class L{constructor(e,t,r,n,i){this.name="UncaughtError",this.message="string"==typeof e?e:(0,k.A)(e),this.sourceURL=t,this.line=r,this.column=n,this.__newrelic=i}}function D(e){return K(e)?e:new L(void 0!==e?.message?e.message:e,e?.filename||e?.sourceURL,e?.lineno||e?.line,e?.colno||e?.col,e?.__newrelic)}function H(e){let t="Unhandled Promise Rejection";if(K(e?.reason))try{return e.reason.message=t+": "+e.reason.message,D(e.reason)}catch(t){return D(e.reason)}if(void 0===e.reason)return D(t);const r=D(e.reason);return r.message=t+": "+r?.message,r}function M(e){if(e.error instanceof SyntaxError&&!/:\d+$/.test(e.error.stack?.trim())){const t=new L(e.message,e.filename,e.lineno,e.colno,e.error.__newrelic);return t.name=SyntaxError.name,t}return K(e.error)?e.error:D(e)}function K(e){return e instanceof Error&&!!e.stack}class U extends v{static featureName=C.T;#r=!1;constructor(e,r,n=!0){super(e,r,C.T,n);try{this.removeOnAbort=new AbortController}catch(e){}this.ee.on("internal-error",(e=>{this.abortHandler&&(0,E.p)("ierr",[D(e),(0,I.t)(),!0,{},this.#r],void 0,this.featureName,this.ee)})),this.ee.on(t.G4.REPLAY_RUNNING,(e=>{this.#r=e})),h.gm.addEventListener("unhandledrejection",(e=>{this.abortHandler&&(0,E.p)("err",[H(e),(0,I.t)(),!1,{unhandledPromiseRejection:1},this.#r],void 0,this.featureName,this.ee)}),(0,N.jT)(!1,this.removeOnAbort?.signal)),h.gm.addEventListener("error",(e=>{this.abortHandler&&(0,E.p)("err",[M(e),(0,I.t)(),!1,{},this.#r],void 0,this.featureName,this.ee)}),(0,N.jT)(!1,this.removeOnAbort?.signal)),this.abortHandler=this.#n,this.importAggregator()}#n(){this.removeOnAbort?.abort(),this.abortHandler=void 0}}var V=i(5603),G=i(8990);let B=1;const F="nr@id";function W(e){const t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===h.gm?0:(0,G.I)(e,F,(function(){return B++}))}function z(e){if("string"==typeof e&&e.length)return e.length;if("object"==typeof e){if("undefined"!=typeof ArrayBuffer&&e instanceof ArrayBuffer&&e.byteLength)return e.byteLength;if("undefined"!=typeof Blob&&e instanceof Blob&&e.size)return e.size;if(!("undefined"!=typeof FormData&&e instanceof FormData))try{return(0,k.A)(e).length}catch(e){return}}}var q=i(8139),Z=i(7836),Y=i(3434);const X={},J=["open","send"];function Q(t){var r=t||Z.ee;const n=function(e){return(e||Z.ee).get("xhr")}(r);if(X[n.debugId]++)return n;X[n.debugId]=1,(0,q.u)(r);var i=(0,Y.YM)(n),o=h.gm.XMLHttpRequest,a=h.gm.MutationObserver,s=h.gm.Promise,c=h.gm.setInterval,u="readystatechange",d=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],l=[],f=h.gm.XMLHttpRequest=function(t){const r=new o(t),a=n.context(r);try{n.emit("new-xhr",[r],a),r.addEventListener(u,(s=a,function(){var e=this;e.readyState>3&&!s.resolved&&(s.resolved=!0,n.emit("xhr-resolved",[],e)),i.inPlace(e,d,"fn-",y)}),(0,N.jT)(!1))}catch(t){(0,e.R)(15,t);try{n.emit("internal-error",[t])}catch(e){}}var s;return r};function g(e,t){i.inPlace(t,["onreadystatechange"],"fn-",y)}if(function(e,t){for(var r in e)t[r]=e[r]}(o,f),f.prototype=o.prototype,i.inPlace(f.prototype,J,"-xhr-",y),n.on("send-xhr-start",(function(e,t){g(e,t),function(e){l.push(e),a&&(p?p.then(b):c?c(b):(m=-m,v.data=m))}(t)})),n.on("open-xhr-start",g),a){var p=s&&s.resolve();if(!c&&!s){var m=1,v=document.createTextNode(m);new a(b).observe(v,{characterData:!0})}}else r.on("fn-end",(function(e){e[0]&&e[0].type===u||b()}));function b(){for(var e=0;e<l.length;e++)g(0,l[e]);l.length&&(l=[])}function y(e,t){return t}return n}var ee="fetch-",te=ee+"body-",re=["arrayBuffer","blob","json","text","formData"],ne=h.gm.Request,ie=h.gm.Response,oe="prototype";const ae={};function se(e){const t=function(e){return(e||Z.ee).get("fetch")}(e);if(!(ne&&ie&&h.gm.fetch))return t;if(ae[t.debugId]++)return t;function r(e,r,n){var i=e[r];"function"==typeof i&&(e[r]=function(){var e,r=[...arguments],o={};t.emit(n+"before-start",[r],o),o[Z.P]&&o[Z.P].dt&&(e=o[Z.P].dt);var a=i.apply(this,r);return t.emit(n+"start",[r,e],a),a.then((function(e){return t.emit(n+"end",[null,e],a),e}),(function(e){throw t.emit(n+"end",[e],a),e}))})}return ae[t.debugId]=1,re.forEach((e=>{r(ne[oe],e,te),r(ie[oe],e,te)})),r(h.gm,"fetch",ee),t.on(ee+"end",(function(e,r){var n=this;if(r){var i=r.headers.get("content-length");null!==i&&(n.rxSize=i),t.emit(ee+"done",[null,r],n)}else t.emit(ee+"done",[e],n)})),t}var ce=i(7485);class ue{constructor(e){this.agentIdentifier=e}generateTracePayload(e){if(!this.shouldGenerateTrace(e))return null;var t=(0,V.o)(this.agentIdentifier);if(!t)return null;var n=(t.accountID||"").toString()||null,i=(t.agentID||"").toString()||null,o=(t.trustKey||"").toString()||null;if(!n||!i)return null;var a=(0,r.ZF)(),s=(0,r.el)(),c=Date.now(),u={spanId:a,traceId:s,timestamp:c};return(e.sameOrigin||this.isAllowedOrigin(e)&&this.useTraceContextHeadersForCors())&&(u.traceContextParentHeader=this.generateTraceContextParentHeader(a,s),u.traceContextStateHeader=this.generateTraceContextStateHeader(a,c,n,i,o)),(e.sameOrigin&&!this.excludeNewrelicHeader()||!e.sameOrigin&&this.isAllowedOrigin(e)&&this.useNewrelicHeaderForCors())&&(u.newrelicHeader=this.generateTraceHeader(a,s,c,n,i,o)),u}generateTraceContextParentHeader(e,t){return"00-"+t+"-"+e+"-01"}generateTraceContextStateHeader(e,t,r,n,i){return i+"@nr=0-1-"+r+"-"+n+"-"+e+"----"+t}generateTraceHeader(e,t,r,n,i,o){if(!("function"==typeof h.gm?.btoa))return null;var a={v:[0,1],d:{ty:"Browser",ac:n,ap:i,id:e,tr:t,ti:r}};return o&&n!==o&&(a.d.tk=o),btoa((0,k.A)(a))}shouldGenerateTrace(e){return this.isDtEnabled()&&this.isAllowedOrigin(e)}isAllowedOrigin(e){var t=!1,r={};if((0,a.gD)(this.agentIdentifier,"distributed_tracing")&&(r=(0,a.D0)(this.agentIdentifier).distributed_tracing),e.sameOrigin)t=!0;else if(r.allowed_origins instanceof Array)for(var n=0;n<r.allowed_origins.length;n++){var i=(0,ce.D)(r.allowed_origins[n]);if(e.hostname===i.hostname&&e.protocol===i.protocol&&e.port===i.port){t=!0;break}}return t}isDtEnabled(){var e=(0,a.gD)(this.agentIdentifier,"distributed_tracing");return!!e&&!!e.enabled}excludeNewrelicHeader(){var e=(0,a.gD)(this.agentIdentifier,"distributed_tracing");return!!e&&!!e.exclude_newrelic_header}useNewrelicHeaderForCors(){var e=(0,a.gD)(this.agentIdentifier,"distributed_tracing");return!!e&&!1!==e.cors_use_newrelic_header}useTraceContextHeadersForCors(){var e=(0,a.gD)(this.agentIdentifier,"distributed_tracing");return!!e&&!!e.cors_use_tracecontext_headers}}var de=i(9300),le=i(7295),fe=["load","error","abort","timeout"],he=fe.length,ge=(0,A.dV)().o.REQ,pe=(0,A.dV)().o.XHR;class me extends v{static featureName=de.T;constructor(e,t,r=!0){super(e,t,de.T,r),this.dt=new ue(e),this.handler=(e,t,r,n)=>(0,E.p)(e,t,r,n,this.ee);try{const e={xmlhttprequest:"xhr",fetch:"fetch",beacon:"beacon"};h.gm?.performance?.getEntriesByType("resource").forEach((t=>{if(t.initiatorType in e&&0!==t.responseStatus){const r={status:t.responseStatus},n={rxSize:t.transferSize,duration:Math.floor(t.duration),cbTime:0};ve(r,t.name),this.handler("xhr",[r,n,t.startTime,t.responseEnd,e[t.initiatorType]],void 0,o.K.ajax)}}))}catch(e){}se(this.ee),Q(this.ee),function(e,t,r,n){function i(e){var t=this;t.totalCbs=0,t.called=0,t.cbTime=0,t.end=x,t.ended=!1,t.xhrGuids={},t.lastSize=null,t.loadCaptureCalled=!1,t.params=this.params||{},t.metrics=this.metrics||{},e.addEventListener("load",(function(r){R(t,e)}),(0,N.jT)(!1)),h.lR||e.addEventListener("progress",(function(e){t.lastSize=e.loaded}),(0,N.jT)(!1))}function a(e){this.params={method:e[0]},ve(this,e[1]),this.metrics={}}function s(t,r){var i=(0,V.o)(e);i.xpid&&this.sameOrigin&&r.setRequestHeader("X-NewRelic-ID",i.xpid);var o=n.generateTracePayload(this.parsedOrigin);if(o){var a=!1;o.newrelicHeader&&(r.setRequestHeader("newrelic",o.newrelicHeader),a=!0),o.traceContextParentHeader&&(r.setRequestHeader("traceparent",o.traceContextParentHeader),o.traceContextStateHeader&&r.setRequestHeader("tracestate",o.traceContextStateHeader),a=!0),a&&(this.dt=o)}}function c(e,r){var n=this.metrics,i=e[0],o=this;if(n&&i){var a=z(i);a&&(n.txSize=a)}this.startTime=(0,I.t)(),this.body=i,this.listener=function(e){try{"abort"!==e.type||o.loadCaptureCalled||(o.params.aborted=!0),("load"!==e.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof r.onload)&&"function"==typeof o.end)&&o.end(r)}catch(e){try{t.emit("internal-error",[e])}catch(e){}}};for(var s=0;s<he;s++)r.addEventListener(fe[s],this.listener,(0,N.jT)(!1))}function u(e,t,r){this.cbTime+=e,t?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof r.onload||"function"!=typeof this.end||this.end(r)}function d(e,t){var r=""+W(e)+!!t;this.xhrGuids&&!this.xhrGuids[r]&&(this.xhrGuids[r]=!0,this.totalCbs+=1)}function l(e,t){var r=""+W(e)+!!t;this.xhrGuids&&this.xhrGuids[r]&&(delete this.xhrGuids[r],this.totalCbs-=1)}function f(){this.endTime=(0,I.t)()}function g(e,r){r instanceof pe&&"load"===e[0]&&t.emit("xhr-load-added",[e[1],e[2]],r)}function p(e,r){r instanceof pe&&"load"===e[0]&&t.emit("xhr-load-removed",[e[1],e[2]],r)}function m(e,t,r){t instanceof pe&&("onload"===r&&(this.onload=!0),("load"===(e[0]&&e[0].type)||this.onload)&&(this.xhrCbStart=(0,I.t)()))}function v(e,r){this.xhrCbStart&&t.emit("xhr-cb-time",[(0,I.t)()-this.xhrCbStart,this.onload,r],r)}function b(e){var t,r=e[1]||{};if("string"==typeof e[0]?0===(t=e[0]).length&&h.RI&&(t=""+h.gm.location.href):e[0]&&e[0].url?t=e[0].url:h.gm?.URL&&e[0]&&e[0]instanceof URL?t=e[0].href:"function"==typeof e[0].toString&&(t=e[0].toString()),"string"==typeof t&&0!==t.length){t&&(this.parsedOrigin=(0,ce.D)(t),this.sameOrigin=this.parsedOrigin.sameOrigin);var i=n.generateTracePayload(this.parsedOrigin);if(i&&(i.newrelicHeader||i.traceContextParentHeader))if(e[0]&&e[0].headers)s(e[0].headers,i)&&(this.dt=i);else{var o={};for(var a in r)o[a]=r[a];o.headers=new Headers(r.headers||{}),s(o.headers,i)&&(this.dt=i),e.length>1?e[1]=o:e.push(o)}}function s(e,t){var r=!1;return t.newrelicHeader&&(e.set("newrelic",t.newrelicHeader),r=!0),t.traceContextParentHeader&&(e.set("traceparent",t.traceContextParentHeader),t.traceContextStateHeader&&e.set("tracestate",t.traceContextStateHeader),r=!0),r}}function y(e,t){this.params={},this.metrics={},this.startTime=(0,I.t)(),this.dt=t,e.length>=1&&(this.target=e[0]),e.length>=2&&(this.opts=e[1]);var r,n=this.opts||{},i=this.target;"string"==typeof i?r=i:"object"==typeof i&&i instanceof ge?r=i.url:h.gm?.URL&&"object"==typeof i&&i instanceof URL&&(r=i.href),ve(this,r);var o=(""+(i&&i instanceof ge&&i.method||n.method||"GET")).toUpperCase();this.params.method=o,this.body=n.body,this.txSize=z(n.body)||0}function w(e,t){if(this.endTime=(0,I.t)(),this.params||(this.params={}),(0,le.iW)(this.params))return;let n;this.params.status=t?t.status:0,"string"==typeof this.rxSize&&this.rxSize.length>0&&(n=+this.rxSize);const i={txSize:this.txSize,rxSize:n,duration:(0,I.t)()-this.startTime};r("xhr",[this.params,i,this.startTime,this.endTime,"fetch"],this,o.K.ajax)}function x(e){const t=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(let t=0;t<he;t++)e.removeEventListener(fe[t],this.listener,!1);t.aborted||(0,le.iW)(t)||(n.duration=(0,I.t)()-this.startTime,this.loadCazptureCalled||4!==e.readyState?null==t.status&&(t.status=0):R(this,e),n.cbTime=this.cbTime,r("xhr",[t,n,this.startTime,this.endTime,"xhr"],this,o.K.ajax))}}function R(e,r){e.params.status=r.status;var n=function(e,t){var r=e.responseType;return"json"===r&&null!==t?t:"arraybuffer"===r||"blob"===r||"json"===r?z(e.response):"text"===r||""===r||void 0===r?z(e.responseText):void 0}(r,e.lastSize);if(n&&(e.metrics.rxSize=n),e.sameOrigin){var i=r.getResponseHeader("X-NewRelic-App-Data");i&&((0,E.p)(j.rs,["Ajax/CrossApplicationTracing/Header/Seen"],void 0,o.K.metrics,t),e.params.cat=i.split(", ").pop())}e.loadCaptureCalled=!0}t.on("new-xhr",i),t.on("open-xhr-start",a),t.on("open-xhr-end",s),t.on("send-xhr-start",c),t.on("xhr-cb-time",u),t.on("xhr-load-added",d),t.on("xhr-load-removed",l),t.on("xhr-resolved",f),t.on("addEventListener-end",g),t.on("removeEventListener-end",p),t.on("fn-end",v),t.on("fetch-before-start",b),t.on("fetch-start",y),t.on("fn-start",m),t.on("fetch-done",w)}(e,this.ee,this.handler,this.dt),this.importAggregator()}}function ve(e,t){var r=(0,ce.D)(t),n=e.params||e;n.hostname=r.hostname,n.port=r.port,n.protocol=r.protocol,n.host=r.hostname+":"+r.port,n.pathname=r.pathname,e.parsedOrigin=r,e.sameOrigin=r.sameOrigin}const be={},ye=["pushState","replaceState"];function we(e){const t=function(e){return(e||Z.ee).get("history")}(e);return!h.RI||be[t.debugId]++||(be[t.debugId]=1,(0,Y.YM)(t).inPlace(window.history,ye,"-")),t}var xe=i(3738);const{He:Re,bD:Te,d3:Ae,Kp:Ee,TZ:Se,Lc:Ne,uP:Oe,Rz:Ie}=xe;class _e extends v{static featureName=Se;constructor(e,t,r=!0){super(e,t,Se,r);if(!(0,p.V)(this.agentIdentifier))return void(0,d.x3)(this.agentIdentifier,this.featureName);const n=this.ee;let i;we(n),this.eventsEE=(0,q.u)(n),this.eventsEE.on(Oe,(function(e,t){this.bstStart=(0,I.t)()})),this.eventsEE.on(Ne,(function(e,t){(0,E.p)("bst",[e[0],t,this.bstStart,(0,I.t)()],void 0,o.K.sessionTrace,n)})),n.on(Ie+Ae,(function(e){this.time=(0,I.t)(),this.startPath=location.pathname+location.hash})),n.on(Ie+Ee,(function(e){(0,E.p)("bstHist",[location.pathname+location.hash,this.startPath,this.time],void 0,o.K.sessionTrace,n)}));try{i=new PerformanceObserver((e=>{const t=e.getEntries();(0,E.p)(Re,[t],void 0,o.K.sessionTrace,n)})),i.observe({type:Te,buffered:!0})}catch(e){}this.importAggregator({resourceObserver:i})}}var je=i(2614);class Pe extends v{static featureName=t.TZ;#i;constructor(e,r,n=!0){let i;super(e,r,t.TZ,n),this.replayRunning=!1;try{i=JSON.parse(localStorage.getItem("".concat(je.H3,"_").concat(je.uh)))}catch(e){}(0,g.SR)(e)&&this.ee.on(t.G4.RECORD,(()=>this.#o())),this.#a(i)?(this.#i=i?.sessionReplayMode,this.#s()):this.importAggregator(),this.ee.on("err",(e=>{this.replayRunning&&(this.errorNoticed=!0,(0,E.p)(t.G4.ERROR_DURING_REPLAY,[e],void 0,this.featureName,this.ee))})),this.ee.on(t.G4.REPLAY_RUNNING,(e=>{this.replayRunning=e}))}#a(e){return e&&(e.sessionReplayMode===je.g.FULL||e.sessionReplayMode===je.g.ERROR)||(0,g.Aw)(this.agentIdentifier)}#c=!1;async#s(e){if(!this.#c){this.#c=!0;try{const{Recorder:t}=await Promise.all([i.e(478),i.e(249)]).then(i.bind(i,2496));this.recorder??=new t({mode:this.#i,agentIdentifier:this.agentIdentifier,trigger:e,ee:this.ee}),this.recorder.startRecording(),this.abortHandler=this.recorder.stopRecording}catch(e){}this.importAggregator({recorder:this.recorder,errorNoticed:this.errorNoticed})}}#o(){this.featAggregate?this.featAggregate.mode!==je.g.FULL&&this.featAggregate.initializeRecording(je.g.FULL,!0):(this.#i=je.g.FULL,this.#s(t.Qb.API),this.recorder&&this.recorder.parent.mode!==je.g.FULL&&(this.recorder.parent.mode=je.g.FULL,this.recorder.stopRecording(),this.recorder.startRecording(),this.abortHandler=this.recorder.stopRecording))}}var Ce=i(3962);class ke extends v{static featureName=Ce.TZ;constructor(e,t,r=!0){if(super(e,t,Ce.TZ,r),!h.RI||!(0,A.dV)().o.MO)return;const n=we(this.ee),i=(0,q.u)(this.ee),o=()=>(0,E.p)("newURL",[(0,I.t)(),""+window.location],void 0,this.featureName,this.ee);n.on("pushState-end",o),n.on("replaceState-end",o);try{this.removeOnAbort=new AbortController}catch(e){}(0,N.sp)("popstate",(e=>(0,E.p)("newURL",[e.timeStamp,""+window.location],void 0,this.featureName,this.ee)),!0,this.removeOnAbort?.signal);let a=!1;const s=new((0,A.dV)().o.MO)(((e,t)=>{a||(a=!0,requestAnimationFrame((()=>{(0,E.p)("newDom",[(0,I.t)()],void 0,this.featureName,this.ee),a=!1})))})),c=(0,m.s)((e=>{(0,E.p)("newUIEvent",[e],void 0,this.featureName,this.ee),s.observe(document.body,{attributes:!0,childList:!0,subtree:!0,characterData:!0})}),100,{leading:!0});i.on("fn-start",(([e])=>{Ce.tC.includes(e?.type)&&c(e)}));for(let e of Ce.tC)document.addEventListener(e,(()=>{}));this.abortHandler=function(){this.removeOnAbort?.abort(),s.disconnect(),this.abortHandler=void 0},this.importAggregator({domObserver:s})}}var Le=i(7378);const De={},He=["appendChild","insertBefore","replaceChild"];function Me(e){const t=function(e){return(e||Z.ee).get("jsonp")}(e);if(!h.RI||De[t.debugId])return t;De[t.debugId]=!0;var r=(0,Y.YM)(t),n=/[?&](?:callback|cb)=([^&#]+)/,i=/(.*)\.([^.]+)/,o=/^(\w+)(\.|$)(.*)$/;function a(e,t){if(!e)return t;const r=e.match(o),n=r[1];return a(r[3],t[n])}return r.inPlace(Node.prototype,He,"dom-"),t.on("dom-start",(function(e){!function(e){if(!e||"string"!=typeof e.nodeName||"script"!==e.nodeName.toLowerCase())return;if("function"!=typeof e.addEventListener)return;var o=(s=e.src,c=s.match(n),c?c[1]:null);var s,c;if(!o)return;var u=function(e){var t=e.match(i);if(t&&t.length>=3)return{key:t[2],parent:a(t[1],window)};return{key:e,parent:window}}(o);if("function"!=typeof u.parent[u.key])return;var d={};function l(){t.emit("jsonp-end",[],d),e.removeEventListener("load",l,(0,N.jT)(!1)),e.removeEventListener("error",f,(0,N.jT)(!1))}function f(){t.emit("jsonp-error",[],d),t.emit("jsonp-end",[],d),e.removeEventListener("load",l,(0,N.jT)(!1)),e.removeEventListener("error",f,(0,N.jT)(!1))}r.inPlace(u.parent,[u.key],"cb-",d),e.addEventListener("load",l,(0,N.jT)(!1)),e.addEventListener("error",f,(0,N.jT)(!1)),t.emit("new-jsonp",[e.src],d)}(e[0])})),t}const Ke={};function Ue(e){const t=function(e){return(e||Z.ee).get("promise")}(e);if(Ke[t.debugId])return t;Ke[t.debugId]=!0;var r=t.context,n=(0,Y.YM)(t),i=h.gm.Promise;return i&&function(){function e(r){var o=t.context(),a=n(r,"executor-",o,null,!1);const s=Reflect.construct(i,[a],e);return t.context(s).getCtx=function(){return o},s}h.gm.Promise=e,Object.defineProperty(e,"name",{value:"Promise"}),e.toString=function(){return i.toString()},Object.setPrototypeOf(e,i),["all","race"].forEach((function(r){const n=i[r];e[r]=function(e){let i=!1;[...e||[]].forEach((e=>{this.resolve(e).then(a("all"===r),a(!1))}));const o=n.apply(this,arguments);return o;function a(e){return function(){t.emit("propagate",[null,!i],o,!1,!1),i=i||!e}}}})),["resolve","reject"].forEach((function(r){const n=i[r];e[r]=function(e){const r=n.apply(this,arguments);return e!==r&&t.emit("propagate",[e,!0],r,!1,!1),r}})),e.prototype=i.prototype;const o=i.prototype.then;i.prototype.then=function(...e){var i=this,a=r(i);a.promise=i,e[0]=n(e[0],"cb-",a,null,!1),e[1]=n(e[1],"cb-",a,null,!1);const s=o.apply(this,e);return a.nextPromise=s,t.emit("propagate",[i,!0],s,!1,!1),s},i.prototype.then[Y.Jt]=o,t.on("executor-start",(function(e){e[0]=n(e[0],"resolve-",this,null,!1),e[1]=n(e[1],"resolve-",this,null,!1)})),t.on("executor-err",(function(e,t,r){e[1](r)})),t.on("cb-end",(function(e,r,n){t.emit("propagate",[n,!0],this.nextPromise,!1,!1)})),t.on("propagate",(function(e,r,n){this.getCtx&&!r||(this.getCtx=function(){if(e instanceof Promise)var r=t.context(e);return r&&r.getCtx?r.getCtx():this})}))}(),t}const Ve={},Ge="setTimeout",Be="setInterval",Fe="clearTimeout",We="-start",ze=[Ge,"setImmediate",Be,Fe,"clearImmediate"];function qe(e){const t=function(e){return(e||Z.ee).get("timer")}(e);if(Ve[t.debugId]++)return t;Ve[t.debugId]=1;var r=(0,Y.YM)(t);return r.inPlace(h.gm,ze.slice(0,2),Ge+"-"),r.inPlace(h.gm,ze.slice(2,3),Be+"-"),r.inPlace(h.gm,ze.slice(3),Fe+"-"),t.on(Be+We,(function(e,t,n){e[0]=r(e[0],"fn-",null,n)})),t.on(Ge+We,(function(e,t,n){this.method=n,this.timerDuration=isNaN(e[1])?0:+e[1],e[0]=r(e[0],"fn-",this,n)})),t}const Ze={};function Ye(e){const t=function(e){return(e||Z.ee).get("mutation")}(e);if(!h.RI||Ze[t.debugId])return t;Ze[t.debugId]=!0;var r=(0,Y.YM)(t),n=h.gm.MutationObserver;return n&&(window.MutationObserver=function(e){return this instanceof n?new n(r(e,"fn-")):n.apply(this,arguments)},MutationObserver.prototype=n.prototype),t}const{TZ:Xe,d3:Je,Kp:Qe,$p:$e,wW:et,e5:tt,tH:rt,uP:nt,rw:it,Lc:ot}=Le;class at extends v{static featureName=Xe;constructor(e,t,r=!0){if(super(e,t,Xe,r),!h.RI)return;try{this.removeOnAbort=new AbortController}catch(e){}let n,i=0;const o=this.ee.get("tracer"),a=Me(this.ee),s=Ue(this.ee),c=qe(this.ee),u=Q(this.ee),d=this.ee.get("events"),l=se(this.ee),f=we(this.ee),g=Ye(this.ee);function p(e,t){f.emit("newURL",[""+window.location,t])}function m(){i++,n=window.location.hash,this[nt]=(0,I.t)()}function v(){i--,window.location.hash!==n&&p(0,!0);var e=(0,I.t)();this[tt]=~~this[tt]+e-this[nt],this[ot]=e}function b(e,t){e.on(t,(function(){this[t]=(0,I.t)()}))}this.ee.on(nt,m),s.on(it,m),a.on(it,m),this.ee.on(ot,v),s.on(et,v),a.on(et,v),this.ee.on("fn-err",((...t)=>{t[2]?.__newrelic?.[e]||(0,E.p)("function-err",[...t],void 0,this.featureName,this.ee)})),this.ee.buffer([nt,ot,"xhr-resolved"],this.featureName),d.buffer([nt],this.featureName),c.buffer(["setTimeout"+Qe,"clearTimeout"+Je,nt],this.featureName),u.buffer([nt,"new-xhr","send-xhr"+Je],this.featureName),l.buffer([rt+Je,rt+"-done",rt+$e+Je,rt+$e+Qe],this.featureName),f.buffer(["newURL"],this.featureName),g.buffer([nt],this.featureName),s.buffer(["propagate",it,et,"executor-err","resolve"+Je],this.featureName),o.buffer([nt,"no-"+nt],this.featureName),a.buffer(["new-jsonp","cb-start","jsonp-error","jsonp-end"],this.featureName),b(l,rt+Je),b(l,rt+"-done"),b(a,"new-jsonp"),b(a,"jsonp-end"),b(a,"cb-start"),f.on("pushState-end",p),f.on("replaceState-end",p),window.addEventListener("hashchange",p,(0,N.jT)(!0,this.removeOnAbort?.signal)),window.addEventListener("load",p,(0,N.jT)(!0,this.removeOnAbort?.signal)),window.addEventListener("popstate",(function(){p(0,i>1)}),(0,N.jT)(!0,this.removeOnAbort?.signal)),this.abortHandler=this.#n,this.importAggregator()}#n(){this.removeOnAbort?.abort(),this.abortHandler=void 0}}var st=i(3333);class ct extends v{static featureName=st.TZ;constructor(e,t,r=!0){super(e,t,st.TZ,r);const n=(0,a.D0)(this.agentIdentifier),i=[n.page_action.enabled,n.user_actions.enabled];h.RI&&n.user_actions.enabled&&(st.Zp.forEach((e=>(0,N.sp)(e,(e=>(0,E.p)("ua",[e],void 0,this.featureName,this.ee)),!0))),st.qN.forEach((e=>(0,N.sp)(e,(e=>(0,E.p)("ua",[e],void 0,this.featureName,this.ee)))))),i.some((e=>e))?this.importAggregator():(0,d.x3)(this.agentIdentifier,this.featureName)}}var ut=i(993),dt=i(3785);class lt extends v{static featureName=ut.TZ;constructor(e,t,r=!0){super(e,t,ut.TZ,r);const n=this.ee;this.ee.on("wrap-logger-end",(function([e]){const{level:t,customAttributes:r}=this;(0,dt.R)(n,e,r,t)})),this.importAggregator()}}new class extends n{constructor(t,r){super(r),h.gm?(this.sharedAggregator=new x({agentIdentifier:this.agentIdentifier}),this.features={},(0,A.bQ)(this.agentIdentifier,this),this.desiredFeatures=new Set(t.features||[]),this.desiredFeatures.add(y),this.runSoftNavOverSpa=[...this.desiredFeatures].some((e=>e.featureName===o.K.softNav)),(0,u.j)(this,t,t.loaderType||"agent"),this.run()):(0,e.R)(21)}get config(){return{info:this.info,init:this.init,loader_config:this.loader_config,runtime:this.runtime}}run(){try{const t=c(this.agentIdentifier),r=[...this.desiredFeatures];r.sort(((e,t)=>o.P[e.featureName]-o.P[t.featureName])),r.forEach((r=>{if(!t[r.featureName]&&r.featureName!==o.K.pageViewEvent)return;if(this.runSoftNavOverSpa&&r.featureName===o.K.spa)return;if(!this.runSoftNavOverSpa&&r.featureName===o.K.softNav)return;const n=function(e){switch(e){case o.K.ajax:return[o.K.jserrors];case o.K.sessionTrace:return[o.K.ajax,o.K.pageViewEvent];case o.K.sessionReplay:return[o.K.sessionTrace];case o.K.pageViewTiming:return[o.K.pageViewEvent];default:return[]}}(r.featureName).filter((e=>!(e in this.features)));n.length>0&&(0,e.R)(36,{targetFeature:r.featureName,missingDependencies:n}),this.features[r.featureName]=new r(this.agentIdentifier,this.sharedAggregator)}))}catch(t){(0,e.R)(22,t);for(const e in this.features)this.features[e].abortHandler?.();const r=(0,A.Zm)();delete r.initializedAgents[this.agentIdentifier]?.api,delete r.initializedAgents[this.agentIdentifier]?.features,delete this.sharedAggregator;return r.ee.get(this.agentIdentifier).abort(),!1}}}({features:[me,y,_,_e,Pe,P,U,ct,lt,ke,at],loaderType:"spa"})})()})();</script>
+<meta name="viewport" id="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+<meta name="theme-color" content="#e0c16d">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="application-name" content="BellaNaija">
+<meta name="apple-mobile-web-app-title" content="BellaNaija">
+<meta name="msapplication-navbutton-color" content="#FC9435">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="msapplication-starturl" content="/">
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" type="image/png" sizes="192x192" href="/logo-192.png">
+<link rel="icon" type="image/png" sizes="256x256" href="/logo-256.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/logo-512.png">
+<link rel="apple-touch-icon" sizes="192x192" href="/logo-192.png">
+<link rel="apple-touch-icon" sizes="256x256" href="/logo-256.png">
+<link rel="apple-touch-icon" sizes="512x512" href="/logo-512.png">
+<link rel="shortcut icon" href="https://www.bellanaija.com/wp-content/uploads/2019/02/favicon.png" /> <link rel="pingback" href="https://www.bellanaija.com/xmlrpc.php" />
+<meta property="og:type" content="article" />
+<meta property="og:image" content="https://www.bellanaija.com/wp-content/uploads/2024/10/462309825_1178940243165370_6740313779986601524_n-1-1000x600.jpg" />
+<meta name="twitter:image" content="https://www.bellanaija.com/wp-content/uploads/2024/10/462309825_1178940243165370_6740313779986601524_n-1-1000x600.jpg" />
+<meta property="og:url" content="https://www.bellanaija.com/2024/10/ebuka-obi-uchendu-bbnaija-finale-look/" />
+<meta property="og:title" content="Ebuka Obi-Uchendu&#8217;s Bold Look for the BBNaija9 &#8216;No Loose Guard&#8217; Grand Finale is Pure Fashion Goals" />
+<meta property="og:description" content="A grand finale calls for a look that steals the spotlight—and Ebuka Obi-Uchendu, as always, delivered just that tonight at the Big Brother Naija &#8216;No Loose Guard&#8217; season finale. From the start of this BBNaija season, Ebuka has kept us on our toes with his style, rocking everything from traditional native attire to sharp suits, [&hellip;]" />
+<meta name="twitter:card" content="summary">
+<meta name="twitter:url" content="https://www.bellanaija.com/2024/10/ebuka-obi-uchendu-bbnaija-finale-look/">
+<meta name="twitter:title" content="Ebuka Obi-Uchendu&#8217;s Bold Look for the BBNaija9 &#8216;No Loose Guard&#8217; Grand Finale is Pure Fashion Goals">
+<meta name="twitter:description" content="A grand finale calls for a look that steals the spotlight—and Ebuka Obi-Uchendu, as always, delivered just that tonight at the Big Brother Naija &#8216;No Loose Guard&#8217; season finale. From the start of this BBNaija season, Ebuka has kept us on our toes with his style, rocking everything from traditional native attire to sharp suits, [&hellip;]">
+<title>Ebuka Obi-Uchendu&#039;s Bold Look for the BBNaija9 &#039;No Loose Guard&#039; Grand Finale is Pure Fashion Goals | BellaNaija</title>
+<meta name="robots" content="max-image-preview:large" />
+
+<meta name="description" content="A grand finale calls for a look that steals the spotlight—and Ebuka Obi-Uchendu, as always, delivered just that tonight at the Big Brother Naija &#039;No Loose - BellaNaija.com. October 14, 2024" />
+<link rel="canonical" href="https://www.bellanaija.com/2024/10/ebuka-obi-uchendu-bbnaija-finale-look/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Ebuka Obi-Uchendu&#039;s Bold Look for the BBNaija9 &#039;No Loose Guard&#039; Grand Finale is Pure Fashion Goals | BellaNaija" />
+<meta property="og:description" content="A grand finale calls for a look that steals the spotlight—and Ebuka Obi-Uchendu, as always, delivered just that tonight at the Big Brother Naija &#039;No Loose - BellaNaija.com. October 14, 2024" />
+<meta property="og:url" content="https://www.bellanaija.com/2024/10/ebuka-obi-uchendu-bbnaija-finale-look/" />
+<meta property="og:site_name" content="BellaNaija" />
+<meta property="article:publisher" content="https://www.facebook.com/bellanaija/" />
+<meta property="article:tag" content="ATAFO" />
+<meta property="article:tag" content="BBNaija" />
+<meta property="article:tag" content="BBNaija No Loose Guard" />
+<meta property="article:tag" content="BBNaijaS9" />
+<meta property="article:tag" content="Big Brother Naija Season 9" />
+<meta property="article:tag" content="BNxBBNaija9" />
+<meta property="article:tag" content="Ebuka-Obi Uchendu" />
+<meta property="article:section" content="Style" />
+<meta property="article:published_time" content="2024-10-06T18:18:17+01:00" />
+<meta property="article:modified_time" content="2024-10-06T18:20:56+01:00" />
+<meta property="og:updated_time" content="2024-10-06T18:20:56+01:00" />
+<meta property="fb:app_id" content="820891061411198" />
+<meta property="og:image" content="https://www.bellanaija.com/wp-content/uploads/2024/10/462309825_1178940243165370_6740313779986601524_n-1.jpg" />
+<meta property="og:image:secure_url" content="https://www.bellanaija.com/wp-content/uploads/2024/10/462309825_1178940243165370_6740313779986601524_n-1.jpg" />
+<meta property="og:image:width" content="1080" />
+<meta property="og:image:height" content="1349" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="A grand finale calls for a look that steals the spotlight—and Ebuka Obi-Uchendu, as always, delivered just that tonight at the Big Brother Naija &#039;No Loose - BellaNaija.com. October 14, 2024" />
+<meta name="twitter:title" content="Ebuka Obi-Uchendu&#039;s Bold Look for the BBNaija9 &#039;No Loose Guard&#039; Grand Finale is Pure Fashion Goals | BellaNaija" />
+<meta name="twitter:site" content="@bellanaija" />
+<meta name="twitter:image" content="https://www.bellanaija.com/wp-content/uploads/2024/10/462309825_1178940243165370_6740313779986601524_n-1.jpg" />
+<meta name="twitter:creator" content="@bellanaija" />
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Organization","url":"https:\/\/www.bellanaija.com\/","sameAs":["https:\/\/www.facebook.com\/bellanaija\/","https:\/\/instagram.com\/bellanaijaonline","https:\/\/www.linkedin.com\/company-beta\/16256402\/","https:\/\/www.youtube.com\/user\/bellanaija","https:\/\/twitter.com\/bellanaija"],"@id":"https:\/\/www.bellanaija.com\/#organization","name":"BellaNaija","logo":"https:\/\/www.bellanaija.com\/wp-content\/uploads\/2019\/02\/logo-word-black@2x.png"}</script>
+
+<link rel="dns-prefetch" href="//ajax.googleapis.com" />
+<link rel="dns-prefetch" href="//fonts.googleapis.com" />
+<link rel="alternate" type="application/rss+xml" title="BellaNaija &raquo; Feed" href="https://www.bellanaija.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="BellaNaija &raquo; Comments Feed" href="https://www.bellanaija.com/comments/feed/" />
+<script type="9f73ee8431844a79dcd191c6-text/javascript">
+/* <![CDATA[ */
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.bellanaija.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.6.2"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83d\udc26\u200d\u2b1b","\ud83d\udc26\u200b\u2b1b")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+/* ]]> */
+</script>
+<script id="bella-ready" type="9f73ee8431844a79dcd191c6-text/javascript">
+			window.advanced_ads_ready=function(e,a){a=a||"complete";var d=function(e){return"interactive"===a?"loading"!==e:"complete"===e};d(document.readyState)?e():document.addEventListener("readystatechange",(function(a){d(a.target.readyState)&&e()}),{once:"interactive"===a})},window.advanced_ads_ready_queue=window.advanced_ads_ready_queue||[];		</script>
+<style id="wp-emoji-styles-inline-css" type="text/css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link rel="stylesheet" id="wp-block-library-css" href="https://www.bellanaija.com/wp-includes/css/dist/block-library/style.min.css?ver=6.6.2" type="text/css" media="all" />
+<style id="classic-theme-styles-inline-css" type="text/css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id="global-styles-inline-css" type="text/css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel="stylesheet" id="ql-jquery-ui-css" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css?ver=6.6.2" type="text/css" media="all" />
+<link rel="stylesheet" id="mvp-custom-style-css" href="https://www.bellanaija.com/wp-content/themes/hades/style.css?ver=20191027" type="text/css" media="all" />
+<style id="mvp-custom-style-inline-css" type="text/css">
+
+
+#mvp-wallpaper {
+	background: url() no-repeat 50% 0;
+	}
+
+#mvp-foot-copy a {
+	color: #ff6728;
+	}
+
+#mvp-content-main p a,
+.mvp-post-add-main p a {
+	box-shadow: inset 0 -4px 0 #ff6728;
+	}
+
+#mvp-content-main p a:hover,
+.mvp-post-add-main p a:hover {
+	background: #ff6728;
+	}
+
+a,
+a:visited,
+.post-info-name a,
+.woocommerce .woocommerce-breadcrumb a {
+	color: #ff6728;
+	}
+
+#mvp-side-wrap a:hover {
+	color: #ff6728;
+	}
+
+.mvp-fly-top:hover,
+.mvp-vid-box-wrap,
+ul.mvp-soc-mob-list li.mvp-soc-mob-com {
+	background: #ff6728;
+	}
+
+nav.mvp-fly-nav-menu ul li.menu-item-has-children:after,
+.mvp-feat1-left-wrap span.mvp-cd-cat,
+.mvp-widget-feat1-top-story span.mvp-cd-cat,
+.mvp-widget-feat2-left-cont span.mvp-cd-cat,
+.mvp-widget-dark-feat span.mvp-cd-cat,
+.mvp-widget-dark-sub span.mvp-cd-cat,
+.mvp-vid-wide-text span.mvp-cd-cat,
+.mvp-feat2-top-text span.mvp-cd-cat,
+.mvp-feat3-main-story span.mvp-cd-cat,
+.mvp-feat3-sub-text span.mvp-cd-cat,
+.mvp-feat4-main-text span.mvp-cd-cat,
+.woocommerce-message:before,
+.woocommerce-info:before,
+.woocommerce-message:before {
+	color: #ff6728;
+	}
+
+#searchform input,
+.mvp-authors-name {
+	border-bottom: 1px solid #ff6728;
+	}
+
+.mvp-fly-top:hover {
+	border-top: 1px solid #ff6728;
+	border-left: 1px solid #ff6728;
+	border-bottom: 1px solid #ff6728;
+	}
+
+.woocommerce .widget_price_filter .ui-slider .ui-slider-handle,
+.woocommerce #respond input#submit.alt,
+.woocommerce a.button.alt,
+.woocommerce button.button.alt,
+.woocommerce input.button.alt,
+.woocommerce #respond input#submit.alt:hover,
+.woocommerce a.button.alt:hover,
+.woocommerce button.button.alt:hover,
+.woocommerce input.button.alt:hover {
+	background-color: #ff6728;
+	}
+
+.woocommerce-error,
+.woocommerce-info,
+.woocommerce-message {
+	border-top-color: #ff6728;
+	}
+
+ul.mvp-feat1-list-buts li.active span.mvp-feat1-list-but,
+span.mvp-widget-home-title,
+span.mvp-post-cat,
+span.mvp-feat1-pop-head {
+	background: #ff6728;
+	}
+
+.woocommerce span.onsale {
+	background-color: #ff6728;
+	}
+
+.mvp-widget-feat2-side-more-but,
+.woocommerce .star-rating span:before,
+span.mvp-prev-next-label,
+.mvp-cat-date-wrap .sticky {
+	color: #ff6728;
+	}
+
+#mvp-main-nav-top,
+#mvp-fly-wrap,
+.mvp-soc-mob-right,
+#mvp-main-nav-small-cont {
+	background: #ffffff;
+	}
+
+#mvp-main-nav-small .mvp-fly-but-wrap span,
+#mvp-main-nav-small .mvp-search-but-wrap span,
+.mvp-nav-top-left .mvp-fly-but-wrap span,
+#mvp-fly-wrap .mvp-fly-but-wrap span {
+	background: #ff6728;
+	}
+
+.mvp-nav-top-right .mvp-nav-search-but,
+span.mvp-fly-soc-head,
+.mvp-soc-mob-right i,
+#mvp-main-nav-small span.mvp-nav-search-but,
+#mvp-main-nav-small .mvp-nav-menu ul li a  {
+	color: #000000;
+	}
+
+#mvp-main-nav-small .mvp-nav-menu ul li.menu-item-has-children a:after {
+	border-color: #FF6728 transparent transparent transparent;
+	}
+
+#mvp-nav-top-wrap span.mvp-nav-search-but:hover,
+#mvp-main-nav-small span.mvp-nav-search-but:hover {
+	color: #ff6728;
+	}
+
+#mvp-nav-top-wrap .mvp-fly-but-wrap:hover span,
+#mvp-main-nav-small .mvp-fly-but-wrap:hover span,
+span.mvp-woo-cart-num:hover {
+	background: #ff6728;
+	}
+
+#mvp-main-nav-bot-cont {
+	background: #ff6728;
+	}
+
+#mvp-nav-bot-wrap .mvp-fly-but-wrap span,
+#mvp-nav-bot-wrap .mvp-search-but-wrap span {
+	background: #ffffff;
+	}
+
+#mvp-nav-bot-wrap span.mvp-nav-search-but,
+#mvp-nav-bot-wrap .mvp-nav-menu ul li a {
+	color: #ffffff;
+	}
+
+#mvp-nav-bot-wrap .mvp-nav-menu ul li.menu-item-has-children a:after {
+	border-color: #ffffff transparent transparent transparent;
+	}
+
+.mvp-nav-menu ul li:hover a {
+	border-bottom: 2px solid #FF6728;
+	}
+
+#mvp-nav-bot-wrap .mvp-fly-but-wrap:hover span {
+	background: #ffffff;
+	}
+
+#mvp-nav-bot-wrap span.mvp-nav-search-but:hover {
+	color: #ffffff;
+	}
+
+body,
+.mvp-feat1-feat-text p,
+.mvp-feat2-top-text p,
+.mvp-feat3-main-text p,
+.mvp-feat3-sub-text p,
+#searchform input,
+.mvp-author-info-text,
+span.mvp-post-excerpt,
+.mvp-nav-menu ul li ul.sub-menu li a,
+nav.mvp-fly-nav-menu ul li a,
+.mvp-ad-label,
+span.mvp-feat-caption,
+.mvp-post-tags a,
+.mvp-post-tags a:visited,
+span.mvp-author-box-name a,
+#mvp-author-box-text p,
+.mvp-post-gallery-text p,
+ul.mvp-soc-mob-list li span,
+#comments,
+h3#reply-title,
+h2.comments,
+#mvp-foot-copy p,
+span.mvp-fly-soc-head,
+.mvp-post-tags-header,
+span.mvp-prev-next-label,
+span.mvp-post-add-link-but,
+#mvp-comments-button a,
+#mvp-comments-button span.mvp-comment-but-text,
+.woocommerce ul.product_list_widget span.product-title,
+.woocommerce ul.product_list_widget li a,
+.woocommerce #reviews #comments ol.commentlist li .comment-text p.meta,
+.woocommerce div.product p.price,
+.woocommerce div.product p.price ins,
+.woocommerce div.product p.price del,
+.woocommerce ul.products li.product .price del,
+.woocommerce ul.products li.product .price ins,
+.woocommerce ul.products li.product .price,
+.woocommerce #respond input#submit,
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button,
+.woocommerce .widget_price_filter .price_slider_amount .button,
+.woocommerce span.onsale,
+.woocommerce-review-link,
+#woo-content p.woocommerce-result-count,
+.woocommerce div.product .woocommerce-tabs ul.tabs li a,
+a.mvp-inf-more-but,
+span.mvp-cont-read-but,
+span.mvp-cd-cat,
+span.mvp-cd-date,
+.mvp-feat4-main-text p,
+span.mvp-woo-cart-num,
+span.mvp-widget-home-title2,
+.wp-caption,
+#mvp-content-main p.wp-caption-text,
+.gallery-caption,
+.mvp-post-add-main p.wp-caption-text,
+#bbpress-forums,
+#bbpress-forums p,
+.protected-post-form input,
+#mvp-feat6-text p {
+	font-family: 'Poppins', sans-serif;
+	}
+
+.mvp-blog-story-text p,
+span.mvp-author-page-desc,
+#mvp-404 p,
+.mvp-widget-feat1-bot-text p,
+.mvp-widget-feat2-left-text p,
+.mvp-flex-story-text p,
+.mvp-search-text p,
+#mvp-content-main p,
+.mvp-post-add-main p,
+#mvp-content-main ul li,
+#mvp-content-main ol li,
+.rwp-summary,
+.rwp-u-review__comment,
+.mvp-feat5-mid-main-text p,
+.mvp-feat5-small-main-text p {
+	font-family: 'Poppins', sans-serif;
+	}
+
+.mvp-nav-menu ul li a,
+#mvp-foot-menu ul li a {
+	font-family: 'Poppins', sans-serif;
+	}
+
+
+.mvp-feat1-sub-text h2,
+.mvp-feat1-pop-text h2,
+.mvp-feat1-list-text h2,
+.mvp-widget-feat1-top-text h2,
+.mvp-widget-feat1-bot-text h2,
+.mvp-widget-dark-feat-text h2,
+.mvp-widget-dark-sub-text h2,
+.mvp-widget-feat2-left-text h2,
+.mvp-widget-feat2-right-text h2,
+.mvp-blog-story-text h2,
+.mvp-flex-story-text h2,
+.mvp-vid-wide-more-text p,
+.mvp-prev-next-text p,
+.mvp-related-text,
+.mvp-post-more-text p,
+h2.mvp-authors-latest a,
+.mvp-feat2-bot-text h2,
+.mvp-feat3-sub-text h2,
+.mvp-feat3-main-text h2,
+.mvp-feat4-main-text h2,
+.mvp-feat5-text h2,
+.mvp-feat5-mid-main-text h2,
+.mvp-feat5-small-main-text h2,
+.mvp-feat5-mid-sub-text h2,
+#mvp-feat6-text h2,
+.alp-related-posts-wrapper .alp-related-post .post-title {
+	font-family: 'Calson', sans-serif;
+	}
+
+.mvp-feat2-top-text h2,
+.mvp-feat1-feat-text h2,
+h1.mvp-post-title,
+h1.mvp-post-title-wide,
+.mvp-drop-nav-title h4,
+#mvp-content-main blockquote p,
+.mvp-post-add-main blockquote p,
+#mvp-404 h1,
+#woo-content h1.page-title,
+.woocommerce div.product .product_title,
+.woocommerce ul.products li.product h3,
+.alp-related-posts .current .post-title {
+	font-family: 'Calson', sans-serif;
+	}
+
+span.mvp-feat1-pop-head,
+.mvp-feat1-pop-text:before,
+span.mvp-feat1-list-but,
+span.mvp-widget-home-title,
+.mvp-widget-feat2-side-more,
+span.mvp-post-cat,
+span.mvp-page-head,
+h1.mvp-author-top-head,
+.mvp-authors-name,
+#mvp-content-main h1,
+#mvp-content-main h2,
+#mvp-content-main h3,
+#mvp-content-main h4,
+#mvp-content-main h5,
+#mvp-content-main h6,
+.woocommerce .related h2,
+.woocommerce div.product .woocommerce-tabs .panel h2,
+.woocommerce div.product .product_title,
+.mvp-feat5-side-list .mvp-feat1-list-img:after {
+	font-family: 'Poppins', sans-serif;
+	}
+
+	
+
+	#mvp-main-body-wrap {
+		padding-top: 20px;
+		}
+	#mvp-feat2-wrap,
+	#mvp-feat4-wrap,
+	#mvp-post-feat-img-wide,
+	#mvp-vid-wide-wrap {
+		margin-top: -20px;
+		}
+	@media screen and (max-width: 479px) {
+		#mvp-main-body-wrap {
+			padding-top: 15px;
+			}
+		#mvp-feat2-wrap,
+		#mvp-feat4-wrap,
+		#mvp-post-feat-img-wide,
+		#mvp-vid-wide-wrap {
+			margin-top: -15px;
+			}
+		}
+		
+
+	#mvp-leader-wrap {
+		position: relative;
+		}
+	#mvp-site-main {
+		margin-top: 0;
+		}
+	#mvp-leader-wrap {
+		top: 0 !important;
+		}
+		
+
+	.mvp-nav-links {
+		display: none;
+		}
+		
+
+	.mvp-alp-side {
+		display: none;
+	}
+	.mvp-alp-soc-reg {
+		display: block;
+	}
+	.mvp-auto-post-grid {
+		grid-template-columns: minmax(0, auto) 320px;
+		grid-column-gap: 60px;
+	}
+	@media screen and (max-width: 1199px) {
+		.mvp-auto-post-grid {
+			grid-column-gap: 30px;
+		}
+	}
+		
+
+	.alp-advert {
+		display: none;
+	}
+	.alp-related-posts-wrapper .alp-related-posts .current {
+		margin: 0 0 10px;
+	}
+		
+
+ 	.mvp-feat1-pop-img img {
+    width: 100%;
+}
+
+.mvp-widget-feat2-right-img img {
+    width: 100%;
+}
+
+.mvp-widget-feat1-top-img img {
+    width: 100%;
+}
+
+.mvp-widget-feat1-bot-img img {
+    width: 100%;
+}
+
+.mvp-blog-story-img img {
+    width: 100%;
+}
+#mvp-feat1-wrap{
+margin-top: 30px
+}
+.mvp-article-wrap > section.mvp_ad_widget{
+width:100%
+}
+		
+</style>
+<link rel="stylesheet" id="mvp-reset-css" href="https://www.bellanaija.com/wp-content/themes/hades/css/reset.css?ver=6.6.2" type="text/css" media="all" />
+<link rel="stylesheet" id="fontawesome-css" href="https://www.bellanaija.com/wp-content/themes/hades/font-awesome/css/font-awesome.css?ver=6.6.2" type="text/css" media="all" />
+<link rel="stylesheet" id="mvp-fonts-css" href="//fonts.googleapis.com/css?family=Advent+Pro%3A700%26subset%3Dlatin%2Clatin-ext%2Ccyrillic%2Ccyrillic-ext%2Cgreek-ext%2Cgreek%2Cvietnamese%7COpen+Sans%3A700%26subset%3Dlatin%2Clatin-ext%2Ccyrillic%2Ccyrillic-ext%2Cgreek-ext%2Cgreek%2Cvietnamese%7CAnton%3A400%26subset%3Dlatin%2Clatin-ext%2Ccyrillic%2Ccyrillic-ext%2Cgreek-ext%2Cgreek%2Cvietnamese%7CCalson%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%26subset%3Dlatin%2Clatin-ext%2Ccyrillic%2Ccyrillic-ext%2Cgreek-ext%2Cgreek%2Cvietnamese%7CCalson%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%26subset%3Dlatin%2Clatin-ext%2Ccyrillic%2Ccyrillic-ext%2Cgreek-ext%2Cgreek%2Cvietnamese%7CPoppins%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%26subset%3Dlatin%2Clatin-ext%2Ccyrillic%2Ccyrillic-ext%2Cgreek-ext%2Cgreek%2Cvietnamese%7CPoppins%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%26subset%3Dlatin%2Clatin-ext%2Ccyrillic%2Ccyrillic-ext%2Cgreek-ext%2Cgreek%2Cvietnamese%7CPoppins%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%26subset%3Dlatin%2Clatin-ext%2Ccyrillic%2Ccyrillic-ext%2Cgreek-ext%2Cgreek%2Cvietnamese%7CPoppins%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%26subset%3Dlatin%2Clatin-ext%2Ccyrillic%2Ccyrillic-ext%2Cgreek-ext%2Cgreek%2Cvietnamese" type="text/css" media="all" />
+<link rel="stylesheet" id="mvp-media-queries-css" href="https://www.bellanaija.com/wp-content/themes/hades/css/media-queries.css?ver=6.6.2" type="text/css" media="all" />
+<script type="9f73ee8431844a79dcd191c6-text/javascript" src="https://www.bellanaija.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="9f73ee8431844a79dcd191c6-text/javascript" src="https://www.bellanaija.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script type="9f73ee8431844a79dcd191c6-text/javascript" id="advanced-ads-advanced-js-js-extra">
+/* <![CDATA[ */
+var advads_options = {"blog_id":"1","privacy":{"enabled":false,"state":"not_needed"}};
+/* ]]> */
+</script>
+<script type="9f73ee8431844a79dcd191c6-text/javascript" src="https://www.bellanaija.com/wp-content/plugins/advanced-ads/public/assets/js/advanced.min.js?ver=1.54.1" id="advanced-ads-advanced-js-js"></script>
+<link rel="https://api.w.org/" href="https://www.bellanaija.com/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://www.bellanaija.com/wp-json/wp/v2/posts/1674600" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.bellanaija.com/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.6.2" />
+<link rel="shortlink" href="https://www.bellanaija.com/?p=1674600" />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.bellanaija.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.bellanaija.com%2F2024%2F10%2Febuka-obi-uchendu-bbnaija-finale-look%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.bellanaija.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.bellanaija.com%2F2024%2F10%2Febuka-obi-uchendu-bbnaija-finale-look%2F&#038;format=xml" />
+<style>a.cld-like-dislike-trigger {color: #ff6728;}span.cld-count-wrap {color: #000000;}</style> <meta property="fb:pages" content="51202212328" />
+<script type="9f73ee8431844a79dcd191c6-text/javascript">
+		var advadsCfpQueue = [];
+		var advadsCfpAd = function( adID ){
+			if ( 'undefined' == typeof advadsProCfp ) { advadsCfpQueue.push( adID ) } else { advadsProCfp.addElement( adID ) }
+		};
+		</script>
+<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style> <meta name="onesignal" content="wordpress-plugin" />
+<script type="9f73ee8431844a79dcd191c6-text/javascript">
+
+      window.OneSignal = window.OneSignal || [];
+
+      OneSignal.push( function() {
+        OneSignal.SERVICE_WORKER_UPDATER_PATH = "OneSignalSDKUpdaterWorker.js.php";
+                      OneSignal.SERVICE_WORKER_PATH = "OneSignalSDKWorker.js.php";
+                      OneSignal.SERVICE_WORKER_PARAM = { scope: "/" };
+        OneSignal.setDefaultNotificationUrl("https://www.bellanaija.com");
+        var oneSignal_options = {};
+        window._oneSignalInitOptions = oneSignal_options;
+
+        oneSignal_options['wordpress'] = true;
+oneSignal_options['appId'] = 'e1f2bd60-7025-4e91-b67f-3f6f779b4142';
+oneSignal_options['allowLocalhostAsSecureOrigin'] = true;
+oneSignal_options['welcomeNotification'] = { };
+oneSignal_options['welcomeNotification']['title'] = "";
+oneSignal_options['welcomeNotification']['message'] = "";
+oneSignal_options['path'] = "https://www.bellanaija.com/wp-content/plugins/onesignal-free-web-push-notifications/sdk_files/";
+oneSignal_options['safari_web_id'] = "web.onesignal.auto.2d34c372-40ef-4eb5-956b-2d525ea9497b";
+oneSignal_options['persistNotification'] = false;
+oneSignal_options['promptOptions'] = { };
+                OneSignal.init(window._oneSignalInitOptions);
+                OneSignal.showSlidedownPrompt();      });
+
+      function documentInitOneSignal() {
+        var oneSignal_elements = document.getElementsByClassName("OneSignal-prompt");
+
+        var oneSignalLinkClickHandler = function(event) { OneSignal.push(['registerForPushNotifications']); event.preventDefault(); };        for(var i = 0; i < oneSignal_elements.length; i++)
+          oneSignal_elements[i].addEventListener('click', oneSignalLinkClickHandler, false);
+      }
+
+      if (document.readyState === 'complete') {
+           documentInitOneSignal();
+      }
+      else {
+           window.addEventListener("load", function(event){
+               documentInitOneSignal();
+          });
+      }
+    </script>
+<script type="9f73ee8431844a79dcd191c6-text/javascript">
+			if ('serviceWorker' in navigator) {
+				window.addEventListener('load', function() {
+					navigator.serviceWorker.register('/sw-prod.js').then(function(registration) {
+						console.log('PWA service worker ready');
+						registration.update().then(function(){
+							console.log('PWA service worker updated');
+						});
+					})
+						.catch(function(error) {
+							console.log('Registration failed with ' + error);
+						});
+				});
+			}
+        </script>
+<script type="9f73ee8431844a79dcd191c6-text/javascript">//<![CDATA[
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-2805923-30']);
+		_gaq.push(['_trackPageview']);
+		(function () {
+			var ga = document.createElement('script');
+			ga.type = 'text/javascript';
+			ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+
+			var s = document.getElementsByTagName('script')[0];
+			s.parentNode.insertBefore(ga, s);
+		})();
+		//]]></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-98458120-1" type="9f73ee8431844a79dcd191c6-text/javascript"></script>
+<script type="9f73ee8431844a79dcd191c6-text/javascript">
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-98458120-1');
+    </script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-71901209-1" type="9f73ee8431844a79dcd191c6-text/javascript"></script>
+<script type="9f73ee8431844a79dcd191c6-text/javascript">
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-71901209-1');
+    </script>
+
+<script type="9f73ee8431844a79dcd191c6-text/javascript">
+		!function(f,b,e,v,n,t,s)
+		{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+			n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+			if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+			n.queue=[];t=b.createElement(e);t.async=!0;
+			t.src=v;s=b.getElementsByTagName(e)[0];
+			s.parentNode.insertBefore(t,s)}(window, document,'script',
+			'https://connect.facebook.net/en_US/fbevents.js');
+		fbq('init', '627147804403071');
+		fbq('track', 'PageView');
+    </script>
+<noscript><img height="1" width="1" style="display:none"
+                   src="https://www.facebook.com/tr?id=627147804403071&ev=PageView&noscript=1"
+        /></noscript>
+
+<script type="9f73ee8431844a79dcd191c6-text/javascript">
+		var isMobile = false; //initiate as false
+		// device detection
+		if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent) || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(navigator.userAgent.substr(0,4))) isMobile = true;
+    </script>
+<script async="async" src="https://www.googletagservices.com/tag/js/gpt.js" type="9f73ee8431844a79dcd191c6-text/javascript"></script>
+<script type="9f73ee8431844a79dcd191c6-text/javascript">
+		var googletag = googletag || {};
+		googletag.cmd = googletag.cmd || [];
+    </script>
+<script type="9f73ee8431844a79dcd191c6-text/javascript"> google_ad_client = "ca-pub-1722232789308698"; </script>
+<script type="9f73ee8431844a79dcd191c6-text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+<script type="9f73ee8431844a79dcd191c6-text/javascript">
+	        </script>
+<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" type="9f73ee8431844a79dcd191c6-text/javascript"></script>
+<script type="9f73ee8431844a79dcd191c6-text/javascript">
+		
+					googletag.cmd.push(function() {
+				googletag.defineSlot('/74174237/BN_ArticlePage_Desktop_300x250', [300, 250], 'div-gpt-ad-1645527887208-0').addService(googletag.pubads());
+				googletag.pubads().enableSingleRequest();
+				googletag.enableServices();
+			});
+			googletag.cmd.push(function() {
+				googletag.defineSlot('/74174237/BN_ArticlePage_Mobile_300x250', [300, 250], 'div-gpt-ad-1645533238952-0').addService(googletag.pubads());
+				googletag.pubads().enableSingleRequest();
+				googletag.enableServices();
+			});
+			</script>
+</head>
+<body class="post-template-default single single-post postid-1674600 single-format-gallery">
+<div id="mvp-fly-wrap">
+<div id="mvp-fly-menu-top" class="left relative">
+<div class="mvp-fly-top-out left relative">
+<div class="mvp-fly-top-in">
+<div id="mvp-fly-logo" class="left relative">
+<a href="https://www.bellanaija.com/"><img src="https://www.bellanaija.com/wp-content/uploads/2019/02/logo-word-black-small.png" alt="BellaNaija" data-rjs="2" /></a>
+</div>
+</div>
+<div class="mvp-fly-but-wrap mvp-fly-but-menu mvp-fly-but-click">
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+</div>
+</div>
+</div>
+<div id="mvp-fly-menu-wrap">
+<nav class="mvp-fly-nav-menu left relative">
+<div class="menu-fly-out-container"><ul id="menu-fly-out" class="menu"><li id="menu-item-1267633" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1267633"><a href="https://www.bellanaija.com/news/">News</a></li>
+<li id="menu-item-1267634" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1267634"><a href="https://www.bellanaija.com/music/">Music</a></li>
+<li id="menu-item-1267648" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1267648"><a href="https://www.bellanaija.com/weddings/">Weddings</a></li>
+<li id="menu-item-1267637" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-1267637"><a href="https://www.bellanaija.com/style/">Style</a></li>
+<li id="menu-item-1267641" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1267641"><a href="https://www.bellanaija.com/relationships/">Relationships</a></li>
+<li id="menu-item-1267647" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1267647"><a href="https://www.bellanaija.com/nollywood/">Nollywood</a></li>
+<li id="menu-item-1267636" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1267636"><a href="https://www.bellanaija.com/event/">Events</a></li>
+<li id="menu-item-1267638" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1267638"><a href="https://www.bellanaija.com/sweet-spot/">Sweet Spot</a></li>
+<li id="menu-item-1267642" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1267642"><a href="https://www.bellanaija.com/career/">Career</a></li>
+<li id="menu-item-1267645" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1267645"><a href="https://www.bellanaija.com/inspired/">Inspired</a></li>
+<li id="menu-item-1267640" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1267640"><a href="https://www.bellanaija.com/bntv/">BN TV</a></li>
+<li id="menu-item-1267646" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1267646"><a href="https://www.bellanaija.com/movies-tv/">Movies &#038; TV</a></li>
+<li id="menu-item-1267635" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1267635"><a href="https://www.bellanaija.com/scoop/">Scoop</a></li>
+<li id="menu-item-1267639" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1267639"><a href="https://www.bellanaija.com/features/">Features</a></li>
+<li id="menu-item-1272520" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1272520"><a href="https://www.bellanaija.com/beauty/">Beauty</a></li>
+<li id="menu-item-1267644" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1267644"><a href="https://www.bellanaija.com/comedy/">Comedy</a></li>
+<li id="menu-item-1422374" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1422374"><a href="https://www.bellanaija.com/promotions/">Promotions</a></li>
+</ul></div> </nav>
+</div>
+<div id="mvp-fly-soc-wrap">
+<span class="mvp-fly-soc-head">Connect with us</span>
+<ul class="mvp-fly-soc-list left relative">
+<li><a href="https://www.facebook.com/bellanaija" target="_blank" class="fa fa-facebook fa-2"></a></li>
+<li><a href="https://twitter.com/bellanaija" target="_blank" class="fa fa-twitter fa-2"></a></li>
+<li><a href="https://www.pinterest.com/bellanaijawed/" target="_blank" class="fa fa-pinterest-p fa-2"></a></li>
+<li><a href="https://www.instagram.com/bellanaija" target="_blank" class="fa fa-instagram fa-2"></a></li>
+<li><a href="https://www.youtube.com/user/bellanaija/" target="_blank" class="fa fa-youtube-play fa-2"></a></li>
+</ul>
+</div>
+</div><div id="mvp-site" class="left relative">
+<div id="mvp-search-wrap">
+<div id="mvp-search-box">
+<form method="get" id="searchform" action="https://www.bellanaija.com/">
+<input type="text" name="s" id="s" value="Search" onfocus="if (!window.__cfRLUnblockHandlers) return false; if (this.value == &quot;Search&quot;) { this.value = &quot;&quot;; }" onblur="if (!window.__cfRLUnblockHandlers) return false; if (this.value == &quot;&quot;) { this.value = &quot;Search&quot;; }" data-cf-modified-9f73ee8431844a79dcd191c6- />
+<input type="hidden" id="searchsubmit" value="Search" />
+</form> </div>
+<div class="mvp-search-but-wrap mvp-search-click">
+<span></span>
+<span></span>
+</div>
+</div>
+<div id="mvp-site-wall" class="left relative">
+<div id="mvp-site-main" class="left relative">
+<header id="mvp-main-head-wrap" class="left relative">
+<nav id="mvp-main-nav-wrap" class="left relative">
+<div id="mvp-main-nav-small" class="left relative">
+<div id="mvp-main-nav-small-cont" class="left">
+<div id="mvp-nav-small-wrap">
+<div class="mvp-nav-small-right-out left">
+<div class="mvp-nav-small-right-in">
+<div class="mvp-nav-small-cont left">
+<div class="mvp-nav-small-left-out left">
+<div id="mvp-nav-small-left" class="left relative">
+<div class="mvp-fly-but-wrap mvp-fly-but-click left relative">
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+</div>
+</div>
+<div class="mvp-nav-small-left-in">
+<div class="mvp-nav-small-mid left">
+<div class="mvp-nav-small-logo left relative">
+<a href="https://www.bellanaija.com/"><img src="https://www.bellanaija.com/wp-content/uploads/2019/02/logo-word-black-small.png" alt="BellaNaija" data-rjs="2" /></a>
+<h2 class="mvp-logo-title">BellaNaija</h2>
+</div>
+<div class="mvp-nav-small-mid-right left">
+<div class="mvp-drop-nav-title left">
+<h4>Ebuka Obi-Uchendu&#8217;s Bold Look for the BBNaija9 &#8216;No Loose Guard&#8217; Grand Finale is Pure Fashion Goals</h4>
+</div>
+<div class="mvp-nav-menu">
+<div class="menu-header-container"><ul id="menu-header" class="menu"><li id="menu-item-401466" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-401466"><a href="https://www.bellanaija.com/news/">News</a></li>
+<li id="menu-item-401465" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-401465"><a href="https://www.bellanaija.com/music/">Music</a></li>
+<li id="menu-item-401469" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-401469"><a href="https://www.bellanaija.com/weddings/">Weddings</a></li>
+<li id="menu-item-401468" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-401468"><a href="https://www.bellanaija.com/style/">Style</a></li>
+<li id="menu-item-401467" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-401467"><a href="https://www.bellanaija.com/relationships/">Relationships</a></li>
+<li id="menu-item-1265583" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1265583"><a href="https://www.bellanaija.com/nollywood/">Nollywood</a></li>
+<li id="menu-item-1265584" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1265584"><a href="https://www.bellanaija.com/event/">Events</a></li>
+<li id="menu-item-1265010" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1265010"><a href="#" target="_blank" rel="nofollow">More</a>
+<ul class="sub-menu">
+<li id="menu-item-1265599" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1265599"><a href="https://www.bellanaija.com/sweet-spot/">Sweet Spot</a></li>
+<li id="menu-item-1265586" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1265586"><a href="https://www.bellanaija.com/career/">Career</a></li>
+<li id="menu-item-1265590" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1265590"><a href="https://www.bellanaija.com/inspired/">Inspired</a></li>
+<li id="menu-item-1265585" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1265585"><a href="https://www.bellanaija.com/bntv/">BN TV</a></li>
+<li id="menu-item-1265592" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1265592"><a href="https://www.bellanaija.com/movies-tv/">Movies &#038; TV</a></li>
+<li id="menu-item-1265597" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1265597"><a href="https://www.bellanaija.com/scoop/">Scoop</a></li>
+<li id="menu-item-1265589" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1265589"><a href="https://www.bellanaija.com/features/">Features</a></li>
+<li id="menu-item-1272523" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1272523"><a href="https://www.bellanaija.com/beauty/">Beauty</a></li>
+<li id="menu-item-1265587" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1265587"><a href="https://www.bellanaija.com/comedy/">Comedy</a></li>
+<li id="menu-item-1422375" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1422375"><a href="https://www.bellanaija.com/promotions/">Promotions</a></li>
+</ul>
+</li>
+</ul></div> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="mvp-nav-small-right" class="right relative">
+<span class="mvp-nav-search-but fa fa-search fa-2 mvp-search-click"></span>
+<a href="https://www.facebook.com/bellanaija" target="_blank"><span class="mvp-nav-soc-but fa fa-facebook fa-2"></span></a>
+<a href="https://twitter.com/bellanaija" target="_blank"><span class="mvp-nav-soc-but fa fa-twitter fa-2"></span></a>
+<a href="https://www.instagram.com/bellanaija" target="_blank"><span class="mvp-nav-soc-but fa fa-instagram fa-2"></span></a>
+<a href="https://www.youtube.com/user/bellanaija/" target="_blank"><span class="mvp-nav-soc-but fa fa-youtube-play fa-2"></span></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div id="mvp-main-body-wrap" class="left relative"> <div class="mvp-main-box">
+<section class="mvp-widget-home relative bella-widget"><div class="mvp-main-box"><div style="margin-left: auto; margin-right: auto; text-align: center; " id="bella-544249955"><a href="https://www.bellanaija.com/2024/09/the-hermoneyherpower-challenge/" target="_blank" aria-label="HerMoneyHerPower"><img loading="lazy" decoding="async" src="https://www.bellanaija.com/wp-content/uploads/2024/08/HerMoneyHerPower.png" alt width="728" height="90" style="display: inline-block;" /></a></div></div></section>  <div class="mvp-auto-post-grid">
+<div class="mvp-alp-side">
+<div class="mvp-alp-side-in">
+<div class="alp-related-posts-wrapper">
+<div class="alp-related-posts">
+<div class="alp-related-post post-1674600 current" data-id="1674600" data-document-title>
+<div class="post-details">
+<p class="post-meta">
+<a class="post-category" href="https://www.bellanaija.com/style/">Style</a>
+</p>
+<a class="post-title" href="https://www.bellanaija.com/2024/10/ebuka-obi-uchendu-bbnaija-finale-look/">Ebuka Obi-Uchendu's Bold Look for the BBNaija9 'No Loose Guard' Grand Finale is Pure Fashion Goals</a>
+</div>
+<div class="mvp-alp-soc-wrap">
+<ul class="mvp-alp-soc-list">
+<a href="#" onclick="if (!window.__cfRLUnblockHandlers) return false; window.open('http://www.facebook.com/sharer.php?u=https://www.bellanaija.com/2024/10/ebuka-obi-uchendu-bbnaija-finale-look/&amp;t=Ebuka Obi-Uchendu&#8217;s Bold Look for the BBNaija9 &#8216;No Loose Guard&#8217; Grand Finale is Pure Fashion Goals', 'facebookShare', 'width=626,height=436'); return false;" title="Share on Facebook" data-cf-modified-9f73ee8431844a79dcd191c6->
+<li class="mvp-alp-soc-fb"><span class="fa fa-facebook"></span></li>
+</a>
+<a href="#" onclick="if (!window.__cfRLUnblockHandlers) return false; window.open('http://twitter.com/share?text=Ebuka Obi-Uchendu&#8217;s Bold Look for the BBNaija9 &#8216;No Loose Guard&#8217; Grand Finale is Pure Fashion Goals &amp;url=https://www.bellanaija.com/2024/10/ebuka-obi-uchendu-bbnaija-finale-look/', 'twitterShare', 'width=626,height=436'); return false;" title="Tweet This Post" data-cf-modified-9f73ee8431844a79dcd191c6->
+<li class="mvp-alp-soc-twit"><span class="fa fa-twitter"></span></li>
+</a>
+<a href="#" onclick="if (!window.__cfRLUnblockHandlers) return false; window.open('http://pinterest.com/pin/create/button/?url=https://www.bellanaija.com/2024/10/ebuka-obi-uchendu-bbnaija-finale-look/&amp;media=https://www.bellanaija.com/wp-content/uploads/2024/10/462309825_1178940243165370_6740313779986601524_n-1-590x354.jpg&amp;description=Ebuka Obi-Uchendu&#8217;s Bold Look for the BBNaija9 &#8216;No Loose Guard&#8217; Grand Finale is Pure Fashion Goals', 'pinterestShare', 'width=750,height=350'); return false;" title="Pin This Post" data-cf-modified-9f73ee8431844a79dcd191c6->
+<li class="mvp-alp-soc-pin"><span class="fa fa-pinterest-p"></span></li>
+</a>
+<a href="/cdn-cgi/l/email-protection#605f1315020a0503145d2502150b01402f02094d350308050e04154643585251575b1340220f0c04402c0f0f0b40060f12401408054022222e01090a0159404643585251565b2e0f402c0f0f13054027150112044643585251575b402712010e044026090e010c0540091340301512054026011308090f0e40270f010c1346010d105b222f24395d2940060f150e0440140809134001121409030c0540090e140512051314090e0740010e044014080f15070814400f064013080112090e07400914401709140840190f154e40230805030b400914400f15145a4008141410135a4f4f1717174e02050c0c010e01090a014e030f0d4f525052544f51504f0502150b014d0f02094d150308050e04154d02020e01090a014d06090e010c054d0c0f0f0b4f">
+<li class="mvp-alp-soc-com"><span class="fa fa-envelope"></span></li>
+</a>
+</ul>
+</div>
+</div>
+<div class="alp-advert">
+</div>
+<div class="alp-related-post post-1675610 " data-id="1675610" data-document-title>
+<div class="post-details">
+<p class="post-meta">
+<a class="post-category" href="https://www.bellanaija.com/movies-tv/">Movies &amp; TV</a>
+<a class="post-category" href="https://www.bellanaija.com/style/">Style</a>
+</p>
+<a class="post-title" href="https://www.bellanaija.com/2024/10/the-uprising-wives-on-strike-premiere/">Style Dominated the Red Carpet at "The Uprising: Wives On Strike" Premiere—See All the Looks</a>
+</div>
+<div class="mvp-alp-soc-wrap">
+<ul class="mvp-alp-soc-list">
+<a href="#" onclick="if (!window.__cfRLUnblockHandlers) return false; window.open('http://www.facebook.com/sharer.php?u=https://www.bellanaija.com/2024/10/the-uprising-wives-on-strike-premiere/&amp;t=Style Dominated the Red Carpet at &#8220;The Uprising: Wives On Strike&#8221; Premiere—See All the Looks', 'facebookShare', 'width=626,height=436'); return false;" title="Share on Facebook" data-cf-modified-9f73ee8431844a79dcd191c6->
+<li class="mvp-alp-soc-fb"><span class="fa fa-facebook"></span></li>
+</a>
+<a href="#" onclick="if (!window.__cfRLUnblockHandlers) return false; window.open('http://twitter.com/share?text=Style Dominated the Red Carpet at &#8220;The Uprising: Wives On Strike&#8221; Premiere—See All the Looks &amp;url=https://www.bellanaija.com/2024/10/the-uprising-wives-on-strike-premiere/', 'twitterShare', 'width=626,height=436'); return false;" title="Tweet This Post" data-cf-modified-9f73ee8431844a79dcd191c6->
+<li class="mvp-alp-soc-twit"><span class="fa fa-twitter"></span></li>
+</a>
+<a href="#" onclick="if (!window.__cfRLUnblockHandlers) return false; window.open('http://pinterest.com/pin/create/button/?url=https://www.bellanaija.com/2024/10/the-uprising-wives-on-strike-premiere/&amp;media=https://www.bellanaija.com/wp-content/uploads/2024/10/Workwear-Edition-230-1-590x354.png&amp;description=Style Dominated the Red Carpet at &#8220;The Uprising: Wives On Strike&#8221; Premiere—See All the Looks', 'pinterestShare', 'width=750,height=350'); return false;" title="Pin This Post" data-cf-modified-9f73ee8431844a79dcd191c6->
+<li class="mvp-alp-soc-pin"><span class="fa fa-pinterest-p"></span></li>
+</a>
+<a href="/cdn-cgi/l/email-protection#aa95d9dfc8c0cfc9de97f9ded3c6cf8aeec5c7c3c4cbdecfce8adec2cf8af8cfce8ae9cbd8dacfde8acbde8a8c899298989a91fec2cf8affdad8c3d9c3c4cd908afdc3dccfd98ae5c48af9ded8c3c1cf8c899298989b918afad8cfc7c3cfd8cf482a3ef9cfcf8aebc6c68adec2cf8ae6c5c5c1d98ccbc7da91e8e5eef397e38accc5dfc4ce8adec2c3d98acbd8dec3c9c6cf8ac3c4decfd8cfd9dec3c4cd8acbc4ce8adec2c5dfcdc2de8ac5cc8ad9c2cbd8c3c4cd8ac3de8addc3dec28ad3c5df848ae9c2cfc9c18ac3de8ac5dfde908ac2dededad9908585dddddd84c8cfc6c6cbc4cbc3c0cb84c9c5c785989a989e859b9a85dec2cf87dfdad8c3d9c3c4cd87ddc3dccfd987c5c487d9ded8c3c1cf87dad8cfc7c3cfd8cf85">
+<li class="mvp-alp-soc-com"><span class="fa fa-envelope"></span></li>
+</a>
+</ul>
+</div>
+</div>
+<div class="alp-related-post post-1675614 " data-id="1675614" data-document-title>
+<div class="post-details">
+<p class="post-meta">
+<a class="post-category" href="https://www.bellanaija.com/event/">Events</a>
+<a class="post-category" href="https://www.bellanaija.com/movies-tv/">Movies &amp; TV</a>
+<a class="post-category" href="https://www.bellanaija.com/nollywood/">Nollywood</a>
+<a class="post-category" href="https://www.bellanaija.com/promotions/">Promotions</a>
+<a class="post-category" href="https://www.bellanaija.com/style/">Style</a>
+</p>
+<a class="post-title" href="https://www.bellanaija.com/2024/10/smart-money-woman-osas-ighodaro-bet-france/">“The Smart Money Woman” Star Osas Ighodaro Appears On  BET & BET France (First Look)</a>
+</div>
+<div class="mvp-alp-soc-wrap">
+<ul class="mvp-alp-soc-list">
+<a href="#" onclick="if (!window.__cfRLUnblockHandlers) return false; window.open('http://www.facebook.com/sharer.php?u=https://www.bellanaija.com/2024/10/smart-money-woman-osas-ighodaro-bet-france/&amp;t=“The Smart Money Woman” Star Osas Ighodaro Appears On  BET &#038; BET France (First Look)', 'facebookShare', 'width=626,height=436'); return false;" title="Share on Facebook" data-cf-modified-9f73ee8431844a79dcd191c6->
+<li class="mvp-alp-soc-fb"><span class="fa fa-facebook"></span></li>
+</a>
+<a href="#" onclick="if (!window.__cfRLUnblockHandlers) return false; window.open('http://twitter.com/share?text=“The Smart Money Woman” Star Osas Ighodaro Appears On  BET &#038; BET France (First Look) &amp;url=https://www.bellanaija.com/2024/10/smart-money-woman-osas-ighodaro-bet-france/', 'twitterShare', 'width=626,height=436'); return false;" title="Tweet This Post" data-cf-modified-9f73ee8431844a79dcd191c6->
+<li class="mvp-alp-soc-twit"><span class="fa fa-twitter"></span></li>
+</a>
+<a href="#" onclick="if (!window.__cfRLUnblockHandlers) return false; window.open('http://pinterest.com/pin/create/button/?url=https://www.bellanaija.com/2024/10/smart-money-woman-osas-ighodaro-bet-france/&amp;media=https://www.bellanaija.com/wp-content/uploads/2024/03/osas-ighodaro-e1728894665234-590x354.jpg&amp;description=“The Smart Money Woman” Star Osas Ighodaro Appears On  BET &#038; BET France (First Look)', 'pinterestShare', 'width=750,height=350'); return false;" title="Pin This Post" data-cf-modified-9f73ee8431844a79dcd191c6->
+<li class="mvp-alp-soc-pin"><span class="fa fa-pinterest-p"></span></li>
+</a>
+<a href="/cdn-cgi/l/email-protection#ead5999f88808f899ed7086a76be828fcab9878b989ecaa785848f93cabd85878b84086a77cab99e8b98caa5998b99caa38d82858e8b9885caab9a9a8f8b9899caa584284acaa8afbecaccc9dad9d2d1caa8afbecaac988b84898fcac2ac8398999ecaa6858581c3cc8b879ad1a8a5aeb3d7a3ca8c859f848eca9e828399ca8b989e8389868fca83849e8f988f999e83848dca8b848eca9e82859f8d829eca858cca99828b9883848dca839eca9d839e82ca93859fc4caa9828f8981ca839eca859f9ed0ca829e9e9a99d0c5c59d9d9dc4888f86868b848b83808bc4898587c5d8dad8dec5dbdac599878b989ec78785848f93c79d85878b84c785998b99c7838d82858e8b9885c7888f9ec78c988b84898fc5">
+<li class="mvp-alp-soc-com"><span class="fa fa-envelope"></span></li>
+</a>
+</ul>
+</div>
+</div>
+<div class="alp-related-post post-1675586 " data-id="1675586" data-document-title>
+<div class="post-details">
+<p class="post-meta">
+<a class="post-category" href="https://www.bellanaija.com/beauty/">Beauty</a>
+<a class="post-category" href="https://www.bellanaija.com/style/">Style</a>
+</p>
+<a class="post-title" href="https://www.bellanaija.com/2024/10/ayra-starr-pfw-style-diary/">Ayra Starr Served Chic and Sultry Lewks at Paris Fashion Week, Have a Look</a>
+</div>
+<div class="mvp-alp-soc-wrap">
+<ul class="mvp-alp-soc-list">
+<a href="#" onclick="if (!window.__cfRLUnblockHandlers) return false; window.open('http://www.facebook.com/sharer.php?u=https://www.bellanaija.com/2024/10/ayra-starr-pfw-style-diary/&amp;t=Ayra Starr Served Chic and Sultry Lewks at Paris Fashion Week, Have a Look', 'facebookShare', 'width=626,height=436'); return false;" title="Share on Facebook" data-cf-modified-9f73ee8431844a79dcd191c6->
+<li class="mvp-alp-soc-fb"><span class="fa fa-facebook"></span></li>
+</a>
+<a href="#" onclick="if (!window.__cfRLUnblockHandlers) return false; window.open('http://twitter.com/share?text=Ayra Starr Served Chic and Sultry Lewks at Paris Fashion Week, Have a Look &amp;url=https://www.bellanaija.com/2024/10/ayra-starr-pfw-style-diary/', 'twitterShare', 'width=626,height=436'); return false;" title="Tweet This Post" data-cf-modified-9f73ee8431844a79dcd191c6->
+<li class="mvp-alp-soc-twit"><span class="fa fa-twitter"></span></li>
+</a>
+<a href="#" onclick="if (!window.__cfRLUnblockHandlers) return false; window.open('http://pinterest.com/pin/create/button/?url=https://www.bellanaija.com/2024/10/ayra-starr-pfw-style-diary/&amp;media=https://www.bellanaija.com/wp-content/uploads/2024/10/Snapinsta.app_461737291_500107446141636_5853871934059760264_n_1080-590x354.jpg&amp;description=Ayra Starr Served Chic and Sultry Lewks at Paris Fashion Week, Have a Look', 'pinterestShare', 'width=750,height=350'); return false;" title="Pin This Post" data-cf-modified-9f73ee8431844a79dcd191c6->
+<li class="mvp-alp-soc-pin"><span class="fa fa-pinterest-p"></span></li>
+</a>
+<a href="/cdn-cgi/l/email-protection#2a15595f48404f495e176b53584b0a795e4b58580a794f585c4f4e0a694243490a4b444e0a795f465e58530a664f5d41590a4b5e0a7a4b5843590a6c4b59424345440a7d4f4f41060a624b5c4f0a4b0a664545410c4b475a1168656e7317630a4c455f444e0a5e4243590a4b585e4349464f0a43445e4f584f595e43444d0a4b444e0a5e42455f4d425e0a454c0a59424b5843444d0a435e0a5d435e420a53455f040a69424f49410a435e0a455f5e100a425e5e5a591005055d5d5d04484f46464b444b43404b0449454705181a181e051b1a054b53584b07595e4b5858075a4c5d07595e53464f074e434b585305">
+<li class="mvp-alp-soc-com"><span class="fa fa-envelope"></span></li>
+</a>
+</ul>
+</div>
+</div>
+<div class="alp-related-post post-1675577 " data-id="1675577" data-document-title>
+<div class="post-details">
+<p class="post-meta">
+<a class="post-category" href="https://www.bellanaija.com/event/">Events</a>
+<a class="post-category" href="https://www.bellanaija.com/news/">News</a>
+<a class="post-category" href="https://www.bellanaija.com/style/">Style</a>
+</p>
+<a class="post-title" href="https://www.bellanaija.com/2024/10/lagos-fashion-week-kick-off-party/">Experience Lagos Fashion Week's Exclusive Kick-Off Party at Boho Lounge, See Highlights Here</a>
+</div>
+<div class="mvp-alp-soc-wrap">
+<ul class="mvp-alp-soc-list">
+<a href="#" onclick="if (!window.__cfRLUnblockHandlers) return false; window.open('http://www.facebook.com/sharer.php?u=https://www.bellanaija.com/2024/10/lagos-fashion-week-kick-off-party/&amp;t=Experience Lagos Fashion Week&#8217;s Exclusive Kick-Off Party at Boho Lounge, See Highlights Here', 'facebookShare', 'width=626,height=436'); return false;" title="Share on Facebook" data-cf-modified-9f73ee8431844a79dcd191c6->
+<li class="mvp-alp-soc-fb"><span class="fa fa-facebook"></span></li>
+</a>
+<a href="#" onclick="if (!window.__cfRLUnblockHandlers) return false; window.open('http://twitter.com/share?text=Experience Lagos Fashion Week&#8217;s Exclusive Kick-Off Party at Boho Lounge, See Highlights Here &amp;url=https://www.bellanaija.com/2024/10/lagos-fashion-week-kick-off-party/', 'twitterShare', 'width=626,height=436'); return false;" title="Tweet This Post" data-cf-modified-9f73ee8431844a79dcd191c6->
+<li class="mvp-alp-soc-twit"><span class="fa fa-twitter"></span></li>
+</a>
+<a href="#" onclick="if (!window.__cfRLUnblockHandlers) return false; window.open('http://pinterest.com/pin/create/button/?url=https://www.bellanaija.com/2024/10/lagos-fashion-week-kick-off-party/&amp;media=https://www.bellanaija.com/wp-content/uploads/2024/10/Heineken-Lagos-Fashion-Week_Exclusive-Kick-Off-Party-at-Boho-Lounge_IMG_0486-scaled-e1728767425925-590x354.jpg&amp;description=Experience Lagos Fashion Week&#8217;s Exclusive Kick-Off Party at Boho Lounge, See Highlights Here', 'pinterestShare', 'width=750,height=350'); return false;" title="Pin This Post" data-cf-modified-9f73ee8431844a79dcd191c6->
+<li class="mvp-alp-soc-pin"><span class="fa fa-pinterest-p"></span></li>
+</a>
+<a href="/cdn-cgi/l/email-protection#09367a7c6b636c6a7d344c71796c7b606c676a6c2945686e667a294f687a61606667295e6c6c622f2a313b383e327a294c716a657c7a607f6c2942606a6224466f6f2959687b7d7029687d294b6661662945667c676e6c25295a6c6c2941606e6165606e617d7a29416c7b6c2f686479324b464d503440296f667c676d297d61607a29687b7d606a656c2960677d6c7b6c7a7d60676e2968676d297d61667c6e617d29666f297a61687b60676e29607d297e607d612970667c27294a616c6a6229607d29667c7d3329617d7d797a3326267e7e7e276b6c6565686768606368276a6664263b393b3d2638392665686e667a246f687a61606667247e6c6c622462606a6224666f6f2479687b7d7026">
+<li class="mvp-alp-soc-com"><span class="fa fa-envelope"></span></li>
+</a>
+</ul>
+</div>
+</div>
+<div class="alp-related-post post-1674923 " data-id="1674923" data-document-title>
+<div class="post-details">
+<p class="post-meta">
+<a class="post-category" href="https://www.bellanaija.com/beauty/">Beauty</a>
+<a class="post-category" href="https://www.bellanaija.com/style/">Style</a>
+</p>
+<a class="post-title" href="https://www.bellanaija.com/2024/10/cardib-pfw-style-diary/">Cardi B Served Lewks and Hawt New Mum Bod at Paris Fashion Week</a>
+</div>
+<div class="mvp-alp-soc-wrap">
+<ul class="mvp-alp-soc-list">
+<a href="#" onclick="if (!window.__cfRLUnblockHandlers) return false; window.open('http://www.facebook.com/sharer.php?u=https://www.bellanaija.com/2024/10/cardib-pfw-style-diary/&amp;t=Cardi B Served Lewks and Hawt New Mum Bod at Paris Fashion Week', 'facebookShare', 'width=626,height=436'); return false;" title="Share on Facebook" data-cf-modified-9f73ee8431844a79dcd191c6->
+<li class="mvp-alp-soc-fb"><span class="fa fa-facebook"></span></li>
+</a>
+<a href="#" onclick="if (!window.__cfRLUnblockHandlers) return false; window.open('http://twitter.com/share?text=Cardi B Served Lewks and Hawt New Mum Bod at Paris Fashion Week &amp;url=https://www.bellanaija.com/2024/10/cardib-pfw-style-diary/', 'twitterShare', 'width=626,height=436'); return false;" title="Tweet This Post" data-cf-modified-9f73ee8431844a79dcd191c6->
+<li class="mvp-alp-soc-twit"><span class="fa fa-twitter"></span></li>
+</a>
+<a href="#" onclick="if (!window.__cfRLUnblockHandlers) return false; window.open('http://pinterest.com/pin/create/button/?url=https://www.bellanaija.com/2024/10/cardib-pfw-style-diary/&amp;media=https://www.bellanaija.com/wp-content/uploads/2024/10/Cardi-B-at-PFW-590x354.png&amp;description=Cardi B Served Lewks and Hawt New Mum Bod at Paris Fashion Week', 'pinterestShare', 'width=750,height=350'); return false;" title="Pin This Post" data-cf-modified-9f73ee8431844a79dcd191c6->
+<li class="mvp-alp-soc-pin"><span class="fa fa-pinterest-p"></span></li>
+</a>
+<a href="/cdn-cgi/l/email-protection#16296563747c7375622b557764727f365436457364607372365a73617d6536777872365e77616236587361365b637b36547972367762364677647f65365077657e7f7978364173737d30777b662d5459524f2b5f36707963787236627e7f65367764627f757a73367f786273647365627f78713677787236627e7963717e6236797036657e77647f7871367f6236617f627e366f79633836557e73757d367f62367963622c367e626266652c39396161613874737a7a7778777f7c773875797b392426242239272639757764727f743b6670613b65626f7a733b727f77646f39">
+<li class="mvp-alp-soc-com"><span class="fa fa-envelope"></span></li>
+</a>
+</ul>
+</div>
+</div>
+<div class="alp-related-post post-1675020 " data-id="1675020" data-document-title>
+<div class="post-details">
+<p class="post-meta">
+<a class="post-category" href="https://www.bellanaija.com/event/">Events</a>
+<a class="post-category" href="https://www.bellanaija.com/promotions/">Promotions</a>
+<a class="post-category" href="https://www.bellanaija.com/style/">Style</a>
+</p>
+<a class="post-title" href="https://www.bellanaija.com/2024/10/ppiozn-at-london-fashion-week-2024/">London Fashion Week at 40: PPoizn Brand takes the spotlight with "Essor d’hiver" FW24 Collection!</a>
+</div>
+<div class="mvp-alp-soc-wrap">
+<ul class="mvp-alp-soc-list">
+<a href="#" onclick="if (!window.__cfRLUnblockHandlers) return false; window.open('http://www.facebook.com/sharer.php?u=https://www.bellanaija.com/2024/10/ppiozn-at-london-fashion-week-2024/&amp;t=London Fashion Week at 40: PPoizn Brand takes the spotlight with &#8220;Essor d’hiver&#8221; FW24 Collection!', 'facebookShare', 'width=626,height=436'); return false;" title="Share on Facebook" data-cf-modified-9f73ee8431844a79dcd191c6->
+<li class="mvp-alp-soc-fb"><span class="fa fa-facebook"></span></li>
+</a>
+<a href="#" onclick="if (!window.__cfRLUnblockHandlers) return false; window.open('http://twitter.com/share?text=London Fashion Week at 40: PPoizn Brand takes the spotlight with &#8220;Essor d’hiver&#8221; FW24 Collection! &amp;url=https://www.bellanaija.com/2024/10/ppiozn-at-london-fashion-week-2024/', 'twitterShare', 'width=626,height=436'); return false;" title="Tweet This Post" data-cf-modified-9f73ee8431844a79dcd191c6->
+<li class="mvp-alp-soc-twit"><span class="fa fa-twitter"></span></li>
+</a>
+<a href="#" onclick="if (!window.__cfRLUnblockHandlers) return false; window.open('http://pinterest.com/pin/create/button/?url=https://www.bellanaija.com/2024/10/ppiozn-at-london-fashion-week-2024/&amp;media=https://www.bellanaija.com/wp-content/uploads/2024/10/WhatsApp-Image-2024-10-07-at-15.27.57-1-590x354.jpeg&amp;description=London Fashion Week at 40: PPoizn Brand takes the spotlight with &#8220;Essor d’hiver&#8221; FW24 Collection!', 'pinterestShare', 'width=750,height=350'); return false;" title="Pin This Post" data-cf-modified-9f73ee8431844a79dcd191c6->
+<li class="mvp-alp-soc-pin"><span class="fa fa-pinterest-p"></span></li>
+</a>
+<a href="/cdn-cgi/l/email-protection#29165a5c4b434c4a5d146546474d4647096f485a41404647097e4c4c4209485d091d191309797946405347096b5b48474d095d48424c5a095d414c095a59465d45404e415d095e405d41090f0a111b1b19126c5a5a465b094dcba9b041405f4c5b0f0a111b1b1812096f7e1b1d096a4645454c4a5d404647080f484459126b666d701460094f465c474d095d41405a09485b5d404a454c0940475d4c5b4c5a5d40474e0948474d095d41465c4e415d09464f095a41485b40474e09405d095e405d410950465c07096a414c4a4209405d09465c5d1309415d5d595a1306065e5e5e074b4c4545484748404348074a4644061b191b1d0618190659594046534704485d044546474d4647044f485a41404647045e4c4c42041b191b1d06">
+<li class="mvp-alp-soc-com"><span class="fa fa-envelope"></span></li>
+</a>
+</ul>
+</div>
+</div>
+<div class="alp-related-post post-1675069 " data-id="1675069" data-document-title>
+<div class="post-details">
+<p class="post-meta">
+<a class="post-category" href="https://www.bellanaija.com/beauty/">Beauty</a>
+<a class="post-category" href="https://www.bellanaija.com/style/">Style</a>
+</p>
+<a class="post-title" href="https://www.bellanaija.com/2024/10/toke-makinwa-bbnaija-finale-look/">Toke Makinwa Rocked a Two Toned Masterpiece by House of Dova for Her Second Look at BBNaija Season Finale</a>
+</div>
+<div class="mvp-alp-soc-wrap">
+<ul class="mvp-alp-soc-list">
+<a href="#" onclick="if (!window.__cfRLUnblockHandlers) return false; window.open('http://www.facebook.com/sharer.php?u=https://www.bellanaija.com/2024/10/toke-makinwa-bbnaija-finale-look/&amp;t=Toke Makinwa Rocked a Two Toned Masterpiece by House of Dova for Her Second Look at BBNaija Season Finale', 'facebookShare', 'width=626,height=436'); return false;" title="Share on Facebook" data-cf-modified-9f73ee8431844a79dcd191c6->
+<li class="mvp-alp-soc-fb"><span class="fa fa-facebook"></span></li>
+</a>
+<a href="#" onclick="if (!window.__cfRLUnblockHandlers) return false; window.open('http://twitter.com/share?text=Toke Makinwa Rocked a Two Toned Masterpiece by House of Dova for Her Second Look at BBNaija Season Finale &amp;url=https://www.bellanaija.com/2024/10/toke-makinwa-bbnaija-finale-look/', 'twitterShare', 'width=626,height=436'); return false;" title="Tweet This Post" data-cf-modified-9f73ee8431844a79dcd191c6->
+<li class="mvp-alp-soc-twit"><span class="fa fa-twitter"></span></li>
+</a>
+<a href="#" onclick="if (!window.__cfRLUnblockHandlers) return false; window.open('http://pinterest.com/pin/create/button/?url=https://www.bellanaija.com/2024/10/toke-makinwa-bbnaija-finale-look/&amp;media=https://www.bellanaija.com/wp-content/uploads/2024/10/Snapinsta.app_462245143_1982617562241432_4979807128713248478_n_1080-590x354.jpg&amp;description=Toke Makinwa Rocked a Two Toned Masterpiece by House of Dova for Her Second Look at BBNaija Season Finale', 'pinterestShare', 'width=750,height=350'); return false;" title="Pin This Post" data-cf-modified-9f73ee8431844a79dcd191c6->
+<li class="mvp-alp-soc-pin"><span class="fa fa-pinterest-p"></span></li>
+</a>
+<a href="/cdn-cgi/l/email-protection#58672b2d3a323d3b2c650c37333d7815393331362f39780a373b333d3c7839780c2f37780c37363d3c7815392b2c3d2a28313d3b3d783a217810372d2b3d78373e781c372e39783e372a78103d2a780b3d3b37363c781437373378392c781a1a1639313239780b3d392b3736781e313639343d7e393528631a171c016511783e372d363c782c30312b78392a2c313b343d7831362c3d2a3d2b2c31363f7839363c782c30372d3f302c78373e782b30392a31363f78312c782f312c307821372d76781b303d3b3378312c78372d2c6278302c2c282b6277772f2f2f763a3d3434393639313239763b3735776a686a6c776968772c37333d7535393331362f39753a3a3639313239753e313639343d753437373377">
+<li class="mvp-alp-soc-com"><span class="fa fa-envelope"></span></li>
+</a>
+</ul>
+</div>
+</div>
+<div class="alp-related-post post-1675065 " data-id="1675065" data-document-title>
+<div class="post-details">
+<p class="post-meta">
+<a class="post-category" href="https://www.bellanaija.com/style/">Style</a>
+</p>
+<a class="post-title" href="https://www.bellanaija.com/2024/10/workwear-looks-edition-233/">The Workwear Looks BN Style Editors Are Loving This Week | Edition 233</a>
+</div>
+<div class="mvp-alp-soc-wrap">
+<ul class="mvp-alp-soc-list">
+<a href="#" onclick="if (!window.__cfRLUnblockHandlers) return false; window.open('http://www.facebook.com/sharer.php?u=https://www.bellanaija.com/2024/10/workwear-looks-edition-233/&amp;t=The Workwear Looks BN Style Editors Are Loving This Week | Edition 233', 'facebookShare', 'width=626,height=436'); return false;" title="Share on Facebook" data-cf-modified-9f73ee8431844a79dcd191c6->
+<li class="mvp-alp-soc-fb"><span class="fa fa-facebook"></span></li>
+</a>
+<a href="#" onclick="if (!window.__cfRLUnblockHandlers) return false; window.open('http://twitter.com/share?text=The Workwear Looks BN Style Editors Are Loving This Week | Edition 233 &amp;url=https://www.bellanaija.com/2024/10/workwear-looks-edition-233/', 'twitterShare', 'width=626,height=436'); return false;" title="Tweet This Post" data-cf-modified-9f73ee8431844a79dcd191c6->
+<li class="mvp-alp-soc-twit"><span class="fa fa-twitter"></span></li>
+</a>
+<a href="#" onclick="if (!window.__cfRLUnblockHandlers) return false; window.open('http://pinterest.com/pin/create/button/?url=https://www.bellanaija.com/2024/10/workwear-looks-edition-233/&amp;media=https://www.bellanaija.com/wp-content/uploads/2024/10/Workwear-Edition-233-590x354.png&amp;description=The Workwear Looks BN Style Editors Are Loving This Week | Edition 233', 'pinterestShare', 'width=750,height=350'); return false;" title="Pin This Post" data-cf-modified-9f73ee8431844a79dcd191c6->
+<li class="mvp-alp-soc-pin"><span class="fa fa-pinterest-p"></span></li>
+</a>
+<a href="/cdn-cgi/l/email-protection#caf5b9bfa8a0afa9bef79ea2afea9da5b8a1bdafabb8ea86a5a5a1b9ea8884ea99beb3a6afea8faea3bea5b8b9ea8bb8afea86a5bca3a4adea9ea2a3b9ea9dafafa1eab6ea8faea3bea3a5a4eaf8f9f9ecaba7baf188858e93f783eaaca5bfa4aeeabea2a3b9eaabb8bea3a9a6afeaa3a4beafb8afb9bea3a4adeaaba4aeeabea2a5bfada2beeaa5aceab9a2abb8a3a4adeaa3beeabda3bea2eab3a5bfe4ea89a2afa9a1eaa3beeaa5bfbef0eaa2bebebab9f0e5e5bdbdbde4a8afa6a6aba4aba3a0abe4a9a5a7e5f8faf8fee5fbfae5bda5b8a1bdafabb8e7a6a5a5a1b9e7afaea3bea3a5a4e7f8f9f9e5">
+<li class="mvp-alp-soc-com"><span class="fa fa-envelope"></span></li>
+</a>
+</ul>
+</div>
+</div>
+<div class="alp-related-post post-1675055 " data-id="1675055" data-document-title>
+<div class="post-details">
+<p class="post-meta">
+<a class="post-category" href="https://www.bellanaija.com/bntv/">BN TV</a>
+<a class="post-category" href="https://www.bellanaija.com/event/">Events</a>
+<a class="post-category" href="https://www.bellanaija.com/living/">Living</a>
+<a class="post-category" href="https://www.bellanaija.com/style/">Style</a>
+</p>
+<a class="post-title" href="https://www.bellanaija.com/2024/10/nkiru-and-ozinna-anumudu/">Legacy Continues as Ozinna Anumudu Channels Her Mother's Style for #HerMoneyHerPower [WATCH]</a>
+</div>
+<div class="mvp-alp-soc-wrap">
+<ul class="mvp-alp-soc-list">
+<a href="#" onclick="if (!window.__cfRLUnblockHandlers) return false; window.open('http://www.facebook.com/sharer.php?u=https://www.bellanaija.com/2024/10/nkiru-and-ozinna-anumudu/&amp;t=Legacy Continues as Ozinna Anumudu Channels Her Mother&#8217;s Style for #HerMoneyHerPower [WATCH]', 'facebookShare', 'width=626,height=436'); return false;" title="Share on Facebook" data-cf-modified-9f73ee8431844a79dcd191c6->
+<li class="mvp-alp-soc-fb"><span class="fa fa-facebook"></span></li>
+</a>
+<a href="#" onclick="if (!window.__cfRLUnblockHandlers) return false; window.open('http://twitter.com/share?text=Legacy Continues as Ozinna Anumudu Channels Her Mother&#8217;s Style for #HerMoneyHerPower [WATCH] &amp;url=https://www.bellanaija.com/2024/10/nkiru-and-ozinna-anumudu/', 'twitterShare', 'width=626,height=436'); return false;" title="Tweet This Post" data-cf-modified-9f73ee8431844a79dcd191c6->
+<li class="mvp-alp-soc-twit"><span class="fa fa-twitter"></span></li>
+</a>
+<a href="#" onclick="if (!window.__cfRLUnblockHandlers) return false; window.open('http://pinterest.com/pin/create/button/?url=https://www.bellanaija.com/2024/10/nkiru-and-ozinna-anumudu/&amp;media=https://www.bellanaija.com/wp-content/uploads/2024/10/Ozinna-in-her-mums-Chanel-skirt-set-e1728418112999-590x354.jpg&amp;description=Legacy Continues as Ozinna Anumudu Channels Her Mother&#8217;s Style for #HerMoneyHerPower [WATCH]', 'pinterestShare', 'width=750,height=350'); return false;" title="Pin This Post" data-cf-modified-9f73ee8431844a79dcd191c6->
+<li class="mvp-alp-soc-pin"><span class="fa fa-pinterest-p"></span></li>
+</a>
+<a href="/cdn-cgi/l/email-protection#dde2aea8bfb7b8bea9e091b8babcbea4fd9eb2b3a9b4b3a8b8aefdbcaefd92a7b4b3b3bcfd9cb3a8b0a8b9a8fd9eb5bcb3b3b8b1aefd95b8affd90b2a9b5b8affbfee5efeceae6aefd8ea9a4b1b8fdbbb2affdfe95b8af90b2b3b8a495b8af8db2aab8affd868a9c899e9580fbbcb0ade69f929984e094fdbbb2a8b3b9fda9b5b4aefdbcafa9b4beb1b8fdb4b3a9b8afb8aea9b4b3bafdbcb3b9fda9b5b2a8bab5a9fdb2bbfdaeb5bcafb4b3bafdb4a9fdaab4a9b5fda4b2a8f3fd9eb5b8beb6fdb4a9fdb2a8a9e7fdb5a9a9adaee7f2f2aaaaaaf3bfb8b1b1bcb3bcb4b7bcf3beb2b0f2efedefe9f2ecedf2b3b6b4afa8f0bcb3b9f0b2a7b4b3b3bcf0bcb3a8b0a8b9a8f2">
+<li class="mvp-alp-soc-com"><span class="fa fa-envelope"></span></li>
+</a>
+</ul>
+</div>
+</div>
+</div>
+</div> </div>
+</div>
+<div class="mvp-auto-post-main">
+<article id="post-1674600" class="mvp-article-wrap" itemscope itemtype="http://schema.org/NewsArticle">
+<meta itemscope itemprop="mainEntityOfPage" itemType="https://schema.org/WebPage" itemid="https://www.bellanaija.com/2024/10/ebuka-obi-uchendu-bbnaija-finale-look/" />
+<div id="mvp-article-cont" class="left relative">
+<div id="mvp-post-main" class="left relative">
+<header id="mvp-post-head" class="left relative">
+<h3 class="mvp-post-cat left relative"><a class="mvp-post-cat-link" href="https://www.bellanaija.com/style/"><span class="mvp-post-cat left">Style</span></a></h3>
+<h1 class="mvp-post-title left entry-title" itemprop="headline">Ebuka Obi-Uchendu&#8217;s Bold Look for the BBNaija9 &#8216;No Loose Guard&#8217; Grand Finale is Pure Fashion Goals</h1>
+<div class="mvp-author-info-wrap left relative">
+<div class="mvp-author-info-thumb left relative">
+<img alt="Avatar photo" src="https://www.bellanaija.com/wp-content/uploads/2014/07/BellaNaija.com_avatar_1404726893.jpg" srcset="http://www.bellanaija.com/wp-content/uploads/2014/07/BellaNaija.com_avatar_1404726893.jpg 2x" class="avatar avatar-46 photo" height="46" width="46" decoding="async" /> </div>
+<div class="mvp-author-info-text left relative">
+<div class="mvp-author-info-date left relative">
+<p>Published</p> <span class="mvp-post-date">1 week ago</span>
+<p>&nbsp;on</p> <span class="mvp-post-date updated"><time class="post-date updated" itemprop="datePublished" datetime="2024-10-06">October 6, 2024</time></span>
+<meta itemprop="dateModified" content="2024-10-06" />
+</div>
+<div class="mvp-author-info-name left relative" itemprop="author" itemscope itemtype="https://schema.org/Person">
+<p>By</p> <span class="author-name vcard fn author" itemprop="name"><a href="https://www.bellanaija.com/author/bella/" title="Posts by BellaNaija.com" rel="author">BellaNaija.com</a></span> </div>
+</div>
+</div>
+</header>
+<div id="mvp-post-content" class="left relative">
+<div class="mvp-post-img-hide" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+<meta itemprop="url" content="https://www.bellanaija.com/wp-content/uploads/2024/10/462309825_1178940243165370_6740313779986601524_n-1-1000x600.jpg">
+<meta itemprop="width" content="1000">
+<meta itemprop="height" content="600">
+</div>
+<div id="mvp-content-wrap" class="left relative">
+<div id="mvp-content-body" class="left relative">
+<div id="mvp-content-body-top" class="left relative">
+<div class="mvp-alp-soc-reg left relative">
+<div class="mvp-alp-soc-wrap">
+<ul class="mvp-alp-soc-list">
+<a href="#" onclick="if (!window.__cfRLUnblockHandlers) return false; window.open('http://www.facebook.com/sharer.php?u=https://www.bellanaija.com/2024/10/ebuka-obi-uchendu-bbnaija-finale-look/&amp;t=Ebuka Obi-Uchendu&#8217;s Bold Look for the BBNaija9 &#8216;No Loose Guard&#8217; Grand Finale is Pure Fashion Goals', 'facebookShare', 'width=626,height=436'); return false;" title="Share on Facebook" data-cf-modified-9f73ee8431844a79dcd191c6->
+<li class="mvp-alp-soc-fb"><span class="fa fa-facebook"></span></li>
+</a>
+<a href="#" onclick="if (!window.__cfRLUnblockHandlers) return false; window.open('http://twitter.com/share?text=Ebuka Obi-Uchendu&#8217;s Bold Look for the BBNaija9 &#8216;No Loose Guard&#8217; Grand Finale is Pure Fashion Goals &amp;url=https://www.bellanaija.com/2024/10/ebuka-obi-uchendu-bbnaija-finale-look/', 'twitterShare', 'width=626,height=436'); return false;" title="Tweet This Post" data-cf-modified-9f73ee8431844a79dcd191c6->
+<li class="mvp-alp-soc-twit"><span class="fa fa-twitter"></span></li>
+</a>
+<a href="#" onclick="if (!window.__cfRLUnblockHandlers) return false; window.open('http://pinterest.com/pin/create/button/?url=https://www.bellanaija.com/2024/10/ebuka-obi-uchendu-bbnaija-finale-look/&amp;media=https://www.bellanaija.com/wp-content/uploads/2024/10/462309825_1178940243165370_6740313779986601524_n-1-590x354.jpg&amp;description=Ebuka Obi-Uchendu&#8217;s Bold Look for the BBNaija9 &#8216;No Loose Guard&#8217; Grand Finale is Pure Fashion Goals', 'pinterestShare', 'width=750,height=350'); return false;" title="Pin This Post" data-cf-modified-9f73ee8431844a79dcd191c6->
+<li class="mvp-alp-soc-pin"><span class="fa fa-pinterest-p"></span></li>
+</a>
+<a href="/cdn-cgi/l/email-protection#122d616770787771662f5770677973325d707b3f47717a777c766734312a202325296132507d7e76325e7d7d7932747d6032667a773250505c737b78732b3234312a202324295c7d325e7d7d617732556773607634312a20232529325560737c7632547b7c737e77327b613242676077325473617a7b7d7c32557d737e6134737f6229505d564b2f5b32747d677c7632667a7b61327360667b717e77327b7c6677607761667b7c7532737c7632667a7d67757a66327d7432617a73607b7c75327b6632657b667a326b7d673c32517a777179327b66327d676628327a66666261283d3d6565653c70777e7e737c737b78733c717d7f3d202220263d23223d77706779733f7d707b3f67717a777c76673f70707c737b78733f747b7c737e773f7e7d7d793d">
+<li class="mvp-alp-soc-com"><span class="fa fa-envelope"></span></li>
+</a>
+</ul>
+</div>
+</div>
+<div id="mvp-content-main" class="left relative">
+<div id="attachment_1674611" style="width: 1010px" class="wp-caption aligncenter"><img fetchpriority="high" decoding="async" aria-describedby="caption-attachment-1674611" class="wp-image-1674611" src="https://www.bellanaija.com/wp-content/uploads/2024/10/462309825_1178940243165370_6740313779986601524_n-1-240x300.jpg" alt width="1000" height="1249" srcset="https://www.bellanaija.com/wp-content/uploads/2024/10/462309825_1178940243165370_6740313779986601524_n-1-240x300.jpg 240w, https://www.bellanaija.com/wp-content/uploads/2024/10/462309825_1178940243165370_6740313779986601524_n-1-480x600.jpg 480w, https://www.bellanaija.com/wp-content/uploads/2024/10/462309825_1178940243165370_6740313779986601524_n-1-768x959.jpg 768w, https://www.bellanaija.com/wp-content/uploads/2024/10/462309825_1178940243165370_6740313779986601524_n-1-600x749.jpg 600w, https://www.bellanaija.com/wp-content/uploads/2024/10/462309825_1178940243165370_6740313779986601524_n-1.jpg 1080w" sizes="(max-width: 1000px) 100vw, 1000px" /><p id="caption-attachment-1674611" class="wp-caption-text"><em>Credit: <a href="https://www.instagram.com/p/DAyrXL7tC6E/?img_index=2" target="_blank" rel="nofollow">Ebuka Obi-Uchendu/Instagram</a></em></p></div>
+<p>A grand finale calls for a look that steals the spotlight—and <strong>Ebuka Obi-Uchendu</strong>, as always, delivered just that tonight at the Big Brother Naija &#8216;No Loose Guard&#8217; season finale.</p>
+<p>From the <a href="https://www.bellanaija.com/2024/07/bbnaija-no-loose-guard-housemates/">start</a> of this BBNaija season, <a href="https://www.bellanaija.com/tag/ebuka-obi-uchendu/">Ebuka</a> has kept us on our toes with his style, rocking everything from traditional native attire to sharp suits, casual denim, and contemporary Nigerian designs. Designers like Ugo Monye, ATAFO, D29, T.I Nathan, and Deji &amp; Kola have all contributed to his dynamic wardrobe.</p>
+<p>For tonight’s grand finale, Ebuka took things to another level. He stepped out in a bold, eye-catching 3-piece ensemble by ATAFO: a pair of white trousers with sleek black side stripes, a silk black shirt complete with a sharp black bow tie, and a fiery red jacket that screams sophistication. Paired with dark shades, the look was the perfect mix of sleek, stylish, and daring as he prepared to announce the Season 9 BBNaija winner.</p>
+<p>See more photos of Ebuka’s stunning grand finale look below</p>
+<p><a href="https://www.bellanaija.com/wp-content/uploads/2024/10/462203720_2274156456281232_8048721467722868420_n.jpg"><img decoding="async" class="alignnone wp-image-1674605" src="https://www.bellanaija.com/wp-content/uploads/2024/10/462203720_2274156456281232_8048721467722868420_n-240x300.jpg" alt width="1000" height="1249" srcset="https://www.bellanaija.com/wp-content/uploads/2024/10/462203720_2274156456281232_8048721467722868420_n-240x300.jpg 240w, https://www.bellanaija.com/wp-content/uploads/2024/10/462203720_2274156456281232_8048721467722868420_n-480x600.jpg 480w, https://www.bellanaija.com/wp-content/uploads/2024/10/462203720_2274156456281232_8048721467722868420_n-768x959.jpg 768w, https://www.bellanaija.com/wp-content/uploads/2024/10/462203720_2274156456281232_8048721467722868420_n-600x749.jpg 600w, https://www.bellanaija.com/wp-content/uploads/2024/10/462203720_2274156456281232_8048721467722868420_n.jpg 1080w" sizes="(max-width: 1000px) 100vw, 1000px" /></a> <img loading="lazy" decoding="async" class="alignnone wp-image-1674608" src="https://www.bellanaija.com/wp-content/uploads/2024/10/462405426_543066744873576_4875659838011135898_n-240x300.jpg" alt width="1000" height="1249" srcset="https://www.bellanaija.com/wp-content/uploads/2024/10/462405426_543066744873576_4875659838011135898_n-240x300.jpg 240w, https://www.bellanaija.com/wp-content/uploads/2024/10/462405426_543066744873576_4875659838011135898_n-480x600.jpg 480w, https://www.bellanaija.com/wp-content/uploads/2024/10/462405426_543066744873576_4875659838011135898_n-768x959.jpg 768w, https://www.bellanaija.com/wp-content/uploads/2024/10/462405426_543066744873576_4875659838011135898_n-600x749.jpg 600w, https://www.bellanaija.com/wp-content/uploads/2024/10/462405426_543066744873576_4875659838011135898_n.jpg 1080w" sizes="(max-width: 1000px) 100vw, 1000px" /><img loading="lazy" decoding="async" class="alignnone wp-image-1674607" src="https://www.bellanaija.com/wp-content/uploads/2024/10/462403251_926766086174891_4941566201868669387_n-240x300.jpg" alt width="1000" height="1249" srcset="https://www.bellanaija.com/wp-content/uploads/2024/10/462403251_926766086174891_4941566201868669387_n-240x300.jpg 240w, https://www.bellanaija.com/wp-content/uploads/2024/10/462403251_926766086174891_4941566201868669387_n-480x600.jpg 480w, https://www.bellanaija.com/wp-content/uploads/2024/10/462403251_926766086174891_4941566201868669387_n-768x959.jpg 768w, https://www.bellanaija.com/wp-content/uploads/2024/10/462403251_926766086174891_4941566201868669387_n-600x749.jpg 600w, https://www.bellanaija.com/wp-content/uploads/2024/10/462403251_926766086174891_4941566201868669387_n.jpg 1080w" sizes="(max-width: 1000px) 100vw, 1000px" /> <img loading="lazy" decoding="async" class="alignnone wp-image-1674610" src="https://www.bellanaija.com/wp-content/uploads/2024/10/462276017_899749008383159_8361138340872838589_n-240x300.jpg" alt width="1000" height="1249" srcset="https://www.bellanaija.com/wp-content/uploads/2024/10/462276017_899749008383159_8361138340872838589_n-240x300.jpg 240w, https://www.bellanaija.com/wp-content/uploads/2024/10/462276017_899749008383159_8361138340872838589_n-480x600.jpg 480w, https://www.bellanaija.com/wp-content/uploads/2024/10/462276017_899749008383159_8361138340872838589_n-768x959.jpg 768w, https://www.bellanaija.com/wp-content/uploads/2024/10/462276017_899749008383159_8361138340872838589_n-600x749.jpg 600w, https://www.bellanaija.com/wp-content/uploads/2024/10/462276017_899749008383159_8361138340872838589_n.jpg 1080w" sizes="(max-width: 1000px) 100vw, 1000px" /></p>
+<p>Credits:</p>
+<p>Fit: <a class="x1i10hfl xjbqb8w x1ejq31n xd10rxx x1sy0etr x17r0tee x972fbf xcfux6l x1qhh985 xm0m39n x9f619 x1ypdohk xt0psk2 xe8uvvx xdj266r x11i5rnm xat24cr x1mh8g0r xexx8yu x4uap5 x18d9i69 xkhd6sd x16tdsg8 x1hl2dhg xggy1nq x1a2a7pz notranslate _a6hd" tabindex="0" role="link" href="https://www.instagram.com/atafo__/" target="_blank" rel="nofollow">@atafo__</a><br/>
+Shots: <a class="x1i10hfl xjbqb8w x1ejq31n xd10rxx x1sy0etr x17r0tee x972fbf xcfux6l x1qhh985 xm0m39n x9f619 x1ypdohk xt0psk2 xe8uvvx xdj266r x11i5rnm xat24cr x1mh8g0r xexx8yu x4uap5 x18d9i69 xkhd6sd x16tdsg8 x1hl2dhg xggy1nq x1a2a7pz notranslate _a6hd" tabindex="0" role="link" href="https://www.instagram.com/theoladayo/" target="_blank" rel="nofollow">@theoladayo</a></p>
+</div>
+<div class="mvp-alp-soc-reg left relative">
+<div class="mvp-alp-soc-wrap">
+<ul class="mvp-alp-soc-list">
+<a href="#" onclick="if (!window.__cfRLUnblockHandlers) return false; window.open('http://www.facebook.com/sharer.php?u=https://www.bellanaija.com/2024/10/ebuka-obi-uchendu-bbnaija-finale-look/&amp;t=Ebuka Obi-Uchendu&#8217;s Bold Look for the BBNaija9 &#8216;No Loose Guard&#8217; Grand Finale is Pure Fashion Goals', 'facebookShare', 'width=626,height=436'); return false;" title="Share on Facebook" data-cf-modified-9f73ee8431844a79dcd191c6->
+<li class="mvp-alp-soc-fb"><span class="fa fa-facebook"></span></li>
+</a>
+<a href="#" onclick="if (!window.__cfRLUnblockHandlers) return false; window.open('http://twitter.com/share?text=Ebuka Obi-Uchendu&#8217;s Bold Look for the BBNaija9 &#8216;No Loose Guard&#8217; Grand Finale is Pure Fashion Goals &amp;url=https://www.bellanaija.com/2024/10/ebuka-obi-uchendu-bbnaija-finale-look/', 'twitterShare', 'width=626,height=436'); return false;" title="Tweet This Post" data-cf-modified-9f73ee8431844a79dcd191c6->
+<li class="mvp-alp-soc-twit"><span class="fa fa-twitter"></span></li>
+</a>
+<a href="#" onclick="if (!window.__cfRLUnblockHandlers) return false; window.open('http://pinterest.com/pin/create/button/?url=https://www.bellanaija.com/2024/10/ebuka-obi-uchendu-bbnaija-finale-look/&amp;media=https://www.bellanaija.com/wp-content/uploads/2024/10/462309825_1178940243165370_6740313779986601524_n-1-590x354.jpg&amp;description=Ebuka Obi-Uchendu&#8217;s Bold Look for the BBNaija9 &#8216;No Loose Guard&#8217; Grand Finale is Pure Fashion Goals', 'pinterestShare', 'width=750,height=350'); return false;" title="Pin This Post" data-cf-modified-9f73ee8431844a79dcd191c6->
+<li class="mvp-alp-soc-pin"><span class="fa fa-pinterest-p"></span></li>
+</a>
+<a href="/cdn-cgi/l/email-protection#92ade1e7f0f8f7f1e6afd7f0e7f9f3b2ddf0fbbfc7f1faf7fcf6e7b4b1aaa0a3a5a9e1b2d0fdfef6b2defdfdf9b2f4fde0b2e6faf7b2d0d0dcf3fbf8f3abb2b4b1aaa0a3a4a9dcfdb2defdfde1f7b2d5e7f3e0f6b4b1aaa0a3a5a9b2d5e0f3fcf6b2d4fbfcf3fef7b2fbe1b2c2e7e0f7b2d4f3e1fafbfdfcb2d5fdf3fee1b4f3ffe2a9d0ddd6cbafdbb2f4fde7fcf6b2e6fafbe1b2f3e0e6fbf1fef7b2fbfce6f7e0f7e1e6fbfcf5b2f3fcf6b2e6fafde7f5fae6b2fdf4b2e1faf3e0fbfcf5b2fbe6b2e5fbe6fab2ebfde7bcb2d1faf7f1f9b2fbe6b2fde7e6a8b2fae6e6e2e1a8bdbde5e5e5bcf0f7fefef3fcf3fbf8f3bcf1fdffbda0a2a0a6bda3a2bdf7f0e7f9f3bffdf0fbbfe7f1faf7fcf6e7bff0f0fcf3fbf8f3bff4fbfcf3fef7bffefdfdf9bd">
+<li class="mvp-alp-soc-com"><span class="fa fa-envelope"></span></li>
+</a>
+</ul>
+</div>
+</div>
+<div id="mvp-content-bot" class="left">
+<div class="mvp-post-tags">
+<span class="mvp-post-tags-header">Related Topics:</span><span itemprop="keywords"><a href="https://www.bellanaija.com/tag/atafo/" rel="tag">ATAFO</a><a href="https://www.bellanaija.com/tag/bbnaija-7/" rel="tag">BBNaija</a><a href="https://www.bellanaija.com/tag/bbnaija-no-loose-guard/" rel="tag">BBNaija No Loose Guard</a><a href="https://www.bellanaija.com/tag/bbnaijas9/" rel="tag">BBNaijaS9</a><a href="https://www.bellanaija.com/tag/big-brother-naija-season-9/" rel="tag">Big Brother Naija Season 9</a><a href="https://www.bellanaija.com/tag/bnxbbnaija9/" rel="tag">BNxBBNaija9</a><a href="https://www.bellanaija.com/tag/ebuka-obi-uchendu/" rel="tag">Ebuka-Obi Uchendu</a></span>
+</div>
+<div class="posts-nav-link">
+</div>
+<div id="mvp-prev-next-wrap" class="left relative">
+<div class="mvp-next-post-wrap right relative">
+<a href="https://www.bellanaija.com/2024/10/ebuka-obi-uchendu-bbnaija-2nd-look/" rel="bookmark">
+<div class="mvp-prev-next-cont left relative">
+<div class="mvp-next-cont-out left relative">
+<div class="mvp-next-cont-in">
+<div class="mvp-prev-next-text left relative">
+<span class="mvp-prev-next-label left relative">Up Next</span>
+<p>Serving Style Again! Ebuka Obi-Uchendu’s Second BBNaija9 Finale Look is Northern Royalty</p>
+</div>
+</div>
+<span class="mvp-next-arr fa fa-chevron-right right"></span>
+</div>
+</div>
+</a>
+</div>
+<div class="mvp-prev-post-wrap left relative">
+<a href="https://www.bellanaija.com/2024/10/ololade-ayelabola-guinness-record-catwalk/" rel="bookmark">
+<div class="mvp-prev-next-cont left relative">
+<div class="mvp-prev-cont-out right relative">
+<span class="mvp-prev-arr fa fa-chevron-left left"></span>
+<div class="mvp-prev-cont-in">
+<div class="mvp-prev-next-text left relative">
+<span class="mvp-prev-next-label left relative">Don&#039;t Miss</span>
+<p>Ololade Ayelabola Walks 130.62km in Guinness World Record Bid for Fashion Inclusivity</p>
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+</div>
+<div id="mvp-author-box-wrap" class="left relative">
+<div class="mvp-author-box-out right relative">
+<div id="mvp-author-box-img" class="left relative">
+<img alt="Avatar photo" src="https://www.bellanaija.com/wp-content/uploads/2014/07/BellaNaija.com_avatar_1404726893.jpg" srcset="http://www.bellanaija.com/wp-content/uploads/2014/07/BellaNaija.com_avatar_1404726893.jpg 2x" class="avatar avatar-60 photo" height="60" width="60" loading="lazy" decoding="async" /> </div>
+<div class="mvp-author-box-in">
+<div id="mvp-author-box-head" class="left relative">
+<span class="mvp-author-box-name left relative"><a href="https://www.bellanaija.com/author/bella/" title="Posts by BellaNaija.com" rel="author">BellaNaija.com</a></span>
+<div id="mvp-author-box-soc-wrap" class="left relative">
+<a href="bellanaija" alt="Google Plus" target="_blank"><span class="mvp-author-box-soc fa fa-google-plus-square fa-2"></span></a>
+</div>
+</div>
+</div>
+</div>
+<div id="mvp-author-box-text" class="left relative">
+<p><strong>Living &amp; Celebrating the African Dream!</strong>
+Catch all the Scoop on <strong><a href="https://www.bellanaija.com">www.bellanaija.com</a></strong>
+<strong>Follow us</strong>
+<strong>Twitter</strong>: <a href="https://twitter.com/bellanaija">@bellanaija</a>
+<strong>Facebook</strong>: <a href="https://www.facebook.com/bellanaija">@bellanaija</a>
+<strong>Instagram</strong>: <a href="https://instagram.com/bellanaijaonline">@bellanaijaonline</a></p>
+</div>
+</div>
+<div class="mvp-org-wrap" itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+<div class="mvp-org-logo" itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+<img src="https://www.bellanaija.com/wp-content/uploads/2019/02/logo-word-black.png" />
+<meta itemprop="url" content="https://www.bellanaija.com/wp-content/uploads/2019/02/logo-word-black.png">
+</div>
+<meta itemprop="name" content="BellaNaija">
+</div>
+</div>
+</div>
+<div class="mvp-cont-read-wrap">
+<div id="mvp-related-posts" class="left relative">
+<h4 class="mvp-widget-home-title">
+<span class="mvp-widget-home-title">You may like</span>
+</h4>
+<ul class="mvp-related-posts-list left related">
+<a href="https://www.bellanaija.com/2024/10/tjay-10-questions-with/" rel="bookmark">
+<li>
+<div class="mvp-related-img left relative">
+<img width="400" height="240" src="https://www.bellanaija.com/wp-content/uploads/2024/10/toolzin.com-DAzJksPocR5-e1728510331161-400x240.jpg" class="mvp-reg-img wp-post-image" alt decoding="async" loading="lazy" /> <img width="80" height="80" src="https://www.bellanaija.com/wp-content/uploads/2024/10/toolzin.com-DAzJksPocR5-e1728510331161-80x80.jpg" class="mvp-mob-img wp-post-image" alt decoding="async" loading="lazy" srcset="https://www.bellanaija.com/wp-content/uploads/2024/10/toolzin.com-DAzJksPocR5-e1728510331161-80x80.jpg 80w, https://www.bellanaija.com/wp-content/uploads/2024/10/toolzin.com-DAzJksPocR5-e1728510331161-150x150.jpg 150w, https://www.bellanaija.com/wp-content/uploads/2024/10/toolzin.com-DAzJksPocR5-e1728510331161-400x400.jpg 400w" sizes="(max-width: 80px) 100vw, 80px" /> <div class="mvp-vid-box-wrap mvp-vid-box-mid mvp-vid-marg">
+<i class="fa fa-2 fa-play" aria-hidden="true"></i>
+</div>
+</div>
+<div class="mvp-related-text left relative">
+<p>&#8220;10 Questions With…” Tjay: Family, BBNaija9 &#038; His Next Chapter in Acting</p>
+</div>
+</li>
+</a>
+<a href="https://www.bellanaija.com/2024/10/shaun-on-10-questions-with/" rel="bookmark">
+<li>
+<div class="mvp-related-img left relative">
+<img width="400" height="240" src="https://www.bellanaija.com/wp-content/uploads/2024/10/462202894_572620368450781_2693809993893789414_n-400x240.jpg" class="mvp-reg-img wp-post-image" alt decoding="async" loading="lazy" srcset="https://www.bellanaija.com/wp-content/uploads/2024/10/462202894_572620368450781_2693809993893789414_n-400x240.jpg 400w, https://www.bellanaija.com/wp-content/uploads/2024/10/462202894_572620368450781_2693809993893789414_n-1000x600.jpg 1000w, https://www.bellanaija.com/wp-content/uploads/2024/10/462202894_572620368450781_2693809993893789414_n-590x354.jpg 590w" sizes="(max-width: 400px) 100vw, 400px" /> <img width="80" height="80" src="https://www.bellanaija.com/wp-content/uploads/2024/10/462202894_572620368450781_2693809993893789414_n-80x80.jpg" class="mvp-mob-img wp-post-image" alt decoding="async" loading="lazy" srcset="https://www.bellanaija.com/wp-content/uploads/2024/10/462202894_572620368450781_2693809993893789414_n-80x80.jpg 80w, https://www.bellanaija.com/wp-content/uploads/2024/10/462202894_572620368450781_2693809993893789414_n-150x150.jpg 150w, https://www.bellanaija.com/wp-content/uploads/2024/10/462202894_572620368450781_2693809993893789414_n-400x400.jpg 400w" sizes="(max-width: 80px) 100vw, 80px" /> <div class="mvp-vid-box-wrap mvp-vid-box-mid mvp-vid-marg">
+<i class="fa fa-2 fa-play" aria-hidden="true"></i>
+</div>
+</div>
+<div class="mvp-related-text left relative">
+<p>Shaun Brought All the Smooth Vibes to &#8220;10 Questions With&#8230;&#8221; and We&#8217;re Here for It</p>
+</div>
+</li>
+</a>
+<a href="https://www.bellanaija.com/2024/10/handi-on-10-questions-with/" rel="bookmark">
+<li>
+<div class="mvp-related-img left relative">
+<img width="400" height="240" src="https://www.bellanaija.com/wp-content/uploads/2024/10/461800588_8439801326114014_2036045008761219004_n-400x240.jpg" class="mvp-reg-img wp-post-image" alt decoding="async" loading="lazy" srcset="https://www.bellanaija.com/wp-content/uploads/2024/10/461800588_8439801326114014_2036045008761219004_n-400x240.jpg 400w, https://www.bellanaija.com/wp-content/uploads/2024/10/461800588_8439801326114014_2036045008761219004_n-1000x600.jpg 1000w, https://www.bellanaija.com/wp-content/uploads/2024/10/461800588_8439801326114014_2036045008761219004_n-590x354.jpg 590w" sizes="(max-width: 400px) 100vw, 400px" /> <img width="80" height="80" src="https://www.bellanaija.com/wp-content/uploads/2024/10/461800588_8439801326114014_2036045008761219004_n-80x80.jpg" class="mvp-mob-img wp-post-image" alt decoding="async" loading="lazy" srcset="https://www.bellanaija.com/wp-content/uploads/2024/10/461800588_8439801326114014_2036045008761219004_n-80x80.jpg 80w, https://www.bellanaija.com/wp-content/uploads/2024/10/461800588_8439801326114014_2036045008761219004_n-150x150.jpg 150w, https://www.bellanaija.com/wp-content/uploads/2024/10/461800588_8439801326114014_2036045008761219004_n-400x400.jpg 400w" sizes="(max-width: 80px) 100vw, 80px" /> <div class="mvp-vid-box-wrap mvp-vid-box-mid mvp-vid-marg">
+<i class="fa fa-2 fa-play" aria-hidden="true"></i>
+</div>
+</div>
+<div class="mvp-related-text left relative">
+<p>Who’s Who? Handi Reveals How to Tell Her Apart from Wanni in “10 Questions With…”</p>
+</div>
+</li>
+</a>
+</ul> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="9f73ee8431844a79dcd191c6-text/javascript">
+	jQuery(document).ready(function($) {
+  	  $(".mvp-com-click-1674600").on("click", function(){
+  	    $(".mvp-com-click-id-1674600").show();
+	    $(".mvp-disqus-thread-1674600").show();
+  	    $(".mvp-com-but-1674600").hide();
+	  });
+	});
+    </script> </article>
+</div>
+<div id="mvp-side-wrap" class="left relative theiaStickySidebar">
+<section id="mvp_tabber_widget-6" class="mvp-side-widget mvp_tabber_widget">
+<div class="mvp-widget-tab-wrap left relative">
+<div class="mvp-feat1-list-wrap left relative">
+<div class="mvp-feat1-list-head-wrap left relative">
+<ul class="mvp-feat1-list-buts left relative">
+<li class="mvp-feat-col-tab"><a href="#mvp-tab-col1"><span class="mvp-feat1-list-but">Trending</span></a></li>
+<li><a href="#mvp-tab-col2"><span class="mvp-feat1-list-but">Videos</span></a></li>
+</ul>
+</div>
+<div id="mvp-tab-col1" class="mvp-feat1-list left relative mvp-tab-col-cont">
+<a href="https://www.bellanaija.com/2024/10/adesua-etomi-wellington-baby-bump-reveal/" rel="bookmark">
+<div class="mvp-feat1-list-cont left relative">
+<div class="mvp-feat1-list-out relative">
+<div class="mvp-feat1-list-img left relative">
+<img width="80" height="80" src="https://www.bellanaija.com/wp-content/uploads/2024/10/463008059_2125619244498600_1212278877957058406_n-80x80.jpg" class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" alt decoding="async" loading="lazy" srcset="https://www.bellanaija.com/wp-content/uploads/2024/10/463008059_2125619244498600_1212278877957058406_n-80x80.jpg 80w, https://www.bellanaija.com/wp-content/uploads/2024/10/463008059_2125619244498600_1212278877957058406_n-150x150.jpg 150w, https://www.bellanaija.com/wp-content/uploads/2024/10/463008059_2125619244498600_1212278877957058406_n-400x400.jpg 400w" sizes="(max-width: 80px) 100vw, 80px" /> </div>
+<div class="mvp-feat1-list-in">
+<div class="mvp-feat1-list-text">
+<h2>Adesua Etomi-Wellington Announces Baby No. 2 with a Stunning Maternity Shoot</h2>
+</div>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.bellanaija.com/2024/10/the-uprising-wives-on-strike-premiere/" rel="bookmark">
+<div class="mvp-feat1-list-cont left relative">
+<div class="mvp-feat1-list-out relative">
+<div class="mvp-feat1-list-img left relative">
+<img width="80" height="80" src="https://www.bellanaija.com/wp-content/uploads/2024/10/Workwear-Edition-230-1-80x80.png" class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" alt decoding="async" loading="lazy" srcset="https://www.bellanaija.com/wp-content/uploads/2024/10/Workwear-Edition-230-1-80x80.png 80w, https://www.bellanaija.com/wp-content/uploads/2024/10/Workwear-Edition-230-1-300x300.png 300w, https://www.bellanaija.com/wp-content/uploads/2024/10/Workwear-Edition-230-1-600x600.png 600w, https://www.bellanaija.com/wp-content/uploads/2024/10/Workwear-Edition-230-1-150x150.png 150w, https://www.bellanaija.com/wp-content/uploads/2024/10/Workwear-Edition-230-1-768x768.png 768w, https://www.bellanaija.com/wp-content/uploads/2024/10/Workwear-Edition-230-1-400x400.png 400w, https://www.bellanaija.com/wp-content/uploads/2024/10/Workwear-Edition-230-1.png 1080w" sizes="(max-width: 80px) 100vw, 80px" /> </div>
+<div class="mvp-feat1-list-in">
+<div class="mvp-feat1-list-text">
+<h2>Style Dominated the Red Carpet at &#8220;The Uprising: Wives On Strike&#8221; Premiere—See All the Looks</h2>
+</div>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.bellanaija.com/2024/10/ruth-chepngetich-breaks-marathon-record/" rel="bookmark">
+<div class="mvp-feat1-list-cont left relative">
+<div class="mvp-feat1-list-out relative">
+<div class="mvp-feat1-list-img left relative">
+<img width="80" height="80" src="https://www.bellanaija.com/wp-content/uploads/2024/10/maxresdefault-4-3-e1728846093335-80x80.jpg" class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" alt decoding="async" loading="lazy" srcset="https://www.bellanaija.com/wp-content/uploads/2024/10/maxresdefault-4-3-e1728846093335-80x80.jpg 80w, https://www.bellanaija.com/wp-content/uploads/2024/10/maxresdefault-4-3-e1728846093335-150x150.jpg 150w, https://www.bellanaija.com/wp-content/uploads/2024/10/maxresdefault-4-3-e1728846093335-400x400.jpg 400w" sizes="(max-width: 80px) 100vw, 80px" /> </div>
+<div class="mvp-feat1-list-in">
+<div class="mvp-feat1-list-text">
+<h2>She Did it Again! Kenya’s Ruth Chepngetich Shatters the World Record with a 2:09:56 Chicago Marathon Victory</h2>
+</div>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.bellanaija.com/2024/10/smart-money-woman-osas-ighodaro-bet-france/" rel="bookmark">
+<div class="mvp-feat1-list-cont left relative">
+<div class="mvp-feat1-list-out relative">
+<div class="mvp-feat1-list-img left relative">
+<img width="80" height="80" src="https://www.bellanaija.com/wp-content/uploads/2024/03/osas-ighodaro-e1728894665234-80x80.jpg" class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" alt decoding="async" loading="lazy" srcset="https://www.bellanaija.com/wp-content/uploads/2024/03/osas-ighodaro-e1728894665234-80x80.jpg 80w, https://www.bellanaija.com/wp-content/uploads/2024/03/osas-ighodaro-e1728894665234-150x150.jpg 150w, https://www.bellanaija.com/wp-content/uploads/2024/03/osas-ighodaro-e1728894665234-400x400.jpg 400w" sizes="(max-width: 80px) 100vw, 80px" /> </div>
+<div class="mvp-feat1-list-in">
+<div class="mvp-feat1-list-text">
+<h2>“The Smart Money Woman” Star Osas Ighodaro Appears On  BET &#038; BET France (First Look)</h2>
+</div>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.bellanaija.com/2024/10/nneka-nnamdi-destination-wedding/" rel="bookmark">
+<div class="mvp-feat1-list-cont left relative">
+<div class="mvp-feat1-list-out relative">
+<div class="mvp-feat1-list-img left relative">
+<img width="80" height="80" src="https://www.bellanaija.com/wp-content/uploads/2024/10/Nneka-Nnamdi-Destination-Wedding-BellaNaija-Weddings-67-1024x683-1-80x80.jpg" class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" alt decoding="async" loading="lazy" srcset="https://www.bellanaija.com/wp-content/uploads/2024/10/Nneka-Nnamdi-Destination-Wedding-BellaNaija-Weddings-67-1024x683-1-80x80.jpg 80w, https://www.bellanaija.com/wp-content/uploads/2024/10/Nneka-Nnamdi-Destination-Wedding-BellaNaija-Weddings-67-1024x683-1-150x150.jpg 150w, https://www.bellanaija.com/wp-content/uploads/2024/10/Nneka-Nnamdi-Destination-Wedding-BellaNaija-Weddings-67-1024x683-1-400x400.jpg 400w" sizes="(max-width: 80px) 100vw, 80px" /> </div>
+<div class="mvp-feat1-list-in">
+<div class="mvp-feat1-list-text">
+<h2>A Romantic Adventure in Cancun! Enjoy Nneka &#038; Nnamdi’s Destination Wedding Photos</h2>
+</div>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.bellanaija.com/2024/10/7keys-global-watch/" rel="bookmark">
+<div class="mvp-feat1-list-cont left relative">
+<div class="mvp-feat1-list-out relative">
+<div class="mvp-feat1-list-img left relative">
+<img width="80" height="80" src="https://www.bellanaija.com/wp-content/uploads/2024/10/IMG-20241012-WA0003-80x80.jpg" class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" alt decoding="async" loading="lazy" srcset="https://www.bellanaija.com/wp-content/uploads/2024/10/IMG-20241012-WA0003-80x80.jpg 80w, https://www.bellanaija.com/wp-content/uploads/2024/10/IMG-20241012-WA0003-300x300.jpg 300w, https://www.bellanaija.com/wp-content/uploads/2024/10/IMG-20241012-WA0003-600x601.jpg 600w, https://www.bellanaija.com/wp-content/uploads/2024/10/IMG-20241012-WA0003-150x150.jpg 150w, https://www.bellanaija.com/wp-content/uploads/2024/10/IMG-20241012-WA0003-768x769.jpg 768w, https://www.bellanaija.com/wp-content/uploads/2024/10/IMG-20241012-WA0003-400x400.jpg 400w, https://www.bellanaija.com/wp-content/uploads/2024/10/IMG-20241012-WA0003.jpg 1079w" sizes="(max-width: 80px) 100vw, 80px" /> </div>
+<div class="mvp-feat1-list-in">
+<div class="mvp-feat1-list-text">
+<h2>7Keys Global Watch to Launch Affordable New Security Service Offers for NGOs &#038; Private Businesses</h2>
+</div>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.bellanaija.com/2024/10/nff-pulls-super-eagles-libya-afcon/" rel="bookmark">
+<div class="mvp-feat1-list-cont left relative">
+<div class="mvp-feat1-list-out relative">
+<div class="mvp-feat1-list-img left relative">
+<img width="80" height="80" src="https://www.bellanaija.com/wp-content/uploads/2024/10/459080374_403404115785153_7219689881466168749_n-80x80.jpg" class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" alt decoding="async" loading="lazy" srcset="https://www.bellanaija.com/wp-content/uploads/2024/10/459080374_403404115785153_7219689881466168749_n-80x80.jpg 80w, https://www.bellanaija.com/wp-content/uploads/2024/10/459080374_403404115785153_7219689881466168749_n-150x150.jpg 150w, https://www.bellanaija.com/wp-content/uploads/2024/10/459080374_403404115785153_7219689881466168749_n-400x400.jpg 400w" sizes="(max-width: 80px) 100vw, 80px" /> </div>
+<div class="mvp-feat1-list-in">
+<div class="mvp-feat1-list-text">
+<h2>NFF Withdraws Super Eagles from AFCON Qualifier After 12-Hour Setback in Libya</h2>
+</div>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.bellanaija.com/2024/10/samson-dauda-wins-mr-olympia-2024/" rel="bookmark">
+<div class="mvp-feat1-list-cont left relative">
+<div class="mvp-feat1-list-out relative">
+<div class="mvp-feat1-list-img left relative">
+<img width="80" height="80" src="https://www.bellanaija.com/wp-content/uploads/2024/10/416016330_1102280287613626_477304357062920595_n-80x80.jpg" class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" alt decoding="async" loading="lazy" srcset="https://www.bellanaija.com/wp-content/uploads/2024/10/416016330_1102280287613626_477304357062920595_n-80x80.jpg 80w, https://www.bellanaija.com/wp-content/uploads/2024/10/416016330_1102280287613626_477304357062920595_n-300x300.jpg 300w, https://www.bellanaija.com/wp-content/uploads/2024/10/416016330_1102280287613626_477304357062920595_n-600x600.jpg 600w, https://www.bellanaija.com/wp-content/uploads/2024/10/416016330_1102280287613626_477304357062920595_n-150x150.jpg 150w, https://www.bellanaija.com/wp-content/uploads/2024/10/416016330_1102280287613626_477304357062920595_n-768x768.jpg 768w, https://www.bellanaija.com/wp-content/uploads/2024/10/416016330_1102280287613626_477304357062920595_n-400x400.jpg 400w, https://www.bellanaija.com/wp-content/uploads/2024/10/416016330_1102280287613626_477304357062920595_n.jpg 1080w" sizes="(max-width: 80px) 100vw, 80px" /> </div>
+<div class="mvp-feat1-list-in">
+<div class="mvp-feat1-list-text">
+<h2>Samson Dauda Becomes the First Nigerian to Win Mr. Olympia and People’s Champion</h2>
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div id="mvp-tab-col2" class="mvp-feat1-list left relative mvp-tab-col-cont">
+<a href="https://www.bellanaija.com/2024/10/ruth-chepngetich-breaks-marathon-record/" rel="bookmark">
+<div class="mvp-feat1-list-cont left relative">
+<div class="mvp-feat1-list-out relative">
+<div class="mvp-feat1-list-img left relative">
+<img width="80" height="80" src="https://www.bellanaija.com/wp-content/uploads/2024/10/maxresdefault-4-3-e1728846093335-80x80.jpg" class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" alt decoding="async" loading="lazy" srcset="https://www.bellanaija.com/wp-content/uploads/2024/10/maxresdefault-4-3-e1728846093335-80x80.jpg 80w, https://www.bellanaija.com/wp-content/uploads/2024/10/maxresdefault-4-3-e1728846093335-150x150.jpg 150w, https://www.bellanaija.com/wp-content/uploads/2024/10/maxresdefault-4-3-e1728846093335-400x400.jpg 400w" sizes="(max-width: 80px) 100vw, 80px" /> </div>
+<div class="mvp-feat1-list-in">
+<div class="mvp-feat1-list-text">
+<h2>She Did it Again! Kenya’s Ruth Chepngetich Shatters the World Record with a 2:09:56 Chicago Marathon Victory</h2>
+</div>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.bellanaija.com/2024/10/vector-on-withchude/" rel="bookmark">
+<div class="mvp-feat1-list-cont left relative">
+<div class="mvp-feat1-list-out relative">
+<div class="mvp-feat1-list-img left relative">
+<img width="80" height="80" src="https://www.bellanaija.com/wp-content/uploads/2024/10/maxresdefault-3-6-80x80.jpg" class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" alt decoding="async" loading="lazy" srcset="https://www.bellanaija.com/wp-content/uploads/2024/10/maxresdefault-3-6-80x80.jpg 80w, https://www.bellanaija.com/wp-content/uploads/2024/10/maxresdefault-3-6-150x150.jpg 150w, https://www.bellanaija.com/wp-content/uploads/2024/10/maxresdefault-3-6-400x400.jpg 400w" sizes="(max-width: 80px) 100vw, 80px" /> </div>
+<div class="mvp-feat1-list-in">
+<div class="mvp-feat1-list-text">
+<h2>“I Sing to Myself and it Makes Me Happy” – Vector on Music &#038; Staying True to Himself</h2>
+</div>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.bellanaija.com/2024/10/kotrell-now-and-always-remix/" rel="bookmark">
+<div class="mvp-feat1-list-cont left relative">
+<div class="mvp-feat1-list-out relative">
+<div class="mvp-feat1-list-img left relative">
+<img width="80" height="80" src="https://www.bellanaija.com/wp-content/uploads/2024/10/maxresdefault-2-4-80x80.jpg" class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" alt decoding="async" loading="lazy" srcset="https://www.bellanaija.com/wp-content/uploads/2024/10/maxresdefault-2-4-80x80.jpg 80w, https://www.bellanaija.com/wp-content/uploads/2024/10/maxresdefault-2-4-150x150.jpg 150w, https://www.bellanaija.com/wp-content/uploads/2024/10/maxresdefault-2-4-400x400.jpg 400w" sizes="(max-width: 80px) 100vw, 80px" /> </div>
+<div class="mvp-feat1-list-in">
+<div class="mvp-feat1-list-text">
+<h2>Kotrell &#038; Ruby Akubueze Bring Wedding Bliss to the Screen in &#8220;Now and Always&#8221; Remix Video</h2>
+</div>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.bellanaija.com/2024/10/sweet-adjeley-chicken-wings-recipe/" rel="bookmark">
+<div class="mvp-feat1-list-cont left relative">
+<div class="mvp-feat1-list-out relative">
+<div class="mvp-feat1-list-img left relative">
+<img width="80" height="80" src="https://www.bellanaija.com/wp-content/uploads/2024/10/maxresdefault-13-80x80.jpg" class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" alt decoding="async" loading="lazy" srcset="https://www.bellanaija.com/wp-content/uploads/2024/10/maxresdefault-13-80x80.jpg 80w, https://www.bellanaija.com/wp-content/uploads/2024/10/maxresdefault-13-150x150.jpg 150w, https://www.bellanaija.com/wp-content/uploads/2024/10/maxresdefault-13-400x400.jpg 400w" sizes="(max-width: 80px) 100vw, 80px" /> </div>
+<div class="mvp-feat1-list-in">
+<div class="mvp-feat1-list-text">
+<h2>Sweet Adjeley’s Chicken Wings Recipe Will Make Your Next Meal Unforgettable</h2>
+</div>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.bellanaija.com/2024/10/ty-bello-greenland-10-years-anniversary/" rel="bookmark">
+<div class="mvp-feat1-list-cont left relative">
+<div class="mvp-feat1-list-out relative">
+<div class="mvp-feat1-list-img left relative">
+<img width="80" height="80" src="https://www.bellanaija.com/wp-content/uploads/2024/10/maxresdefault-17-80x80.jpg" class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" alt decoding="async" loading="lazy" srcset="https://www.bellanaija.com/wp-content/uploads/2024/10/maxresdefault-17-80x80.jpg 80w, https://www.bellanaija.com/wp-content/uploads/2024/10/maxresdefault-17-150x150.jpg 150w, https://www.bellanaija.com/wp-content/uploads/2024/10/maxresdefault-17-400x400.jpg 400w" sizes="(max-width: 80px) 100vw, 80px" /> </div>
+<div class="mvp-feat1-list-in">
+<div class="mvp-feat1-list-text">
+<h2>Ty Bello Marks 10 Years of “The Land is Green” with a Story of Faith &#038; Motherhood</h2>
+</div>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.bellanaija.com/2024/10/judikay-releases-all-i-have/" rel="bookmark">
+<div class="mvp-feat1-list-cont left relative">
+<div class="mvp-feat1-list-out relative">
+<div class="mvp-feat1-list-img left relative">
+<img width="80" height="80" src="https://www.bellanaija.com/wp-content/uploads/2024/10/460963388_18466228552054338_8501213704256737103_n-80x80.jpg" class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" alt decoding="async" loading="lazy" srcset="https://www.bellanaija.com/wp-content/uploads/2024/10/460963388_18466228552054338_8501213704256737103_n-80x80.jpg 80w, https://www.bellanaija.com/wp-content/uploads/2024/10/460963388_18466228552054338_8501213704256737103_n-300x300.jpg 300w, https://www.bellanaija.com/wp-content/uploads/2024/10/460963388_18466228552054338_8501213704256737103_n-600x600.jpg 600w, https://www.bellanaija.com/wp-content/uploads/2024/10/460963388_18466228552054338_8501213704256737103_n-150x150.jpg 150w, https://www.bellanaija.com/wp-content/uploads/2024/10/460963388_18466228552054338_8501213704256737103_n-768x768.jpg 768w, https://www.bellanaija.com/wp-content/uploads/2024/10/460963388_18466228552054338_8501213704256737103_n-400x400.jpg 400w, https://www.bellanaija.com/wp-content/uploads/2024/10/460963388_18466228552054338_8501213704256737103_n.jpg 1080w" sizes="(max-width: 80px) 100vw, 80px" /> </div>
+<div class="mvp-feat1-list-in">
+<div class="mvp-feat1-list-text">
+<h2>Judikay’s Powerful “All I Have” Speaks to Total Devotion &#038; the Power of Faith</h2>
+</div>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.bellanaija.com/2024/10/mercy-chinwo-releases-we-move/" rel="bookmark">
+<div class="mvp-feat1-list-cont left relative">
+<div class="mvp-feat1-list-out relative">
+<div class="mvp-feat1-list-img left relative">
+<img width="80" height="80" src="https://www.bellanaija.com/wp-content/uploads/2024/10/maxresdefault-16-80x80.jpg" class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" alt decoding="async" loading="lazy" srcset="https://www.bellanaija.com/wp-content/uploads/2024/10/maxresdefault-16-80x80.jpg 80w, https://www.bellanaija.com/wp-content/uploads/2024/10/maxresdefault-16-150x150.jpg 150w, https://www.bellanaija.com/wp-content/uploads/2024/10/maxresdefault-16-400x400.jpg 400w" sizes="(max-width: 80px) 100vw, 80px" /> </div>
+<div class="mvp-feat1-list-in">
+<div class="mvp-feat1-list-text">
+<h2>Mercy Chinwo is Back with A New Single! Watch the Empowering “We Move”</h2>
+</div>
+</div>
+</div>
+</div>
+</a>
+<a href="https://www.bellanaija.com/2024/10/fireboy-hell-and-back-colors-performance/" rel="bookmark">
+<div class="mvp-feat1-list-cont left relative">
+<div class="mvp-feat1-list-out relative">
+<div class="mvp-feat1-list-img left relative">
+<img width="80" height="80" src="https://www.bellanaija.com/wp-content/uploads/2024/10/maxresdefault-14-80x80.jpg" class="attachment-mvp-small-thumb size-mvp-small-thumb wp-post-image" alt decoding="async" loading="lazy" srcset="https://www.bellanaija.com/wp-content/uploads/2024/10/maxresdefault-14-80x80.jpg 80w, https://www.bellanaija.com/wp-content/uploads/2024/10/maxresdefault-14-150x150.jpg 150w, https://www.bellanaija.com/wp-content/uploads/2024/10/maxresdefault-14-400x400.jpg 400w" sizes="(max-width: 80px) 100vw, 80px" /> </div>
+<div class="mvp-feat1-list-in">
+<div class="mvp-feat1-list-text">
+<h2>Fireboy DML’s Soulful COLORS Performance Captures the Essence of Heartbreak in &#8220;Hell and Back&#8221;</h2>
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+</div>
+</div>
+</section>  </div> </div>
+</div> </div>
+<footer id="mvp-foot-wrap" class="left relative">
+<div id="mvp-foot-top" class="left relative">
+<div class="mvp-main-box">
+<div id="mvp-foot-soc" class="left relative">
+<ul class="mvp-foot-soc-list left relative">
+<li><a href="https://www.facebook.com/bellanaija" target="_blank" class="fa fa-facebook fa-2"></a></li>
+<li><a href="https://twitter.com/bellanaija" target="_blank" class="fa fa-twitter fa-2"></a></li>
+<li><a href="https://www.pinterest.com/bellanaijawed/" target="_blank" class="fa fa-pinterest-p fa-2"></a></li>
+<li><a href="https://www.instagram.com/bellanaija" target="_blank" class="fa fa-instagram fa-2"></a></li>
+<li><a href="https://www.youtube.com/user/bellanaija/" target="_blank" class="fa fa-youtube-play fa-2"></a></li>
+<li><a href="https://whatsapp.com/channel/0029Va2Xz1fIyPtWqobq711c" target="_blank" class="fa fa-whatsapp fa-2"></a></li>
+<li>
+<a href="https://www.tiktok.com/@bellanaija" target="_blank">
+<img src="https://www.bellanaija.com/wp-content/themes/hades/images/tiktok.png" style="width: 25px; position: relative; top: 5px;" />
+</a>
+</li>
+</ul>
+</div>
+<div id="mvp-foot-menu-wrap" class="left relative">
+<div id="mvp-foot-menu" class="left relative">
+<div class="menu-footer-container"><ul id="menu-footer" class="menu"><li id="menu-item-1265602" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-1265602"><a href="https://www.bellanaija.com/">Home</a></li>
+<li id="menu-item-1265607" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1265607"><a href="https://www.bellanaija.com/about/">About Us</a></li>
+<li id="menu-item-1265606" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1265606"><a href="https://www.bellanaija.com/team/">Team</a></li>
+<li id="menu-item-1265604" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1265604"><a href="https://www.bellanaija.com/terms-and-conditions/">Terms and Conditions</a></li>
+<li id="menu-item-1265603" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1265603"><a href="https://www.bellanaija.com/privacy-policy/">Privacy Policy</a></li>
+<li id="menu-item-1265605" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1265605"><a href="https://www.bellanaija.com/copyright/">Copyright</a></li>
+</ul></div> </div>
+</div>
+</div>
+</div>
+<div id="mvp-foot-bot" class="left relative">
+<div id="mvp-foot-copy" class="left relative">
+<p>© 2022 BellaNaija. All rights reserved</p>
+</div>
+<div class="aligncenter footer-disclaimer">
+<span>
+BellaNaija is not responsible for the content of external sites and news culled therefrom.
+</span>
+</div>
+<div id="mvp-foot-logo" class="right relative">
+<a href="https://www.bellanaija.com/">
+<img src="https://www.bellanaija.com/wp-content/uploads/2019/02/logo-word-black-small.png" alt="BellaNaija" data-rjs="2" />
+</a>
+</div>
+</div>
+</footer>
+</div>
+</div>
+</div>
+<div class="mvp-fly-top back-to-top">
+<i class="fa fa-angle-up fa-3"></i>
+</div>
+<div class="mvp-fly-fade mvp-fly-but-click">
+</div>
+<img alt="css.php" src="https://www.bellanaija.com/wp-content/plugins/cookies-for-comments/css.php?k=fb284d34e45da8d163ffe3279845d535&amp;o=i&amp;t=606873155" width="1" height="1" /> <div data-theiaStickySidebar-sidebarSelector="&quot;#mvp-side-wrap,.mvp-feat1-mid-wrap,.mvp-feat1-right-wrap,.mvp-post-soc-wrap,.mvp-flex-side-wrap&quot;" data-theiaStickySidebar-options="{&quot;containerSelector&quot;:&quot;&quot;,&quot;additionalMarginTop&quot;:120,&quot;additionalMarginBottom&quot;:20,&quot;updateSidebarHeight&quot;:false,&quot;minWidth&quot;:1004,&quot;sidebarBehavior&quot;:&quot;modern&quot;,&quot;disableOnResponsiveLayouts&quot;:true}"></div>
+<script type="9f73ee8431844a79dcd191c6-text/javascript" src="https://www.bellanaija.com/wp-content/plugins/theia-sticky-sidebar/js/ResizeSensor.js?ver=1.7.0" id="theia-sticky-sidebar/ResizeSensor.js-js"></script>
+<script type="9f73ee8431844a79dcd191c6-text/javascript" src="https://www.bellanaija.com/wp-content/plugins/theia-sticky-sidebar/js/theia-sticky-sidebar.js?ver=1.7.0" id="theia-sticky-sidebar/theia-sticky-sidebar.js-js"></script>
+<script type="9f73ee8431844a79dcd191c6-text/javascript" src="https://www.bellanaija.com/wp-content/plugins/theia-sticky-sidebar/js/main.js?ver=1.7.0" id="theia-sticky-sidebar/main.js-js"></script>
+<script type="9f73ee8431844a79dcd191c6-text/javascript" src="https://www.bellanaija.com/wp-includes/js/jquery/ui/core.min.js?ver=1.13.3" id="jquery-ui-core-js"></script>
+<script type="9f73ee8431844a79dcd191c6-text/javascript" src="https://www.bellanaija.com/wp-content/plugins/zox-alp//scripts/jquery.sticky-kit.min.js?ver=6.6.2" id="jquery-sticky-kit-js"></script>
+<script type="9f73ee8431844a79dcd191c6-text/javascript" src="https://www.bellanaija.com/wp-content/plugins/zox-alp//scripts/jquery.waypoints.min.js?ver=6.6.2" id="jquery-waypoints-js"></script>
+<script type="9f73ee8431844a79dcd191c6-text/javascript" id="advanced-ads-pro/front-js-extra">
+/* <![CDATA[ */
+var advanced_ads_cookies = {"cookie_path":"\/","cookie_domain":""};
+var advadsCfpInfo = {"cfpExpHours":"3","cfpClickLimit":"3","cfpBan":"7","cfpPath":"","cfpDomain":"www.bellanaija.com"};
+/* ]]> */
+</script>
+<script type="9f73ee8431844a79dcd191c6-text/javascript" src="https://www.bellanaija.com/wp-content/plugins/advanced-ads-pro/assets/js/advanced-ads-pro.min.js?ver=2.26.3" id="advanced-ads-pro/front-js"></script>
+<script type="9f73ee8431844a79dcd191c6-text/javascript" src="https://www.bellanaija.com/wp-content/themes/hades/js/mvpcustom.js?ver=6.6.2" id="mvp-custom-js"></script>
+<script type="9f73ee8431844a79dcd191c6-text/javascript" id="mvp-custom-js-after">
+/* <![CDATA[ */
+	jQuery(document).ready(function($) {
+	$(window).load(function(){
+	var leaderHeight = $("#mvp-leader-wrap").outerHeight();
+	var navHeight = $("#mvp-main-head-wrap").outerHeight();
+	var headerHeight = navHeight + leaderHeight;
+	var previousScroll = 0;
+	$(window).scroll(function(event){
+			var scroll = $(this).scrollTop();
+			if ($(window).scrollTop() > headerHeight){
+				$("#mvp-main-nav-small").addClass("mvp-nav-small-fixed");
+				$("#mvp-main-body-wrap").css("margin-top", navHeight );
+			} else {
+				$("#mvp-main-nav-small").removeClass("mvp-nav-small-fixed");
+				$("#mvp-main-body-wrap").css("margin-top","0");
+			}
+			if ($(window).scrollTop() > headerHeight + 50){
+				$("#mvp-main-nav-small").addClass("mvp-fixed");
+				$("#mvp-main-nav-small").addClass("mvp-fixed-shadow");
+				$(".mvp-fly-top").addClass("mvp-to-top");
+			} else {
+				$("#mvp-main-nav-small").removeClass("mvp-fixed");
+				$("#mvp-main-nav-small").removeClass("mvp-fixed-shadow");
+	    		$(".mvp-fly-top").removeClass("mvp-to-top");
+			}
+			previousScroll = scroll;
+	});
+	});
+	});
+	
+
+	jQuery(document).ready(function($) {
+	// Mobile Social Buttons More
+	$(window).load(function(){
+ 		$(".mvp-soc-mob-right").on("click", function(){
+			$("#mvp-soc-mob-wrap").toggleClass("mvp-soc-mob-more");
+  		});
+  	});
+	});
+  	
+
+	jQuery(document).ready(function($) {
+	$(".menu-item-has-children a").click(function(event){
+	  event.stopPropagation();
+	  
+  	});
+
+	$(".menu-item-has-children").click(function(){
+    	  $(this).addClass("toggled");
+    	  if($(".menu-item-has-children").hasClass("toggled"))
+    	  {
+    	  $(this).children("ul").toggle();
+	  $(".mvp-fly-nav-menu").getNiceScroll().resize();
+	  }
+	  $(this).toggleClass("tog-minus");
+    	  return false;
+  	});
+
+	// Main Menu Scroll
+	$(window).load(function(){
+	  $(".mvp-fly-nav-menu").niceScroll({cursorcolor:"#888",cursorwidth: 7,cursorborder: 0,zindex:999999});
+	});
+	});
+	
+
+	jQuery(document).ready(function($) {
+	$(".infinite-content").infinitescroll({
+	  navSelector: ".mvp-nav-links",
+	  nextSelector: ".mvp-nav-links a:first",
+	  itemSelector: ".infinite-post",
+	  errorCallback: function(){ $(".mvp-inf-more-but").css("display", "none") }
+	});
+	$(window).unbind(".infscr");
+	$(".mvp-inf-more-but").click(function(){
+   		$(".infinite-content").infinitescroll("retrieve");
+        	return false;
+	});
+	$(window).load(function(){
+		if ($(".mvp-nav-links a").length) {
+			$(".mvp-inf-more-but").css("display","inline-block");
+		} else {
+			$(".mvp-inf-more-but").css("display","none");
+		}
+	});
+	});
+	
+/* ]]> */
+</script>
+<script type="9f73ee8431844a79dcd191c6-text/javascript" src="https://www.bellanaija.com/wp-content/themes/hades/js/scripts.js?ver=6.6.2" id="zoxnews-js"></script>
+<script type="9f73ee8431844a79dcd191c6-text/javascript" src="https://www.bellanaija.com/wp-content/themes/hades/js/retina.js?ver=6.6.2" id="retina-js"></script>
+<script type="9f73ee8431844a79dcd191c6-text/javascript" src="https://www.bellanaija.com/wp-content/themes/hades/js/flexslider.js?ver=6.6.2" id="flexslider-js"></script>
+<script type="9f73ee8431844a79dcd191c6-text/javascript" src="https://www.bellanaija.com/wp-content/themes/hades/js/jquery.infinitescroll.min.js?ver=6.6.2" id="infinitescroll-js"></script>
+<script type="9f73ee8431844a79dcd191c6-text/javascript" src="https://www.bellanaija.com/wp-content/themes/hades/js/alp.js?ver=6.6.2" id="alp-js"></script>
+<script type="9f73ee8431844a79dcd191c6-text/javascript" src="https://www.bellanaija.com/wp-includes/js/comment-reply.min.js?ver=6.6.2" id="comment-reply-js" async="async" data-wp-strategy="async"></script>
+<script type="9f73ee8431844a79dcd191c6-text/javascript" id="advanced-ads-pro/cache_busting-js-extra">
+/* <![CDATA[ */
+var advanced_ads_pro_ajax_object = {"ajax_url":"https:\/\/www.bellanaija.com\/wp-admin\/admin-ajax.php","lazy_load_module_enabled":"","lazy_load":{"default_offset":0,"offsets":[]},"moveintohidden":"","wp_timezone_offset":"3600","the_id":"1674600","is_singular":"1"};
+var advanced_ads_responsive = {"reload_on_resize":"0"};
+/* ]]> */
+</script>
+<script type="9f73ee8431844a79dcd191c6-text/javascript" src="https://www.bellanaija.com/wp-content/plugins/advanced-ads-pro/assets/js/base.min.js?ver=2.26.3" id="advanced-ads-pro/cache_busting-js"></script>
+<script type="9f73ee8431844a79dcd191c6-text/javascript" src="https://cdn.onesignal.com/sdks/OneSignalSDK.js?ver=1.0.0" id="remote_sdk-js" async="async" data-wp-strategy="async"></script>
+<script type="9f73ee8431844a79dcd191c6-text/javascript">window.advads_admin_bar_items = [];</script><script type="9f73ee8431844a79dcd191c6-text/javascript">!function(){window.advanced_ads_ready_queue=window.advanced_ads_ready_queue||[],advanced_ads_ready_queue.push=window.advanced_ads_ready;for(var d=0,a=advanced_ads_ready_queue.length;d<a;d++)advanced_ads_ready(advanced_ads_ready_queue[d])}();</script><script src="https://optanon.blob.core.windows.net/consent/4de4602d-1daa-4a52-aecd-d1d974cf3e71.js" type="9f73ee8431844a79dcd191c6-text/javascript" charset="UTF-8"></script>
+<script type="9f73ee8431844a79dcd191c6-text/javascript">function OptanonWrapper() { }</script>
+<style>
+#mvp-foot-copy {
+	padding-bottom: 10px;
+}
+.footer-disclaimer {
+	font-size: 75%;
+	padding-bottom: 10px;
+	line-height: 1.5;
+	text-align: center;
+	display: inline-block;
+	max-width: 580px;
+	width: 100%;
+}
+.footer-disclaimer span {
+	max-width: 400px;
+	display: inline-block;
+}
+</style>
+<script type="9f73ee8431844a79dcd191c6-text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"ee2f5cf74e","applicationID":"671010540","transactionName":"ZwFQYRAHVhAAAkYMDV5Lc1YWD1cNThJbCwVcAQ==","queueTime":0,"applicationTime":314,"atts":"S0ZTF1gdRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script><script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="9f73ee8431844a79dcd191c6-|49" defer></script></body>
+</html>

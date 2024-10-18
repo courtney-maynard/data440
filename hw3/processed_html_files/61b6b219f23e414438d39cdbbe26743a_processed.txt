@@ -1,0 +1,38 @@
+IT Pro Today is part of the Informa Tech Division of Informa PLC
+by Danielle Meinert
+Oct 10, 2024
+3 Min Read
+AI Assistants Are Blabbing Our Embarrassing Work Secrets
+Workplace AI tools can do tasks by themselves. Getting them to stop is the problem.
+Alamy
+Corporate assistants have long been the keepers of company gossip and secrets. Now artificial intelligence is taking over some of their tasks, but it doesn't share their sense of discretion.
+Researcher and engineer Alex Bilzerian said on X last week that, after a Zoom meeting with some venture capital investors, he got an automated email from Otter.ai, a transcription service with an "AI meeting assistant." The email contained a transcript of the meeting — including the part that happened after Bilzerian logged off, when the investors discussed their firm's strategic failures and cooked metrics, he told The Washington Post via direct message on X.
+The investors, whom he would not name, "profusely apologized" once he brought it to their attention, but the damage was already done. That post-meeting chatter made Bilzerian decide to kill the deal, he said.
+Companies are pumping AI features into work products across the board. Most recently, Salesforce announced an AI offering called Agentforce, which allows customers to build AI-powered virtual agents that help with sales and customer service. Microsoft has been ramping up the capabilities of its AI Copilot across its suite of work products, while Google has been doing the same with Gemini . Even workplace chat tool Slack has gotten in on the game, adding AI features that can summarize conversations, search for topics and create daily recaps. But AI can't read the room like humans can, and many users don't stop to check important settings or consider what could happen when automated tools access so much of their work lives.
+Otter responded to Bilzerian's thread on X, saying that users "have full control over conversation sharing permissions and can change, update, or stop the sharing permissions of a conversation anytime. For this specific instance, users have the option not to share transcripts automatically with anyone or to auto-share conversations only with users who share the same Workspace domain."
+It also shared a link to a guide showing how users can change their settings.
+Fancy investors aren't the only ones getting burned by new AI features. Rank-and-file employees are also at risk of AI-powered tools recording and sharing damaging information.
+"I think it's a big issue because the technology is proliferating so fast, and people haven't really internalized how invasive it is," said Naomi Brockwell, a privacy advocate and researcher. Brockwell said the combination of constant recording and AI-powered transcription erodes our privacy at work and opens us up to lawsuits, retaliation and leaked secrets.
+Sometimes AI note takers catch moments that weren't meant for outside ears. Isaac Naor, a software designer in Los Angeles, said he once received an Otter transcript after a Zoom meeting that contained moments where the other participant muted herself to talk about him. She had no idea, and Naor was too uncomfortable to tell her, he said.
+OtterPilot, Otter's AI feature that records, transcribes and summarizes meetings, only records audio from the virtual meeting — meaning if someone is muted, their audio will not be recorded. But if users manually hit record, Otter receives audio from the microphone and speakers. So if the microphone can hear the chatter, so can Otter.
+Other times, the very presence of an AI tool makes meetings uncomfortable. Rob Bezdjian, who owns a small events business in Salt Lake City, said he had an awkward call with potential investors after they insisted on recording a meeting through Otter. Bezdjian didn't want his proprietary ideas recorded, so he declined to share some details about his business. The deal didn't go through.
+In cases where Otter shares a transcript, meeting attendees will be notified that a recording is in process, the company noted. If someone is using OtterPilot, attendees will be notified in the meeting chatbot or via email, and OtterPilot will show up as another participant. Users who connect their calendars to their Otter accounts can also toggle their auto-share settings to "all event guests" to share meeting notes automatically after hitting record.
+Along with the information users provide during registration, OtterPilot collects automatic screenshots of virtual meetings, text, images or videos that users upload. Otter shares user information with third parties, including AI services that provide back-end support for Otter, advertising partners and law enforcement agencies when required.
+Similarly, Zoom's AI Companion feature can send meeting summaries to all attendees. Participants get notified and see a sparkle icon or recording badge when a meeting is being recorded or Companion is being used. Zoom's default setting is to send summaries to the meeting host.
+Both companies said users should adjust their settings to avoid unwanted sharing. Otter also "strongly recommends" asking for consent when using the tool in meetings. And remember: If auto-share settings are on for all participants, everyone will receive details from the full recorded meeting, not just the part that person attended.
+But Hatim Rahman, an associate professor at Northwestern University's Kellogg School of Management who studies AI's effects on work, believes the onus falls on companies as much as users to ensure that AI products don't lead to unexpected consequences at work.
+"There has to be awareness from companies that people of different ages and tech abilities are going to be using these products," he said. Users could assume that the AI should know when attendees leave meetings and therefore not send them those parts of the transcript. "That's a very reasonable assumption."
+Although users should take the time to familiarize themselves with the tech, companies could build more friction into the product so that if some attendees leave halfway through the meeting, for example, it could ask the organizer to confirm whether they should still get the full transcript.
+Too often, the executives who decide to implement companywide AI tools aren't well versed in the risks, said cybersecurity consultant Will Andre. In his previous career as a marketer, he once stumbled across a video of his bosses deciding who would get cut in an upcoming round of layoffs. The software recording the video meeting had been configured to automatically save a copy to the company's public server. (He decided to pretend that he never saw it.)
+"It's not always your place as an employee to challenge the use of some of this technology inside of workplaces," Andre said. But employees, he noted, have the most to lose.
+— Tatum Hunter and Danielle Abril, The Washington Post
+Sign up for the ITPro Today newsletter
+Stay on top of the IT universe with commentary, news analysis, how-to's, and tips delivered to your inbox daily.
+Editor's Choice
+by Christopher Tozzi
+Oct 9, 2024
+4 Min Read
+Sign up for the ITPro Today newsletter
+Stay on top of the IT universe with commentary, news analysis, how-to's, and tips delivered to your inbox daily.
+Recent What Is
+Copyright © 2024 Informa PLC Informa UK Limited is a company registered in England and Wales with company number 1072954 whose registered office is 5 Howick Place, London, SW1P 1WG.

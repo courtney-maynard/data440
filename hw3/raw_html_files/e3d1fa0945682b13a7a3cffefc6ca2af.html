@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>
+      Body Motions     
+   </title>
+<meta charset="utf-8">
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:domain" content="bodymotions.com.sa" />
+<meta name="twitter:title" property="og:title" itemprop="name" content="bodymotions" />
+<meta name="twitter:description" property="og:description" itemprop="description" content="Register and get more details on our great offers" />
+<meta property="og:type" content="website" />
+<meta property="og:url" class="changeContent" content="https://bodymotions.com.sa/campaign/uploads/back/App Offer-506x550-02.jpeg" />
+<meta property="og:site_name" content="bodymotions" />
+<meta property="og:image" class="changeContent" itemprop="image primaryImageOfPage" content="https://bodymotions.com.sa/campaign/uploads/back/App Offer-506x550-02.jpeg" />
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="506">
+<meta property="og:image:height" content="550">
+<meta property="og:title" content="bodymotions" />
+<meta property="og:description" content="Register and get more details on our great offers" />
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
+
+<script src="https://www.google.com/recaptcha/api.js?hl=en" async defer type="b586c23ad2efcbe524f831ce-text/javascript"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.8/firebase-app.js" type="b586c23ad2efcbe524f831ce-text/javascript"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.8/firebase-database.js" type="b586c23ad2efcbe524f831ce-text/javascript"></script>
+<script type="b586c23ad2efcbe524f831ce-text/javascript">
+      var campId='';
+      var config = {
+      apiKey: "AIzaSyBq5PUBafPkmYisUjxwVnnjgJJMudEpWRA",
+      authDomain: "bodymotions.firebaseapp.com",
+      databaseURL: "https://bodymotions-default-rtdb.firebaseio.com",
+      projectId: "bodymotions",
+      storageBucket: "bodymotions.appspot.com",
+      messagingSenderId: "349725209150",
+      appId : "1:349725209150:web:ad7db65878832af75c176f",
+      measurementId : "G-7JBZHE20BG",
+
+      };
+      firebase.initializeApp(config);
+      
+   </script>
+<script type="b586c23ad2efcbe524f831ce-text/javascript">
+   var resp='';
+      function dataCallback(response) {
+        if (!checkbox.checked) {
+            grecaptcha.reset();
+                container.style.borderColor = "red";
+                return false;
+            }
+        $('.send-btn').attr('disabled',"disabled");
+         $('#cover-spin').show(0); 
+        // console.log("dataCallback", response);
+          resp = response;
+          $('#submitt').click();
+      }
+      function dataExpiredCallback() {
+          $('.send-btn').attr('disabled',"disabled");
+          //console.log("dataExpiredCallback")
+      }
+      var rnd;
+      function captchac(resp){
+        $('.send-btn').val('verifying ...');
+        rnd = makeid(20);
+          $.ajax({
+          type: "GET",
+          url: "https://us-central1-bodymotions.cloudfunctions.net/checkRecaptcha?response="+resp+"&rnd="+rnd,
+          data: '',
+          success: function(e) {
+            if(e=="Go"){  
+                save_user();
+            }else{
+                alert('RECAPTCHA error: The verification code was incorrect.');
+                window.location.href="https://bodymotions.com.sa/campaign/form_en.php";
+            }
+        }
+          })
+      }
+   </script>
+<link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+<link rel="manifest" href="../favicon/site.webmanifest">
+<script src="js/jquery-1.12.4.js" type="b586c23ad2efcbe524f831ce-text/javascript"></script>
+<script src="js/custom.js" type="b586c23ad2efcbe524f831ce-text/javascript"></script>
+<!--[if lt IE 9]><script src=bower_components/html5shiv/dist/html5shiv.js></script><![endif]-->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/bootstrap-theme.min.css" rel="stylesheet">
+<link href="css/style.css?p=4" rel="stylesheet">
+<link href="css/responsive.css" rel="stylesheet">
+<link href="css/custom.css" rel="stylesheet">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<script src="js/jquery.min.js" type="b586c23ad2efcbe524f831ce-text/javascript"></script>
+<script src="js/jquery.validate.min.js" type="b586c23ad2efcbe524f831ce-text/javascript"></script>
+<script src="js/bootstrap.min.js" type="b586c23ad2efcbe524f831ce-text/javascript"></script>
+<script type="b586c23ad2efcbe524f831ce-text/javascript">var Clubs_array={"-MUhydvApla6q3dpM37U":{"category_id":"-MUhwwQLMcsHao_gndyY","city_id":"-LY9tDL1F0oQNhflhqEr","name_ar":"نادي البديعة النسائي","name_en":"Badia"},"-MUhzAfp1JwltFCxwdkS":{"category_id":"-MUhwwQLMcsHao_gndyY","city_id":"-LY9tDL1F0oQNhflhqEr","name_ar":"نادي عريجاء  النسائي ","name_en":"Uraija"},"-MUhzfb0gkP8O_iO2LrM":{"category_id":"-MUhwwQLMcsHao_gndyY","city_id":"-LY9tDL1F0oQNhflhqEr","name_ar":"نادي الشفاء  النسائي ","name_en":"Shifa"},"-MUi-23S2MjQQoJdp4ir":{"category_id":"-MUhwwQLMcsHao_gndyY","city_id":"-LY9tDL1F0oQNhflhqEr","name_ar":"نادي الفيحاء  النسائي ","name_en":"Fayha"},"-MUi-YrKma4Ls044MmYx":{"category_id":"-MUhwwQLMcsHao_gndyY","city_id":"-LYu59qbEcTg-oV-e4As","name_ar":"نادي الفيصلية  النسائي ","name_en":"Faisaliya"},"-MUi-wmuewurlrDQp5nX":{"category_id":"-MUhwwQLMcsHao_gndyY","city_id":"-LYu59qbEcTg-oV-e4As","name_ar":"نادي الجلوية  النسائي ","name_en":"Jalawiya"},"-MUi0PAHkv0v11KugVv7":{"category_id":"-MUhwwQLMcsHao_gndyY","city_id":"-LYu56sDQQAGSrplKa7_","name_ar":"نادي الأحساء  النسائي ","name_en":"Ahsa"},"-MeKtJ3m_gaoMDiR0CAE":{"category_id":"-MUhwwQLMcsHao_gndyY","city_id":"-LYu4xFzH_2vBykDKrhx","name_ar":"نادي بريدة النسائي","name_en":"Buraidah"},"-MeKtdSlhxtqI_ShbBtv":{"category_id":"-MUhwwQLMcsHao_gndyY","city_id":"-LYu5WDfeOz_NvlPYy6G","name_ar":"نادي جدة النعيم النسائي","name_en":"Jeddah-Al naeem"},"-Mht4xoD9JbZPvmUNiS0":{"category_id":"-MUhwwQLMcsHao_gndyY","city_id":"-LYu5LKNYfB3vlmIUQ0f","name_ar":"نادي تبوك النسائي","name_en":"Tabuk"},"-Miv2sQV1CPTXetE16zI":{"category_id":"-MUhwwQLMcsHao_gndyY","city_id":"-LY9tDL1F0oQNhflhqEr","name_ar":"نادي الملز النسائي","name_en":"Al-Malaz"},"-Miv4hGAOsslgXAe8_th":{"category_id":"-MUhwwQLMcsHao_gndyY","city_id":"-LYu4xFzH_2vBykDKrhx","name_ar":"نادي عنيزة النسائي","name_en":"Unaiza"},"-NAl5lXUd0Y1d8vpzz-p":{"category_id":"-MUhwwQLMcsHao_gndyY","city_id":"-LY9tDL1F0oQNhflhqEr","name_ar":"نادي الصحافة النسائي","name_en":"sahafa"},"-Ncv6_Q2Xsl7hol9H28M":{"category_id":"-MUhwwQLMcsHao_gndyY","city_id":"-LYu5WDfeOz_NvlPYy6G","name_ar":"نادي الفيصلية النسائي","name_en":"Jeddah Al Faisaliyyah "},"-NnU5s0jicNerO3gDiJl":{"category_id":"-MUhwwQLMcsHao_gndyY","city_id":"-LYu5WDfeOz_NvlPYy6G","name_ar":"نادي البساتين النسائي","name_en":"Albasatin"},}</script> <script type="b586c23ad2efcbe524f831ce-text/javascript">var Cities_array={"-LYu4xFzH_2vBykDKrhx":{"name_ar":"القصيم","name_en":"Qassim"},"-LYu5LKNYfB3vlmIUQ0f":{"name_ar":"تبوك","name_en":"Tabouk"},"-LYu5WDfeOz_NvlPYy6G":{"name_ar":"جدة","name_en":"Jeddah"},"-LYu56sDQQAGSrplKa7_":{"name_ar":"الأحساء","name_en":"Ahsa"},"-LYu59qbEcTg-oV-e4As":{"name_ar":"الدمام","name_en":"Dammam"},"-LY9tDL1F0oQNhflhqEr":{"name_ar":"الرياض","name_en":"Riyadh"},}</script> <script type="b586c23ad2efcbe524f831ce-text/javascript">var Reasons_array={"-LZyJO3x1yrQZuINtSXV":{"name_ar":"حرق الدهون","name_en":"Fat burn"},"-LZyJe_CcTVUoiNFYUpG":{"name_ar":"بناء العضلات","name_en":"Muscle Gain"},"-LZyJ3WlIIC_HrbqWvFj":{"name_ar":"اللياقة و الرشاقة","name_en":"Fitness"},"-LZyJDlOmdpTbtaLHjNp":{"name_ar":"شد الجسم","name_en":"Body Toning"},"-LZyJWuQ9YycE94MFf4_":{"name_ar":"نمط الحياة الصحي","name_en":"Well being"},"-LZyJoCooF0ZJb-l5K_D":{"name_ar":"السباحة","name_en":"Swimming"},"-LZyKBDVKKh-NGNj5NrK":{"name_ar":"نشاطات أخرى","name_en":"Other activities"},}</script> <script type="b586c23ad2efcbe524f831ce-text/javascript">var Campaigns_array={"-O8dU6KXHUjfkImCNAK8":{"img_ar":"App-Offer-1200x799-01.jpeg","img_en":"App-Offer-1200x799-02.jpeg","img_mob_ar":"App-Offer-506x550-01.jpeg","img_mob_en":"App-Offer-506x550-02.jpeg","name_ar":"عرض اكتوبر ٢٠٢٤","name_en":"October 2024 Offer","text_ar":"","text_en":""},}</script> <script type="b586c23ad2efcbe524f831ce-text/javascript">var Categories_array={"-MUhwwQLMcsHao_gndyY":{"name_ar":"Main","name_en":"Main"},}</script> <script type="b586c23ad2efcbe524f831ce-text/javascript">
+      var lng="en";
+      if(lng=="ar"){
+        congra = "تم استلام طلبكم بنجاح. تم ارسال بريد إلكتروني للعنوان المدخل يحتوي على موقع النادي المختار لمساعدتكم للوصول الى موقع النادي. (تفقد inbox/junk )";
+          error_msg= 'حدث خطأ يرجى المحاولة مرة أخرى';
+      }else{
+          congra = "Your request has been successfully submitted. An email has been sent to you to guide you to your chosen club location.(Check inbox/junk)";
+          error_msg= 'Error occurred please try again';
+      }
+      function makeid(length) {
+    var result           = '';
+    var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    var charactersLength = characters.length;
+    for ( var i = 0; i < length; i++ ) {
+      result += characters.charAt(Math.floor(Math.random() * 
+ charactersLength));
+   }
+   return result;
+}
+      function loadCities(){
+      $('#city_list').html('');
+      if(lng=="en"){
+      $('#city_list').append($('<option>', {value: '',text: 'Choose City'}));
+      }else{
+      $('#city_list').append($('<option>', {value: '',text: 'اختر المدينة'}));
+      }
+      for (var key in Cities_array) {
+      if (!Cities_array.hasOwnProperty(key)) continue;
+      
+      var obj = Cities_array[key];
+      for (var prop in obj) {
+      if(!obj.hasOwnProperty(prop)) continue;
+      if(prop=="name_"+lng){
+      $('#city_list').append($('<option>', {value: key,text: obj[prop]}));
+      }
+      }
+      }
+      }
+      var prem="-LYuFto_XO3P7-qiKcwX";
+      var express = "-LYuFmS7pzTea4ikdPE_";
+      function loadClubs(id){
+      $('#club_list').html('');
+      if(lng=="en"){
+      $('#club_list').append($('<option>', {value: '',text: 'Choose Club'}));
+      }else{
+      $('#club_list').append($('<option>', {value: '',text: 'اختر النادي'}));
+      }
+      var ymo=0;
+      //$('#club_list').append('<optgroup class="prm" label="PREMIUM">')
+      for (var key in Clubs_array) {
+      if (!Clubs_array.hasOwnProperty(key)) continue;
+      var obj = Clubs_array[key];
+      for (var prop in obj) {
+         if(!obj.hasOwnProperty(prop)) continue;
+         if(prop=='city_id'){
+            if(obj[prop]==id && Categories_array[obj['category_id']].name_en == "Main" ){
+                if(ymo==0){
+                    ymo = 1;
+                var n = $("<optgroup>");
+                    n.attr("label", "CLUBS");
+                }
+                    var t = $("<option></option>");
+                    t.attr("value", key);
+                    t.text(obj['name_'+lng]);
+                    n.append(t)
+               //$('#club_list').append($('<option classification="PREMIUMM">', {value: key,text: obj['name_'+lng]}));
+               
+            }  
+         }
+      }
+      }
+      $('#club_list').append(n);
+      
+var emo = 0;
+      //$('#club_list').append('</optgroup><optgroup class="emo" label="EXPRESS">')
+      for (var key in Clubs_array) {
+      if (!Clubs_array.hasOwnProperty(key)) continue;
+      var obj = Clubs_array[key];
+      for (var prop in obj) {
+         if(!obj.hasOwnProperty(prop)) continue;
+         if(prop=='city_id'){
+            if(obj[prop]==id && Categories_array[obj['category_id']].name_en == "EXPRESS" ){
+                if(emo==0){
+                    emo = 1;
+                var n = $("<optgroup>");
+                    n.attr("label", "EXPRESS");
+                }
+                    var t = $("<option></option>");
+                    t.attr("value", key);
+                    t.text(obj['name_'+lng]);
+                    n.append(t)
+                //$('#club_list').append($('<option classification="EXPRESSS">', {value: key,text: obj['name_'+lng]}));
+               emo = 1;
+            }  
+         }
+      }
+      }
+      $('#club_list').append(n);
+      //$('#club_list').append('</optgroup>');
+      $('#club_list').on('selectmenuchange', function() {
+    $('#club_list').valid() 
+});
+      }
+      function loadReasons(){
+      $('#subject').html('');
+      if(lng=="en"){
+      $('#subject').append($('<option>', {value: '',text: 'Main reason for joining'}));
+      }else{
+      $('#subject').append($('<option>', {value: '',text: 'الهدف الرئيسي من الاشتراك'}));
+      }
+      for (var key in Reasons_array) {
+      if (!Reasons_array.hasOwnProperty(key)) continue;
+      
+      var obj = Reasons_array[key];
+      for (var prop in obj) {
+      if(!obj.hasOwnProperty(prop)) continue;
+      if(prop=="name_"+lng){
+      $('#subject').append($('<option>', {value: key,text: obj[prop]}));
+      }
+      }
+      }
+      }
+      function loadCamp(){
+        if(!Campaigns_array[0]){
+           // alert('This campaign has expired');
+            //window.location.href='https://bodymotions.com.sa';
+           // return false;
+         }
+      for (var key in Campaigns_array) {
+      if (!Campaigns_array.hasOwnProperty(key)) continue;
+      
+      var obj = Campaigns_array[key];
+      campId=  key;
+      for (var prop in obj) {
+      if(!obj.hasOwnProperty(prop)) continue;
+      if(prop=="name_"+lng){
+      $('#subject').append($('<option>', {value: key,text: obj[prop]}));
+      }
+      if(prop=="img_"+lng){
+      $('.banner_desk').attr('src','uploads/back/'+obj[prop]);
+      }
+      if(prop=="img_mob_"+lng){
+         $('.banner_mob').attr('src','uploads/back/'+obj[prop]);
+         $('.changeContent').attr('content','https://bodymotions.com.sa/campaign/uploads/back/'+obj[prop])
+
+      }
+      if(prop=="text_"+lng){
+         $('.txt_date1').html(obj[prop]);
+         $('.txt_date2').html(obj[prop]);
+      }
+      }
+      }
+      }
+    
+      jQuery(document).ready(function($) {
+      loadCamp();
+      loadCities();
+      loadReasons();
+     
+      $('.send-btn').attr('disabled',"disabled");
+      $('select').on('change',function(){
+      
+          if($(this).val() != 0)
+          { 
+              $(this).next().next().css("border-color","#d2d6de");
+              $(this).next().next().css("border","1px");
+      
+          }
+          else
+          {
+      
+              $(this).next().next().css("border-color","#f00");
+               $(this).next().next().css("border","1px");
+          }
+      });
+      
+      
+      
+      jQuery('#checkall').on('ifClicked', function (event) {
+          var ch = jQuery(".tablerecord").find('tbody input[type="checkbox"]');
+          jQuery(this).on('ifChecked', function (event) {
+              ch.each(function () {
+                  jQuery(this).iCheck('check');
+              });
+          });
+          jQuery(this).on('ifUnchecked', function (event) {
+              ch.each(function () {
+                  jQuery(this).iCheck('uncheck');
+              });
+          });
+      });
+      $('#city_list').on('selectmenuchange', function() {
+    $('#city_list').valid() 
+});
+$('#subject').on('selectmenuchange', function() {
+    $('#subject').valid() 
+}); 
+      });
+      
+      
+      
+      
+      
+      
+   </script>
+<link href="css/jquery-ui.css" rel="stylesheet">
+<link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.min.css" rel="stylesheet">
+<link href="fonts/stylesheet.css" rel="stylesheet">
+<script src="js/jquery-ui.min.js" type="b586c23ad2efcbe524f831ce-text/javascript"></script>
+<script type="b586c23ad2efcbe524f831ce-text/javascript">
+      $(function() {
+          $("#city_list").selectmenu(), $("#subject").selectmenu()
+      })
+   </script>
+<style>
+    small{color: #b7dfc2 !important;}
+       body{background: #7c59a5;}
+       body::after {
+    content: "";
+    background-image: url(images/part3.png);
+    background-repeat: repeat;
+    opacity: .6;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+   .rtl {
+    direction: ltr;
+}.ui-selectmenu-text {
+    text-align: left;
+} .main-form {
+    left: 95px;
+    padding-top: 10px;
+}
+body.ltr .app-download a.play-store-icon {
+    float: none;
+}
+.select-language a, .select-language a:link {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+body.ltr .select-language {
+    margin-top: 0px;
+}
+.main-form h1 {
+    color: #FFFFFF;
+}
+      .recaptcha-errorm {display:none;color:red !important}
+      @media screen and (max-width: 767px) {
+      .ltr .logo {
+      right: auto !important;
+      left: 5px !important;
+      float: left;
+      margin-left: 0 !important;
+      }
+      .main-contents-inner.pull-right {
+    padding-top: 0px;
+}
+      }
+      optgroup[label] {
+        background: #ffce07;
+        color:white
+    }
+      .main-contents {
+    padding: 0px 0 45px;
+      }
+      }
+      button[disabled], html input[disabled] {
+      cursor: no-drop;
+      }
+      .send-btn{
+      margin-top:20px;
+      border: 2px solid #b7dec2;
+      }
+      .subscription-packages{
+         display:block !important;
+      }
+      .banner_desk{
+         min-height:837px !important;
+      }
+      #club_list{
+         padding-right: 50px;
+      }
+      #clubtextid{
+         display:none;
+      }
+      .onee {
+         display:block  !important;
+      }
+      .twoo {
+         display:none  !important;
+      }
+      .mob{
+         display:none;
+      }
+      .dsk{
+         display:block;
+      }
+      @media (max-width: 767px){
+         .onee {
+         display:none !important;
+      }
+      .twoo {
+         display:block !important;
+      }
+      .mob{
+         display:block !important;
+      }
+      .dsk{
+         display:none !important;
+      }
+      .subscription-packages{
+         display:none;
+      }
+      .subscription-packages-inner{
+         display:none;
+      }
+      s{color: white;
+    text-decoration: line-through;
+    text-decoration-color: red;
+    text-decoration-thickness: 2px;}
+       /* to delete in another campaign
+       .logo{display:none;}
+      .select-language {
+    font-size: 12px;
+    margin: -5px 15px 0 0 !important;
+}*/
+      /* end to delete in another campaign*/
+      }
+      h5{
+          color:white;
+      }
+      h6{color:#b7dec2;}
+      #offer-hint {background: #e81f76;}
+      .subscribe-plans {border: 2px solid #b7dec2;}
+      .main-form .form-control, .ui-selectmenu-button.ui-button, .ui-selectmenu-button.ui-button:hover, .ui-selectmenu-button.ui-button:focus {border: 2px solid #b7dec2;}
+      .main-contents ul li {color:white;}
+      .ui-selectmenu-optgroup{
+    border: 1px solid #fece08 !important;
+}
+.footer-bottom h6, .footer-bottom .phone-number a, .footer-bottom .phone-number a:link {color: #b7dec2;}
+.copy-top-txt{color: #b7dec2;}
+.subscribe-inner {
+    text-align: center;
+    width: unset;
+}
+.main-contents-inner {
+    width: 100%;
+}
+#offer-hint p.sec-hint {color: #fffafa;}
+@media (max-width: 767px){.main-form {background-color: #6b5086;}}
+@media (max-width: 767px){.main-contents .subscribe-inner {background: #7c59a5;}}
+@media (max-width: 768px){.main-header {position: relative !important;min-height: 110px;}}
+.terms{color:#ffce08;background-color: transparent;border: none;}
+.terms:hover{color:#ffce08;}
+.termss{border: 2px solid #fece08;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    background: rgba(0,0,0,.7);
+    padding: 0 30px;
+accent-color: #fece08;
+width:40px;
+}
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+   </style>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QZ92CMFEYG" type="b586c23ad2efcbe524f831ce-text/javascript"></script>
+<script type="b586c23ad2efcbe524f831ce-text/javascript">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QZ92CMFEYG');
+</script> </head>
+<body class="ltr">
+<span itemprop="image" itemscope itemtype="image/jpeg">
+<link itemprop="url" href="https://bodymotions.com.sa/campaign/uploads/back/Arabic-506x550.jpg">
+</span>
+<div class="dvLoading"></div>
+<header class="main-header">
+<div class="select-language">
+<a href="https://bodymotions.com.sa/campaign/form_ar.php">
+عربي </a>
+</div>
+</header>
+<div class="clear"></div>
+<img class="banner_desk" src alt="بودي ماسترز" height="922" width="1200">
+<img class="banner_mob" src alt="بودي ماسترز">
+<div class="main-form">
+<h1>Register and get more details on our great offers</h1>
+<p><span class="txt_date1"></span>
+<form enctype="multipart/form-data" id="form_user" method="POST" name="form_user" onsubmit="if (!window.__cfRLUnblockHandlers) return false; return!1" data-cf-modified-b586c23ad2efcbe524f831ce->
+<fieldset class="form-group">
+<input class="form-control" name="txt_name" id="txt_name" placeholder="Full name">
+</fieldset>
+<fieldset class="form-group">
+<input class="form-control" name="txt_email_id" id="txt_email_id" placeholder="Email Address">
+</fieldset>
+<fieldset class="form-group">
+<input class="form-control" name="txt_phone_number" id="txt_phone_number" placeholder="Phone number (ex:05xxxxxxxx)" type="tel">
+</fieldset>
+<fieldset class="form-group">
+<select class="form-control" id="city_list" name="city_list"></select>
+</fieldset>
+<fieldset class="form-group" id="clubtextid" style="display:none">
+<select class="form-control" id="club_list" name="club_list"></select>
+</fieldset>
+<fieldset class="form-group">
+<select class="form-control" id="subject" name="subject">
+</select>
+</fieldset>
+<fieldset class="form-group">
+<textarea class="form-control" id="message_text" name="message_text" placeholder="Comment"></textarea>
+</fieldset>
+<fieldset class="form-group">
+<input type="submit" name="submitt" id="submitt" style="display:none">
+<div id="checkboxContainer" style="color: white;border: 2px solid #b7dfc2;background-color:rgba(124,89,165,.7);padding: 7px;border-radius: 10px;font-weight: bold;"><input type="checkbox" name="terms" class="termss" id="termsCheckbox" onchange="if (!window.__cfRLUnblockHandlers) return false; handleCheckboxChange()" data-cf-modified-b586c23ad2efcbe524f831ce-> Upon clicking "submit" button I accept <button type="button" id="myBtn" class="terms">terms and conditions</button></div>
+<button class="send-btn g-recaptcha" data-sitekey="6LdKnWEaAAAAABJEt24wdeSVhd94AXDE7xU7VxLb" data-callback="dataCallback" data-expired-callback="dataExpiredCallback" name type="button">submit</button>
+<div id="cover-spin"></div>
+</fieldset>
+</form>
+<div class="alert alert-dismissable alert-success successmsg" style="display:none"><a href="#" class="close" aria-label="close" data-dismiss="alert">×</a>
+تم استلام طلبكم بنجاح. تم ارسال بريد إلكتروني للعنوان المدخل يحتوي على موقع النادي المختار لمساعدتكم للوصول الى موقع النادي. (تفقد inbox/junk )
+</div>
+</div>
+</section>
+<div class="clear"></div>
+<section id="offer-hint" class="col-md-12">
+<div>
+<p class="txt_date2"></p>
+<p class="sec-hint"></p>
+</div>
+</section>
+<section class="subscription-packages"><img src="images/subscription-plaeholder.jpg" style="max-height: 300px;">
+<div class="subscription-packages-inner">
+<div class="container">
+<div class="row">
+<div class="col-xs-12">
+<div class="text-center discountprice">
+<h5>The prices shown below are after applying 40% discount.<br>15% VAT included.<br><small></small></h5><h5>+ 5% discount when you subscribe through the app!</h5></div>
+<div class=" subscribe-inner">
+<div class="subscribe-plans">
+<span style="padding-bottom: 9px;"><s>2370 SAR</s></span>
+<span style="color:#b7dec2">1422 SAR</span>
+<span>/ 3 months</span>
+</div>
+<div class="subscribe-plans">
+<span style="padding-bottom: 9px;"><s>3885 SAR</s></span>
+<span style="color:#b7dec2">2331 SAR</span>
+<span>/ 6 months</span><span></span>
+</div>
+<div class="subscribe-plans">
+<span style="padding-bottom: 9px;"><s>5995 SAR</s></span>
+<span style="color:#b7dec2">3597 SAR</span>
+<span>/ 12 months</span><span></span>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="clear"></div>
+<section class="main-contents" style="padding-top:40px;border-top:2px solid #b7dec2">
+<div class="main-contents-inner">
+<div class="row">
+<div class="subscribe-inner">
+<div class="text-center discountprice price-mobile">
+<h5>The prices shown below are after applying 40% discount.<br>15% VAT included.<br><small></small></h5><h5>+ 5% discount when you subscribe through the app!</h5></div>
+<div class="subscribe-plans">
+<span style="padding-bottom: 9px;"><s>2370 SAR</s></span>
+<span style="color:#b7dec2">1422 SAR</span>
+<span>/ 3 months</span>
+</div>
+<div class="subscribe-plans">
+<span style="padding-bottom: 9px;"><s>3885 SAR</s></span>
+<span style="color:#b7dec2">2331 SAR</span>
+<span>/ 6 months</span><span></span>
+</div>
+<div class="subscribe-plans">
+<span style="padding-bottom: 9px;"><s>5995 SAR</s></span>
+<span style="color:#b7dec2">3597 SAR</span>
+<span>/ 12 months</span><span></span>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+<div class="row">
+<div class="container">
+<div class="col-sm-6">
+<ul><li> Strength Area</li>
+<li> Cardio Zone</li>
+<li> Group Fitness Studio</li>
+<li> Spinning Studio</li>
+<li> Yoga Studio</li>
+ </ul>
+</div>
+<div class="col-sm-6">
+<ul><li> Pilates Studio</li>
+<li> Functional Zone</li>
+<li> Track </li>
+<li> Swimming Pools & Health Facilities (Sauna, Jacuzzi & Steam)</li>
+ </ul>
+</div>
+</div></div>
+</div>
+</section>
+<div class="clear"></div>
+<div class="clear"></div>
+<footer class="main-footer">
+<div class="footer-top">
+<div class="container">
+<div class="row">
+<div class="col-sm-12">
+<div id="tellfriends" class="pull-left">
+<a href="#tellfriends" class="pull-left">
+Tell your friends </a>
+<div class="a2a_default_style a2a_kit a2a_kit_size_32" style="line-height: 32px;">
+<a class="a2a_button_facebook" target="_blank" href="/#facebook" rel="nofollow noopener"><span class="a2a_svg a2a_s__default a2a_s_facebook" style="background-color: rgb(59, 89, 152);"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path fill="#FFF" d="M17.78 27.5V17.008h3.522l.527-4.09h-4.05v-2.61c0-1.182.33-1.99 2.023-1.99h2.166V4.66c-.375-.05-1.66-.16-3.155-.16-3.123 0-5.26 1.905-5.26 5.405v3.016h-3.53v4.09h3.53V27.5h4.223z"></path></svg></span><span class="a2a_label">Facebook</span></a>
+<a class="a2a_button_twitter" target="_blank" href="/#twitter" rel="nofollow noopener"><span class="a2a_svg a2a_s__default a2a_s_twitter" style="background-color: rgb(85, 172, 238);"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path fill="#FFF" d="M28 8.557a9.913 9.913 0 0 1-2.828.775 4.93 4.93 0 0 0 2.166-2.725 9.738 9.738 0 0 1-3.13 1.194 4.92 4.92 0 0 0-3.593-1.55 4.924 4.924 0 0 0-4.794 6.049c-4.09-.21-7.72-2.17-10.15-5.15a4.942 4.942 0 0 0-.665 2.477c0 1.71.87 3.214 2.19 4.1a4.968 4.968 0 0 1-2.23-.616v.06c0 2.39 1.7 4.38 3.952 4.83-.414.115-.85.174-1.297.174-.318 0-.626-.03-.928-.086a4.935 4.935 0 0 0 4.6 3.42 9.893 9.893 0 0 1-6.114 2.107c-.398 0-.79-.023-1.175-.068a13.953 13.953 0 0 0 7.55 2.213c9.056 0 14.01-7.507 14.01-14.013 0-.213-.005-.426-.015-.637.96-.695 1.795-1.56 2.455-2.55z"></path></svg></span><span class="a2a_label">Twitter</span></a>
+<a class="a2a_button_whatsapp" target="_blank" href="/#whatsapp" rel="nofollow noopener"><span class="a2a_svg a2a_s__default a2a_s_whatsapp" style="background-color: rgb(18, 175, 10);"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path fill-rule="evenodd" clip-rule="evenodd" fill="#FFF" d="M16.21 4.41C9.973 4.41 4.917 9.465 4.917 15.7c0 2.134.592 4.13 1.62 5.832L4.5 27.59l6.25-2.002a11.241 11.241 0 0 0 5.46 1.404c6.234 0 11.29-5.055 11.29-11.29 0-6.237-5.056-11.292-11.29-11.292zm0 20.69c-1.91 0-3.69-.57-5.173-1.553l-3.61 1.156 1.173-3.49a9.345 9.345 0 0 1-1.79-5.512c0-5.18 4.217-9.4 9.4-9.4 5.183 0 9.397 4.22 9.397 9.4 0 5.188-4.214 9.4-9.398 9.4zm5.293-6.832c-.284-.155-1.673-.906-1.934-1.012-.265-.106-.455-.16-.658.12s-.78.91-.954 1.096c-.176.186-.345.203-.628.048-.282-.154-1.2-.494-2.264-1.517-.83-.795-1.373-1.76-1.53-2.055-.158-.295 0-.445.15-.584.134-.124.3-.326.45-.488.15-.163.203-.28.306-.47.104-.19.06-.36-.005-.506-.066-.147-.59-1.587-.81-2.173-.218-.586-.46-.498-.63-.505-.168-.007-.358-.038-.55-.045-.19-.007-.51.054-.78.332-.277.274-1.05.943-1.1 2.362-.055 1.418.926 2.826 1.064 3.023.137.2 1.874 3.272 4.76 4.537 2.888 1.264 2.9.878 3.43.85.53-.027 1.734-.633 2-1.297.266-.664.287-1.24.22-1.363-.07-.123-.26-.203-.54-.357z"></path></svg></span><span class="a2a_label">WhatsApp</span></a>
+<a class="a2a_button_email" target="_blank" href="/#email" rel="nofollow noopener"><span class="a2a_svg a2a_s__default a2a_s_email" style="background-color: rgb(1, 102, 255);"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path fill="#FFF" d="M26 21.25v-9s-9.1 6.35-9.984 6.68C15.144 18.616 6 12.25 6 12.25v9c0 1.25.266 1.5 1.5 1.5h17c1.266 0 1.5-.22 1.5-1.5zm-.015-10.765c0-.91-.265-1.235-1.485-1.235h-17c-1.255 0-1.5.39-1.5 1.3l.015.14s9.035 6.22 10 6.56c1.02-.395 9.985-6.7 9.985-6.7l-.015-.065z"></path></svg></span><span class="a2a_label">Email</span></a>
+<div style="clear: both;"></div></div>
+</div>
+<a href="https://bodymotions.com.sa/" target="_blank" class="pull-right">
+Continue to Our Website </a>
+</div>
+</div>
+</div>
+</div>
+<div class="clear"></div>
+<div class="footer-bottom">
+<div class="container">
+<div class="row">
+<div class="col-xs-12">
+<div class="footer-logo">
+<a href="https://bodymotions.com.sa/" target="_blank" title="body motions"><img src="images/looo2.png"></a>
+</div>
+</div>
+<div class="clear"></div>
+<div class="text-right col-sm-4 phone-number">
+<h6>At your service</h6><a href="tel:920000626">920000626</a></div>
+<div class="col-sm-4 social-icons">
+<h6>Follow us</h6>
+<a href="https://www.instagram.com/bodymotionsksa/" target="_blank"><img src="images/instagram.png" onmouseenter="if (!window.__cfRLUnblockHandlers) return false; highlight(this)" onmouseleave="if (!window.__cfRLUnblockHandlers) return false; unhighlight(this)" data-cf-modified-b586c23ad2efcbe524f831ce-></a>
+<a href="https://twitter.com/bodymotionsksa" target="_blank"><img src="images/twitter.png" onmouseenter="if (!window.__cfRLUnblockHandlers) return false; highlight1(this)" onmouseleave="if (!window.__cfRLUnblockHandlers) return false; unhighlight1(this)" data-cf-modified-b586c23ad2efcbe524f831ce-></a>
+<a href="https://www.facebook.com/bodymotionsksa/" target="_blank"><img src="images/facebook.png" onmouseenter="if (!window.__cfRLUnblockHandlers) return false; highlight2(this)" onmouseleave="if (!window.__cfRLUnblockHandlers) return false; unhighlight2(this)" data-cf-modified-b586c23ad2efcbe524f831ce-></a>
+</div>
+<div class="clear"></div>
+</div>
+<div class="copy-rights">
+<div class="col-xs-12 copy col-sm-3">
+<p>©
+2023 bodymotions.com.sa</p></div>
+<div class="col-xs-12 text-center col-sm-7 copy-links">
+<ul class="list-inline">
+<li>
+Subject to terms and conditions </li><li>
+All campaign details are available at clubs </li><li>
+Offer is valid at all clubs </li></ul>
+</div>
+</div>
+</div>
+</div>
+<div class="clear"></div>
+</footer>
+<div class="clear"></div>
+<div id="myModal" class="modal">
+
+<div class="modal-content">
+<span class="close">&times;</span><br><br>
+<p><b>Terms and conditions</b></p>
+<p> These Terms and Conditions (‘T&Cs’) are set out between the company “Sport Clubs Company” and you, the user of at least one of the services offered on the site. You agree to grant Sport Clubs Company the right to collect, store and process any information or data you provide to Sport Clubs Company and to use information and data about your use of the services. By agreeing to provide consent for receiving special offers of the products and Services offered by Sport Clubs Company on the site you agree to these Terms and Conditions, without limitation or exception, and acknowledge having read them in their entirety. Sport Clubs Company contact you through the provided communication info based on your permission obtained for receiving information on special offers by using this site and you hereby explicitly agree to the collection and use of the said data by Sport Clubs Company for the purpose described above. Sport Clubs Company and or third parties may use such information or data to identify you on social media platforms in order to provide you with the latest products, offers or incentives offered by Sport Clubs Company or such. Any conditional subscription is considered void and invalid. If you do not agree with these T&Cs, you must not subscribe to receiving special offers, you can unsubscribe from receiving news about offer and promotions by following the instructions of the following URL : <a href="https://bodymotions.com.sa/unsubscribe_en.php" target="_blank">www.bodymotions.com.sa/unsubscribe_en.php</a>
+<br><br>Sport Clubs Company reserves the right to update and to change these Terms and Conditions at any time and at its sole discretion. Sport Clubs Company reserves the right to decide on any appropriate actions, without any commitment on our part to take specific actions and/or transfer the complaint to the authorities in case a situation arises. You authorize Sport Clubs Company and its representatives to contact you with reference to your product application(s). This consent will override any registration for Do not Contact (Call, SMS, Email).
+</p>
+</div>
+</div>
+<script type="b586c23ad2efcbe524f831ce-text/javascript">
+        var modal = document.getElementById("myModal");
+
+var btn = document.getElementById("myBtn");
+var span = document.getElementsByClassName("close")[1];
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+span.onclick = function() {
+  modal.style.display = "none";
+}
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+        var checkbox = document.getElementById("termsCheckbox");
+var container = document.getElementById("checkboxContainer");
+function handleCheckboxChange() {
+    if (checkbox.checked) {
+        container.style.borderColor = "#b7dfc2";
+    } else {
+        container.style.borderColor = "red";
+    }
+}
+         function save_user() {
+            $('#cover-spin').show(0);
+         firebase.database().ref('Campaign_Details/'+campId).push({
+             name: $("#txt_name").val(),
+             email: $("#txt_email_id").val(),
+             phone: $("#txt_phone_number").val(),
+             city_id: $("#city_list").val(),
+             club_id: $("#club_list").val(),
+             reason_id: $("#subject").val(),
+             message: $("#message_text").val(),
+             lang: lng,
+             response:rnd,//grecaptcha.getResponse(),
+             date:firebase.database.ServerValue.TIMESTAMP,
+         }, function(error) {
+             if (error) {
+             //console.log('Failed');
+             $('.send-btn').attr('disabled',"disabled");
+             $('#cover-spin').hide(0);
+             alert(error_msg);
+             } else {
+                $('#cover-spin').hide(0);
+             $("#txt_name").val('')
+            $("#txt_email_id").val('')
+             $("#txt_phone_number").val('')
+             $("#city_list").val('')
+             $("#club_list").val('')
+             $("#subject").val('')
+          $("#message_text").val('')
+             //console.log('Confirmed');
+             $('.send-btn').attr('disabled',"disabled");
+                          ;;alert(congra);
+             grecaptcha.reset();
+             window.location.href="https://bodymotions.com.sa";
+             }
+             });
+         }
+         $(document).ready(function() {
+             $("#city_list").on("selectmenuchange", function() {
+                $("#clubtextid").show();
+                 $("#club_list").remove();
+                 $("#clubtextid").html('<select class="form-control" id="club_list" name="club_list"></select');
+                 loadClubs($("#city_list").val());
+                 $('#clubtextid').css('display','block');
+                 $("#club_list").selectmenu();
+                 $("#club_list").selectmenu("refresh");
+             }),
+         
+         
+         
+             
+         
+              $.validator.addMethod("valid_email", function(e, u) {
+                 return e = e.trim(), this.optional(u) || /^((([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+(\.([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+)*)|((\x22)((((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(([\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|\x21|[\x23-\x5b]|[\x5d-\x7e]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(\\([\x01-\x09\x0b\x0c\x0d-\x7f]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))))*(((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(\x22)))@((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))$/i.test(e)
+             }, "Check your email address"), $.validator.addMethod("alpha", function(e, u) {
+                 return this.optional(u) || e == e.match(/^[a-zA-Z\s]+$/)
+             }),
+             $.validator.addMethod("valid_phone", function(e, u) {
+                 return this.optional(u) || e == e.match(/^(05)([0-9]{8})$/g)
+             }),
+         
+              $("#form_user").validate({
+                 errorElement: "label",
+                 ignore: "",
+                 invalidHandler: function(e, u) {
+                    grecaptcha.reset();
+                  $('#cover-spin').hide(0);
+                         $('.send-btn').removeAttr('disabled');
+                     $.each(u.errorList, function(e, u) {
+                         "select" == u.element.nodeName.toLowerCase() && $(u.element).next("div").addClass("input-validation-error")
+                     })
+                 },
+                 rules: {
+                     txt_name: {
+                         required: !0,
+                        // alpha: !0,
+                         
+                     },
+                     txt_email_id: {
+                         required: !0,
+                         valid_email: !0
+                     },
+                     txt_phone_number: {
+                         required: !0,
+                         maxlength: 10,
+                         minlength: 10,
+                         valid_phone: !0
+                     },
+                     city_list: {
+                         required: !0
+                     },
+                     club_list: {
+                         required: !0
+                     },
+                     subject: {
+                         required: !0
+                     }
+                 },
+                 messages: {
+                     txt_name: {
+                         required: "Name is required",
+                         alpha: "Only letters",
+                         arab: "v"
+         
+                     },
+                     txt_email_id: {
+                         required: "Email address is required"
+                     },
+                     txt_phone_number: {
+                         required: "Mobile number is required",
+                         number: "Format is incorrect",
+                         maxlength: "Only 10 numbers are allowed",
+                         minlength: "Only 10 numbers are allowed",
+                         valid_phone:"Number should start with 05"
+                     },
+                     city_list: {
+                         required: "City is required"
+                     },
+                     club_list: {
+                         required: "Club is required"
+                     },
+                     subject: {
+                         required: "Reason is required"
+                     }
+                 },
+                 submitHandler: function(e) {
+                    captchac(resp);
+                 }
+             })
+         
+         
+         })
+         function submitForm() {
+         save_user();
+         }
+         
+      </script>
+<script src="js/jquery.blockUI.js" type="b586c23ad2efcbe524f831ce-text/javascript"></script>
+<script type="b586c23ad2efcbe524f831ce-text/javascript">
+         function highlight(i) {
+             i.src = "images/instagram-yellow.png"
+         }
+         
+         function unhighlight(i) {
+             i.src = "images/instagram.png"
+         }
+         
+         function highlight1(i) {
+             i.src = "images/twitter-yellow.png"
+         }
+         
+         function unhighlight1(i) {
+             i.src = "images/twitter.png"
+         }
+         
+         function highlight2(i) {
+             i.src = "images/facebook-yellow.png"
+         }
+         
+         function unhighlight2(i) {
+             i.src = "images/facebook.png"
+         }
+         $(function() {
+             $.blockUI.defaults = {
+                 message: '<div class="blockui-default-message"><i class="fa fa-circle-o-notch fa-spin"></i></div>',
+                 overlayCSS: {
+                     background: "rgba(24, 44, 68, 0.8)",
+                     opacity: 1,
+                     cursor: "wait"
+                 },
+                 css: {
+                     width: "100%",
+                     top: "20%",
+                     textAlign: "center",
+                     left: "0"
+                 },
+                 centerX: !0,
+                 baseZ: 1e3,
+                 showOverlay: !0,
+                 blockMsgClass: "block-msg-default"
+             }
+         }), jQuery(window).on("load", function() {
+             jQuery(".dvLoading").addClass("hide")
+  
+         })
+      </script>
+<style>
+        .ui-selectmenu-optgroup{
+        border: 1px solid #fece08 !important;
+        opacity: 0.4;
+        }
+        .ui-selectmenu-menu .ui-menu .ui-selectmenu-optgroup:nth-of-type(2) {
+        border: 1px solid #fece08 !important;
+        opacity: 0.4;
+        }
+        #cover-spin {
+    position:fixed;
+    width:100%;
+    left:0;right:0;top:0;bottom:0;
+    background-color: rgba(255,255,255,0.7);
+    z-index:9999;
+    display:none;
+}
+
+@-webkit-keyframes spin {
+	from {-webkit-transform:rotate(0deg);}
+	to {-webkit-transform:rotate(360deg);}
+}
+
+@keyframes spin {
+	from {transform:rotate(0deg);}
+	to {transform:rotate(360deg);}
+}
+
+#cover-spin::after {
+    content:'';
+    display:block;
+    position:absolute;
+    left:48%;top:40%;
+    width:40px;height:40px;
+    border-style:solid;
+    border-color:black;
+    border-top-color:transparent;
+    border-width: 4px;
+    border-radius:50%;
+    -webkit-animation: spin .8s linear infinite;
+    animation: spin .8s linear infinite;
+}
+   </style>
+<script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="b586c23ad2efcbe524f831ce-|49" defer></script></body>
+</html>

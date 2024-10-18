@@ -1,0 +1,22 @@
+Advertisement
+| Updated:
+Nearly one third of the population of the United States appears to have had its private information leaked in a security lapse by a large background check company.
+The firm, MC2 Data, left approximately 2.2 terabytes of information easily accessible on the open web without so much as password protection, according to the cybersecurity researchers who uncovered the breach.
+MC2 Data, they noted, owns multiple background check sites including PrivateRecords.net, PrivateReports, PeopleSearcher, ThePeopleSearchers and PeopleSearchUSA.
+Background check company MC2 Data left approximately 2.2 terabytes of data easily accessible on the open web without so much as password protection, cybersecurity researchers said - via 'what was likely to be a human error'
+'What was likely to be a human error exposed 106,316,633 records containing private information about US citizens,' according to Cybernews , a cybersecurity investigation and news outlet based in Vilniaus, Lithuania.
+Cybernews's Paulina Okunytė opined that the incident raises 'serious concerns about privacy and safety.'
+'People and organizations needing background checks have also been exposed, as the data of 2,319,873 users who subscribed to MC2 Data services was [also] leaked,' Okunytė added.
+The kind of personal data included in the breach, she noted, spanned everything from names and emails to more serious and private data like encrypted passwords, partial payment information, property records and legal records.
+One of Cybernews's security researcher, however, Aras Nazarovas, noted that these types of issues have plagued the background check industry for years.
+'Background-checking services have always been problematic, as cybercriminals would often be able to purchase their services to gather data on their victims,' Nazarovas opined.
+'While background-check services keep trying to prevent such cases, they haven't been able to stop such use of their services completely,' he added.
+'Such a leak is a goldmine for cybercriminals as it eases access and reduces risk for them, allowing them to misuse these detailed reports more effectively.'
+Share or comment on this article: 
+                        More than 100 MILLION Americans' private information leaked in massive data breach at background check company
+DON'T MISS
+From the Makers of Candy Crush
+From the Makers of Candy Crush
+Next story
+Published by Associated Newspapers Ltd
+Part of the Daily Mail, The Mail on Sunday & Metro Media Group

@@ -1,0 +1,14 @@
+From Name
+From Email
+Sep29
+I’ve had some interesting discussions recently about conference agendas for late 2024 and into 2025. “How do we avoid simply having the word AI everywhere?”
+AI is clearly becoming ubiquitous, however much some elements are currently overhyped. Thus we can’t “not include it” in conferences and webinars. What we want is more specific use-cases that are detailed enough to be helpful but broad enough to inform a diverse audience.
+AI-enabled agents feels like it sits in that sweet sport. Not to mention fitting nicely with the Digital Minions vs Digital Sherpa trope that I’ve discussed with many of you.
+So, if you’re planning a 2025 conference with tech elements consider this as an agenda item.
+For a good paper on the topic search for the recent one from McKinsey:
+"Over the past couple of years, the world has marveled at the capabilities and possibilities unleashed by generative AI (gen AI). Foundation models such as large language models (LLMs) can perform impressive feats, extracting insights and generating content across numerous mediums, such as text, audio, images, and video. But the next stage of gen AI is likely to be more transformative.
+We are beginning an evolution from knowledge-based, gen-AI-powered tools — say, chatbots that answer questions and generate content — to gen AI–enabled “agents” that use foundation models to execute complex, multistep workflows across a digital world. In short, the technology is moving from thought to action."
+Share this article
+Latest Blog
+WORLD’S FIRST OPEN PLATFORM FOR THOUGHT LEADERS
+Built & Managed by Recolitus

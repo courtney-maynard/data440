@@ -1,0 +1,35 @@
+GAO-24-107332 Published: Sep 09, 2024. Publicly Released: Sep 09, 2024.
+Artificial intelligence is rapidly changing the world and could improve government operations. For example, federal agencies are already using AI to analyze weather hazards.
+In October 2023, an Executive Order was issued to guide a coordinated approach to safely developing and using AI in government. It includes over 100 requirements with eight guiding principles like advancing equity and protecting privacy.
+We looked at 13 requirements of the Executive Order with clear expectations for what agencies should have implemented by March 2024. Agencies fully carried out these 13 requirements, laying the groundwork for government-wide AI efforts.
+What GAO Found
+Federal agencies have taken actions to implement selected artificial intelligence (AI) management and talent requirements that were due by the end of March 2024. Specifically, all 13 of the selected AI management and talent requirements contained in the relevant Executive Order were fully implemented (see table).
+Extent to Which Agencies Implemented Selected Artificial Intelligence (AI) Management and Talent Requirements from Executive Order (EO) 14110, as of June 2024
+Responsible agency(ies)
+Organize the AI and Technology Talent Task Force
+Establish the White House AI Council
+Office of Management and Budget (OMB)
+Convene the interagency Chief AI Officer council
+Issue AI guidance to agencies
+Issue instructions on agencies' AI use cases
+Office of Science and Technology Policy and OMB
+Identify priority mission areas for increasing AI talent, establish highest-priority types of talent, and identify pathways for an accelerated hiring process
+General Services Administration (GSA)
+Office of Personnel Management (OPM)
+Review hiring and workplace flexibilities
+Consider excepted service appointments
+Issue guidance on AI-related pay
+OMB/ U.S. Digital Service, OPM, GSA/ U.S. Digital Corps and Presidential Innovation Fellows
+Establish initial plans for recruiting AI talent
+Legend: ● Fully implemented = agency evidence fully satisfied the requirement.
+Source: GAO analysis of agency efforts to implement key AI requirements. | GAO24107332
+As required by the order, the Executive Office of the President (EOP) organized the AI and Technology Talent Task Force and established the White House AI Council. The Office of Management and Budget (OMB) has convened and chaired the Chief AI Officer council, issued AI guidance and use case instructions to agencies, and established initial plans for AI talent recruitment. The Office of Personnel Management (OPM) has reviewed hiring and workplace flexibility, considered excepted service appointments, coordinated AI hiring action across federal agencies, and issued related pay guidance. In addition, the Office of Science and Technology Policy (OSTP) and OMB have identified priority mission areas for increasing AI talent, established the types of talent that are the highest priority to recruit and develop, and identified accelerated hiring pathways.
+Regarding AI and emerging technologies, the General Services Administration (GSA) finalized and issued its framework on June 27, 2024. The framework is to enable consistent prioritization of the most critical emerging technologies in a secure cloud environment. As discussed in this report, GSA's initial priority list has three generative AI capabilities: chat interfaces, code-generation and debugging tools, and prompt-based image generators.
+Why GAO Did This Study
+AI is rapidly changing the world and has significant potential to transform society and people's lives. According to the Administration, agencies are already using AI operationally in various areas. Further, agencies have requested $1.9 billion for research and development investment in AI for fiscal year 2024. Given the rapid growth in capabilities and widespread adoption of AI, the federal government must responsibly manage its use.
+To help guide a coordinated, government-wide approach to the development and safe and responsible use of AI, the President issued an Executive Order in October 2023. Among other things, the order requires agencies to provide guidance for AI management and to increase AI talent in the government.
+GAO's objective was to evaluate the extent to which agencies have implemented selected AI management and talent requirements from Executive Order 14110. GAO selected 13 requirements from the order that (1) were due by the end of March 2024, (2) had government-wide implications for AI management and talent, and (3) had clear deliverables. For these 13 requirements, GAO assessed agency documentation and interviewed relevant officials.
+GAO provided a draft of this report to EOP, OMB, OPM, OSTP, and GSA for review. OMB and OSTP provided technical comments, which we incorporated as appropriate. EOP, OPM, and GSA did not have any comments on the report.
+For more information, contact Kevin Walsh at (202) 512-6151 or walshk@gao.gov .
+Full Report
+Receive GAO Updates

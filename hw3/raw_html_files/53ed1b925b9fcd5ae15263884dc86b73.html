@@ -1,0 +1,1195 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8"><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"73112b0ee5",applicationID:"132281307"};;/*! For license information please see nr-loader-rum-1.268.0.min.js.LICENSE.txt */
+(()=>{var e,t,r={8122:(e,t,r)=>{"use strict";r.d(t,{a:()=>i});var n=r(944);function i(e,t){try{if(!e||"object"!=typeof e)return(0,n.R)(3);if(!t||"object"!=typeof t)return(0,n.R)(4);const r=Object.create(Object.getPrototypeOf(t),Object.getOwnPropertyDescriptors(t)),o=0===Object.keys(r).length?e:r;for(let a in o)if(void 0!==e[a])try{if(null===e[a]){r[a]=null;continue}Array.isArray(e[a])&&Array.isArray(t[a])?r[a]=Array.from(new Set([...e[a],...t[a]])):"object"==typeof e[a]&&"object"==typeof t[a]?r[a]=i(e[a],t[a]):r[a]=e[a]}catch(e){(0,n.R)(1,e)}return r}catch(e){(0,n.R)(2,e)}}},2555:(e,t,r)=>{"use strict";r.d(t,{Vp:()=>c,fn:()=>s,x1:()=>u});var n=r(384),i=r(8122);const o={beacon:n.NT.beacon,errorBeacon:n.NT.errorBeacon,licenseKey:void 0,applicationID:void 0,sa:void 0,queueTime:void 0,applicationTime:void 0,ttGuid:void 0,user:void 0,account:void 0,product:void 0,extra:void 0,jsAttributes:{},userAttributes:void 0,atts:void 0,transactionName:void 0,tNamePlain:void 0},a={};function s(e){try{const t=c(e);return!!t.licenseKey&&!!t.errorBeacon&&!!t.applicationID}catch(e){return!1}}function c(e){if(!e)throw new Error("All info objects require an agent identifier!");if(!a[e])throw new Error("Info for ".concat(e," was never set"));return a[e]}function u(e,t){if(!e)throw new Error("All info objects require an agent identifier!");a[e]=(0,i.a)(t,o);const r=(0,n.nY)(e);r&&(r.info=a[e])}},9417:(e,t,r)=>{"use strict";r.d(t,{D0:()=>g,gD:()=>h,xN:()=>p});var n=r(993);const i=e=>{if(!e||"string"!=typeof e)return!1;try{document.createDocumentFragment().querySelector(e)}catch{return!1}return!0};var o=r(2614),a=r(944),s=r(384),c=r(8122);const u="[data-nr-mask]",d=()=>{const e={mask_selector:"*",block_selector:"[data-nr-block]",mask_input_options:{color:!1,date:!1,"datetime-local":!1,email:!1,month:!1,number:!1,range:!1,search:!1,tel:!1,text:!1,time:!1,url:!1,week:!1,textarea:!1,select:!1,password:!0}};return{ajax:{deny_list:void 0,block_internal:!0,enabled:!0,harvestTimeSeconds:10,autoStart:!0},distributed_tracing:{enabled:void 0,exclude_newrelic_header:void 0,cors_use_newrelic_header:void 0,cors_use_tracecontext_headers:void 0,allowed_origins:void 0},feature_flags:[],generic_events:{enabled:!0,harvestTimeSeconds:30,autoStart:!0},harvest:{tooManyRequestsDelay:60},jserrors:{enabled:!0,harvestTimeSeconds:10,autoStart:!0},logging:{enabled:!0,harvestTimeSeconds:10,autoStart:!0,level:n.p_.INFO},metrics:{enabled:!0,autoStart:!0},obfuscate:void 0,page_action:{enabled:!0},user_actions:{enabled:!0},page_view_event:{enabled:!0,autoStart:!0},page_view_timing:{enabled:!0,harvestTimeSeconds:30,autoStart:!0},privacy:{cookies_enabled:!0},proxy:{assets:void 0,beacon:void 0},session:{expiresMs:o.wk,inactiveMs:o.BB},session_replay:{autoStart:!0,enabled:!1,harvestTimeSeconds:60,preload:!1,sampling_rate:10,error_sampling_rate:100,collect_fonts:!1,inline_images:!1,fix_stylesheets:!0,mask_all_inputs:!0,get mask_text_selector(){return e.mask_selector},set mask_text_selector(t){i(t)?e.mask_selector="".concat(t,",").concat(u):""===t||null===t?e.mask_selector=u:(0,a.R)(5,t)},get block_class(){return"nr-block"},get ignore_class(){return"nr-ignore"},get mask_text_class(){return"nr-mask"},get block_selector(){return e.block_selector},set block_selector(t){i(t)?e.block_selector+=",".concat(t):""!==t&&(0,a.R)(6,t)},get mask_input_options(){return e.mask_input_options},set mask_input_options(t){t&&"object"==typeof t?e.mask_input_options={...t,password:!0}:(0,a.R)(7,t)}},session_trace:{enabled:!0,harvestTimeSeconds:10,autoStart:!0},soft_navigations:{enabled:!0,harvestTimeSeconds:10,autoStart:!0},spa:{enabled:!0,harvestTimeSeconds:10,autoStart:!0},ssl:void 0}},l={},f="All configuration objects require an agent identifier!";function g(e){if(!e)throw new Error(f);if(!l[e])throw new Error("Configuration for ".concat(e," was never set"));return l[e]}function p(e,t){if(!e)throw new Error(f);l[e]=(0,c.a)(t,d());const r=(0,s.nY)(e);r&&(r.init=l[e])}function h(e,t){if(!e)throw new Error(f);var r=g(e);if(r){for(var n=t.split("."),i=0;i<n.length-1;i++)if("object"!=typeof(r=r[n[i]]))return;r=r[n[n.length-1]]}return r}},3371:(e,t,r)=>{"use strict";r.d(t,{V:()=>f,f:()=>l});var n=r(8122),i=r(384),o=r(6154),a=r(9324);let s=0;const c={buildEnv:a.F3,distMethod:a.Xs,version:a.xv,originTime:o.WN},u={customTransaction:void 0,disabled:!1,isolatedBacklog:!1,loaderType:void 0,maxBytes:3e4,onerror:void 0,origin:""+o.gm.location,ptid:void 0,releaseIds:{},appMetadata:{},session:void 0,denyList:void 0,timeKeeper:void 0,obfuscator:void 0},d={};function l(e){if(!e)throw new Error("All runtime objects require an agent identifier!");if(!d[e])throw new Error("Runtime for ".concat(e," was never set"));return d[e]}function f(e,t){if(!e)throw new Error("All runtime objects require an agent identifier!");d[e]={...(0,n.a)(t,u),...c},Object.hasOwnProperty.call(d[e],"harvestCount")||Object.defineProperty(d[e],"harvestCount",{get:()=>++s});const r=(0,i.nY)(e);r&&(r.runtime=d[e])}},9324:(e,t,r)=>{"use strict";r.d(t,{F3:()=>i,Xs:()=>o,xv:()=>n});const n="1.268.0",i="PROD",o="CDN"},6154:(e,t,r)=>{"use strict";r.d(t,{OF:()=>c,RI:()=>i,Vr:()=>d,WN:()=>l,bv:()=>o,gm:()=>a,mw:()=>s,sb:()=>u});var n=r(1863);const i="undefined"!=typeof window&&!!window.document,o="undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self.navigator instanceof WorkerNavigator||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis.navigator instanceof WorkerNavigator),a=i?window:"undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis),s=Boolean("hidden"===a?.document?.visibilityState),c=/iPad|iPhone|iPod/.test(a.navigator?.userAgent),u=c&&"undefined"==typeof SharedWorker,d=((()=>{const e=a.navigator?.userAgent?.match(/Firefox[/\s](\d+\.\d+)/);Array.isArray(e)&&e.length>=2&&e[1]})(),!!a.navigator?.sendBeacon),l=Date.now()-(0,n.t)()},4777:(e,t,r)=>{"use strict";r.d(t,{J:()=>o});var n=r(944);const i={agentIdentifier:"",ee:void 0};class o{constructor(e){try{if("object"!=typeof e)return(0,n.R)(8);this.sharedContext={},Object.assign(this.sharedContext,i),Object.entries(e).forEach((([e,t])=>{Object.keys(i).includes(e)&&(this.sharedContext[e]=t)}))}catch(e){(0,n.R)(9,e)}}}},1687:(e,t,r)=>{"use strict";r.d(t,{Ak:()=>c,Ze:()=>l,x3:()=>u});var n=r(7836),i=r(3606),o=r(860),a=r(2646);const s={};function c(e,t){const r={staged:!1,priority:o.P[t]||0};d(e),s[e].get(t)||s[e].set(t,r)}function u(e,t){e&&s[e]&&(s[e].get(t)&&s[e].delete(t),g(e,t,!1),s[e].size&&f(e))}function d(e){if(!e)throw new Error("agentIdentifier required");s[e]||(s[e]=new Map)}function l(e="",t="feature",r=!1){if(d(e),!e||!s[e].get(t)||r)return g(e,t);s[e].get(t).staged=!0,f(e)}function f(e){const t=Array.from(s[e]);t.every((([e,t])=>t.staged))&&(t.sort(((e,t)=>e[1].priority-t[1].priority)),t.forEach((([t])=>{s[e].delete(t),g(e,t)})))}function g(e,t,r=!0){const o=e?n.ee.get(e):n.ee,s=i.i.handlers;if(!o.aborted&&o.backlog&&s){if(r){const e=o.backlog[t],r=s[t];if(r){for(let t=0;e&&t<e.length;++t)p(e[t],r);Object.entries(r).forEach((([e,t])=>{Object.values(t||{}).forEach((t=>{t[0]?.on&&t[0]?.context()instanceof a.y&&t[0].on(e,t[1])}))}))}}o.isolatedBacklog||delete s[t],o.backlog[t]=null,o.emit("drain-"+t,[])}}function p(e,t){var r=e[1];Object.values(t[r]||{}).forEach((t=>{var r=e[0];if(t[0]===r){var n=t[1],i=e[3],o=e[2];n.apply(i,o)}}))}},7836:(e,t,r)=>{"use strict";r.d(t,{P:()=>c,ee:()=>u});var n=r(384),i=r(8990),o=r(3371),a=r(2646),s=r(5607);const c="nr@context:".concat(s.W),u=function e(t,r){var n={},s={},d={},l=!1;try{l=16===r.length&&(0,o.f)(r).isolatedBacklog}catch(e){}var f={on:p,addEventListener:p,removeEventListener:function(e,t){var r=n[e];if(!r)return;for(var i=0;i<r.length;i++)r[i]===t&&r.splice(i,1)},emit:function(e,r,n,i,o){!1!==o&&(o=!0);if(u.aborted&&!i)return;t&&o&&t.emit(e,r,n);for(var a=g(n),c=h(e),d=c.length,l=0;l<d;l++)c[l].apply(a,r);var p=v()[s[e]];p&&p.push([f,e,r,a]);return a},get:m,listeners:h,context:g,buffer:function(e,t){const r=v();if(t=t||"feature",f.aborted)return;Object.entries(e||{}).forEach((([e,n])=>{s[n]=t,t in r||(r[t]=[])}))},abort:function(){f._aborted=!0,Object.keys(f.backlog).forEach((e=>{delete f.backlog[e]}))},isBuffering:function(e){return!!v()[s[e]]},debugId:r,backlog:l?{}:t&&"object"==typeof t.backlog?t.backlog:{},isolatedBacklog:l};return Object.defineProperty(f,"aborted",{get:()=>{let e=f._aborted||!1;return e||(t&&(e=t.aborted),e)}}),f;function g(e){return e&&e instanceof a.y?e:e?(0,i.I)(e,c,(()=>new a.y(c))):new a.y(c)}function p(e,t){n[e]=h(e).concat(t)}function h(e){return n[e]||[]}function m(t){return d[t]=d[t]||e(f,t)}function v(){return f.backlog}}(void 0,"globalEE"),d=(0,n.Zm)();d.ee||(d.ee=u)},2646:(e,t,r)=>{"use strict";r.d(t,{y:()=>n});class n{constructor(e){this.contextId=e}}},9908:(e,t,r)=>{"use strict";r.d(t,{d:()=>n,p:()=>i});var n=r(7836).ee.get("handle");function i(e,t,r,i,o){o?(o.buffer([e],i),o.emit(e,t,r)):(n.buffer([e],i),n.emit(e,t,r))}},3606:(e,t,r)=>{"use strict";r.d(t,{i:()=>o});var n=r(9908);o.on=a;var i=o.handlers={};function o(e,t,r,o){a(o||n.d,i,e,t,r)}function a(e,t,r,i,o){o||(o="feature"),e||(e=n.d);var a=t[o]=t[o]||{};(a[r]=a[r]||[]).push([e,i])}},3878:(e,t,r)=>{"use strict";function n(e,t){return{capture:e,passive:!1,signal:t}}function i(e,t,r=!1,i){window.addEventListener(e,t,n(r,i))}function o(e,t,r=!1,i){document.addEventListener(e,t,n(r,i))}r.d(t,{DD:()=>o,jT:()=>n,sp:()=>i})},5607:(e,t,r)=>{"use strict";r.d(t,{W:()=>n});const n=(0,r(9566).bz)()},9566:(e,t,r)=>{"use strict";r.d(t,{LA:()=>s,bz:()=>a});var n=r(6154);const i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx";function o(e,t){return e?15&e[t]:16*Math.random()|0}function a(){const e=n.gm?.crypto||n.gm?.msCrypto;let t,r=0;return e&&e.getRandomValues&&(t=e.getRandomValues(new Uint8Array(30))),i.split("").map((e=>"x"===e?o(t,r++).toString(16):"y"===e?(3&o()|8).toString(16):e)).join("")}function s(e){const t=n.gm?.crypto||n.gm?.msCrypto;let r,i=0;t&&t.getRandomValues&&(r=t.getRandomValues(new Uint8Array(e)));const a=[];for(var s=0;s<e;s++)a.push(o(r,i++).toString(16));return a.join("")}},2614:(e,t,r)=>{"use strict";r.d(t,{BB:()=>a,H3:()=>n,g:()=>u,iL:()=>c,tS:()=>s,uh:()=>i,wk:()=>o});const n="NRBA",i="SESSION",o=144e5,a=18e5,s={STARTED:"session-started",PAUSE:"session-pause",RESET:"session-reset",RESUME:"session-resume",UPDATE:"session-update"},c={SAME_TAB:"same-tab",CROSS_TAB:"cross-tab"},u={OFF:0,FULL:1,ERROR:2}},1863:(e,t,r)=>{"use strict";function n(){return Math.floor(performance.now())}r.d(t,{t:()=>n})},944:(e,t,r)=>{"use strict";function n(e,t){"function"==typeof console.debug&&console.debug("New Relic Warning: https://github.com/newrelic/newrelic-browser-agent/blob/main/docs/warning-codes.md#".concat(e),t)}r.d(t,{R:()=>n})},5284:(e,t,r)=>{"use strict";r.d(t,{t:()=>c,B:()=>s});var n=r(7836),i=r(6154);const o="newrelic";const a=new Set,s={};function c(e,t){const r=n.ee.get(t);s[t]??={},e&&"object"==typeof e&&(a.has(t)||(r.emit("rumresp",[e]),s[t]=e,a.add(t),function(e={}){try{i.gm.dispatchEvent(new CustomEvent(o,{detail:e}))}catch(e){}}({loaded:!0})))}},8990:(e,t,r)=>{"use strict";r.d(t,{I:()=>i});var n=Object.prototype.hasOwnProperty;function i(e,t,r){if(n.call(e,t))return e[t];var i=r();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:i,writable:!0,enumerable:!1}),i}catch(e){}return e[t]=i,i}},6389:(e,t,r)=>{"use strict";function n(e,t=500,r={}){const n=r?.leading||!1;let i;return(...r)=>{n&&void 0===i&&(e.apply(this,r),i=setTimeout((()=>{i=clearTimeout(i)}),t)),n||(clearTimeout(i),i=setTimeout((()=>{e.apply(this,r)}),t))}}function i(e){let t=!1;return(...r)=>{t||(t=!0,e.apply(this,r))}}r.d(t,{J:()=>i,s:()=>n})},5289:(e,t,r)=>{"use strict";r.d(t,{GG:()=>o,sB:()=>a});var n=r(3878);function i(){return"undefined"==typeof document||"complete"===document.readyState}function o(e,t){if(i())return e();(0,n.sp)("load",e,t)}function a(e){if(i())return e();(0,n.DD)("DOMContentLoaded",e)}},384:(e,t,r)=>{"use strict";r.d(t,{NT:()=>o,US:()=>d,Zm:()=>a,bQ:()=>c,dV:()=>s,nY:()=>u,pV:()=>l});var n=r(6154),i=r(1863);const o={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net"};function a(){return n.gm.NREUM||(n.gm.NREUM={}),void 0===n.gm.newrelic&&(n.gm.newrelic=n.gm.NREUM),n.gm.NREUM}function s(){let e=a();return e.o||(e.o={ST:n.gm.setTimeout,SI:n.gm.setImmediate,CT:n.gm.clearTimeout,XHR:n.gm.XMLHttpRequest,REQ:n.gm.Request,EV:n.gm.Event,PR:n.gm.Promise,MO:n.gm.MutationObserver,FETCH:n.gm.fetch,WS:n.gm.WebSocket}),e}function c(e,t){let r=a();r.initializedAgents??={},t.initializedAt={ms:(0,i.t)(),date:new Date},r.initializedAgents[e]=t}function u(e){let t=a();return t.initializedAgents?.[e]}function d(e,t){a()[e]=t}function l(){return function(){let e=a();const t=e.info||{};e.info={beacon:o.beacon,errorBeacon:o.errorBeacon,...t}}(),function(){let e=a();const t=e.init||{};e.init={...t}}(),s(),function(){let e=a();const t=e.loader_config||{};e.loader_config={...t}}(),a()}},2843:(e,t,r)=>{"use strict";r.d(t,{u:()=>i});var n=r(3878);function i(e,t=!1,r,i){(0,n.DD)("visibilitychange",(function(){if(t)return void("hidden"===document.visibilityState&&e());e(document.visibilityState)}),r,i)}},3434:(e,t,r)=>{"use strict";r.d(t,{YM:()=>c});var n=r(7836),i=r(5607);const o="nr@original:".concat(i.W);var a=Object.prototype.hasOwnProperty,s=!1;function c(e,t){return e||(e=n.ee),r.inPlace=function(e,t,n,i,o){n||(n="");const a="-"===n.charAt(0);for(let s=0;s<t.length;s++){const c=t[s],u=e[c];d(u)||(e[c]=r(u,a?c+n:n,i,c,o))}},r.flag=o,r;function r(t,r,n,s,c){return d(t)?t:(r||(r=""),nrWrapper[o]=t,function(e,t,r){if(Object.defineProperty&&Object.keys)try{return Object.keys(e).forEach((function(r){Object.defineProperty(t,r,{get:function(){return e[r]},set:function(t){return e[r]=t,t}})})),t}catch(e){u([e],r)}for(var n in e)a.call(e,n)&&(t[n]=e[n])}(t,nrWrapper,e),nrWrapper);function nrWrapper(){var o,a,d,l;try{a=this,o=[...arguments],d="function"==typeof n?n(o,a):n||{}}catch(t){u([t,"",[o,a,s],d],e)}i(r+"start",[o,a,s],d,c);try{return l=t.apply(a,o)}catch(e){throw i(r+"err",[o,a,e],d,c),e}finally{i(r+"end",[o,a,l],d,c)}}}function i(r,n,i,o){if(!s||t){var a=s;s=!0;try{e.emit(r,n,i,t,o)}catch(t){u([t,r,n,i],e)}s=a}}}function u(e,t){t||(t=n.ee);try{t.emit("internal-error",e)}catch(e){}}function d(e){return!(e&&"function"==typeof e&&e.apply&&!e[o])}},993:(e,t,r)=>{"use strict";r.d(t,{ET:()=>o,p_:()=>i});var n=r(860);const i={ERROR:"ERROR",WARN:"WARN",INFO:"INFO",DEBUG:"DEBUG",TRACE:"TRACE"},o="log";n.K.logging},3969:(e,t,r)=>{"use strict";r.d(t,{TZ:()=>n,XG:()=>s,rs:()=>i,xV:()=>a,z_:()=>o});const n=r(860).K.metrics,i="sm",o="cm",a="storeSupportabilityMetrics",s="storeEventMetrics"},6630:(e,t,r)=>{"use strict";r.d(t,{T:()=>n});const n=r(860).K.pageViewEvent},782:(e,t,r)=>{"use strict";r.d(t,{T:()=>n});const n=r(860).K.pageViewTiming},6344:(e,t,r)=>{"use strict";r.d(t,{G4:()=>i});var n=r(2614);r(860).K.sessionReplay;const i={RECORD:"recordReplay",PAUSE:"pauseReplay",REPLAY_RUNNING:"replayRunning",ERROR_DURING_REPLAY:"errorDuringReplay"};n.g.ERROR,n.g.FULL,n.g.OFF},4234:(e,t,r)=>{"use strict";r.d(t,{W:()=>i});var n=r(7836);class i{constructor(e,t,r){this.agentIdentifier=e,this.aggregator=t,this.ee=n.ee.get(e),this.featureName=r,this.blocked=!1}}},7603:(e,t,r)=>{"use strict";r.d(t,{j:()=>P});var n=r(860),i=r(2555),o=r(3371),a=r(9908),s=r(7836),c=r(1687),u=r(5289),d=r(6154),l=r(944),f=r(3969),g=r(384),p=r(6344);const h=["setErrorHandler","finished","addToTrace","addRelease","addPageAction","setCurrentRouteName","setPageViewName","setCustomAttribute","interaction","noticeError","setUserId","setApplicationVersion","start",p.G4.RECORD,p.G4.PAUSE,"log","wrapLogger"],m=["setErrorHandler","finished","addToTrace","addRelease"];var v=r(1863),b=r(2614),y=r(993);var w=r(2646),R=r(3434);function A(e,t,r,n){if("object"!=typeof t||!t||"string"!=typeof r||!r||"function"!=typeof t[r])return(0,l.R)(29);const i=function(e){return(e||s.ee).get("logger")}(e),o=(0,R.YM)(i),a=new w.y(s.P);return a.level=n.level,a.customAttributes=n.customAttributes,o.inPlace(t,[r],"wrap-logger-",a),i}function x(){const e=(0,g.pV)();h.forEach((t=>{e[t]=(...r)=>function(t,...r){let n=[];return Object.values(e.initializedAgents).forEach((e=>{e&&e.api?e.exposed&&e.api[t]&&n.push(e.api[t](...r)):(0,l.R)(38,t)})),n.length>1?n:n[0]}(t,...r)}))}const E={};function _(e,t,g=!1){t||(0,c.Ak)(e,"api");const h={};var w=s.ee.get(e),R=w.get("tracer");E[e]=b.g.OFF,w.on(p.G4.REPLAY_RUNNING,(t=>{E[e]=t}));var x="api-",_=x+"ixn-";function N(t,r,n,o){const a=(0,i.Vp)(e);return null===r?delete a.jsAttributes[t]:(0,i.x1)(e,{...a,jsAttributes:{...a.jsAttributes,[t]:r}}),S(x,n,!0,o||null===r?"session":void 0)(t,r)}function T(){}h.log=function(e,{customAttributes:t={},level:r=y.p_.INFO}={}){(0,a.p)(f.xV,["API/log/called"],void 0,n.K.metrics,w),function(e,t,r={},i=y.p_.INFO){(0,a.p)(f.xV,["API/logging/".concat(i.toLowerCase(),"/called")],void 0,n.K.metrics,e),(0,a.p)(y.ET,[(0,v.t)(),t,r,i],void 0,n.K.logging,e)}(w,e,t,r)},h.wrapLogger=(e,t,{customAttributes:r={},level:i=y.p_.INFO}={})=>{(0,a.p)(f.xV,["API/wrapLogger/called"],void 0,n.K.metrics,w),A(w,e,t,{customAttributes:r,level:i})},m.forEach((e=>{h[e]=S(x,e,!0,"api")})),h.addPageAction=S(x,"addPageAction",!0,n.K.genericEvents),h.setPageViewName=function(t,r){if("string"==typeof t)return"/"!==t.charAt(0)&&(t="/"+t),(0,o.f)(e).customTransaction=(r||"http://custom.transaction")+t,S(x,"setPageViewName",!0)()},h.setCustomAttribute=function(e,t,r=!1){if("string"==typeof e){if(["string","number","boolean"].includes(typeof t)||null===t)return N(e,t,"setCustomAttribute",r);(0,l.R)(40,typeof t)}else(0,l.R)(39,typeof e)},h.setUserId=function(e){if("string"==typeof e||null===e)return N("enduser.id",e,"setUserId",!0);(0,l.R)(41,typeof e)},h.setApplicationVersion=function(e){if("string"==typeof e||null===e)return N("application.version",e,"setApplicationVersion",!1);(0,l.R)(42,typeof e)},h.start=()=>{try{(0,a.p)(f.xV,["API/start/called"],void 0,n.K.metrics,w),w.emit("manual-start-all")}catch(e){(0,l.R)(23,e)}},h[p.G4.RECORD]=function(){(0,a.p)(f.xV,["API/recordReplay/called"],void 0,n.K.metrics,w),(0,a.p)(p.G4.RECORD,[],void 0,n.K.sessionReplay,w)},h[p.G4.PAUSE]=function(){(0,a.p)(f.xV,["API/pauseReplay/called"],void 0,n.K.metrics,w),(0,a.p)(p.G4.PAUSE,[],void 0,n.K.sessionReplay,w)},h.interaction=function(e){return(new T).get("object"==typeof e?e:{})};const k=T.prototype={createTracer:function(e,t){var r={},i=this,o="function"==typeof t;return(0,a.p)(f.xV,["API/createTracer/called"],void 0,n.K.metrics,w),g||(0,a.p)(_+"tracer",[(0,v.t)(),e,r],i,n.K.spa,w),function(){if(R.emit((o?"":"no-")+"fn-start",[(0,v.t)(),i,o],r),o)try{return t.apply(this,arguments)}catch(e){const t="string"==typeof e?new Error(e):e;throw R.emit("fn-err",[arguments,this,t],r),t}finally{R.emit("fn-end",[(0,v.t)()],r)}}}};function S(e,t,r,i){return function(){return(0,a.p)(f.xV,["API/"+t+"/called"],void 0,n.K.metrics,w),i&&(0,a.p)(e+t,[(0,v.t)(),...arguments],r?null:this,i,w),r?void 0:this}}function j(){r.e(296).then(r.bind(r,8778)).then((({setAPI:t})=>{t(e),(0,c.Ze)(e,"api")})).catch((e=>{(0,l.R)(27,e),w.abort()}))}return["actionText","setName","setAttribute","save","ignore","onEnd","getContext","end","get"].forEach((e=>{k[e]=S(_,e,void 0,g?n.K.softNav:n.K.spa)})),h.setCurrentRouteName=g?S(_,"routeName",void 0,n.K.softNav):S(x,"routeName",!0,n.K.spa),h.noticeError=function(t,r){"string"==typeof t&&(t=new Error(t)),(0,a.p)(f.xV,["API/noticeError/called"],void 0,n.K.metrics,w),(0,a.p)("err",[t,(0,v.t)(),!1,r,!!E[e]],void 0,n.K.jserrors,w)},d.RI?(0,u.GG)((()=>j()),!0):j(),h}var N=r(9417),T=r(8122);const k={accountID:void 0,trustKey:void 0,agentID:void 0,licenseKey:void 0,applicationID:void 0,xpid:void 0},S={};var j=r(5284);const I=e=>{const t=e.startsWith("http");e+="/",r.p=t?e:"https://"+e};let O=!1;function P(e,t={},r,n){let{init:a,info:c,loader_config:u,runtime:l={},exposed:f=!0}=t;l.loaderType=r;const p=(0,g.pV)();c||(a=p.init,c=p.info,u=p.loader_config),(0,N.xN)(e.agentIdentifier,a||{}),function(e,t){if(!e)throw new Error("All loader-config objects require an agent identifier!");S[e]=(0,T.a)(t,k);const r=(0,g.nY)(e);r&&(r.loader_config=S[e])}(e.agentIdentifier,u||{}),c.jsAttributes??={},d.bv&&(c.jsAttributes.isWorker=!0),(0,i.x1)(e.agentIdentifier,c);const h=(0,N.D0)(e.agentIdentifier),m=[c.beacon,c.errorBeacon];O||(h.proxy.assets&&(I(h.proxy.assets),m.push(h.proxy.assets)),h.proxy.beacon&&m.push(h.proxy.beacon),x(),(0,g.US)("activatedFeatures",j.B),e.runSoftNavOverSpa&&=!0===h.soft_navigations.enabled&&h.feature_flags.includes("soft_nav")),l.denyList=[...h.ajax.deny_list||[],...h.ajax.block_internal?m:[]],l.ptid=e.agentIdentifier,(0,o.V)(e.agentIdentifier,l),e.ee=s.ee.get(e.agentIdentifier),void 0===e.api&&(e.api=_(e.agentIdentifier,n,e.runSoftNavOverSpa)),void 0===e.exposed&&(e.exposed=f),O=!0}},8374:(e,t,r)=>{r.nc=(()=>{try{return document?.currentScript?.nonce}catch(e){}return""})()},860:(e,t,r)=>{"use strict";r.d(t,{K:()=>n,P:()=>i});const n={ajax:"ajax",genericEvents:"generic_events",jserrors:"jserrors",logging:"logging",metrics:"metrics",pageAction:"page_action",pageViewEvent:"page_view_event",pageViewTiming:"page_view_timing",sessionReplay:"session_replay",sessionTrace:"session_trace",softNav:"soft_navigations",spa:"spa"},i={[n.pageViewEvent]:1,[n.pageViewTiming]:2,[n.metrics]:3,[n.jserrors]:4,[n.spa]:5,[n.ajax]:6,[n.sessionTrace]:7,[n.softNav]:8,[n.sessionReplay]:9,[n.logging]:10,[n.genericEvents]:11}}},n={};function i(e){var t=n[e];if(void 0!==t)return t.exports;var o=n[e]={exports:{}};return r[e](o,o.exports,i),o.exports}i.m=r,i.d=(e,t)=>{for(var r in t)i.o(t,r)&&!i.o(e,r)&&Object.defineProperty(e,r,{enumerable:!0,get:t[r]})},i.f={},i.e=e=>Promise.all(Object.keys(i.f).reduce(((t,r)=>(i.f[r](e,t),t)),[])),i.u=e=>"nr-rum-1.268.0.min.js",i.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),e={},t="NRBA-1.268.0.PROD:",i.l=(r,n,o,a)=>{if(e[r])e[r].push(n);else{var s,c;if(void 0!==o)for(var u=document.getElementsByTagName("script"),d=0;d<u.length;d++){var l=u[d];if(l.getAttribute("src")==r||l.getAttribute("data-webpack")==t+o){s=l;break}}if(!s){c=!0;var f={296:"sha512-XtphhqN9JN8Xh8XqCszUe523Jj1vBPITvdfi6RKJNUrVkH6ByxxZs3Vwsh8oN4nTBQNOSgz0YgjEU8uX0aXEpA=="};(s=document.createElement("script")).charset="utf-8",s.timeout=120,i.nc&&s.setAttribute("nonce",i.nc),s.setAttribute("data-webpack",t+o),s.src=r,0!==s.src.indexOf(window.location.origin+"/")&&(s.crossOrigin="anonymous"),f[a]&&(s.integrity=f[a])}e[r]=[n];var g=(t,n)=>{s.onerror=s.onload=null,clearTimeout(p);var i=e[r];if(delete e[r],s.parentNode&&s.parentNode.removeChild(s),i&&i.forEach((e=>e(n))),t)return t(n)},p=setTimeout(g.bind(null,void 0,{type:"timeout",target:s}),12e4);s.onerror=g.bind(null,s.onerror),s.onload=g.bind(null,s.onload),c&&document.head.appendChild(s)}},i.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},i.p="https://js-agent.newrelic.com/",(()=>{var e={840:0,374:0};i.f.j=(t,r)=>{var n=i.o(e,t)?e[t]:void 0;if(0!==n)if(n)r.push(n[2]);else{var o=new Promise(((r,i)=>n=e[t]=[r,i]));r.push(n[2]=o);var a=i.p+i.u(t),s=new Error;i.l(a,(r=>{if(i.o(e,t)&&(0!==(n=e[t])&&(e[t]=void 0),n)){var o=r&&("load"===r.type?"missing":r.type),a=r&&r.target&&r.target.src;s.message="Loading chunk "+t+" failed.\n("+o+": "+a+")",s.name="ChunkLoadError",s.type=o,s.request=a,n[1](s)}}),"chunk-"+t,t)}};var t=(t,r)=>{var n,o,[a,s,c]=r,u=0;if(a.some((t=>0!==e[t]))){for(n in s)i.o(s,n)&&(i.m[n]=s[n]);if(c)c(i)}for(t&&t(r);u<a.length;u++)o=a[u],i.o(e,o)&&e[o]&&e[o][0](),e[o]=0},r=self["webpackChunk:NRBA-1.268.0.PROD"]=self["webpackChunk:NRBA-1.268.0.PROD"]||[];r.forEach(t.bind(null,0)),r.push=t.bind(null,r.push.bind(r))})(),(()=>{"use strict";i(8374);var e=i(944),t=i(6344),r=i(9566);class n{agentIdentifier;constructor(e=(0,r.LA)(16)){this.agentIdentifier=e}#e(t,...r){if("function"==typeof this.api?.[t])return this.api[t](...r);(0,e.R)(35,t)}addPageAction(e,t){return this.#e("addPageAction",e,t)}setPageViewName(e,t){return this.#e("setPageViewName",e,t)}setCustomAttribute(e,t,r){return this.#e("setCustomAttribute",e,t,r)}noticeError(e,t){return this.#e("noticeError",e,t)}setUserId(e){return this.#e("setUserId",e)}setApplicationVersion(e){return this.#e("setApplicationVersion",e)}setErrorHandler(e){return this.#e("setErrorHandler",e)}finished(e){return this.#e("finished",e)}addRelease(e,t){return this.#e("addRelease",e,t)}start(e){return this.#e("start",e)}recordReplay(){return this.#e(t.G4.RECORD)}pauseReplay(){return this.#e(t.G4.PAUSE)}addToTrace(e){return this.#e("addToTrace",e)}setCurrentRouteName(e){return this.#e("setCurrentRouteName",e)}interaction(){return this.#e("interaction")}log(e,t){return this.#e("log",e,t)}wrapLogger(e,t,r){return this.#e("wrapLogger",e,t,r)}}var o=i(860),a=i(9417);const s=Object.values(o.K);function c(e){const t={};return s.forEach((r=>{t[r]=function(e,t){return!0===(0,a.gD)(t,"".concat(e,".enabled"))}(r,e)})),t}var u=i(7603);var d=i(1687),l=i(4234),f=i(5289),g=i(6154),p=i(384);const h=e=>g.RI&&!0===(0,a.gD)(e,"privacy.cookies_enabled");function m(e){return!!(0,p.dV)().o.MO&&h(e)&&!0===(0,a.gD)(e,"session_trace.enabled")}var v=i(6389);class b extends l.W{constructor(e,t,r,n=!0){super(e,t,r),this.auto=n,this.abortHandler=void 0,this.featAggregate=void 0,this.onAggregateImported=void 0,!1===(0,a.gD)(this.agentIdentifier,"".concat(this.featureName,".autoStart"))&&(this.auto=!1),this.auto?(0,d.Ak)(e,r):this.ee.on("manual-start-all",(0,v.J)((()=>{(0,d.Ak)(this.agentIdentifier,this.featureName),this.auto=!0,this.importAggregator()})))}importAggregator(t={}){if(this.featAggregate||!this.auto)return;let r;this.onAggregateImported=new Promise((e=>{r=e}));const n=async()=>{let n;try{if(h(this.agentIdentifier)){const{setupAgentSession:e}=await i.e(296).then(i.bind(i,3861));n=e(this.agentIdentifier)}}catch(t){(0,e.R)(20,t),this.ee.emit("internal-error",[t]),this.featureName===o.K.sessionReplay&&this.abortHandler?.()}try{if(!this.#t(this.featureName,n))return(0,d.Ze)(this.agentIdentifier,this.featureName),void r(!1);const{lazyFeatureLoader:e}=await i.e(296).then(i.bind(i,6103)),{Aggregate:o}=await e(this.featureName,"aggregate");this.featAggregate=new o(this.agentIdentifier,this.aggregator,t),r(!0)}catch(t){(0,e.R)(34,t),this.abortHandler?.(),(0,d.Ze)(this.agentIdentifier,this.featureName,!0),r(!1),this.ee&&this.ee.abort()}};g.RI?(0,f.GG)((()=>n()),!0):n()}#t(e,t){switch(e){case o.K.sessionReplay:return m(this.agentIdentifier)&&!!t;case o.K.sessionTrace:return!!t;default:return!0}}}var y=i(6630);class w extends b{static featureName=y.T;constructor(e,t,r=!0){super(e,t,y.T,r),this.importAggregator()}}var R=i(4777);class A extends R.J{constructor(e){super(e),this.aggregatedData={}}store(e,t,r,n,i){var o=this.getBucket(e,t,r,i);return o.metrics=function(e,t){t||(t={count:0});return t.count+=1,Object.entries(e||{}).forEach((([e,r])=>{t[e]=x(r,t[e])})),t}(n,o.metrics),o}merge(e,t,r,n,i){var o=this.getBucket(e,t,n,i);if(o.metrics){var a=o.metrics;a.count+=r.count,Object.keys(r||{}).forEach((e=>{if("count"!==e){var t=a[e],n=r[e];n&&!n.c?a[e]=x(n.t,t):a[e]=function(e,t){if(!t)return e;t.c||(t=E(t.t));return t.min=Math.min(e.min,t.min),t.max=Math.max(e.max,t.max),t.t+=e.t,t.sos+=e.sos,t.c+=e.c,t}(n,a[e])}}))}else o.metrics=r}storeMetric(e,t,r,n){var i=this.getBucket(e,t,r);return i.stats=x(n,i.stats),i}getBucket(e,t,r,n){this.aggregatedData[e]||(this.aggregatedData[e]={});var i=this.aggregatedData[e][t];return i||(i=this.aggregatedData[e][t]={params:r||{}},n&&(i.custom=n)),i}get(e,t){return t?this.aggregatedData[e]&&this.aggregatedData[e][t]:this.aggregatedData[e]}take(e){for(var t={},r="",n=!1,i=0;i<e.length;i++)t[r=e[i]]=Object.values(this.aggregatedData[r]||{}),t[r].length&&(n=!0),delete this.aggregatedData[r];return n?t:null}}function x(e,t){return null==e?function(e){e?e.c++:e={c:1};return e}(t):t?(t.c||(t=E(t.t)),t.c+=1,t.t+=e,t.sos+=e*e,e>t.max&&(t.max=e),e<t.min&&(t.min=e),t):{t:e}}function E(e){return{t:e,min:e,max:e,sos:e*e,c:1}}var _=i(9908),N=i(2843),T=i(3878),k=i(782),S=i(1863);class j extends b{static featureName=k.T;constructor(e,t,r=!0){super(e,t,k.T,r),g.RI&&((0,N.u)((()=>(0,_.p)("docHidden",[(0,S.t)()],void 0,k.T,this.ee)),!0),(0,T.sp)("pagehide",(()=>(0,_.p)("winPagehide",[(0,S.t)()],void 0,k.T,this.ee))),this.importAggregator())}}var I=i(3969);class O extends b{static featureName=I.TZ;constructor(e,t,r=!0){super(e,t,I.TZ,r),this.importAggregator()}}new class extends n{constructor(t,r){super(r),g.gm?(this.sharedAggregator=new A({agentIdentifier:this.agentIdentifier}),this.features={},(0,p.bQ)(this.agentIdentifier,this),this.desiredFeatures=new Set(t.features||[]),this.desiredFeatures.add(w),this.runSoftNavOverSpa=[...this.desiredFeatures].some((e=>e.featureName===o.K.softNav)),(0,u.j)(this,t,t.loaderType||"agent"),this.run()):(0,e.R)(21)}get config(){return{info:this.info,init:this.init,loader_config:this.loader_config,runtime:this.runtime}}run(){try{const t=c(this.agentIdentifier),r=[...this.desiredFeatures];r.sort(((e,t)=>o.P[e.featureName]-o.P[t.featureName])),r.forEach((r=>{if(!t[r.featureName]&&r.featureName!==o.K.pageViewEvent)return;if(this.runSoftNavOverSpa&&r.featureName===o.K.spa)return;if(!this.runSoftNavOverSpa&&r.featureName===o.K.softNav)return;const n=function(e){switch(e){case o.K.ajax:return[o.K.jserrors];case o.K.sessionTrace:return[o.K.ajax,o.K.pageViewEvent];case o.K.sessionReplay:return[o.K.sessionTrace];case o.K.pageViewTiming:return[o.K.pageViewEvent];default:return[]}}(r.featureName).filter((e=>!(e in this.features)));n.length>0&&(0,e.R)(36,{targetFeature:r.featureName,missingDependencies:n}),this.features[r.featureName]=new r(this.agentIdentifier,this.sharedAggregator)}))}catch(t){(0,e.R)(22,t);for(const e in this.features)this.features[e].abortHandler?.();const r=(0,p.Zm)();delete r.initializedAgents[this.agentIdentifier]?.api,delete r.initializedAgents[this.agentIdentifier]?.features,delete this.sharedAggregator;return r.ee.get(this.agentIdentifier).abort(),!1}}}({features:[w,j,O],loaderType:"lite"})})()})();</script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+
+	<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+<!-- Jetpack Site Verification Tags -->
+<meta name="google-site-verification" content="mcsC65_5fNpKGXSH8H168P4WXYHqgLP9i2ZTZW8IVXI" />
+<meta name="msvalidate.01" content="32E99892395CB9594016152EAA85A095" />
+<meta name="p:domain_verify" content="08b0faf2e66047bade1083d77f9bc2a3" />
+<meta name="yandex-verification" content="819bfd6f622a1988a064e54c34c789" />
+		<script>
+			const trackingData = {"accounts":{"omniture":null,"google_analytics":null,"google_analytics_view":null},"dimensions":{"context":"post","taxonomy":"Health","meta":"In Hurricane Helene\u2019s Wake, A \u201cCat-and-Mouse\u201d Game to Reach Trapped Patients through Choked-Off Roads, Downed Communications","date":"October 3, 2024","authors":"Talya Meyers","post_id":82788},"dimension_map":["context","taxonomy","meta","date","authors","post_id"]};
+		</script>
+		
+	<!-- This site is optimized with the Yoast SEO Premium plugin v23.6 (Yoast SEO v23.6) - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>In Hurricane Helene’s Wake, A “Cat-and-Mouse” Game to Reach Trapped Patients through Choked-Off Roads, Downed Communications | Direct Relief</title>
+	<meta name="description" content="The emergency response team, checking in on patients in a rural Florida community Wednesday morning, were worried —&nbsp;in general, of course, but about" />
+	<meta name="author" content="Talya Meyers" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:creator" content="@DirectRelief" />
+	<meta name="twitter:site" content="@DirectRelief" />
+	<meta name="twitter:label1" content="Written by" />
+	<meta name="twitter:data1" content="Talya Meyers" />
+	<meta name="twitter:label2" content="Est. reading time" />
+	<meta name="twitter:data2" content="7 minutes" />
+	<!-- / Yoast SEO Premium plugin. -->
+
+
+<link rel='dns-prefetch' href='//www.directrelief.org' />
+<link rel='dns-prefetch' href='//stats.wp.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//c0.wp.com' />
+<link rel='dns-prefetch' href='//v0.wordpress.com' />
+<link rel='dns-prefetch' href='//i0.wp.com' />
+<link rel="alternate" type="application/rss+xml" title="Direct Relief &raquo; Feed" href="https://www.directrelief.org/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Direct Relief &raquo; Comments Feed" href="https://www.directrelief.org/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Direct Relief &raquo; Stories Feed" href="https://www.directrelief.org/web-stories/feed/"><script type="text/javascript">
+/* <![CDATA[ */
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.directrelief.org\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.6.1"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83d\udc26\u200d\u2b1b","\ud83d\udc26\u200b\u2b1b")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+/* ]]> */
+</script>
+<style id='wp-emoji-styles-inline-css' type='text/css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link rel='stylesheet' id='wp-block-library-css' href='https://c0.wp.com/c/6.6.1/wp-includes/css/dist/block-library/style.min.css' type='text/css' media='all' />
+<style id='co-authors-plus-coauthors-style-inline-css' type='text/css'>
+.wp-block-co-authors-plus-coauthors.is-layout-flow [class*=wp-block-co-authors-plus]{display:inline}
+
+</style>
+<style id='co-authors-plus-avatar-style-inline-css' type='text/css'>
+.wp-block-co-authors-plus-avatar :where(img){height:auto;max-width:100%;vertical-align:bottom}.wp-block-co-authors-plus-coauthors.is-layout-flow .wp-block-co-authors-plus-avatar :where(img){vertical-align:middle}.wp-block-co-authors-plus-avatar:is(.alignleft,.alignright){display:table}.wp-block-co-authors-plus-avatar.aligncenter{display:table;margin-inline:auto}
+
+</style>
+<style id='co-authors-plus-image-style-inline-css' type='text/css'>
+.wp-block-co-authors-plus-image{margin-bottom:0}.wp-block-co-authors-plus-image :where(img){height:auto;max-width:100%;vertical-align:bottom}.wp-block-co-authors-plus-coauthors.is-layout-flow .wp-block-co-authors-plus-image :where(img){vertical-align:middle}.wp-block-co-authors-plus-image:is(.alignfull,.alignwide) :where(img){width:100%}.wp-block-co-authors-plus-image:is(.alignleft,.alignright){display:table}.wp-block-co-authors-plus-image.aligncenter{display:table;margin-inline:auto}
+
+</style>
+<link rel='stylesheet' id='mediaelement-css' href='https://c0.wp.com/c/6.6.1/wp-includes/js/mediaelement/mediaelementplayer-legacy.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-mediaelement-css' href='https://c0.wp.com/c/6.6.1/wp-includes/js/mediaelement/wp-mediaelement.min.css' type='text/css' media='all' />
+<style id='jetpack-sharing-buttons-style-inline-css' type='text/css'>
+.jetpack-sharing-buttons__services-list{display:flex;flex-direction:row;flex-wrap:wrap;gap:0;list-style-type:none;margin:5px;padding:0}.jetpack-sharing-buttons__services-list.has-small-icon-size{font-size:12px}.jetpack-sharing-buttons__services-list.has-normal-icon-size{font-size:16px}.jetpack-sharing-buttons__services-list.has-large-icon-size{font-size:24px}.jetpack-sharing-buttons__services-list.has-huge-icon-size{font-size:36px}@media print{.jetpack-sharing-buttons__services-list{display:none!important}}.editor-styles-wrapper .wp-block-jetpack-sharing-buttons{gap:0;padding-inline-start:0}ul.jetpack-sharing-buttons__services-list.has-background{padding:1.25em 2.375em}
+</style>
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 12px;--wp--preset--font-size--medium: 16px;--wp--preset--font-size--large: 21px;--wp--preset--font-size--x-large: 42px;--wp--preset--font-size--normal: 18px;--wp--preset--font-size--huge: 36px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='dr-global-css-css' href='https://www.directrelief.org/wp-content/themes/directrelief-2021/client/build/css/global.min.css?ver=6d4f592204c284dec8df' type='text/css' media='all' />
+<link crossorigin="anonymous" rel='stylesheet' id='dr-google-fonts-css' href='https://fonts.googleapis.com/css2?family=Roboto%3Aital%2Cwght%400%2C300%3B0%2C400%3B0%2C500%3B0%2C700%3B1%2C300%3B1%2C400%3B1%2C500%3B1%2C700&#038;display=swap&#038;ver=1.0' type='text/css' media='all' />
+<link rel='stylesheet' id='dr-search-datepicker-css' href='https://www.directrelief.org/wp-content/themes/directrelief-2021/client/src/css/jquery-ui.min.css?ver=1.0' type='text/css' media='all' />
+<script type="text/javascript" src="https://c0.wp.com/c/6.6.1/wp-includes/js/jquery/jquery.min.js" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://c0.wp.com/c/6.6.1/wp-includes/js/jquery/jquery-migrate.min.js" id="jquery-migrate-js"></script>
+<link rel="https://api.w.org/" href="https://www.directrelief.org/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://www.directrelief.org/wp-json/wp/v2/posts/82788" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.directrelief.org/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.6.1" />
+<meta name="generator" content="Seriously Simple Podcasting 3.5.0" />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.directrelief.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.directrelief.org%2F2024%2F10%2Fin-hurricane-helenes-wake-a-cat-and-mouse-game-to-reach-trapped-patients-through-choked-off-roads-downed-communications%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.directrelief.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.directrelief.org%2F2024%2F10%2Fin-hurricane-helenes-wake-a-cat-and-mouse-game-to-reach-trapped-patients-through-choked-off-roads-downed-communications%2F&#038;format=xml" />
+
+<link rel="alternate" type="application/rss+xml" title="Podcast RSS feed" href="https://www.directrelief.org/feed/podcast" />
+
+	<style>img#wpstats{display:none}</style>
+		<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "In Hurricane Helene\u2019s Wake, A \u201cCat-and-Mouse\u201d Game to Reach Trapped Patients through Choked-Off Roads, Downed Communications",
+    "mainEntity": {
+        "@type": "NewsArticle",
+        "@id": "https://www.directrelief.org/2024/10/in-hurricane-helenes-wake-a-cat-and-mouse-game-to-reach-trapped-patients-through-choked-off-roads-downed-communications/",
+        "url": "https://www.directrelief.org/2024/10/in-hurricane-helenes-wake-a-cat-and-mouse-game-to-reach-trapped-patients-through-choked-off-roads-downed-communications/",
+        "description": "The emergency response team, checking in on patients in a rural Florida community Wednesday morning, were worried \u2014\u00a0in general, of course, but about one woman in particular. Hurricane Helene, sweeping across the southeastern U.S., had caused health crises on all sides. Providers at Oceana Community Health, Inc., a community clinic in central Florida, had spent [&hellip;]",
+        "headline": "In Hurricane Helene\u2019s Wake, A \u201cCat-and-Mouse\u201d Game to Reach Trapped Patients through Choked-Off Roads,",
+        "mainEntityOfPage": "https://www.directrelief.org/2024/10/in-hurricane-helenes-wake-a-cat-and-mouse-game-to-reach-trapped-patients-through-choked-off-roads-downed-communications/",
+        "articleSection": "Emergency",
+        "keywords": [
+            "post",
+            "Community Health",
+            "Florida",
+            "North Carolina",
+            "United States",
+            "Hurricane Helene",
+            "Hurricanes"
+        ],
+        "thumbnailUrl": "https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/IMG_4411-scaled.jpg?fit=2560%2C1440&ssl=1",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/IMG_4411-scaled.jpg?fit=2560%2C1440&ssl=1",
+            "width": 2560,
+            "height": 1440,
+            "caption": "A Footprint Project member works to install emergency energy support in North Carolina after Hurricane Helene created widespread outages. (Photo courtesy of the Footprint Project)"
+        },
+        "dateCreated": "2024-10-03T19:40:51Z",
+        "datePublished": "2024-10-03T19:40:51Z",
+        "dateModified": "2024-10-07T22:49:16Z",
+        "creator": [
+            {
+                "@type": "Person",
+                "@id": "https://www.directrelief.org/author/tmeyers/",
+                "name": "Talya Meyers",
+                "url": "https://www.directrelief.org/author/tmeyers/"
+            }
+        ],
+        "author": [
+            {
+                "@type": "Person",
+                "@id": "https://www.directrelief.org/author/tmeyers/",
+                "name": "Talya Meyers",
+                "url": "https://www.directrelief.org/author/tmeyers/"
+            }
+        ],
+        "publisher": {
+            "@type": "Organization",
+            "@id": "https://www.directrelief.org/about/"
+        }
+    },
+    "breadcrumb": {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "name": "News",
+                "item": "https://www.directrelief.org/news/",
+                "position": 1
+            },
+            {
+                "@type": "ListItem",
+                "name": "Hurricane Helene",
+                "item": "https://www.directrelief.org/emergency/hurricane-helene/",
+                "position": 2
+            },
+            {
+                "@type": "ListItem",
+                "name": "In Hurricane Helene\u2019s Wake, A \u201cCat-and-Mouse\u201d Game to Reach Trapped Patients through Choked-Off Roads, Downed Communications",
+                "item": "https://www.directrelief.org/2024/10/in-hurricane-helenes-wake-a-cat-and-mouse-game-to-reach-trapped-patients-through-choked-off-roads-downed-communications/",
+                "position": 3
+            }
+        ]
+    }
+}
+</script>
+				<script defer data-domain="directrelief.org" src="https://plausible.io/js/script.file-downloads.outbound-links.tagged-events.js"></script>
+		<script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+				<script>
+			window.dataLayer = window.dataLayer || [];
+			window.dataLayer.push({
+				'trackingData' : window.trackingData
+			});
+		</script>
+		<link rel="amphtml" href="https://www.directrelief.org/2024/10/in-hurricane-helenes-wake-a-cat-and-mouse-game-to-reach-trapped-patients-through-choked-off-roads-downed-communications/amp/">
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="In Hurricane Helene’s Wake, A “Cat-and-Mouse” Game to Reach Trapped Patients through Choked-Off Roads, Downed Communications" />
+<meta property="og:url" content="https://www.directrelief.org/2024/10/in-hurricane-helenes-wake-a-cat-and-mouse-game-to-reach-trapped-patients-through-choked-off-roads-downed-communications/" />
+<meta property="og:description" content="The emergency response team, checking in on patients in a rural Florida community Wednesday morning, were worried —&nbsp;in general, of course, but about one woman in particular. Hurricane Helene, …" />
+<meta property="article:published_time" content="2024-10-03T19:40:51+00:00" />
+<meta property="article:modified_time" content="2024-10-07T22:49:16+00:00" />
+<meta property="og:site_name" content="Direct Relief" />
+<meta property="og:image" content="https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/IMG_4411-scaled.jpg?fit=1200%2C675&#038;ssl=1" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="675" />
+<meta property="og:image:alt" content="" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:text:title" content="In Hurricane Helene’s Wake, A “Cat-and-Mouse” Game to Reach Trapped Patients through Choked-Off Roads, Downed Communications" />
+<meta name="twitter:image" content="https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/IMG_4411-scaled.jpg?fit=1200%2C675&#038;ssl=1&#038;w=640" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<!-- End Jetpack Open Graph Tags -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+					new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+				j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+				'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+			})(window,document,'script','dataLayer','GTM-W9D7FJC');</script>
+		<link rel="icon" href="https://i0.wp.com/www.directrelief.org/wp-content/uploads/2023/12/cropped-DirectRelief_Logomark_RGB.png?fit=32%2C32&#038;ssl=1" sizes="32x32" />
+<link rel="icon" href="https://i0.wp.com/www.directrelief.org/wp-content/uploads/2023/12/cropped-DirectRelief_Logomark_RGB.png?fit=192%2C192&#038;ssl=1" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://i0.wp.com/www.directrelief.org/wp-content/uploads/2023/12/cropped-DirectRelief_Logomark_RGB.png?fit=180%2C180&#038;ssl=1" />
+<meta name="msapplication-TileImage" content="https://i0.wp.com/www.directrelief.org/wp-content/uploads/2023/12/cropped-DirectRelief_Logomark_RGB.png?fit=270%2C270&#038;ssl=1" />
+
+</head>
+
+<body class="post-template-default single single-post postid-82788 single-format-standard hfeed no-sidebar">
+<!-- Critical style to prevent flash -->
+<style>
+	.republish-modal {
+		display: none;
+	}
+</style>
+<!--Republish Modal-->
+<div id="republish-modal" data-component="republish" class="republish-modal" tabindex="-1">
+	<div class="republish-modal__dialog">
+		<span class="republish-modal__close close">&times;</span>
+		<div class="republish-modal__content entry-content row">
+			<div class="copy column">
+				<h3 class="copy__title">
+					News publications and other organizations are encouraged to reuse Direct Relief-published content for free under a <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode" target="_blank">Creative Commons License (Attribution-Non-Commercial-No Derivatives 4.0 International)</a>, given the republisher complies with the requirements identified below.				</h3>
+				<div class="copy__body">
+					<p>When republishing:</p>
+					<ul>
+						<li>Include a byline with the reporter’s name and Direct Relief in the following format: &quot;Author Name, Direct Relief.&quot; If attribution in that format is not possible, include the following language at the top of the story: &quot;This story was originally published by Direct Relief.&quot;</li>
+						<li>If publishing online, please link to the original URL of the story.</li>
+						<li>Maintain any tagline at the bottom of the story.</li>
+						<li>
+							With Direct Relief&#039;s permission, news publications can make changes such as localizing the content for a particular area, using a different headline, or shortening story text. To confirm edits are acceptable, please check with Direct Relief by <a href="https://www.directrelief.org/direct-relief-content-and-republishing-policy/#form" target="_blank">clicking this link</a>.						</li>
+						<li>If new content is added to the original story — for example, a comment from a local official — a note with language to the effect of the following must be included: &quot;Additional reporting by [reporter and organization].&quot;</li>
+						<li>
+							If republished stories are shared on social media, Direct Relief appreciates being tagged in the posts:							<ul>
+								<li>Twitter (@DirectRelief)</li>
+								<li>Facebook (@DirectRelief)</li>
+								<li>Instagram (@DirectRelief)</li>
+							</ul>
+						</li>
+					</ul>
+					<p>Republishing Images:</p>
+					<p>Unless stated otherwise, images shot by Direct Relief may be republished for non-commercial purposes with proper attribution, given the republisher complies with the requirements identified below.</p>
+					<ul>
+						<li>Maintain correct caption information.</li>
+						<li>Credit the photographer and Direct Relief in the caption. For example: &quot;First and Last Name / Direct Relief.&quot;</li>
+						<li>Do not digitally alter images.</li>
+					</ul>
+					<p>
+						Direct Relief often contracts with freelance photographers who usually, but not always, allow their work to be published by Direct Relief’s media partners. Contact Direct Relief for permission to use images in which Direct Relief is not credited in the caption by <a href="https://www.directrelief.org/direct-relief-content-and-republishing-policy/#form" target="_blank">clicking here</a>.					</p>
+
+					<p>Other Requirements:</p>
+					<ul>
+						<li>Do not state or imply that donations to any third-party organization support Direct Relief&#039;s work.</li>
+						<li>Republishers may not sell Direct Relief&#039;s content.</li>
+						<li>Direct Relief&#039;s work is prohibited from populating web pages designed to improve rankings on search engines or solely to gain revenue from network-based advertisements.</li>
+						<li>
+							Advance permission is required to translate Direct Relief&#039;s stories into a language different from the original language of publication. To inquire, <a href="https://www.directrelief.org/direct-relief-content-and-republishing-policy/#form" target="_blank">contact us here</a>.						</li>
+						<li>If Direct Relief requests a change to or removal of republished Direct Relief content from a site or on-air, the republisher must comply.</li>
+					</ul>
+
+
+					<p>
+						For any additional questions about republishing Direct Relief content, please <a href="https://www.directrelief.org/direct-relief-content-and-republishing-policy/#form" target="_blank">email the team here</a>.					</p>
+				</div>
+			</div>
+			<div class="republish-content column">
+								<textarea readonly id="republish-text-area" class="republish-text-area form-control" aria-hidden="true" tabindex="-1" rows="10"><h1>In Hurricane Helene's Wake, A "Cat-and-Mouse" Game to Reach Trapped Patients through Choked-Off Roads, Downed Communications</h1> <p>By Talya Meyers</p> <p>The emergency response team, checking in on patients in a rural Florida community Wednesday morning, were worried â in general, of course, but about one woman in particular.</p> <p>Hurricane Helene, sweeping across the southeastern U.S., had caused health crises on all sides. Providers at Oceana Community Health, Inc., a community clinic in central Florida, had spent the last few days on the road in a mobile medical unit, setting up mobile clinics in hard-hit communities throughout the area.</p> <p>Everywhere they went, people â some of them established patients at the clinic, some of them strangers â showed up in urgent need of insulin or other chronic disease medications, said Dr. Youssef Motii, Oceana's executive director. People without electricity to power their medical devices were experiencing acute respiratory symptoms. Patients who had been recovering from existing wounds had walked through contaminated floodwaters. Water-borne infections were on the rise.</p> <p>Oceana's emergency response specialists went out to look for some of their most vulnerable patients on foot. Once they found them, Dr. Motii explained, they'd connect to a physician via satellite to assess needs and treatments.</p> <p>One patient â an unhoused woman who'd survived a series of diabetic emergencies and was working diligently with Oceana's staff to improve her blood sugar levels â wasn't where they thought she'd be. On Wednesday morning, emergency responders came across her belongings â including storm-damaged insulin.</p> <p>When Dr. Motii spoke to Direct Relief on Wednesday afternoon, the patient had been found only three hours before. She was safe, and carrying a cooler she'd purchased at a gas station and filled with ice â to keep her remaining insulin cold. Seeing their patient alive and well, and witnessing her determination to keep her diabetes under control in the face of catastrophe, was a triumph for Oceana's staff.</p> <h3>Beyond “The Hub”</h3> <p>Across Helene's devastating path, community health providers and emergency responders have similar stories to share.</p> <p>They talk about the people they encounter who weren't able to evacuate, or who can't reach the community hubs where necessities like water, food, and hygiene items are being offered. They go where officials and community leaders tell them the need is most urgent â although, as Dr. Motii said, it's often a "cat-and-mouse game" to find paths through flooded, mud-choked, or debris-strewn roads to rural churches or community centers.</p> <p>No matter what the news reports say or the social media pictures show when disaster strikes, "we never go in without an invitation and a request for help," said Jamie Swezey, a program director at the Footprint Project. The nonprofit, <a href="https://www.directrelief.org/2024/06/ahead-of-disaster-season-direct-relief-commits-250000-to-footprint-project-to-power-critical-health-services/">a close partner of Direct Relief</a>, provides clean energy to communities in the wake of disaster, and working with locals to determine needs and response measures is pivotal.</p> <p>In the wake of Helene, Swezey said, there's been no shortage of requests.</p> <p>Swezey and her team were in Asheville, North Carolina on Sunday morning, where the sheer scale of the devastation reminded her of 2005's Hurricane Katrina. At a technical college with working electricity, people with respiratory devices and other powered medical equipment were clustered in the lobby.</p> <p>Footprint Project had shown up to evaluate whether the site had enough power to support community members. But at the site, Swezey recalled, the fire department had just gotten a call from a local elder care facility. Their generator had gone out, and some of their residents were dependent on oxygen concentrators.</p> <p>The team supplied batteries for the concentrators, and the facility administrators said "this probably saved four people's lives today," Swezey recalled.</p> <p>But she was concerned about the widespread communications outages and the reliance on word of mouth. To keep in touch with the Footprint Project's main office in New Orleans, the team was driving periodically to the top of a hill to access cell service, so they could receive requests for aid, give logistical updates, and check in on existing projects.</p> <p>Checking in local health centers and clinics to offer energy support had been the planned next step, but Swezey had just received a request from another nursing home. Their water and power were out, but many of their residents had urgent medical needs. The Footprint Project team was planning to install an atmospheric water generator â a device that turns moisture in the air into, in this case, 100 gallons of potable water per day using solar power.</p> <p>In general, Swezey explained, large-scale disaster responses often rely on a hub model, where resources like food, water, and medical care are available at a local distribution point. "The people who are the most vulnerable during a disaster are the people who can't come to the hub and get the thing," she said.</p> <p>Her goal as a disaster responder was to reach those people.</p> <h3>"A display of bravery and character"</h3> <p>Oceana's mobile health clinic, on its rounds in Florida, had been outfitted with wound care, medications, and diagnostic equipment like an EKG for triage and evaluation. Personal care products for displaced patients, and emergency medical backpacks intended for in-the-field care, were being sent from Direct Relief headquarters.</p> <p>But Dr. Motii was clear that an emergency like Hurricane Helene takes a widespread toll â on staff and providers as well as patients.</p> <p>A second mobile medical unit had been damaged during the hurricane â punctured by a fence post that left a gaping hole, water was seeping in, and the unit wouldn't be safe until it had been painstakingly prepared. At one of Oceana's clinics, high floods had submerged and ruined medical equipment and supplies. Cold-chain medicines like insulin had been destroyed by power outages.</p> <p>Tending to the most urgent medical needs Helene had created also meant that routine care had been interrupted â a frequent outcome after natural disasters that can have negative impacts on health.</p> <p>One nurse practitioner had reported to Dr. Motii that her house was almost completely submerged by the floodwaters and family members, struggling with their own health impacts, were displaced. He was surprised when she showed up for a mobile clinic shift anyway.</p> <p>"God knows who's going to show up for these patients" if she didn't, was her reply.</p> <p>She's one of many staff who have been heavily impacted and come to work anyway, Dr. Motii reported.</p> <p>"They have prioritized patient care for those who are drastically affected," he said. "To see them showing up every day for us and for our patientsâ¦[is] such a display of bravery and character."</p> <hr> <p><em>Direct Relief has launched a large-scale response to Hurricane Helene, committing an initial $250,000 in emergency funding and sending shipments of field medic packs, tetanus vaccines, water purification tablets, and essential medications and supplies to a number of nonprofit health partners. Mobile medical units funded by Direct Relief, including Oceana’s, are providing medical care in impacted areas throughout the southeastern U.S.</em></p> <p><em>An operational overview of Direct Relief's Helene response, including the organization's Hurricane Preparedness and Safety Net Support Programs, is available <a href="https://www.directrelief.org/2024/10/a-week-in-hurricane-helenes-impacts-still-reverberate-across-multiple-states/">here</a>.</em></p> <link rel="canonical" href="https://www.directrelief.org/2024/10/in-hurricane-helenes-wake-a-cat-and-mouse-game-to-reach-trapped-patients-through-choked-off-roads-downed-communications/"><meta rel="syndication-source" href="https://www.directrelief.org/2024/10/in-hurricane-helenes-wake-a-cat-and-mouse-game-to-reach-trapped-patients-through-choked-off-roads-downed-communications/"><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "author":[{"type": "Person","@id": "https://www.directrelief.org/author/tmeyers/","name": "Talya Meyers","url": "https://www.directrelief.org/author/tmeyers/"}],"name": "In Hurricane Helene’s Wake, A “Cat-and-Mouse” Game to Reach Trapped Patients through Choked-Off Roads, Downed Communications","url": "https://www.directrelief.org/2024/10/in-hurricane-helenes-wake-a-cat-and-mouse-game-to-reach-trapped-patients-through-choked-off-roads-downed-communications/"}</script></textarea>
+				<button type="button" class="btn btn-secondary btn-sm copy-to-clip-btn" data-clipboard-target="#republish-text-area">Copy HTML</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<svg xmlns="http://www.w3.org/2000/svg" class="icon-svg-sprite">
+	<defs>
+		<symbol id="icon-right-arrow" viewBox="0 0 32 30">
+			<path fill="#FE5000" fill-rule="nonzero" d="M17.489 0l-4.836 5 6.254 6.467H0v7.069l18.907-.003-6.254 6.465L17.49 30l9.673-10L32 15.001l-4.838-5.001z"/>
+		</symbol>
+		<symbol id="icon-x" viewBox="0 0 32 32">
+			<path d="M30 24.398l-8.406-8.398 8.406-8.398-5.602-5.602-8.398 8.402-8.402-8.402-5.598 5.602 8.398 8.398-8.398 8.398 5.598 5.602 8.402-8.402 8.398 8.402z"></path>
+		</symbol>
+	</defs>
+</svg>
+<div id="page" class="site">
+	<a class="skip-link screen-reader-text" href="#content">
+		Skip to content	</a>
+
+	
+<div id="sticky-header__wrapper" class="sticky-header__wrapper" data-component="stickyHeader">
+
+	<header id="masthead" class="header-site" role="banner" data-component="siteHeader">
+
+		<div class="header-site__items">
+
+			<div class="header-site__branding">
+				<div class="header-site__title">
+					<a href="https://www.directrelief.org/">
+						<svg aria-hidden="true" tabindex="-1" width="290px" height="55px" viewBox="0 0 290 55" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>Direct Relief Logo</title>
+	<defs>
+		<polygon points="0.04125 30.877 0.04125 0.4571875 23.8449063 0.4571875 47.6485625 0.4571875 47.6485625 30.877"></polygon>
+	</defs>
+	<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+		<g transform="translate(-16.000000, -41.000000)">
+			<g transform="translate(16.000000, 41.000000)">
+				<g>
+					<path d="M71.462875,37.5093125 C71.462875,41.1186875 74.0416875,41.540125 76.338625,41.540125 C86.4634375,41.540125 89.788875,33.9013125 89.788875,26.915625 C89.788875,18.151375 84.1644375,11.8243125 75.1183125,11.8243125 C73.1974375,11.8243125 72.3078125,11.9645625 71.462875,12.012 L71.462875,37.5093125 Z M66.870375,15.5271875 C66.870375,11.3100625 64.6655625,11.589875 62.557,11.543125 L62.557,10.324875 C64.3864375,10.4176875 66.2591875,10.4176875 68.0879375,10.4176875 C70.0569375,10.4176875 72.7271875,10.324875 76.1976875,10.324875 C88.33825,10.324875 94.945125,18.4325625 94.945125,26.7293125 C94.945125,31.3685625 92.2274375,43.0409375 75.6325625,43.0409375 C73.2441875,43.0409375 71.0414375,42.9474375 68.839375,42.9474375 C66.7294375,42.9474375 64.6655625,42.9955625 62.557,43.0409375 L62.557,41.822 C65.3709375,41.540125 66.7294375,41.4459375 66.870375,38.259375 L66.870375,15.5271875 L66.870375,15.5271875 Z" fill="#FE5000"></path>
+					<path d="M101.233688,18.3074375 C100.015438,18.3074375 98.938125,17.182 98.938125,15.9644375 C98.938125,14.79225 100.060813,13.71425 101.233688,13.71425 C102.453313,13.71425 103.531313,14.697375 103.531313,15.9644375 C103.531313,17.230125 102.498688,18.3074375 101.233688,18.3074375 Z M96.218375,41.822 L97.1100625,41.822 C98.4231875,41.822 99.358875,41.822 99.358875,40.275125 L99.358875,27.5721875 C99.358875,25.5096875 98.6569375,25.2285 96.9230625,24.2914375 L96.9230625,23.5420625 C99.12375,22.8855 101.749313,21.995875 101.936313,21.8549375 C102.264938,21.6665625 102.546813,21.6211875 102.78125,21.6211875 C103.015,21.6211875 103.109188,21.901 103.109188,22.2770625 L103.109188,40.275125 C103.109188,41.822 104.140438,41.822 105.453563,41.822 L106.249,41.822 L106.249,43.0409375 C104.654688,43.0409375 103.015,42.9474375 101.328563,42.9474375 C99.6414375,42.9474375 97.953625,42.9955625 96.218375,43.0409375 L96.218375,41.822 L96.218375,41.822 Z" fill="#FE5000"></path>
+					<path d="M107.884563,41.822 L109.149563,41.822 C110.462,41.822 111.39975,41.822 111.39975,40.275125 L111.39975,27.104 C111.39975,25.6513125 109.665875,25.3708125 108.959812,24.9940625 L108.959812,24.2914375 C112.38425,22.8394375 114.257688,21.6211875 114.681188,21.6211875 C114.960313,21.6211875 115.103313,21.7600625 115.103313,22.2303125 L115.103313,26.4474375 L115.195438,26.4474375 C116.366938,24.619375 118.335938,21.6211875 121.19525,21.6211875 C122.36675,21.6211875 123.866188,22.4173125 123.866188,24.1044375 C123.866188,25.3708125 122.975875,26.4941875 121.663438,26.4941875 C120.21075,26.4941875 120.21075,25.3708125 118.571063,25.3708125 C117.773563,25.3708125 115.149375,26.4474375 115.149375,29.2593125 L115.149375,40.275125 C115.149375,41.822 116.08575,41.822 117.398875,41.822 L120.02375,41.822 L120.02375,43.0409375 C117.445625,42.9955625 115.476625,42.9474375 113.461563,42.9474375 C111.540688,42.9474375 109.571,42.9955625 107.884563,43.0409375 L107.884563,41.822" fill="#FE5000"></path>
+					<path d="M136.338125,28.6034375 C137.509625,28.6034375 137.65125,27.9943125 137.65125,27.432625 C137.65125,25.0415 136.198563,23.11925 133.572313,23.11925 C130.713688,23.11925 128.744688,25.2285 128.183688,28.6034375 L136.338125,28.6034375 Z M128.044125,30.1035625 C127.94925,30.525 127.94925,31.229 128.044125,32.824 C128.32325,37.2741875 131.18325,40.9316875 134.9315,40.9316875 C137.509625,40.9316875 139.524688,39.524375 141.259938,37.7911875 L141.915813,38.44775 C139.7605,41.305 137.0875,43.7449375 133.244375,43.7449375 C125.7905,43.7449375 124.293125,36.5248125 124.293125,33.526625 C124.293125,24.3381875 130.47925,21.6211875 133.761375,21.6211875 C137.558438,21.6211875 141.634625,24.01025 141.680688,28.9795 C141.680688,29.2593125 141.680688,29.5411875 141.634625,29.8216875 L141.213188,30.1035625 L128.044125,30.1035625 L128.044125,30.1035625 Z" fill="#FE5000"></path>
+					<path d="M161.50475,38.8678125 C159.2085,41.540125 156.068688,43.7449375 152.365812,43.7449375 C147.492125,43.7449375 143.0385,39.010125 143.0385,34.040875 C143.0385,27.2435625 147.912875,21.6211875 154.663437,21.6211875 C157.053875,21.6211875 160.989812,22.3691875 160.989812,24.8545 C160.989812,25.9318125 160.33325,26.915625 159.2085,26.915625 C157.238812,26.915625 157.333687,23.11925 152.928188,23.11925 C148.89875,23.11925 146.788812,27.619625 146.788812,31.180875 C146.788812,36.0105625 149.882562,40.275125 154.991375,40.275125 C157.381812,40.275125 158.929375,39.430875 160.709313,38.0730625 L161.50475,38.8678125" fill="#FE5000"></path>
+					<path d="M168.7675,37.2741875 C168.7675,40.3693125 170.456687,41.2121875 171.723062,41.2121875 C172.988062,41.2121875 173.925125,40.79075 175.003125,39.8523125 L175.705062,40.555625 C174.065375,42.2434375 172.002875,43.7449375 169.472187,43.7449375 C166.471937,43.7449375 165.019937,42.1485625 165.019937,39.3834375 L165.019937,24.8545 L161.926187,24.8545 L161.926187,24.1044375 C164.362687,22.2303125 165.816063,21.338625 168.2065,17.5429375 L168.7675,17.5429375 L168.7675,22.3224375 L175.753187,22.3224375 L175.753187,24.8545 L168.7675,24.8545 L168.7675,37.2741875" fill="#FE5000"></path>
+					<path d="M191.786375,11.8243125 C190.614875,11.8243125 189.81875,11.9645625 188.973125,12.1055 L188.973125,25.839 C189.676438,25.9785625 190.660938,26.074125 191.456375,26.074125 C197.223813,26.074125 199.471938,22.2770625 199.471938,18.90075 C199.471938,14.823875 197.316625,11.8243125 191.786375,11.8243125 Z M188.973125,27.5721875 L188.973125,38.44775 C188.973125,41.7278125 190.755125,41.77525 193.239063,41.822 L193.239063,43.0409375 C190.990938,43.0409375 188.973125,42.9474375 186.912,42.9474375 C184.661125,42.9474375 182.459063,42.9955625 180.114688,43.0409375 L180.114688,41.822 C182.459063,41.9629375 184.380625,41.353125 184.380625,38.6815 L184.380625,14.9180625 C184.380625,11.6373125 182.6,11.589875 180.114688,11.543125 L180.114688,10.324875 C182.694188,10.3709375 184.942313,10.4176875 187.239938,10.4176875 C188.881,10.4176875 190.520688,10.324875 193.52025,10.324875 C202.380063,10.324875 204.347688,15.2920625 204.347688,18.62025 C204.347688,22.605 201.348125,25.5564375 197.692,26.635125 C201.95725,32.8700625 204.208813,36.620375 206.2225,38.8678125 C207.722625,40.555625 209.12925,41.822 211.518313,41.822 L211.518313,43.0409375 C210.3475,43.0409375 209.175313,42.9474375 208.003813,42.9474375 C206.692063,42.9474375 205.332188,42.9955625 204.019063,43.0409375 C199.753125,38.3535625 196.615375,32.8700625 193.239063,27.5721875 L188.973125,27.5721875 L188.973125,27.5721875 Z" fill="#FE5000"></path>
+					<path d="M221.878938,28.6034375 C223.0525,28.6034375 223.19275,27.9943125 223.19275,27.432625 C223.19275,25.0415 221.74075,23.11925 219.1145,23.11925 C216.2545,23.11925 214.287563,25.2285 213.723125,28.6034375 L221.878938,28.6034375 Z M213.58425,30.1035625 C213.490063,30.525 213.490063,31.229 213.58425,32.824 C213.866125,37.2741875 216.722688,40.9316875 220.473,40.9316875 C223.0525,40.9316875 225.06825,39.524375 226.802125,37.7911875 L227.458688,38.44775 C225.302688,41.305 222.628313,43.7449375 218.786563,43.7449375 C211.332688,43.7449375 209.834625,36.5248125 209.834625,33.526625 C209.834625,24.3381875 216.021438,21.6211875 219.302875,21.6211875 C223.098563,21.6211875 227.175438,24.01025 227.223563,28.9795 C227.223563,29.2593125 227.223563,29.5411875 227.175438,29.8216875 L226.753313,30.1035625 L213.58425,30.1035625 L213.58425,30.1035625 Z" fill="#FE5000"></path>
+					<path d="M228.476188,41.822 L229.3665,41.822 C230.678938,41.822 231.614625,41.822 231.614625,40.275125 L231.614625,14.168 C231.614625,11.1203125 230.913375,11.0275 229.134125,10.511875 L229.134125,9.7604375 C231.006188,9.1526875 232.975875,8.30775 233.959688,7.7474375 C234.475313,7.464875 234.85,7.2304375 234.990938,7.2304375 C235.27075,7.2304375 235.365625,7.511625 235.365625,7.885625 L235.365625,40.275125 C235.365625,41.822 236.396188,41.822 237.710688,41.822 L238.506125,41.822 L238.506125,43.0409375 C236.9125,43.0409375 235.27075,42.9474375 233.585,42.9474375 C231.898563,42.9474375 230.21075,42.9955625 228.476188,43.0409375 L228.476188,41.822" fill="#FE5000"></path>
+					<path d="M245.4375,18.3074375 C244.21925,18.3074375 243.141938,17.182 243.141938,15.9644375 C243.141938,14.79225 244.266688,13.71425 245.4375,13.71425 C246.657125,13.71425 247.734438,14.697375 247.734438,15.9644375 C247.734438,17.230125 246.7025,18.3074375 245.4375,18.3074375 Z M240.422188,41.822 L241.311813,41.822 C242.626313,41.822 243.562,41.822 243.562,40.275125 L243.562,27.5721875 C243.562,25.5096875 242.860063,25.2285 241.126188,24.2914375 L241.126188,23.5420625 C243.32825,22.8855 245.952438,21.995875 246.1415,21.8549375 C246.46875,21.6665625 246.751313,21.6211875 246.983688,21.6211875 C247.21675,21.6211875 247.311625,21.901 247.311625,22.2770625 L247.311625,40.275125 C247.311625,41.822 248.342188,41.822 249.656688,41.822 L250.452125,41.822 L250.452125,43.0409375 C248.859188,43.0409375 247.21675,42.9474375 245.531688,42.9474375 C243.843188,42.9474375 242.15675,42.9955625 240.422188,43.0409375 L240.422188,41.822 L240.422188,41.822 Z" fill="#FE5000"></path>
+					<path d="M263.207312,28.6034375 C264.377437,28.6034375 264.519062,27.9943125 264.519062,27.432625 C264.519062,25.0415 263.065688,23.11925 260.440125,23.11925 C257.583563,23.11925 255.613875,25.2285 255.0515,28.6034375 L263.207312,28.6034375 Z M254.909187,30.1035625 C254.815,30.525 254.815,31.229 254.909187,32.824 C255.189687,37.2741875 258.049688,40.9316875 261.800687,40.9316875 C264.377437,40.9316875 266.393875,39.524375 268.129125,37.7911875 L268.783625,38.44775 C266.628312,41.305 263.955312,43.7449375 260.112875,43.7449375 C252.658312,43.7449375 251.160937,36.5248125 251.160937,33.526625 C251.160937,24.3381875 257.347062,21.6211875 260.629187,21.6211875 C264.424875,21.6211875 268.503812,24.01025 268.550563,28.9795 C268.550563,29.2593125 268.550563,29.5411875 268.503812,29.8216875 L268.081,30.1035625 L254.909187,30.1035625 L254.909187,30.1035625 Z" fill="#FE5000"></path>
+					<path d="M283.593063,22.3224375 L283.593063,24.8545 L277.64,24.8545 L277.64,40.6965625 C277.64,41.822 278.8115,41.822 279.843438,41.822 L281.953375,41.822 L281.953375,43.0409375 C279.937625,42.9955625 277.968625,42.9474375 275.952875,42.9474375 C274.032,42.9474375 272.062313,42.9955625 270.140063,43.0409375 L270.140063,41.822 L271.92275,41.822 C273.656625,41.822 273.889688,41.025875 273.889688,40.3205 L273.889688,24.8545 L270.609625,24.8545 L270.609625,24.057 C271.686938,23.4025 273.889688,22.6985 273.889688,21.1041875 C273.889688,18.057875 274.733938,13.4633125 277.64,10.4644375 C280.218125,7.7928125 282.655313,7.2304375 283.312563,7.2304375 C284.108688,7.2304375 285.421813,7.4195 285.421813,9.1526875 C285.421813,10.184625 284.904813,10.9800625 283.779375,10.9800625 C282.374125,10.9800625 282.374125,10.324875 280.781188,10.324875 C277.922563,10.324875 277.64,13.6984375 277.64,15.6206875 L277.64,22.3224375 L283.593063,22.3224375" fill="#FE5000"></path>
+					<g>
+						<polyline fill="#FFA300" points="4.0239375 37.4715 3.812875 51.5515 15.494875 52.8598125 24.025375 53.73775 29.45525 53.0674375 30.699625 44.9425625 29.7715 37.9094375 29.525375 29.2909375 17.1909375 26.230875 5.00225 26.0253125 4.701125 31.161625 4.0239375 37.4715"></polyline>
+						<path d="M27.78325,25.1796875 L37.929375,23.82875 L45.8761875,23.1790625 L49.5254375,24.745875 L50.876375,37.7251875 L51.228375,44.8435625 L50.3875625,47.9689375 C50.3875625,47.9689375 44.378125,48.1408125 43.250625,48.28725 C42.1251875,48.4364375 35.1539375,48.87025 35.1539375,48.87025 L29.896625,49.5721875 C29.896625,49.5721875 27.905625,49.6464375 27.575625,47.2250625 C27.2573125,44.801625 25.636875,41.012125 25.1604375,37.0445625 C24.6681875,32.934 26.6550625,25.3323125 26.6550625,25.3323125" fill="#FFBE4C"></path>
+						<g>
+							<mask fill="white">
+								<use xlink:href="#path-1"></use>
+							</mask>
+							<g></g>
+							<path d="M21.140625,27.9241875 L29.95575,27.8636875 C29.95575,27.8636875 35.39525,27.9434375 36.64375,28.070625 C37.8846875,28.2033125 44.631125,27.9200625 44.631125,27.9200625 C44.631125,27.9200625 45.045,27.966125 45.3550625,25.0078125 C45.777875,20.9983125 45.9380625,20.340375 46.800875,15.8104375 C47.0284375,14.6238125 47.3034375,13.1580625 47.6485625,11.297 L47.3886875,5.786 L46.3051875,4.1779375 L37.7513125,1.77375 L30.28575,0.9851875 L25.311,0.4571875 L21.412875,13.501125 L22.088,21.4355625 L21.140625,27.9241875" fill="#FFA300" mask="url(#mask-2)"></path>
+							<path d="M0,6.326375 L2.9253125,5.3625 L12.133,5.3185 L20.365125,6.1895625 L25.2965625,6.714125 L25.977875,16.8568125 L26.99125,21.489875 L27.138375,28.25625 L14.0408125,29.8189375 L4.5533125,30.877 L0.45375,29.7006875 C0.45375,29.7006875 0.5314375,24.7493125 0.3004375,22.9356875 C0.0089375,20.6635 0,6.326375 0,6.326375" fill="#FE5000" mask="url(#mask-2)"></path>
+						</g>
+						<path d="M2.303125,15.2411875 C4.5794375,14.9634375 10.742875,14.6636875 15.362875,16.3955 C19.98425,18.132125 23.3660625,20.0220625 23.909875,20.9983125 C24.451625,21.9835 27.3645625,25.1865625 26.7691875,25.471875 C26.18,25.7558125 17.3999375,26.004 16.3879375,26.3395 C15.3841875,26.6770625 13.4701875,26.4900625 13.4701875,26.4900625 L8.4390625,23.1295625 L7.844375,21.7339375 L7.3871875,20.6985625 L2.303125,15.2411875" fill="#FFFFFE"></path>
+						<path d="M47.73175,10.0725625 C41.5298125,10.84325 34.684375,14.834875 33.5713125,16.0263125 C32.456875,17.210875 30.7285,20.0371875 30.160625,20.6435625 C29.0516875,21.83225 27.46975,24.3381875 29.1231875,24.1278125 C30.7800625,23.925 36.0745,22.636625 36.0745,22.636625 L42.4043125,19.5449375 C42.4043125,19.5449375 46.5623125,17.560125 43.9030625,16.421625 C42.9446875,16.0125625 48.965125,13.27425 48.965125,13.27425 L47.73175,10.0725625" fill="#FFFFFE"></path>
+						<path d="M25.0724375,16.619625 C25.0724375,16.619625 27.891875,16.5845625 28.314,17.4714375 C28.7340625,18.357625 28.890125,19.5930625 28.890125,19.5930625 L27.773625,20.6745 C27.773625,20.6745 24.376,21.093875 25.0724375,16.619625" fill="#FFFFFE"></path>
+						<polyline fill="#FFFFFE" points="20.7205625 21.894125 24.6785 25.641 26.1353125 28.76775 25.304125 32.720875 23.013375 44.5905625 22.1780625 55 25.927 45.0113125 26.96925 33.5561875 27.592125 29.805875 29.4724375 25.641 35.5073125 22.312125 27.592125 24.8105 21.9725 21.6865 20.7205625 21.894125"></polyline>
+						<path d="M31.2448125,24.43925 C31.2654375,24.5141875 27.0153125,25.1508125 21.462375,28.2019375 C20.25925,29.0874375 18.4353125,30.0636875 18.3143125,31.975625 C18.11425,34.0566875 20.9605,34.208625 22.6325,34.315875 C24.5774375,34.37775 26.60625,34.1735625 28.6061875,33.746625 C30.072625,33.6606875 33.8765625,31.8615 32.3998125,31.9364375 C28.8729375,30.639125 24.231625,33.0391875 22.3843125,35.93425 C19.9945625,39.4343125 26.213,40.21325 28.16825,38.9901875 C29.819625,37.6770625 25.009875,39.6598125 23.9930625,40.8120625 C22.19525,42.0660625 21.731875,43.080125 21.39775,43.5435 C21.1976875,43.5799375 22.0268125,40.687625 26.0761875,38.385875 C26.8021875,37.995375 28.7010625,36.6939375 29.453875,38.333625 C29.6800625,40.2538125 27.3741875,40.566625 26.059,40.7385 C24.5320625,40.781125 22.7294375,40.668375 21.3090625,39.34975 C19.7511875,37.7320625 20.8470625,35.299 22.07425,34.09725 C24.580875,31.444875 28.554625,29.3315 32.8370625,30.70925 L33.5995,31.12175 C33.8064375,31.5266875 33.6661875,30.5050625 34.15775,32.088375 L33.8834375,32.6830625 C33.427625,33.292875 32.9113125,33.5575625 32.4314375,33.801625 C31.461375,34.254 30.4830625,34.544125 29.502,34.7606875 C27.533,35.1924375 25.537875,35.402125 23.5186875,35.3794375 C21.605375,35.129875 19.215625,35.6159375 17.5291875,33.0240625 C17.0919375,29.975 19.5195,28.807625 20.986625,27.7605625 C24.4275625,25.944875 27.9131875,25.036 31.2448125,24.43925" fill="#FFFFFE"></path>
+					</g>
+					<path d="M49.6656875,6.4824375 L49.8788125,6.4824375 C50.1276875,6.4824375 50.3408125,6.3903125 50.3408125,6.1579375 C50.3408125,5.9943125 50.216375,5.8306875 49.8788125,5.8306875 C49.7805,5.8306875 49.7138125,5.8361875 49.6656875,5.8444375 L49.6656875,6.4824375 Z M49.6656875,7.5329375 L49.361125,7.5329375 L49.361125,5.6395625 C49.5165,5.616875 49.6698125,5.5941875 49.8966875,5.5941875 C50.1813125,5.5941875 50.369,5.65675 50.4810625,5.737875 C50.5965625,5.819 50.659125,5.9461875 50.659125,6.133875 C50.659125,6.38 50.4879375,6.5291875 50.2865,6.5896875 L50.2865,6.6020625 C50.450125,6.6350625 50.5635625,6.78425 50.6020625,7.066125 C50.6495,7.3583125 50.6941875,7.470375 50.7230625,7.5329375 L50.406125,7.5329375 C50.3635,7.470375 50.3174375,7.291625 50.2803125,7.046875 C50.232875,6.810375 50.1139375,6.7161875 49.8719375,6.7161875 L49.6656875,6.7161875 L49.6656875,7.5329375 Z M49.97575,5.1143125 C49.2325625,5.1143125 48.6248125,5.7536875 48.6248125,6.5484375 C48.6248125,7.35075 49.2325625,7.9839375 49.9846875,7.9839375 C50.7409375,7.9866875 51.3404375,7.35075 51.3404375,6.5525625 C51.3404375,5.7536875 50.7409375,5.1143125 49.9846875,5.1143125 L49.97575,5.1143125 Z M49.9846875,4.852375 C50.9128125,4.852375 51.64775,5.599 51.64775,6.5484375 C51.64775,7.502 50.9128125,8.2479375 49.97575,8.2479375 C49.05175,8.2479375 48.301,7.502 48.301,6.5484375 C48.301,5.599 49.05175,4.852375 49.97575,4.852375 L49.9846875,4.852375 L49.9846875,4.852375 Z" fill="#FFA300"></path>
+					<path d="M287.912625,6.4824375 L288.12575,6.4824375 C288.37325,6.4824375 288.586375,6.3903125 288.586375,6.1579375 C288.586375,5.9943125 288.463313,5.8306875 288.12575,5.8306875 C288.027438,5.8306875 287.960063,5.8361875 287.912625,5.8444375 L287.912625,6.4824375 Z M287.912625,7.5329375 L287.608063,7.5329375 L287.608063,5.6395625 C287.763438,5.616875 287.917438,5.5941875 288.142938,5.5941875 C288.42825,5.5941875 288.614563,5.65675 288.728,5.737875 C288.8435,5.8196875 288.905375,5.9461875 288.905375,6.133875 C288.905375,6.38 288.7335,6.529875 288.533438,6.5896875 L288.533438,6.6020625 C288.697063,6.6350625 288.809813,6.7849375 288.849,7.066125 C288.896438,7.3583125 288.93975,7.470375 288.97,7.5329375 L288.652375,7.5329375 C288.610438,7.470375 288.564375,7.291625 288.526563,7.046875 C288.479813,6.810375 288.360188,6.7161875 288.118188,6.7161875 L287.912625,6.7161875 L287.912625,7.5329375 Z M288.222688,5.1143125 C287.480188,5.1143125 286.87175,5.7536875 286.87175,6.5484375 C286.87175,7.3514375 287.480188,7.9839375 288.231625,7.9839375 C288.9865,7.9866875 289.586688,7.3514375 289.586688,6.5525625 C289.586688,5.7536875 288.9865,5.1143125 288.231625,5.1143125 L288.222688,5.1143125 Z M288.231625,4.852375 C289.15975,4.852375 289.894,5.599 289.894,6.5484375 C289.894,7.502 289.15975,8.2479375 288.222688,8.2479375 C287.298,8.2479375 286.546563,7.502 286.546563,6.5484375 C286.546563,5.599 287.298,4.852375 288.222688,4.852375 L288.231625,4.852375 L288.231625,4.852375 Z" fill="#FE5000"></path>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg>
+						<span class="screen-reader-only">
+							Direct Relief						</span>
+					</a>
+				</div>
+			</div>
+
+			<div class="header-site__content">
+				<div class="header-site__navigation has-nav-submenus global-header__mobile-menu-target">
+					<h2 id="site-navigation-label" class="screen-reader-only">
+						Site Navigation					</h2>
+					<div class="menu-top-2021-container"><ul id="pages-menu" class="nav--layout-header-primary"><li id="menu-item-82699" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-82699"><a href="https://www.directrelief.org/emergency/hurricanes/" id="menu-link-1">Hurricane Relief</a></li>
+<li id="menu-item-64637" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-64637"><a href="https://www.directrelief.org/work/" id="menu-link-2">Work</a>
+<div class='sub-menu'><ul class='sub-menu-container'>
+	<li id="menu-item-64641" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-64641"><a href="https://www.directrelief.org/work/" id="menu-link-3">What Direct Relief Does</a></li>
+	<li id="menu-item-60859" class="menu-item menu-item-type-post_type menu-item-object-landing-page menu-item-has-children menu-item-60859"><a href="https://www.directrelief.org/emergency/" id="menu-link-4">Disaster Relief</a>
+	<ul>
+		<li id="menu-item-81986" class="menu-item menu-item-type-taxonomy menu-item-object-response current-post-ancestor current-menu-parent current-post-parent menu-item-81986"><a href="https://www.directrelief.org/emergency/hurricanes/" id="menu-link-5">Hurricanes Helene and Milton Relief</a></li>
+		<li id="menu-item-81987" class="menu-item menu-item-type-taxonomy menu-item-object-response menu-item-81987"><a href="https://www.directrelief.org/emergency/earthquakes/" id="menu-link-6">Earthquake Relief</a></li>
+		<li id="menu-item-65663" class="menu-item menu-item-type-taxonomy menu-item-object-response menu-item-65663"><a href="https://www.directrelief.org/emergency/ukraine-crisis/" id="menu-link-7">Ukraine Relief</a></li>
+		<li id="menu-item-73358" class="menu-item menu-item-type-taxonomy menu-item-object-response menu-item-73358"><a href="https://www.directrelief.org/emergency/wildfire/" id="menu-link-8">Wildfire Relief</a></li>
+	</ul>
+</li>
+	<li id="menu-item-60860" class="menu-item menu-item-type-post_type menu-item-object-landing-page menu-item-has-children menu-item-60860"><a href="https://www.directrelief.org/issue/" id="menu-link-9">Issues &#038; Solutions</a>
+	<ul>
+		<li id="menu-item-61668" class="menu-item menu-item-type-taxonomy menu-item-object-issue menu-item-61668"><a href="https://www.directrelief.org/issue/cold-chain/" id="menu-link-10">Cold Chain</a></li>
+		<li id="menu-item-60320" class="menu-item menu-item-type-taxonomy menu-item-object-issue menu-item-60320"><a href="https://www.directrelief.org/issue/health-equity/" id="menu-link-11">Health Equity</a></li>
+		<li id="menu-item-60323" class="menu-item menu-item-type-taxonomy menu-item-object-issue menu-item-60323"><a href="https://www.directrelief.org/issue/opioid-epidemic/" id="menu-link-12">Opioid Epidemic</a></li>
+		<li id="menu-item-61670" class="menu-item menu-item-type-taxonomy menu-item-object-issue menu-item-61670"><a href="https://www.directrelief.org/issue/resilient-power/" id="menu-link-13">Resilient Power</a></li>
+		<li id="menu-item-81988" class="menu-item menu-item-type-taxonomy menu-item-object-issue menu-item-81988"><a href="https://www.directrelief.org/issue/tribal-health/" id="menu-link-14">Tribal Health</a></li>
+	</ul>
+</li>
+	<li id="menu-item-60861" class="menu-item menu-item-type-post_type menu-item-object-landing-page menu-item-has-children menu-item-60861"><a href="https://www.directrelief.org/place/" id="menu-link-15">Places</a>
+	<ul>
+		<li id="menu-item-60330" class="menu-item menu-item-type-taxonomy menu-item-object-place menu-item-60330"><a href="https://www.directrelief.org/place/asia/" id="menu-link-16">Asia</a></li>
+		<li id="menu-item-60329" class="menu-item menu-item-type-taxonomy menu-item-object-place menu-item-60329"><a href="https://www.directrelief.org/place/africa/" id="menu-link-17">Africa</a></li>
+		<li id="menu-item-60331" class="menu-item menu-item-type-taxonomy menu-item-object-place menu-item-60331"><a href="https://www.directrelief.org/place/central-america-and-the-caribbean/" id="menu-link-18">Central America and the Caribbean</a></li>
+		<li id="menu-item-64991" class="menu-item menu-item-type-taxonomy menu-item-object-place menu-item-64991"><a href="https://www.directrelief.org/place/europe/" id="menu-link-19">Europe</a></li>
+		<li id="menu-item-64645" class="menu-item menu-item-type-taxonomy menu-item-object-place menu-item-64645"><a href="https://www.directrelief.org/place/mexico/" id="menu-link-20">Mexico</a></li>
+		<li id="menu-item-60332" class="menu-item menu-item-type-taxonomy menu-item-object-place menu-item-60332"><a href="https://www.directrelief.org/place/south-america/" id="menu-link-21">South America</a></li>
+		<li id="menu-item-64644" class="menu-item menu-item-type-taxonomy menu-item-object-place current-post-ancestor current-menu-parent current-post-parent menu-item-64644"><a href="https://www.directrelief.org/place/united-states/" id="menu-link-22">United States &#038; Territories</a></li>
+	</ul>
+</li>
+	<li id="menu-item-72972" class="menu-item menu-item-type-post_type menu-item-object-landing-page menu-item-has-children menu-item-72972"><a href="https://www.directrelief.org/product/" id="menu-link-23">Products</a>
+	<ul>
+		<li id="menu-item-76578" class="menu-item menu-item-type-taxonomy menu-item-object-product menu-item-76578"><a href="https://www.directrelief.org/product/emergency-medical-pack/" id="menu-link-24">Emergency Medical Pack</a></li>
+		<li id="menu-item-60334" class="menu-item menu-item-type-taxonomy menu-item-object-product menu-item-has-children menu-item-60334"><a href="https://www.directrelief.org/product/maps/" id="menu-link-25">Maps</a>
+		<ul>
+			<li id="menu-item-60336" class="menu-item menu-item-type-taxonomy menu-item-object-product menu-item-60336"><a href="https://www.directrelief.org/product/california-wildfire-map/" id="menu-link-26">California Wildfire Map</a></li>
+			<li id="menu-item-60335" class="menu-item menu-item-type-taxonomy menu-item-object-product menu-item-60335"><a href="https://www.directrelief.org/product/hurricane-prep-map/" id="menu-link-27">Hurricane Prep Map</a></li>
+		</ul>
+</li>
+	</ul>
+</li>
+</ul></div>
+</li>
+<li id="menu-item-60339" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-60339"><a href="/news/" id="menu-link-28">News</a></li>
+<li id="menu-item-60340" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-60340"><a href="https://www.directrelief.org/about/" id="menu-link-29">About</a>
+<div class='sub-menu'><ul class='sub-menu-container'>
+	<li id="menu-item-60864" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-60864"><a href="https://www.directrelief.org/about/" id="menu-link-30">About Direct Relief</a>
+	<ul>
+		<li id="menu-item-64812" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-64812"><a href="https://www.directrelief.org/work/" id="menu-link-31">What We Do</a></li>
+		<li id="menu-item-64811" class="menu-item menu-item-type-post_type menu-item-object-landing-page menu-item-64811"><a href="https://www.directrelief.org/place/" id="menu-link-32">Where We Work</a></li>
+	</ul>
+</li>
+	<li id="menu-item-60344" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-60344"><a href="https://www.directrelief.org/about/charity-rating/" id="menu-link-33">Charity Ratings &#038; Awards</a>
+	<ul>
+		<li id="menu-item-60345" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-60345"><a href="https://www.directrelief.org/topic/ratings-awards/charity-navigator/" id="menu-link-34">Charity Navigator</a></li>
+	</ul>
+</li>
+	<li id="menu-item-60346" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-60346"><a href="https://www.directrelief.org/about/credentials-memberships/" id="menu-link-35">Compliance, Credentials &#038; Licenses</a></li>
+	<li id="menu-item-60347" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-60347"><a href="https://www.directrelief.org/about/finance/" id="menu-link-36">Finance &#038; Policies</a></li>
+	<li id="menu-item-60348" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-60348"><a href="https://www.directrelief.org/about/history/" id="menu-link-37">History</a></li>
+	<li id="menu-item-60349" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-60349"><a href="https://www.directrelief.org/about/people/" id="menu-link-38">People</a></li>
+	<li id="menu-item-61673" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-61673"><a href="https://www.directrelief.org/contact/" id="menu-link-39">Contact</a>
+	<ul>
+		<li id="menu-item-64638" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-64638"><a href="https://www.directrelief.org/media/" id="menu-link-40">Press</a></li>
+	</ul>
+</li>
+</ul></div>
+</li>
+<li id="menu-item-60350" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-60350"><a href="https://www.directrelief.org/get-involved/" id="menu-link-41">Get Involved</a>
+<div class='sub-menu'><ul class='sub-menu-container'>
+	<li id="menu-item-60866" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-60866"><a href="https://www.directrelief.org/get-involved/" id="menu-link-42">Ways to Give</a>
+	<ul>
+		<li id="menu-item-60364" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-60364"><a href="https://www.directrelief.org/get-involved/gaming/" id="menu-link-43">Direct Relief Gaming</a></li>
+		<li id="menu-item-60354" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-60354"><a href="https://www.directrelief.org/get-involved/stock-donation/" id="menu-link-44">Donate Stock and Other Securities</a></li>
+		<li id="menu-item-63438" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-63438"><a href="https://www.directrelief.org/get-involved/donate-a-gift-from-your-ira-qualified-charitable-distribution/" id="menu-link-45">Donate from an IRA</a></li>
+		<li id="menu-item-82439" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-82439"><a href="https://www.directrelief.org/get-involved/donate-crypto/" id="menu-link-46">Donate Cryptocurrency</a></li>
+		<li id="menu-item-61671" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-61671"><a href="https://www.directrelief.org/get-involved/donation-matching/" id="menu-link-47">Employer Matching</a></li>
+		<li id="menu-item-63436" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-63436"><a href="https://www.directrelief.org/get-involved/estate-donation/the-direct-relief-legacy-society/" id="menu-link-48">Legacy Society</a></li>
+		<li id="menu-item-60363" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-60363"><a href="https://www.directrelief.org/get-involved/fundraise/" id="menu-link-49">Start a Fundraiser</a></li>
+		<li id="menu-item-77996" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-77996"><a href="https://www.directrelief.org/about/privacy-policy/#DONORPRIVACY" id="menu-link-50">Donor Privacy and Anonymous Gifts</a></li>
+	</ul>
+</li>
+	<li id="menu-item-60862" class="menu-item menu-item-type-post_type menu-item-object-landing-page menu-item-60862"><a href="https://www.directrelief.org/partnership/" id="menu-link-51">Strategic Partnerships</a></li>
+	<li id="menu-item-77995" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-77995"><a href="https://www.directrelief.org/contact/" id="menu-link-52">Contact</a></li>
+	<li id="menu-item-60352" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-60352"><a href="https://www.directrelief.org/apply/" id="menu-link-53">Apply for Assistance</a></li>
+	<li id="menu-item-64639" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-64639"><a href="https://www.directrelief.org/media/" id="menu-link-54">Press</a></li>
+	<li id="menu-item-60361" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-60361"><a href="https://www.directrelief.org/get-involved/volunteer/" id="menu-link-55">Volunteer</a></li>
+</ul></div>
+</li>
+<li id="menu-item-60365" class="special manual-menu-item-class--mobile-only menu-item menu-item-type-custom menu-item-object-custom menu-item-60365"><a href="/donate" id="menu-link-56">Donate</a></li>
+</ul></div>				</div>
+
+				<a
+					class="button-donate"
+					id="header-button-donate"
+					role="button"
+					href="https://www.directrelief.org/donate">
+					Donate				</a>
+
+				<div class="header-site__search" data-component="siteSearch">
+					<button id="header-search-toggle" class="search-form__trigger" aria-expanded="false">
+						<svg aria-hidden="true" tabindex="-1" width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+		<g transform="translate(-1246.000000, -60.000000)" fill-rule="nonzero" fill="#333333">
+			<g transform="translate(16.000000, 41.000000)">
+				<g transform="translate(713.000000, 6.000000)">
+					<path d="M528.435106,23.0628931 L527.712407,23.0628931 L527.456261,22.8158948 C528.352773,21.7730132 528.89251,20.4190966 528.89251,18.946255 C528.89251,15.6620926 526.230417,13 522.946255,13 C519.662093,13 517,15.6620926 517,18.946255 C517,22.2304174 519.662093,24.89251 522.946255,24.89251 C524.419097,24.89251 525.773013,24.352773 526.815895,23.4562607 L527.062893,23.7124071 L527.062893,24.4351058 L531.636935,29 L533,27.6369354 L528.435106,23.0628931 L528.435106,23.0628931 Z M522.946255,23.0628931 C520.668382,23.0628931 518.829617,21.2241281 518.829617,18.946255 C518.829617,16.6683819 520.668382,14.8296169 522.946255,14.8296169 C525.224128,14.8296169 527.062893,16.6683819 527.062893,18.946255 C527.062893,21.2241281 525.224128,23.0628931 522.946255,23.0628931 Z"></path>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg>
+						<span class="screen-reader-only">
+							Open Search						</span>
+					</button>
+					<div id="header-search-form-container" class="search-form__container" tabindex="-1">
+						<div class="search-form__inner">
+							
+<form role="search" method="get" class="search-form search-form--context-header" action="https://www.directrelief.org/">
+	<input type="search" class="search-form__field" placeholder="Search" value="" name="s" />
+	<button class="search-form__button--submit search-form__button">
+		<svg aria-hidden="true" tabindex="-1" width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+		<g transform="translate(-1246.000000, -60.000000)" fill-rule="nonzero" fill="#333333">
+			<g transform="translate(16.000000, 41.000000)">
+				<g transform="translate(713.000000, 6.000000)">
+					<path d="M528.435106,23.0628931 L527.712407,23.0628931 L527.456261,22.8158948 C528.352773,21.7730132 528.89251,20.4190966 528.89251,18.946255 C528.89251,15.6620926 526.230417,13 522.946255,13 C519.662093,13 517,15.6620926 517,18.946255 C517,22.2304174 519.662093,24.89251 522.946255,24.89251 C524.419097,24.89251 525.773013,24.352773 526.815895,23.4562607 L527.062893,23.7124071 L527.062893,24.4351058 L531.636935,29 L533,27.6369354 L528.435106,23.0628931 L528.435106,23.0628931 Z M522.946255,23.0628931 C520.668382,23.0628931 518.829617,21.2241281 518.829617,18.946255 C518.829617,16.6683819 520.668382,14.8296169 522.946255,14.8296169 C525.224128,14.8296169 527.062893,16.6683819 527.062893,18.946255 C527.062893,21.2241281 525.224128,23.0628931 522.946255,23.0628931 Z"></path>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg>
+	</button>
+</form>
+							<button id="header-search-form-close" class="search-form__button search-form__button--close">
+								<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 42.4 42.4" style="enable-background:new 0 0 42.4 42.4;" xml:space="preserve">
+	<rect class="cls-1" x="-6.8" y="19.2" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -8.7868 21.2132)" width="56" height="4"></rect>
+	<rect class="cls-1" x="-6.8" y="19.2" transform="matrix(0.7071 0.7071 -0.7071 0.7071 21.2132 -8.7868)" width="56" height="4"></rect>
+</svg>
+								<span class="screen-reader-only">
+									Close Search								</span>
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<button class="header-site__mobile-nav-toggle global-header__mobile-menu-controller" aria-expanded="false">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 21.3"><path d="M0,21.3h32v-3.6H0V21.3z M0,12.5h32V8.9H0V12.5z M0,0v3.6h32V0H0z M0,0"/></svg>
+					<span class="screen-reader-only">
+						Toggle Menu					</span>
+				</button>
+
+			</div>
+		</div>
+	</header><!-- #masthead -->
+
+</div><!-- #sticky-header__wrapper -->
+
+	<div id="content" class="site-content">
+		<div id="primary" class="content-area">
+			<main id="main" class="site-main">
+				
+
+<article id="post-82788" class="post-82788 post type-post status-publish format-standard has-post-thumbnail hentry category-health issue-community-health place-florida place-north-carolina place-united-states response-hurricane-helene response-hurricanes">
+	<header class="entry-header">
+		<h1 class="entry-title">In Hurricane Helene’s Wake, A “Cat-and-Mouse” Game to Reach Trapped Patients through Choked-Off Roads, Downed Communications</h1><h2 class="entry-subheadline">Health providers and other emergency responders in the southeastern U.S. are on the road, searching out communities unable to access aid.</h2><div class="entry-eyebrow"><h3 class="news-eyebrow-divider"><a href="https://www.directrelief.org/news/">News</a></h3> <h3 class="primary-"><a href="https://www.directrelief.org/emergency/hurricane-helene/" class="primary--link hurricane-helene hurricanes">Hurricane Helene</a></h3></div><div class="entry-thumbnail">
+			<figure class="entry-figure"><img width="1280" height="720" src="https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/IMG_4411-scaled.jpg?resize=1280%2C720&amp;ssl=1" class="attachment-feature-large size-feature-large wp-post-image" alt="" decoding="async" fetchpriority="high" srcset="https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/IMG_4411-scaled.jpg?w=2560&amp;ssl=1 2560w, https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/IMG_4411-scaled.jpg?resize=360%2C203&amp;ssl=1 360w, https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/IMG_4411-scaled.jpg?resize=1024%2C576&amp;ssl=1 1024w, https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/IMG_4411-scaled.jpg?resize=300%2C169&amp;ssl=1 300w, https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/IMG_4411-scaled.jpg?resize=768%2C432&amp;ssl=1 768w, https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/IMG_4411-scaled.jpg?resize=1536%2C864&amp;ssl=1 1536w, https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/IMG_4411-scaled.jpg?resize=2048%2C1152&amp;ssl=1 2048w, https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/IMG_4411-scaled.jpg?resize=1280%2C720&amp;ssl=1 1280w, https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/IMG_4411-scaled.jpg?resize=850%2C478&amp;ssl=1 850w, https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/IMG_4411-scaled.jpg?resize=400%2C225&amp;ssl=1 400w, https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/IMG_4411-scaled.jpg?resize=896%2C504&amp;ssl=1 896w, https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/IMG_4411-scaled.jpg?resize=448%2C252&amp;ssl=1 448w, https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/IMG_4411-scaled.jpg?resize=948%2C533&amp;ssl=1 948w, https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/IMG_4411-scaled.jpg?resize=474%2C267&amp;ssl=1 474w, https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/IMG_4411-scaled.jpg?resize=1248%2C702&amp;ssl=1 1248w, https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/IMG_4411-scaled.jpg?resize=960%2C540&amp;ssl=1 960w, https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/IMG_4411-scaled.jpg?resize=472%2C265&amp;ssl=1 472w, https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/IMG_4411-scaled.jpg?resize=150%2C84&amp;ssl=1 150w" sizes="(max-width: 1280px) 100vw, 1280px" data-attachment-id="82791" data-permalink="" data-orig-file="https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/IMG_4411-scaled.jpg?fit=2560%2C1440&amp;ssl=1" data-orig-size="2560,1440" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;1.8&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;iPhone 14 Pro&quot;,&quot;caption&quot;:&quot;A Footprint Project member works to install emergency energy support. (Photo courtesy of the Footprint Project)&quot;,&quot;created_timestamp&quot;:&quot;1727685867&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;6.86&quot;,&quot;iso&quot;:&quot;64&quot;,&quot;shutter_speed&quot;:&quot;0.0066666666666667&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;1&quot;}" data-image-title="IMG_4411" data-image-description="" data-image-caption="&lt;p&gt;A Footprint Project member works to install emergency energy support in North Carolina after Hurricane Helene created widespread outages. (Photo courtesy of the Footprint Project)&lt;/p&gt;
+" data-medium-file="https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/IMG_4411-scaled.jpg?fit=360%2C203&amp;ssl=1" data-large-file="https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/IMG_4411-scaled.jpg?fit=1024%2C576&amp;ssl=1" tabindex="0" role="button" />
+			<figcaption class="entry-figure-caption">A Footprint Project member works to install emergency energy support in North Carolina after Hurricane Helene created widespread outages. (Photo courtesy of the Footprint Project)
+			</figcaption>
+			</figure>
+			</div>	<div class="entry-meta">
+		<div class="col1">
+			<span class="byline"> By <span class="author vcard"><a class="url fn n" href="https://www.directrelief.org/author/tmeyers/">Talya Meyers</a></span></span> <span class="post-date"><a href="https://www.directrelief.org/2024/10/in-hurricane-helenes-wake-a-cat-and-mouse-game-to-reach-trapped-patients-through-choked-off-roads-downed-communications/" rel="bookmark"><time class="entry-date published updated" datetime="2024-10-03T12:40:51-07:00">October 3, 2024 12:40 PM</time></a></span>		</div>
+		<div class="col2">
+<span class="wp-block-button is-style-orange-text republish-button"><button id="republish-modal-open" class="republish-modal-open wp-block-button__link">Republish</button></span></div>	</div>
+		</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		
+<p>The emergency response team, checking in on patients in a rural Florida community Wednesday morning, were worried —&nbsp;in general, of course, but about one woman in particular.</p>
+
+
+
+<p>Hurricane Helene, sweeping across the southeastern U.S., had caused health crises on all sides. Providers at Oceana Community Health, Inc., a community clinic in central Florida, had spent the last few days on the road in a mobile medical unit, setting up mobile clinics in hard-hit communities throughout the area.</p>
+
+
+
+<p>Everywhere they went, people —&nbsp;some of them established patients at the clinic, some of them strangers —&nbsp;showed up in urgent need of insulin or other chronic disease medications, said Dr. Youssef Motii, Oceana’s executive director. People without electricity to power their medical devices were experiencing acute respiratory symptoms. Patients who had been recovering from existing wounds had walked through contaminated floodwaters. Water-borne infections were on the rise.</p>
+
+
+
+<p>Oceana’s emergency response specialists went out to look for some of their most vulnerable patients on foot. Once they found them, Dr. Motii explained, they’d connect to a physician via satellite to assess needs and treatments.</p>
+
+
+
+<p>One patient —&nbsp;an unhoused woman who’d survived a series of diabetic emergencies and was working diligently with Oceana’s staff to improve her blood sugar levels —&nbsp;wasn’t where they thought she’d be. On Wednesday morning, emergency responders came across her belongings —&nbsp;including storm-damaged insulin.</p>
+
+
+
+<p>When Dr. Motii spoke to Direct Relief on Wednesday afternoon, the patient had been found only three hours before. She was safe, and carrying a cooler she’d purchased at a gas station and filled with ice —&nbsp;to keep her remaining insulin cold. Seeing their patient alive and well, and witnessing her determination to keep her diabetes under control in the face of catastrophe, was a triumph for Oceana’s staff.</p>
+
+
+
+<h3 class="wp-block-heading" id="h-beyond-the-hub">Beyond &#8220;The Hub&#8221;</h3>
+
+
+
+<p>Across Helene’s devastating path, community health providers and emergency responders have similar stories to share.</p>
+
+
+
+<p>They talk about the people they encounter who weren’t able to evacuate, or who can’t reach the community hubs where necessities like water, food, and hygiene items are being offered. They go where officials and community leaders tell them the need is most urgent —&nbsp;although, as Dr. Motii said, it’s often a “cat-and-mouse game” to find paths through flooded, mud-choked, or debris-strewn roads to rural churches or community centers.</p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-large"><img data-recalc-dims="1" decoding="async"   data-attachment-id="82792" data-permalink="" data-orig-file="https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/66B905E8-27E6-4935-A7E5-B2E833EDE9E1.jpg?fit=1170%2C1559&amp;ssl=1" data-orig-size="1170,1559" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;Staff at Oceana Community Health, Inc., set up disaster relief services for communities displaced by Hurricane Helene. Health screenings, medication, hygiene kits, mobile showers, and shelter coordination services were offered. (Photo courtesy of Oceana Community Health, Inc.)&quot;,&quot;created_timestamp&quot;:&quot;1727885184&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="66B905E8-27E6-4935-A7E5-B2E833EDE9E1" data-image-description="" data-image-caption="&lt;p&gt;Staff at Oceana Community Health, Inc., set up disaster relief services for communities displaced by Hurricane Helene. Health screenings, medication, hygiene kits, mobile showers, and shelter coordination services were offered. (Photo courtesy of Oceana Community Health, Inc.)&lt;/p&gt;
+" data-medium-file="https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/66B905E8-27E6-4935-A7E5-B2E833EDE9E1.jpg?fit=270%2C360&amp;ssl=1" data-large-file="https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/66B905E8-27E6-4935-A7E5-B2E833EDE9E1.jpg?fit=768%2C1024&amp;ssl=1" tabindex="0" role="button" src="https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/66B905E8-27E6-4935-A7E5-B2E833EDE9E1.jpg?ssl=1" alt="" class="wp-image-82792" srcset="https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/66B905E8-27E6-4935-A7E5-B2E833EDE9E1.jpg?resize=768%2C1023&amp;ssl=1 768w, https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/66B905E8-27E6-4935-A7E5-B2E833EDE9E1.jpg?resize=270%2C360&amp;ssl=1 270w, https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/66B905E8-27E6-4935-A7E5-B2E833EDE9E1.jpg?resize=225%2C300&amp;ssl=1 225w, https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/66B905E8-27E6-4935-A7E5-B2E833EDE9E1.jpg?resize=1153%2C1536&amp;ssl=1 1153w, https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/66B905E8-27E6-4935-A7E5-B2E833EDE9E1.jpg?resize=720%2C960&amp;ssl=1 720w, https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/66B905E8-27E6-4935-A7E5-B2E833EDE9E1.jpg?resize=504%2C672&amp;ssl=1 504w, https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/66B905E8-27E6-4935-A7E5-B2E833EDE9E1.jpg?resize=252%2C336&amp;ssl=1 252w, https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/66B905E8-27E6-4935-A7E5-B2E833EDE9E1.jpg?resize=640%2C853&amp;ssl=1 640w, https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/66B905E8-27E6-4935-A7E5-B2E833EDE9E1.jpg?resize=474%2C632&amp;ssl=1 474w, https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/66B905E8-27E6-4935-A7E5-B2E833EDE9E1.jpg?resize=237%2C316&amp;ssl=1 237w, https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/66B905E8-27E6-4935-A7E5-B2E833EDE9E1.jpg?resize=527%2C702&amp;ssl=1 527w, https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/66B905E8-27E6-4935-A7E5-B2E833EDE9E1.jpg?resize=405%2C540&amp;ssl=1 405w, https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/66B905E8-27E6-4935-A7E5-B2E833EDE9E1.jpg?resize=199%2C265&amp;ssl=1 199w, https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/66B905E8-27E6-4935-A7E5-B2E833EDE9E1.jpg?resize=150%2C200&amp;ssl=1 150w, https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/66B905E8-27E6-4935-A7E5-B2E833EDE9E1.jpg?w=1170&amp;ssl=1 1170w" sizes="(max-width: 768px) 100vw, 768px" /><figcaption class="wp-element-caption">Staff at Oceana Community Health, Inc., set up disaster relief services for communities displaced by Hurricane Helene. Health screenings, medication, hygiene kits, mobile showers, and shelter coordination services were offered. (Photo courtesy of Oceana Community Health, Inc.)</figcaption></figure></div>
+
+
+<p>No matter what the news reports say or the social media pictures show when disaster strikes, “we never go in without an invitation and a request for help,” said Jamie Swezey, a program director at the Footprint Project. The nonprofit, <a href="https://www.directrelief.org/2024/06/ahead-of-disaster-season-direct-relief-commits-250000-to-footprint-project-to-power-critical-health-services/">a close partner of Direct Relief</a>, provides clean energy to communities in the wake of disaster, and working with locals to determine needs and response measures is pivotal.</p>
+
+
+
+<p>In the wake of Helene, Swezey said, there’s been no shortage of requests.</p>
+
+
+
+<p>Swezey and her team were in Asheville, North Carolina on Sunday morning, where the sheer scale of the devastation reminded her of 2005’s Hurricane Katrina. At a technical college with working electricity, people with respiratory devices and other powered medical equipment were clustered in the lobby.</p>
+
+
+
+<p>Footprint Project had shown up to evaluate whether the site had enough power to support community members. But at the site, Swezey recalled, the fire department had just gotten a call from a local elder care facility. Their generator had gone out, and some of their residents were dependent on oxygen concentrators.</p>
+
+
+
+<p>The team supplied batteries for the concentrators, and the facility administrators said “this probably saved four people’s lives today,” Swezey recalled.</p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-large"><img data-recalc-dims="1" decoding="async"   data-attachment-id="82793" data-permalink="" data-orig-file="https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/IMG_4425-scaled.jpg?fit=2560%2C1920&amp;ssl=1" data-orig-size="2560,1920" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;1.8&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;iPhone 14 Pro&quot;,&quot;caption&quot;:&quot;Footprint Project team members evaluate a potential energy support project. (Photo courtesy of Footprint Project)&quot;,&quot;created_timestamp&quot;:&quot;1727687529&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;6.86&quot;,&quot;iso&quot;:&quot;250&quot;,&quot;shutter_speed&quot;:&quot;0.0090909090909091&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="IMG_4425" data-image-description="" data-image-caption="&lt;p&gt;Footprint Project team members evaluate a potential energy support project. (Photo courtesy of Footprint Project)&lt;/p&gt;
+" data-medium-file="https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/IMG_4425-scaled.jpg?fit=360%2C270&amp;ssl=1" data-large-file="https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/IMG_4425-scaled.jpg?fit=1024%2C768&amp;ssl=1" tabindex="0" role="button" src="https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/IMG_4425.jpg?ssl=1" alt="" class="wp-image-82793" srcset="https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/IMG_4425-scaled.jpg?resize=1024%2C768&amp;ssl=1 1024w, https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/IMG_4425-scaled.jpg?resize=360%2C270&amp;ssl=1 360w, https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/IMG_4425-scaled.jpg?resize=300%2C225&amp;ssl=1 300w, https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/IMG_4425-scaled.jpg?resize=768%2C576&amp;ssl=1 768w, https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/IMG_4425-scaled.jpg?resize=1536%2C1152&amp;ssl=1 1536w, https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/IMG_4425-scaled.jpg?resize=2048%2C1536&amp;ssl=1 2048w, https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/IMG_4425-scaled.jpg?resize=1280%2C960&amp;ssl=1 1280w, https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/IMG_4425-scaled.jpg?resize=896%2C672&amp;ssl=1 896w, https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/IMG_4425-scaled.jpg?resize=448%2C336&amp;ssl=1 448w, https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/IMG_4425-scaled.jpg?resize=1137%2C853&amp;ssl=1 1137w, https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/IMG_4425-scaled.jpg?resize=843%2C632&amp;ssl=1 843w, https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/IMG_4425-scaled.jpg?resize=421%2C316&amp;ssl=1 421w, https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/IMG_4425-scaled.jpg?resize=936%2C702&amp;ssl=1 936w, https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/IMG_4425-scaled.jpg?resize=720%2C540&amp;ssl=1 720w, https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/IMG_4425-scaled.jpg?resize=353%2C265&amp;ssl=1 353w, https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/IMG_4425-scaled.jpg?resize=150%2C113&amp;ssl=1 150w" sizes="(max-width: 1000px) 100vw, 1000px" /><figcaption class="wp-element-caption">Footprint Project team members evaluate a potential energy support project in North Carolina. (Photo courtesy of Footprint Project)</figcaption></figure></div>
+
+
+<p>But she was concerned about the widespread communications outages and the reliance on word of mouth. To keep in touch with the Footprint Project’s main office in New Orleans, the team was driving periodically to the top of a hill to access cell service, so they could receive requests for aid, give logistical updates, and check in on existing projects.</p>
+
+
+
+<p>Checking in local health centers and clinics to offer energy support had been the planned next step, but Swezey had just received a request from another nursing home. Their water and power were out, but many of their residents had urgent medical needs. The Footprint Project team was planning to install an atmospheric water generator —&nbsp;a device that turns moisture in the air into, in this case, 100 gallons of potable water per day using solar power.</p>
+
+
+
+<p>In general, Swezey explained, large-scale disaster responses often rely on a hub model, where resources like food, water, and medical care are available at a local distribution point. “The people who are the most vulnerable during a disaster are the people who can’t come to the hub and get the thing,” she said.</p>
+
+
+
+<p>Her goal as a disaster responder was to reach those people.</p>
+
+
+
+<h3 class="wp-block-heading" id="h-a-display-of-bravery-and-character">“A display of bravery and character”</h3>
+
+
+
+<p>Oceana’s mobile health clinic, on its rounds in Florida, had been outfitted with wound care, medications, and diagnostic equipment like an EKG for triage and evaluation. Personal care products for displaced patients, and emergency medical backpacks intended for in-the-field care, were being sent from Direct Relief headquarters.</p>
+
+
+
+<p>But Dr. Motii was clear that an emergency like Hurricane Helene takes a widespread toll — on staff and providers as well as patients.</p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-large"><img data-recalc-dims="1" loading="lazy" decoding="async"   data-attachment-id="82794" data-permalink="" data-orig-file="https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/F41805C0-59FA-4D77-A627-1D2964AD444C.jpg?fit=1170%2C1522&amp;ssl=1" data-orig-size="1170,1522" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;An Oceana Community Health, Inc. provider checks in with an unsheltered patient. (Photo courtesy of Oceana Community Health, Inc.)&quot;,&quot;created_timestamp&quot;:&quot;1727885173&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="F41805C0-59FA-4D77-A627-1D2964AD444C" data-image-description="" data-image-caption="&lt;p&gt;An Oceana Community Health, Inc. provider checks in with an unsheltered patient. (Photo courtesy of Oceana Community Health, Inc.)&lt;/p&gt;
+" data-medium-file="https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/F41805C0-59FA-4D77-A627-1D2964AD444C.jpg?fit=277%2C360&amp;ssl=1" data-large-file="https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/F41805C0-59FA-4D77-A627-1D2964AD444C.jpg?fit=787%2C1024&amp;ssl=1" tabindex="0" role="button" src="https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/F41805C0-59FA-4D77-A627-1D2964AD444C.jpg?ssl=1" alt="" class="wp-image-82794" srcset="https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/F41805C0-59FA-4D77-A627-1D2964AD444C.jpg?resize=787%2C1024&amp;ssl=1 787w, https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/F41805C0-59FA-4D77-A627-1D2964AD444C.jpg?resize=277%2C360&amp;ssl=1 277w, https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/F41805C0-59FA-4D77-A627-1D2964AD444C.jpg?resize=231%2C300&amp;ssl=1 231w, https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/F41805C0-59FA-4D77-A627-1D2964AD444C.jpg?resize=768%2C999&amp;ssl=1 768w, https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/F41805C0-59FA-4D77-A627-1D2964AD444C.jpg?resize=738%2C960&amp;ssl=1 738w, https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/F41805C0-59FA-4D77-A627-1D2964AD444C.jpg?resize=517%2C672&amp;ssl=1 517w, https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/F41805C0-59FA-4D77-A627-1D2964AD444C.jpg?resize=258%2C336&amp;ssl=1 258w, https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/F41805C0-59FA-4D77-A627-1D2964AD444C.jpg?resize=656%2C853&amp;ssl=1 656w, https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/F41805C0-59FA-4D77-A627-1D2964AD444C.jpg?resize=486%2C632&amp;ssl=1 486w, https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/F41805C0-59FA-4D77-A627-1D2964AD444C.jpg?resize=243%2C316&amp;ssl=1 243w, https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/F41805C0-59FA-4D77-A627-1D2964AD444C.jpg?resize=540%2C702&amp;ssl=1 540w, https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/F41805C0-59FA-4D77-A627-1D2964AD444C.jpg?resize=415%2C540&amp;ssl=1 415w, https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/F41805C0-59FA-4D77-A627-1D2964AD444C.jpg?resize=204%2C265&amp;ssl=1 204w, https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/F41805C0-59FA-4D77-A627-1D2964AD444C.jpg?resize=150%2C195&amp;ssl=1 150w, https://i0.wp.com/www.directrelief.org/wp-content/uploads/2024/10/F41805C0-59FA-4D77-A627-1D2964AD444C.jpg?w=1170&amp;ssl=1 1170w" sizes="(max-width: 787px) 100vw, 787px" /><figcaption class="wp-element-caption">An Oceana Community Health, Inc. provider checks in with an unsheltered patient. (Photo courtesy of Oceana Community Health, Inc.)</figcaption></figure></div>
+
+
+<p>A second mobile medical unit had been damaged during the hurricane —&nbsp;punctured by a fence post that left a gaping hole, water was seeping in, and the unit wouldn’t be safe until it had been painstakingly prepared. At one of Oceana’s clinics, high floods had submerged and ruined medical equipment and supplies. Cold-chain medicines like insulin had been destroyed by power outages.</p>
+
+
+
+<p>Tending to the most urgent medical needs Helene had created also meant that routine care had been interrupted —&nbsp;a frequent outcome after natural disasters that can have negative impacts on health.</p>
+
+
+
+<p>One nurse practitioner had reported to Dr. Motii that her house was almost completely submerged by the floodwaters and family members, struggling with their own health impacts, were displaced. He was surprised when she showed up for a mobile clinic shift anyway.</p>
+
+
+
+<p>“God knows who’s going to show up for these patients” if she didn’t, was her reply.</p>
+
+
+
+<p>She’s one of many staff who have been heavily impacted and come to work anyway, Dr. Motii reported.</p>
+
+
+
+<p>“They have prioritized patient care for those who are drastically affected,” he said. “To see them showing up every day for us and for our patients…[is] such a display of bravery and character.”</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p><em>Direct Relief has launched a large-scale response to Hurricane Helene, committing an initial $250,000 in emergency funding and sending shipments of field medic packs, tetanus vaccines, water purification tablets, and essential medications and supplies to a number of nonprofit health partners. Mobile medical units funded by Direct Relief, including Oceana&#8217;s, are providing medical care in impacted areas throughout the southeastern U.S.</em></p>
+
+
+
+<p><em>An operational overview of Direct Relief’s Helene response, including the organization’s Hurricane Preparedness and Safety Net Support Programs, is available <a href="https://www.directrelief.org/2024/10/a-week-in-hurricane-helenes-impacts-still-reverberate-across-multiple-states/">here</a>.</em></p>
+	</div><!-- .entry-content -->
+
+	<div class="entry-footer">
+		<div class="post__terms">
+			
+<div class="entry-footer__term-list">
+	<p>
+		Filed Under: 		<span class="term-list">
+			
+<a href="https://www.directrelief.org/issue/community-health/" rel="tag">
+	Community Health</a>, 
+<a href="https://www.directrelief.org/place/florida/" rel="tag">
+	Florida</a>, 
+<a href="https://www.directrelief.org/topic/health/" rel="tag">
+	Health</a>, 
+<a href="https://www.directrelief.org/emergency/hurricanes/" rel="tag">
+	Hurricanes</a>, 
+<a href="https://www.directrelief.org/place/north-carolina/" rel="tag">
+	North Carolina</a>, 
+<a href="https://www.directrelief.org/place/united-states/" rel="tag">
+	United States</a>		</span>
+	</p>
+</div>
+		</div>
+		<div class="post__share">
+			
+<div class="entry-footer__share">
+	<h2 class="screen-reader-text">Share this post</h2>
+	<ul class="share__inner">
+		<li class="share__tool share__tool--type-facebook">
+			<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://www.directrelief.org/2024/10/in-hurricane-helenes-wake-a-cat-and-mouse-game-to-reach-trapped-patients-through-choked-off-roads-downed-communications/">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7.27 14"><title></title><path d="M5.35,0A3.18,3.18,0,0,0,3,.86a3.25,3.25,0,0,0-.87,2.43V5.12H0V7.61H2.15V14H4.72V7.61H6.86l.33-2.49H4.72V3.53A1.39,1.39,0,0,1,5,2.62a1.24,1.24,0,0,1,1-.3H7.27V.1A13.92,13.92,0,0,0,5.35,0Z"/></svg>
+				<span class="label">Share to Facebook</span>
+			</a>
+		</li>
+		<li class="share__tool share__tool--type-linkedin">
+			<a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&#038;url=https://www.directrelief.org/2024/10/in-hurricane-helenes-wake-a-cat-and-mouse-game-to-reach-trapped-patients-through-choked-off-roads-downed-communications/">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28" tabindex="-1" aria-hidden="true"><title>LinkedIn</title><path d="M25.424 15.887v8.447h-4.896v-7.882c0-1.98-.71-3.33-2.48-3.33-1.354 0-2.158.91-2.514 1.802-.13.315-.162.753-.162 1.194v8.216h-4.9s.067-13.35 0-14.73h4.9v2.087c-.01.017-.023.033-.033.05h.032v-.05c.65-1.002 1.812-2.435 4.414-2.435 3.222 0 5.638 2.106 5.638 6.632zM5.348 2.5c-1.676 0-2.772 1.093-2.772 2.54 0 1.42 1.066 2.538 2.717 2.546h.032c1.71 0 2.77-1.132 2.77-2.546C8.056 3.593 7.02 2.5 5.344 2.5h.005zm-2.48 21.834h4.896V9.604H2.867v14.73z" /></svg>
+				<span class="label">Share to LinkedIn</span>
+			</a>
+		</li>
+		<li class="share__tool share__tool--type-email">
+			<a href="mailto:?body=In%20Hurricane%20Helene%E2%80%99s%20Wake%2C%20A%20%E2%80%9CCat-and-Mouse%E2%80%9D%20Game%20to%20Reach%20Trapped%20Patients%20through%20Choked-Off%20Roads%2C%20Downed%20Communications%0A%0Ahttps%3A%2F%2Fwww.directrelief.org%2F2024%2F10%2Fin-hurricane-helenes-wake-a-cat-and-mouse-game-to-reach-trapped-patients-through-choked-off-roads-downed-communications%2F">
+				<svg width="16px" height="10px" viewBox="0 0 16 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>Email icon</title>
+	<defs></defs>
+	<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+		<g transform="translate(-1232.000000, -323.000000)" fill-rule="nonzero" fill="#FE5000">
+			<g transform="translate(14.000000, 135.000000)">
+				<g transform="translate(1041.000000, 172.000000)">
+					<g transform="translate(177.000000, 16.000000)">
+						<path d="M8.39309804,6.26415686 L15.113098,0.331921569 C15.0679216,0.325333333 15.027451,0.304627451 14.9803922,0.304627451 L1.80392157,0.304627451 C1.7747451,0.304627451 1.75027451,0.318745098 1.72203922,0.321568627 L8.39309804,6.26415686 Z"></path>
+						<path d="M15.9215686,1.24580392 C15.9215686,1.13380392 15.8933333,1.03027451 15.8575686,0.930509804 L11.113098,5.11968627 L15.7973333,9.21756863 C15.8688627,9.08392157 15.9215686,8.93803922 15.9215686,8.77521569 L15.9215686,1.24580392 Z"></path>
+						<path d="M0.936156863,0.882509804 C0.889098039,0.994509804 0.862745098,1.11686275 0.862745098,1.24580392 L0.862745098,8.77521569 C0.862745098,8.91262745 0.895686275,9.04062745 0.948392157,9.15827451 L5.67686275,5.10462745 L0.936156863,0.882509804 Z"></path>
+						<path d="M10.4015686,5.7465098 L8.39121569,7.52156863 L6.3865098,5.73521569 L1.75498039,9.70509804 C1.77098039,9.70698039 1.78603922,9.71639216 1.80392157,9.71639216 L14.9380392,9.71639216 L10.4015686,5.7465098 Z"></path>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg>
+				<span class="label">Email</span>
+			</a>
+		</li>
+	</ul>
+</div>
+		</div>
+	</div>
+	<div class="post__related-stories">
+		
+<div class="entry-footer__related-stories">
+	
+<div class="dr-post-river-client" data-heading="Related Stories" data-heading-link="https://www.directrelief.org/emergency/hurricane-helene/" data-layout="postCarousel" data-load-more-label="See More" data-load-more-per-page="9" data-number-of-posts="3" data-page="1" data-post-data-override="[83004,82917,82961]" data-show-load-more="1" data-show-more-override="https://www.directrelief.org/emergency/hurricane-helene/" data-taxonomy-slug="" data-term-slug="" data-term-id="0"></div>
+</div>
+	</div>
+</article><!-- #post-## -->
+	<div class="entry-content">
+				
+		<div class="inline-donation-module wp-block-cover block-pattern--donation-cta has-background-dim alignfull" style="background-color:#fe5000">
+			<div class="wp-block-cover__inner-container is-layout-flow wp-block-cover-is-layout-flow">
+				
+				<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-1 wp-block-columns-is-layout-flex">
+					
+					<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+						
+						<h2 class="wp-block-heading">Giving is Good Medicine</h2>
+						
+
+						
+						<p class="is-style-sans-serif">You don&#039;t have to donate. That&#039;s why it&#039;s so extraordinary if you do.</p>
+						
+					</div>
+					
+
+					
+					<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<div class="dr-inline-donation-client" data-theme="light" data-donation-url="https://donate.directrelief.org/give/406660/#!/donation/checkout"></div>
+</div>
+					
+				</div>
+				
+			</div>
+		</div>
+		
+			</div>
+	<div class="entry-content global-modules">
+		<div class="dr-gm-the-latest">
+	
+<div class="dr-post-river-client" data-heading="The Latest " data-heading-link="https://www.directrelief.org/news/" data-layout="threeAcross" data-load-more-label="" data-load-more-per-page="9" data-number-of-posts="3" data-page="1" data-post-data-override="[]" data-show-load-more="" data-show-more-override="" data-taxonomy-slug="all" data-term-slug="" data-term-id="0"></div>
+</div>
+	</div>
+	
+<div class="dr-alerts-cta-client alignfull"></div>
+			</main>
+		</div>
+
+			</div><!-- #content -->
+</div><!-- #page -->
+
+
+<footer id="colophon" class="footer-site" role="contentinfo">
+	<div class="footer-site__row footer-site__row--position-top">
+		<div class="footer-site__wrapper">
+			<a href="https://www.directrelief.org/" class="footer-site__logo">
+				<svg aria-hidden="true" tabindex="-1" width="270" height="55" viewBox="0 0 290 55" xmlns="http://www.w3.org/2000/svg">
+  <title>
+    Direct Relief Logo  </title>
+  <g fill="none" fill-rule="evenodd">
+    <path d="M71.463 37.51c0 3.609 2.579 4.03 4.876 4.03 10.124 0 13.45-7.639 13.45-14.624 0-8.765-5.625-15.092-14.67-15.092-1.922 0-2.811.14-3.656.188v25.497zM66.87 15.526c0-4.217-2.204-3.937-4.313-3.984v-1.218c1.83.093 3.702.093 5.53.093 1.97 0 4.64-.093 8.11-.093 12.141 0 18.748 8.108 18.748 16.404 0 4.64-2.718 16.312-19.312 16.312-2.389 0-4.592-.094-6.794-.094-2.11 0-4.173.049-6.282.094v-1.219c2.814-.282 4.172-.376 4.313-3.563V15.527zM101.234 18.307c-1.219 0-2.296-1.125-2.296-2.343 0-1.172 1.123-2.25 2.296-2.25 1.22 0 2.297.983 2.297 2.25 0 1.266-1.032 2.343-2.297 2.343zm-5.016 23.515h.892c1.313 0 2.249 0 2.249-1.547V27.572c0-2.062-.702-2.343-2.436-3.28v-.75c2.2-.657 4.826-1.546 5.013-1.687.329-.188.61-.234.845-.234.234 0 .328.28.328.656v17.998c0 1.547 1.031 1.547 2.345 1.547h.795v1.219c-1.594 0-3.234-.094-4.92-.094-1.688 0-3.375.049-5.11.094v-1.219zM107.885 41.822h1.265c1.312 0 2.25 0 2.25-1.547V27.104c0-1.453-1.734-1.733-2.44-2.11v-.703c3.424-1.452 5.298-2.67 5.721-2.67.28 0 .422.14.422.61v4.216h.092c1.172-1.828 3.14-4.826 6-4.826 1.172 0 2.671.796 2.671 2.483 0 1.267-.89 2.39-2.203 2.39-1.452 0-1.452-1.123-3.092-1.123-.797 0-3.422 1.076-3.422 3.888v11.016c0 1.547.937 1.547 2.25 1.547h2.625v1.219c-2.578-.045-4.547-.094-6.562-.094-1.921 0-3.891.049-5.577.094v-1.219M136.338 28.603c1.172 0 1.313-.609 1.313-1.17 0-2.392-1.452-4.314-4.079-4.314-2.858 0-4.827 2.11-5.388 5.484h8.154zm-8.294 1.5c-.095.422-.095 1.126 0 2.721.28 4.45 3.14 8.108 6.887 8.108 2.579 0 4.594-1.408 6.329-3.14l.656.656c-2.155 2.857-4.828 5.297-8.672 5.297-7.454 0-8.95-7.22-8.95-10.218 0-9.189 6.185-11.906 9.467-11.906 3.797 0 7.874 2.39 7.92 7.359 0 .28 0 .561-.046.842l-.422.282h-13.169zM161.505 38.868c-2.297 2.672-5.436 4.877-9.14 4.877-4.873 0-9.327-4.735-9.327-9.704 0-6.797 4.875-12.42 11.625-12.42 2.39 0 6.327.748 6.327 3.234 0 1.077-.657 2.06-1.782 2.06-1.97 0-1.874-3.796-6.28-3.796-4.03 0-6.14 4.5-6.14 8.062 0 4.83 3.095 9.094 8.203 9.094 2.39 0 3.938-.844 5.718-2.202l.796.795M168.768 37.274c0 3.095 1.689 3.938 2.955 3.938 1.265 0 2.202-.421 3.28-1.36l.702.704c-1.64 1.687-3.702 3.189-6.233 3.189-3 0-4.452-1.596-4.452-4.362V24.854h-3.094v-.75c2.437-1.874 3.89-2.765 6.28-6.561h.562v4.78h6.985v2.532h-6.985v12.42M191.786 11.824c-1.171 0-1.967.14-2.813.281V25.84c.703.14 1.688.235 2.483.235 5.768 0 8.016-3.797 8.016-7.173 0-4.077-2.155-7.077-7.686-7.077zm-2.813 15.748v10.876c0 3.28 1.782 3.327 4.266 3.374v1.219c-2.248 0-4.266-.094-6.327-.094-2.25 0-4.453.049-6.797.094v-1.219c2.344.14 4.266-.469 4.266-3.14V14.918c0-3.28-1.781-3.328-4.266-3.375v-1.218c2.58.046 4.827.093 7.125.093 1.641 0 3.28-.093 6.28-.093 8.86 0 10.828 4.967 10.828 8.295 0 3.985-3 6.936-6.656 8.015 4.265 6.235 6.517 9.985 8.53 12.233 1.5 1.688 2.907 2.954 5.296 2.954v1.219c-1.17 0-2.343-.094-3.514-.094-1.312 0-2.672.049-3.985.094-4.266-4.687-7.404-10.17-10.78-15.469h-4.266z" fill="#FE5000"/>
+    <path d="M221.879 28.603c1.174 0 1.314-.609 1.314-1.17 0-2.392-1.452-4.314-4.079-4.314-2.86 0-4.826 2.11-5.39 5.484h8.155zm-8.295 1.5c-.094.422-.094 1.126 0 2.721.282 4.45 3.139 8.108 6.889 8.108 2.58 0 4.595-1.408 6.33-3.14l.656.656c-2.156 2.857-4.83 5.297-8.672 5.297-7.454 0-8.952-7.22-8.952-10.218 0-9.189 6.186-11.906 9.468-11.906 3.796 0 7.872 2.39 7.92 7.359 0 .28 0 .561-.048.842l-.422.282h-13.169zM228.476 41.822h.89c1.313 0 2.249 0 2.249-1.547V14.168c0-3.048-.702-3.14-2.48-3.656V9.76c1.871-.607 3.84-1.452 4.825-2.013.515-.282.89-.517 1.03-.517.28 0 .376.282.376.656v32.39c0 1.546 1.03 1.546 2.345 1.546h.795v1.219c-1.594 0-3.235-.094-4.921-.094-1.686 0-3.374.049-5.109.094v-1.219M245.438 18.307c-1.219 0-2.296-1.125-2.296-2.343 0-1.172 1.125-2.25 2.296-2.25 1.22 0 2.296.983 2.296 2.25 0 1.266-1.032 2.343-2.297 2.343zm-5.016 23.515h.89c1.314 0 2.25 0 2.25-1.547V27.572c0-2.062-.702-2.343-2.436-3.28v-.75c2.202-.657 4.826-1.546 5.016-1.687.327-.188.61-.234.842-.234.233 0 .328.28.328.656v17.998c0 1.547 1.03 1.547 2.345 1.547h.795v1.219c-1.593 0-3.235-.094-4.92-.094-1.689 0-3.375.049-5.11.094v-1.219zM263.207 28.603c1.17 0 1.312-.609 1.312-1.17 0-2.392-1.453-4.314-4.079-4.314-2.856 0-4.826 2.11-5.388 5.484h8.155zm-8.298 1.5c-.094.422-.094 1.126 0 2.721.28 4.45 3.14 8.108 6.892 8.108 2.576 0 4.593-1.408 6.328-3.14l.655.656c-2.156 2.857-4.829 5.297-8.671 5.297-7.455 0-8.952-7.22-8.952-10.218 0-9.189 6.186-11.906 9.468-11.906 3.796 0 7.875 2.39 7.922 7.359 0 .28 0 .561-.047.842l-.423.282h-13.172zM283.593 22.322v2.533h-5.953v15.842c0 1.125 1.172 1.125 2.203 1.125h2.11v1.219c-2.015-.045-3.984-.094-6-.094-1.921 0-3.89.049-5.813.094v-1.219h1.783c1.734 0 1.967-.796 1.967-1.502V24.856h-3.28v-.798c1.077-.654 3.28-1.358 3.28-2.953 0-3.046.844-7.64 3.75-10.64 2.578-2.671 5.015-3.234 5.673-3.234.796 0 2.109.19 2.109 1.923 0 1.032-.517 1.827-1.643 1.827-1.405 0-1.405-.655-2.998-.655-2.858 0-3.141 3.373-3.141 5.296v6.701h5.953" fill="#FE5000"/>
+    <path fill="#FFA300" d="M4.024 37.471l-.211 14.08 11.682 1.309 8.53.878 5.43-.67 1.245-8.125-.928-7.034-.247-8.618-12.334-3.06-12.189-.206-.3 5.137-.678 6.31"/>
+    <path d="M27.783 25.18l10.146-1.351 7.947-.65 3.65 1.567 1.35 12.98.352 7.118-.84 3.125s-6.01.172-7.137.318c-1.126.15-8.097.583-8.097.583l-5.257.702s-1.991.074-2.321-2.347c-.319-2.423-1.94-6.213-2.416-10.18-.492-4.111 1.495-11.713 1.495-11.713" fill="#FFBE4C"/>
+    <path d="M21.14 27.924l8.816-.06s5.44.08 6.688.207c1.24.132 7.987-.15 7.987-.15s.414.045.724-2.913c.423-4.01.583-4.668 1.446-9.198.227-1.186.502-2.652.848-4.513l-.26-5.511-1.084-1.608-8.554-2.404-7.465-.789L25.31.457l-3.898 13.044.675 7.935-.947 6.488" fill="#FFA300" mask="url(#mask-2)"/>
+    <path d="M0 6.326l2.925-.963 9.208-.045 8.232.872 4.932.524.68 10.143 1.014 4.633.147 6.766-13.097 1.563-9.488 1.058-4.1-1.176S.532 24.749.3 22.936C.01 20.663 0 6.326 0 6.326" fill="#FE5000" mask="url(#mask-2)"/>
+    <path d="M2.303 15.241c2.276-.278 8.44-.577 13.06 1.154 4.621 1.737 8.003 3.627 8.547 4.603.542.985 3.455 4.189 2.86 4.474-.59.284-9.37.532-10.382.867-1.004.338-2.918.151-2.918.151l-5.03-3.36-.596-1.396-.457-1.035-5.084-5.458M47.732 10.073c-6.202.77-13.048 4.762-14.16 5.953-1.115 1.185-2.844 4.011-3.411 4.618-1.11 1.188-2.691 3.694-1.038 3.484 1.657-.203 6.951-1.491 6.951-1.491l6.33-3.092s4.158-1.985 1.5-3.123c-.96-.41 5.061-3.148 5.061-3.148l-1.233-3.201M25.072 16.62s2.82-.035 3.242.851c.42.887.576 2.122.576 2.122l-1.116 1.081s-3.398.42-2.702-4.054" fill="#FFFFFE"/>
+    <path fill="#FFFFFE" d="M20.72 21.894l3.959 3.747 1.456 3.127-.83 3.953-2.292 11.87L22.178 55l3.749-9.989 1.042-11.455.623-3.75 1.88-4.165 6.035-3.329-7.915 2.498-5.62-3.123-1.251.207"/>
+    <path d="M31.245 24.44c.02.074-4.23.71-9.783 3.762-1.203.885-3.027 1.862-3.148 3.774-.2 2.08 2.646 2.233 4.319 2.34 1.944.062 3.973-.142 5.973-.57 1.467-.085 5.27-1.885 3.794-1.81-3.527-1.297-8.168 1.103-10.016 3.998-2.39 3.5 3.829 4.28 5.784 3.056 1.652-1.313-3.158.67-4.175 1.822-1.798 1.254-2.261 2.268-2.595 2.732-.2.036.629-2.856 4.678-5.158.726-.39 2.625-1.692 3.378-.052.226 1.92-2.08 2.233-3.395 2.404-1.527.043-3.33-.07-4.75-1.388-1.558-1.618-.462-4.051.765-5.253 2.507-2.652 6.48-4.766 10.763-3.388l.762.413c.207.405.067-.617.559.966l-.275.595c-.455.61-.972.875-1.452 1.119-.97.452-1.948.742-2.929.959a26.466 26.466 0 01-5.983.618c-1.914-.25-4.303.237-5.99-2.355-.437-3.049 1.99-4.216 3.458-5.263 3.44-1.816 6.926-2.725 10.258-3.322" fill="#FFFFFE"/>
+    <path d="M49.666 6.482h.213c.249 0 .462-.092.462-.324 0-.164-.125-.327-.462-.327-.098 0-.165.005-.213.013v.638zm0 1.05h-.305V5.64c.156-.023.309-.046.536-.046.284 0 .472.063.584.144.116.081.178.208.178.396 0 .246-.171.395-.373.456v.012c.164.033.278.182.316.464.048.292.092.404.121.467h-.317c-.042-.063-.089-.241-.126-.486-.047-.237-.166-.33-.408-.33h-.206v.816zm.31-2.418c-.743 0-1.351.64-1.351 1.434 0 .803.608 1.436 1.36 1.436.756.003 1.355-.633 1.355-1.431 0-.8-.6-1.439-1.355-1.439h-.01zm.009-.262c.928 0 1.663.747 1.663 1.696 0 .954-.735 1.7-1.672 1.7a1.678 1.678 0 01-1.675-1.7c0-.949.75-1.696 1.675-1.696h.009z" fill="#FFA300"/>
+    <path d="M287.913 6.482h.213c.247 0 .46-.092.46-.324 0-.164-.123-.327-.46-.327-.099 0-.166.005-.213.013v.638zm0 1.05h-.305V5.64c.155-.023.31-.046.535-.046.285 0 .472.063.585.144.115.082.177.208.177.396 0 .246-.171.396-.372.456v.012c.164.033.277.183.316.464.047.292.09.404.121.467h-.318c-.042-.063-.088-.241-.125-.486-.047-.237-.167-.33-.409-.33h-.205v.816zm.31-2.418c-.743 0-1.351.64-1.351 1.434 0 .803.608 1.436 1.36 1.436.754.003 1.355-.633 1.355-1.431 0-.8-.6-1.439-1.355-1.439h-.01zm.009-.262c.928 0 1.662.747 1.662 1.696 0 .954-.734 1.7-1.671 1.7a1.68 1.68 0 01-1.676-1.7c0-.949.751-1.696 1.676-1.696h.009z" fill="#FE5000"/>
+  </g>
+</svg>
+			</a>
+			
+<ul class="social-nav social-nav--context-footer">
+	<li class="social__tool social__tool--type-facebook">
+		<a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/directrelief">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7.27 14"><title></title><path d="M5.35,0A3.18,3.18,0,0,0,3,.86a3.25,3.25,0,0,0-.87,2.43V5.12H0V7.61H2.15V14H4.72V7.61H6.86l.33-2.49H4.72V3.53A1.39,1.39,0,0,1,5,2.62a1.24,1.24,0,0,1,1-.3H7.27V.1A13.92,13.92,0,0,0,5.35,0Z"/></svg>
+			<span class="label">Facebook</span>
+		</a>
+	</li>
+	<li class="social__tool social__tool--type-threads">
+		<a target="_blank" rel="noopener noreferrer" href="https://www.threads.net/@directrelief">
+			<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.5 20.34"><path d="m13.61,9.43c-.09-.04-.18-.08-.27-.12-.16-2.89-1.74-4.55-4.39-4.57-.01,0-.02,0-.04,0-1.59,0-2.91.68-3.72,1.91l1.46,1c.61-.92,1.56-1.12,2.26-1.12,0,0,.02,0,.02,0,.87,0,1.53.26,1.96.76.31.36.52.86.62,1.49-.77-.13-1.61-.17-2.51-.12-2.52.15-4.15,1.62-4.04,3.66.06,1.04.57,1.93,1.45,2.51.75.49,1.71.73,2.71.68,1.32-.07,2.35-.58,3.08-1.5.55-.7.9-1.61,1.05-2.75.63.38,1.09.88,1.35,1.48.44,1.02.46,2.7-.91,4.06-1.2,1.2-2.64,1.72-4.82,1.73-2.42-.02-4.24-.79-5.43-2.3-1.11-1.41-1.69-3.46-1.71-6.07.02-2.61.6-4.66,1.71-6.07,1.19-1.51,3.02-2.29,5.43-2.3,2.43.02,4.29.8,5.53,2.31.6.74,1.06,1.68,1.36,2.77l1.71-.46c-.36-1.34-.94-2.5-1.72-3.46C14.2,1.02,11.88.02,8.9,0h-.01C5.92.02,3.63,1.02,2.1,2.97.73,4.71.02,7.13,0,10.16h0s0,.01,0,.01c.02,3.03.73,5.45,2.1,7.19,1.54,1.95,3.82,2.95,6.8,2.97h.01c2.64-.02,4.51-.71,6.04-2.24,2.01-2.01,1.95-4.52,1.29-6.07-.47-1.11-1.38-2.01-2.62-2.6Zm-4.56,4.29c-1.11.06-2.25-.43-2.31-1.5-.04-.79.56-1.67,2.38-1.77.21-.01.41-.02.61-.02.66,0,1.28.06,1.84.19-.21,2.62-1.44,3.04-2.52,3.1Z"/></svg>			<span class="label">Threads</span>
+		</a>
+	</li>
+	<li class="social__tool social__tool--type-linkedin">
+		<a target="_blank" rel="noopener noreferrer" href="https://linkedin.com/company/directrelief">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28" tabindex="-1" aria-hidden="true"><title>LinkedIn</title><path d="M25.424 15.887v8.447h-4.896v-7.882c0-1.98-.71-3.33-2.48-3.33-1.354 0-2.158.91-2.514 1.802-.13.315-.162.753-.162 1.194v8.216h-4.9s.067-13.35 0-14.73h4.9v2.087c-.01.017-.023.033-.033.05h.032v-.05c.65-1.002 1.812-2.435 4.414-2.435 3.222 0 5.638 2.106 5.638 6.632zM5.348 2.5c-1.676 0-2.772 1.093-2.772 2.54 0 1.42 1.066 2.538 2.717 2.546h.032c1.71 0 2.77-1.132 2.77-2.546C8.056 3.593 7.02 2.5 5.344 2.5h.005zm-2.48 21.834h4.896V9.604H2.867v14.73z" /></svg>
+			<span class="label">LinkedIn</span>
+		</a>
+	</li>
+	<li class="social__tool social__tool--type-instagram">
+		<a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/directrelief">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13.83 13.83"><title>Logo: Instagram</title><path d="M8.54,8.54a2.22,2.22,0,0,1-1.63.68,2.3,2.3,0,0,1-2.3-2.3,2.3,2.3,0,0,1,2.3-2.3,2.3,2.3,0,0,1,2.3,2.3A2.22,2.22,0,0,1,8.54,8.54ZM9.42,4.4a3.42,3.42,0,0,0-2.51-1A3.53,3.53,0,0,0,3.37,6.91a3.53,3.53,0,0,0,3.55,3.55,3.53,3.53,0,0,0,3.55-3.55A3.42,3.42,0,0,0,9.42,4.4Zm1.76-1.76a.83.83,0,0,0-1.41.59.83.83,0,1,0,1.41-.59ZM7.6,1.24h.95l.87,0a7.13,7.13,0,0,1,.93.09,3.61,3.61,0,0,1,.64.17A2.36,2.36,0,0,1,12.3,2.84a3.61,3.61,0,0,1,.17.64,7.13,7.13,0,0,1,.09.93q0,.54,0,.87t0,.95q0,.63,0,.69s0,.27,0,.69,0,.73,0,.95,0,.51,0,.87a7.13,7.13,0,0,1-.09.93,3.61,3.61,0,0,1-.17.64A2.36,2.36,0,0,1,11,12.3a3.61,3.61,0,0,1-.64.17,7.13,7.13,0,0,1-.93.09l-.87,0H5.27l-.87,0a7.13,7.13,0,0,1-.93-.09,3.61,3.61,0,0,1-.64-.17A2.36,2.36,0,0,1,1.52,11a3.61,3.61,0,0,1-.17-.64,7.13,7.13,0,0,1-.09-.93q0-.54,0-.87t0-.95q0-.63,0-.69s0-.27,0-.69,0-.73,0-.95,0-.51,0-.87a7.13,7.13,0,0,1,.09-.93,3.61,3.61,0,0,1,.17-.64A2.36,2.36,0,0,1,2.84,1.52a3.61,3.61,0,0,1,.64-.17,7.13,7.13,0,0,1,.93-.09l.87,0H7.6Zm6.18,2.82a4.22,4.22,0,0,0-1.12-2.9A4.22,4.22,0,0,0,9.77,0Q9,0,6.91,0T4.06,0a4.22,4.22,0,0,0-2.9,1.12A4.22,4.22,0,0,0,0,4.06q0,.79,0,2.85T0,9.77a4.22,4.22,0,0,0,1.12,2.9,4.22,4.22,0,0,0,2.9,1.12q.79,0,2.85,0t2.85,0a4.22,4.22,0,0,0,2.9-1.12,4.22,4.22,0,0,0,1.12-2.9q0-.79,0-2.85T13.78,4.06Z"/></svg>
+			<span class="label">Instagram</span>
+		</a>
+	</li>
+	<li class="social__tool social__tool--type-x">
+		<a target="_blank" rel="noopener noreferrer" href="https://x.com/directrelief">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 45"><title>X</title><path d="M26.8,19.1L43.5,0h-4L25,16.5L13.4,0H0l17.6,25L0,45h4l15.4-17.5L31.6,45H45 M5.4,2.9h6.1l28.1,39.3h-6.1"/></svg>			<span class="label">X</span>
+		</a>
+	</li>
+	<li class="social__tool social__tool--type-youtube">
+		<a target="_blank" rel="noopener noreferrer" href="https://youtube.com/directrelief">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.17 13.48"><title>Youtube</title><path d="M7.6,3.84l5.18,2.71L7.6,9.22ZM2.88.19,2.7.21l-.25,0L2.2.29a1.49,1.49,0,0,0-.3.09l-.3.14a2.06,2.06,0,0,0-.33.21A2.54,2.54,0,0,0,1,1L.8,1.19a2.72,2.72,0,0,0-.34.66A4.27,4.27,0,0,0,.19,2.91,22.64,22.64,0,0,0,0,6V7.89q0,.44.06,1.21t.13,1.46a4.07,4.07,0,0,0,.28,1.08,3.59,3.59,0,0,0,.31.63l.17.2a2.14,2.14,0,0,0,.6.44,3.29,3.29,0,0,0,.55.22,5.08,5.08,0,0,0,.58.11l.39,0,.52,0,2.14.08q1.63,0,3.84.07,4,0,6.71-.2l.18,0,.25,0,.26,0a1.49,1.49,0,0,0,.3-.09l.3-.13a1.8,1.8,0,0,0,.33-.2,2.54,2.54,0,0,0,.31-.28l.15-.18a2.72,2.72,0,0,0,.34-.66A4.27,4.27,0,0,0,19,10.57a22.64,22.64,0,0,0,.19-3.1V5.58q0-.44-.06-1.21T19,2.91a4.07,4.07,0,0,0-.28-1.08,3.59,3.59,0,0,0-.31-.63L18.21,1A2.54,2.54,0,0,0,17.9.72a2.06,2.06,0,0,0-.33-.21l-.3-.14A1.49,1.49,0,0,0,17,.29l-.25,0-.25,0-.18,0-.78,0Q14.73.1,13.05,0T9.58,0Q5.56,0,2.88.19Z"/></svg>
+			<span class="label">YouTube</span>
+		</a>
+	</li>
+</ul>
+		</div>
+	</div>
+
+	<div class="footer-site__row footer-site__row--position-middle">
+		<div class="footer-site__wrapper">
+			<nav class="footer-site__navigation">
+				<div class="nav nav--layout-footer-1 footer-site__nav-panel"><h6 class="nav__header">About</h6><ul class="nav__items"><li id="menu-item-77994" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-77994"><a href="https://www.directrelief.org/contact/" id="menu-link-57">Contact</a></li>
+<li id="menu-item-31191" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31191"><a href="https://www.directrelief.org/about/job-opportunities/" id="menu-link-58">Careers</a></li>
+<li id="menu-item-59171" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-59171"><a href="https://www.directrelief.org/about/" id="menu-link-59">Mission</a></li>
+<li id="menu-item-31485" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31485"><a href="https://support.directrelief.org/hc/en-us" id="menu-link-60">Support &#038; FAQs</a></li>
+</ul></div><div class="nav nav--layout-footer-2 footer-site__nav-panel"><h6 class="nav__header">Financials</h6><ul class="nav__items"><li id="menu-item-31327" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31327"><a href="/about/finance/financial-documents/#annualreports" id="menu-link-61">Annual Reports</a></li>
+<li id="menu-item-31198" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31198"><a href="https://www.directrelief.org/about/finance/donation-policies/" id="menu-link-62">Donation Policies</a></li>
+<li id="menu-item-33430" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-33430"><a href="https://www.directrelief.org/about/finance/cash-and-in-kind-contributions/" id="menu-link-63">In-Kind Valuation</a></li>
+<li id="menu-item-59166" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-59166"><a href="https://www.directrelief.org/about/finance/" id="menu-link-64">Financial Policies</a></li>
+</ul></div><div class="nav nav--layout-footer-3 footer-site__nav-panel"><h6 class="nav__header">Accreditation</h6><ul class="nav__items"><li id="menu-item-33433" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-33433"><a href="https://www.directrelief.org/about/charity-rating/" id="menu-link-65">Charity Rating</a></li>
+<li id="menu-item-31202" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31202"><a href="https://www.directrelief.org/about/credentials-memberships/#licenses" id="menu-link-66">501(c)(3) Nonprofit</a></li>
+<li id="menu-item-59169" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-59169"><a href="https://www.directrelief.org/wp-content/uploads/IRS_501c3_Determination_Ltr.pdf" id="menu-link-67">EIN: 95-1831116</a></li>
+<li id="menu-item-45493" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-45493"><a href="https://www.directrelief.org/about/credentials-memberships/" id="menu-link-68">Compliance &#038; Licenses</a></li>
+</ul></div><div class="nav nav--layout-footer-4 footer-site__nav-panel"><h6 class="nav__header">Governance</h6><ul class="nav__items"><li id="menu-item-59167" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-59167"><a href="https://www.directrelief.org/direct-relief-content-and-republishing-policy/" id="menu-link-69">Content Republishing</a></li>
+<li id="menu-item-59168" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-59168"><a href="https://www.directrelief.org/about/people/leadership/" id="menu-link-70">Leadership</a></li>
+<li id="menu-item-31934" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-31934"><a rel="privacy-policy" href="https://www.directrelief.org/about/privacy-policy/" id="menu-link-71">Privacy Policy</a></li>
+<li id="menu-item-33432" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-33432"><a href="https://www.directrelief.org/about/transparency/" id="menu-link-72">Transparency</a></li>
+</ul></div>			</nav>
+		</div>
+	</div>
+
+	<div class="footer-site__row footer-site__row--position-bottom">
+		<div class="footer-site__wrapper">
+			<a href="/contact"><address>6100 Wallace Becknell Road, Santa Barbara, CA 93117</address></a> <a href="tel:+18059644767">805-964-4767</a>
+		</div>
+	</div>
+
+</footer><!-- #colophon -->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W9D7FJC" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+				<div id="jp-carousel-loading-overlay">
+			<div id="jp-carousel-loading-wrapper">
+				<span id="jp-carousel-library-loading">&nbsp;</span>
+			</div>
+		</div>
+		<div class="jp-carousel-overlay jp-carousel-light" style="display: none;">
+
+		<div class="jp-carousel-container jp-carousel-light">
+			<!-- The Carousel Swiper -->
+			<div
+				class="jp-carousel-wrap swiper-container jp-carousel-swiper-container jp-carousel-transitions"
+				itemscope
+				itemtype="https://schema.org/ImageGallery">
+				<div class="jp-carousel swiper-wrapper"></div>
+				<div class="jp-swiper-button-prev swiper-button-prev">
+					<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<mask id="maskPrev" mask-type="alpha" maskUnits="userSpaceOnUse" x="8" y="6" width="9" height="12">
+							<path d="M16.2072 16.59L11.6496 12L16.2072 7.41L14.8041 6L8.8335 12L14.8041 18L16.2072 16.59Z" fill="white"/>
+						</mask>
+						<g mask="url(#maskPrev)">
+							<rect x="0.579102" width="23.8823" height="24" fill="#FFFFFF"/>
+						</g>
+					</svg>
+				</div>
+				<div class="jp-swiper-button-next swiper-button-next">
+					<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<mask id="maskNext" mask-type="alpha" maskUnits="userSpaceOnUse" x="8" y="6" width="8" height="12">
+							<path d="M8.59814 16.59L13.1557 12L8.59814 7.41L10.0012 6L15.9718 12L10.0012 18L8.59814 16.59Z" fill="white"/>
+						</mask>
+						<g mask="url(#maskNext)">
+							<rect x="0.34375" width="23.8822" height="24" fill="#FFFFFF"/>
+						</g>
+					</svg>
+				</div>
+			</div>
+			<!-- The main close buton -->
+			<div class="jp-carousel-close-hint">
+				<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<mask id="maskClose" mask-type="alpha" maskUnits="userSpaceOnUse" x="5" y="5" width="15" height="14">
+						<path d="M19.3166 6.41L17.9135 5L12.3509 10.59L6.78834 5L5.38525 6.41L10.9478 12L5.38525 17.59L6.78834 19L12.3509 13.41L17.9135 19L19.3166 17.59L13.754 12L19.3166 6.41Z" fill="white"/>
+					</mask>
+					<g mask="url(#maskClose)">
+						<rect x="0.409668" width="23.8823" height="24" fill="#FFFFFF"/>
+					</g>
+				</svg>
+			</div>
+			<!-- Image info, comments and meta -->
+			<div class="jp-carousel-info">
+				<div class="jp-carousel-info-footer">
+					<div class="jp-carousel-pagination-container">
+						<div class="jp-swiper-pagination swiper-pagination"></div>
+						<div class="jp-carousel-pagination"></div>
+					</div>
+					<div class="jp-carousel-photo-title-container">
+						<h2 class="jp-carousel-photo-caption"></h2>
+					</div>
+					<div class="jp-carousel-photo-icons-container">
+						<a href="#" class="jp-carousel-icon-btn jp-carousel-icon-info" aria-label="Toggle photo metadata visibility">
+							<span class="jp-carousel-icon">
+								<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<mask id="maskInfo" mask-type="alpha" maskUnits="userSpaceOnUse" x="2" y="2" width="21" height="20">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M12.7537 2C7.26076 2 2.80273 6.48 2.80273 12C2.80273 17.52 7.26076 22 12.7537 22C18.2466 22 22.7046 17.52 22.7046 12C22.7046 6.48 18.2466 2 12.7537 2ZM11.7586 7V9H13.7488V7H11.7586ZM11.7586 11V17H13.7488V11H11.7586ZM4.79292 12C4.79292 16.41 8.36531 20 12.7537 20C17.142 20 20.7144 16.41 20.7144 12C20.7144 7.59 17.142 4 12.7537 4C8.36531 4 4.79292 7.59 4.79292 12Z" fill="white"/>
+									</mask>
+									<g mask="url(#maskInfo)">
+										<rect x="0.8125" width="23.8823" height="24" fill="#FFFFFF"/>
+									</g>
+								</svg>
+							</span>
+						</a>
+												<a href="#" class="jp-carousel-icon-btn jp-carousel-icon-comments" aria-label="Toggle photo comments visibility">
+							<span class="jp-carousel-icon">
+								<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<mask id="maskComments" mask-type="alpha" maskUnits="userSpaceOnUse" x="2" y="2" width="21" height="20">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M4.3271 2H20.2486C21.3432 2 22.2388 2.9 22.2388 4V16C22.2388 17.1 21.3432 18 20.2486 18H6.31729L2.33691 22V4C2.33691 2.9 3.2325 2 4.3271 2ZM6.31729 16H20.2486V4H4.3271V18L6.31729 16Z" fill="white"/>
+									</mask>
+									<g mask="url(#maskComments)">
+										<rect x="0.34668" width="23.8823" height="24" fill="#FFFFFF"/>
+									</g>
+								</svg>
+
+								<span class="jp-carousel-has-comments-indicator" aria-label="This image has comments."></span>
+							</span>
+						</a>
+											</div>
+				</div>
+				<div class="jp-carousel-info-extra">
+					<div class="jp-carousel-info-content-wrapper">
+						<div class="jp-carousel-photo-title-container">
+							<h2 class="jp-carousel-photo-title"></h2>
+						</div>
+						<div class="jp-carousel-comments-wrapper">
+															<div id="jp-carousel-comments-loading">
+									<span>Loading Comments...</span>
+								</div>
+								<div class="jp-carousel-comments"></div>
+								<div id="jp-carousel-comment-form-container">
+									<span id="jp-carousel-comment-form-spinner">&nbsp;</span>
+									<div id="jp-carousel-comment-post-results"></div>
+																														<form id="jp-carousel-comment-form">
+												<label for="jp-carousel-comment-form-comment-field" class="screen-reader-text">Write a Comment...</label>
+												<textarea
+													name="comment"
+													class="jp-carousel-comment-form-field jp-carousel-comment-form-textarea"
+													id="jp-carousel-comment-form-comment-field"
+													placeholder="Write a Comment..."
+												></textarea>
+												<div id="jp-carousel-comment-form-submit-and-info-wrapper">
+													<div id="jp-carousel-comment-form-commenting-as">
+																													<fieldset>
+																<label for="jp-carousel-comment-form-email-field">Email</label>
+																<input type="text" name="email" class="jp-carousel-comment-form-field jp-carousel-comment-form-text-field" id="jp-carousel-comment-form-email-field" />
+															</fieldset>
+															<fieldset>
+																<label for="jp-carousel-comment-form-author-field">Name</label>
+																<input type="text" name="author" class="jp-carousel-comment-form-field jp-carousel-comment-form-text-field" id="jp-carousel-comment-form-author-field" />
+															</fieldset>
+															<fieldset>
+																<label for="jp-carousel-comment-form-url-field">Website</label>
+																<input type="text" name="url" class="jp-carousel-comment-form-field jp-carousel-comment-form-text-field" id="jp-carousel-comment-form-url-field" />
+															</fieldset>
+																											</div>
+													<input
+														type="submit"
+														name="submit"
+														class="jp-carousel-comment-form-button"
+														id="jp-carousel-comment-form-button-submit"
+														value="Post Comment" />
+												</div>
+											</form>
+																											</div>
+													</div>
+						<div class="jp-carousel-image-meta">
+							<div class="jp-carousel-title-and-caption">
+								<div class="jp-carousel-photo-info">
+									<h3 class="jp-carousel-caption" itemprop="caption description"></h3>
+								</div>
+
+								<div class="jp-carousel-photo-description"></div>
+							</div>
+							<ul class="jp-carousel-image-exif" style="display: none;"></ul>
+							<a class="jp-carousel-image-download" href="#" target="_blank" style="display: none;">
+								<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="3" y="3" width="19" height="18">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M5.84615 5V19H19.7775V12H21.7677V19C21.7677 20.1 20.8721 21 19.7775 21H5.84615C4.74159 21 3.85596 20.1 3.85596 19V5C3.85596 3.9 4.74159 3 5.84615 3H12.8118V5H5.84615ZM14.802 5V3H21.7677V10H19.7775V6.41L9.99569 16.24L8.59261 14.83L18.3744 5H14.802Z" fill="white"/>
+									</mask>
+									<g mask="url(#mask0)">
+										<rect x="0.870605" width="23.8823" height="24" fill="#FFFFFF"/>
+									</g>
+								</svg>
+								<span class="jp-carousel-download-text"></span>
+							</a>
+							<div class="jp-carousel-image-map" style="display: none;"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		</div>
+		<link rel='stylesheet' id='jetpack-carousel-swiper-css-css' href='https://c0.wp.com/p/jetpack/13.9/modules/carousel/swiper-bundle.css' type='text/css' media='all' />
+<link rel='stylesheet' id='jetpack-carousel-css' href='https://c0.wp.com/p/jetpack/13.9/modules/carousel/jetpack-carousel.css' type='text/css' media='all' />
+<style id='core-block-supports-inline-css' type='text/css'>
+.wp-container-core-columns-is-layout-1{flex-wrap:nowrap;}
+</style>
+<script type="text/javascript" src="https://c0.wp.com/c/6.6.1/wp-includes/js/dist/vendor/react.min.js" id="react-js"></script>
+<script type="text/javascript" src="https://c0.wp.com/c/6.6.1/wp-includes/js/dist/vendor/react-dom.min.js" id="react-dom-js"></script>
+<script type="text/javascript" src="https://c0.wp.com/c/6.6.1/wp-includes/js/dist/hooks.min.js" id="wp-hooks-js"></script>
+<script type="text/javascript" src="https://c0.wp.com/c/6.6.1/wp-includes/js/dist/i18n.min.js" id="wp-i18n-js"></script>
+<script type="text/javascript" id="wp-i18n-js-after">
+/* <![CDATA[ */
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://c0.wp.com/c/6.6.1/wp-includes/js/dist/url.min.js" id="wp-url-js"></script>
+<script type="text/javascript" src="https://c0.wp.com/c/6.6.1/wp-includes/js/dist/api-fetch.min.js" id="wp-api-fetch-js"></script>
+<script type="text/javascript" id="wp-api-fetch-js-after">
+/* <![CDATA[ */
+wp.apiFetch.use( wp.apiFetch.createRootURLMiddleware( "https://www.directrelief.org/wp-json/" ) );
+wp.apiFetch.nonceMiddleware = wp.apiFetch.createNonceMiddleware( "d1cf7ad924" );
+wp.apiFetch.use( wp.apiFetch.nonceMiddleware );
+wp.apiFetch.use( wp.apiFetch.mediaUploadMiddleware );
+wp.apiFetch.nonceEndpoint = "https://www.directrelief.org/wp-admin/admin-ajax.php?action=rest-nonce";
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.directrelief.org/wp-content/mu-plugins/directrelief-2021/build/blockClientPostRiver.bundle.min.js?ver=1a3eb280373fd094c132" id="dr-block-client-post-river-js"></script>
+<script type="text/javascript" src="https://www.directrelief.org/wp-content/mu-plugins/directrelief-2021/build/blockClientAlertsCTA.bundle.min.js?ver=b6d46fb6ad5c1ed6b2e3" id="dr-block-client-alerts-cta-js"></script>
+<script type="text/javascript" src="https://www.directrelief.org/wp-content/mu-plugins/directrelief-2021/build/blockClientInlineDonation.bundle.min.js?ver=2d186c8af467a3b5d2e4" id="dr-block-client-inline-donation-js"></script>
+<script type="text/javascript" src="https://c0.wp.com/c/6.6.1/wp-includes/js/dist/blob.min.js" id="wp-blob-js"></script>
+<script type="text/javascript" src="https://c0.wp.com/c/6.6.1/wp-includes/js/dist/vendor/react-jsx-runtime.min.js" id="react-jsx-runtime-js"></script>
+<script type="text/javascript" src="https://c0.wp.com/c/6.6.1/wp-includes/js/dist/dom-ready.min.js" id="wp-dom-ready-js"></script>
+<script type="text/javascript" src="https://c0.wp.com/c/6.6.1/wp-includes/js/dist/a11y.min.js" id="wp-a11y-js"></script>
+<script type="text/javascript" src="https://c0.wp.com/c/6.6.1/wp-includes/js/dist/autop.min.js" id="wp-autop-js"></script>
+<script type="text/javascript" src="https://c0.wp.com/c/6.6.1/wp-includes/js/dist/block-serialization-default-parser.min.js" id="wp-block-serialization-default-parser-js"></script>
+<script type="text/javascript" src="https://c0.wp.com/c/6.6.1/wp-includes/js/dist/deprecated.min.js" id="wp-deprecated-js"></script>
+<script type="text/javascript" src="https://c0.wp.com/c/6.6.1/wp-includes/js/dist/dom.min.js" id="wp-dom-js"></script>
+<script type="text/javascript" src="https://c0.wp.com/c/6.6.1/wp-includes/js/dist/escape-html.min.js" id="wp-escape-html-js"></script>
+<script type="text/javascript" src="https://c0.wp.com/c/6.6.1/wp-includes/js/dist/element.min.js" id="wp-element-js"></script>
+<script type="text/javascript" src="https://c0.wp.com/c/6.6.1/wp-includes/js/dist/is-shallow-equal.min.js" id="wp-is-shallow-equal-js"></script>
+<script type="text/javascript" src="https://c0.wp.com/c/6.6.1/wp-includes/js/dist/keycodes.min.js" id="wp-keycodes-js"></script>
+<script type="text/javascript" src="https://c0.wp.com/c/6.6.1/wp-includes/js/dist/priority-queue.min.js" id="wp-priority-queue-js"></script>
+<script type="text/javascript" src="https://c0.wp.com/c/6.6.1/wp-includes/js/dist/compose.min.js" id="wp-compose-js"></script>
+<script type="text/javascript" src="https://c0.wp.com/c/6.6.1/wp-includes/js/dist/private-apis.min.js" id="wp-private-apis-js"></script>
+<script type="text/javascript" src="https://c0.wp.com/c/6.6.1/wp-includes/js/dist/redux-routine.min.js" id="wp-redux-routine-js"></script>
+<script type="text/javascript" src="https://c0.wp.com/c/6.6.1/wp-includes/js/dist/data.min.js" id="wp-data-js"></script>
+<script type="text/javascript" id="wp-data-js-after">
+/* <![CDATA[ */
+( function() {
+	var userId = 0;
+	var storageKey = "WP_DATA_USER_" + userId;
+	wp.data
+		.use( wp.data.plugins.persistence, { storageKey: storageKey } );
+} )();
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://c0.wp.com/c/6.6.1/wp-includes/js/dist/html-entities.min.js" id="wp-html-entities-js"></script>
+<script type="text/javascript" src="https://c0.wp.com/c/6.6.1/wp-includes/js/dist/rich-text.min.js" id="wp-rich-text-js"></script>
+<script type="text/javascript" src="https://c0.wp.com/c/6.6.1/wp-includes/js/dist/shortcode.min.js" id="wp-shortcode-js"></script>
+<script type="text/javascript" src="https://c0.wp.com/c/6.6.1/wp-includes/js/dist/blocks.min.js" id="wp-blocks-js"></script>
+<script type="text/javascript" src="https://c0.wp.com/c/6.6.1/wp-includes/js/dist/vendor/moment.min.js" id="moment-js"></script>
+<script type="text/javascript" id="moment-js-after">
+/* <![CDATA[ */
+moment.updateLocale( 'en_US', {"months":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthsShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"weekdaysShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"week":{"dow":1},"longDateFormat":{"LT":"g:i A","LTS":null,"L":null,"LL":"F j, Y","LLL":"F j, Y g:i a","LLLL":null}} );
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://c0.wp.com/c/6.6.1/wp-includes/js/dist/date.min.js" id="wp-date-js"></script>
+<script type="text/javascript" id="wp-date-js-after">
+/* <![CDATA[ */
+wp.date.setSettings( {"l10n":{"locale":"en_US","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthsShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"weekdaysShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"meridiem":{"am":"am","pm":"pm","AM":"AM","PM":"PM"},"relative":{"future":"%s from now","past":"%s ago","s":"a second","ss":"%d seconds","m":"a minute","mm":"%d minutes","h":"an hour","hh":"%d hours","d":"a day","dd":"%d days","M":"a month","MM":"%d months","y":"a year","yy":"%d years"},"startOfWeek":1},"formats":{"time":"g:i A","date":"F j, Y","datetime":"F j, Y g:i a","datetimeAbbreviated":"M j, Y g:i a"},"timezone":{"offset":-7,"offsetFormatted":"-7","string":"America\/Los_Angeles","abbr":"PDT"}} );
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://c0.wp.com/c/6.6.1/wp-includes/js/dist/primitives.min.js" id="wp-primitives-js"></script>
+<script type="text/javascript" src="https://c0.wp.com/c/6.6.1/wp-includes/js/dist/warning.min.js" id="wp-warning-js"></script>
+<script type="text/javascript" src="https://c0.wp.com/c/6.6.1/wp-includes/js/dist/components.min.js" id="wp-components-js"></script>
+<script type="text/javascript" src="https://c0.wp.com/c/6.6.1/wp-includes/js/dist/keyboard-shortcuts.min.js" id="wp-keyboard-shortcuts-js"></script>
+<script type="text/javascript" src="https://c0.wp.com/c/6.6.1/wp-includes/js/dist/commands.min.js" id="wp-commands-js"></script>
+<script type="text/javascript" src="https://c0.wp.com/c/6.6.1/wp-includes/js/dist/notices.min.js" id="wp-notices-js"></script>
+<script type="text/javascript" src="https://c0.wp.com/c/6.6.1/wp-includes/js/dist/preferences-persistence.min.js" id="wp-preferences-persistence-js"></script>
+<script type="text/javascript" src="https://c0.wp.com/c/6.6.1/wp-includes/js/dist/preferences.min.js" id="wp-preferences-js"></script>
+<script type="text/javascript" id="wp-preferences-js-after">
+/* <![CDATA[ */
+( function() {
+				var serverData = false;
+				var userId = "0";
+				var persistenceLayer = wp.preferencesPersistence.__unstableCreatePersistenceLayer( serverData, userId );
+				var preferencesStore = wp.preferences.store;
+				wp.data.dispatch( preferencesStore ).setPersistenceLayer( persistenceLayer );
+			} ) ();
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://c0.wp.com/c/6.6.1/wp-includes/js/dist/style-engine.min.js" id="wp-style-engine-js"></script>
+<script type="text/javascript" src="https://c0.wp.com/c/6.6.1/wp-includes/js/dist/token-list.min.js" id="wp-token-list-js"></script>
+<script type="text/javascript" src="https://c0.wp.com/c/6.6.1/wp-includes/js/dist/wordcount.min.js" id="wp-wordcount-js"></script>
+<script type="text/javascript" src="https://c0.wp.com/c/6.6.1/wp-includes/js/dist/block-editor.min.js" id="wp-block-editor-js"></script>
+<script type="text/javascript" src="https://c0.wp.com/c/6.6.1/wp-includes/js/dist/core-data.min.js" id="wp-core-data-js"></script>
+<script type="text/javascript" src="https://www.directrelief.org/wp-content/mu-plugins/directrelief-2021/build/lightboxFrontEnd.bundle.min.js?ver=03093080dbe99030ceac" id="dr-gallery-lightbox-front-end-js"></script>
+<script type="text/javascript" id="dr-gallery-lightbox-front-end-js-after">
+/* <![CDATA[ */
+wp.i18n.setLocaleData( {"":{"domain":"dr","lang":"en_US"}}, 'dr' );
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.directrelief.org/wp-content/mu-plugins/directrelief-2021/build/blockGalleryLightbox.bundle.min.js?ver=f7c8beb00ca1c64b5c6e" id="dr-gallery-lightbox-front-end-js-js"></script>
+<script type="text/javascript" id="dr-gallery-lightbox-front-end-js-js-after">
+/* <![CDATA[ */
+wp.i18n.setLocaleData( {"":{"domain":"dr","lang":"en_US"}}, 'dr' );
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.directrelief.org/wp-content/mu-plugins/directrelief-2021/build/styleMediaLibraryFrontend.bundle.min.js?ver=8556352cb195956b185d" id="dr-media-library-js"></script>
+<script type="text/javascript" id="dr-media-library-js-after">
+/* <![CDATA[ */
+wp.i18n.setLocaleData( {"":{"domain":"dr","lang":"en_US"}}, 'dr' );
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.directrelief.org/wp-content/themes/directrelief-2021/client/build/js/global.bundle.min.js?ver=5df6716e6d4595dc455a" id="dr-global-js-js"></script>
+<script type="text/javascript" id="dr-global-js-js-after">
+/* <![CDATA[ */
+var homeUrl = "https:\/\/www.directrelief.org";
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://c0.wp.com/c/6.6.1/wp-includes/js/jquery/ui/core.min.js" id="jquery-ui-core-js"></script>
+<script type="text/javascript" src="https://c0.wp.com/c/6.6.1/wp-includes/js/jquery/ui/datepicker.min.js" id="jquery-ui-datepicker-js"></script>
+<script type="text/javascript" id="jquery-ui-datepicker-js-after">
+/* <![CDATA[ */
+jQuery(function(jQuery){jQuery.datepicker.setDefaults({"closeText":"Close","currentText":"Today","monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"nextText":"Next","prevText":"Previous","dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayNamesMin":["S","M","T","W","T","F","S"],"dateFormat":"MM d, yy","firstDay":1,"isRTL":false});});
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://stats.wp.com/e-202442.js" id="jetpack-stats-js" data-wp-strategy="defer"></script>
+<script type="text/javascript" id="jetpack-stats-js-after">
+/* <![CDATA[ */
+_stq = window._stq || [];
+_stq.push([ "view", JSON.parse("{\"v\":\"ext\",\"blog\":\"142789926\",\"post\":\"82788\",\"tz\":\"-7\",\"srv\":\"www.directrelief.org\",\"j\":\"1:13.9\"}") ]);
+_stq.push([ "clickTrackerInit", "142789926", "82788" ]);
+/* ]]> */
+</script>
+<script type="text/javascript" id="jetpack-carousel-js-extra">
+/* <![CDATA[ */
+var jetpackSwiperLibraryPath = {"url":"https:\/\/www.directrelief.org\/wp-content\/plugins\/jetpack\/_inc\/build\/carousel\/swiper-bundle.min.js"};
+var jetpackCarouselStrings = {"widths":[370,700,1000,1200,1400,2000],"is_logged_in":"","lang":"en","ajaxurl":"https:\/\/www.directrelief.org\/wp-admin\/admin-ajax.php","nonce":"e798f75c34","display_exif":"0","display_comments":"1","single_image_gallery":"1","single_image_gallery_media_file":"","background_color":"white","comment":"Comment","post_comment":"Post Comment","write_comment":"Write a Comment...","loading_comments":"Loading Comments...","download_original":"View full size <span class=\"photo-size\">{0}<span class=\"photo-size-times\">\u00d7<\/span>{1}<\/span>","no_comment_text":"Please be sure to submit some text with your comment.","no_comment_email":"Please provide an email address to comment.","no_comment_author":"Please provide your name to comment.","comment_post_error":"Sorry, but there was an error posting your comment. Please try again later.","comment_approved":"Your comment was approved.","comment_unapproved":"Your comment is in moderation.","camera":"Camera","aperture":"Aperture","shutter_speed":"Shutter Speed","focal_length":"Focal Length","copyright":"Copyright","comment_registration":"0","require_name_email":"0","login_url":"https:\/\/www.directrelief.org\/wp-login.php?redirect_to=https%3A%2F%2Fwww.directrelief.org%2F2024%2F10%2Fin-hurricane-helenes-wake-a-cat-and-mouse-game-to-reach-trapped-patients-through-choked-off-roads-downed-communications%2F","blog_id":"1","meta_data":["camera","aperture","shutter_speed","focal_length","copyright"]};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://c0.wp.com/p/jetpack/13.9/_inc/build/carousel/jetpack-carousel.min.js" id="jetpack-carousel-js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js?ver=9" id="swiper-js-elements-js"></script>
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"73112b0ee5","applicationID":"132281307","transactionName":"ZF1VYxBVVxYCVEEKV10XdlQWXVYLTEBHAkhDXUU=","queueTime":0,"applicationTime":621,"atts":"SBpWFVhPRBg=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

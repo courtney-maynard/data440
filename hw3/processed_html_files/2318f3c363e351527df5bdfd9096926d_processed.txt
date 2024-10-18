@@ -1,0 +1,72 @@
+Here’s what Apple Intelligence is like in action. Image: Apple/D. Griffin Jones/Cult of Mac
+Apple Intelligence makes its debut with 10 new features — and some of it is fantastic. Apple Intelligence has some genuinely impressive new features, and some of it will have a big impact on daily life.
+Apple Intelligence is the name for Apple’s next-generation AI and machine learning-powered features that are coming to iPhone, iPad and Mac. These first 10 features will be available in iOS 18.1 and macOS Sequoia 15.1 in October . Some of the biggest features like Visual Intelligence, Image Playground and the all-new Siri aren’t here (and might not ship for a while) but Apple has still managed to make a good first impression.
+Hands-on with the first 10 Apple Intelligence features
+Table of Contents:
+Writing Tools
+Apple Intelligence writing tools are available in a bunch of apps.Screenshot: D. Griffin Jones/Cult of Mac
+This is a set of features that can proofread, change the tone of, or reformat text. It’s available anywhere that uses a standard text input — all of Apple’s apps like Notes, Mail, Messages, Safari and most third-party apps.
+Tap the cursor to bring up the pop-up menu and select Writing Tools (you may have to swipe over inside the menu to find it). Some apps may also have an Apple Intelligence button in the toolbar. You can highlight a specific portion of the text to apply it to; or open it without selecting anything to apply it to the entire document.
+Proofread looks for mistakes, poor punctuation and clumsily phrased sentences. It’s a good tool to use as a final check before sending something important.
+Rewrite rephrases the same information slightly differently. If you don’t like the way a sentence sounds but can’t get out of a rut, this is a good tool to use.
+Friendly and Professional rewrite the tone to be either more casual or more diplomatic.
+Concise removes unnecessary, extraneous, superfluous words to make the sentence shorter, less long and have fewer words in it.
+Summary and Key Points reduce the information down to just a single sentence or a few bullet points. These don’t automatically replace the original text, so you can use it to get a thesis statement out of a whole paper. You can Copy the results to paste it somewhere else or Replace the selection.
+List and Table transform the formatting of the selection into a list of bullet points or organize the information into a multi-column table.
+The proofreading, rewriting and summary tools do a pretty decent job. I’ve been very impressed by its ability to restructure ordinary writing into multiple columns in a small table. No matter your writing skill, converting a document format is a universal pain in the ass.
+Summaries in Messages and email
+If you get a rush of notifications in a row, you’ll see a summary describing the whole lot of notifications instead. You can still tap the notification stack to expand the full list of messages.
+These have about a 90% hit rate. Usually it can accurately summarize a string of texts, but occasionally, it’s missing an important piece of context and comes up with something totally wrong.
+Where it really shines is in Mail, where instead of seeing the first two lines of text in the mail list, you see a one-line summary. This is fantastic. Emails with a one-time code will always show you the number inside the notification banner. Promotional emails in your inbox no longer read “Hello Griffin, Did you know that today we have a special offer…” and instead say, “Buy one pizza and get one free on BOGO Tuesday.”
+Image Clean Up
+Remove things from an image using Image Clean Up.Screenshot: D. Griffin Jones/Cult of Mac
+This is a new tool that lets you intelligently erase objects from a picture. Open a picture, tap Edit, and select the Clean Up tool at the bottom. The first time you open it, the feature has to first download and prepare the AI model. Be patient: The initial download can take a few minutes. Drag your finger to select or circle the area you want replaced, it’ll think for a moment then fill it in.
+This works great if the thing you’re erasing doesn’t overlap anything else that’s important in the image and is completely surrounded by a similar pattern it can replicate. Dust and hairs on a black shirt, a smoke detector on a ceiling, a calendar on the wall, something sitting on a table.
+It’s not good at replacing large portions of an image with a lot of detail.Screenshot: D. Griffin Jones/Cult of Mac
+But it’ll try to fill in whatever you ask it to. It just might not do a very good job. A car on a busy city street? It’ll probably mess up the signs and buildings behind it. Try to replace a giant, central part of the image? It’ll struggle to fill it in.
+The one thing it won’t do is replace someone’s face. It pixellates the results. But this can be considered a feature — if you want to post a picture on social media but need to hide someone’s identity, pixellating their face with Clean Up is a quick way to disguise them.
+Natural language photo search
+With Apple Intelligence, you can be pretty descriptive when searching for photos, like “Griffin wearing a hat,” or “video of Lewis playing the accordion,” or “Leander with a beard.” No more madly swiping through your entire photo library to find that one picture.
+There’s really not much more to say about this, but it’s one of the most useful, transformative features you’ll appreciate a little more every time it works.
+Photo Memories
+Type in whatever you want for interesting results.Screenshot: D. Griffin Jones/Cult of Mac
+You can automatically generate a Memory Movie from your photos with a text prompt. In the Memories section of the new Photos app , tap Describe a memory… and type in what you want to see (or tap Create to the right). The Photos app gives you a few ideas to stir your creativity, like “Moments at home with Scout” and “Trip to Athens, with epic music.” You can tie together names of people in your pictures, locations, events and more. You can specify a genre of music to go along with it, too.
+I tested the limits. First, I typed in “beautiful plants, flowers and trees with death metal music,” and sure enough, it complied with the best video I’ve ever seen. I tried one a little harder with more specificity, “old beige computers with fast saxophone jazz music” but it didn’t quite hit the mark.
+Tap the × in the upper right to close the Memory Movie. You can tap Create Again if you want to give it another shot, or Done to close it. Tap and hold on the preview and tap Delete Memory to remove it.
+Suggested replies to messages
+When you get a text in Messages, you may see Apple Intelligence recommend a reply for you in the Quick Type bar above the keyboard. You can tell they’re AI-powered, because they flash purple, orange, yellow and blue.
+Just tap a suggestion to fill it in the text field — but don’t worry, it doesn’t instantly send the message. You have a chance to review it first.
+These suggestions aren’t great, in my opinion; they sound kind of soulless and robotic. They’re easy to ignore on the iPhone but kind of irritating on the Mac, where they appear as a pop-up above the text field. You can hit Escape to dismiss it.
+Transcriptions in phone calls and notes
+Record phone calls and read the transcriptions in Notes.Screenshot: D. Griffin Jones/Cult of Mac
+Phone calls and Notes now have built-in recording and transcriptions.
+From a phone call or FaceTime Audio call, tap the Record button in the upper left. You’ll get an explanatory screen explaining how this works the first time this happens. Both people will hear “This call will be recorded,” with a brief countdown tone. Phone call recordings are in Notes, in the Call Recordings folder. A new note is made for every phone call, and from a pop-up banner, you can tap Take notes on this call to switch to the Notes app.
+You can also add a voice recording to a note directly. From the toolbar, tap the Attachments button (with a paperclip icon) and tap Record Audio. You’ll see a very familiar interface to the Voice Memos app — with a Show Transcript and Summary button in the bottom left. You can start recording and see the transcription live.
+The transcriptions are pretty fast, though not terribly accurate. Even smaller Whisper models have much better results, especially around capitalizing proper nouns.
+Reduce Interruptions Focus mode
+Silence the notifications that don’t need to interrupt you.Screenshot: D. Griffin Jones/Cult of Mac
+Setting up a Focus mode is a bit of a chore. You need to know exactly which contacts and apps you want to silence and let through. Reduce Interruptions is a new Focus mode that’s a slightly smarter Do Not Disturb.
+Reduce Interruptions judges on the fly which notifications seem important. I turned it on and stopped getting pings from a busy Snapchat group and a few texts. I did some testing with Slack. When my colleague Ed pinged me without a message (“@Griffin”) it didn’t notify me, which is good; but it did ping me when I asked him to write something that sounded important (“@Griffin Your car is being towed!”). It’s not perfect though. A text from Meijer that my grocery order was ready for pickup was also silenced, and I would have liked to know about that one.
+You can still apply fixed rules to overrule the AI, if you want, in Settings > Focus > Reduce Interruptions. Just like any other Focus modes, you can set a specific group of contacts and apps to be whitelisted, choose to hide badges, set a schedule, and tie the Focus to a Lock Screen, Home Screen and Watch face.
+You can also turn on Intelligent Breakthrough & Silencing on any of your existing Focus modes, too. This lets you use the AI-powered model on top of any of your existing Focuses.
+Siri product knowledge
+The best how-tos and guides are still at Cult of Mac .Screenshot: D. Griffin Jones/Cult of Mac
+Siri now has extensive knowledge about Apple products — it’s been trained on the Apple Support documentation. I asked it how to share a Wi-Fi password, and it instantly gave instructions that were very clear and easy to understand. Then I asked it, “How do I customize Control Center?” and it gave me instructions for iOS 17 and earlier , not the new Control Center in iOS 18 . I asked it how to customize the Camera Control , and it just gave me Google search results.
+It seems like this feature hasn’t been updated with the iOS 18 iPhone User Guide yet. Although these instructions are usually published online the day software updates and products are released, the new AI model needs time to be trained and tested — and it looks like Apple still needs to train the new model.
+Tap-to-Siri, and the new Siri design
+Type your query to ask Siri in secret.Screenshot: D. Griffin Jones/Cult of Mac
+You can now double-tap the bottom of the screen to type to Siri. This has been available as an accessibility setting before, but it was an all-or-nothing change. Now, it’s easy to switch back and forth. Double-tap to type; hold the side button (or say “Hey, Siri”) to talk.
+This is super handy If you don’t want to speak out loud. Siri actually has a few domains of knowledge that are pretty reliable — sports trivia, movie and TV show trivia, weather, flipping coins and rolling dice, and looking up saved passwords in the Passwords app. If you don’t want to announce your Siri queries to the whole room, this is a more discreet way to talk to your voice assistant.
+Although double-tapping the Home Bar isn’t really an Apple Intelligence feature, and could easily be enabled on all devices, Apple is tying this gesture to the new Siri design. While these new Siri features are neat, it’s only the appetizer. The total Siri overhaul is coming later, likely in iOS 18.4 in 2025 . That version of Siri will be able to take complicated instructions, questions, see your screen and do things for you inside apps.
+I think it’s misleading that Apple rolled out the new visual look for Siri before the real smart Siri debuts. Ordinary people will see the flashy new design, try it out, realize it isn’t much better and write it off, potentially ignoring the new features expected to come later.
+Conclusion: Apple Intelligence is off to the races
+I’ve been impressed with the new Apple Intelligence features so far. Apple has thoughtfully applied AI to real-world tasks, and most of them show real promise. The writing tools will improve your communication skills; Image Clean Up makes some photo edits super quick and easy; and I really enjoyed some of the Memory Movies it created. It makes me very optimistic about the smarter Siri that’s coming down the pike.
+More top features in iOS 18
+Aside from Apple Intelligence, check out some of the other great new features in iOS 18 — available for everyone:
+Newsletters
+Daily round-ups or a weekly refresher, straight from Cult of Mac to your inbox.
+Cult of Mac Today
+Our daily roundup of Apple news, reviews and how-tos. Plus the best Apple tweets, fun polls and inspiring Steve Jobs bons mots. Our readers say: "Love what you do" -- Christi Cardenas. "Absolutely love the content!" -- Harshita Arora. "Genuinely one of the highlights of my inbox" -- Lee Barnett.
+The Weekender
+The week's best Apple news, reviews and how-tos from Cult of Mac, every Saturday morning. Our readers say: "Thank you guys for always posting cool stuff" -- Vaughn Nevins. "Very informative" -- Kenly Xavier.
+Popular This Week

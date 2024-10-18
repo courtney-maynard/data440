@@ -1,0 +1,188 @@
+<style>
+    .lead_capture_modal{
+        background-color: transparent !important;
+    }
+    #lead_capture_modal{
+        z-index:500;
+        position:relative;
+    }
+    .lead_capture_cancel {
+        margin-top: -326px !important;
+        left: 0px !important;
+        margin-left: 0px !important;
+        top: 0px !important;
+        margin-top: 0px !important;
+        width: 100% !important;
+        border-radius: 0px !important;
+        background: rgba(1,1,1,0.8);
+        height: 100% !important;
+    }
+
+    .lead_capture_cancel .modal-inner{
+        padding: 0px;
+        max-width: 330px;
+        margin: 12% auto auto auto;
+    }
+    .modal-content {
+        margin: 50% auto;
+        width: 60%;
+        box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+        animation-name: modalopen;
+        animation-duration: var(--modal-duration);
+        height: 303px;
+        width: 302px;
+    }
+    .modal-body {
+        padding: 10px 20px;
+        background: #fff;
+        border-radius: 10px;
+        margin: 15px 0px;
+    }
+    .modal-footer{
+        bottom: 0px;
+        position: absolute;
+        width: 100%;
+    }
+    @media only screen and (max-width: 990px) {
+        .lead_capture_cancel .modal-inner{
+            margin-top: 16%;
+        }
+    }
+    @media only screen and (max-width: 600px) {
+        .lead_capture_cancel .modal-inner{
+            margin-top: 19%;
+        }
+    }
+    #lead_capture_cancel {
+        background-color: rgba(0, 0, 0, 0.6);
+        top: 50%!important;
+        left: 50%!important;
+    }
+    #lead_capture_cancel .lead_capture_modal{
+        top: 50%;
+        left: 50%; 
+        transform: translate(-50%,-50%);
+    }
+</style>
+<html ng-app="MyApp" ng-controller="IndexPageController"  ng-cloak>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta http-equiv="Content-Security-Policy" content="style-src 'self' 'unsafe-inline'; media-src *; connect-src *">
+        <link rel="shortcut icon" type="image/png" href="favicon.png"/><title>{{eventParentListing.company_details.company_name}}&nbsp;{{eventParentListing.response[0].event_title? '- ' : ''}}{{eventParentListing.response[0].event_title}}</title>
+        <!-- Path to Framework7 Library CSS-->
+        <link rel="stylesheet" href="../commonLibrary/f7Lib/css/framework7.ios.css">
+        
+        <script src="../commonLibrary/Angular/angular.min.js" type="text/javascript"></script>
+        <script src="../commonLibrary/Angular/angular-localstorage.js"></script>
+        <!--Signature agreement-->
+        <script src="../commonLibrary/Angular/signature_pad.min.js"></script>
+        <script src="../commonLibrary/domainConfig.js"></script>
+        <script src="../commonLibrary/Angular/clipboard.min.js" type="text/javascript"></script>
+        <script src="../commonLibrary/Angular/ngclipboard.min.js" type="text/javascript"></script>
+        <script type="text/javascript" src="../commonLibrary/components/socialSharing/socialSharing.js"></script>
+        <script type="text/javascript" src="../commonLibrary/Modules/EventModule.js"></script>
+        <script type="text/javascript" src="../commonLibrary/Modules/GlobalCartModule.js"></script>
+        <script type="text/javascript" src="../commonLibrary/Services/BuisnessOperatorAppService.js"></script>
+        <script type="text/javascript" src="../commonLibrary/Services/EventService.js"></script>
+        <script type="text/javascript" src="../commonLibrary/Services/CartService.js"></script>
+
+        <script type="text/javascript" src="../commonLibrary/components/cart/eventCartSummary/eventCartSummary.js"></script>
+        <script type="text/javascript" src="../commonLibrary/components/cart/participantForm/participantForm.js"></script>
+        <script type="text/javascript" src="../commonLibrary/components/cart/paymentPlan/paymentPlan.js"></script>
+        <script type="text/javascript" src="../commonLibrary/components/event/parentListing/parentListing.js"></script>
+        <script type="text/javascript" src="../commonLibrary/components/event/childListing/childListing.js"></script>
+        <script type="text/javascript" src="../commonLibrary/components/event/detailView/detailView.js"></script>
+        <script type="text/javascript" src="../commonLibrary/components/event/parentDetail/parentDetail.js"></script>
+        <script type="text/javascript" src="../commonLibrary/components/cart/buyerInfo/buyerInfo.js"></script>
+        <script type="text/javascript" src="../commonLibrary/components/cart/cartSummary/cartSummary.js"></script>
+        <script type="text/javascript" src="../commonLibrary/components/cart/waiverPolicy/waiverPolicy.js"></script>
+        <script type="text/javascript" src="../commonLibrary/components/cart/cartIcon/cartIcon.js"></script>
+        <script type="text/javascript" src="../commonLibrary/components/cart/cartComponentContainer/cartComponentContainer.js"></script>
+        <!--<script src="https://www.google.com/recaptcha/api.js?render=6LcsJKwhAAAAAKPeeZb81cnk4BRaPY-tZ0sXMgV7" async defer></script>-->
+        <link href="../commonLibrary/components/cart/css/cart.css" rel="stylesheet" type="text/css"/> 
+        <link href="../commonLibrary/components/cart/css/mediaQuery.css" rel="stylesheet" type="text/css"/> 
+        <link href="../commonLibrary/components/ComponentCss/component.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="css/custom.css?v=1932">
+        <link rel="stylesheet" href="../commonLibrary/Global_Css/global_css.css">
+        <script type="text/javascript" src="../commonLibrary/Modules/StripeCardReaderModule.js"></script>
+        <script type="text/javascript" src="../commonLibrary/Services/CardReaderService.js"></script>
+        <script src="https://js.stripe.com/terminal/v1/"></script>
+        <script>
+            var cordova = {};
+                 cordova.InAppBrowser = {};
+                 cordova.InAppBrowser.open = function (url, type) {
+                     if (type.toLowerCase() == '_self') {
+                         window.location.href = url;
+                     } else {
+                         window.top.postMessage({
+                             "type": "link",
+                             "url": url
+                         }, '*');
+                     }
+                 }
+         </script>
+         <style>
+             .autocomplete-dropdown.autocomplete-dropdown-in{
+                 z-index: 9999 !important;
+             }
+             .page-content-fix
+             {
+                 margin-top: 0px;
+                 height: calc(100% - 0px);
+             }
+
+             .w25{
+                 width: 25px;
+             }
+             @media only screen and (min-width: 768px) {
+                 .page-content-fix{
+                     padding: 0px !important;
+                 }
+             }
+        </style>
+    </head>
+    <body>
+        <div ng-show="preloader" id="preloader-transp" class="preload"></div>
+        <div ng-show="preloader" class="preloader preloader-custom preload"></div>
+        <div class="statusbar-overlay"></div>
+        <div class="panel-overlay"></div>
+        <div id="view-1" class="view tab view-main active pagelay page-content page-content-fix">
+            <div class="navbar">
+                <div class="admin-banner">
+                    <center><h6>ADMINISTRATOR</h6></center>
+                </div>
+                <div class="navbar-inner fixed-navbar list navbaricon-align" data-page="index">
+                    <div class="left" style="margin-top: 0px;padding-right:15px;" ng-click="backEvents('back')"><a href="#" class="back_icon"><img src="css/img/E1.png" alt="back_icon" />&nbsp;<span ng-show="!mobiledevice">Back</span></a></div>
+                    <div><img class="nav-img logo-cover" ng-src="{{eventParentListing.company_details.logo_URL}}" alt=""></div>
+                    <div class="right">
+                        <div ng-style="{'margin-right' : mobiledevice ? '10px' :'15px' }"><cart-icon ng-if="eventParentListing.showCartIcon" cart-items ="eventParentListing.request" buyer-profile-details="buyer_profile_details"></cart-icon>
+                        </div>
+                        <img src="css/img/E2.png" class="home_icon" ng-click="backEvents('home')"  alt="home_icon" />
+                        <strong ng-show="online == 'offline'"><a ng-click="istatus()"><i class="icon f7-icons" style="color:red;">info</i></a></strong>
+                    </div>
+                </div>
+            </div>
+            <div class="pageinlay" id='pageinlay'>
+                <parent-listing ng-if="eventParentListing.showEventPages == 'parent'" event-parent-listing="eventParentListing" select-event-function="showEventCategory(event_id,from)"></parent-listing>
+                <detail-view ng-if="eventParentListing.showEventPages == 'parent_description'" event-parent-listing="eventParentListing" buyer-profile-details="buyer_profile_details"></detail-view>
+            </div>
+            <div class="footer" ng-if="!mobiledevice">
+                <center>
+                    <span>Powered by</span>
+                    <img src="css/img/E3.png" alt="">
+                </center>
+            </div> 
+        </div> 
+        <script type="text/javascript" src="../commonLibrary/f7Lib/js/framework7.min.js"></script>
+        <script src="../commonLibrary/Angular/jquery.min-2.2.4.js" type="text/javascript"></script>
+        <script type="text/javascript">var ver = Date.now();</script>
+        <script>document.write('<script src="js/my-app.js?v=' + ver + '" type="text/javascript"><\/script>');</script>
+        <script>document.write('<script src="js/services/InitService.js?v=' + ver + '" type="text/javascript"><\/script>');</script>
+        <script>document.write('<script src="js/controller/IndexPageController.js?v=' + ver + '" type="text/javascript"><\/script>');</script>   
+        <script type="text/javascript" src="https://static.wepay.com/min/js/tokenization.3.latest.js"></script>
+        <script src="https://js.stripe.com/v3/"></script>
+    </body>
+</html>

@@ -1,0 +1,140 @@
+By
+Katie Sanders Senior Editor
+As a data-driven content strategist, editor, writer, and community steward, Katie helps technical leaders win at work. Her 14 years of experience in the tech space makes her well-rounded to provide technical audiences with expert insights and practical advice through Q&As, Thought Leadership, Ebooks, etc.
+Discover how to deliver better software and systems in rapidly scaling environments. Join our Newsletter
+QUICK SUMMARY
+Facing challenges like limited time, information overload, and the constant need to stay relevant? I've been there. Let me empower you with my picks for the top data science newsletters!
+Drowning in a sea of data? Feeling overwhelmed by the constant flow of information and struggling to identify the most relevant insights for your data science projects? You're not alone.
+Here are some of the best data science newsletters for managers to learn about new technology, spark inspiration, and tackle data challenges with confidence!
+Best Data Science Newsletters Shortlist
+Here's a shortlist of the best data science newsletters I think are worth joining in 2024:
+DataTalks.Club — For community-driven insights
+KD Nuggets — For data science tutorials and resources
+Data Science Dojo — For data science education
+Open Data Science — For open-source data projects
+Find more details about each newsletter below.
+Best Data Science Newsletters Overviews
+The Data Science Weekly newsletter ( Source )
+Data Science Weekly is a free newsletter that provides curated news, articles, and jobs related to data science.
+Audience: Data science professionals and enthusiasts
+Size: 60,000+ subscribers
+Frequency: Weekly
+Cost: Free
+Subscribe Here
+Why Subscribe:
+Data Science Weekly is designed to keep subscribers informed about the latest developments in the field. The newsletter's curated content ensures readers receive high-quality information without sifting through multiple sources.
+2. DataTalks.Club — For community-driven insights
+The DataTalks.Club newsletter ( Source )
+DataTalks.Club is an online community for data enthusiasts that offers articles, events, podcasts, books, and courses.
+Audience: Data enthusiasts and professionals
+Size: 45,000+ subscribers
+Frequency: Weekly
+Cost: Free
+Subscribe Here
+Why Subscribe:
+DataTalks.Club offers a free weekly newsletter that keeps subscribers informed. Subscribers benefit from a wealth of resources, including free courses and weekly events, making it a platform for continuous learning and networking.
+Join our Newsletter
+Discover how to deliver better software and systems in rapidly scaling environments.
+Your email*
+By submitting this form you agree to receive our newsletter and occasional emails related to the CTO. You can unsubscribe at anytime. For more details, review our Privacy Policy . We're protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.
+Phone
+This field is for validation purposes and should be left unchanged.
+3. TLDR — For tech and data science summaries
+The TLDR newsletter ( Source )
+TLDR delivers summaries of the most interesting stories in startups, tech, and programming.
+Audience: Tech enthusiasts and professionals
+Size: 1,250,000 subscribers
+TLDR is ideal for busy professionals who want to stay informed about the latest tech and data science news without spending too much time. The concise format ensures that readers get the most important updates in just a few minutes each day.
+4. Data Elixir — For curated data science news
+The Data Elixir newsletter ( source )
+Data Elixir is a weekly newsletter that provides top picks from around the web in the field of data science.
+Audience: Data science professionals and enthusiasts
+Size: 55,000+ subscribers
+Data Elixir offers a curated mix of high-quality content from around the web, a great resource for staying updated on the latest trends and developments in data science. The newsletter's focus on machine learning, data visualization, and analytics ensures readers receive valuable insights and resources.
+5. Data Umbrella — For diversity in data science
+The Data Umbrella newsletter ( Source )
+Data Umbrella is a community-driven newsletter that focuses on promoting diversity in data science. It organizes events and provides resources for underrepresented groups in the field.
+Audience: Data science professionals and enthusiasts
+Size: 1,000+ subscribers
+Data Umbrella is dedicated to fostering diversity and inclusion in the data science community. Subscribers benefit from access to events, resources, and a supportive network that aims to create a more inclusive environment in the field.
+6. KD Nuggets — For data science tutorials and resources
+The KD Nuggets newsletter ( Source )
+KD Nuggets newsletter covers a wide range of topics, including career advice, data engineering, NLP, and programming.
+Audience: Data science professionals and enthusiasts
+Size: 70,000+ subscribers
+Frequency: Weekly
+Cost: Free
+Subscribe Here
+Why Subscribe:
+KD Nuggets offers a wealth of resources, including tutorials, cheat sheets, and tech briefs, making it an invaluable resource for anyone looking to deepen their knowledge in data science and related fields.
+All Hands On Data newsletter ( Source )
+All Hands On Data is a weekly newsletter that provides articles, podcasts, and video content on various data topics.
+Audience: Data science professionals and enthusiasts
+Size: 1,000+ subscribers
+All Hands On Data offers a unique perspective on data science by providing a "boutique library" approach to content. It aims to keep subscribers updated on the latest developments in the data sphere.
+8. Data Machina — For machine learning trends
+The Data Machina newsletter ( Source )
+Data Machina is a weekly newsletter that provides a deep dive into the latest AI and machine learning research, projects, and repositories.
+Audience: AI and machine learning professionals and enthusiasts
+Size: 18,000+ subscribers
+Data Machina offers an excellent resource for staying updated on cutting-edge research and developments. The newsletter's focus on practical applications ensures that readers receive valuable insights and tools.
+Ahead of AI newsletter ( Source )
+Ahead of AI is a newsletter that specializes in machine learning and AI research. It is read by tens of thousands of researchers and practitioners.
+Audience: AI researchers and practitioners
+Size: 50,000+ subscribers
+Ahead of AI provides in-depth coverage of the latest AI and machine learning research , an invaluable resource for professionals looking to stay ahead in the field. The newsletter's focus on technical discussions and research summaries ensures that readers receive high-quality, actionable insights.
+The O’Reilly Data Newsletter ( Source )
+The O'Reilly Data Newsletter offers news, insights, and exclusive content, including the Next Economy Newsletter and the Radar Trends to Watch.
+Audience: Data science professionals and enthusiasts
+Frequency: Weekly and Monthly
+O’Reilly Data Newsletter provides expert analysis of the latest trends in data science and technology. Subscribers benefit from exclusive content and offers, a valuable resource for staying informed and ahead of the curve.
+The Modern Data Stack newsletter ( Source )
+The Modern Data Stack newsletter offers weekly editions with articles on topics such as Apache Airflow, cutting-edge tools, and map-based business intelligence applications.
+Audience: Data management professionals and enthusiasts
+Modern Data Stack provides practical tips and resources for building and operating a modern data stack. Subscribers receive weekly updates on the latest tools and techniques for continuous learning and improvement in data management .
+The Academic Data Science Alliance newsletter ( Source )
+The Academic Data Science Alliance covers topics related to data science, open science, open scholarship, and career development.
+Audience: Academic researchers and data science professionals
+Size: 8,500+ subscribers
+Academic Data Science Alliance provides a platform for collaboration and knowledge sharing within the academic data science community. Subscribers benefit from access to the latest research, debates, and developments in the field.
+The Big Data News Weekly newsletter ( Source )
+Big Data News Weekly provides curated news, articles, and job listings related to big data, data science, Hadoop, AI, AI tools, machine learning, and analytics.
+Audience: Big data professionals and enthusiasts
+Size: 10,000+ subscribers
+Frequency: Weekly
+Cost: Free
+Subscribe Here
+Why Subscribe:
+Big Data News Weekly offers an overview of the latest developments in big data and AI. Subscribers receive curated content that covers a wide range of topics.
+The Data Science Central newsletter ( Source )
+Data Science Central provides news and analysis on big data, covering technical topics as well as business and sector topics related to AI.
+Audience: AI practitioners and data science professionals
+Size: 5,000+ subscribers
+Data Science Central offers a wide range of content, including articles, videos, and podcasts, a valuable resource for AI practitioners and data science professionals.
+The Data Science Dojo newsletter ( Source )
+Data Science Dojo provides information about upcoming boot camps and courses, including online and in-person options for data science and machine learning training.
+Audience: Data science learners and professionals
+Size: 10,000+ subscribers
+Frequency: Weekly
+Cost: Free
+Subscribe Here
+Why Subscribe:
+Data Science Dojo aims to make data science accessible to everyone by offering a wide range of training programs and resources. Subscribers benefit from detailed information about the latest developments in the AI industry.
+The Open Data Science newsletter ( Source )
+The Open Data Science newsletter offers frequent updates on the latest in data science and AI, covering technical tutorials, research coverage, career advice, and business implementation.
+Audience: Data science professionals and enthusiasts
+Size: 15,000+ subscribers
+Open Data Science provides an overview of the latest developments in data science and AI. Subscribers benefit from curated and original content, a great resource for staying informed and up-to-date with the latest trends and best practices.
+Join for More Insights
+Discover how to deliver better software and systems in rapidly scaling environments.
+Your email*
+By submitting this form you agree to receive our newsletter and occasional emails related to the CTO. You can unsubscribe at anytime. For more details, review our Privacy Policy . We're protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.
+Phone
+This field is for validation purposes and should be left unchanged.
+YOU SHOULD ALSO READ
+By Katie Sanders
+Learn From Other Kick-Ass CTOs And Technology Leaders Who Are Scaling In SaaS
+Your email*
+By submitting this form you agree to receive our newsletter and occasional emails related to the CTO. You can unsubscribe at anytime. For more details, review our Privacy Policy . We're protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.
+Name
+This field is for validation purposes and should be left unchanged.

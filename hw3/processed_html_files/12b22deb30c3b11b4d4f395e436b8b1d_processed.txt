@@ -1,0 +1,53 @@
+The store will not work correctly in the case when cookies are disabled.
+This extension allows attaching additional information such as manuals, warranty, recipes, etc. in different formats (PDF, JPG, ZIP, etc.) to the product page.
+Compatibility
+This extension allows attaching additional information such as manuals, warranty, recipes, etc. in different formats (PDF, JPG, ZIP, etc.) to the product page.
+Key Features
+Option to enable/disable the extension as per store
+Option to attach different types of files (pdf, jpg, png, doc, zip, etc.)
+Option to configure attachment labels
+Feature Highlights
+Product Attachment
+With this extension, store admin can attach/upload different file types to provide additional information about the product. And user can view and download the attachment from the tab of the product page.
+Installation
+1. Download the extension .zip file and extract the files. 2. Copy the files from "src/" folder to the "{magento2-root-dir}/app/code/MagePsycho/ProductAttachment" folder (create non-existing folders manually). 3. Run the following series of command from SSH console of your server:
+php bin/magento module:enable MagePsycho_ProductAttachment --clear-static-content
+php bin/magento setup:upgrade
+php bin/magento cache:flush
+rm -rf pub/static/* var/view_preprocessed/*
+php bin/magento setup:static-content:deploy
+5. Go to Admin > CATALOG > Product Attachment > Manage Settings
+How can I pay for MagePsycho extensions?
+We only support PayPal for now. The other means are under processing.
+If I buy an extension, how would I get it?
+After you make a purchase, the order will appear in the "My Orders" section of your personal account page.
+As soon as the order status becomes completed the purchased extensions can be downloaded from "My Downloads" section.
+How can I get the license key(s) for the purchased extension?
+The license key(s) are sent along with the invoice email. In case if you have't received any license key(s), please Contact Us with the order #.
+Are your extensions open source or encrypted?
+All of our extensions are developed on the open source platform.
+Do you provide Magento customization service?
+Yes, sure, we can help you with customization. Please, submit the Request Quote form.
+Can I get a refund if an extension doesn’t suit me?
+Absolutely. MagePsycho provides a 30-day money back guarantee. So feel free to purchase.
+After 30 days from the date of purchase, the refund is not applied. You also cannot ask for a refund for the installation service or custom service.
+If you are looking for a specific solution for your store, please Contact Us .
+Can I request a free trial?
+MagePsycho doesn’t provide any trials. But we have a 30 days money back guarantee. But if you buy an extension and it doesn’t suit you in any way, you can request a refund with no risks on your side. Moreover, most of our extensions have demos, where you can see how our modules work.
+What is the license policy? On how many websites can I use MagePsycho extensions?
+Our license allows you to use in a single domain but an unlimited number of sub-domains. In the case of additional licenses, we do provide a good discount.
+Will I get free support and updates?
+You will get free lifetime updates for extensions purchased from us.
+Write Your Own Review
+You May Also Like
+$75.00
+Regular Price $75.00 Special Price $55.00
+$75.00
+$75.00
+Regular Price $75.00 Special Price $55.00
+(also get $10 in your next order)
+Newsletter
+Subscribe
+Connect with us
+Proud member of
+We accept

@@ -1,0 +1,42 @@
+Company Size: 51-200
+Help us maintain the quality of jobs posted on WP Remote Work
+Do these jobs not exist?
+Are these jobs not remote?
+Are these jobs not related to WordPress?
+Frontend Developer
+Department: Development
+The Role:
+Happy Cog is looking for a full-time Frontend Developer to join our team. You’ll be a member of our development team, working closely with our 40+ person development team.  The focus of this role is on frontend development, though you’ll be expected to have some familiarity with other parts of the stack as well. You’ll be building high quality frontends for the content management systems and web applications that Happy Cog builds. You should be comfortable with frontend skills like HTML, JavaScript, and CSS, as well as a variety of tools and frameworks in the frontend space.
+You’ll be working on 3-4 projects at any time; typically one larger project and a few smaller projects to keep things fresh. We’re a fast-paced agency with a great team environment, so you’ll never get bored. We need someone who loves keeping up-to-date on the newest advancements in the field and can figure out when to start applying those advancements to client work. You’ll work with other smart developers who can help you grow and challenge you, as well as help you along the way. You’ll also be communicating directly with clients, project managers, and designers to understand their requirements and present your work. Your job will be fun, challenging, and interesting.
+Key Responsibilities:
+Building out modular/component-based visual frontends in tandem with HTTP APIs and modern CMS platforms.
+Bring visual designs to life using the latest in libraries, frameworks, and tooling.
+Experimenting with advanced visual techniques and animations to test the limits of what is possible in modern CSS.
+Defining and setting up a strong foundation for long term maintainability for large scale design systems, and architecting solutions for today’s problems and accommodating what future iterations might bring.
+Consult with our in-house visual design team on technical feasibility, prototyping complex interactions or dynamic interfaces, or brainstorming on possible solutions to the problem at hand.
+Learn new technologies on the job. We do not specialize in any one language, framework, tool, or methodology – we require our engineers to be resourceful when it comes to learning about shiny new things.
+Skills & Qualifications:
+You should have a minimum of 3 years of professional experience, preferably in a technical role.
+Are able to write high quality, well documented, and maintainable code.
+Have demonstrable professional experience with modern CSS and CSS frameworks such as Tailwind.
+Have demonstrable professional experience with at least one JavaScript framework, such as Alpine, React, Vue, etc. as well as writing vanilla JavaScript.
+Can empathize with our clients needs and recommend the best possible technical solutions for their unique situations.
+Work on large projects with a team of multiple engineers, UI designers, and product/project managers as well as clients.
+Have digital agency or freelancing experience.
+Are an empathetic, caring, and emotionally intelligent human being.
+Are equally interested in both modern stateful JavaScript frameworks and advanced frontend visual techniques.
+The salary range for this position is $90,000 – $120,000 per year, depending on experience
+What we offer:
+Healthy work/life balance
+A creative environment to do the best work of your career
+An amazing team of developers, designers, marketers, and project managers.
+Paid Parental Leave
+Health, Dental, and Vision insurance
+Retirement plan with company matching
+About Happy Cog:
+Happy Cog is a growing interactive agency of 80+ people, all working 100% remotely.
+We design, develop, and market websites and mobile apps for a wide variety of clients — everyone from small startups, to Fortune 100s. Projects we’ve recently worked on have included online ordering platforms for restaurants, custom content management systems for law firms, an economic mobility research platform, and many more.
+We are looking for great people to join our team, so if you don’t check all the boxes, but believe you can do the job, reach out and tell us why – your experience might be just what we’re looking for!
+Happy Cog is an equal opportunity employer and considers applicants for all positions without regard to race, color, religion or belief, sex, age, national origin, citizenship status, marital status, protected veteran status, genetics, sexual orientation, gender identity or expression, physical or mental disability.
+We are also proud to have been on the Inc 5000 list of America’s fastest growing companies for 7 years in a row! For more information go to our website: https://www.happycog.com.
+Subscribe

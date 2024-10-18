@@ -1,0 +1,75 @@
+WRITING TODAY: Eleven Thoughts about Artificial Intelligence & Writing
+Alexis Kirke describes some potential impacts of AI on screenwriting and the scripted entertainment industry.
+Screenwriter and AI coder
+Published: 4 October 2024
+Alexis Kirke is an award-winning screenwriter and A.I. coder. He recently completed the BBC Writers' development programme Voices 2024 and has spoken on A.I. at the London Screenwriters’ Festival, Scribe Lounge Labs and the Royal Institution.
+We asked him for some thoughts about the evolving area of A.I. and its potential impact on screenwriting and the production of scripted entertainment generally.
+This post is part of our Writing Today strand where we ask guest bloggers to write about the issues that are affecting the industry from their point of view. The views expressed in the blog post should not be taken as representing the views of the BBC.
+The world is changing. You can sense it everywhere - like Galadriel’s reflection in The Fellowship of the Ring movie , where she says, “I feel it in the water. I feel it in the earth. I smell it in the air.” This quote came to mind as I sat down to write about Artificial Intelligence (A.I.) and creative writing (at the request of those lovely people from BBC Voices). But each time I started, my thoughts sparked with endless possibilities, setting off a chain reaction of ideas. I was finding it hard to pin myself down to a single thread (a mixed metaphor that an A.I. would never write).
+So rather than a structured, five-act exploration of the topic, I’m going to offer a collection of loosely connected musings on A.I. and writing: 11 reflections on modern A.I. Eleven years ago (2013), a cluster of vital A.I. innovations came about at Google, DeepMind and in academia. 2013 is seen as an A.I. “coming of age” by some, and partly to celebrate those events, 11 is the number I have chosen.
+I’m not a Silicon Valley insider, but I wear an unusual combination of hats: screenwriter (I was part of BBC Voices 2024), A.I. coder (for commercial clients), and part-time Senior Research Fellow in A.I. So hopefully, these thoughts will be of some use to others.
+1. Not another think-piece on A.I. and Writing! Why? WHY?
+Because, dear reader, we’re at a crossroads. Just as Oppenheimer stood before the first atomic explosion in the New Mexico desert, wondering what he’d unleashed, Tom B. Brown and his team (who introduced GPT-3 in May 2020) must have felt a similar flicker of uncertainty. They had an inkling something huge was about to follow, but couldn’t fully foresee society's response. Could Oppenheimer have predicted the Cold War? Or that the race to the Moon would be fuelled, in part, by nuclear research? Could he have known that after two world wars within 20 years, the threat of nuclear war would keep another global conflict at bay for at least 80 years? No, society’s too unpredictable to map the full impact of revolutionary inventions.
+And so, here we are – facing the rise of GPT-3’s successors, evolving faster than we can keep up with. Despite the assurances from seasoned writers dismissing these “plagiarism machines,” there’s a gnawing feeling that something bigger is brewing. But what is it, really?
+2. Nobody knows anything.
+Here’s the good news: if you’re confused and uncertain you’re not alone. I work with A.I. every day. Mornings are for screenwriting, and afternoons are spent working on natural language processing A.I.s. Part of my early morning routine includes reading 10 pages of a screenplay I’ve never seen before, to hone my craft as a writer. I also make time for a couple of pages from A.I. textbooks. I have multiple A.I. qualifications. I’ve written screenplays and a play about the implications of AI. I’ve spoken at events about AI and screenwriting. I’ve spent months experimenting with code that generates stories and screenplays using various methodologies (none of which I actually apply to my own screenwriting, by the way). But the truth is, I am somewhat confused and uncertain about what is coming.
+Most people are. Only when it works will we recognise what’s been building all along. When we see the first genuinely compelling stories written by AI, we’ll think, “Well, of course.” AI is such a complex technology that it’s only in witnessing its results that we grasp what it’s truly capable of.
+As I write this, OpenAI’s o1 model has just been released. It combines the impressive “humanlike” abilities of the earlier ChatGPT with enhanced logical processing. It doesn’t just provide answers; it thinks through problems step by step. The moment I saw this, I thought, “Oh wow, this is going to change everything.” It’s performing at a PhD level and has an IQ of 120 (genius level for a human). The earlier ChatGPT operated at around 80-90 IQ. But I didn’t try to predict the long-term impact. Time will tell.
+3. Why didn’t the development executives go on strike?
+We’ve all seen the recent WGA strike in the U.S. , along with the actors’ strike , both spurred by concerns including A.I. taking jobs. But development executives? They seem unconcerned for their jobs, as if A.I. isn’t creeping into their domain.
+Many assume generative A.I. will disrupt screenwriting by crafting scripts from scratch. But that might not be the smartest approach. A more effective use could be enhancing what’s already written, having A.I. make nuanced revisions.
+Imagine an A.I. that’s trained to think like a development executive. If it can mimic that role, who knows—maybe the AMPTP will be next in line to strike. The real challenge is teaching A.I. to experience a screenplay like a person. Sure, you can upload your script to GPT-4o and get feedback. It’ll give you notes. But take them seriously only if you’re in your first year of writing.
+The future lies in an A.I. agent that models humans and emotion, one that feels its way through a script, page by page. Experiencing the cumulative emotional effect and identifying with the characters. This is the real game-changer. (I’ve already begun experimenting with it.) Such an A.I. could easily outshine the ones focused on writing screenplays from scratch.
+One producer mentioned to me that thousands of readers are already being replaced. So, if you’re considering becoming a reader, it might be worth taking a closer look at where the market’s heading.
+4. Memories are made of this
+An A.I. reader has a distinct advantage over a screenwriter – it can forget recent experiences.
+A screenplay is at its most powerful when read for the first time. The initial emotional impact, the surprises in character, story, and plot, simply can’t be replicated on a second pass.
+Crafting a screenplay to deliver that one-time punch is incredibly challenging. It’s a process that involves numerous drafts, with readers going through the material again and again, dulling that all-important first impression. I’ve often joked that if I could wipe my memory clean before reading each new draft of my screenplay, I’d probably be rich by now.
+5. It’s not just about the thinking and the words.
+As I mentioned, I start each morning by reading 10 pages of a screenplay (or sometimes a play) I haven’t seen yet. This helps me not only to improve my writing but also to understand what flows well when read. After all, unless I put these scripts into production myself, I need others to engage with them through reading. So I want to get a sense of what works on the page.
+There’s talk going around that some gatekeepers are actually listening to screenplays instead of reading them. With AI voices sounding more natural these days, having a script read to you is no longer the awkward, robotic ordeal it used to be.
+Why are they doing this? Well, I listen to audiobooks when I do housework, and screenwriting podcasts when I jog. Whether it’s an agent heading into Soho on the tube or a producer stuck on the 101 South, listening might just be a major time saver (and turn the “weekend read” to the “weekend listen”).
+Don’t worry - it’s not the dominant trend yet. In fact it’s almost certainly the exception rather than the rule. But the more people listen, the more they’ll care about how your script sounds. If an agent knows that a third of producers are listening to the first 10 pages instead of reading them, it’ll affect how they judge your script. They’ll care about how it listens. That’s just the reality.
+I’ve been experimenting myself. I built a little A.I. app that loads in a screenplay PDF, assigns AI voices to characters and action lines, then mixes the audio with some panning and reverb to create a rough audio drama sketch. Tinniswood Award , watch out!
+6. Should I use generative A.I. when writing?
+It’s just another tool. But - if you do use it - keep that to yourself. I, of course, never use it for professional writing. And if I did, I certainly wouldn’t admit to it. But I don’t. So there’s that (or do I? Maybe this whole post is written by A.I. Who’s to say? I’m not telling. But it’s not. And I don’t.)
+Hope that clears things up.
+One more thing: there’s no need to feel pressured into experimenting with it. Apparently (I wouldn’t know), it can be a bit painful to watch it flirt with creativity without quite getting there. Apparently, it takes a bit of practice to make it useful. Even then, it’s hit or miss (or so I’m told). But just remember, the people you’re submitting to? They’re probably already using it. [Editor's note: We're not!]
+7. How can I A.I.-proof myself?
+The most important thing you can do is write what truly excites and moves you. Creating an A.I. with the depth of human emotional nuance is still a way off. So for now, as long as you're tapping into something real, you're in a good spot. There's something about genuine emotion that readers can pick up on, even when they can’t quite explain it. Our brains are wired to recognise those subtle patterns, and in doing so, we connect with the person behind the words.
+8. But do people care about what an A.I. writes?
+Why would anyone feel invested in something written by an A.I.? When I come across a YouTube video or TikTok that seems like it was generated by A.I., I find myself losing interest faster than I would with content made by a human. There’s something inherently more engaging about knowing a person put hours - or even days - into creating something. When it feels like there’s no human effort behind it, we care less because, well, IT didn’t care in the first place.
+But (there’s always a but), how long will that last? Kids believe their stuffed animals have feelings, and even as adults, we never quite shake that habit (just look at how pet owners talk about their cats). The generation growing up with A.I. might start believing A.I. has feelings too, even if they know it doesn’t on a rational level. And once that happens, A.I.-created work might start feeling more valuable to them.
+9. Will stories lose their grip?
+Crafting an emotional story takes time, patience, and a fair bit of slog. As a result, once it’s locked in, it tends to stay that way. I once made an interactive short film, Many Worlds , where the plot shifted based on a viewer’s brainwaves, heart rate, muscle tension, and perspiration. But the changes were simple, and the options were limited. It took forever to film because I had to shoot four endings and two middles. And one of those endings? Honestly, it was terrible. Of course, that's the one the machine picked at the premiere. Typical.
+Years ago, the BBC’s R&D invited me to speak about adaptive storytelling, and I said that these stories or films could only work if we could semi-automate the writing process. At the time, I didn’t see that happening anytime soon. Now, I’m not so sure. If an AI can write a compelling short film or play, then it can certainly write multiple versions. Those versions could easily be generated using future iterations of AI video generation tools like Sora and Runway.
+This opens the door to something much more personal. An AI might analyse your entire social media footprint, your Netflix habits, and your YouTube history, then decide which version of the film to show or generate specifically for you.
+By the way, did you hear that Runway just signed a deal with Lionsgate Pictures?
+10. Don’t forget the compute
+Speaking of Runway and Sora, OpenAI and similar companies are facing a massive challenge. They’ve built something incredible, but giving people access to these models is insanely expensive. OpenAI is valued at $150 billion. Much of the investment in them, by companies like Microsoft, is required because of the cost of compute. Running these A.I. models — like the ones behind ChatGPT and Sora - requires a huge amount of processing power, and that doesn't come cheap.
+No one’s quite sure how they’ll sustain this. There’s even talk of OpenAI’s latest model costing users hundreds a month just to access it, compared to the current $20 a month. The newest version limits paying users to 20 questions a week because of how costly it is to run.
+So, who’s going to foot the bill for all this compute?
+11. Is it entertainment?
+When something becomes deeply personal, it can shift from being simple entertainment to something more immersive - like a simulation. Take ElevenLabs, for example, the UK A.I. Voice company. With just 30 seconds of low-quality audio, you can clone a voice and have it say whatever an AI script generates. Want to hear a dead actor recite your poetry? Grab a clip from one of their films, click on the ElevenLabs website and there you go.
+But what if you used 30 seconds of your deceased parent’s voice? Collected their old emails and social media posts, uploaded them to ChatGPT, and asked it to generate text in their style? Then had the AI voice recite it to you. Is that still entertainment?
+On a website called Virbo, you can upload a photo, make it talk, and even use voice cloning for the talking. It's not perfect yet, but it's getting closer. Why not upload a picture of an ex and have them tell you how much they miss you? Or sync the ex’s video model with a chatbot and talk to them about your fake future wedding, using their old messages to create the chat tone? Is that entertainment?
+Or imagine, five or ten years from now, one of these platforms creates a short film about you and your late child going for a boat trip. Except, in real life, this was the boat trip during which your toddler drowned. But in the AI-recreated short film version, you save them. You both make it back to shore, holding hands, walking along the beach under the sun. Reality temporarily rewritten for you through the hypnosis of TV and cinema. When does a TV show turn into a simulation? When does entertainment become a drug?
+Related Links
+Site ID: ipages-writers
+Rebuild Page
+The page will automatically reload. You may need to reload again if the build takes longer than expected.
+Rebuild page
+Useful links
+Theme toggler
+Select a theme and theme mode and click "Load theme" to load in your theme combination.
+Theme:
+Blue
+Green
+Internal
+Pink
+Purple
+Red
+Studios
+Teal
+Wales
+Neutral

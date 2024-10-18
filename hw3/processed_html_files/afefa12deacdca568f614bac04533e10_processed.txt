@@ -1,0 +1,78 @@
+20 ways you need to *stop* using AI for marketing today.
+Home » Articles & Blog Posts » Digital Marketing » How NOT to Use AI
+Reading Time: 6 minutes
+How can you know what not to use AI for? Could you be making mistakes or, worse, putting yourself or your company at risk right now?
+One of the interesting concepts that emerges for me within digital marketing, time and again, is that of social norms. These are the behaviors and guidelines that are deemed by society to be acceptable, but when it comes to digital marketing and platforms like social networks, there are challenges and nuance. While those platforms, tools and channels have limited sets of rules which we must abide by (laws), there are other, often unwritten rules, which are determined by the groups using those platforms or tools, known as norms, mores and folkways. As a result, it’s inherently difficult to learn a new technology like AI when only the most basic functionality is documented and taught. AI tools and platforms will show you how to utilize their features, but will not tell you under what circumstances you should or shouldn’t employ it.
+That kind of distinction is largely left to society to determine.
+For instance, an AI tool that lets you put your face and voice seamlessly into any video scene, with generated dialogue, may be harmless and fun. But what if you decide to put my face and voice into that video, or that of a famous politician? Without realizing it, you’ve now created what’s known as a “deep fake” which could have dire consequences. While most would agree it’s not right to make a deep fake of someone without their permission and use it for commercial or political purposes, it isn’t yet legislated or regulated, making it merely a norm you might be expected to be aware of.
+Because AI is so new, and permeating every aspect of marketing, I think it’s helpful to explore some of the ways we shouldn’t be using the technology today – an exercise I’ve gone through for many social networks and other technologies in the past for audience members who’ve been with me for a while.
+What follows is a list of the things you shouldn’t do with AI in marketing – again, these aren’t “against the law” but rather against what have developed as social norms in the few years that AI has existed. As the capabilities of AI evolve, and society’s use and perception of AI changes, so too will these norms change. New norms will emerge, while others will become laws or disappear entirely as no longer relevant. It’s challenging, but it’s up to us to pay attention to the zeitgeist of artificial intelligence and how society is positioning specific activities.
+I’ve also included ways I’ve seen businesses use AI that simply end up wasting their time and resources which, while not contrary to any particular norm, can still be extremely detrimental to the brand.
+20 Ways You’re Using AI Wrong
+1. Rely on AI to completely replace human creativity and intuition.
+AI can automate repetitive tasks and provide valuable insights, but it lacks the human touch that creativity and intuition bring. Don’t rely on AI to generate all your creative content or make strategic decisions without human oversight. The best marketing strategies blend the analytical power of AI with human creativity and intuition to craft messages that truly resonate.
+2. Use AI-generated content without human oversight and quality checks.
+While AI can quickly produce content, it doesn’t always get it right. It can generate text that feels robotic, off-brand, or factually incorrect. Always have a human review AI-generated content to ensure it aligns with your brand’s voice and standards, and to catch any mistakes or awkward phrasing.
+3. Ignore ethical considerations and potential biases in AI algorithms.
+AI algorithms can inherit biases present in the data they are trained on, leading to unfair or unethical outcomes. It’s crucial to regularly audit your AI systems for biases and ensure they’re designed and used ethically . Ignoring this can lead to serious reputational damage and even legal implications.
+4. Neglect to obtain proper data privacy consents from customers.
+AI systems often rely on large datasets to function effectively, but using customer data without
+proper consent is a breach of privacy and can destroy trust. Always be transparent about how you collect, use, and store data, and ensure you obtain explicit consent from customers before using their information.
+5. Over-personalize marketing messages to the point of intrusiveness.
+Personalization can enhance user experience , but there’s a fine line between helpful and creepy. Avoid using AI to personalize marketing messages to the extent that it feels invasive or overly familiar. Customers should feel valued and understood, not surveilled.
+6. Depend solely on AI for customer service without offering human support options.
+AI chatbots are great for handling common inquiries, but they shouldn’t be your only line of customer service . Complex issues and empathetic customer interactions often require the human touch. Always provide an option for customers to connect with a human representative if needed.
+7. Use AI analytics without understanding the underlying data sources and methodologies.
+Blindly trusting AI analytics without understanding where the data comes from or how it’s processed can lead to poor decision-making. Take the time to learn about the data sources, collection methods, and algorithms used by your AI tools, so you can make informed decisions.
+8. Implement AI tools without proper training and support for the marketing team.
+Introducing AI tools to your marketing stack without adequate training and support is a recipe for failure. Ensure your team is well-trained on how to use these tools effectively and provide ongoing support to address any issues or questions that arise.
+9. Ignore the importance of maintaining a human touch in customer interactions.
+Even in an age of automation, personal interactions still matter. While AI can handle many tasks, make sure to maintain a human touch in your interactions to build deeper, more meaningful relationships with your customers.
+10. Use AI-generated insights without cross-verifying with real-world data.
+AI-generated insights can be incredibly valuable, but they should always be cross-verified with real-world data. This ensures the insights are accurate and applicable to your specific context. Relying solely on AI without this verification can lead to misguided strategies.
+11. Fail to regularly update and monitor AI models for accuracy and relevance.
+AI models can become outdated or less accurate over time. Regularly update and monitor your AI systems to ensure they remain effective. Failing to do this can result in poor performance and inaccurate insights.
+12. Use AI to create misleading or deceptive marketing campaigns.
+AI can be used to craft highly targeted marketing messages, but it’s important to stay ethical. Avoid using AI to create misleading or deceptive campaigns. Not only can this damage your reputation, but it can also lead to regulatory penalties.
+13. Rely on generic AI tools without customizing them for specific business needs.
+Generic AI tools might not always align with your specific business requirements. Customize AI tools to fit your unique needs and ensure they’re delivering the insights and automation capabilities that matter most to your organization.
+14. Overcomplicate marketing strategies with too many disparate AI tools.
+While AI can simplify certain processes, using too many different tools can actually complicate your marketing strategy . Aim for a streamlined, cohesive approach that integrates tools effectively and avoids unnecessary complexity.
+15. Ignore the potential for AI to perpetuate existing inequalities and biases in data.
+AI can unintentionally perpetuate biases present in historical data, leading to unfair treatment of certain groups. Regularly audit your AI systems to identify and mitigate these biases, ensuring your marketing practices are fair and inclusive.
+16. Use AI without a clear objective or measurable KPIs.
+Employing AI without clear objectives or measurable Key Performance Indicators (KPIs) can lead to wasted resources and effort. Define specific goals for your AI initiatives and track their impact to ensure they’re delivering value.
+17. Disregard the need for transparency in how AI is being used in marketing.
+Customers and stakeholders should know how and why AI is being used in your marketing efforts. Maintain transparency to build trust and ensure that your use of AI aligns with ethical standards and customer expectations.
+18. Fail to integrate AI with other marketing technologies and platforms.
+AI works best when integrated with your broader marketing technology stack. Ensure that your AI tools can seamlessly interact with other platforms, such as CRM systems, content management systems, and analytics tools, to maximize their effectiveness.
+19. Underestimate the importance of human judgement in interpreting AI-driven results.
+AI can provide valuable data and insights, but human judgement is essential for interpretation and decision-making. Use AI as a tool to inform your strategy, but don’t let it dictate your decisions without considering the broader context and human element.
+20. Use AI to invade customer privacy or manipulate consumer behavior unethically.
+AI opens up powerful possibilities for targeted marketing, but it’s crucial to use this power responsibly. Avoid using AI to invade customer privacy or manipulate behaviors unethically. Respect your customers and prioritize ethical practices in all your AI-driven marketing efforts.
+Give careful consideration to each of these recommendations on how not to use AI for marketing. At best, it might save you time and perhaps from some embarrassment – at worst, you could avoid causing irreparable harm and expensive litigation against your brand.
+We will have an entire interview with technology lawyer Mitch Jackson available soon on the AI in Marketing: Unpacked podcast that will go into more depth on the risks and challenges with AI in marketing, particularly when it comes to copyright and IP, so stay tuned for that .
+Meanwhile, understanding AI norms, and social norms overall, are typically a matter of paying attention to society and the micro-societies that emerge on new platforms, and simply being thoughtful about how you utilize technology. And as AI develops, this is a topic I’ll continue to update and return to for your benefit.
+Consider sharing with your audience
+Subscribe to get the latest posts sent to your email.
+Type your email…
+About Mike Allton
+Mike is an AI Consultant at The Social Media Hat, host of the AI in Marketing: Unpacked podcast, international keynote speaker & author, and Chief Storyteller at Agorapulse where he amplifies the stories of those achieving success in digital marketing. He has spent over a decade in digital marketing and brings an unparalleled level of experience and excitement to the fore, whether he's delivering a presentation or leading a workshop.
+Join The Community!
+Over 45,000 savvy marketers have signed up to get the latest social media insights and ideas. Will you? Join today .
+Meet Mike
+Mike is an AI Consultant at The Social Media Hat, host of the AI in Marketing: Unpacked podcast, international keynote speaker & author, and Chief Storyteller at Agorapulse where he amplifies the stories of those achieving success in digital marketing. He has spent over a decade in digital marketing and brings an unparalleled level of experience and excitement to the fore, whether he's delivering a presentation or leading a workshop. Work With Mike
+AI in Marketing: Unpacked podcast
+Recent Posts
+Everything you need to know about Marketing AI to get started today.
+Episode 33 of the AI in Marketing: Unpacked podcast, with Kelly Mirabella
+Episode 32 of the AI in Marketing: Unpacked podcast, with Sharon Gai
+AI is transforming industries across the board, and small to medium-sized businesses are perfectly positioned to reap the benefits.
+More Like This
+50+ AI Prompts for Marketers!
+Define your audience. Launch your products. Write blog posts and emails. Get help with everything you're trying to accomplish in marketing! Event social media strategy, lead gen, and advertising. Free!
+Footer
+Recent Posts
+Discover more from The Social Media Hat
+Subscribe now to keep reading and get access to the full archive.
+Type your email…

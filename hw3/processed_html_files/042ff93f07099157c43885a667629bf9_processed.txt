@@ -1,0 +1,11 @@
+Here at PopAds, we put our undivided attention to what you have to say
+Account Details
+You will use this for logging into your PopAds Panel.
+Email*
+Please type in your real email, it will be verified.
+Retype Email*
+Account Type*
+After you register, you can access both Advertiser & Publisher from your Panel.
+Password*
+For your own safety, make sure your password is long and complicated.
+Confirm Pass*

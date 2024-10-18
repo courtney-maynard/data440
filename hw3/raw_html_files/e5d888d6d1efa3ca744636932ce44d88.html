@@ -1,0 +1,772 @@
+<!doctype html>
+<html lang="en-US" class="no-js aws-lng-en_US" xmlns="http://www.w3.org/1999/xhtml" data-aws-assets="https://a0.awsstatic.com" data-js-version="1.0.681" data-css-version="1.0.538" data-static-assets="https://a0.awsstatic.com" prefix="og: https://ogp.me/ns#">
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <title>Methodology for incident response on generative AI workloads | AWS Security Blog</title> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://a0.awsstatic.com https://prod.us-east-1.ui.gcr-chat.marketing.aws.dev; connect-src 'self' *.akamaized.net *.googlevideo.com/videoplayback https://*.analytics.console.aws.a2z.com https://*.prod.chc-features.uxplatform.aws.dev https://112-tzm-766.mktoresp.com https://112-tzm-766.mktoutil.com https://a0.awsstatic.com https://a0.p.awsstatic.com https://a1.awsstatic.com https://amazonwebservices.d2.sc.omtrdc.net https://amazonwebservicesinc.tt.omtrdc.net https://api-v2.builderprofile.aws.dev https://api.regional-table.region-services.aws.a2z.com https://api.us-west-2.prod.pricing.aws.a2z.com https://auth.aws.amazon.com/ https://aws.amazon.com/p/sf/ https://aws.demdex.net https://b0.p.awsstatic.com https://c0.b0.p.awsstatic.com https://calculator.aws https://chat.us-east-1.prod.mrc-sunrise.marketing.aws.dev https://chatbot-api.us-east-1.prod.mrc-sunrise.marketing.aws.dev https://cm.everesttech.net https://d-90676d7478.awsapps.com https://d0.awsstatic.com https://d1.awsstatic.com https://d1fgizr415o1r6.cloudfront.net https://d2c.aws.amazon.com https://d3borx6sfvnesb.cloudfront.net https://dftu77xade0tc.cloudfront.net https://dpm.demdex.net https://fls-na.amazon.com https://i18n-string.us-west-2.prod.pricing.aws.a2z.com https://iad.staging.prod.tv.awsstatic.com https://infra-api.us-east-1.prod.mrc-sunrise.marketing.aws.dev https://ingestion.aperture-public-api.feedback.console.aws.dev https://livechat-api.us-east-1.prod.mrc-sunrise.marketing.aws.dev https://oidc.us-east-1.amazonaws.com https://pricing-table.us-west-2.prod.site.p.awsstatic.com https://prod-api.cosmic.aws.dev https://prod-us-west-2.csp-report.marketing.aws.dev https://prod-us-west-2.csp-report.marketing.aws.dev/submit https://prod.log.shortbread.aws.dev https://prod.tools.shortbread.aws.dev https://prod.us-east-1.api.gcr-chat.marketing.aws.dev https://prod.us-east-1.rest-bot.gcr-chat.marketing.aws.dev https://prod.us-east-1.ui.gcr-chat.marketing.aws.dev https://prod2.clientlogger.cn-northwest-1.marketplace.aws.a2z.org.cn https://public.lotus.awt.aws.a2z.com https://s0.awsstatic.com https://s3.amazonaws.com/aws-messaging-pricing-information/ https://s3.amazonaws.com/public-pricing-agc/ https://spot-bid-advisor.s3.amazonaws.com https://t0.m.awsstatic.com https://token.us-west-2.prod.site.p.awsstatic.com https://tv.awsstatic.com https://view-stage.us-west-2.prod.pricing.aws.a2z.com https://view-staging.us-east-1.prod.plc1-prod.pricing.aws.a2z.com https://vs.aws.amazon.com https://webchat-aws.clink.cn https://www.youtube-nocookie.com https://www.youtube.com wss://*.transport.connect.us-east-1.amazonaws.com wss://prod.us-east-1.wss-bot.gcr-chat.marketing.aws.dev wss://webchat-aws.clink.cn; font-src 'self' data: https://a0.awsstatic.com https://f0.awsstatic.com https://fonts.gstatic.com https://prod.us-east-1.ui.gcr-chat.marketing.aws.dev; frame-src 'self' https://*.widget.console.aws.amazon.com https://aws.demdex.net https://c0.b0.p.awsstatic.com https://calculator.aws https://commenting.awsblogs.com https://conversational-experience-worker.widget.console.aws.amazon.com/lotus/isolatedIFrame https://dpm.demdex.net https://player.vimeo.com https://pricing-table.us-west-2.prod.site.p.awsstatic.com https://token.us-west-2.prod.site.p.awsstatic.com https://www.youtube-nocookie.com https://www.youtube.com; img-src 'self' data: https://*.vidyard.com https://*.ytimg.com https://a0.awsstatic.com https://amazonwebservices.d2.sc.omtrdc.net https://avatars.builderprofile.aws.dev https://aws-clink2-resource.s3.cn-northwest-1.amazonaws.com.cn https://aws-quickstart.s3.amazonaws.com https://aws.amazon.com https://aws.demdex.net https://awsmedia.s3.amazonaws.com https://chat.us-east-1.prod.mrc-sunrise.marketing.aws.dev https://cm.everesttech.net https://d1.awsstatic.com https://d1d1et6laiqoh9.cloudfront.net https://d2908q01vomqb2.cloudfront.net https://d2c.aws.amazon.com https://d2cpw7vd6a2efr.cloudfront.net https://d36cz9buwru1tt.cloudfront.net https://d7umqicpi7263.cloudfront.net https://docs.aws.amazon.com https://dpm.demdex.net https://fls-na.amazon.com https://google.ca https://google.co.in https://google.co.jp https://google.co.th https://google.co.uk https://google.com https://google.com.ar https://google.com.au https://google.com.br https://google.com.hk https://google.com.mx https://google.com.tr https://google.com.tw https://google.de https://google.es https://google.fr https://google.it https://google.nl https://google.pl https://google.ru https://iad.staging.prod.tv.awsstatic.com https://img.youtube.com https://marketingplatform.google.com https://media.amazonwebservices.com https://p.adsymptotic.com https://pages.awscloud.com https://prod.cosmic.aws.dev https://prod.us-east-1.ui.gcr-chat.marketing.aws.dev https://s3.amazonaws.com/aws-quickstart/ https://s3.cn-north-1.amazonaws.com.cn/awschinablog/ https://s3.cn-north-1.amazonaws.com.cn/images-bjs/ https://ssl-static.libsyn.com https://static-cdn.jtvnw.net https://tv.awsstatic.com https://webchat-aws.clink.cn https://www.google.com https://www.linkedin.com https://yt3.ggpht.com; media-src 'self' https://*.libsyn.com https://a0.awsstatic.com https://anchor.fm https://awsmedia.s3.amazonaws.com https://awspodcastsiberiaent.s3.eu-west-3.amazonaws.com https://chat.us-east-1.prod.mrc-sunrise.marketing.aws.dev https://chtbl.com https://content.production.cdn.art19.com https://d1.awsstatic.com https://d1hemuljm71t2j.cloudfront.net https://d1le29qyzha1u4.cloudfront.net https://d1oqpvwii7b6rh.cloudfront.net https://d1vo51ubqkiilx.cloudfront.net https://d1yyh5dhdgifnx.cloudfront.net https://d2908q01vomqb2.cloudfront.net https://d2a6igt6jhaluh.cloudfront.net https://d3ctxlq1ktw2nl.cloudfront.net https://d3h2ozso0dirfl.cloudfront.net https://dgen8gghn3u86.cloudfront.net https://dk261l6wntthl.cloudfront.net https://download.stormacq.com/aws/podcast/ https://dts.podtrac.com https://media.amazonwebservices.com https://mktg-apac.s3-ap-southeast-1.amazonaws.com https://rss.art19.com https://s3-ap-northeast-1.amazonaws.com/aws-china-media/ https://www.buzzsprout.com; object-src 'none'; script-src 'nonce-YX2l0e7qsYwcyh8Puo1BKWa3sLyZ/f/0sJ1BOPzkWic=' 'self' https://*.cdn.console.awsstatic.com/ https://*.cdn.uis.awsstatic.com/ https://a.b.cdn.console.awsstatic.com https://a0.awsstatic.com https://amazonwebservicesinc.tt.omtrdc.net https://cdn.builderprofile.aws.dev https://chat.us-east-1.prod.mrc-sunrise.marketing.aws.dev https://d2c.aws.amazon.com https://googleads.g.doubleclick.net https://loader.us-east-1.prod.mrc-sunrise.marketing.aws.dev https://prod.cosmic.aws.dev https://prod.us-east-1.ui.gcr-chat.marketing.aws.dev https://spot-price.s3.amazonaws.com https://static.doubleclick.net https://t0.m.awsstatic.com https://token.us-west-2.prod.site.p.awsstatic.com https://website.spot.ec2.aws.a2z.com https://www.google.com https://www.gstatic.com https://www.youtube.com/iframe_api https://www.youtube.com/s/player/; style-src 'self' 'unsafe-inline' https://a0.awsstatic.com https://prod.us-east-1.ui.gcr-chat.marketing.aws.dev https://token.us-west-2.prod.site.p.awsstatic.com; report-uri https://prod-us-west-2.csp-report.marketing.aws.dev/submit" data-report-uri="https://prod-us-west-2.csp-report.marketing.aws.dev/submit"> 
+  <script src="https://a0.awsstatic.com/libra/1.0.587/csp/csp-report.js"></script> 
+  <meta name="robots" content="max-image-preview:large"> 
+  <link rel="dns-prefetch" href="//a0.awsstatic.com"> 
+  <style id="global-styles-inline-css" type="text/css">
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+</style> 
+  <link rel="canonical" href="https://aws.amazon.com/blogs/security/methodology-for-incident-response-on-generative-ai-workloads/"> 
+  <meta property="og:locale" content="en_US"> 
+  <meta property="og:site_name" content="Amazon Web Services"> 
+  <meta property="og:title" content="Methodology for incident response on generative AI workloads | Amazon Web Services"> 
+  <meta property="og:type" content="article"> 
+  <meta property="og:url" content="https://aws.amazon.com/blogs/security/methodology-for-incident-response-on-generative-ai-workloads/"> 
+  <meta property="og:description" content="The AWS Customer Incident Response Team (CIRT) has developed a methodology that you can use to investigate security incidents involving generative AI-based applications. To respond to security events related to a generative AI workload, you should still follow the guidance and principles outlined in the AWS Security Incident Response Guide. However, generative AI workloads require […]"> 
+  <meta property="og:image" content="https://d2908q01vomqb2.cloudfront.net/22d200f8670dbdb3e253a90eee5098477c95c23d/2024/09/16/main-2510.png"> 
+  <meta property="og:image:width" content="800"> 
+  <meta property="og:image:height" content="401"> 
+  <meta property="og:updated_time" content="2024-09-16T14:25:57-07:00"> 
+  <meta property="article:publisher" content="https://www.facebook.com/amazonwebservices"> 
+  <meta property="article:section" content="Generative AI"> 
+  <meta property="article:tag" content="Generative AI"> 
+  <meta property="article:tag" content="Intermediate (200)"> 
+  <meta property="article:tag" content="Security, Identity, &amp; Compliance"> 
+  <meta property="article:tag" content="Security Blog"> 
+  <meta property="article:published_time" content="2024-09-16T12:32:04-07:00"> 
+  <meta property="article:modified_time" content="2024-09-16T14:25:57-07:00"> 
+  <meta name="twitter:card" content="summary_large_image"> 
+  <meta name="twitter:site" content="@awscloud"> 
+  <meta name="twitter:domain" content="https://aws.amazon.com/blogs/"> 
+  <meta name="twitter:title" content="Methodology for incident response on generative AI workloads | Amazon Web Services"> 
+  <meta name="twitter:description" content="The AWS Customer Incident Response Team (CIRT) has developed a methodology that you can use to investigate security incidents involving generative AI-based applications. To respond to security events related to a generative AI workload, you should still follow the guidance and principles outlined in the AWS Security Incident Response Guide. However, generative AI workloads require […]"> 
+  <meta name="twitter:image" content="https://d2908q01vomqb2.cloudfront.net/22d200f8670dbdb3e253a90eee5098477c95c23d/2024/09/16/main-2510.png"> 
+  <link rel="icon" type="image/ico" href="https://a0.awsstatic.com/main/images/site/fav/favicon.ico"> 
+  <link rel="shortcut icon" type="image/ico" href="https://a0.awsstatic.com/main/images/site/fav/favicon.ico"> 
+  <link rel="apple-touch-icon" sizes="57x57" href="https://a0.awsstatic.com/main/images/site/touch-icon-iphone-114-smile.png"> 
+  <link rel="apple-touch-icon" sizes="72x72" href="https://a0.awsstatic.com/main/images/site/touch-icon-ipad-144-smile.png"> 
+  <link rel="apple-touch-icon" sizes="114x114" href="https://a0.awsstatic.com/main/images/site/touch-icon-iphone-114-smile.png"> 
+  <link rel="apple-touch-icon" sizes="144x144" href="https://a0.awsstatic.com/main/images/site/touch-icon-ipad-144-smile.png"> 
+  <link rel="home" type="application/rss+xml" title="RSS 2.0 Feed" href="https://aws.amazon.com/blogs/security/feed/"> 
+  <meta name="robots" content="index, follow"> 
+  <link rel="stylesheet" href="https://a0.awsstatic.com/libra-css/css/1.0.500/style-awsm.css"> 
+  <link rel="stylesheet" href="https://a0.awsstatic.com/aws-blog/1.0.80/css/blog.css"> 
+  <script type="application/json" id="aws-page-settings">
+    {"blogPageTitle":"Methodology for incident response on generative AI workloads","currentLanguage":"en-US","libraCSSPath":"https:\/\/a0.awsstatic.com\/libra-css\/css\/1.0.500","requireBaseUrl":"https:\/\/a0.awsstatic.com","requirePackages":[{"name":"libra","location":"libra\/1.0.587"}],"requirePaths":{"aws-blog":"https:\/\/a0.awsstatic.com\/aws-blog\/1.0.80\/js","directories":"https:\/\/a0.awsstatic.com\/libra\/1.0.587\/directories","librastandardlib":"https:\/\/a0.awsstatic.com\/libra\/1.0.587\/librastandardlib","scripts":"https:\/\/a0.awsstatic.com\/libra\/1.0.587\/v1-polyfills\/scripts"},"supportedLanguages":["ar","de","en","es","fr","id","it","jp","ko","pt","ru","th","tr","vi","cn","tw"],"currentStage":"Prod"}  </script> 
+  <script src="https://a0.awsstatic.com/aws-blog/1.0.80/js/blog-head.js"></script> 
+  <script src="https://a0.awsstatic.com/s_code/js/3.0/awshome_s_code.js"></script> 
+  <script type="application/json" id="target-mediator">
+    {"supportedLanguages":["ar","de","en","es","fr","id","it","jp","ko","pt","ru","th","tr","vi","cn","tw"],"pageLanguage":"en","customParams":{"category0":"Generative AI","category1":"Intermediate (200)","category2":"Security, Identity, &amp; Compliance"}}  </script> 
+  <script src="https://a0.awsstatic.com/target/1.0.122/aws-target-mediator.js"></script> 
+  <noscript> 
+   <style>.js-mbox { visibility: visible; }</style> 
+  </noscript> 
+ </head> 
+ <body class="awsm aws-blogs-page aws-blogs-page-type-single"> 
+  <script id="awsc-panorama-bundle" src="https://prod.pa.cdn.uis.awsstatic.com/panorama-nav-init.js" data-config="{&quot;appEntity&quot;:&quot;aws-marketing&quot;,&quot;region&quot;:&quot;us-west-1&quot;,&quot;service&quot;:&quot;blogs-site&quot;}" async="true"></script> 
+  <a id="aws-page-skip-to-main" class="lb-sr-only lb-sr-only-focusable lb-bold lb-skip-el" href="#aws-page-content-main"> Skip to Main Content</a> 
+  <header id="aws-page-header" class="awsm m-page-header lb-with-mobile-subrow" role="banner"> 
+   <div id="m-nav" class="m-nav" role="navigation" aria-label="Global Navigation"> 
+    <div class="m-nav-header lb-clearfix" data-menu-url="https://s0.awsstatic.com/en_US/nav/v3/panel-content/desktop/index.html"> 
+     <div class="m-nav-logo"> 
+      <div class="lb-bg-logo aws-amazon_web_services_smile-header-desktop-en"> 
+       <a href="https://aws.amazon.com/?nc2=h_lg"><span>Click here to return to Amazon Web Services homepage</span></a> 
+      </div> 
+     </div> 
+     <nav class="m-nav-secondary-links" style="min-width: 620px" aria-label="Secondary Global Navigation"> 
+      <a href="https://aws.amazon.com/about-aws/?nc2=h_header">About AWS</a> 
+      <a href="https://aws.amazon.com/contact-us/?nc2=h_header">Contact Us</a> 
+      <a class="lb-txt-none lb-tiny-iblock lb-txt-13 lb-txt lb-has-trigger-indicator" href="#" data-mbox-ignore="true" data-lb-popover-trigger="popover-support-selector" role="button" aria-expanded="false" aria-label="Explore support options" id="popover-popover-support-selector-trigger" aria-controls="popover-support-selector" aria-haspopup="true"> Support&nbsp; <i class="icon-caret-down lb-trigger-mount"></i></a> 
+      <a id="m-nav-language-selector" class="lb-tiny-iblock lb-txt lb-has-trigger-indicator" href="#" data-lb-popover-trigger="popover-language-selector" data-language="en" aria-label="Set site language" role="button" aria-controls="popover-language-selector" aria-expanded="false" aria-haspopup="true">English&nbsp;<i class="icon-caret-down lb-trigger-mount"></i></a> 
+      <a class="lb-tiny-iblock lb-txt lb-has-trigger-indicator" href="#" data-lb-popover-trigger="popover-my-account" aria-label="Access account options" role="button" aria-controls="popover-my-account" aria-expanded="false" aria-haspopup="true">My Account&nbsp;<i class="icon-caret-down lb-trigger-mount"></i></a> 
+      <div class="m-nav-cta-btn"> 
+       <div class="lb-mbox js-mbox" data-lb-comp="mbox" data-lb-comp-ignore="true" data-mbox="en_header_nav_cta"> 
+        <div class="lb-data-attr-wrapper data-attr-wrapper" data-da-type="so" data-da-so-type="viewport" data-da-so-language="en" data-da-so-category="monitoring" data-da-so-name="nav-buttons" data-da-so-version="sign-up-sign-in-all" data-da-so-url="nav"> 
+         <div class="data-attr-wrapper lb-tiny-iblock lb-none-pad lb-box" data-da-type="so" data-da-so-type="viewport" data-da-so-language="en" data-da-so-category="monitoring" data-da-so-name="nav-buttons" data-da-so-version="prospect-sign-in" data-da-so-url="all"> 
+          <a class="lb-txt-none lb-tiny-iblock lb-txt-13 lb-txt" style="padding-top:8px; padding-right:13px;" href="https://console.aws.amazon.com/console/home?nc2=h_ct&amp;src=header-signin"> Sign In</a> 
+         </div> 
+         <div class="data-attr-wrapper lb-tiny-iblock lb-none-v-margin lb-btn" data-da-type="so" data-da-so-type="viewport" data-da-so-language="en" data-da-so-category="monitoring" data-da-so-name="nav-buttons" data-da-so-version="prospect-signup" data-da-so-url="all"> 
+          <a class="lb-btn-p-primary" href="https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct&amp;src=header_signup" data-trk-params="{&quot;trkOverrideWithQs&quot;:true}" role="button"> <span> Create an AWS Account</span> </a> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </nav> 
+     <div class="m-nav-primary-group"> 
+      <nav class="m-nav-primary-links" aria-label="Primary Global Navigation"> 
+       <i class="m-nav-angle-left-icon" aria-hidden="true"></i> 
+       <ul> 
+        <li aria-expanded="false"><span><a href="https://aws.amazon.com/products/?nc2=h_ql_prod" data-panel="m-nav-panel-products">Products</a></span></li> 
+        <li aria-expanded="false"><span><a href="https://aws.amazon.com/solutions/?nc2=h_ql_sol" data-panel="m-nav-panel-solutions">Solutions</a></span></li> 
+        <li aria-expanded="false"><span><a href="https://aws.amazon.com/pricing/?nc2=h_ql_pr" data-panel="m-nav-panel-pricing">Pricing</a></span></li> 
+        <li aria-expanded="false"><span><a href="https://aws.amazon.com/documentation-overview/?nc2=h_ql_doc_do" data-panel="m-nav-panel-documentation">Documentation</a></span></li> 
+        <li aria-expanded="false"><span><a href="https://aws.amazon.com/getting-started/?nc2=h_ql_le" data-panel="m-nav-panel-learn">Learn</a></span></li> 
+        <li aria-expanded="false"><span><a href="https://aws.amazon.com/partners/?nc2=h_ql_pn" data-panel="m-nav-panel-partner">Partner Network</a></span></li> 
+        <li aria-expanded="false"><span><a href="https://aws.amazon.com/marketplace/?nc2=h_ql_mp" data-panel="m-nav-panel-marketplace">AWS Marketplace</a></span></li> 
+        <li aria-expanded="false"><span><a href="https://aws.amazon.com/customer-enablement/?nc2=h_ql_ce" data-panel="m-nav-panel-customer">Customer Enablement</a></span></li> 
+        <li aria-expanded="false"><span><a href="https://aws.amazon.com/events/?nc2=h_ql_ev" data-panel="m-nav-panel-events">Events</a></span></li> 
+        <li aria-expanded="false"><span><a href="https://aws.amazon.com/contact-us/?nc2=h_ql_exm" data-panel="m-nav-panel-more">Explore More </a></span></li> 
+       </ul> 
+       <div class="m-nav-icon-group"> 
+        <i class="m-nav-angle-right-icon" aria-hidden="true"></i> 
+        <i class="m-nav-search-icon" tabindex="0" role="button" aria-expanded="false" aria-label="Search"></i> 
+       </div> 
+      </nav> 
+      <div id="m-nav-desktop-search" class="m-nav-search"> 
+       <form action="https://aws.amazon.com/search/" role="search"> 
+        <div class="m-typeahead" data-directory-id="typeahead-suggestions" data-lb-comp="typeahead"> 
+         <input class="m-nav-search-field" placeholder="Search" autocomplete="off" spellcheck="false" dir="auto" type="text" name="searchQuery"> 
+        </div> 
+       </form> 
+       <i class="m-nav-close-icon" role="button" aria-label="Close"></i> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="lb-popover lb-popover-aui lb-popover-tiny" data-lb-comp="popover" data-id="popover-language-selector" id="popover-language-selector" aria-modal="false" aria-labelledby="popover-popover-language-selector-trigger" data-action="hover" data-position="top"> 
+     <a class="lb-popover-close" role="button" tabindex="0" aria-label="Close" title="Close"> <span class="lb-sr-only">Close</span> </a> 
+     <div class="lb-grid lb-row lb-row-max-large lb-snap"> 
+      <div class="lb-col lb-tiny-24 lb-mid-12"> 
+       <ul class="lb-txt-none lb-ul lb-list-style-none lb-tiny-ul-block"> 
+        <li lang="ar-SA" translate="no" data-language="ar"><a href="https://aws.amazon.com/ar/?nc1=h_ls">عربي</a></li> 
+        <li lang="id-ID" translate="no" data-language="id"><a href="https://aws.amazon.com/id/?nc1=h_ls">Bahasa Indonesia</a></li> 
+        <li lang="de-DE" translate="no" data-language="de"><a href="https://aws.amazon.com/de/?nc1=h_ls">Deutsch</a></li> 
+        <li lang="en-US" translate="no" data-language="en"><a href="https://aws.amazon.com/?nc1=h_ls">English</a></li> 
+        <li lang="es-ES" translate="no" data-language="es"><a href="https://aws.amazon.com/es/?nc1=h_ls">Español</a></li> 
+        <li lang="fr-FR" translate="no" data-language="fr"><a href="https://aws.amazon.com/fr/?nc1=h_ls">Français</a></li> 
+        <li lang="it-IT" translate="no" data-language="it"><a href="https://aws.amazon.com/it/?nc1=h_ls">Italiano</a></li> 
+        <li lang="pt-BR" translate="no" data-language="pt"><a href="https://aws.amazon.com/pt/?nc1=h_ls">Português</a></li> 
+       </ul> 
+      </div> 
+      <div class="lb-col lb-tiny-24 lb-mid-12"> 
+       <ul class="lb-txt-none lb-ul lb-list-style-none lb-tiny-ul-block"> 
+        <li lang="vi-VN" translate="no" data-language="vi"><a href="https://aws.amazon.com/vi/?nc1=f_ls">Tiếng Việt</a></li> 
+        <li lang="tr-TR" translate="no" data-language="tr"><a href="https://aws.amazon.com/tr/?nc1=h_ls">Türkçe</a></li> 
+        <li lang="ru-RU" translate="no" data-language="ru"><a href="https://aws.amazon.com/ru/?nc1=h_ls">Ρусский</a></li> 
+        <li lang="th-TH" translate="no" data-language="th"><a href="https://aws.amazon.com/th/?nc1=f_ls">ไทย</a></li> 
+        <li lang="ja-JP" translate="no" data-language="jp"><a href="https://aws.amazon.com/jp/?nc1=h_ls">日本語</a></li> 
+        <li lang="ko-KR" translate="no" data-language="ko"><a href="https://aws.amazon.com/ko/?nc1=h_ls">한국어</a></li> 
+        <li lang="zh-CN" translate="no" data-language="cn"><a href="https://aws.amazon.com/cn/?nc1=h_ls">中文 (简体)</a></li> 
+        <li lang="zh-TW" translate="no" data-language="tw"><a href="https://aws.amazon.com/tw/?nc1=h_ls">中文 (繁體)</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="lb-popover lb-popover-aui lb-popover-tiny" data-lb-comp="popover" data-id="popover-my-account" id="popover-my-account" aria-modal="false" aria-labelledby="popover-popover-my-account-trigger" data-action="hover" data-position="top"> 
+     <a class="lb-popover-close" role="button" tabindex="0" aria-label="Close" title="Close"> <span class="lb-sr-only">Close</span> </a> 
+     <ul class="lb-txt-none lb-ul lb-list-style-none lb-tiny-ul-block"> 
+      <li class="m-no-auth" data-myaws-auth-only="true"><a href="https://aws.amazon.com/profile/?nc2=h_m_mc">My Profile</a></li> 
+      <li class="m-no-auth" data-myaws-auth-only="true"><a href="https://auth.aws.amazon.com/sign-out/?nc2=h_m_mc">Sign out of AWS Builder ID</a></li> 
+      <li><a href="https://console.aws.amazon.com/?nc2=h_m_mc">AWS Management Console</a></li> 
+      <li><a href="https://console.aws.amazon.com/billing/home#/account?nc2=h_m_ma">Account Settings</a></li> 
+      <li><a href="https://console.aws.amazon.com/billing/home?nc2=h_m_bc">Billing &amp; Cost Management</a></li> 
+      <li><a href="https://console.aws.amazon.com/iam/home?nc2=h_m_sc#security_credential">Security Credentials</a></li> 
+      <li><a href="https://phd.aws.amazon.com/?nc2=h_m_sc">AWS Personal Health Dashboard</a></li> 
+     </ul> 
+    </div> 
+    <div class="lb-popover lb-popover-aui lb-popover-tiny" data-lb-comp="popover" data-id="popover-support-selector" id="popover-support-selector" aria-modal="false" aria-labelledby="popover-popover-support-selector-trigger" data-action="hover" data-position="top"> 
+     <a class="lb-popover-close" role="button" tabindex="0" aria-label="Close" title="Close"> <span class="lb-sr-only">Close</span> </a> 
+     <ul class="lb-txt-none lb-ul lb-list-style-none lb-tiny-ul-block"> 
+      <li><a href="https://console.aws.amazon.com/support/home/?nc2=h_ql_cu">Support Center</a></li> 
+      <li><a href="https://iq.aws.amazon.com/?utm=mkt.nav">Expert Help</a></li> 
+      <li><a href="https://repost.aws/knowledge-center/?nc2=h_m_ma">Knowledge Center</a></li> 
+      <li><a href="https://aws.amazon.com/premiumsupport/?nc2=h_m_bc">AWS Support Overview</a></li> 
+      <li><a href="https://repost.aws/">AWS re:Post</a></li> 
+     </ul> 
+    </div> 
+    <script type="text/x-handlebars-template" data-hbs-template-path="nav-desktop/suggestions" data-hbs-context="{&quot;pricingText&quot;:&quot;Pricing&quot;,&quot;documentationText&quot;:&quot;Documentation&quot;,&quot;calculatorText&quot;:&quot;Calculator&quot;}"></script> 
+    <script type="text/x-handlebars-template" data-hbs-template-path="nav-desktop/products-head" data-hbs-context="{&quot;productsText&quot;:&quot;Products&quot;}"></script> 
+    <script type="text/x-handlebars-template" data-hbs-template-path="nav-desktop/keypages-head" data-hbs-context="{&quot;relatedPagesText&quot;:&quot;Related Pages&quot;}"></script> 
+    <script type="text/x-handlebars-template" data-hbs-template-path="nav-desktop/tutorials-head" data-hbs-context="{&quot;tutorialsText&quot;:&quot;Tutorials&quot;}"></script> 
+    <script type="text/x-handlebars-template" data-hbs-template-path="nav-desktop/blogs-head" data-hbs-context="{&quot;blogsText&quot;:&quot;Blogs&quot;}"></script> 
+    <script type="text/x-handlebars-template" data-hbs-template-path="nav-desktop/see-all" data-hbs-context="{&quot;resultsText&quot;:&quot;See more results for&quot;}"></script> 
+   </div> 
+   <div id="m-nav-mobile" class="m-nav-mobile" role="navigation" aria-label="Global Navigation for Mobile"> 
+    <div id="m-nav-mobile-header" class="m-nav-mobile-header m-nav-mobile-with-sub-row" data-menu-url="https://s0.awsstatic.com/en_US/nav/v3/panel-content/mobile/index.html"> 
+     <div class="lb-bg-logo aws-amazon_web_services_smile-header-mobile-en"> 
+      <a href="https://aws.amazon.com/?nc2=h_lg"><span>Click here to return to Amazon Web Services homepage</span></a> 
+     </div> 
+     <div class="m-nav-mobile-button-group"> 
+      <i class="m-nav-mobile-button icon-search" tabindex="0" role="button" aria-expanded="false" aria-label="Search"></i> 
+      <i class="m-nav-mobile-button icon-reorder" tabindex="0" role="button" aria-expanded="false" aria-label="Menu"></i> 
+     </div> 
+     <div id="m-nav-mobile-sub-row" class="m-nav-mobile-sub-row"> 
+      <div class="data-attr-wrapper lb-btn" data-da-type="so" data-da-so-category="monitoring" data-da-so-language="en" data-da-so-name="global-mobile-sticky-cta-buttons" data-da-so-type="viewport" data-da-so-version="get-started-for-free-cta" data-da-so-url="all"> 
+       <a class="lb-btn-p-primary" href="https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_mobile" role="button"> <span> Get Started for Free</span> </a> 
+      </div> 
+      <div class="data-attr-wrapper lb-btn" data-da-type="so" data-da-so-category="monitoring" data-da-so-language="en" data-da-so-name="global-mobile-sticky-cta-buttons" data-da-so-type="viewport" data-da-so-version="contact-us"> 
+       <a class="lb-btn-p" href="https://aws.amazon.com/contact-us/?nc2=h_mobile" role="button"> <span> Contact Us</span> </a> 
+      </div> 
+     </div> 
+    </div> 
+    <div id="m-nav-mobile-search" class="m-nav-mobile-search"> 
+     <form action="https://aws.amazon.com/search" role="search"> 
+      <div class="m-typeahead"> 
+       <input class="m-nav-search-field" placeholder="Search" autocomplete="off" spellcheck="false" dir="auto" type="text" name="searchQuery"> 
+      </div> 
+     </form> 
+    </div> 
+    <nav id="m-nav-trimdown" aria-label="Condensed Global Navigation for Mobile"> 
+     <ul class="m-nav-mobile-menu-group"> 
+      <li> <a href="https://aws.amazon.com/products/?nc2=h_mo">Products</a> </li> 
+      <li> <a href="https://aws.amazon.com/solutions/?nc2=h_mo">Solutions</a> </li> 
+      <li> <a href="https://aws.amazon.com/pricing/?nc2=h_mo">Pricing</a> </li> 
+      <li> <a href="https://aws.amazon.com/what-is-aws/?nc2=h_mo">Introduction to AWS</a> </li> 
+      <li> <a href="https://aws.amazon.com/getting-started/?nc2=h_mo">Getting Started</a> </li> 
+      <li> <a href="https://aws.amazon.com/documentation-overview/?nc2=h_mo">Documentation</a> </li> 
+      <li> <a href="https://aws.amazon.com/training/?nc2=h_mo">Training and Certification</a> </li> 
+      <li> <a href="https://aws.amazon.com/developer/?nc2=h_mo">Developer Center</a> </li> 
+      <li> <a href="https://aws.amazon.com/solutions/case-studies/?nc2=h_mo">Customer Success</a> </li> 
+      <li> <a href="https://aws.amazon.com/partners/?nc2=h_mo">Partner Network</a> </li> 
+      <li> <a href="https://aws.amazon.com/marketplace/?nc2=h_mo">AWS Marketplace</a> </li> 
+      <li> <a href="https://console.aws.amazon.com/support/home?nc2=h_ql_cu">Support</a> </li> 
+      <li> <a href="https://repost.aws/">AWS re:Post</a> </li> 
+      <li> <a href="https://console.aws.amazon.com/console/home">Log into Console</a> </li> 
+      <li> <a href="https://aws.amazon.com/console/mobile/">Download the Mobile App</a> </li> 
+     </ul> 
+    </nav> 
+   </div> 
+  </header> 
+  <div class="awsm"> 
+   <div class="lb-blog-nav" data-lb-comp="aws-blog:blog-nav" data-lb-sticky-header="true"> 
+    <div class="lb-row lb-row-max-xlarge lb-snap"> 
+     <div class="lb-blog-nav-content"> 
+      <div class="lb-blog-nav-links"> 
+       <a class="lb-txt-none lb-txt" href="/blogs" data-trk-params="{&quot;trkOverrideWithQs&quot;:true}"> AWS Blog Home</a> 
+       <a class="lb-txt-none lb-txt lb-has-trigger-indicator" href="#" data-mbox-ignore="true" data-lb-popover-trigger="blog-category" role="button" aria-expanded="false" aria-label="Select blog category" id="popover-blog-category-trigger" aria-controls="blog-category" aria-haspopup="true" data-trk-params="{&quot;trkOverrideWithQs&quot;:true}"> Blogs&nbsp; <i class="icon-caret-down lb-trigger-mount"></i></a> 
+       <a class="lb-txt-none lb-txt lb-has-trigger-indicator" href="#" data-mbox-ignore="true" data-lb-popover-trigger="blog-editions" role="button" aria-expanded="false" aria-label="Select blog language" id="popover-blog-editions-trigger" aria-controls="blog-editions" aria-haspopup="true" data-trk-params="{&quot;trkOverrideWithQs&quot;:true}"> Editions&nbsp; <i class="icon-caret-down lb-trigger-mount"></i></a> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="lb-popover lb-popover-aui lb-popover-xlarge" data-lb-comp="popover" data-id="blog-category" id="blog-category" aria-modal="false" aria-labelledby="popover-blog-category-trigger" data-action="hover" data-position="top"> 
+    <a class="lb-popover-close" role="button" tabindex="0" aria-label="Close" title="Close"> <span class="lb-sr-only">Close</span> </a> 
+    <div class="lb-none-pad lb-none-v-margin lb-grid lb-row lb-row-max-large lb-snap"> 
+     <div class="lb-col lb-tiny-24 lb-mid-12"> 
+      <div class="lb-none-pad lb-none-v-margin lb-box"> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/architecture/"> Architecture</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/mt/" data-trk-params="{&quot;trkOverrideWithQs&quot;:true}"> AWS Cloud Operations</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/gametech/" data-trk-params="{&quot;trkOverrideWithQs&quot;:true}"> AWS for Games</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/aws-insights/"> AWS Insights</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/awsmarketplace/"> AWS Marketplace</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/aws/"> AWS News</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/apn/"> AWS Partner Network</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/smb/"> AWS Smart Business</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/big-data/"> Big Data</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/business-intelligence/"> Business Intelligence</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/business-productivity/"> Business Productivity</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/enterprise-strategy/" data-trk-params="{&quot;trkOverrideWithQs&quot;:true}"> Cloud Enterprise Strategy</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/aws-cloud-financial-management/"> Cloud Financial Management</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/compute/"> Compute</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/contact-center/"> Contact Center</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/containers/"> Containers</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/database/"> Database</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/desktop-and-application-streaming/"> Desktop &amp; Application Streaming</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/developer/" data-trk-params="{&quot;trkOverrideWithQs&quot;:true}"> Developer Tools</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/devops/" data-trk-params="{&quot;trkOverrideWithQs&quot;:true}"> DevOps &amp; Developer Productivity</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/mobile/"> Front-End Web &amp; Mobile</a> 
+      </div> 
+     </div> 
+     <div class="lb-col lb-tiny-24 lb-mid-12"> 
+      <div class="lb-none-pad lb-none-v-margin lb-box"> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/hpc/"> HPC</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/ibm-redhat/"> IBM and Red Hat</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/industries/"> Industries</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/infrastructure-and-automation/"> Integration &amp; Automation</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/iot/"> Internet of Things</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/machine-learning/"> Machine Learning</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/media/"> Media</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/messaging-and-targeting/"> Messaging &amp; Targeting</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/modernizing-with-aws/"> Microsoft Workloads on AWS</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/migration-and-modernization/"> Migration and Modernization</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/dotnet/"> .NET on AWS</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/networking-and-content-delivery/"> Networking &amp; Content Delivery</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/opensource/"> Open Source</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/publicsector/"> Public Sector</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/quantum-computing/" data-trk-params="{&quot;trkOverrideWithQs&quot;:true}"> Quantum Computing</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/robotics/"> Robotics</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/awsforsap/"> SAP</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/security/blogs/" data-trk-params="{&quot;trkOverrideWithQs&quot;:true}"> Security</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/spatial/"> Spatial Computing</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/startups/"> Startups</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/storage/"> Storage</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/supply-chain/"> Supply Chain &amp; Logistics</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/training-and-certification/"> Training &amp; Certification</a> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="lb-popover lb-popover-aui lb-popover-tiny" data-lb-comp="popover" data-id="blog-editions" id="blog-editions" aria-modal="false" aria-labelledby="popover-blog-editions-trigger" data-action="hover" data-position="top"> 
+    <a class="lb-popover-close" role="button" tabindex="0" aria-label="Close" title="Close"> <span class="lb-sr-only">Close</span> </a> 
+    <ul class="lb-txt-none lb-none-v-margin lb-ul lb-list-style-none lb-li-micro-v-margin lb-tiny-ul-block"> 
+     <li translate="no" lang="zh-CN"><a href="https://aws.amazon.com/cn/blogs/china/">中国版</a></li> 
+     <li translate="no" lang="ja-JP"><a href="https://aws.amazon.com/jp/blogs/news/">日本版</a></li> 
+     <li translate="no" lang="ko-KR"><a href="https://aws.amazon.com/ko/blogs/korea/">한국 에디션</a></li> 
+     <li translate="no" lang="ko-KR"><a href="https://aws.amazon.com/ko/blogs/tech/">기술 블로그</a></li> 
+     <li translate="no" lang="id-ID"><a href="https://aws.amazon.com/id/blogs/indonesia/">Edisi Bahasa Indonesia</a></li> 
+     <li translate="no" lang="tr-TR"><a href="https://aws.amazon.com/th/blogs/thailand/">AWS Thai Blog</a></li> 
+     <li translate="no" lang="fr-FR"><a href="https://aws.amazon.com/fr/blogs/france/">Édition Française</a></li> 
+     <li translate="no" lang="de-DE"><a href="https://aws.amazon.com/de/blogs/germany/">Deutsche Edition</a></li> 
+     <li translate="no" lang="pt-BR"><a href="https://aws.amazon.com/pt/blogs/aws-brasil/">Edição em Português</a></li> 
+     <li translate="no" lang="es-ES"><a href="https://aws.amazon.com/es/blogs/aws-spanish/">Edición en Español</a></li> 
+     <li translate="no" lang="ru-RU"><a href="https://aws.amazon.com/ru/blogs/rus/">Версия на русском</a></li> 
+     <li translate="no" lang="tr-TR"><a href="https://aws.amazon.com/tr/blogs/turkey/">Türkçe Sürüm</a></li> 
+    </ul> 
+   </div> 
+  </div> 
+  <div id="aws-page-content" class="aws-blog-has-related-posts lb-page-content lb-page-with-sticky-subnav blog-page" data-page-alert-target="true"> 
+   <div class="aws-blog-content lb-row lb-row-max-large lb-snap lb-gutter-mid"> 
+    <main class="lb-col lb-tiny-24 lb-mid-16" role="main" id="aws-page-content-main" tabindex="-1"> 
+     <h2 class="lb-h5 blog-title"><a href="https://aws.amazon.com/blogs/security/">AWS Security Blog</a></h2> 
+     <article class="blog-post" vocab="https://schema.org/" typeof="TechArticle"> 
+      <meta property="inLanguage" content="en-US"> 
+      <meta property="image" content="https://d2908q01vomqb2.cloudfront.net/22d200f8670dbdb3e253a90eee5098477c95c23d/2024/09/16/main-2510.png"> 
+      <h1 class="lb-h2 blog-post-title" property="name headline">Methodology for incident response on generative AI workloads</h1> 
+      <footer class="blog-post-meta" data-lb-comp="aws-blog:share-dialog">
+        by 
+       <span property="author" typeof="Person"><span property="name">Anna McAbee</span></span>, 
+       <span property="author" typeof="Person"><span property="name">Jennifer Paz</span></span>, 
+       <span property="author" typeof="Person"><span property="name">AJ Evans</span></span>, and 
+       <span property="author" typeof="Person"><span property="name">Steve de Vera</span></span> | on 
+       <time property="datePublished" datetime="2024-09-16T12:32:04-07:00">16 SEP 2024</time> | in 
+       <span class="blog-post-categories"><a href="https://aws.amazon.com/blogs/security/category/artificial-intelligence/generative-ai/" title="View all posts in Generative AI"><span property="articleSection">Generative AI</span></a>, <a href="https://aws.amazon.com/blogs/security/category/learning-levels/intermediate-200/" title="View all posts in Intermediate (200)"><span property="articleSection">Intermediate (200)</span></a>, <a href="https://aws.amazon.com/blogs/security/category/security-identity-compliance/" title="View all posts in Security, Identity, &amp; Compliance"><span property="articleSection">Security, Identity, &amp; Compliance</span></a></span> | 
+       <a href="https://aws.amazon.com/blogs/security/methodology-for-incident-response-on-generative-ai-workloads/" property="url">Permalink</a> | 
+       <a href="https://aws.amazon.com/blogs/security/methodology-for-incident-response-on-generative-ai-workloads/#Comments"><i class="icon-comment"></i> Comments</a> | 
+       <a href="#" role="button" data-share-dialog-toggle><span class="span icon-share"></span>&nbsp;Share</a> 
+       <div class="blog-share-dialog" data-share-dialog style="display: none;"> 
+        <ul> 
+         <li> <a class="lb-txt" href="https://www.facebook.com/sharer/sharer.php?u=https://aws.amazon.com/blogs/security/methodology-for-incident-response-on-generative-ai-workloads/" target="_blank" rel="noopener noreferrer" aria-label="Share on Facebook"><span class="icon-facebook-square"></span></a> </li> 
+         <li> <a class="lb-txt" href="https://twitter.com/intent/tweet/?text=Methodology%20for%20incident%20response%20on%20generative%20AI%20workloads&amp;via=awscloud&amp;url=https://aws.amazon.com/blogs/security/methodology-for-incident-response-on-generative-ai-workloads/" target="_blank" rel="noopener noreferrer" aria-label="Share on Twitter"><span class="icon-twitter-square"></span></a> </li> 
+         <li> <a class="lb-txt" href="https://www.linkedin.com/shareArticle?mini=true&amp;title=Methodology%20for%20incident%20response%20on%20generative%20AI%20workloads&amp;source=Amazon%20Web%20Services&amp;url=https://aws.amazon.com/blogs/security/methodology-for-incident-response-on-generative-ai-workloads/" target="_blank" rel="noopener noreferrer" aria-label="Share on LinkedIn"><span class="icon-linkedin-square"></span></a> </li> 
+         <li> <a class="lb-txt" href="mailto:?subject=Methodology%20for%20incident%20response%20on%20generative%20AI%20workloads&amp;body=Methodology%20for%20incident%20response%20on%20generative%20AI%20workloads%0A%0Ahttps://aws.amazon.com/blogs/security/methodology-for-incident-response-on-generative-ai-workloads/" target="_blank" rel="noopener noreferrer" aria-label="Share on Email"><span class="icon-envelope-square"></span></a> </li> 
+         <li class="blog-share-dialog-url"><input type="text" value="https://aws.amazon.com/blogs/security/methodology-for-incident-response-on-generative-ai-workloads/" title="Link to Methodology for incident response on generative AI workloads" readonly data-share-dialog-url></li> 
+        </ul> 
+       </div> 
+      </footer> 
+      <section class="blog-post-content lb-rtxt" property="articleBody"> 
+       <p>The AWS <a target="_blank" href="https://docs.aws.amazon.com/whitepapers/latest/aws-security-incident-response-guide/understand-aws-response-teams-and-support.html#aws-customer-incident-response-team" rel="noopener">Customer Incident Response Team (CIRT)</a> has developed a methodology that you can use to investigate security incidents involving generative AI-based applications. To respond to security events related to a generative AI workload, you should still follow the guidance and principles outlined in the <a target="_blank" href="https://docs.aws.amazon.com/whitepapers/latest/aws-security-incident-response-guide/aws-security-incident-response-guide.html" rel="noopener">AWS Security Incident Response Guide</a>. However, generative AI workloads require that you also consider some additional elements, which we detail in this blog post.</p> 
+       <p>We start by describing the common components of a generative AI workload and discuss how you can prepare for an event before it happens. We then introduce the <em>Methodology for incident response on generative AI workloads</em>, which consists of seven elements that you should consider when triaging and responding to a security event on a generative AI workload. Lastly, we share an example incident to help you explore the methodology in an applied scenario.</p> 
+       <h2>Components of a generative AI workload</h2> 
+       <p>As shown in Figure 1, generative AI applications include the following five components:</p> 
+       <ul> 
+        <li><strong>An organization</strong> that owns or is responsible for infrastructure, generative AI applications, and the organization’s private data.</li> 
+        <li><strong>Infrastructure</strong> within an organization that isn’t specifically related to the generative AI application itself. This can include databases, backend servers, and websites.</li> 
+        <li><strong>Generative AI applications</strong>, which include the following: 
+         <ul style="list-style-type:circle"> 
+          <li><strong>Foundation models</strong> – AI models with a large number of parameters and trained on a massive amount of diverse data.</li> 
+          <li><strong>Custom models</strong> – models that are fine-tuned or trained on an organization’s specific data and use cases, tailored to their unique requirements.</li> 
+          <li><strong>Guardrails</strong> – mechanisms or constraints to help make sure that the generative AI application operates within desired boundaries. Examples include content filtering, safety constraints, or ethical guidelines.</li> 
+          <li><strong>Agents</strong> – workflows that enable generative AI applications to perform multistep tasks across company systems and data sources.</li> 
+          <li><strong>Knowledge bases</strong> – repositories of domain-specific knowledge, rules, or data that the generative AI application can access and use.</li> 
+          <li><strong>Training data</strong> – data used to train, fine-tune, or augment the generative AI application’s models, including data for techniques such as <a target="_blank" href="https://aws.amazon.com/what-is/retrieval-augmented-generation/" rel="noopener">retrieval augmented generation (RAG)</a>.<br> 
+           <blockquote> 
+            <p><strong>Note</strong>: Training data is distinct from an organization’s <em>private data.</em> A generative AI application might not have direct access to private data, although this is configured in some environments.</p> 
+           </blockquote> </li> 
+          <li><strong>Plugins </strong>– additional software components or extensions that you can integrate with the generative AI application to provide specialized functionalities or access to external services or data sources.</li> 
+         </ul> </li> 
+        <li><strong>Private data </strong>refers to the customer’s privately stored, confidential data that the generative AI resources or applications aren’t intended to interact with during normal operation.</li> 
+        <li><strong>Users</strong> are the identities that can interact with or access the generative AI application. They can be human or non-human (such as machines).</li> 
+       </ul> 
+       <p style="line-height: 1.25em"></p> 
+       <div id="attachment_35760" style="width: 790px" class="wp-caption aligncenter"> 
+        <img aria-describedby="caption-attachment-35760" src="https://d2908q01vomqb2.cloudfront.net/22d200f8670dbdb3e253a90eee5098477c95c23d/2024/09/16/img1-3.png" alt="Figure 1: Common components of an AI/ML workload" width="780" class="size-full wp-image-35760" style="border: 1px solid #bebebe"> 
+        <p id="caption-attachment-35760" class="wp-caption-text">Figure 1: Common components of an AI/ML workload</p> 
+       </div> 
+       <p></p> 
+       <h2>Prepare for incident response on generative AI workloads</h2> 
+       <p>You should prepare for a security event across three domains: <a target="_blank" href="https://docs.aws.amazon.com/whitepapers/latest/aws-security-incident-response-guide/preparation.html" rel="noopener">people, process, and technology</a>. For a summary of how to prepare, see the <a target="_blank" href="https://docs.aws.amazon.com/whitepapers/latest/aws-security-incident-response-guide/preparation-summary.html" rel="noopener">preparation items</a> from the Security Incident Response Guide. In addition, your preparation for a security event that’s related to a generative AI workload should include the following:</p> 
+       <ul> 
+        <li><strong>People: Train incident response and security operations staff on generative AI </strong>– You should make sure that your staff is familiar with generative AI concepts and with the AI/ML services in use at your organization. <a target="_blank" href="https://skillbuilder.aws/" rel="noopener">AWS Skill Builder</a> provides both free and paid courses on both of these subjects.</li> 
+        <li><strong>Process: Develop new playbooks</strong> – You should develop new playbooks for security events that are related to a generative AI workload. To learn more about how to develop these, see the following sample playbooks: 
+         <ul style="list-style-type:circle"> 
+          <li><a target="_blank" href="https://github.com/aws-samples/aws-customer-playbook-framework/blob/main/docs/Bedrock_Response.md" rel="noopener">Responding to Amazon Bedrock Security Events</a></li> 
+          <li><a target="_blank" href="https://github.com/aws-samples/aws-customer-playbook-framework/blob/main/docs/Responding%20to%20SageMaker.md" rel="noopener">Responding to SageMaker Security Events</a></li> 
+          <li><a target="_blank" href="https://github.com/aws-samples/aws-customer-playbook-framework/blob/main/docs/Amazon_Q.md" rel="noopener">Responding to Amazon Q Security Events</a>.</li> 
+         </ul> <p>You can use these playbooks as a starting point and modify them to best fit your organization and usage of these services.</p> </li> 
+        <li><strong>Technology: Log generative AI application prompts and invocations</strong> – In addition to foundational logs, such as those available in <a target="_blank" href="https://aws.amazon.com/cloudtrail/" rel="noopener">AWS CloudTrail</a>, you should consider logging <a target="_blank" href="https://aws.amazon.com/bedrock/" rel="noopener">Amazon Bedrock</a> model invocation logs so that you can analyze the prompts coming into your application and the outputs. To learn more, see <a target="_blank" href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-invocation-logging.html" rel="noopener">Amazon Bedrock model invocation logging</a>. CloudTrail <a target="_blank" href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-data-events-with-cloudtrail.html#logging-data-events" rel="noopener">data event</a> logging is also available for Amazon Bedrock, <a target="_blank" href="https://aws.amazon.com/q/" rel="noopener">Amazon Q</a>, and <a target="_blank" href="https://aws.amazon.com/sagemaker/" rel="noopener">Amazon SageMaker</a>. For general guidance, see <a target="_blank" href="https://aws.amazon.com/blogs/security/logging-strategies-for-security-incident-response/" rel="noopener">Logging strategies for security incident response</a>.</li> 
+       </ul> 
+       <blockquote> 
+        <p><strong>Important:</strong> Logs can contain sensitive information. To help protect this information, you should set up least privilege access to these logs, like you do for your other security logs. You can also protect sensitive log data with <a target="_blank" href="https://aws.amazon.com/what-is/data-masking/" rel="noopener">data masking</a>. In <a target="_blank" href="https://aws.amazon.com/cloudwatch/" rel="noopener">Amazon CloudWatch</a>, you can mask data natively through <a target="_blank" href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/mask-sensitive-log-data.html" rel="noopener">log group data protection policies</a>.</p> 
+       </blockquote> 
+       <h2>Methodology for incident response on generative AI workloads</h2> 
+       <p>After you complete the preparation items, you can use the <em>Methodology for incident response on generative AI</em> <em>workloads</em> for active response, to help you rapidly triage an active security event involving a generative AI application.</p> 
+       <p>The methodology has seven elements, which we detail in this section. Each element describes a method by which the components can interact with another component or a method by which a component can be modified. Consideration of these elements will help guide your actions during the <a target="_blank" href="https://docs.aws.amazon.com/whitepapers/latest/aws-security-incident-response-guide/operations.html" rel="noopener">Operations</a> phase of a security incident, which includes detection, analysis, containment, eradication, and recovery phases.</p> 
+       <ul> 
+        <li><strong>Access</strong> – Determine the designed or intended access patterns for the organization that hosts the components of the generative AI application, and look for deviations or anomalies from those patterns. Consider whether the application is accessible externally or internally because that will impact your analysis. <p>To help you identify anomalous and potential unauthorized access to your AWS environment, you can use <a target="_blank" href="https://aws.amazon.com/guardduty/" rel="noopener">Amazon GuardDuty</a>. If your application is accessible externally, the threat actor might not be able to access your AWS environment directly and thus GuardDuty won’t detect it. The way that you’ve set up authentication to your application will drive how you detect and analyze unauthorized access.</p> <p>If evidence of unauthorized access to your AWS account or associated infrastructure exists, determine the scope of the unauthorized access, such as the associated privileges and timeline. If the unauthorized access involves service credentials—for example, <a target="_blank" href="https://aws.amazon.com/ec2/" rel="noopener">Amazon Elastic Compute Cloud (Amazon EC2)</a> instance credentials—review the service for vulnerabilities.</p> </li> 
+        <li><strong>Infrastructure changes</strong> – Review the supporting infrastructure, such as servers, databases, serverless computing instances, and internal or external websites, to determine if it was accessed or changed. To investigate infrastructure changes, you can analyze CloudTrail logs for modifications of in-scope resources, or analyze other operating system logs or database access logs.</li> 
+        <li><strong>AI changes </strong>– Investigate whether users have accessed components of the generative AI application and whether they made changes to those components. Look for signs of unauthorized activities, such as the creation or deletion of custom models, modification of model availability, tampering or deletion of generative AI logging capabilities, tampering with the application code, and removal or modification of generative AI guardrails.</li> 
+        <li><strong>Data store changes </strong>– Determine the designed or intended data access patterns, whether users accessed the data stores of your generative AI application, and whether they made changes to these data stores. You should also look for the addition or modification of agents to a generative AI application.</li> 
+        <li><strong>Invocation </strong>– Analyze invocations of generative AI models, including the strings and file inputs, for threats, such as prompt injection or malware. You can use the <a target="_blank" href="https://owasp.org/www-project-top-10-for-large-language-model-applications/" rel="noopener">OWASP Top 10 for LLM</a> as a starting point to understand invocation related threats, and you can use invocation logs to analyze prompts for suspicious patterns, keywords, or structures that might indicate a prompt injection attempt. The logs also capture the model’s outputs and responses, enabling behavioral analysis to help identify uncharacteristic or unsafe model behavior indicative of a prompt injection. You can use the timestamps in the logs for temporal analysis to help detect coordinated prompt injection attempts over time and collect information about the user or system that initiated the model invocation, helping to identify the source of potential exploits.</li> 
+        <li><strong>Private data </strong>– Determine whether the in-scope generative AI application was designed to have access to private or confidential data. Then look for unauthorized access to, or tampering with, that data.</li> 
+        <li><strong>Agency</strong> – Agency refers to the ability of applications to make changes to an organization’s resources or take actions on a user’s behalf. For example, a generative AI application might be configured to generate content that is then used to send an email, invoking another resource or function to do so. You should determine whether the generative AI application has the ability to invoke other functions. Then, investigate whether unauthorized changes were made or if the generative AI application invoked unauthorized functions.</li> 
+       </ul> 
+       <p>The following table lists some questions to help you address the seven elements of the methodology. Use your answers to guide your response.</p> 
+       <table width="100%" style="border-collapse: collapse;border: 1px solid #808080"> 
+        <tbody> 
+         <tr style="background-color: #f0f0f0"> 
+          <td width="25%" style="padding: 8px;border: 1px solid #808080"><strong>Topic</strong></td> 
+          <td width="75%" style="padding: 8px;border: 1px solid #808080"><strong>Questions to address</strong></td> 
+         </tr> 
+         <tr> 
+          <td width="25%" style="padding: 8px;border: 1px solid #808080"><strong>Access</strong></td> 
+          <td width="75%" style="padding: 8px;border: 1px solid #808080">Do you still have access to your computing environment?<br> Is there continued evidence of unauthorized access to your organization? </td> 
+         </tr> 
+         <tr> 
+          <td width="25%" style="padding: 8px;border: 1px solid #808080"><strong>Infrastructure changes</strong></td> 
+          <td width="75%" style="padding: 8px;border: 1px solid #808080">Were supporting infrastructure resources accessed or changed?</td> 
+         </tr> 
+         <tr> 
+          <td width="25%" style="padding: 8px;border: 1px solid #808080"><strong>AI changes</strong></td> 
+          <td width="75%" style="padding: 8px;border: 1px solid #808080">Were your AI models, code, or resources accessed or changed?</td> 
+         </tr> 
+         <tr> 
+          <td width="25%" style="padding: 8px;border: 1px solid #808080"><strong>Data store changes</strong></td> 
+          <td width="75%" style="padding: 8px;border: 1px solid #808080">Were your data stores, knowledge bases, agents, plugins, or training data accessed or tampered with?</td> 
+         </tr> 
+         <tr> 
+          <td width="25%" style="padding: 8px;border: 1px solid #808080"><strong>Invocation</strong></td> 
+          <td width="75%" style="padding: 8px;border: 1px solid #808080">What data, strings, or files were sent as input to the model?<br> What prompts were sent?<br> What responses were produced?</td> 
+         </tr> 
+         <tr> 
+          <td width="25%" style="padding: 8px;border: 1px solid #808080"><strong>Private data</strong></td> 
+          <td width="75%" style="padding: 8px;border: 1px solid #808080">What private or confidential data do generative AI resources have access to?<br> Was private data changed or tampered with?</td> 
+         </tr> 
+         <tr> 
+          <td width="25%" style="padding: 8px;border: 1px solid #808080"><strong>Agency</strong> </td> 
+          <td width="75%" style="padding: 8px;border: 1px solid #808080">Can the generative AI application resources be used to start computing services in an organization, or do the generative AI resources have the authority to make changes?<br> Were unauthorized changes made?</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h2>Example incident</h2> 
+       <p>To see how to use the methodology for investigation and response, let’s walk through an example security event where an unauthorized user compromises a generative AI application that’s hosted on AWS by using credentials that were exposed on a public code repository. Our goal is to determine what resources were accessed, modified, created, or deleted.</p> 
+       <p>To investigate generative AI security events on AWS, these are the main log sources that you should review:</p> 
+       <ul> 
+        <li>CloudTrail</li> 
+        <li>CloudWatch</li> 
+        <li><a target="_blank" href="https://docs.aws.amazon.com/vpc/latest/userguide/flow-logs.html" rel="noopener">VPC Flow Logs</a></li> 
+        <li><a target="_blank" href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/cloudtrail-logging-s3-info.html" rel="noopener">Amazon Simple Storage Service (Amazon S3) data events</a> (for evidence of access to an organization’s S3 buckets)</li> 
+        <li>Amazon Bedrock <a target="_blank" href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-invocation-logging.html" rel="noopener">model invocation logs</a> (if your application uses this service)</li> 
+       </ul> 
+       <h3>Access</h3> 
+       <p>Analysis of access for a generative AI application is similar to that for a standard three-tier web application. To begin, determine whether an organization has access to their AWS account. If the password for the AWS account root user was lost or changed, <a target="_blank" href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reset-root-password.html" rel="noopener">reset the password</a>. Then, we strongly recommended that you immediately enable a <a target="_blank" href="https://docs.aws.amazon.com/IAM/latest/UserGuide/enable-virt-mfa-for-root.html" rel="noopener">multi-factor authentication (MFA) device</a> for the root user—this should block a threat actor from accessing the root user.</p> 
+       <p>Next, determine whether unauthorized access to the account persists. To help identify mutative actions logged by <a target="_blank" href="https://aws.amazon.com/iam/" rel="noopener">AWS Identity and Access Management (IAM)</a> and <a target="_blank" href="https://docs.aws.amazon.com/STS/latest/APIReference/welcome.html" rel="noopener">AWS Security Token Service (Amazon STS)</a>, see the <a target="_blank" href="https://github.com/aws-samples/aws-customer-playbook-framework/blob/main/docs/Compromised_IAM_Credentials.md#analysis" rel="noopener">Analysis</a> section of the <a target="_blank" href="https://github.com/aws-samples/aws-customer-playbook-framework/blob/main/docs/Compromised_IAM_Credentials.md" rel="noopener">Compromised IAM Credentials playbook</a> on GitHub. Lastly, make sure that access keys aren’t stored in public repositories or in your application code; for alternatives, see <a target="_blank" href="https://docs.aws.amazon.com/IAM/latest/UserGuide/security-creds-programmatic-access.html#security-creds-alternatives-to-long-term-access-keys" rel="noopener">Alternatives to long-term access keys</a>.</p> 
+       <h3>Infrastructure changes</h3> 
+       <p>To analyze the infrastructure changes of an application, you should consider both <a target="_blank" href="https://docs.aws.amazon.com/whitepapers/latest/aws-fault-isolation-boundaries/control-planes-and-data-planes.html" rel="noopener">the control plane and data plane</a>. In our example, imagine that <a target="_blank" href="https://aws.amazon.com/api-gateway/" rel="noopener">Amazon API Gateway</a> was used for authentication to the downstream components of the generative AI application and that other ancillary resources were interacting with your application. Although you could review control plane changes to these resources in CloudTrail, you would need additional logging to be turned on to review changes made on the operating system of the resource. The following are some common names for control plane events that you could find in CloudTrail for this element:</p> 
+       <ul> 
+        <li><code style="color:#000000">ec2:RunInstances</code></li> 
+        <li><code style="color:#000000">ec2:StartInstances</code></li> 
+        <li><code style="color:#000000">ec2:TerminateInstances</code></li> 
+        <li><code style="color:#000000">ecs:CreateCluster</code></li> 
+        <li><code style="color:#000000">cloudformation:CreateStack</code></li> 
+        <li><code style="color:#000000">rds:DeleteDBInstance</code></li> 
+        <li><code style="color:#000000">rds:ModifyDBClusterSnapshotAttribute</code></li> 
+       </ul> 
+       <h3>AI changes</h3> 
+       <p>Unauthorized changes can include, but are not limited to, system prompts, application code, guardrails, and model availability. Internal user access to the generative AI resources that AWS hosts are logged in CloudTrail and appear with one of the following event sources:</p> 
+       <ul> 
+        <li><code style="color:#000000">bedrock.amazonaws.com</code></li> 
+        <li><code style="color:#000000">sagemaker.amazonaws.com</code></li> 
+        <li><code style="color:#000000">qbusiness.amazonaws.com</code></li> 
+        <li><code style="color:#000000">q.amazonaws.com</code></li> 
+       </ul> 
+       <p>The following are a couple examples of the event names in CloudTrail that would represent generative AI resource log tampering in our example scenario:</p> 
+       <ul> 
+        <li><code style="color:#000000">bedrock:PutModelInvocationLoggingConfiguration</code></li> 
+        <li><code style="color:#000000">bedrock:DeleteModelInvocationLoggingConfiguration</code></li> 
+       </ul> 
+       <p>The following are some common event names in CloudTrail that would represent access to the AI/ML model service configuration:</p> 
+       <ul> 
+        <li><code style="color:#000000">bedrock:GetFoundationModelAvailability</code></li> 
+        <li><code style="color:#000000">bedrock:ListProvisionedModelThroughputs</code></li> 
+        <li><code style="color:#000000">bedrock:ListCustomModels</code></li> 
+        <li><code style="color:#000000">bedrock:ListFoundationModels</code></li> 
+        <li><code style="color:#000000">bedrock:ListProvisionedModelThroughput</code></li> 
+        <li><code style="color:#000000">bedrock:GetGuardrail</code></li> 
+        <li><code style="color:#000000">bedrock:DeleteGuardrail</code></li> 
+       </ul> 
+       <p>In our example scenario, the unauthorized user has gained access to the AWS account. Now imagine that the compromised user has a policy attached that grants them full access to all resources. With this access, the unauthorized user can enumerate each component of Amazon Bedrock and identify the knowledge base and guardrails that are part of the application.</p> 
+       <p>The unauthorized user then requests model access to other <a target="_blank" href="https://aws.amazon.com/what-is/foundation-models/" rel="noopener">foundation models (FMs)</a> within Amazon Bedrock and removes existing guardrails. The access to other foundation models could indicate that the unauthorized user intends to use the generative AI application for their own purposes, and the removal of guardrails minimizes filtering or output checks by the model. AWS recommends that you implement fine-grained access controls by using&nbsp;<a target="_blank" href="https://docs.aws.amazon.com/bedrock/latest/userguide/security-iam.html#security_iam_access-manage" rel="noopener">IAM policies and resource-based policies</a>&nbsp;to restrict access to only the necessary Amazon Bedrock resources, <a target="_blank" href="https://aws.amazon.com/lambda/" rel="noopener">AWS Lambda</a> functions, and other components that the application requires. Also, you should enforce the use of MFA for IAM users, roles, and service accounts with access to critical components such as Amazon Bedrock and other components of your generative AI application.</p> 
+       <h3>Data store changes</h3> 
+       <p>Typically, you use and access a data store and knowledge base through model invocation, and for Amazon Bedrock, you include the API call <code style="color:#000000">bedrock:InvokeModel</code>.</p> 
+       <p>However, if an unauthorized user gains access to the environment, they can create, change, or delete the data sources and knowledge bases that the generative AI applications integrate with. This could cause data or model exfiltration or destruction, as well as data poisoning, and could create a denial-of-service condition for the model. The following are some common event names in CloudTrail that would represent changes to AI/ML data sources in our example scenario:</p> 
+       <ul> 
+        <li><code style="color:#000000">bedrock:CreateDataSource</code></li> 
+        <li><code style="color:#000000">bedrock:GetKnowledgeBase</code></li> 
+        <li><code style="color:#000000">bedrock:DeleteKnowledgeBase</code></li> 
+        <li><code style="color:#000000">bedrock:CreateAgent</code></li> 
+        <li><code style="color:#000000">bedrock:DeleteAgent</code></li> 
+        <li><code style="color:#000000">bedrock:InvokeAgent</code></li> 
+        <li><code style="color:#000000">bedrock:Retrieve</code></li> 
+        <li><code style="color:#000000">bedrock:RetrieveAndGenerate</code></li> 
+       </ul> 
+       <p>For the full list of possible actions, see the <a target="_blank" href="https://docs.aws.amazon.com/bedrock/latest/APIReference/API_Operations.html" rel="noopener">Amazon Bedrock API Reference</a>.</p> 
+       <p>In this scenario, we have established that the unauthorized user has full access to the generative AI application and that some enumeration took place. The unauthorized user then identified the S3 bucket that was the knowledge base for the generative AI application and uploaded inaccurate data, which corrupted the LLM. For examples of this vulnerability, see the section <em>LLM03 Training Data Poisoning</em> in the <a target="_blank" href="https://owasp.org/www-project-top-10-for-large-language-model-applications/assets/PDF/OWASP-Top-10-for-LLMs-2023-v1_1.pdf" rel="noopener">OWASP TOP 10 for LLM Applications</a>.</p> 
+       <h3>Invocation</h3> 
+       <p>Amazon Bedrock uses specific APIs to register <a target="_blank" href="https://docs.aws.amazon.com/bedrock/latest/userguide/model-invocation-logging.html#model-invocation-logging-console" rel="noopener">model invocation</a>. When a model in Amazon Bedrock is invoked, CloudTrail logs it. However, to determine the prompts that were sent to the generative AI model and the output response that was received from it, you must have configured model invocation logging.</p> 
+       <p>These logs are crucial because they can reveal important information, such as whether a threat actor tried to get the model to divulge information from your data stores or release data that the model was trained or fine-tuned on. For example, the logs could reveal if a threat actor attempted to prompt the model with carefully crafted inputs that were designed to extract sensitive data, bypass security controls, or generate content that violates your policies. Using the logs, you might also learn whether the model was used to generate misinformation, spam, or other malicious outputs that could be used in a security event.</p> 
+       <blockquote> 
+        <p><strong>Note</strong>: For services such as Amazon Bedrock, invocation logging is disabled by default.&nbsp; We recommend that you enable data events and model invocation logging for generative AI services, where available. However, your organization might not want to capture and store invocation logs for privacy and legal reasons. One common concern is users entering sensitive data as input, which widens the scope of assets to protect. This is a business decision that should be taken into consideration.</p> 
+       </blockquote> 
+       <p>In our example scenario, imagine that model invocation wasn’t enabled, so the incident responder couldn’t collect invocation logs to see the model input or output data for unauthorized invocations. The incident responder wouldn’t be able to determine the prompts and subsequent responses from the LLM. Without this logging enabled, they also couldn’t see the full request data, response data, and metadata associated with invocation calls.</p> 
+       <p>Event names in model invocation logs that would represent model invocation logging in Amazon Bedrock include:</p> 
+       <ul> 
+        <li><code style="color:#000000">bedrock:InvokeModel</code></li> 
+        <li><code style="color:#000000">bedrock:InvokeModelWithResponseStream</code></li> 
+        <li><code style="color:#000000">bedrock:Converse</code></li> 
+        <li><code style="color:#000000">bedrock:ConverseStream</code></li> 
+       </ul> 
+       <p>The following is a sample log entry for Amazon Bedrock model invocation logging:</p> 
+       <div id="attachment_35765" style="width: 790px" class="wp-caption aligncenter"> 
+        <img aria-describedby="caption-attachment-35765" src="https://d2908q01vomqb2.cloudfront.net/22d200f8670dbdb3e253a90eee5098477c95c23d/2024/09/16/img2-3.png" alt="Figure 2: sample model invocation log including prompt and response" width="780" class="size-full wp-image-35765" style="border: 1px solid #bebebe"> 
+        <p id="caption-attachment-35765" class="wp-caption-text">Figure 2: sample model invocation log including prompt and response</p> 
+       </div> 
+       <h3>Private data</h3> 
+       <p>From an architectural standpoint, generative AI applications shouldn’t have direct access to an organization’s private data. You should classify data used to train a generative AI application or for RAG use as data store data and segregate it from private data, unless the generative AI application uses the private data (for example, in the case where a generative AI application is tasked to answer questions about medical records for a patient). One way to help make sure that an organization’s private data is segregated from generative AI applications is to <a target="_blank" href="https://docs.aws.amazon.com/wellarchitected/latest/security-pillar/sec_securely_operate_multi_accounts.html" rel="noopener">use a separate account</a> and to authenticate and authorize access as necessary to adhere to the principle of least privilege.</p> 
+       <h3>Agency</h3> 
+       <p><a target="_blank" href="https://genai.owasp.org/llmrisk/llm08-excessive-agency/" rel="noopener">Excessive agency</a> for an LLM refers to an AI system that has too much autonomy or decision-making power, leading to unintended and potentially harmful consequences. This can happen when an LLM is deployed with insufficient oversight, constraints, or alignment with human values, resulting in the model making choices that diverge from what most humans would consider beneficial or ethical.</p> 
+       <p>In our example scenario, the generative AI application has excessive permissions to services that aren’t required by the application. Imagine that the application code was running with an execution role with full access to <a target="_blank" href="https://aws.amazon.com/ses/" rel="noopener">Amazon Simple Email Service (Amazon SES)</a>. This could allow for the unauthorized user to send spam emails on the users’ behalf in response to a prompt. You could help prevent this by limiting permission and functionality of the generative AI application plugins and agents. For more information, see <a target="_blank" href="https://owasp.org/www-project-top-10-for-large-language-model-applications/" rel="noopener">OWASP Top 10 for LLM</a>, evidence of LLM08 Excessive Agency.</p> 
+       <p>During an investigation, while analyzing the logs, both the <code style="color:#000000">sourceIPAddress</code> and the <code style="color:#000000">userAgent</code> fields will be associated with the generative AI application (for example, <code style="color:#000000">sagemaker.amazonaws.com</code>, <code style="color:#000000">bedrock.amazonaws.com</code>, or <code style="color:#000000">q.amazonaws.com</code>). Some examples of services that might commonly be called or invoked by other services are Lambda, Amazon SNS, and Amazon SES.</p> 
+       <h2>Conclusion</h2> 
+       <p>To respond to security events related to a generative AI workload, you should still follow the guidance and principles outlined in the <a target="_blank" href="https://docs.aws.amazon.com/whitepapers/latest/aws-security-incident-response-guide/aws-security-incident-response-guide.html" rel="noopener">AWS Security Incident Response Guide</a>. However, these workloads also require that you consider some additional elements.</p> 
+       <p>You can use the methodology that we introduced in this post to help you address these new elements. You can reference this methodology when investigating unauthorized access to infrastructure where the use of generative AI applications is either a target of unauthorized use, the mechanism for unauthorized use, or both. The methodology equips you with a structured approach to prepare for and respond to security incidents involving generative AI workloads, helping you maintain the security and integrity of these critical applications.</p> 
+       <p>For more information about best practices for designing your generative AI application, see <a target="_blank" href="https://docs.aws.amazon.com/prescriptive-guidance/latest/security-reference-architecture/gen-ai-sra.html" rel="noopener">Generative AI for the AWS Security Reference Architecture</a>. For information about tactical mitigations for a common generative AI application, see the <a target="_blank" href="https://aws.amazon.com/blogs/security/hardening-the-rag-chatbot-architecture-powered-by-amazon-bedrock-blueprint-for-secure-design-and-anti-pattern-migration/" rel="noopener">Blueprint for secure design and anti-pattern mitigation</a>.</p> 
+       <p>If you have feedback about this post, submit comments in the Comments section below. If you have questions about this post, start a new thread on the <a target="_blank" href="https://repost.aws/topics/TAEEfW2o7QS4SOLeZqACq9jA/security-identity-compliance" rel="noopener">AWS Security, Identity, &amp; Compliance re:Post</a> or <a target="_blank" href="https://console.aws.amazon.com/support/home" rel="noopener">contact AWS Support</a>.<br>&nbsp;</p> 
+       <footer> 
+        <div class="blog-author-box"> 
+         <img loading="lazy" class="alignleft size-full wp-image-33350" src="https://d2908q01vomqb2.cloudfront.net/22d200f8670dbdb3e253a90eee5098477c95c23d/2024/02/26/Anna-McAbee-author.jpg" alt="Anna McAbee" style="margin-left: 12px;margin-right:18px;margin-top: 12px;margin-bottom: 6px;width:93.750px;height: 125px"> 
+         <br> 
+         <span class="lb-h4" style="line-height: 2.1em;padding-top: 12px;margin-top: 24px">Anna McAbee</span> 
+         <br> Anna is a Security Specialist Solutions Architect focused on financial services, generative AI, and incident response at AWS. Outside of work, Anna enjoys Taylor Swift, cheering on the Florida Gators football team, wine tasting, and traveling the world. 
+        </div> 
+        <div class="blog-author-box"> 
+         <img loading="lazy" class="alignleft size-full wp-image-33350" src="https://d2908q01vomqb2.cloudfront.net/22d200f8670dbdb3e253a90eee5098477c95c23d/2022/12/21/Steve-de-vera-author.jpg" alt="Steve De Vera" style="margin-left: 12px;margin-right:18px;margin-top: 12px;margin-bottom: 6px;width:93.750px;height: 125px"> 
+         <br> 
+         <span class="lb-h4" style="line-height: 2.1em;padding-top: 12px;margin-top: 24px">Steve De Vera</span> 
+         <br> Steve is a manager in the AWS Customer Incident Response Team (CIRT). He is passionate about American-style BBQ and is a certified competition BBQ judge. He has a dog named Brisket. 
+        </div> 
+        <div class="blog-author-box"> 
+         <img loading="lazy" class="alignleft size-full wp-image-33350" src="https://d2908q01vomqb2.cloudfront.net/22d200f8670dbdb3e253a90eee5098477c95c23d/2024/09/16/newevans.jpg" alt="AJ Evans" style="margin-left: 12px;margin-right:18px;margin-top: 12px;margin-bottom: 6px;width:93.750px;height: 125px"> 
+         <br> 
+         <span class="lb-h4" style="line-height: 2.1em;padding-top: 12px;margin-top: 24px">AJ Evans</span> 
+         <br> AJ is a Security Engineer with the AWS Customer Incident Response Team (CIRT). He uses his experience as a former U.S. Secret Service Special Agent, where he focused on financial crimes and network intrusions, to protect AWS customers. When he’s not responding to the latest cyber threats, AJ enjoys gaming, playing music, building custom PCs, and 3D printing his own creations. 
+        </div> 
+        <div class="blog-author-box"> 
+         <img loading="lazy" class="alignleft size-full wp-image-33350" src="https://d2908q01vomqb2.cloudfront.net/22d200f8670dbdb3e253a90eee5098477c95c23d/2024/09/16/jennpaz.jpg" alt="Jennifer Paz" style="margin-left: 12px;margin-right:18px;margin-top: 12px;margin-bottom: 6px;width:93.750px;height: 125px"> 
+         <br> 
+         <span class="lb-h4" style="line-height: 2.1em;padding-top: 12px;margin-top: 24px">Jennifer Paz</span> 
+         <br> Jennifer is a Security Engineer with over a decade of experience, currently serving on the AWS Customer Incident Response Team (CIRT). Jennifer enjoys helping customers tackle security challenges and implementing complex solutions to enhance their security posture. When not at work, Jennifer is an avid walker, jogger, pickleball enthusiast, traveler, and foodie, always on the hunt for new culinary adventures. 
+        </div> 
+       </footer> 
+       <!-- '"` --> 
+      </section> 
+      <footer> 
+       <div class="blog-tag-list">
+         TAGS: 
+        <span property="keywords"><a href="https://aws.amazon.com/blogs/security/tag/security-blog/" rel="tag">Security Blog</a></span> 
+       </div> 
+      </footer> 
+      <aside id="Comments" class="blog-comments"> 
+       <div data-lb-comp="aws-blog:cosmic-comments" data-env="prod" data-content-id="90152b10-9307-4717-8493-cad43b6b7b9f" data-title="Methodology for incident response on generative AI workloads" data-url="https://aws.amazon.com/blogs/security/methodology-for-incident-response-on-generative-ai-workloads/"> 
+        <p data-failed-message="Comments cannot be loaded… Please refresh and try again.">Loading comments…</p> 
+       </div> 
+      </aside> 
+      <div class="js-mbox" data-mbox="en_blog_post_comments"></div> 
+     </article> 
+    </main> 
+    <div class="blog-sidebar lb-col lb-tiny-24 lb-mid-8"> 
+     <div class="awsm"> 
+      <div class="lb-box" style="padding-left:30px;"> 
+       <h3 id="Resources" class="lb-txt-none lb-h3 lb-title" style="margin-top:30px;"> Resources</h3> 
+       <div class="data-attr-wrapper lb-none-pad lb-none-v-margin lb-box" data-da-type="ha" data-da-channel="ha" data-da-language="en" data-da-placement="blog-sb-resources" data-da-campaign="acq_awsblogsb" data-da-content="security-resources" data-da-trk="blog_initial"> 
+        <ul class="lb-txt-none lb-ul lb-list-style-none lb-li-none-v-margin lb-tiny-ul-block"> 
+         <li><a href="https://aws.amazon.com/security?sc_ichannel=ha&amp;sc_icampaign=acq_awsblogsb&amp;sc_icontent=security-resources">AWS Cloud Security</a></li> 
+         <li><a href="https://aws.amazon.com/compliance?sc_ichannel=ha&amp;sc_icampaign=acq_awsblogsb&amp;sc_icontent=security-resources">AWS Compliance</a></li> 
+         <li><a href="https://docs.aws.amazon.com/prescriptive-guidance/latest/security-reference-architecture/welcome.html?secd_ip5">AWS Security Reference Architecture</a></li> 
+         <li><a href="https://aws.amazon.com/architecture/security-identity-compliance">Best Practices</a></li> 
+         <li><a href="https://aws.amazon.com/compliance/data-protection/">Data Protection at AWS</a></li> 
+         <li><a href="https://aws.amazon.com/security/zero-trust/">Zero Trust on AWS</a></li> 
+         <li><a href="https://aws.amazon.com/security/cryptographic-computing/">Cryptographic Computing</a></li> 
+        </ul> 
+       </div> 
+       <div class="lb-grid lb-row lb-row-max-large lb-snap"> 
+        <div class="lb-col lb-tiny-24 lb-mid-8"> 
+         <hr class="lb-divider"> 
+        </div> 
+        <div class="lb-col lb-tiny-24 lb-mid-8"> 
+        </div> 
+        <div class="lb-col lb-tiny-24 lb-mid-8"> 
+        </div> 
+       </div> 
+       <h3 id="Follow" class="lb-txt-none lb-h3 lb-title"> Follow</h3> 
+       <div class="data-attr-wrapper lb-none-pad lb-none-v-margin lb-box" data-da-type="ha" data-da-channel="ha" data-da-language="en" data-da-placement="blog-sb-social" data-da-campaign="acq_awsblogsb" data-da-content="security-social" data-da-trk="blog_initial"> 
+        <ul class="lb-txt-none lb-ul lb-list-style-none lb-li-none-v-margin lb-tiny-ul-block"> 
+         <li><a href="https://twitter.com/AWSsecurityinfo"><i class="icon-twitter-square"></i> &nbsp;Twitter</a></li> 
+         <li><a href="https://www.facebook.com/amazonwebservices"><i class="icon-facebook-square"></i> &nbsp;Facebook</a></li> 
+         <li><a href="https://www.linkedin.com/company/amazon-web-services/"><i class="icon-linkedin-square"></i> &nbsp;LinkedIn</a></li> 
+         <li><a href="https://www.twitch.tv/aws"><i class="icon-twitch"></i> &nbsp;Twitch</a></li> 
+         <li><a href="https://pages.awscloud.com/communication-preferences?sc_ichannel=ha&amp;sc_icampaign=acq_awsblogsb&amp;sc_icontent=security-social"><i class="icon-envelope-square"></i> &nbsp;Email Updates</a></li> 
+        </ul> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="js-mbox" data-mbox="en_blog_post_sidebar"></div> 
+    </div> 
+   </div> 
+  </div> 
+  <div class="awsm"> 
+   <footer id="aws-page-footer" class="m-page-footer" role="contentinfo"> 
+    <div class="data-attr-wrapper lb-none-v-margin lb-xb-grid-wrap" style="background-color:#141f2e;" data-da-type="so" data-da-so-type="viewport" data-da-so-language="en" data-da-so-category="monitoring" data-da-so-name="footer" data-da-so-version="a"> 
+     <div class="lb-xb-grid lb-row-max-large lb-snap lb-tiny-xb-1 lb-small-xb-3 lb-large-xb-5"> 
+      <div class="lb-xbcol"> 
+       <div class="data-attr-wrapper lb-small-hide lb-btn" data-da-type="so" data-da-so-type="viewport" data-da-so-language="en" data-da-so-category="monitoring" data-da-so-name="footer_buttons" data-da-so-url="all" data-da-so-version="footer_signin-mobile-default"> 
+        <a class="lb-btn-p-primary" href="https://console.aws.amazon.com/console/home?nc1=f_ct&amp;src=footer-signin-mobile" role="button"> <span> Sign In to the Console</span> </a> 
+       </div> 
+       <h3 class="lb-txt-none lb-txt-white lb-tiny-v-margin lb-h3 lb-title"> Learn About AWS</h3> 
+       <ul class="lb-txt-white lb-ul lb-list-style-none lb-li-micro-v-margin lb-tiny-ul-block" style="margin-bottom:0px;"> 
+        <li><a href="https://aws.amazon.com/what-is-aws/?nc1=f_cc" target="_blank" rel="noopener noreferrer">What Is AWS?</a></li> 
+        <li><a href="https://aws.amazon.com/what-is-cloud-computing/?nc1=f_cc" target="_blank" rel="noopener noreferrer">What Is Cloud Computing?</a></li> 
+        <li><a href="https://aws.amazon.com/accessibility/?nc1=f_cc" target="_blank" rel="noopener noreferrer">AWS Accessibility</a></li> 
+        <li><a href="https://aws.amazon.com/diversity-inclusion/?nc1=f_cc" target="_blank" rel="noopener noreferrer">AWS Inclusion, Diversity &amp; Equity</a></li> 
+        <li><a href="https://aws.amazon.com/devops/what-is-devops/?nc1=f_cc" target="_blank" rel="noopener noreferrer">What Is DevOps?</a></li> 
+        <li><a href="https://aws.amazon.com/containers/?nc1=f_cc" target="_blank" rel="noopener noreferrer">What Is a Container?</a></li> 
+        <li><a href="https://aws.amazon.com/what-is/data-lake/?nc1=f_cc" target="_blank" rel="noopener noreferrer">What Is a Data Lake?</a></li> 
+        <li><a href="https://aws.amazon.com/what-is/artificial-intelligence/?nc1=f_cc" target="_blank" rel="noopener noreferrer">What is Artificial Intelligence (AI)?</a></li> 
+        <li><a href="https://aws.amazon.com/what-is/generative-ai/?nc1=f_cc" target="_blank" rel="noopener noreferrer">What is Generative AI?</a></li> 
+        <li><a href="https://aws.amazon.com/what-is/machine-learning/?nc1=f_cc" target="_blank" rel="noopener noreferrer">What is Machine Learning (ML)?</a></li> 
+        <li><a href="https://aws.amazon.com/security/?nc1=f_cc" target="_blank" rel="noopener noreferrer">AWS Cloud Security</a></li> 
+        <li><a href="https://aws.amazon.com/new/?nc1=f_cc" target="_blank" rel="noopener noreferrer">What's New</a></li> 
+        <li><a href="https://aws.amazon.com/blogs/?nc1=f_cc" target="_blank" rel="noopener noreferrer">Blogs</a></li> 
+        <li><a href="https://press.aboutamazon.com/press-releases/aws" target="_blank" rel="noopener noreferrer" title="Press Releases">Press Releases</a></li> 
+       </ul> 
+      </div> 
+      <div class="lb-xbcol"> 
+       <h3 class="lb-txt-none lb-txt-white lb-tiny-v-margin lb-h3 lb-title"> Resources for AWS</h3> 
+       <ul class="lb-txt-white lb-ul lb-list-style-none lb-li-micro-v-margin lb-tiny-ul-block" style="margin-bottom:0px;"> 
+        <li><a href="https://aws.amazon.com/getting-started/?nc1=f_cc" target="_blank" rel="noopener noreferrer">Getting Started</a></li> 
+        <li><a href="https://aws.amazon.com/training/?nc1=f_cc" target="_blank" rel="noopener noreferrer">Training and Certification</a></li> 
+        <li><a href="https://aws.amazon.com/solutions/?nc1=f_cc" target="_blank" rel="noopener noreferrer">AWS Solutions Library</a></li> 
+        <li><a href="https://aws.amazon.com/architecture/?nc1=f_cc" target="_blank" rel="noopener noreferrer">Architecture Center</a></li> 
+        <li><a href="https://aws.amazon.com/faqs/?nc1=f_dr" target="_blank" rel="noopener noreferrer">Product and Technical FAQs</a></li> 
+        <li><a href="https://aws.amazon.com/resources/analyst-reports/?nc1=f_cc" target="_blank" rel="noopener noreferrer">Analyst Reports</a></li> 
+        <li><a href="https://aws.amazon.com/partners/work-with-partners/?nc1=f_dr" target="_blank" rel="noopener noreferrer">AWS Partners</a></li> 
+       </ul> 
+      </div> 
+      <div class="lb-xbcol"> 
+       <h3 class="lb-txt-none lb-txt-white lb-tiny-v-margin lb-h3 lb-title"> Developers on AWS</h3> 
+       <ul class="lb-txt-white lb-ul lb-list-style-none lb-li-micro-v-margin lb-tiny-ul-block" style="margin-bottom:0px;"> 
+        <li><a href="https://aws.amazon.com/developer/?nc1=f_dr" target="_blank" rel="noopener noreferrer">Developer Center</a></li> 
+        <li><a href="https://aws.amazon.com/developer/tools/?nc1=f_dr" target="_blank" rel="noopener noreferrer">SDKs &amp; Tools</a></li> 
+        <li><a href="https://aws.amazon.com/developer/language/net/?nc1=f_dr" target="_blank" rel="noopener noreferrer">.NET on AWS</a></li> 
+        <li><a href="https://aws.amazon.com/developer/language/python/?nc1=f_dr" target="_blank" rel="noopener noreferrer">Python on AWS</a></li> 
+        <li><a href="https://aws.amazon.com/developer/language/java/?nc1=f_dr" target="_blank" rel="noopener noreferrer">Java on AWS</a></li> 
+        <li><a href="https://aws.amazon.com/developer/language/php/?nc1=f_cc" target="_blank" rel="noopener noreferrer">PHP on AWS</a></li> 
+        <li><a href="https://aws.amazon.com/developer/language/javascript/?nc1=f_dr" target="_blank" rel="noopener noreferrer">JavaScript on AWS</a></li> 
+       </ul> 
+      </div> 
+      <div class="lb-xbcol"> 
+       <h3 class="lb-txt-none lb-txt-white lb-tiny-v-margin lb-h3 lb-title"> Help</h3> 
+       <ul class="lb-txt-white lb-ul lb-list-style-none lb-li-micro-v-margin lb-tiny-ul-block" style="margin-bottom:0px;"> 
+        <li><a href="https://aws.amazon.com/contact-us/?nc1=f_m" target="_blank" rel="noopener noreferrer">Contact Us</a></li> 
+        <li><a href="https://iq.aws.amazon.com/?utm=mkt.foot/?nc1=f_m" target="_blank" rel="noopener noreferrer">Get Expert Help</a></li> 
+        <li><a href="https://console.aws.amazon.com/support/home/?nc1=f_dr" target="_blank" rel="noopener noreferrer">File a Support Ticket</a></li> 
+        <li><a href="https://repost.aws/?nc1=f_dr" target="_blank" rel="noopener noreferrer">AWS re:Post</a></li> 
+        <li><a href="https://repost.aws/knowledge-center/?nc1=f_dr" target="_blank" rel="noopener noreferrer">Knowledge Center</a></li> 
+        <li><a href="https://aws.amazon.com/premiumsupport/?nc1=f_dr" target="_blank" rel="noopener noreferrer">AWS Support Overview</a></li> 
+        <li><a href="https://aws.amazon.com/legal/?nc1=f_cc" target="_blank" rel="noopener noreferrer">Legal</a></li> 
+        <li><a href="https://aws.amazon.com/careers/">AWS Careers</a></li> 
+       </ul> 
+       <div class="lb-mbox js-mbox" data-lb-comp="mbox" data-lb-comp-ignore="true" data-mbox="en_footer-v3_addl-help"> 
+       </div> 
+      </div> 
+      <div class="lb-xbcol"> 
+       <div class="lb-mbox js-mbox" data-lb-comp="mbox" data-lb-comp-ignore="true" data-mbox="en_footer-v3_cta"> 
+        <div class="data-attr-wrapper lb-tiny-hide lb-small-show lb-btn" data-da-type="so" data-da-so-type="viewport" data-da-so-language="en" data-da-so-category="monitoring" data-da-so-name="footer_buttons" data-da-so-url="all" data-da-so-version="footer_signup-default"> 
+         <a class="lb-btn-p-primary" href="https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc1=f_ct&amp;src=default" role="button"> <span> Create an AWS Account</span> </a> 
+        </div> 
+       </div> 
+       <div class="lb-xb-grid-wrap" style="padding-left:0px; margin-top:20px; margin-bottom:0px;"> 
+        <div class="lb-xb-grid lb-row-max-large lb-xb-equal-height lb-snap lb-gutter-collapse lb-vgutter-collapse lb-tiny-xb-4"> 
+         <div class="lb-xbcol"> 
+          <a class="lb-txt-none lb-txt-white lb-none-pad lb-txt" style="padding-left:0px; padding-right:5px;" href="https://twitter.com/awscloud" target="_blank" rel="noopener noreferrer" title="Twitter"> <i class="icon-twitter"></i></a> 
+         </div> 
+         <div class="lb-xbcol"> 
+          <a class="lb-txt-none lb-txt-white lb-none-pad lb-none-v-margin lb-txt" style="padding-right:5px;" href="https://www.facebook.com/amazonwebservices" target="_blank" rel="noopener noreferrer" title="Facebook"> <i class="icon-facebook"></i></a> 
+         </div> 
+         <div class="lb-xbcol"> 
+          <a class="lb-txt-none lb-txt-white lb-none-pad lb-txt" style="padding-right:5px;" href="https://www.linkedin.com/company/amazon-web-services/" target="_blank" rel="noopener noreferrer" title="Linkedin"> <i class="icon-linkedin"></i></a> 
+         </div> 
+         <div class="lb-xbcol"> 
+          <a class="lb-txt-none lb-txt-white lb-none-pad lb-txt" style="padding-right:5px;" href="https://www.instagram.com/amazonwebservices/" target="_blank" rel="noopener noreferrer" title="Instagram"> <i class="icon-instagram"></i></a> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="lb-xb-grid-wrap" style="padding-left:0px; margin-top:10px;"> 
+        <div class="lb-xb-grid lb-row-max-large lb-xb-equal-height lb-snap lb-gutter-collapse lb-vgutter-collapse lb-tiny-xb-4"> 
+         <div class="lb-xbcol"> 
+          <a class="lb-txt-none lb-txt-white lb-none-pad lb-txt" style="padding-right:5px;" href="https://www.twitch.tv/aws" target="_blank" rel="noopener noreferrer" title="Twitch"> <i class="icon-twitch"></i></a> 
+         </div> 
+         <div class="lb-xbcol"> 
+          <a class="lb-txt-none lb-txt-white lb-none-pad lb-txt" style="padding-right:5px;" href="https://www.youtube.com/user/AmazonWebServices/Cloud/" target="_blank" rel="noopener noreferrer" title="YouTube"> <i class="icon-youtube"></i></a> 
+         </div> 
+         <div class="lb-xbcol"> 
+          <a class="lb-txt-none lb-txt-white lb-none-pad lb-txt" style="padding-right:5px;" href="https://aws.amazon.com/podcasts/" target="_blank" rel="noopener noreferrer" title="Podcast"> <i class="icon-podcast"></i></a> 
+         </div> 
+         <div class="lb-xbcol"> 
+          <a class="lb-txt-none lb-txt-white lb-none-pad lb-txt" style="padding-right:5px;" href="https://pages.awscloud.com/communication-preferences?trk=homepage" target="_blank" rel="noopener noreferrer" title="Email"> <i class="icon-envelope-o"></i></a> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="lb-txt-normal lb-txt-white lb-txt-14 lb-rtxt" style="color:#eaeded; margin-top:0px;"> 
+        <div>
+          Amazon is an Equal Opportunity Employer: 
+         <i> Minority / Women / Disability / Veteran / Gender Identity / Sexual Orientation / Age.</i> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="lb-none-pad lb-none-v-margin lb-xb-grid-wrap" style="background-color:#141f2e;"> 
+     <div class="lb-xb-grid lb-row-max-large lb-snap lb-tiny-xb-1"> 
+      <div class="lb-xbcol"> 
+       <ul class="lb-txt-white lb-tiny-iblock lb-none-v-margin lb-ul lb-list-style-none lb-li-micro-v-margin lb-tiny-ul-iblock"> 
+        <li class="lb-txt-bold">Language</li> 
+        <li data-language="ar" lang="ar-SA" translate="no"><a href="https://aws.amazon.com/ar/?nc1=h_ls">عربي</a></li> 
+        <li data-language="id" lang="id-ID" translate="no"><a href="https://aws.amazon.com/id/?nc1=h_ls">Bahasa Indonesia</a></li> 
+        <li data-language="de" lang="de-DE" translate="no"><a href="https://aws.amazon.com/de/?nc1=h_ls">Deutsch</a></li> 
+        <li data-language="en" lang="en-US" translate="no"><a href="https://aws.amazon.com/?nc1=h_ls">English</a></li> 
+        <li data-language="es" lang="es-ES" translate="no"><a href="https://aws.amazon.com/es/?nc1=h_ls">Español</a></li> 
+        <li data-language="fr" lang="fr-FR" translate="no"><a href="https://aws.amazon.com/fr/?nc1=h_ls">Français</a></li> 
+        <li data-language="it" lang="it-IT" translate="no"><a href="https://aws.amazon.com/it/?nc1=h_ls">Italiano</a></li> 
+        <li data-language="pt" lang="pt-BR" translate="no"><a href="https://aws.amazon.com/pt/?nc1=h_ls">Português</a></li> 
+        <li data-language="vi" lang="vi-VN" translate="no"><a href="https://aws.amazon.com/vi/?nc1=f_ls">Tiếng Việt</a></li> 
+        <li data-language="tr" lang="tr-TR" translate="no"><a href="https://aws.amazon.com/tr/?nc1=h_ls">Türkçe</a></li> 
+        <li data-language="ru" lang="ru-RU" translate="no"><a href="https://aws.amazon.com/ru/?nc1=h_ls">Ρусский</a></li> 
+        <li data-language="th" lang="th-TH" translate="no"><a href="https://aws.amazon.com/th/?nc1=f_ls">ไทย</a></li> 
+        <li data-language="jp" lang="ja-JP" translate="no"><a href="https://aws.amazon.com/jp/?nc1=h_ls">日本語</a></li> 
+        <li data-language="ko" lang="ko-KR" translate="no"><a href="https://aws.amazon.com/ko/?nc1=h_ls">한국어</a></li> 
+        <li data-language="cn" lang="zh-CN" translate="no"><a href="https://aws.amazon.com/cn/?nc1=h_ls">中文 (简体)</a></li> 
+        <li data-language="tw" lang="zh-TW" translate="no"><a href="https://aws.amazon.com/tw/?nc1=h_ls">中文 (繁體)</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="lb-none-pad lb-none-v-margin lb-xb-grid-wrap" style="background-color:#EAEDED; padding-top:5px;"> 
+     <div class="lb-xb-grid lb-row-max-large lb-snap lb-tiny-xb-1"> 
+      <div class="lb-xbcol"> 
+       <ul class="lb-txt-squid lb-none-v-margin lb-ul lb-list-style-none lb-li-none-v-margin lb-tiny-ul-iblock"> 
+        <li><a href="https://aws.amazon.com/privacy/?nc1=f_pr">Privacy</a></li> 
+        <li>|</li> 
+        <li><a href="https://aws.amazon.com/accessibility/?nc1=f_acc">Accessibility</a></li> 
+        <li>|</li> 
+        <li><a href="https://aws.amazon.com/terms/?nc1=f_pr">Site Terms</a></li> 
+        <li>|</li> 
+        <li data-cookie-consent-modal="1"><a href="#"> Cookie Preferences </a></li> 
+        <li>|</li> 
+        <li>© 2024, Amazon Web Services, Inc. or its affiliates. All rights reserved.</li> 
+       </ul> 
+      </div> 
+     </div> 
+    </div> 
+   </footer> 
+  </div> 
+  <div id="aws-page-end"></div> 
+  <div id="lb-page-end"></div> 
+  <script src="https://a0.awsstatic.com/da/js/1.0.50/aws-da.js" async></script> 
+  <script src="https://a0.awsstatic.com/aws-blog/1.0.80/js/vendor/prism.js" data-default-language="markup"></script>  
+ </body>
+</html>

@@ -1,0 +1,6 @@
+Forgot Password
+Please enter your email address, a new password will be emailed to you.
+Email
+Submit
+Close
+×Close

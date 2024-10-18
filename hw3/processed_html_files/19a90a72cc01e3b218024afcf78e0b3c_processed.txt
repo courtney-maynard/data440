@@ -1,0 +1,26 @@
+A repository of open problems in technical AI governance
+Anka Reuel*, Ben Bucknall*,
+Stephen Casper, Tim Fist, Lisa Soder, Onni Aarne, Lewis Hammond, Lujain Ibrahim, Alan Chan, Peter Wills, Markus Anderljung, Ben Garfinkel, Lennart Heim, Andrew Trask, Gabriel Mukobi, Rylan Schaeffer, Mauricio Baker, Sara Hooker, Irene Solaiman, Alexandra Sasha Luccioni, Nitarshan Rajkumar, Nicolas Moës, Jeffrey Ladish, Neel Guha, Jessica Newman, Yoshua Bengio, Tobin South, Alex Pentland, Sanmi Koyejo, Mykel J. Kochenderfer, Robert Trager
+Key decision-makers seeking to govern AI often have insufficient information for identifying the need for intervention and assessing the efficacy of different governance options. Furthermore, the technical tools necessary for successfully implementing governance proposals are often lacking [1] , leaving uncertainty regarding how policies are to be implemented. For example, while the concept of watermarking AI-generated content has gained traction among policymakers [2] [3] [4] [5] , it is unclear whether current methods are sufficient for achieving policymakers' desired outcomes, nor how future-proof such methods will be to improvements in AI capabilities [6] [7] . Addressing these and similar issues will require further targeted technical advances.
+Figure 1: An overview of the open problem areas covered in this report, organized according to our taxonomy.
+How We're Contributing To A Solution
+As such, in this paper we aim to provide an overview of technical AI governance (TAIG), defined as technical analysis and tools for supporting the effective governance of AI. By this definition, TAIG can contribute to AI governance in a number of ways, such as by identifying opportunities for governance intervention, informing key decisions, and enhancing options for implementation. For example, deployment evaluations that assess the downstream impacts of a system could help identify a need for policy interventions to address these impacts. Alternatively, being able to design models that are robust to malicious modifications could add to the menu of governance options available to prevent downstream misuse.
+In particular, we make the following contributions:
+We introduce the emerging field of TAIG and motivate the need for such work.
+We present a taxonomy of TAIG arranged along two dimensions: capacities, which refer to actions such as access and verification 
+        that are useful for governance, and targets, which refer to key 
+        elements in the AI value chain, such as data and models, to which capacities 
+        can be applied.
+Finally, we outline open problems within each category of our taxonomy, 
+        along with concrete example questions for future research.
+Figure 1 provides an overview of the open problem areas, organized 
+  according to the taxonomy. We hope that this paper serves as a resource 
+  and inspiration for technical researchers aiming to direct their 
+  expertise towards policy-relevant topics.
+Where to Start
+You can find our searchable repository of open problems here .​
+If you have a resource that we haven't mentioned or if you think a problem has been solved, please reach out here .
+How To Cite Us
+As with every research project, a lot of time and passion were put into this initiative. If you found our work useful, we'd appreciate it if you'd cite us. Some standard citations can be found below:
+@misc{reuelbucknall2024open, title={Open Problems in Technical AI Governance}, author={Reuel, Anka and Bucknall, Ben and Casper, Stephen and Fist, Tim and Soder, Lisa and Aarne, Onni and Hammond, Lewis and Ibrahim, Lujain and Chan, Alan and Wills, Peter and Anderljung, Markus and Garfinkel, Ben and Heim, Lennart and Trask, Andrew and Mukobi, Gabriel and Schaeffer, Rylan and Baker, Mauricio and Hooker, Sara and Solaiman, Irene and Luccioni, Alexandra Sasha and Rajkumar, Nitarshan and Mo{\"e}s, Nicolas and Ladish, Jeffrey and Guha, Neel and Newman, Jessica and Bengio, Yoshua and South, Tobin and Pentland, Alex and Koyejo, Sanmi and Kochenderfer, Mykel J and Trager, Robert}, journal={arXiv preprint arXiv:2407.14981}, url={https://taig.stanford.edu}, year={2024} }
+Contact

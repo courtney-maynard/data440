@@ -1,0 +1,77 @@
+The Synopsys Software Integrity Group is now Black Duck®. Learn More
+close language selection
+Forrester Wave Leader for SAST Read more
+Forrester Wave Leader for SCA Read more
+Leadership | Meet the team guiding Black Duck's vision and strategy.
+Newsroom | Latest news, press releases, and media coverage about Black Duck.
+Blog | Insights, updates, and expert opinions on application security.
+Partners | Information on Black Duck's partnerships and collaboration opportunities.
+Careers | Explore job opportunities and career paths at Black Duck.
+Contact Sales | Get in touch with our sales team for product inquiries and consultations.
+close sub navigation
+Polaris Platform | Unified platform for managing software security and compliance.
+fAST Static | Unified platform for managing software security and compliance.
+fAST SCA | Unified platform for managing software security and compliance.
+fAST Dynamic | Unified platform for managing software security and compliance.
+Coverity Static | Static analysis tool for detecting software defects and vulnerabilities.
+Black Duck SCA | Software composition analysis to manage open source security and license compliance.
+Continuous Dynamic | Continuous dynamic application security testing.
+Seeker Interactive | Interactive application security testing tool for detecting vulnerabilities.
+Software Risk Manager ASPM | Application security posture management tool for risk management.
+Defensics Protocol Fuzzing | Protocol fuzzing tool to identify and fix security flaws.
+Code Sight IDE Plug-in | Integrated development environment plug-in for real-time security feedback.
+SCM Integrations | Source code management integrations for seamless security checks.
+Build & CI Tool Integrations | Integrations with build and continuous integration tools.
+Developer Workflow Integrations | Tools to integrate security into the developer workflow.
+3rd-Party AST Tool Integrations | Integrations with third-party application security testing tools.
+Cloud Deployment Integrations | Integrations for securing cloud deployments.
+Open Source & Security Audits | Comprehensive technical due diligence services for M&A.
+close sub navigation
+AppSec Program Consolidation | Simplify your application security program.
+Application Security Testing | Solutions to address security risks at all stages of the application life cycle.
+DevSecOps | Solutions to help shift security left without slowing down your development teams.
+Software Supply Chain Security | Solutions to identify and manage software supply chain risks end-to-end.
+Manage Enterprise AppSec Risk | Scale your application security program without increasing complexity or adding friction.
+Cloud & Container Security | Optimize your applications for secure deployment and operation in the cloud.
+Open Source License Compliance | Effective solutions for ensuring open source license compliance.
+M&A Due Diligence | Identify software risks that could negatively impact the value of acquired IP.
+Quality and Security Standards Compliance | Ensure your software complies with the standards critical to customers and regulators.
+Static Analysis (SAST) | Analyzing code for security vulnerabilities without executing it.
+Software Composition Analysis (SCA) | Analyzing software components for security and license compliance.
+Dynamic Analysis (DAST) | Testing running applications for security vulnerabilities.
+Interactive Analysis (IAST) | Real-time security testing during application execution.
+Penetration Testing | Simulated cyberattacks to identify vulnerabilities.
+Mobile Application Security Testing (MAST) | Ensuring the security of mobile applications.
+Application Security Posture Management (ASPM) | Managing and improving application security posture.
+Fuzz Testing Solutions | Identifying vulnerabilities by inputting random data to applications.
+Automotive | Security solutions for automotive industry applications.
+Financial Services | Security solutions tailored for financial services.
+IoT & Embedded | Security for Internet of Things and embedded systems.
+Medical Devices | Security solutions for medical devices.
+Public Sector | Security solutions for government and public sector organizations.
+Dev and DevOps Teams | Security tools and practices for development and DevOps teams.
+Security Teams | Solutions and support for dedicated security teams.
+Legal Teams | Resources and compliance tools for legal teams.
+close sub navigation
+Penetration Testing | Simulated cyberattacks to identify vulnerabilities in your systems.
+Mobile Application Security Testing (MAST) | Ensuring the security of mobile apps against threats.
+Threat & Risk Assessments | Evaluation of potential security threats and vulnerabilities.
+Program Strategy & Planning | Developing effective strategies for your security program.
+Security Training | Courses and workshops to enhance your security skills and knowledge.
+Implementation & Deployment | Assistance with deploying and integrating security solutions.
+Open Source & Security Audits | Evaluations of open source components and overall security posture.
+close sub navigation
+Blog | Insights, updates, and expert opinions on application security.
+Cybersecurity Research Center | In-depth studies and findings on cybersecurity topics.
+Support | Assistance and troubleshooting for Black Duck products and services.
+Documentation | Detailed guides and manuals for using Black Duck products.
+Black Duck Academy | Educational courses and training on application security.
+Search Knowledge Base | Find answers and solutions in our extensive knowledge repository.
+Community Q&A |  Engage with other users and experts to get your questions answered.
+eBooks | Downloadable resources on various application security topics.
+Case Studies | Real-world examples of how customers use Black Duck solutions.
+Research & Reports | Comprehensive reports and analysis on industry trends.
+AppSec Glossary | Definitions and explanations of common application security terms.
+Resource Library | A collection of all available resources and materials.
+close sub navigation
+Follow

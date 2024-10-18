@@ -1,0 +1,161 @@
+Level Up Your Data Engineering Skills & Make Data Actionable in 2024
+Experience two days with data engineering’s top leaders, companies, tools and experts.
+At our second annual Data Engineering Summit, we are bringing together leading experts in data engineering and data practitioners to explore different strategies for making data actionable. Whether you are a data engineer or someone who does data engineering on the side, you’ll find new tools and techniques you can apply to your work immediately.
+DATA ENGINEERING
+Master the latest topics in data engineering and data infrastructure, and learn the top frameworks and tools from experts speakers
+MACHINE LEARNING
+Grasp how data pipelines can automate data processing to help efficiently and effectively analyze, and transform large amounts of data
+CLOUD DATA SERVICES
+Learn the development, deployment, and management of data infrastructure and services on the  cloud
+BIG DATA SERVICES
+Master the activities and processes related to organizing, storing, and accessing data including unstructured data, data warehouses and lakes
+DATA PIPELINES & INTEGRATION
+Understand how to integrate data from different sources and give your company an accurate and comprehensive data view with data engineering
+MONITORING & MANAGMENT
+Continuous monitoring and management of data pipelines and system performance are essential for reliability. Understand the tools and frameworks at this data engineering conference.
+DATA QUALITY & GOVERNANCE
+Understand how to implement data quality to ensure the accuracy, reliability, and effectiveness of the information being used
+DATA EXPLORATION
+Discover tools for data exploration and visualization that aid in gaining insights from data from a wide range of platforms at this data engineering conference
+Our Confirmed Speaker Lineup
+Dr. Einat Orr
+Co-Founder & CEO @ Treeverse
+Leveraging 20+ years of experience to revolutionize data lakes with lakeFS, improving data management.
+Jean-Georges Perrin
+AbeaData @ CIO
+Author of multiple books, including Implementing Data Mesh (O’Reilly) and Spark in Action.
+Ryan Day
+Advanced Data Scientist @ Conference of State Bank Supervisors
+Leading Cloud Architect, Economics Modeler, and Author on APIs for AI and Data Science.
+Jörg Schad
+Head of Engineering @ Nextdata
+Expert in decentralized data systems and AI infrastructure and former CTO at ArangoDB
+Jay Sen
+Expert in data engineering and platform optimization at PayPal, recognized thought leader, advisor, and investor in data technologies
+Brij Kishore Pandey
+Principal Engineer @ ADP
+AI Strategist and Principal Engineer with 15+ years in AI, data engineering, and cloud solutions; expertise in LLM integration and operational efficiency
+Ryan Boyd
+Co-founder @ MotherDuck
+Mark Freeman
+Data quality advocate with turning complex data challenges into actionable solutions; co-author of an upcoming O'Reilly book on Data Contracts
+Kaxil Naik
+Apache Airflow PMC Member & Committer | Director of Airflow Engineering @ Astronomer
+Data orchestration innovator and Apache Airflow advocate driving global collaboration.
+Danica Fine
+Yixin Tang
+ML & data systems expert with 10+ years building customer-facing products (experimentation leader).
+Dustin Dorsey
+Founder of the Nashville Data Engineering group and DataTune Nashville. Co-author of “Pro Database Migration to Azure” and “Unlocking dbt”.
+Ines Chami
+Developing innovative methods to represent intricate relationships within graph data using embedding models.
+Jun He
+Leading development of Netflix's Maestro for data/ML workflows; previously built distributed systems at Airbnb
+Stay Tuned!
+Vipul Bharat Marlecha
+Expert in data pipelines, data lakes, and cutting-edge practices.
+Andrew Lamb
+Staff Software Engineer @ InfluxData
+Chair of the Apache Arrow PMC. Actively contributes to open-source projects like Rust & DataFusion.
+Yixin Tang
+ML & data systems expert with 10+ years building customer-facing products (experimentation leader).
+Ryan Blue
+Co-founder and CEO @ Tabular
+Co-creator of Apache Iceberg, ASF member and a committer in the Apache Parquet, Avro, and Spark communities.
+Jonas Mueller
+Contributed to the fastest-growing open-source libraries for AutoML and Data-Centric AI.
+Ethan Hamilton
+Jean-Georges Perrin
+AbeaData | CIO
+Author of multiple books, including Implementing Data Mesh (O’Reilly) and Spark in Action, 2nd edition .
+Elliott Cordo
+Founder, Architect, Builder @ Datafutures
+Expert in cloud-native data platforms on AWS, ranging from data warehouses and data lakes, to real-time activation platforms.
+Ines Chami
+Developing innovative methods to represent intricate relationships within graph data using embedding models.
+Ryan Boyd
+Co-founder @ MotherDuck
+Eric Callahan
+Principal, Data Solutions @ Pickaxe Foundry
+Seasoned Data and Analytics Leader Unlocking the Full Value of Data in Organizations
+Christina Taylor
+Open-source enthusiast building scalable data pipelines for advanced analytics, ML, and products.
+Alex Gorelik
+Distinguished Engineer @ LinkedIn
+A HItachi Fellow and IBM Distinguished Engineer. Expertise in enabling business value through data.
+James Bowkett
+Technical Delivery Director @ OpenCredo
+Firm advocate of XP practices such as TDD and BDD. Data conference speaker.
+Dustin Dorsey
+Founder of the Nashville Data Engineering group and DataTune Nashville. Co-author of “Pro Database Migration to Azure” and “Unlocking dbt”.
+Anindita Mahapatra
+Staff Data Engineer @ Breezeway
+Organized of the Nashville Data Engineering Group meetup and Datatune Nashville. Aothor of the book Unlocking dbt.
+James Serra
+Data & AI architect @ Microsoft
+Author of the book “Deciphering Data Architectures: Choosing Between a Modern Data Warehouse, Data Fabric, Data Lakehouse, and Data Mesh”
+Gokul Prabagaren
+Author of the paper “Systematic Approach for validating Java-MongoDB Sche-ma”
+Jay Mishra
+Chief Operating Office @ Astera
+Data architect with 20+ years of experience in solution design, development, and leadership.
+Ori Nakar
+Threat Research leader: security researcher, data engineer & scientist.
+Bill Palombi
+VP of Product @ Prefect.io
+Data leader, brings nearly 10 years of experience building and using workflow orchestration systems.
+Johnathan Azaria
+Data Science Tech Lead @ Imperva
+Data Science Tech Lead, focusing on AI for security and digital protection.
+Jeff Hale
+Author of introductory books on Python, SQL, Pandas, and Docker.
+Jeff Curran
+Stephen Bailey, PhD
+Engineer Manager @ Whatnot
+Jai Balani
+Ethan Peck
+Director, Data Engineering @ Zoominfo
+Thought leader in DataOps and an expert in enterprise data architecture.
+Ciro Greco
+Data & analytics leader, builds & leads high-performing, global teams at startups.
+Alex Gorelik - Distinguished Engineer | LinkedIn
+Data Engineering in the Age of Data Regulations
+Anindita Mahapatra - Solutions Architect | Databricks
+Data Engineering in the era of Gen AI
+Ryan Boyd - Co-founder | MotherDuck
+Data Infrastructure through the Lens of Scale, Performance and Usability
+Elliott Cordo - Founder, Architect, Builder | Datafutures
+Data Pipeline Architecture – Stop Building Monoliths
+Barr Moses Co-Founder & CEO Monte Carlo
+Is Gen AI A Data Engineering or Software Engineering Problem?
+Jean-Georges Perrin - AbeaData | CIO
+Yixin Tang - Engineer Manager | DoorDash
+Experimentation Platform at DoorDash
+Ines Chami - Co-founder and Chief Scientist | NUMBERS STATION AI
+From Research to the Enterprise: Leveraging Foundation Models for Enhanced ETL, Analytics, and Deployment
+ODSC Solution Showcase Talks
+Sign up to receive exclusive offers on Data Engineering Passes and the latest updates on speakers, sessions, and more.
+Hosted By:
+Free Data Centric Courses
+Take these live, virtual courses stand-alone or as part of the Data Engineering Summit series. This foundation series is designed to equip you with the skills and knowledge that will prepare you for more advanced data engineering tools and techniques.
+Hosted on Ai+ Training and included FREE as part of your 2-Day or 3-Day Data Summit Pass. You’ll receive course enrollment up to 24 hours after purchase and reminders before live courses appear.
+Level Up Your Data Game: Learn, Connect, Discover Powerful Frameworks
+LEARN FROM LEADING EXPERTS
+Gain insights from leading practitioners.
+Sharpen your skills under the guidance of industry leaders – data engineering pioneers and renowned experts will share their cutting-edge strategies and real-world best practices. Get ready to future-proof your skillset and dominate the data landscape in 2024 and beyond.
+NETWORK WITH YOUR PEERS
+Network with a vibrant community of fellow data engineers and data professionals. Forge valuable connections that can lead to mentorship opportunities, collaboration, and career advancement. Share your experiences, learn from others, and build a network that will support your data journey.
+GET HANDS-ON WITH POWERFUL FRAMEWORKS
+Dive deep into interactive workshops and hands-on labs featuring the most powerful platforms and latest tools. Master Apache Airflow, Prefect, AWS Lambda, Snowflake, and more. Build real-world solutions and gain the practical experience to tackle any data challenge thrown your way.
+Discover What’s Next in Data Engineering
+At our second annual Data Engineering Summit, Ai+ and ODSC are partnering to bring together the leading experts in data engineering and thousands of practitioners to explore different strategies for making data actionable. Whether you are a data engineer or someone who does data engineering on the side, you’ll find new tools and techniques you can apply to your work immediately at this data engineering conference.
+August 9, 2024
+Notification of Acceptance
+Data Engineering Newsletter
+Stay current with the latest news and updates in data engeneering. In addition, we’ll inform you about our many upcoming Virtual and in person events in Boston, NYC, Sao Paulo, San Francisco, and London. And keep a lookout for special discount codes, only available to our newsletter subscribers!
+Privacy Settings
+We use cookies to enhance your experience while using our website. If you are using our Services via a browser you can restrict, block or remove cookies through your web browser settings. We also use content and scripts from third parties that may use tracking technologies. You can selectively provide your consent below to allow such third party embeds. For complete information about the cookies we use, data we collect and how we process them, please check our Privacy Policy
+Youtube
+Vimeo
+Google Maps
+Save

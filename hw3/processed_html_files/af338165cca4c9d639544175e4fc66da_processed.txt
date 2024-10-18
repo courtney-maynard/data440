@@ -1,0 +1,72 @@
+With new approach and focus, Travis Green sees playoffs in Senators' future
+Ottawa Senators head coach Travis Green yells instructions to his players during training camp in Ottawa on Thursday, Sept. 19, 2024. (Sean Kilpatrick/CP)
+| October 6, 2024, 11:10 AM
+Reset Password Email Sent
+We've sent an email with instructions to create a new password. Your existing password has not been changed.
+We'll send you a link to create a new password.
+{* #forgotPasswordForm *}
+Email
+{* traditionalSignIn_emailAddress *}
+{* forgotPassword_sendButton *}
+{* /forgotPasswordForm *}
+{* traditionalRegistration_displayName *}
+Email
+{* email *}
+By checking this box, I agree to the terms of service and privacy policy of Rogers Media.
+Loading...
+{* legalAcceptanceAcceptButton *}
+{* /legalAcceptancePostLoginForm_radio *}
+{* mergeAccounts *}
+Your account has been created!
+Don't miss out - sign up for our newsletters! (approx 1 - 2 per week)
+NHL Newsletter
+Your account has been created
+Next, select your favourite teams and leagues and we’ll show you their latest news and scores in the My Favourites section of the home page.
+{* #socialRegistrationForm_radio_2 *}
+            {* socialRegistration_firstName *}
+            {* socialRegistration_lastName *}
+            {* socialRegistration_emailAddress *}
+            {* socialRegistration_displayName *}
+By checking this box, I agree to the terms
+                of service and privacy policy of Rogers
+            Media.
+{* /socialRegistrationForm_radio_2 *}
+{* #tradAuthenticateMergeForm *}
+Sign In
+Sign Up
+{* traditionalRegistration_password *}
+{* traditionalRegistration_passwordConfirm *}
+Don't miss out - sign up for our newsletters! (approx 1 - 2 per week)
+NHL Newsletter
+Marketing
+Sponsored
+Contest
+Event
+Affiliate
+By checking this box, I agree to the terms of service and privacy policy of Rogers Media.
+{* createAccountButton *}
+{* /registrationForm_radio_2 *}
+Check your email for a link to reset your password.
+Reset Password Email Sent
+We've sent an email with instructions to create a new password. Your existing password has not been changed.
+Create a new password
+We didn't recognize that password reset code. Enter your email address to get a new one.
+{* #resetPasswordForm *}
+{* traditionalSignIn_emailAddress *}
+{* forgotPassword_sendButton *}
+{* /resetPasswordForm *}
+Resend Email Verification
+Sorry we could not verify that email address. Enter your email below and we'll send you another email.
+{* #resendVerificationForm *}
+{* traditionalSignIn_emailAddress *}
+{* submitButton *}
+{* /resendVerificationForm *}
+Sign In
+Sign Up
+{* #userInformationForm *}
+Email
+?You may have created an account with another Rogers Media
+                                    account that can be used to sign in here.
+{* traditionalSignIn_emailAddress *}
+Password
+{* traditionalSignIn_password *}

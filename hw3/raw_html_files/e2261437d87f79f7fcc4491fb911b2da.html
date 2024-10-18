@@ -1,0 +1,1577 @@
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ 
+  <head>
+    <!-- ##### start AJAX mods ##### -->
+    <script type="text/javascript" src="ajaxWDwx.js"></script>
+    <!-- AJAX updates by Ken True - https://saratoga-weather.org/wxtemplates/ -->
+    <script type="text/javascript" src="ajaxgizmo.js"></script>
+    <script type="text/javascript"> showUV = false; </script>
+    <script type="text/javascript" src="language-en.js"></script>
+	<!-- language for AJAX script included -->
+
+<!-- made by www.metatags.org -->
+<meta name="description" content="Chelmsford Weather Station - Welcome to this amateur weather station in the capital City of Essex  - Real time data, weathercam, WXSim 5 day local weather forecasts, historical weather statistics and much more." />
+<meta name="keywords" content="Chelmsford Weather, Chelmsford Weather Station,essex rainfall, rainfall in essex,chelmsford webcam, chelmer village weather station, chelmsford snow, chelmsford weather live, weather radar chelmsford, chelmsford snow, essex snow, webcam chelmsford " />
+<meta name="author" content="metatags generator"/>
+<meta name="google-site-verification" content="xw1tlERinjamJ7r96N6HPAFpzr8sANAHuZCfWdTgJgo" />
+<!-- Chelmsford, weather, forecast -->
+
+
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <link rel="stylesheet" type="text/css" href="weather-screen-blue-narrow.css" media="screen" title="screen" />
+    <link rel="stylesheet" type="text/css" href="weather-print-php.css" media="print" />
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+	<meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <title>Chelmsford Weather Station - Home</title>
+<!-- begin flyout-menu.php CSS definition style='blue' -->
+<style type="text/css">
+/* ================================================================
+This copyright notice must be untouched at all times.
+
+The original version of this stylesheet and the associated (x)html
+is available at http://www.cssplay.co.uk/menus/flyout_4level.html
+Copyright (c) 2005-2007 Stu Nicholls. All rights reserved.
+This stylesheet and the associated (x)html may be modified in any
+way to fit your requirements.
+Modified by Ken True and Mike Challis for Weather-Display/AJAX/PHP
+template set.
+=================================================================== */
+.flyoutmenu {
+font-size:90%;
+}
+
+/* remove all the bullets, borders and padding from the default list styling */
+.flyoutmenu ul {
+position:relative;
+z-index:500;
+padding:0;
+margin:0;
+padding-left: 4px; /* mchallis added to center links in firefox */
+list-style-type:none;
+width: 110px;
+}
+
+/* style the list items */
+.flyoutmenu li {
+color: #336699;
+background:white url(./ajax-images/flyout-shade-white.gif);
+/* for IE7 */
+float:left;
+margin:0; /* mchallis added to tighten gaps between links */
+}
+.flyoutmenu li.sub {background:white url(./ajax-images/flyout-sub.gif) no-repeat right center;}
+
+/* get rid of the table */
+.flyoutmenu table {position:absolute; border-collapse:collapse; top:0; left:0; z-index:100; font-size:1em;}
+
+/* style the links */
+.flyoutmenu a, .flyoutmenu a:visited {
+display:block;
+text-decoration:none;
+line-height: 1.8em; 
+width:95px; /* mchallis changed for adjusting firefox link width */
+color:#336699;
+padding: 0 2px 0 5px; 
+border:1px solid black;
+border-width:0 1px 1px 1px;
+}
+/* hack for IE5.5 */
+         /* mchallis lowered the two width values to (101, 100)to fix IE6 links wider than menu width */
+* html .flyoutmenu a, * html .flyoutmenu a:visited {width:95px; w\idth:94px;}
+/* style the link hover */
+* html .flyoutmenu a:hover {color:white; background:#3173B1; position:relative;}
+
+.flyoutmenu li:hover {position:relative;}
+
+/* For accessibility of the top level menu when tabbing */
+.flyoutmenu a:active, .flyoutmenu a:focus {color:white; background:#3173B1;}
+
+/* retain the hover colors for each sublevel IE7 and Firefox etc */
+.flyoutmenu li:hover > a {color:white; background:#3173B1;}
+
+/* hide the sub levels and give them a positon absolute so that they take up no room */
+.flyoutmenu li ul {
+visibility:hidden;
+position:absolute;
+top:-10px;
+/* set up the overlap (minus the overrun) */
+left:90px;
+/* set up the overrun area */
+padding:10px;
+/* this is for IE to make it interpret the overrrun padding */
+background:transparent url(./ajax-images/flyout-transparent.gif);
+}
+
+/* for browsers that understand this is all you need for the flyouts */
+.flyoutmenu li:hover > ul {visibility:visible;}
+
+
+/* for IE5.5 and IE6 you need to style each level hover */
+
+/* keep the third level+ hidden when you hover on first level link */
+.flyoutmenu ul a:hover ul ul{
+visibility:hidden;
+}
+/* keep the fourth level+ hidden when you hover on second level link */
+.flyoutmenu ul a:hover ul a:hover ul ul{
+visibility:hidden;
+}
+/* keep the fifth level hidden when you hover on third level link */
+.flyoutmenu ul a:hover ul a:hover ul a:hover ul ul{
+visibility:hidden;
+}
+
+/* make the second level visible when hover on first level link */
+.flyoutmenu ul a:hover ul {
+visibility:visible;
+}
+/* make the third level visible when you hover over second level link */
+.flyoutmenu ul a:hover ul a:hover ul{
+visibility:visible;
+}
+/* make the fourth level visible when you hover over third level link */
+.flyoutmenu ul a:hover ul a:hover ul a:hover ul {
+visibility:visible;
+}
+/* make the fifth level visible when you hover over fourth level link */
+.flyoutmenu ul a:hover ul a:hover ul a:hover ul a:hover ul {
+visibility:visible;
+}
+
+</style>
+<!-- end of flyout-menu.php CSS definition -->
+<!-- World-ML template from https://saratoga-weather.org/wxtemplates/ -->
+<!-- end of top -->
+</head>
+<body>
+<div id="page">   
+                <!-- page wrapper -->
+
+
+<!-- header -->
+
+<div id="header">
+ 
+<img src="images/chelmsfordnight2.jpg" alt=""/>
+
+
+
+
+
+<h1 class="headerTitle">
+
+
+
+
+<img src="images/england.jpg"  height="30px" alt=""/>
+
+
+
+<src="flatline-statu$newdatas.txt"alt=""/>
+
+
+
+<a href="index.php" title="Browse to homepage">Chelmsford Weather Station</a>
+ 
+<img src="" alt=""/>
+</h1>
+
+
+
+
+
+
+ 
+
+	  <div class="headerTemp">
+	    <span class="doNotPrint">
+
+           <span class="ajax" id="ajaxbigtemp">11&deg;C
+
+		  </span>
+		</span>
+
+
+
+
+
+
+
+
+
+
+ 	  </div>
+
+
+
+
+
+
+
+
+
+
+      <div class="subHeader">
+        Chelmsford, Essex, UK					   <br />
+		<!-- begin language select -->
+		
+<form method="get" name="lang_select" action="#" style="padding: 0px; margin: 0px">
+<span style="font-size: 10px">Language:&nbsp; </span><select id="lang" name="lang"  style="font-size: 9px" onchange="this.form.submit();"><option value="en" selected="selected">English</option>
+<option value="af">Afrikaans</option>
+<option value="bg">&#1073;&#1098;&#1083;&#1075;&#1072;&#1088;&#1089;&#1082;&#1080; &#1077;&#1079;&#1080;&#1082;</option>
+<option value="ct">Catal&agrave;</option>
+<option value="dk">Dansk</option>
+<option value="nl">Nederlands</option>
+<option value="fi">Suomi</option>
+<option value="fr">Fran&ccedil;ais</option>
+<option value="de">Deutsch</option>
+<option value="el">&Epsilon;&lambda;&lambda;&eta;&nu;&iota;&kappa;&#940;</option>
+<option value="he">&#1506;&#1460;&#1489;&#1456;&#1512;&#1460;&#1497;&#1514;</option>
+<option value="hu">Magyar</option>
+<option value="it">Italiano</option>
+<option value="no">Norsk</option>
+<option value="pl">Polski</option>
+<option value="pt">Portugu&ecirc;s</option>
+<option value="ro">limba rom&#00226;n&#00259;</option>
+<option value="es">Espa&ntilde;ol</option>
+<option value="se">Svenska</option>
+</select>
+<noscript><input type="submit" name="Set" value="Set" style="font-size: 9px" /></noscript>  <img src="./ajax-images/flag-en.gif" alt="English" title="English" style="border: none" />
+</form>		<!-- end language select -->
+		
+
+
+
+      </div>
+
+
+
+
+      <div class="subHeaderRight">
+	  <!-- Lang='en' -->
+<!-- ajax-gizmo.php V1.15 - 27-Dec-2022 - Multilingual -->
+<div class="ajaxgizmo">
+   <div class="doNotPrint">
+	  <!-- ##### start of AJAX gizmo ##### -->
+	    <noscript>[Enable JavaScript for live updates]&nbsp;</noscript>
+	    <span class="ajax" id="gizmoindicator">Updated</span>:&nbsp;
+		<span class="ajax" id="gizmodate">14/10/2024 19:30</span>&nbsp; 
+		<span class="ajax" id="gizmotime"></span>
+		
+	  <br/>&nbsp;<img src="./ajax-images/spacer.gif" height="14" width="1" alt=" " />
+		<span class="ajaxcontent0" style="display: none">
+		  <span class="ajax" id="gizmocurrentcond">Cloudy</span>
+		</span>
+		<span class="ajaxcontent1" style="display: none">Temperature: 
+			<span class="ajax" id="gizmotemp">11.0&deg;C</span>
+            
+	        <span class="ajax" id="gizmotemparrow"><img src="./ajax-images/falling.gif" alt="Colder 0.2&deg;C than last hour." title="Colder 0.2&deg;C than last hour." width="7" height="8" style="border: 0; margin: 1px 3px;" />			</span>&nbsp;
+			<span class="ajax" id="gizmotemprate">-0.2&deg;C</span>/hr		</span>
+		<span class="ajaxcontent2" style="display: none">Humidity: 
+		  <span class="ajax" id="gizmohumidity">85</span>%<img src="./ajax-images/falling.gif" alt="Decreased 2.0% since last hour." title="Decreased 2.0% since last hour." width="7" height="8" style="border: 0; margin: 1px 3px;" />		</span>
+		<span class="ajaxcontent3" style="display: none">Dew Point: 
+		  <span class="ajax" id="gizmodew">8.6&deg;C</span><img src="./ajax-images/falling.gif" alt="Decreased 0.6&deg;C since last hour." title="Decreased 0.6&deg;C since last hour." width="7" height="8" style="border: 0; margin: 1px 3px;" />		</span>
+		<span class="ajaxcontent4" style="display: none">Wind: 
+	    	<span class="ajax" id="gizmowindicon"></span> 
+			<span class="ajax" id="gizmowinddir">E</span>&nbsp; 
+			<span class="ajax" id="gizmowind">2.5 mph</span>
+		</span>
+		<span class="ajaxcontent5" style="display: none">Gust: 
+  			<span class="ajax" id="gizmogust">2.5 mph</span>
+		</span>
+		<span class="ajaxcontent6" style="display: none">Barometer: 
+    		<span class="ajax" id="gizmobaro">1017.1  hPa</span><img src="./ajax-images/rising.gif" alt="Rising 0.4  hPa/hr" title="Rising 0.4  hPa/hr" width="7" height="8" style="border: 0; margin: 1px 3px;" />&nbsp;
+             <span class="ajax" id="gizmobarotrendtext">Steady</span>			
+		</span> 
+		<span class="ajaxcontent7" style="display: none">Rain Today: 
+    		<span class="ajax" id="gizmorain">4.318 mm</span>
+		</span>
+		<span class="ajaxcontent8" style="display: none">UV Index: 
+           <span class="ajax" id="gizmouv">0.0</span>&nbsp;
+		   <span style="color: #ffffff">
+	         <span class="ajax" id="gizmouvword">None</span>
+		   </span>
+		</span>
+	  </div>
+	  <!-- ##### end of AJAX gizmo  ##### -->
+
+</div>
+<!-- end of ajax-gizmo.php -->
+
+
+
+
+	  </div><!-- end subHeaderRight -->
+
+     
+
+ 
+
+
+
+
+
+
+
+</div>
+<!-- end of header -->	
+
+
+
+<!-- menubar -->
+<div class="doNotPrint">
+      <div class="leftSideBar">
+
+
+
+
+
+
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+<p align="center" class="sideBarTitle">Navigation</p>
+
+
+
+
+
+      
+<div class="flyoutmenu">
+<!-- begin generated flyout menu -->
+<!-- flyout-menu.php (ML) Version 1.10 - 27-Dec-2022 -->
+<!-- by Ken True - webmaster[at]saratoga-weather.org and -->
+<!-- by Mike Challis - webmaster[at]642weather.com  -->
+<!-- Adapted from Stu Nicholl's CSS/XHTML at http://www.cssplay.co.uk/menus/flyout_4level.html -->
+<!-- script available at http://saratoga-weather.org/scripts-CSSmenu.php#flyout -->
+<!-- using 
+Array
+(
+    [NAME] => blue
+    [SHADE_IMAGE] => flyout-shade-white.gif
+    [BORDER_COLOR] => black
+    [LINK_COLOR] => #336699
+    [LINK_BACKGROUND] => white
+    [HOVER_COLOR] => white
+    [HOVER_BACKGROUND] => #3173B1
+)
+ -->
+<!-- using ./flyout-menu.xml for XML, doTrans=1 -->
+<ul>
+  <li><a href="index.php" title="Current Conditions">Home</a></li>
+  <!-- not used with WD <li><a href="wxmesonet.php" title="Local Weather Exchange Stations">Mesonet</a></li> -->
+  <li><a href="FreshWDLmaster.html" title="Live Data">Realtime Gauges</a></li>
+  <li class="sub"><a href="#" title="Extended Forecast">Forecasts<!--[if gte IE 7]><!--></a><!--<![endif]-->
+    <!--[if lte IE 6]><table><tr><td><![endif]-->
+    <ul>
+    <li><a href="wxforecast.php" title="WXSIM">WXSIM Forecast</a></li>
+    <li><a href="wxtest2.php" title=" Forecast Data">WU Forecast</a></li>
+    <li><a href="wxdatapoint.php" title="30 Day Text Forecast">30 Day Forecast</a></li>
+    <li><a href="wxgfs.php" title="14 Day Outlook">GEFS Ensembles</a></li>
+    <li><a href="wxnao.php" title="Winter Indicators">NAO and AO</a></li>
+    <li><a href="wxcompare.php" title="Compare">Forecast Accuracy</a></li>
+    </ul>
+    <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+  </li>
+  <li><a href="wxadvisory.php" title="Weather Warnings">Weather Alerts</a></li>
+  <li><a href="wxsnow2.php" title="Snow Risk">Snow (Risk)</a></li>
+  <li><a href="wxmetar.php" title="METAR Reports">Nearby METARS</a></li>
+  <li><a href="wxwebcam.php" title="Chelmer Village Weather Cam">Webcam</a></li>
+  <li class="sub"><a href="#" title="Radar">Rain<!--[if gte IE 7]><!--></a><!--<![endif]-->
+    <!--[if lte IE 6]><table><tr><td><![endif]-->
+    <ul>
+    <li><a href="wxradar.php" title="Radar">Rain Radar</a></li>
+    <li><a href="wxrainviewer.php" title="Viewer">Rain Viewer</a></li>
+    </ul>
+    <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+  </li>
+  <li><a href="wxsatellite.php" title="satellite">Cloud</a></li>
+  <li><a href="wxmeto.php" title="Uk Met Office">Surface Pressure</a></li>
+  <li class="sub"><a href="#" title="Current Temperature">Temperature<!--[if gte IE 7]><!--></a><!--<![endif]-->
+    <!--[if lte IE 6]><table><tr><td><![endif]-->
+    <ul>
+    <li><a href="wxtemp.php" title="Current UK Temperatures">UK Temperatures</a></li>
+    <li><a href="wxglobal.php" title="Current Global Temperatures">Global Temperatures</a></li>
+    </ul>
+    <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+  </li>
+  <li class="sub"><a href="#" title="Temps">Frost & Soil<!--[if gte IE 7]><!--></a><!--<![endif]-->
+    <!--[if lte IE 6]><table><tr><td><![endif]-->
+    <ul>
+    <li><a href="wxsoil.php" title="Grass & Soil Temps">Grass & Soil</a></li>
+    <li><a href="wxfreeze.php" title="Freeze Data">Air Frost</a></li>
+    </ul>
+    <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+  </li>
+  <li class="sub"><a href="#" title="Wind Data">Wind<!--[if gte IE 7]><!--></a><!--<![endif]-->
+    <!--[if lte IE 6]><table><tr><td><![endif]-->
+    <ul>
+    <li><a href="wxwindy.php" title="Wind Direction">UK Winds</a></li>
+    <li><a href="wxgfsjetstream.php" title="Global Jet Streams">Jet Streams</a></li>
+    </ul>
+    <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+  </li>
+  <li class="sub"><a href="#" title="Lightning Map">Lightning<!--[if gte IE 7]><!--></a><!--<![endif]-->
+    <!--[if lte IE 6]><table><tr><td><![endif]-->
+    <ul>
+    <li><a href="wxlightening.php" title="Lightning Map">Lightning</a></li>
+    <li><a href="http://www.lightningmaps.org/realtime?lang=en" title="Interactive Map">Live Lightning</a></li>
+    </ul>
+    <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+  </li>
+  <li><a href="wxuvforecast.php" title="UV Forecast">UV Index</a></li>
+  <li class="sub"><a href="#" title="Data">Graphs<!--[if gte IE 7]><!--></a><!--<![endif]-->
+    <!--[if lte IE 6]><table><tr><td><![endif]-->
+    <ul>
+    <li><a href="wxgraphstemp.php" title="Temp Graphs">Temperature</a></li>
+    <li><a href="wxgraphsrain.php" title="Rain Graphs">Rain</a></li>
+    <li><a href="wxgraphswind.php" title="Wind Graphs">Wind</a></li>
+    <li><a href="wxgraphssnow.php" title="Snow Graphs">Snow</a></li>
+    <li><a href="wxgrapsbaro.php">Barometer</a></li>
+    </ul>
+    <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+  </li>
+  <li class="sub"><a href="#" title="Weather Data">History<!--[if gte IE 7]><!--></a><!--<![endif]-->
+    <!--[if lte IE 6]><table><tr><td><![endif]-->
+    <ul>
+    <li><a href="wxraintemptrends.php" title="Trends">Temperature and Rain Trends</a></li>
+    <li><a href="wxtempdetail.php" title="Station Data">Station History</a></li>
+    <li><a href="wxnoaa.php" title="Chelmer Village">Detailed NOAA</a></li>
+    </ul>
+    <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+  </li>
+  <li class="sub"><a href="#" title="Statistics">Records<!--[if gte IE 7]><!--></a><!--<![endif]-->
+    <!--[if lte IE 6]><table><tr><td><![endif]-->
+    <ul>
+    <li><a href="wxhla.php" title="Chelmer Village">High/Low/Ave</a></li>
+    <li><a href="wxnoaarecords.php" title="Chelmer Village">Daily Records</a></li>
+    <li><a href="wxrecordsmonthly.php" title="Chelmer Village">Month Records</a></li>
+    <li><a href="wxrecordsyearly.php" title="Chelmer Village">Year Records</a></li>
+    <li><a href="wxrecordsalltime.php" title="Chelmer Village">All Time Records (2013-)</a></li>
+    </ul>
+    <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+  </li>
+  <li><a href="wxworldextremes.php" title="Global Extreme Conditions">World Extremes</a></li>
+  <li><a href="wxflood.php" title="Local River Levels">River Levels</a></li>
+  <li><a href="wxtransport.php" title="Train Times">Live Trains</a></li>
+  <li><a href="wxstansted.php" title="Flightradar24">Plane Tracker</a></li>
+  <li class="sub"><a href="#" title="Space">Sky Above<!--[if gte IE 7]><!--></a><!--<![endif]-->
+    <!--[if lte IE 6]><table><tr><td><![endif]-->
+    <ul>
+    <li><a href="wxaurora.php" title="Aurora Forecast">Aurora</a></li>
+    <li><a href="wxstarchart.php" title="Night Sky">Star Chart</a></li>
+    <li><a href="wxspace.php" title="Space Weather">Space Weather</a></li>
+    <li><a href="wxliveearth.php" title="Earth From Space">Live Earth</a></li>
+    </ul>
+    <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+  </li>
+  <li class="sub"><a href="#" title="Earthquakes">Earthquakes<!--[if gte IE 7]><!--></a><!--<![endif]-->
+    <!--[if lte IE 6]><table><tr><td><![endif]-->
+    <ul>
+    <li><a href="wxquake.php" title="World Earthquakes">World</a></li>
+    <li><a href="wxquakeUK.php" title="UK Earthquakes">UK</a></li>
+    </ul>
+    <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+  </li>
+  <li class="sub"><a href="#" title="Trends,Graphs, Sun/Moon">Almanac<!--[if gte IE 7]><!--></a><!--<![endif]-->
+    <!--[if lte IE 6]><table><tr><td><![endif]-->
+    <ul>
+    <li><a href="wxtrends.php">Weather Trends</a></li>
+    <li><a href="wxgraphswd.php">Station Graphs</a></li>
+    <li><a href="wxhistory.php">Station Monthly Reports</a></li>
+    <!-- not used with WD <li><a href="wxnoaaclimatereports.php">NOAA reports</a></li> -->
+    <li><a href="wxastronomy.php">Sun/Moon Almanac</a></li>
+    </ul>
+    <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+  </li>
+  <li><a href="wxlinks.php" title="Weather">Links</a></li>
+  <li><a href="wxabout.php" title="Chelmer Village - Chelmsford">About</a></li>
+  <li><a href="wxstatus.php" title="Status of weather software">Status</a></li>
+  <li><a href="wxsitemap.php">Website Map</a></li>
+</ul>
+<!-- end generated flyout menu -->
+</div>
+
+<!-- external links -->
+
+
+<p align="center" class="sideBarTitle">UK Yesterday</p>	  
+	  
+	  
+	
+
+
+
+
+			
+<table align="center" cellspacing="0" cellpadding="" border="0" width="100">
+<tr>
+
+<td align="center"><span style="font-size: 90%; font-weight:bold; color: red;">High Temp</span></td>
+</tr>
+<tr>
+<td align="center"><span style="font-size: 80%; color: black;">14.4C</span></td>
+</tr>
+<tr>
+<td align="center"><span style="font-size: 80%; color: black;">Isles of Scilly </span></td>
+</tr>
+<tr>
+<td align="center">&nbsp;</td>
+</tr>
+<tr>
+<td align="center"><span style="font-size: 90%; font-weight:bold; color: blue;">Low Temp</span></td>
+</tr>
+<tr>
+<td align="center"><span style="font-size: 80%; color: black;">-2.2C</span></td>
+</tr>
+<tr>
+<td align="center"><span style="font-size: 80%; color: black;">Tulloch Bridge </span></td>
+</tr>
+<tr>
+<td align="center">&nbsp;</td>
+</tr>
+<tr>
+<td align="center"><span style="font-size: 90%; font-weight:bold; color: green;">Precipitation</span></td>
+</tr>
+<tr>
+<td align="center"><span style="font-size: 80%; color: black;">6.0mm </span></td>
+</tr>
+<tr>
+<td align="center"><span style="font-size: 80%; color: black;">Culdrose </span></td>
+</tr>
+<tr>
+<td align="center">&nbsp;</td>
+</tr>
+<tr>
+<td align="center"><span style="font-size: 90%; font-weight:bold; color: orange;">Sunniest</span></td>
+</tr>
+<tr>
+<td align="center"><span style="font-size: 80%; color: black;">6.9 hours </span></td>
+</tr>
+<tr>
+<td align="center"><span style="font-size: 80%; color: black;">Lerwick </span></td>
+</tr>
+</table>
+
+<br/>
+<span style="font-size: 73%; color: black;">
+&copy; Crown Copyright 2024 <a href="https://www.metoffice.gov.uk" target="_blank" title="opens in a new window" >
+<img src="https://www.metoffice.gov.uk/lib/template/logos/MO_Landscape_B.jpg" alt="Met Office" title="www.metoffice.gov.uk" width="110" height="36" border="0" align="middle" /></a></span>
+
+
+
+
+<p align="center" class="sideBarTitle">Cloudbase</p>	 
+
+
+<img src="cloudbase.php?uom=M" alt="" width="114" height="250" />
+ 
+
+
+
+<p></p>
+
+
+
+
+
+<p align="center" class="sideBarTitle">Length of Day</p>
+
+
+
+    <div class="sideBarText" style="font-weight:lighter; font-size: 6.5pt; text-align: center; margin-bottom:4px; line-height:135%">
+                      <span class="thisPage" style="position: relative; font-weight:lighter">
+          10 hrs 47 min 55 sec<br/>of Daylight Today						<br/>Which is <br/>3 min 52 sec Shorter<br/>Than Yesterday            </span>
+            <div id="PieChart">
+            
+            <table width="105">
+              <tr align="center" style="font-size:7px">
+                <td valign="bottom">
+                  <span class="thisPage">(Noon)</span>
+                </td>
+              </tr>
+              
+              <tr>
+                <td align="left" valign="middle">
+                  <a href="wxastronomy_new.php" target="_blank" title="Astronomy"><img src="./cache/heavenpie.png?1728930667" height="100" width="100" alt="Day-Night Graphic"/></a>
+                </td>
+              </tr>
+
+              <tr align="center" style="font-size:7px">
+                <td valign="top">
+                  <span class="thisPage">(Midnight)</span>
+                </td>
+              </tr>
+            </table>
+            </div>
+
+<script language="Javascript" type="text/javascript">
+function showspLegend(nam)
+   {
+   document.getElementById("spLegend").style.display= "none";
+   document.getElementById(nam).style.display = "block";
+   }
+</script>
+
+
+
+
+
+
+            <span class="ajax" id="pieChartreLoader">
+            <script type="text/javascript"><!--
+            //<![CDATA[
+							var jq = jQuery.noConflict();
+              function reloadPieChart() {
+								if (ajaxUpdates < update.maxupdates) {
+                	jq("#PieChart").load("menubar.php" + " #PieChart");
+								}
+                setTimeout('reloadPieChart()',120000);
+              }
+              setTimeout('reloadPieChart()',120000);
+              //]]>
+              -->
+            </script>
+            
+
+</span>
+            <span class="thisPage" style=" position:relative; font-weight:lighter">
+            <a style="cursor:pointer; text-align:center; width:109px" onmouseover="showspLegend('block')" onmouseout="showspLegend('none')"></a><img id="spLegend" style="display:none" src="./images/heavensLegend.png" alt="Legend"/>
+          </span>
+
+
+
+
+
+
+              </div>  
+
+
+		  
+		  
+
+
+
+
+  <p align="center" class="sideBarTitle">Moon Phase</p>
+
+
+<!-- // Begin Current Moon Phase HTML (c) MoonConnection.com // --><center><table cellpadding="0" cellspacing="0" border="0" width=""><tr><td><a href="https://www.moonconnection.com/current_moon_phase.phtml" target="mc_moon_ph"><img src="https://www.moonmodule.com/cs/dm/vn.gif" width="114" height="170" border="0" alt="" /></a><div style="position:relative;width:114px;"><div style="position:absolute;top:-20px;left:6px;background:#000000;width:100px;text-align:center;"><a href="https://www.moonconnection.com/moon_cycle.phtml" target="mc_moon_ph"><font color="#7F7F7F" size="1" face="arial,helvetica,sans-serif"><span style="color:#7F7F7F;font-family:arial,helvetica,sans-serif;font-size:10px;">moon cycles</span></font></a></div></div></td></tr></table></center><!-- // end moon phase HTML // -->
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p align="center" class="sideBarTitle">Links</p>
+
+<a href="http://www.weather-display.com/index.php" title="Weather Display">
+ <img src="images/wd.png" width= "110" height="25"  alt=""></img></a>
+
+
+<a href="https://www.metcast.co.uk/essex-weather-forecast/" title="Metcast">
+
+<img src="images/metcast.jpg"  width="110" height="25" alt=""/></a>
+
+
+<a href="https://www.wxforum.net/" title="WXForum">
+<img src="images/wxforum" width="110" height="25" alt=""/></a>
+
+
+
+
+<a href="https://wow.metoffice.gov.uk/" title="Met Office WOW">
+<img src="images/wow"  width="110" height="25" alt=""/></a>
+
+
+
+
+<a href="https://www.wunderground.com/weather/gb/chelmsford/IESSEXCH11"><img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcT9coAjY-qJlTwQVYZTydAu0mgoZjbrtsV-jxFrea1wPiokdAZPnQ" height="25" width="105" border="0" alt="Weather Underground PWS IESSEXCH11" title="Weather Underground"/></a>
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+
+
+
+
+
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+	    
+ 
+<!-- end external links -->
+
+
+
+
+
+
+      </div><!-- end leftSidebar -->
+</div><!-- end doNotPrint -->	
+<!-- end of menubar -->
+
+<div id="main-copy">
+<div class="column-dark">
+	<img src="./ajax-images/spacer.gif" alt="spacer"
+	height="2" width="620" style="padding:0; margin:0; border: none" />
+  <!-- get-meteoalarm-warning-inc.php - V3.16 - 08-Mar-2023 -->
+<!-- using minAlertLevel=1 for 'Green' or more severe alerts to display -->
+<!-- meteoalarm-geocode-aliases.php included -->
+<!-- meteoalarm-codenames.json loaded -->
+<!-- CountryWarnings:
+array (
+) -->
+<!-- get-meteoalarm-warning-inc: saved details to ./cache/meteoalarm-details.html file -->
+<!-- get-meteoalarm-warning-inc: saved summary to ./cache/meteoalarm-summary.html file -->
+<!-- get-meteoalarm-warning-inc: begin ./cache/meteoalarm-summary.html -->
+<div align="center" class="advisoryBox" style="background-color: #29d660; width: 896px;margin: 0 auto !important;">
+<!-- Fetch Status:
+get-meteoalarm-warning-inc.php (980) UK_warnings: time spent: 0.0781 -  CURL OK for https://feeds.meteoalarm.org/api/v1/warnings/feeds-united-kingdom
+get-meteoalarm-warning-inc.php(394) no warnings in JSON file
+
+ -->
+No current alerts for: "Essex&nbsp;(UK251)".
+</div><!--  get-meteoalarm-warning-inc: end  ./cache/meteoalarm-summary.html -->
+
+	<div align="center">
+	<!--  ajax-dashboard.php - Version 1.34 - 07-Feb-2023 - Multilingual -->
+<!-- fcstby='' fcstscript='plaintext-parser.php' fcstorg='WXSIM' -->
+<!-- wxsim useCharSet='iso-8859-1', useUTF8='1' -->
+<!-- WXSIMtext converted from 'iso-8859-1' to 'UTF-8' -->
+<!-- Lang='en' -->
+<!-- start of ajax-dashboard.php -->
+<div class="ajaxDashboard" style="width: 900px;">
+      <table width="900" border="0" cellpadding="2" cellspacing="1" style="border:solid; border-color: #CCCCCC;">
+        <tr align="center">
+          <td class="data1" colspan="4" style="text-align: center">
+		    <span class="ajax" id="ajaxindicator">Updated:</span>&nbsp;@ 
+		    <span class="ajax" id="ajaxdate">
+		    14/10/2024 19:30 - next update at 01:00		    </span>&nbsp;<span class="ajax" id="ajaxtime"></span>
+                        <script type="text/javascript">
+<!--
+document.write('<b> - updated <span id="ajaxcounter"></span>&nbsp;sec ago</b>');
+//-->
+            </script>
+                      </td>
+        </tr>
+        <tr align="center">
+          <td class="datahead">Summary / Temperature</td>
+          <td class="datahead">Wind</td>
+	            <td class="datahead">Rain</td>
+	           <td class="datahead">WeatherCam</td>
+        </tr>
+        <tr align="left">
+          <td valign="top" rowspan="5">
+		    <table width="180" border="0" cellpadding="2" cellspacing="0">
+			  <tr>
+				<td align="center" valign="top" class="data1" style="text-align: center;border: none">
+				<span class="ajax" id="ajaxconditionicon2">
+				  <img src="./ajax-images/novc.jpg"  
+					alt="Cloudy" 
+					title="Cloudy" height="58" width="55" />
+				</span> 
+				</td>
+				<td class="data1" style="text-align: center;border: none"><span class="ajax" id="ajaxcurrentcond">
+				  Cloudy </span> 
+				</td>
+			  </tr>
+              <tr align="center">
+                <td align="center" valign="top" class="data1" style="text-align: center;border: none">
+				  <span class="ajax" id="ajaxthermometer">
+                                    <img src="thermometer.php?t=11" alt="Currently: 11.0, Max: 11.5, Min: 7.0"
+		           title="Currently: 11.0, Max: 11.5, Min: 7.0" height="170" width="54" /> </span> 
+				</td>
+                <td class="data1" style="text-align: center;border: none" valign="middle">
+				  <span class="ajax" id="ajaxtemp" style="font-size:20px">
+				    11&deg;C 
+				  </span>
+				  <br/>
+				  <span class="ajax" id="ajaxtemparrow"><img src="./ajax-images/falling.gif" alt="Colder 0.2&deg;C than last hour." title="Colder 0.2&deg;C than last hour." width="7" height="8" style="border: 0; margin: 1px 3px;" /></span>
+				  <br/><br/>
+                  <span class="ajax" id="ajaxheatcolorword">
+                    ---</span>
+                  <br/><br/>
+                                    Feels like: <span class="ajax" id="ajaxfeelslike">
+				    11&deg;C 
+					</span>
+				  <br/><br/>
+                                                      24-hr difference				  <br />
+                  2.6&deg;C<img src="./ajax-images/rising.gif" alt="Warmer 2.6&deg;C than yesterday at this time." title="Warmer 2.6&deg;C than yesterday at this time." width="7" height="8" style="border: 0; margin: 1px 3px;" />                                  </td>
+              </tr>
+                            <tr>
+                <td colspan="2" align="center">
+				  <table width="100%"  class="data1" style="font-size: 9px;border: none">
+                    <tr>
+                      <th>&nbsp;</th>
+                      <th style="text-align: center;">Today</th>
+                                            <th style="text-align: center;">Yesterday</th>
+                                          </tr>
+                    <tr>
+                      <td style="text-align: right;"><strong>High:</strong></td>
+                      <td style="text-align: center;">
+					    <span class="ajax" id="ajaxtempmax">
+                        11.5&deg;C                        </span><br />
+                        <span class="ajax" id="ajaxtempmaxtime">
+						14:09</span>
+					  </td>
+                                            <td style="text-align: center;">10.8&deg;C                        <br />
+                        14:10					  </td>
+                                          </tr>
+                    <tr>
+                      <td style="text-align: right;"><strong>Low:</strong></td>
+                      <td style="text-align: center;">
+					    <span class="ajax" id="ajaxtempmin">
+                        7&deg;C                        </span><br />
+                        <span class="ajax" id="ajaxtempmintime">
+                        01:49</span>
+					  </td>
+                                            <td style="text-align: center;">5.2&deg;C                        <br />
+                        07:24					  </td>
+                                          </tr>
+                  </table>
+				</td>
+              </tr>
+                          </table>
+		  </td>
+          <td valign="middle">
+		    <table width="100%" border="0" cellpadding="2" cellspacing="0">
+              <tr>
+                <td class="data1" valign="middle" align="center" style="border: none">
+				  <img src="./ajax-images/spacer.gif" width="1" 
+				    height="58" alt=" " align="left"/>
+				  <span class="ajax" id="ajaxwindiconwr">
+				  				    <img src="./ajax-images/wr-E.png" 
+					height="58" width="58" 
+					title="Wind from E" 
+					alt="Wind from E"  style="text-align:center" />
+				   </span> 
+				 </td>
+                <td valign="middle" class="data1" style="text-align: center; border: none;" >
+					<span class="ajax" id="ajaxwinddir">E</span><br/> 
+					<span class="ajax" id="ajaxwind">
+					 2.5					</span><br/>
+					<span class="meas">Gust:<br/></span> 
+					<span class="ajax" id="ajaxgust">
+					  2.5  mph					</span> 
+				</td>
+              </tr>
+               <tr>
+                <td colspan="2" class="data1" align="center" style="text-align:center">
+				  <span class="ajax" id="ajaxbeaufortnum">1</span> Bft - <i>
+				  <span class="ajax" id="ajaxbeaufort">Light Air</span></i>
+				</td>
+              </tr>
+                          <tr>
+                <td colspan="2" class="data1" align="center">
+				  Today: 
+				  <span class="ajax" id="ajaxwindmaxgust">17.3  mph</span> 
+				  <span class="ajax" id="ajaxwindmaxgusttime">14:21</span>
+				</td>
+              </tr>
+                                          <tr>
+                <td colspan="2" class="data1" align="center">
+				  Gust Month: 22.3  mph 
+                  				  October 1 
+                  				</td>
+              </tr>
+                          </table>
+		  </td>
+          <td valign="middle"><table width="100%" border="0" cellpadding="2" cellspacing="0">
+                  <tr>
+                <td class="data1">Rain Today:</td>
+                <td style="text-align: right;" class="data1">
+				  <span class="ajax" id="ajaxrain">
+                    4.318 mm                  </span>
+				</td>
+              </tr>
+              <tr>
+                <td class="data1">Rain Rate (/hr):</td>
+                <td style="text-align: right;" class="data1">
+				  <span class="ajax" id="ajaxrainratehr">
+                  0 mm                  </span>
+				</td>
+              </tr>
+                            <tr>
+                <td class="data1" nowrap="nowrap">Rain Yesterday: </td>
+                <td style="text-align: right;" class="data1">
+				  <span class="ajax" id="ajaxrainydy">
+                  0 mm                  </span>
+				</td>
+              </tr>
+              			                 <tr>
+                <td class="data1" nowrap="nowrap">Storm Rain: </td>
+                <td style="text-align: right;" class="data1">
+                  0 mm				</td>
+              </tr>
+			               <tr>
+                <td class="data1">This Month:</td>
+                <td style="text-align: right;" class="data1">
+				  <span class="ajax" id="ajaxrainmo">
+                  28.448 mm                  </span>
+				</td>
+              </tr>
+              <tr>
+                <td class="data1" nowrap="nowrap">Season Total:</td>
+                <td style="text-align: right;" class="data1">
+				  <span class="ajax" id="ajaxrainyr">
+                    451.8 mm                  </span>
+				</td>
+              </tr>
+			                              <tr>
+                <td class="data1" colspan="2">
+				  9 rain days in October.                </td>
+              </tr>
+              	             </table>
+	
+	</td>
+
+<td align="center" valign="middle">
+		    <table border="0" cellpadding="2" cellspacing="0">
+              <tr>
+
+                <td class="data1" align="center" style="font-size: 8pt; border:none;text-align: center">
+		
+ <script type="text/javascript">
+//<![CDATA[
+window.onload = function() {
+	img = document.getElementById('refreshImage');
+	img.src += "?";
+	setInterval("img.src=img.src.replace(/\\?[0-9]*/, '?'+Math.floor(Math.random()*9999999+1));", 5000);
+}
+//]]>
+</script>
+
+
+
+
+<a href="wxwebcam" title=""><img src="image5.jpg" width="290" height="160" alt=""id="refreshImage"/></a>
+
+
+
+
+ </td>
+              </tr>
+            </table>
+		  </td>
+        </tr>
+
+
+
+ 			
+				
+			
+				
+        <tr align="center" valign="middle">
+          <td class="datahead">Humidity &amp; Barometer</td>
+          <td class="datahead">Almanac</td>
+          <td class="datahead">WebCam</td>
+        </tr>
+        <tr align="center" valign="middle">
+          <td valign="middle"><table width="100%" border="0" cellpadding="2" cellspacing="0">
+              <tr>
+                <td class="data1">Humidity:</td>
+                <td style="text-align: center;" class="data1">
+				  <span class="ajax" id="ajaxhumidity">
+                    85                  </span>%
+                  <img src="./ajax-images/falling.gif" alt="Decreased 2.0% since last hour." title="Decreased 2.0% since last hour." width="7" height="8" style="border: 0; margin: 1px 3px;" />				</td>
+              </tr>
+              <tr>
+                <td class="data1">Dew Point: </td>
+                <td style="text-align: center;" class="data1">
+				  <span class="ajax" id="ajaxdew">
+                  8.6&deg;C                  </span>
+                  <img src="./ajax-images/falling.gif" alt="Decreased 0.6&deg;C since last hour." title="Decreased 0.6&deg;C since last hour." width="7" height="8" style="border: 0; margin: 1px 3px;" />                </td>
+              </tr>
+              <tr>
+                <td class="data1">Barometer:</td>
+                <td style="text-align: center;" class="data1">
+				  <span class="ajax" id="ajaxbaro">
+                    1017.1 hPa                  </span>
+				  <span class="ajax" id="ajaxbaroarrow">
+                  <img src="./ajax-images/rising.gif" alt="Rising 0.4  hPa/hr" title="Rising 0.4  hPa/hr" width="7" height="8" style="border: 0; margin: 1px 3px;" />                   </span>
+				 </td>
+              </tr>
+              <tr>
+                <td class="data1">Baro Trend: </td>
+                <td style="text-align: center;" class="data1">
+				  <span class="ajax" id="ajaxbarotrendtext">
+                  Steady                  </span>
+				</td>
+              </tr>
+            </table>
+		  </td>
+          <td align="center" valign="middle">
+		    <table width="166" border="0" cellpadding="2" cellspacing="0">
+              <tr>
+                <td class="data1">Sunrise:</td>
+                <td style="text-align: right;" class="data1">
+				  07:21			    </td>
+              </tr>
+              <tr>
+                <td class="data1">Sunset:</td>
+                <td style="text-align: right;" class="data1">
+				  18:05				</td>
+              </tr>
+              <!-- moonset='2:35 am' before moonrise='5:11 pm' today -->
+              <tr>
+                <td class="data1">Moonset:</td>
+                <td style="text-align: right;" class="data1">
+				  02:35				</td>
+              </tr>
+               <tr>
+                <td class="data1">Moonrise:</td>
+                <td style="text-align: right;" class="data1">
+				  17:11				</td>
+              </tr>
+                         </table>
+		  </td>
+
+
+ <td rowspan="3" valign="middle" align="center">
+		    <table border="0" cellpadding="4" cellspacing="0">
+              <tr>
+                <td class="data1" style="text-align: center; border: none;">
+
+			
+				
+	
+
+
+
+
+
+<a href=https://www.essexhighways.org/interactive-maps-and-live-travel-information/traffic-cameras-and-car-parks/cctv#chemlsford"" title=""><img border="0" src="https://cctv.essexhighways.org/07K04.jpg" width="290" height="160" alt=""></img>
+		 
+
+
+
+
+
+
+
+              </tr>
+            </table>
+		  </td>
+ 
+
+
+       </tr>			
+
+							
+				
+				 
+<!-- get-UV-forecast-inc.php V1.09 - 12-Feb-2021 -->
+<!-- UV forecast courtesy of and Copyright &copy; KNMI/ESA (http://www.temis.nl/). Used with permission. -->
+<!-- UV data load from from cache ./cache/uv-forecast.txt -->
+<!-- Date='14/10/2024', UV='1.9' DOW='Monday' YMD='20241014' -->
+<!-- Date='15/10/2024', UV='2.0' DOW='Tuesday' YMD='20241015' -->
+<!-- Date='16/10/2024', UV='2.0' DOW='Wednesday' YMD='20241016' -->
+<!-- Date='17/10/2024', UV='1.7' DOW='Thursday' YMD='20241017' -->
+<!-- Date='18/10/2024', UV='1.6' DOW='Friday' YMD='20241018' -->
+<!-- Date='19/10/2024', UV='1.5' DOW='Saturday' YMD='20241019' -->
+        <tr>
+          <td class="datahead" style="text-align:center">UV Index Forecast</td>
+          <td class="datahead" style="text-align:center">Solar Radiation</td>
+        </tr>
+        <tr>
+          <td align="center">
+		    <table width="100%" border="0" cellpadding="2" cellspacing="0">
+              <tr>
+                <td class="data1" nowrap="nowrap" style="text-align: center; ">
+				    14/10/2024				</td>
+              </tr>
+              <tr>
+                <td class="data1" nowrap="nowrap" style="text-align:center; font-size: 8pt;">
+				    <b><a href="https://www.temis.nl/uvradiation/nrt/uvindex.php?lon=0.5&amp;lat=51.7355" title="UV forecast courtesy of and Copyright &copy; KNMI/ESA (http://www.temis.nl/). Used with permission.">1.9</a></b>
+				  &nbsp;&nbsp;
+				    <span style="border: solid 1px; color: black; background-color: #A4CE6a;">&nbsp;Low&nbsp;</span>				</td>
+              </tr>
+			              </table>
+		  </td>
+          <td align="center">
+		    <table width="166" border="0" cellpadding="2" cellspacing="0">
+              <tr>
+                <td class="data1" style="text-align: center;" nowrap="nowrap" >
+				  <span class="ajax" id="ajaxsolar">
+				    0</span> W/m<sup>2</sup>
+                     
+					 (<span class="ajax" id="ajaxsolarpct">0                     </span>%)
+                     				</td>
+              </tr>
+                            <tr>
+                <td style="text-align: center; font-size: 8pt;" class="data1">
+				  High:                  444                  @&nbsp;
+                  14:01				</td>
+              </tr>
+              
+
+
+</table>
+		  </td>
+		  
+		  
+		  
+		
+				
+				
+			
+	</tr>  			
+				
+				
+	
+
+			
+
+
+
+
+<table width="100%" border="0" cellpadding="3" cellspacing="3"style="border:solid; border-color: #CCCCCC;">
+<tr>
+
+
+<!-- recordextra.txt dated 10/13/24 23:59:09 -->	
+<!-- Start of no record breaking weather details--><!-- v2.5 -->
+<div class="advisoryBox">
+No Chelmsford Weather Station records broken today as of 14.10.2024 19:30 
+</div>
+<!-- End of no record breaking weather details -->
+ 
+
+
+
+            </table>
+		  </td>
+        </tr>
+     </table>
+<table width="100%" border="0" cellpadding="3" cellspacing="3">
+   <tr>
+     <td style="text-align: center" class="datahead">&nbsp;WXSIM Weather Forecast&nbsp; -  Outlook:&nbsp;Tonight &amp; Tuesday</td>
+     </tr>
+     <tr>
+       <td align="center">
+	    <table width="100%" border="0" cellpadding="3" cellspacing="3">
+           <tr>
+		   <td class="data1" style="width: 80px;font-size: 8pt;border: none;text-align: center" valign="middle" align="center"><strong>Tonight<br /><br />
+   <img src="./forecast/images/nsct.jpg" alt="Partly Cloudy"  title="Partly Cloudy" /><br />
+   Partly Cloudy</strong><br /><span style="color: blue">Low: 10&deg;</span></td>
+           <td style="width: 504px;" class="data1"><b>WXSIM forecast:</b> Partly cloudy in the evening, becoming mostly cloudy to cloudy after midnight. Low 10&deg;. Wind east around 8 mph, gusting to 16 mph.<br />
+</td>
+           </tr>
+		   <tr><td colspan="2">&nbsp;</td></tr>
+           <tr>
+		   <td class="data1" style="width: 80px;font-size: 8pt; border:none; text-align: center" valign="middle" align="center"><strong>Tuesday<br /><br />
+   <img src="./forecast/images/cloudy.jpg" alt="Cloudy"  title="Cloudy" /><br />
+   Cloudy</strong><br /><span style="color: red">High: 16&deg;</span></td>
+           <td style="width: 504px;" class="data1"><b>WXSIM forecast:</b> Dense overcast in the morning, becoming cloudy in the afternoon. High 16&deg;. Wind east around 9 mph, gusting to 17 mph.			</td>
+           </tr>
+       </table>
+	 </td>
+   </tr>
+ </table>
+ 
+ 
+ <table width="100%" border="0" cellpadding="3" cellspacing="3">
+       <tr>
+         <td style="text-align: center" class="datahead">&nbsp;WXSIM Short Term Weather Forecast</td>
+       </tr>
+           </table>
+       </td>
+       </tr>
+       <tr>
+       <td class="data1">
+        <table style="text-align:center;" width="100%" border="0" cellpadding="3" cellspacing="3">
+              <tr>
+		         <td style="font-size: 10px;">
+                      Tuesday<br />night<br />
+   <img src="./forecast/images/novc30.jpg" alt="Overcast"  title="Overcast" /><br />
+   Overcast<br/>
+                      <span style="color: blue">Low: 10&deg;</span><img src="./forecast/images/up.gif" height="10" width="10" alt=" " />                 </td>
+			 <td style="font-size: 10px;">
+                      Wednesday<br /><br />
+   <img src="./forecast/images/ra40.jpg" alt="Chance rain"  title="Chance rain" /><br />
+   Chance rain<br/>
+                      <span style="color: red">High: 20&deg;</span>                 </td>
+		         <td style="font-size: 10px;">
+                      Wednesday<br />night<br />
+   <img src="./forecast/images/nra60.jpg" alt="Chance rain"  title="Chance rain" /><br />
+   Chance rain<br/>
+                      <span style="color: blue">Low: 14&deg;</span>                 </td>
+		         <td style="font-size: 10px;">
+                      Thursday<br /><br />
+   <img src="./forecast/images/sctfg30.jpg" alt="Fog a.m."  title="Fog a.m." /><br />
+   Fog a.m.<br/>
+                      <span style="color: red">High: 18&deg;</span>                 </td>
+		       
+                <td style="font-size: 10px;">
+                      Thursday<br />night<br />
+   <img src="./forecast/images/nsct30.jpg" alt="Light Fog"  title="Light Fog" /><br />
+   Light Fog<br/>
+                      <span style="color: blue">Low: 13&deg;</span>                 </td>
+		       
+                <td style="font-size: 10px;">
+                      Friday<br /><br />
+   <img src="./forecast/images/cloudy20.jpg" alt="Cloudy"  title="Cloudy" /><br />
+   Cloudy<br/>
+                      <span style="color: red">High: 17&deg;</span>                 </td>
+                     
+               <td style="font-size: 10px;">
+                      Friday<br />night<br />
+   <img src="./forecast/images/nra70.jpg" alt="Rain likely"  title="Rain likely" /><br />
+   Rain likely<br/>
+                      <span style="color: blue">Low: 12&deg;</span>                 </td>
+ 
+             
+
+
+                  </tr> 
+                  </table>
+
+ 
+
+ 
+           
+  </tr> 
+                  
+	</table>	 
+
+
+
+
+
+ 
+ 
+
+ 
+ 
+ 
+ 
+  <table width="100%" border="0" cellpadding="3" cellspacing="3"style="border:solid; border-color: #CCCCCC; margin-top: 10px">
+<td style="text-align: center" class="datahead">&nbsp; WXSIM 5 Day Meteogram</td>
+ <tr>
+ <td>
+
+<iframe width="875" height="340" src="https://www.chelmervillage-weather.co.uk/wsfct4/wsFctWxsimDSmall.php" frameborder="0"></iframe>
+ 
+	
+</td>
+</tr>
+</table>            
+ 
+ 
+ 
+ 
+ 
+  
+
+
+
+
+
+
+<table width="100%" border="0" cellpadding="3" cellspacing="3"style="border:solid; border-color: #CCCCCC;  margin-top: 10px">
+<td style="text-align: center" class="datahead">&nbsp; UK Cloud Satellite / UK Rain Radar / UK Temperatures </td>
+ <tr>
+ <td>
+
+
+<a href="wxsatellite.php" title="https://maps.meteoradar.co.uk/GratisRadar/909/918/actueel?zoom=8"><img src="https://neige.meteociel.fr/satellite/anim_ir.gif" style="width: 290px; height: 290px" alt=""></img></a> 
+
+<a href="wxradar" title=""><img border="0" src="https://www.meteociel.fr/cartes_obs/radar/lastsnowradar_uk.gif" width="290" height="290" alt=""></img>	
+
+
+
+
+<a href="wxtemp" title=""><img border="0" src="https://www.meteociel.fr/cartes_obs/temp_uk.png" width="290" height="290" alt=""></img>	
+
+
+
+
+
+
+</td>
+ </tr>
+</table> 
+
+ 
+
+
+ 
+ 
+ 
+  
+ <!-- Season Counter by Curly -->
+<div class="ajaxDashboard" style="width: 900px;">
+<table width="100%" cellpadding="3" cellspacing="1" style="margin: 10px auto 0px auto; border:solid; border-color: #CCCCCC;">
+  <tr>
+    <td class="datahead">Countdown to Winter</td>
+	
+	
+	
+  </tr>
+  <tr>
+    <td>
+      <table width="100%" style="margin: 0px auto 0px auto; border-collapse:collapse;">
+        <tr>
+          <td class="data2" style="text-align:center">&nbsp;Winter Solstice begins December 21st at 9:20am  <span style="font-size:80%">&nbsp; BST </span>&nbsp;<br /></td>
+        </tr>
+        <tr>
+          <td class="data2" id="cdcounter" style="text-align:center"><noscript><b style="font-size:105%">67</b><span style="color: #333; font-size:80%"> days</span>&nbsp;&nbsp; <b style="font-size:105%">14</b><span style="color: #333; font-size:80%"> hours</span>&nbsp;&nbsp; <b style="font-size:105%">48</b><span style="color: #333; font-size:80%"> minutes</span>&nbsp;&nbsp; <b style="font-size:105%">52</b><span style="color: #333; font-size:80%"> seconds</span>&nbsp;&nbsp;</noscript>&nbsp;</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+</div>
+
+
+
+<script type="text/javascript">
+// Season counter conversion
+//<![CDATA[
+var current="Winter has arrived !"
+var montharray=new Array("Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec")
+function cntdwn(yr,mo,da,hr,mi,se){
+ theyear=yr;themonth=mo;theday=da;thehr=hr;themin=mi;thesec=se
+ var now=new Date()
+ var nowy=now.getYear()
+ if (nowy < 1000) nowy+=1900
+ var nowm=now.getMonth()
+ var nowd=now.getDate()
+ var nowh=now.getHours()
+ var nowmin=now.getMinutes()
+ var nowsec=now.getSeconds()
+ 
+ var nowstring=montharray[nowm]+" "+nowd+", "+nowy+" "+nowh+":"+nowmin+":"+nowsec
+ endtime=montharray[mo]+" "+da+", "+yr+" "+hr+":"+mi+":"+se
+ dd=Date.parse(endtime)-Date.parse(nowstring)
+ dday=Math.floor(dd/(60*60*1000*24)*1)
+ dhour=Math.floor((dd%(60*60*1000*24))/(60*60*1000)*1)
+ dmin=Math.floor(((dd%(60*60*1000*24))%(60*60*1000))/(60*1000)*1)
+ dsec=Math.floor((((dd%(60*60*1000*24))%(60*60*1000))%(60*1000))/1000*1)
+ if(dday==0&&dhour==0&&dmin==0&&dsec==1){
+  document.getElementById('cdcounter').innerHTML=current
+  return
+ }
+ else
+  if(dday != 0){dday = " <b style=\"font-size:105%\">" + dday +"</b><span style=\"font-size:90%\"> "+((dday==1)?"day":"days")+"</span>&nbsp;&nbsp; ";}
+  if(dday == 0){dday = '';}
+  if(dhour != 0){dhour = " <b style=\"font-size:105%\">" + dhour +"</b><span style=\"font-size:90%\"> "+((dhour==1)?"hour":"hours")+"</span>&nbsp;&nbsp; ";}
+  if(dhour == 0){dhour = '';}
+  if(dmin != 0){dmin = " <b style=\"font-size:105%\">" + dmin +"</b><span style=\"font-size:90%\"> "+((dmin==1)?"minute":"minutes")+"</span>&nbsp;&nbsp; ";}
+  if(dmin == 0){dmin = '';}
+  dsec = " <b style=\"font-size:105%\">" + dsec +"</b><span style=\"font-size:90%\"> "+((dsec==1)?"second":"seconds")+"</span>&nbsp;&nbsp; "
+  document.getElementById('cdcounter').innerHTML = dday+dhour+dmin+dsec
+  setTimeout("cntdwn(theyear,themonth,theday,thehr,themin,thesec)",1000)
+}
+//count down date
+cntdwn(2024,11,21,9,20,00)
+
+//]]>
+</script>
+<!-- end of season counter -->
+    
+ 
+
+ 
+
+       
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ </div>
+ <!-- end of ajax-dashboard.php -->
+
+	</div>
+</div><!-- end column-dark -->
+
+</div><!-- end main-copy -->
+
+    <!-- ##### Footer ##### -->
+
+    <div id="footer">
+      <div class="doNotPrint">
+        <a href="#header">Top</a> |
+
+       
+       
+ <a href="wxcontact.php" title="E-mail us">Contact Us</a>
+        <script type="text/javascript">
+
+
+        <!--
+        if (navigator.appName == 'Microsoft Internet Explorer' && 
+        parseInt(navigator.appVersion) >= 4)
+        {
+        document.write('| <a href=\"#\" onclick=\"javascript:window.external.AddFavorite        (location.href,document.title)\">');
+        document.write('Bookmark Page</a>');
+        }else
+        {var msg = '| <a href="" title="Bookmark Page" onClick="alert(' + "'Hit CTRL-D to bookmark this page'"+ ');">Bookmark Page</a>';
+        if(navigator.appName == "Netscape") msg += " (CTRL-D)";
+document.write(msg);
+        }
+        // -->
+        </script>
+      </div><!-- end doNotPrint -->
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+
+      <div>
+	  
+	  
+	   &copy; 2024,Chelmsford<span class="doNotPrint"> |  
+          <a href="https://www.weather-display.com/" title="Powered by Weather-Display">Weather-Display		   (10.37S-(b152)) </a> |
+		  <a href="https://validator.w3.org/check?uri=referer">Valid 
+          XHTML 1.0</a> |
+          <a href="https://jigsaw.w3.org/css-validator/check/referer">Valid CSS</a> 
+          </span><br class="doNotPrint" />
+      <br/>Never base important decisions on this or any weather information obtained from the Internet.<br class="doNotPrint" />
+      </div>
+    
+	  
+
+	  
+		  <!-- Histats.com  (div with counter) --><div id="histats_counter"></div>
+<!-- Histats.com  START  (aync)-->
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,2490486,4,108,170,20,00011001']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('//s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?2490486&amp;101" alt="advanced web statistics" border="0"></img></a></noscript>
+<!-- Histats.com  END  -->  
+
+		  
+		  
+		  
+		  
+	
+     
+
+
+ 
+ 
+ 
+
+ 
+
+
+
+ 
+
+
+<a href="https://www.martynhicks.uk/weather/topsites/index.php?a=in&amp;u=andy135" target="_blank"><img src="https://www.martynhicks.uk/weather/topsites/button.php?u=andy135" alt="UK - WEATHER STATION TOPSITES - UK" border="0"/></a>
+
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	   
+	  
+	  
+	 
+	  
+	  
+
+	   
+  
+	  
+    </div><!-- end id="footer" -->
+	</div> <!-- end id="page" wrapper -->
+</body>
+  
+</html> 
+

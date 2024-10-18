@@ -1,0 +1,72 @@
+5,959 reads
+5,959 reads
+Too Long; Didn't Read
+MongoDB is an open-source document-based No.SQL database management system with a dynamic structure. MongoDB stores data in documents instead of strings which makes this DBMS much more flexible and adaptable. The combination of MongoDB + a separate visualization tool can make your work a lot easier with MongoDB. There are solutions on the market in the form of tables, pivots, charts, and much more. The database is highly available, scalable, and secure, so it became the best choice for a lot of developers.
+Companies Mentioned
+When we talk about working with data and its visualization, it is very important to pay attention to where and how data is stored. For the process to be fast and pleasant, it is necessary that the data source also have all the relevant functionality and is easy to use.
+MongoDB is an open-source document-based NoSQL database management system with a dynamic structure and data stored in JSON-like format (BSON). This DBMS is highly available, scalable, and secure, so it became the best choice for a lot of developers all over the world.
+In which cases is it worth using Mongo, and in which should you look for something else?
+Mongo will be the perfect choice for:
+blogs, product catalogs,
+evolving data requirements,
+the design that may change over time.
+But if you have a project with business logic implemented at the database level or where the data model is predefined or some highly transactional systems - better use some relational database such as PostgreSQL, Oracle, or Microsoft Azure SQL.
+As a newbie in MongoDB, I needed to do some research to understand exactly why developers and data analytics love and use this database.
+What makes MongoDB stand out from the rest of the databases?
+Mongo stores data in documents instead of strings which makes this DBMS much more flexible and adaptable. It is very convenient to use when you have to deal with data structured differently.
+Mongo has a lot of features such as replication, indexing, special queries, and sharding that allow it to improve its performance and speed.
+It’s super friendly - it's cross-platform, open-source, and supports all popular programming languages.
+If you have chosen this database to use in your data visualization project, then you will have a very wide list of tools that integrate well with MongoDB.
+It seems strange, given such an unusual approach to working with data, but in fact, the combination of MongoDB + a separate visualization tool can make your work a lot easier.
+You also need to choose the software that suits you based on the result you want to achieve: there are solutions on the market in the form of tables, pivots, charts, and much more. So next, I want to show you some possible solutions to give you an idea of ​​what you are looking for.
+I will divide them into three categories:
+solutions MongoDB offers itself,
+various BI tools,
+and native solutions that can be developed for a specific case.
+Each of them will be quite a good choice, but it depends on what requirements you set for your software. So let's take a closer look at each of these categories.
+MongoDB Visualization Tools
+If you are already using MongoDB Atlas, then this will be the easiest and fastest way for you, since integration is simply to connect one Mongo service to another. Plus MongoDB Charts support the document database model, so everything goes very smoothly.
+MongoDB Data Explorer and Compass are data explorer GUI tools for visual data interaction. They allow you to create and run aggregation pipelines to process your data and better understand the nature of your dataset. But they can't do more meaningful visualizations. Recently Mongo has offered another solution - MongoDB Charts.
+MongoDB Charts is a tool to present your data in qualitative visual form. It has a huge number of chart types in its arsenal: from the donut and bars charts to combo and geospatial charts, some grid charts such as heatmaps and data tables, and even word clouds.
+Also, MongoDB Charts provides built-in aggregation functionality so you can create pivot tables and pivot charts.
+Аnother big advantage of this tool is the ability to create dashboards with charts and tables, which allows you to monitor several indicators at once and analyze them all together.
+BI Solutions
+If you need broader functionality for data manipulation and analysis, then ВI tools such as Tableau or PowerBI can be useful to you.
+BI first deals with cleaning, consolidating data, and transforming it into a convenient format. The following task is to interpret a large amount of data, focusing only on the key factors that affect efficiency, to model the outcome of various options for action, and to help  with decision-making.
+How to choose the right BI software is a topic for a separate article, because each of them has its own characteristics. So I will not highlight any of them, but I will explain to you some general points that you should pay attention to.
+When working with such software, developers often face one problem: most of them are geared towards working with relational databases, therefore, to connect to Mongo, they need ETL or ODBC connectors that will transform data into the desired format, create joins, and so on.
+ETL (Extract-Transform-Load) methods can be expensive and time-consuming while ODBC options shoehorn MongoDB data into the relational form and come with issues inherent in MongoDB to SQL conversions.
+The transition from a document database to a relational one is a rather complicated and long process, which, as a result, completely neglects all the advantages of working with Mongo, such as flexibility and speed.
+Therefore, if you choose to use bi-tools in your project, you should have a good reason in favor of functionality, not speed.
+Native Solutions
+If the ability to set up super custom visualization is very important for you, or you are developing your own software and want to use convenient and flexible tools in it, then your best assistants are additional libraries.
+D3.js
+D3.js is an open-source JavaScript library for manipulating documents based on data. D3 (stands for Data-Driven Documents) and helps you bring data to life using HTML, SVG, and CSS. But it’s not just a simple library where a function with the required parameters builds a chart. D3 is a set of data visualization tools.
+With this library, you can bind arbitrary data to a Document Object Model (DOM), and then make data-driven transformations with it.
+The capabilities of this library are very large, you should at least take a look at their sample page : the number and variety of graphs and charts are amazing, everyone can find a perfect match for themselves.
+But it’s not just a simple library where a function with the required parameters builds a chart. D3 is a set of data visualization tools. It consists of several dozen small modules, each of which solves its own problem.
+Therefore, this tool is not so easy to understand and you must spend some time learning how to create good and accurate visualizations with it.
+Flexmonster
+Flexmonster Pivot Table & Charts is a JavaScript web component created for insightful reporting and data analysis. It’s one of the most powerful data analytics tools and offers visualizations in the form of pivots and charts. Flexmonster supports a lotа of popular data sources, including CSV, JSON, SQL databases, and in particular MongoDB.
+Compared to other data visualization libraries, Flexmonster stands out in several ways:
+it is very simple and quick to integrate with a lot of popular frameworks such as Angular, React, Vue, and more;
+you are provided with a user-friendly interface and a convenient drag and drop feature;
+it can smoothly process big amounts of complex data;
+in release 2.9 you can customize the work of the MongoDB connector (cache, logs, memory) to fit your needs and create the perfect balance between performing speed and memory-in-use amount;
+the component is super customizable, created to easily fit your business logic, and quickly become part of your project.
+Flexmonster is very easy to implement in your project and for the end-user, which is undoubtedly a huge plus. At the same time, the component is one of the fastest and most flexible on the market, which gives an excellent result in combination with MongoDB.
+If you choose a native solution for yourself, this adds more mobility to you - you can create dashboards using different libraries for data visualization, for example, Flexmonster for pivot and Highcharts for charts (like in this example).
+Highcharts and Stitch
+Highcharts is a super interactive JavaScript charting library with a very broad range of available charts and graphics. The tool is very customizable and pluggable so experienced developers can extend the chart's look or functionality and embed it to their projects. Its high performance and wide functionality make it one of the best choices of data visualization components.
+However, it is not easily integrated with MongoDB, and a lot of programmers mention this problem. But as Highcharts is very useful and convenient, there is a special solution for this case - Stitch .
+Stitch is a no-maintenance pipeline for consolidating data to storage platforms, purpose-built for fast data analysis. This connector “stitches” two very powerful tools such as MongoDB and Highcharts and greatly empowers your reporting and visualizing abilities.
+This will be a perfect option if you have already encountered Highcharts since working with a library you already know will significantly speed up development. Considering also the fact that this charting library is actually good, and Stitch provides detailed documentation and excellent support, then using an extra tool in the form of a connector can be a very justified action.
+Conclusion
+There are many different tools for visualizing data in MongoDB. They all differ in their functionality and ease of integration with the service. You should make a choice based on your needs, but in short:
+if you need a quick and easy solution and you are already a MongoDB Atlas user, then MongoDB Charts will be your ideal option;
+If you need powerful and diverse functionality for data analysis, not just visualization, and at the same time you are ready to sacrifice speed and development time, then BI tools are for you;
+If you are ready to delve a little deeper into development and are looking for a solution that you can customize as much as possible for yourself while saving both times and gaining speed, then it would be best for you to use various libraries and components.
+L O A D I N G. . . comments & more!
+About Author
+Subscribe
+Tech writer with a passion for data: data visualization, analytics, and science. Exploring UX at its best.

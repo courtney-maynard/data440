@@ -1,0 +1,13 @@
+Gartner: Cybersecurity Service Spending Will Continue To Surge In 2025
+The research firm says GenAI-powered attacks and AI-related data leaks are two growing concerns that are fueling security investments.
+Spending on cybersecurity-related services will continue on its growth tear in 2025 as both the cyber talent shortage and cyberattacks—including threats powered by generative AI—remain top concerns for organizations, according to Gartner.
+The research firm released its updated projections Wednesday for end-user spending on information security in 2024 as well as its forecast for the category in 2025, showing that total spending in the category is expected to climb 15.1 percent to $212 billion next year.
+[Related: MSPs Are Driving GenAI Adoption But Security, Data Hurdles Persist For Customers: Panel ]
+The new forecast shows that while security software is expected to see the fastest spending growth in 2025, security services will see significant growth once again, as the availability of cybersecurity talent remains hard to come by for many organizations.
+Gartner analysts are forecasting that spending on security services will rise 13.8 percent in 2025—identical to the expected growth rate for this year—to reach $86.07 billion globally next year.
+An executive at cybersecurity powerhouse Optiv told CRN that it’s not surprising to see that major growth on cybersecurity spending—and on security services in particular—is being forecast for 2025.
+“I believe this second half [of 2024] will be strong, and I think next year will be even stronger,” said Scott Goree, senior vice president for partners, alliances and ecosystems at Denver-based Optiv, No. 25 on CRN’s Solution Provider 500 for 2024.
+When it comes to cyberthreats that are weighing on customers, Goree pointed to the expansion of emerging threat vectors such as attacks powered by GenAI as a growing focus.
+Experts say that worries about the potential for GenAI to aid hackers are not unfounded — with technologies such as OpenAI’s ChatGPT providing a simple way for threat actors to craft highly convincing phishing emails, for instance.
+In a news release Wednesday, Gartner analysts pinpointed AI-enabled attacks as a major driver of increased spending going forward — citing Gartner research showing that by 2027, 17 percent of cyberattacks and data leaks will include involvement from GenAI technologies.
+Beyond service investments, spending on security software is expected to grow 14.2 percent next year to reach $100.69 billion, year-over-year, according to Gartner.

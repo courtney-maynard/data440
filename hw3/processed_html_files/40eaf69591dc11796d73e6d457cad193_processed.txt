@@ -1,0 +1,26 @@
+Notícias
+Vídeos
+Podcasts
+Produtos
+Compartilhe:
+Divulgação/OpenAI
+A OpenAI lançou a ferramenta Canva na última quinta-feira (3), uma nova experiência para interagir com o ChatGPT na edição de textos e códigos gerados pela IA. No lugar de usar a tradicional conversa com o chatbot , é possível criar uma janela separada para gerenciar o arquivo e pedir ajuda à IA com diferentes atalhos.
+Canvas na edição de textos
+O Canaltech está no WhatsApp!Entre no canal e acompanhe notícias e dicas de tecnologia
+Continua após a publicidade
+A novidade pode ser usada para editar grandes blocos de texto, como a criação de um post de blog . Além de criar o resultado, você pode selecionar apenas um trecho e pedir para a IA revisá-lo — ela pode identificar possíveis erros gramaticais e sugerir novas ideias para mudar a abordagem temática.
+A grande vantagem é que o próprio usuário tem liberdade criativa para alterar o texto da forma que preferir, mas pode contar com a ajuda do ChatGPT para ajustes pontuais.
+A ferramenta também disponibiliza cinco atalhos:
+Sugerir edições e feedback;
+Ajustar o comprimento do texto para deixá-lo mais longo ou mais curto;
+Mudar o tom da linguagem, adaptando-a para educação infantil ou para estudantes de universidades;
+Verificar clareza, consistência e gramática;
+Adicionar emojis relevantes.
+Canvas com programação
+A ferramenta também é útil para quem usa o ChatGPT para gerar ou analisar códigos. É possível pedir para a IA explicar decisões, corrigir bugs ou dar novas sugestões de como prosseguir no desenvolvimento.
+A janela traz ícones para revisar códigos, adicionar logs, comentar linhas, corrigir bugs e traduzir o código para outra linguagem de programação, incluindo Java, JavaScript, C++, PHP, Python e TypeScript.
+Continua após a publicidade
+Disponibilidade
+O Canvas começou a ser distribuído a partir de hoje em versão Beta para assinantes dos planos ChatGPT Plus e ChatGPT Team em todo o mundo. A intenção da OpenAI é liberar o recurso para todos os usuários ( que chegam a 250 milhões por semana, segundo dados da própria empresa ) após encerrar o período experimental.
+VÍDEO: DESAFIAMOS O CHATGPT EM 10 TURNOS: QUAL É A MINHA PROFISSÃO?
+Continua após a publicidade

@@ -1,0 +1,39 @@
+AI in Digital Marketing - Terms, trends, and topics in marketing
+Updated: Aug 25
+No ratings yet
+Over the last ten years, we have seen a sharp incline in technological advancements within the digital space. In the last five years, AI has been the hottest topic in tech. AI has been around for quite some time; however, a more recent transition has made it more accessible to everyone. Some examples include:
+Open AI’s ChatGPT : A conversational AI tool that can generate robust responses similar to humans
+Microsoft’s Copilot : A personal assistant that can listen, respond, and take action
+Upcoming Apple Intelligence : A personal assistant that can listen, respond, and take action
+You may be familiar with these tools, but there are many more. Some applications include self-driving vehicles, robots, health care, research, etc. These topics have gained traction but have also caused concerns (Faverio & Tyson, 2013). Let’s break down some of the common terms in AI in relation to marketing. Mariani et al. (2022) listed some commonly researched AI terms in the scholarly environment:
+Artificial intelligence (AI): programs, machines, and systems that demonstrate artificial intelligence
+Machine learning (M/L): a computational strategy that automatically determines methods and the framework to reach the best solution to a problem instead of being programmed by a human before completing a fix
+Big data: a large volume and wide range of data that grows rapidly and contains information to inform decision-makers
+Data mining: searching through and analyzing datasets to detect useful information
+Neural networks: software that simulates human intelligence to understand or learn from a data set
+(Dwyer et al., 2018, p. 94; Berry & Linoff, 2004; Erevelles et al., 2016; Law & Au, 1999; Shankar, 2018, p. vi)
+CNET , a popular technology website, provides more definitions (Khan, 2024). Feel free to explore them at your leisure.
+All of these terms work together to develop some of the tools we use today, for example. A self-driving vehicle will have software that learns from its environment by leveraging M/L and neural networks to quickly mine big data sets captured from the current terrain, mapping data, GPS data, and other data sets using video, audio, and sensors. In other words, the self-driving vehicle is using AI terms to learn from its environment and safely navigate the terrain. Here is a quick video from Waymo, a self-driving taxi company founded in San Francisco, California:
+(Waymo, 2022)
+How does this apply to marketing? How can I use AI in digital marketing? As consumers navigate the Internet, they leave digital footprints or clues that inform decision-makers of their interests. Leveraging AI to mine this information can assist in developing more targeted marketing campaigns. AI helps design teams develop digital assets more efficiently, saving time and helping teams focus on more important tasks. John (2024) listed some popular tools and how to leverage them to improve your team’s efficiency:
+Tool
+Category
+Description
+AI writing generator with knowledge base integration for authentic marketing materials
+Content optimization tool for improving content quality and SEO rankings
+AI grammar checker with brand style guide configuration and content generation assistance
+Social media management tool with AI-powered content recycling and conditional posting
+Graphic design tool with AI-generated design templates and drag-and-drop editing
+Automation tool to connect apps across your tech stack
+Many other tools exist. Do your research and select the tools that work best for your team.
+Special thanks to Jevon Mc Alister , CTO of SimplyGlobal , Co-Founder of La Difference Pediatrics , and former Apple employee (AI/ML) for your review.
+Berry, M. J., & Linoff, G. S. (2004). Data Mining Techniques: For Marketing, Sales, and Customer Relationship Management (2. Aufl.). Wiley.
+Dwyer, D. B., Falkai, P., & Koutsouleris, N. (2018). Machine learning approaches for clinical psychology and psychiatry. Annual Review of Clinical Psychology, 14(5), 91–118.
+Erevelles, S., Fukawa, N., & Swayne, L. (2016). Big data consumer analytics and the transformation of marketing. Journal of Business Research, 69(2), 897–904.
+John, J. (2024, April 5). The 11 best ai marketing tools in 2024. Zapier. https://zapier.com/blog/best-ai-marketing-tools/
+Khan, I. (2024, May 14). ChaGPT glossary: 44 ai terms that everyone should know. CNET. https://www.cnet.com/tech/services-and-software/chatgpt-glossary-44-ai-terms-that-everyone-should-know/
+Law, R., & Au, N. (1999). A neural network model to forecast Japanese demand for travel to Hong Kong. Tourism Management, 20(1), 89–97.
+Mariani, M. M., Perez‐Vega, R., & Wirtz, J. (2022). AI in marketing, consumer research and psychology: A systematic literature review and research agenda. Psychology & Marketing, 39(4), 755–776. https://doi.org/10.1002/mar.21619
+Shankar, V. (2018). How artificial intelligence (AI) is reshaping retailing. Journal of Retailing, 94(4), vi–xi.
+Youtube: Waymo (2022, August 1). Sense, solve, and go: the magic of the waymo driver. YouTube. https://youtu.be/hA_-MkU0Nfw
+10 views0 comments

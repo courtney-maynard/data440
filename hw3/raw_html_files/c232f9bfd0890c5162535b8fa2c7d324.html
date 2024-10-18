@@ -1,0 +1,1567 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="https://twoheartswellness.com/xmlrpc.php">
+<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<title>Gen X &amp; Chinese Medicine? &#8230; Yes, Please! &#8211; Two Hearts Wellness</title>
+<meta name='robots' content='max-image-preview:large' />
+<meta name="p:domain_verify" content="9bea9e3904baa8096de2b874512000d9" />
+
+<!-- Async WordPress.com Remote Login -->
+<script id="wpcom_remote_login_js">
+var wpcom_remote_login_extra_auth = '';
+function wpcom_remote_login_remove_dom_node_id( element_id ) {
+	var dom_node = document.getElementById( element_id );
+	if ( dom_node ) { dom_node.parentNode.removeChild( dom_node ); }
+}
+function wpcom_remote_login_remove_dom_node_classes( class_name ) {
+	var dom_nodes = document.querySelectorAll( '.' + class_name );
+	for ( var i = 0; i < dom_nodes.length; i++ ) {
+		dom_nodes[ i ].parentNode.removeChild( dom_nodes[ i ] );
+	}
+}
+function wpcom_remote_login_final_cleanup() {
+	wpcom_remote_login_remove_dom_node_classes( "wpcom_remote_login_msg" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_key" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_validate" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_js" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_request_access_iframe" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_request_access_styles" );
+}
+
+// Watch for messages back from the remote login
+window.addEventListener( "message", function( e ) {
+	if ( e.origin === "https://r-login.wordpress.com" ) {
+		var data = {};
+		try {
+			data = JSON.parse( e.data );
+		} catch( e ) {
+			wpcom_remote_login_final_cleanup();
+			return;
+		}
+
+		if ( data.msg === 'LOGIN' ) {
+			// Clean up the login check iframe
+			wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_key" );
+
+			var id_regex = new RegExp( /^[0-9]+$/ );
+			var token_regex = new RegExp( /^.*|.*|.*$/ );
+			if (
+				token_regex.test( data.token )
+				&& id_regex.test( data.wpcomid )
+			) {
+				// We have everything we need to ask for a login
+				var script = document.createElement( "script" );
+				script.setAttribute( "id", "wpcom_remote_login_validate" );
+				script.src = '/remote-login.php?wpcom_remote_login=validate'
+					+ '&wpcomid=' + data.wpcomid
+					+ '&token=' + encodeURIComponent( data.token )
+					+ '&host=' + window.location.protocol
+					+ '//' + window.location.hostname
+					+ '&postid=13473'
+					+ '&is_singular=1';
+				document.body.appendChild( script );
+			}
+
+			return;
+		}
+
+		// Safari ITP, not logged in, so redirect
+		if ( data.msg === 'LOGIN-REDIRECT' ) {
+			window.location = 'https://wordpress.com/log-in?redirect_to=' + window.location.href;
+			return;
+		}
+
+		// Safari ITP, storage access failed, remove the request
+		if ( data.msg === 'LOGIN-REMOVE' ) {
+			var css_zap = 'html { -webkit-transition: margin-top 1s; transition: margin-top 1s; } /* 9001 */ html { margin-top: 0 !important; } * html body { margin-top: 0 !important; } @media screen and ( max-width: 782px ) { html { margin-top: 0 !important; } * html body { margin-top: 0 !important; } }';
+			var style_zap = document.createElement( 'style' );
+			style_zap.type = 'text/css';
+			style_zap.appendChild( document.createTextNode( css_zap ) );
+			document.body.appendChild( style_zap );
+
+			var e = document.getElementById( 'wpcom_request_access_iframe' );
+			e.parentNode.removeChild( e );
+
+			document.cookie = 'wordpress_com_login_access=denied; path=/; max-age=31536000';
+
+			return;
+		}
+
+		// Safari ITP
+		if ( data.msg === 'REQUEST_ACCESS' ) {
+			console.log( 'request access: safari' );
+
+			// Check ITP iframe enable/disable knob
+			if ( wpcom_remote_login_extra_auth !== 'safari_itp_iframe' ) {
+				return;
+			}
+
+			// If we are in a "private window" there is no ITP.
+			var private_window = false;
+			try {
+				var opendb = window.openDatabase( null, null, null, null );
+			} catch( e ) {
+				private_window = true;
+			}
+
+			if ( private_window ) {
+				console.log( 'private window' );
+				return;
+			}
+
+			var iframe = document.createElement( 'iframe' );
+			iframe.id = 'wpcom_request_access_iframe';
+			iframe.setAttribute( 'scrolling', 'no' );
+			iframe.setAttribute( 'sandbox', 'allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-top-navigation-by-user-activation' );
+			iframe.src = 'https://r-login.wordpress.com/remote-login.php?wpcom_remote_login=request_access&origin=' + encodeURIComponent( data.origin ) + '&wpcomid=' + encodeURIComponent( data.wpcomid );
+
+			var css = 'html { -webkit-transition: margin-top 1s; transition: margin-top 1s; } /* 9001 */ html { margin-top: 46px !important; } * html body { margin-top: 46px !important; } @media screen and ( max-width: 660px ) { html { margin-top: 71px !important; } * html body { margin-top: 71px !important; } #wpcom_request_access_iframe { display: block; height: 71px !important; } } #wpcom_request_access_iframe { border: 0px; height: 46px; position: fixed; top: 0; left: 0; width: 100%; min-width: 100%; z-index: 99999; background: #23282d; } ';
+
+			var style = document.createElement( 'style' );
+			style.type = 'text/css';
+			style.id = 'wpcom_request_access_styles';
+			style.appendChild( document.createTextNode( css ) );
+			document.body.appendChild( style );
+
+			document.body.appendChild( iframe );
+		}
+
+		if ( data.msg === 'DONE' ) {
+			wpcom_remote_login_final_cleanup();
+		}
+	}
+}, false );
+
+// Inject the remote login iframe after the page has had a chance to load
+// more critical resources
+window.addEventListener( "DOMContentLoaded", function( e ) {
+	var iframe = document.createElement( "iframe" );
+	iframe.style.display = "none";
+	iframe.setAttribute( "scrolling", "no" );
+	iframe.setAttribute( "id", "wpcom_remote_login_key" );
+	iframe.src = "https://r-login.wordpress.com/remote-login.php"
+		+ "?wpcom_remote_login=key"
+		+ "&origin=aHR0cHM6Ly90d29oZWFydHN3ZWxsbmVzcy5jb20%3D"
+		+ "&wpcomid=72892392"
+		+ "&time=1728924521";
+	document.body.appendChild( iframe );
+}, false );
+</script>
+<link rel='dns-prefetch' href='//s0.wp.com' />
+<link rel='dns-prefetch' href='//s2.wp.com' />
+<link rel='dns-prefetch' href='//s1.wp.com' />
+<link rel='dns-prefetch' href='//widgets.wp.com' />
+<link rel='dns-prefetch' href='//wordpress.com' />
+<link rel='dns-prefetch' href='//fonts-api.wp.com' />
+<link rel="alternate" type="application/rss+xml" title="Two Hearts Wellness &raquo; Feed" href="https://twoheartswellness.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Two Hearts Wellness &raquo; Comments Feed" href="https://twoheartswellness.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Two Hearts Wellness &raquo; Gen X &amp; Chinese Medicine? &#8230; Yes, Please! Comments Feed" href="https://twoheartswellness.com/2024/10/01/gen-x-chinese-medicine-yes-please/feed/" />
+	<script type="text/javascript">
+		/* <![CDATA[ */
+		function addLoadEvent(func) {
+			var oldonload = window.onload;
+			if (typeof window.onload != 'function') {
+				window.onload = func;
+			} else {
+				window.onload = function () {
+					oldonload();
+					func();
+				}
+			}
+		}
+		/* ]]> */
+	</script>
+	<script type="text/javascript">
+/* <![CDATA[ */
+window._wpemojiSettings = {"baseUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/72x72\/","ext":".png","svgUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/s0.wp.com\/wp-includes\/js\/wp-emoji-release.min.js?m=1719498190i&ver=6.7-beta2-59225"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83d\udc26\u200d\u2b1b","\ud83d\udc26\u200b\u2b1b")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+/* ]]> */
+</script>
+<link crossorigin='anonymous' rel='stylesheet' id='all-css-0-1' href='https://s2.wp.com/_static/??-eJxtzFsKgCAQQNENZaMg+BWtRXQI39KMtP0ogiD6PHC5cHThWmWsDGWInscWKkFE7talx0CjQml+ZCTYMVtGL3oj/mh2RBP8H3NI+H5vXflaFmWU0VJLo+MJKT40cA==&cssminify=yes' type='text/css' media='all' />
+<style id='wp-emoji-styles-inline-css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link crossorigin='anonymous' rel='stylesheet' id='all-css-2-1' href='https://s1.wp.com/_static/??-eJydzEsOAiEQRdENCSXETzswrgXoCqFFIFVFG3Zv68SZA4cvL+fCs6lQi2ARaLnHVBhi36ZHittDCKu56IPeg+8pz+BzDXeVkydHA1hGRh2Yd/Az9FEMC0pzb+5G7aIipfnfBDlJJfKX3x5Xc7bT0ZzsZJcXNz1P2Q==&cssminify=yes' type='text/css' media='all' />
+<style id='wp-block-library-inline-css'>
+.has-text-align-justify {
+	text-align:justify;
+}
+.has-text-align-justify{text-align:justify;}
+</style>
+<link crossorigin='anonymous' rel='stylesheet' id='all-css-4-1' href='https://s2.wp.com/_static/??-eJzTLy/QzcxLzilNSS3WzyrWz01NyUxMzUnNTc0rQeEU5CRWphbp5qSmJyZX6uVm5uklFxfr6OPTDpRD5sM02efaGpoZmFkYGRuZGmQBAHPvL0Y=&cssminify=yes' type='text/css' media='all' />
+<style id='jetpack-sharing-buttons-style-inline-css'>
+.jetpack-sharing-buttons__services-list{display:flex;flex-direction:row;flex-wrap:wrap;gap:0;list-style-type:none;margin:5px;padding:0}.jetpack-sharing-buttons__services-list.has-small-icon-size{font-size:12px}.jetpack-sharing-buttons__services-list.has-normal-icon-size{font-size:16px}.jetpack-sharing-buttons__services-list.has-large-icon-size{font-size:24px}.jetpack-sharing-buttons__services-list.has-huge-icon-size{font-size:36px}@media print{.jetpack-sharing-buttons__services-list{display:none!important}}.editor-styles-wrapper .wp-block-jetpack-sharing-buttons{gap:0;padding-inline-start:0}ul.jetpack-sharing-buttons__services-list.has-background{padding:1.25em 2.375em}
+</style>
+<link crossorigin='anonymous' rel='stylesheet' id='all-css-6-1' href='https://s2.wp.com/wp-content/plugins/coblocks/2.18.1-simple-rev.4/dist/coblocks-style.css?m=1681832297i&cssminify=yes' type='text/css' media='all' />
+<style id='classic-theme-styles-inline-css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<link crossorigin='anonymous' rel='stylesheet' id='all-css-8-1' href='https://s1.wp.com/_static/??/wp-content/mu-plugins/core-compat/wp-mediaelement.css,/wp-content/mu-plugins/wpcom-bbpress-premium-themes.css?m=1432920480j&cssminify=yes' type='text/css' media='all' />
+<style id='global-styles-inline-css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--font-family--albert-sans: 'Albert Sans', sans-serif;--wp--preset--font-family--alegreya: Alegreya, serif;--wp--preset--font-family--arvo: Arvo, serif;--wp--preset--font-family--bodoni-moda: 'Bodoni Moda', serif;--wp--preset--font-family--bricolage-grotesque: 'Bricolage Grotesque', sans-serif;--wp--preset--font-family--cabin: Cabin, sans-serif;--wp--preset--font-family--chivo: Chivo, sans-serif;--wp--preset--font-family--commissioner: Commissioner, sans-serif;--wp--preset--font-family--cormorant: Cormorant, serif;--wp--preset--font-family--courier-prime: 'Courier Prime', monospace;--wp--preset--font-family--crimson-pro: 'Crimson Pro', serif;--wp--preset--font-family--dm-mono: 'DM Mono', monospace;--wp--preset--font-family--dm-sans: 'DM Sans', sans-serif;--wp--preset--font-family--dm-serif-display: 'DM Serif Display', serif;--wp--preset--font-family--domine: Domine, serif;--wp--preset--font-family--eb-garamond: 'EB Garamond', serif;--wp--preset--font-family--epilogue: Epilogue, sans-serif;--wp--preset--font-family--fahkwang: Fahkwang, sans-serif;--wp--preset--font-family--figtree: Figtree, sans-serif;--wp--preset--font-family--fira-sans: 'Fira Sans', sans-serif;--wp--preset--font-family--fjalla-one: 'Fjalla One', sans-serif;--wp--preset--font-family--fraunces: Fraunces, serif;--wp--preset--font-family--gabarito: Gabarito, system-ui;--wp--preset--font-family--ibm-plex-mono: 'IBM Plex Mono', monospace;--wp--preset--font-family--ibm-plex-sans: 'IBM Plex Sans', sans-serif;--wp--preset--font-family--ibarra-real-nova: 'Ibarra Real Nova', serif;--wp--preset--font-family--instrument-serif: 'Instrument Serif', serif;--wp--preset--font-family--inter: Inter, sans-serif;--wp--preset--font-family--josefin-sans: 'Josefin Sans', sans-serif;--wp--preset--font-family--jost: Jost, sans-serif;--wp--preset--font-family--libre-baskerville: 'Libre Baskerville', serif;--wp--preset--font-family--libre-franklin: 'Libre Franklin', sans-serif;--wp--preset--font-family--literata: Literata, serif;--wp--preset--font-family--lora: Lora, serif;--wp--preset--font-family--merriweather: Merriweather, serif;--wp--preset--font-family--montserrat: Montserrat, sans-serif;--wp--preset--font-family--newsreader: Newsreader, serif;--wp--preset--font-family--noto-sans-mono: 'Noto Sans Mono', sans-serif;--wp--preset--font-family--nunito: Nunito, sans-serif;--wp--preset--font-family--open-sans: 'Open Sans', sans-serif;--wp--preset--font-family--overpass: Overpass, sans-serif;--wp--preset--font-family--pt-serif: 'PT Serif', serif;--wp--preset--font-family--petrona: Petrona, serif;--wp--preset--font-family--piazzolla: Piazzolla, serif;--wp--preset--font-family--playfair-display: 'Playfair Display', serif;--wp--preset--font-family--plus-jakarta-sans: 'Plus Jakarta Sans', sans-serif;--wp--preset--font-family--poppins: Poppins, sans-serif;--wp--preset--font-family--raleway: Raleway, sans-serif;--wp--preset--font-family--roboto: Roboto, sans-serif;--wp--preset--font-family--roboto-slab: 'Roboto Slab', serif;--wp--preset--font-family--rubik: Rubik, sans-serif;--wp--preset--font-family--rufina: Rufina, serif;--wp--preset--font-family--sora: Sora, sans-serif;--wp--preset--font-family--source-sans-3: 'Source Sans 3', sans-serif;--wp--preset--font-family--source-serif-4: 'Source Serif 4', serif;--wp--preset--font-family--space-mono: 'Space Mono', monospace;--wp--preset--font-family--syne: Syne, sans-serif;--wp--preset--font-family--texturina: Texturina, serif;--wp--preset--font-family--urbanist: Urbanist, sans-serif;--wp--preset--font-family--work-sans: 'Work Sans', sans-serif;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}.has-albert-sans-font-family{font-family: var(--wp--preset--font-family--albert-sans) !important;}.has-alegreya-font-family{font-family: var(--wp--preset--font-family--alegreya) !important;}.has-arvo-font-family{font-family: var(--wp--preset--font-family--arvo) !important;}.has-bodoni-moda-font-family{font-family: var(--wp--preset--font-family--bodoni-moda) !important;}.has-bricolage-grotesque-font-family{font-family: var(--wp--preset--font-family--bricolage-grotesque) !important;}.has-cabin-font-family{font-family: var(--wp--preset--font-family--cabin) !important;}.has-chivo-font-family{font-family: var(--wp--preset--font-family--chivo) !important;}.has-commissioner-font-family{font-family: var(--wp--preset--font-family--commissioner) !important;}.has-cormorant-font-family{font-family: var(--wp--preset--font-family--cormorant) !important;}.has-courier-prime-font-family{font-family: var(--wp--preset--font-family--courier-prime) !important;}.has-crimson-pro-font-family{font-family: var(--wp--preset--font-family--crimson-pro) !important;}.has-dm-mono-font-family{font-family: var(--wp--preset--font-family--dm-mono) !important;}.has-dm-sans-font-family{font-family: var(--wp--preset--font-family--dm-sans) !important;}.has-dm-serif-display-font-family{font-family: var(--wp--preset--font-family--dm-serif-display) !important;}.has-domine-font-family{font-family: var(--wp--preset--font-family--domine) !important;}.has-eb-garamond-font-family{font-family: var(--wp--preset--font-family--eb-garamond) !important;}.has-epilogue-font-family{font-family: var(--wp--preset--font-family--epilogue) !important;}.has-fahkwang-font-family{font-family: var(--wp--preset--font-family--fahkwang) !important;}.has-figtree-font-family{font-family: var(--wp--preset--font-family--figtree) !important;}.has-fira-sans-font-family{font-family: var(--wp--preset--font-family--fira-sans) !important;}.has-fjalla-one-font-family{font-family: var(--wp--preset--font-family--fjalla-one) !important;}.has-fraunces-font-family{font-family: var(--wp--preset--font-family--fraunces) !important;}.has-gabarito-font-family{font-family: var(--wp--preset--font-family--gabarito) !important;}.has-ibm-plex-mono-font-family{font-family: var(--wp--preset--font-family--ibm-plex-mono) !important;}.has-ibm-plex-sans-font-family{font-family: var(--wp--preset--font-family--ibm-plex-sans) !important;}.has-ibarra-real-nova-font-family{font-family: var(--wp--preset--font-family--ibarra-real-nova) !important;}.has-instrument-serif-font-family{font-family: var(--wp--preset--font-family--instrument-serif) !important;}.has-inter-font-family{font-family: var(--wp--preset--font-family--inter) !important;}.has-josefin-sans-font-family{font-family: var(--wp--preset--font-family--josefin-sans) !important;}.has-jost-font-family{font-family: var(--wp--preset--font-family--jost) !important;}.has-libre-baskerville-font-family{font-family: var(--wp--preset--font-family--libre-baskerville) !important;}.has-libre-franklin-font-family{font-family: var(--wp--preset--font-family--libre-franklin) !important;}.has-literata-font-family{font-family: var(--wp--preset--font-family--literata) !important;}.has-lora-font-family{font-family: var(--wp--preset--font-family--lora) !important;}.has-merriweather-font-family{font-family: var(--wp--preset--font-family--merriweather) !important;}.has-montserrat-font-family{font-family: var(--wp--preset--font-family--montserrat) !important;}.has-newsreader-font-family{font-family: var(--wp--preset--font-family--newsreader) !important;}.has-noto-sans-mono-font-family{font-family: var(--wp--preset--font-family--noto-sans-mono) !important;}.has-nunito-font-family{font-family: var(--wp--preset--font-family--nunito) !important;}.has-open-sans-font-family{font-family: var(--wp--preset--font-family--open-sans) !important;}.has-overpass-font-family{font-family: var(--wp--preset--font-family--overpass) !important;}.has-pt-serif-font-family{font-family: var(--wp--preset--font-family--pt-serif) !important;}.has-petrona-font-family{font-family: var(--wp--preset--font-family--petrona) !important;}.has-piazzolla-font-family{font-family: var(--wp--preset--font-family--piazzolla) !important;}.has-playfair-display-font-family{font-family: var(--wp--preset--font-family--playfair-display) !important;}.has-plus-jakarta-sans-font-family{font-family: var(--wp--preset--font-family--plus-jakarta-sans) !important;}.has-poppins-font-family{font-family: var(--wp--preset--font-family--poppins) !important;}.has-raleway-font-family{font-family: var(--wp--preset--font-family--raleway) !important;}.has-roboto-font-family{font-family: var(--wp--preset--font-family--roboto) !important;}.has-roboto-slab-font-family{font-family: var(--wp--preset--font-family--roboto-slab) !important;}.has-rubik-font-family{font-family: var(--wp--preset--font-family--rubik) !important;}.has-rufina-font-family{font-family: var(--wp--preset--font-family--rufina) !important;}.has-sora-font-family{font-family: var(--wp--preset--font-family--sora) !important;}.has-source-sans-3-font-family{font-family: var(--wp--preset--font-family--source-sans-3) !important;}.has-source-serif-4-font-family{font-family: var(--wp--preset--font-family--source-serif-4) !important;}.has-space-mono-font-family{font-family: var(--wp--preset--font-family--space-mono) !important;}.has-syne-font-family{font-family: var(--wp--preset--font-family--syne) !important;}.has-texturina-font-family{font-family: var(--wp--preset--font-family--texturina) !important;}.has-urbanist-font-family{font-family: var(--wp--preset--font-family--urbanist) !important;}.has-work-sans-font-family{font-family: var(--wp--preset--font-family--work-sans) !important;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+</style>
+<link crossorigin='anonymous' rel='stylesheet' id='all-css-10-1' href='https://s2.wp.com/wp-content/mu-plugins/jetpack-mu-wpcom-plugin/sun/vendor/automattic/jetpack-mu-wpcom/src/build/verbum-comments/verbum-comments.css?m=1720038764i&cssminify=yes' type='text/css' media='all' />
+<link rel='stylesheet' id='verbum-gutenberg-css-css' href='https://widgets.wp.com/verbum-block-editor/block-editor.css?ver=1721244820' media='all' />
+<link crossorigin='anonymous' rel='stylesheet' id='all-css-12-1' href='https://s1.wp.com/_static/??/wp-content/mu-plugins/comment-likes/css/comment-likes.css,/i/noticons/noticons.css?m=1436783281j&cssminify=yes' type='text/css' media='all' />
+<link rel='stylesheet' id='resonar-fonts-css' href='https://fonts-api.wp.com/css?family=Libre+Baskerville%3A400%2C700%2C400italic%7CLato%3A400%2C700%2C900%2C400italic%2C700italic%2C900italic%7CPlayfair+Display%3A400%2C700%2C400italic%2C700italic%7CInconsolata%3A400&#038;subset=latin%2Clatin-ext' media='all' />
+<link crossorigin='anonymous' rel='stylesheet' id='all-css-14-1' href='https://s0.wp.com/_static/??-eJyNjt0KAiEQhV8oGyz6u4geJVyZzE1nxFGW3j43ujCK6O58cL4zA1NSlqkgFYhVpVCdJ4ERSzL29mKQSnD2ZMEhYfZNkO9xaUUW0G2WK0YUSHWAjMJkMki5B/ynOB98ltWULMcPpfs34xDYteigtTr8JTlkFdia4pneQF2C8XlWT/Got/uN1qv1YTc+AMracNs=&cssminify=yes' type='text/css' media='all' />
+<link crossorigin='anonymous' rel='stylesheet' id='print-css-15-1' href='https://s1.wp.com/wp-content/mu-plugins/global-print/global-print.css?m=1465851035i&cssminify=yes' type='text/css' media='print' />
+<style id='jetpack-global-styles-frontend-style-inline-css'>
+:root { --font-headings: unset; --font-base: unset; --font-headings-default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif; --font-base-default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;}
+</style>
+<link crossorigin='anonymous' rel='stylesheet' id='all-css-18-1' href='https://s0.wp.com/_static/??-eJyNjcsKQjEMBX/ImlsQry7ET5GahrbXNCmmRfx7H7gRN+7OwGEGbs2hSifpUIdrPFIRg4V6C3j5MNgQqBoHk4HlcKUYYry/Z5G0RrMV/C06FUEwxRLYsSa1L/iR9Uz1mc0bSKznwK/DsR787Kd5P/ntbnkAuNBIYA==&cssminify=yes' type='text/css' media='all' />
+<script type="text/javascript" id="jetpack_related-posts-js-extra">
+/* <![CDATA[ */
+var related_posts_js_options = {"post_heading":"h4"};
+/* ]]> */
+</script>
+<script type="text/javascript" id="media-video-jwt-bridge-js-extra">
+/* <![CDATA[ */
+var videopressAjax = {"ajaxUrl":"https:\/\/pmbruno03.wordpress.com\/wp-admin\/admin-ajax.php","bridgeUrl":"\/wp-content\/mu-plugins\/jetpack-plugin\/sun\/jetpack_vendor\/automattic\/jetpack-videopress\/build\/lib\/token-bridge.js","post_id":"13473"};
+/* ]]> */
+</script>
+<script type="text/javascript" id="wpcom-actionbar-placeholder-js-extra">
+/* <![CDATA[ */
+var actionbardata = {"siteID":"72892392","postID":"13473","siteURL":"https:\/\/twoheartswellness.com","xhrURL":"https:\/\/twoheartswellness.com\/wp-admin\/admin-ajax.php","nonce":"fe184e3781","isLoggedIn":"","statusMessage":"","subsEmailDefault":"instantly","proxyScriptUrl":"https:\/\/s0.wp.com\/wp-content\/js\/wpcom-proxy-request.js?ver=20211021","shortlink":"https:\/\/wp.me\/p4VQDK-3vj","i18n":{"followedText":"New posts from this site will now appear in your <a href=\"https:\/\/wordpress.com\/read\">Reader<\/a>","foldBar":"Collapse this bar","unfoldBar":"Expand this bar"}};
+/* ]]> */
+</script>
+<script type="text/javascript" id="jetpack-mu-wpcom-settings-js-before">
+/* <![CDATA[ */
+var JETPACK_MU_WPCOM_SETTINGS = {"assetsUrl":"https:\/\/s1.wp.com\/wp-content\/mu-plugins\/jetpack-mu-wpcom-plugin\/sun\/vendor\/automattic\/jetpack-mu-wpcom\/src\/build\/"};
+/* ]]> */
+</script>
+<script crossorigin='anonymous' type='text/javascript'  src='https://s1.wp.com/_static/??-eJx9j1tOAzEMRTdEahUo9AexlCozMSOniR1sp7S7J0gDKgj4su5D98jw1sIs7MgO2aDKRAVDN9S4DC8Qv8gm2w1c9WoPrfSF2CCjtzgfVw3WGQ7EM0ydSgLFEh1TaGJu39WmEv/cHXwtHprK+fKZjbHSE9pHmF876mU91wN/lkKlRQf0N9r/X6zW4YScRCF2lxrdaf4qnyihNEWz9dtCE7gckcOklBYcwOf6tH28vd/vHrZ3+/wOM9KIfg=='></script>
+<script type="text/javascript" id="rlt-proxy-js-after">
+/* <![CDATA[ */
+	rltInitialize( {"token":null,"iframeOrigins":["https:\/\/widgets.wp.com"]} );
+/* ]]> */
+</script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://pmbruno03.wordpress.com/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress.com" />
+<link rel="canonical" href="https://twoheartswellness.com/2024/10/01/gen-x-chinese-medicine-yes-please/" />
+<link rel='shortlink' href='https://wp.me/p4VQDK-3vj' />
+<link rel="alternate" type="application/json+oembed" href="https://public-api.wordpress.com/oembed/?format=json&amp;url=https%3A%2F%2Ftwoheartswellness.com%2F2024%2F10%2F01%2Fgen-x-chinese-medicine-yes-please%2F&amp;for=wpcom-auto-discovery" /><link rel="alternate" type="application/xml+oembed" href="https://public-api.wordpress.com/oembed/?format=xml&amp;url=https%3A%2F%2Ftwoheartswellness.com%2F2024%2F10%2F01%2Fgen-x-chinese-medicine-yes-please%2F&amp;for=wpcom-auto-discovery" />
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Gen X &amp; Chinese Medicine? &#8230; Yes, Please!" />
+<meta property="og:url" content="https://twoheartswellness.com/2024/10/01/gen-x-chinese-medicine-yes-please/" />
+<meta property="og:description" content="Generation X health and wellbeing is a topic, isn&#8217;t it?&nbsp; Gen Y and millennial too, but we get overlooked so much that I&#8217;m going to stick with my own folks here and focus on those o…" />
+<meta property="article:published_time" content="2024-10-01T13:17:45+00:00" />
+<meta property="article:modified_time" content="2024-10-01T13:17:45+00:00" />
+<meta property="og:site_name" content="Two Hearts Wellness" />
+<meta property="og:image" content="https://twoheartswellness.com/wp-content/uploads/2024/09/gen-x-bp-cover.png" />
+<meta property="og:image:width" content="851" />
+<meta property="og:image:height" content="315" />
+<meta property="og:image:alt" content="" />
+<meta property="og:locale" content="en_US" />
+<meta property="article:publisher" content="https://www.facebook.com/WordPresscom" />
+<meta name="twitter:text:title" content="Gen X &amp; Chinese Medicine? &#8230; Yes, Please!" />
+<meta name="twitter:image" content="https://twoheartswellness.com/wp-content/uploads/2024/09/gen-x-bp-cover.png?w=640" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<!-- End Jetpack Open Graph Tags -->
+<link rel="shortcut icon" type="image/x-icon" href="https://s1.wp.com/i/favicon.ico" sizes="16x16 24x24 32x32 48x48" />
+<link rel="icon" type="image/x-icon" href="https://s1.wp.com/i/favicon.ico" sizes="16x16 24x24 32x32 48x48" />
+<link rel="apple-touch-icon" href="https://s2.wp.com/i/webclip.png" />
+<link rel='openid.server' href='https://twoheartswellness.com/?openidserver=1' />
+<link rel='openid.delegate' href='https://twoheartswellness.com/' />
+<link rel="search" type="application/opensearchdescription+xml" href="https://twoheartswellness.com/osd.xml" title="Two Hearts Wellness" />
+<link rel="search" type="application/opensearchdescription+xml" href="https://s1.wp.com/opensearch.xml" title="WordPress.com" />
+<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>		<style type="text/css">
+			.recentcomments a {
+				display: inline !important;
+				padding: 0 !important;
+				margin: 0 !important;
+			}
+
+			table.recentcommentsavatartop img.avatar, table.recentcommentsavatarend img.avatar {
+				border: 0px;
+				margin: 0;
+			}
+
+			table.recentcommentsavatartop a, table.recentcommentsavatarend a {
+				border: 0px !important;
+				background-color: transparent !important;
+			}
+
+			td.recentcommentsavatarend, td.recentcommentsavatartop {
+				padding: 0px 0px 1px 0px;
+				margin: 0px;
+			}
+
+			td.recentcommentstextend {
+				border: none !important;
+				padding: 0px 0px 2px 10px;
+			}
+
+			.rtl td.recentcommentstextend {
+				padding: 0px 10px 2px 0px;
+			}
+
+			td.recentcommentstexttop {
+				border: none;
+				padding: 0px 0px 0px 10px;
+			}
+
+			.rtl td.recentcommentstexttop {
+				padding: 0px 10px 0px 0px;
+			}
+		</style>
+		<meta name="application-name" content="Two Hearts Wellness" /><meta name="msapplication-window" content="width=device-width;height=device-height" /><meta name="msapplication-tooltip" content="Holistic Wellness in Austin, TX" /><meta name="description" content="Generation X health and wellbeing is a topic, isn&#039;t it?&nbsp; Gen Y and millennial too, but we get overlooked so much that I&#039;m going to stick with my own folks here and focus on those of us born during that fabulous fifteen-year period from 1965 to 1980. The question of the day here relates to&hellip;" />
+</head>
+
+<body class="post-template-default single single-post postid-13473 single-format-standard customizer-styles-applied custom-menu widgets-hidden jetpack-reblog-enabled">
+<div id="page" class="hfeed site">
+	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+	
+	<header id="masthead" class="site-header" role="banner">
+		<div class="site-branding">
+			<a href="https://twoheartswellness.com/" class="site-logo-link" rel="home" itemprop="url"></a>
+							<p class="site-title"><a href="https://twoheartswellness.com/" rel="home">Two Hearts Wellness</a></p>
+							<p class="site-description">Holistic Wellness in Austin, TX</p>
+					</div><!-- .site-branding -->
+
+		<button id="sidebar-toggle" class="sidebar-toggle"></button>
+
+					<nav class="main-navigation" role="navigation">
+				<div class="menu-menu-container"><ul id="menu-menu" class="nav-menu"><li id="menu-item-2895" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-2895"><a href="https://twoheartswellness.com/">Home</a></li>
+<li id="menu-item-9091" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9091"><a href="https://twoheartswellness.com/conditions-treated/">Conditions Treated</a></li>
+<li id="menu-item-2940" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2940"><a href="https://twoheartswellness.com/services-benefits/">Services</a></li>
+<li id="menu-item-2937" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2937"><a href="https://twoheartswellness.com/about-2/">About</a></li>
+<li id="menu-item-2939" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2939"><a href="https://twoheartswellness.com/services-contact/">Contact</a></li>
+<li id="menu-item-2943" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-2943"><a href="https://twoheartswellness.com/blog/">Blog</a></li>
+</ul></div>			</nav><!-- .main-navigation -->
+			</header><!-- .site-header -->
+
+	<div id="content" class="site-content">
+
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+
+		
+<article id="post-13473" class="post-13473 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized tag-wellness tag-acupuncture tag-alternative-medicine tag-health tag-traditional-chinese-medicine">
+			<div class="entry-header-background" style="background-image:url(https://twoheartswellness.com/wp-content/uploads/2024/09/gen-x-bp-cover.png?w=851&#038;h=315&#038;crop=1)">
+			<div class="entry-header-wrapper">
+				<header id="entry-header" class="entry-header">
+					<div class="entry-header-inner">
+						<div class="entry-date">
+							<span class="posted-on"><span class="screen-reader-text">Posted on </span><a href="https://twoheartswellness.com/2024/10/01/gen-x-chinese-medicine-yes-please/" rel="bookmark"><time class="entry-date published updated" datetime="2024-10-01T13:17:45+00:00">October 1, 2024</time></a></span>						</div>
+
+						<h1 class="entry-title">Gen X &amp; Chinese Medicine? &#8230; Yes, Please!</h1>					</div>
+					<div class="scroll-indicator-wrapper">
+						<a href="#" id="scroll-indicator" class="scroll-indicator"><span class="screen-reader-text">Scroll down to see more content</span></a>
+					</div>
+				</header>
+			</div>
+		</div>
+	
+	<div class="entry-content-footer">
+		<div class="entry-content">
+			
+<p>Generation X health and wellbeing is a topic, isn&#8217;t it?&nbsp; Gen Y and millennial too, but we get overlooked so much that I&#8217;m going to stick with my own folks here and focus on those of us born during that fabulous fifteen-year period from 1965 to 1980. The question of the day here relates to what Chinese medicine can do for those of us in our still vibrant yet vintage life stages. Why should you, if you&#8217;re Team Gen X, consider making it a part of your long-term wellness strategy?</p>
+
+
+
+<p>A detour down memory lane is in order here (of course).</p>
+
+
+
+<p>Back in the day, the student recreation program at Indiana University Bloomington was <em>the </em>place to get a part-time job if you were a kinesiology major or in any way planning to have a fitness-related career.&nbsp; In order to get hired as weight room attendant, you had to enroll in a semester-long course during your first term as an employee.&nbsp; As part of the requirement, you would also need to sit for a personal trainer exam and become certified if you weren&#8217;t already.&nbsp; Being a weight room attendant was an extremely cool job, so when they said &#8220;jump,&#8221; the answer was &#8220;how high?&#8221;</p>
+
+
+
+<p>At the time, I was in my initial graduate program (this was for the first two MA degrees and the PhD for career number one as a Spanish professor) and all I did was study and go to the gym.&nbsp; Eventually, I managed to get myself hired as a weight room attendant.&nbsp; I completed the semester course as an auditor but they made an exception for me on the PT certification since I had master&#8217;s exams to study for, plus teaching, plus the grind of my own coursework.<sup data-fn="60e76912-c966-4025-b515-4d5ab1e6ad07" class="fn"><a href="#60e76912-c966-4025-b515-4d5ab1e6ad07" id="60e76912-c966-4025-b515-4d5ab1e6ad07-link">1</a></sup>&nbsp; Still, I took that class as seriously as I took my literature courses.&nbsp; I loved working in the IUB weight room!</p>
+
+
+
+<p>I remember the first day of class even now (and it&#8217;s been a while, just saying).&nbsp; One of the icebreakers was to think of a personal wellness mantra and share it with your peers.&nbsp; I was in my later twenties at the time and everyone else was nineteen or twenty so I counted as old back then (&#8230;yeah, whatever).&nbsp; Anyway, I thought about it and&#8211;when my turn to speak arrived&#8211;I smiled wickedly and said, &#8220;Good genes and a bad attitude will take you far.&#8221;&nbsp; This cemented my reputation as a bit of rebel (I was a lot of a rebel, actually, but that&#8217;s another story&#8230;) and it got us all talking about nature versus nurture for a brief and glorious few minutes.</p>
+
+
+
+<p>So what, you might be wondering, does this have to do with the subject of Gen X health and Chinese medicine?</p>
+
+
+
+<p>Short answer: everything.</p>
+
+
+
+<p>Longer answer&#8230;well, keep reading.</p>
+
+
+
+<p>If you were born after 1965 and before the 90&#8217;s then you need to start thinking about what&#8217;s going to carry you for the next thirty to fifty or so years.&nbsp; Is it going to be your genes, mostly?<sup data-fn="eed03d34-3ade-4ee1-8b74-02c31c85b969" class="fn"><a href="#eed03d34-3ade-4ee1-8b74-02c31c85b969" id="eed03d34-3ade-4ee1-8b74-02c31c85b969-link">2</a></sup>&nbsp; Or your attitude?&nbsp; If you are now in your mid-forties to rounding up on sixty, the time to consider this and to do something about it is <strong>now</strong>.&nbsp; What do you want the rest of your life to be like?&nbsp; And what are you going to do to make it so?&nbsp; And while I&#8217;m at it&#8230;have you read the <a href="https://www.theguardian.com/science/article/2024/aug/14/scientists-find-humans-age-dramatically-in-two-bursts-at-44-then-60-aging-not-slow-and-steady?CMP=twt_b-gdnnews">recent Guardian article about adults aging in bursts at the ages of 44 and 60</a>?&nbsp; If you are around these milestone ages, it&#8217;s time to get real.&nbsp; You are at a crossroads and the path you choose will be a factor in how good things are for you twenty, thirty, and more years from now.</p>
+
+
+
+<p>You might already be wondering what you can do about your changing body and shifting health considerations. You may have long since been questioning whether it is even possible for you to stave off the ravages of time.</p>
+
+
+
+<p>You know what I&#8217;m going to say, right?&nbsp; Yes.&nbsp; Chinese medicine can help you.&nbsp; Yes, it can.&nbsp; And you are probably wondering, &#8220;But with what?&#8221;&nbsp; The short answer is: all the things.&nbsp; </p>
+
+
+
+<p>The better answer is &#8230; I&#8217;ll focus on four specific areas for the purposes of brevity.  These are: </p>
+
+
+
+<ul class="wp-block-list">
+<li>Scars; </li>
+
+
+
+<li>Gut health and metabolism; </li>
+
+
+
+<li>Sex; and </li>
+
+
+
+<li>Cosmetic treatments.&nbsp; </li>
+</ul>
+
+
+
+<p>All things that matter to all people, but when you&#8217;re hitting your ripened and mature years, they matter that much more, and in different ways.&nbsp;</p>
+
+
+
+<p class="has-text-align-center"><strong>*****</strong></p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-large is-resized"><a href="https://twoheartswellness.com/wp-content/uploads/2024/09/gen-x-bp-topics.png"><img data-attachment-id="13538" data-permalink="https://twoheartswellness.com/2024/10/01/gen-x-chinese-medicine-yes-please/gen-x-bp-topics/" data-orig-file="https://twoheartswellness.com/wp-content/uploads/2024/09/gen-x-bp-topics.png" data-orig-size="1080,1080" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="Gen X bp topics" data-image-description="" data-image-caption="" data-medium-file="https://twoheartswellness.com/wp-content/uploads/2024/09/gen-x-bp-topics.png?w=300" data-large-file="https://twoheartswellness.com/wp-content/uploads/2024/09/gen-x-bp-topics.png?w=1024" tabindex="0" role="button" width="1024" height="1024" src="https://twoheartswellness.com/wp-content/uploads/2024/09/gen-x-bp-topics.png?w=1024" alt="" class="wp-image-13538" style="width:704px;height:auto" /></a></figure></div>
+
+
+<h2 class="wp-block-heading"><strong>Scars:</strong></h2>
+
+
+
+<p>As we enter our vintage decades, our scars become like ghosts that cry out for attention.&nbsp; When we&#8217;re young, we can power through injuries at the gym and we can also keep busy and pretend that certain emotional wounds don&#8217;t exist.&nbsp; It&#8217;s not so easy as we get older.&nbsp; Being stuck by deep-set emotional scars and repeating the same old patterns brings to life the chestnut about errors being repeated until they are learned.<sup data-fn="acb21b57-62e5-4ec8-8b41-e0610ac01fb3" class="fn"><a href="#acb21b57-62e5-4ec8-8b41-e0610ac01fb3" id="acb21b57-62e5-4ec8-8b41-e0610ac01fb3-link">3</a></sup>&nbsp; At some point, it&#8217;s time to tread a different path&#8230;but how?&nbsp; And on the tangible level&#8230;a body that is becoming more sedentary and/or affected by anything from new injuries to chronic illness to normal aging is a body that experiences physical scar pain in a way that&#8217;s much tougher to shake off and ignore.</p>
+
+
+
+<p>People who are aware of Chinese medicine tend to know that it is, indeed, mind-body medicine, and that yes, we do consider your spiritual and emotional factors when we assess your overall wellbeing.&nbsp; But did you know that your physical scars can also be addressed by your practitioner?&nbsp; Some of us specialize (I am a scar GODDESS) and others aren&#8217;t quite that enchanted by soft tissue problems.&nbsp; You want to check the practitioner&#8217;s website before going in for scar work&#8230;but if they do specialize, this is a boon for you.</p>
+
+
+
+<p>An acupuncturist isn&#8217;t a psychotherapist but we can <a href="https://twoheartswellness.com/2018/07/28/chronic-stress-ways-to-protect-your-mind-body-and-spirit-for-the-long-haul/">soothe a hyper-alert nervous system</a>, we can help you to <a href="https://twoheartswellness.com/2024/05/07/sleep-why-you-need-it-and-how-to-get-it/">sleep better</a>, and we can <a href="https://twoheartswellness.com/2018/06/19/stress-relief-that-gets-right-to-the-point-acupuncture-treatments-designed-just-for-you/">lower the volume on anxiety</a> (among other things).&nbsp; And truly, if you have the remains of old physical injuries&#8230;do yourself a favor and see if you can find someone near you who is great with scars.&nbsp; Better range of motion, less pain, and maybe even (if it&#8217;s important to you) a cosmetic benefit?&nbsp; Yes, please!</p>
+
+
+
+<figure class="wp-block-pullquote"><blockquote><p>Truly, I love scar work.  If you are interested in seeing what Chinese medicine can do for your physical scars, refer to &#8220;<a href="https://twoheartswellness.com/2024/05/19/every-scar-tells-a-story-physical-scars-and-what-to-consider-about-yours/">Every Scar Tells a Story (Physical Scars and What to Consider About Yours)</a>.&#8221;  For an essay on the psycho-spiritual side of things, take a look at &#8220;<a href="https://twoheartswellness.com/2024/06/09/emotional-scars-tell-a-story-but-you-can-change-the-narrative/">Emotional Scars Tell a Story (But You Can Change the Narrative)</a>.&#8221; <br></p></blockquote></figure>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-large"><a href="https://twoheartswellness.com/wp-content/uploads/2024/09/laurie-lipton-gen-x-bp.png"><img data-attachment-id="13528" data-permalink="https://twoheartswellness.com/2024/10/01/gen-x-chinese-medicine-yes-please/laurie-lipton-gen-x-bp/" data-orig-file="https://twoheartswellness.com/wp-content/uploads/2024/09/laurie-lipton-gen-x-bp.png" data-orig-size="1000,1500" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="Laurie Lipton Gen X BP" data-image-description="" data-image-caption="" data-medium-file="https://twoheartswellness.com/wp-content/uploads/2024/09/laurie-lipton-gen-x-bp.png?w=200" data-large-file="https://twoheartswellness.com/wp-content/uploads/2024/09/laurie-lipton-gen-x-bp.png?w=683" tabindex="0" role="button" width="683" height="1024" src="https://twoheartswellness.com/wp-content/uploads/2024/09/laurie-lipton-gen-x-bp.png?w=683" alt="" class="wp-image-13528" /></a></figure></div>
+
+
+<h2 class="wp-block-heading"><strong>Gut health:</strong></h2>
+
+
+
+<p>If you work with a practitioner who focuses on gut health (I sure do) then you are making an investment in yourself that you will appreciate for decades to come.&nbsp; Your microbiome, or the bacterial universe in your gut, regulates pretty much the rest of your body.&nbsp; Biomedical science has jumped on a bandwagon that Chinese medicine has known about for centuries and it doesn&#8217;t matter whose narrative, Eastern or Western, resonates with you.&nbsp; What matters is this: when your gut health is robust, so are you.&nbsp; When your digestion hums along the way it should, you will too.&nbsp;</p>
+
+
+<div class="wp-block-image">
+<figure class="alignright size-large is-resized"><a href="https://twoheartswellness.com/wp-content/uploads/2024/09/hows-your-digestion-copy.png"><img data-attachment-id="13531" data-permalink="https://twoheartswellness.com/2024/10/01/gen-x-chinese-medicine-yes-please/hows-your-digestion-copy/" data-orig-file="https://twoheartswellness.com/wp-content/uploads/2024/09/hows-your-digestion-copy.png" data-orig-size="1000,1500" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="How’s Your Digestion copy" data-image-description="" data-image-caption="" data-medium-file="https://twoheartswellness.com/wp-content/uploads/2024/09/hows-your-digestion-copy.png?w=200" data-large-file="https://twoheartswellness.com/wp-content/uploads/2024/09/hows-your-digestion-copy.png?w=683" tabindex="0" role="button" width="683" height="1024" src="https://twoheartswellness.com/wp-content/uploads/2024/09/hows-your-digestion-copy.png?w=683" alt="" class="wp-image-13531" style="width:263px;height:auto" /></a></figure></div>
+
+
+<p>And what <a href="https://twoheartswellness.com/2016/10/03/hows-your-digestion-two-hearts-wellness-gives-you-the-straight-poop-on-well-you-know/">your poop</a> looks like says volumes about your overall wellbeing.</p>
+
+
+
+<p class="has-text-align-center"><strong>*****</strong></p>
+
+
+
+<p>Rates of autoimmune disease and allergies are rising and so is incidence of allergy and other hypersensitivity. A healthy gut microbiome can change the dynamic when you struggle with these conditions.&nbsp; If you&#8217;re one of the many adults who are living with diabetes, you can do something about that by doing something about your gut health.<sup data-fn="d895d829-026c-4a1e-9e66-7cf473c1e2b7" class="fn"><a href="#d895d829-026c-4a1e-9e66-7cf473c1e2b7" id="d895d829-026c-4a1e-9e66-7cf473c1e2b7-link">4</a></sup>&nbsp;</p>
+
+
+
+<p class="has-text-align-center"><strong>*****</strong></p>
+
+
+
+<p>Gut health is whole-self health, so if you want to do something truly meaningful for yourself, try focusing on your gut bacteria.&nbsp; As a practitioner of Chinese medicine, I help patients via acupuncture, herbal formulas, and lifestyle guidance.&nbsp; As a certified health coach, I do a lot of the same but swap out herbal formulas for commonly-used cooking herbs and the focus is more on lifestyle support and nutrition education.&nbsp; Either way, the goal is a healthy gut and robust digestion.</p>
+
+
+
+<figure class="wp-block-pullquote"><blockquote><p>For valuable information on what Chinese medicine can do for your gut health, take a look at &#8220;<a href="https://twoheartswellness.com/2023/03/19/gut-digestive-health-three-reasons-why-it-matters-how-chinese-medicine-can-improve-yours/">Gut &amp; Digestive Health: Three Reasons Why It Matters &amp; How Chinese Medicine Can Improve Yours</a>.&#8221;<br><br></p></blockquote></figure>
+
+
+
+<h2 class="wp-block-heading"><strong>Sex:</strong></h2>
+
+
+
+<p>Healthy sexual function is an important element of healthy aging.&nbsp; This means different things to different people.&nbsp; Amount, type, monogamous, other&#8230;all of this is individual and not all of it are issues you would discuss in detail with your acupuncturist.&nbsp; What you can focus on, though, are things like erectile dysfunction, ways to maintain or boost libido, and/or strategies for transitioning gracefully into a healthy menopause.</p>
+
+
+
+<p>Again, it helps to find an expert.&nbsp; In my practice, I have substantive experience in the realm of men&#8217;s health.&nbsp; Between my background in fitness/wellness, my career as a Spanish professor, and due to random life events (experiences in student clinic, volunteering at the Hill Country Ride for HIV/AIDS, etc.), things just sort of developed into a wonderful area specialty that means a lot to me.&nbsp; And though most of us can treat erectile dysfunction and low libido, it&#8217;s still good to get a specialist in men&#8217;s health if and when possible.</p>
+
+
+
+<p>Myself, I do not specialize in women&#8217;s health per se.&nbsp; In other words: my practice is fairly well balanced between male patients and female patients.&nbsp; If and when a patient suffers from cramps or hot flashes during perimenopause or wants to become pregnant (in other words: common themes over the course of a woman&#8217;s life), I can work with that.&nbsp; But if a new patient specifically sets an appointment for, say, pregnancy preparation, I&#8217;d probably refer them to a specialist (unless this was a woman with Ehlers Danlos syndrome, in which case I&#8217;d start from the EDS and work on the fertility aspect in relation to the connective tissue disorder).&nbsp;</p>
+
+
+
+<p>Do take a look at the linked blog post in the note attached to this section; in it, I have words to say about how we are taught about menopause and what I (remember: &#8220;good genes and bad attitude&#8221;) thought about it during my gynecology course in the second graduate program.<sup data-fn="6c798338-17a7-4aed-b86c-3b8ff50c2b54" class="fn"><a href="#6c798338-17a7-4aed-b86c-3b8ff50c2b54" id="6c798338-17a7-4aed-b86c-3b8ff50c2b54-link">5</a></sup></p>
+
+
+
+<figure class="wp-block-pullquote"><blockquote><p>There are a number of essays on men&#8217;s health on my blog. I shared how being a Spanish professor informs my practice today in &#8220;<a href="https://twoheartswellness.com/2018/07/10/mens-health-why-its-on-my-radar-thoughts-from-a-holistic-practitioner/">Men’s Health &amp; Why It’s On My Radar (Thoughts From a Holistic Practitioner)</a>.&#8221; Another one from early on, &#8220;<a href="https://twoheartswellness.com/2018/01/04/mens-health-what-student-clinic-taught-me-about-erectile-dysfunction-and-what-chinese-medicine-can-do-about-it/">Men’s Health: What Student Clinic Taught Me About Erectile Dysfunction (And What Chinese Medicine Can Do About It)</a>,&#8221; delivers what its title promises. More recent articles include &#8220;<a href="https://twoheartswellness.com/2024/06/16/mens-health-self-care-or-self-sabotage-your-choice-gentlemen/">Men’s Health: Self-Care Or Self-Sabotage? (Your Choice, Gentlemen)</a>,&#8221; &#8220;<a href="https://twoheartswellness.com/2024/06/22/gay-mens-health-why-its-on-my-radar-thoughts-from-a-holistic-practitioner-part-i/">Gay Men’s Health &amp; Why It’s On My Radar (Thoughts From a Holistic Practitioner, Part I)</a>,&#8221; and &#8220;<a href="https://twoheartswellness.com/2024/06/21/gay-mens-health-what-should-be-on-your-radar-thoughts-from-a-holistic-practitioner-part-ii/">Gay Men’s Health &amp; What Should Be On Your Radar (Thoughts From a Holistic Practitioner, Part II)</a>.&#8221; Men (gay, straight, or anything in between) have an incredible resource in Chinese medicine, so do take a look!</p></blockquote></figure>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-large"><a href="https://twoheartswellness.com/wp-content/uploads/2024/09/love-at-1st-sting-bp-graphic.png"><img data-attachment-id="13542" data-permalink="https://twoheartswellness.com/2024/10/01/gen-x-chinese-medicine-yes-please/love-at-1st-sting-bp-graphic/" data-orig-file="https://twoheartswellness.com/wp-content/uploads/2024/09/love-at-1st-sting-bp-graphic.png" data-orig-size="1000,1500" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="Love at 1st sting BP graphic" data-image-description="" data-image-caption="" data-medium-file="https://twoheartswellness.com/wp-content/uploads/2024/09/love-at-1st-sting-bp-graphic.png?w=200" data-large-file="https://twoheartswellness.com/wp-content/uploads/2024/09/love-at-1st-sting-bp-graphic.png?w=683" tabindex="0" role="button" loading="lazy" width="683" height="1024" src="https://twoheartswellness.com/wp-content/uploads/2024/09/love-at-1st-sting-bp-graphic.png?w=683" alt="" class="wp-image-13542" /></a></figure></div>
+
+
+<h2 class="wp-block-heading"><strong>Cosmetic treatment:</strong></h2>
+
+
+
+<p>Here is where the bad attitude part has an opportunity to shine.&nbsp; Big time.&nbsp; As a Gen X person, you are now in your vintage love tiger decade(s).&nbsp; This is a prime moment to really feel your oats and create your own version of beauty and charisma&#8230;if you so choose.&nbsp; Bottom line?&nbsp; You do not need to subscribe to the idea that only young people are attractive, worthy, energetic, and/or intensely and marvelously ferocious.</p>
+
+
+
+<p>As a dyed-in-the-wool smartass, I viewed one&#8217;s attraction potential as a matter of stages.  When one is young, we&#8217;re youthful love kittens.  Next, feisty love cats.  After the age of forty and before seventy, one is a vintage love tiger.  And anything after seventy?  Venerable love dragon.  (Scroll all the way down to the end of this essay for a snapshot of an exchange on Twitter&#8211;not X, not sorry&#8211;on this topic).</p>
+
+
+
+<p>I cannot remember when I made these designations up, but it was sometime during the very late feisty stage and just preceding the vintage (where I am now) period.  And I&#8217;m already planning for the next step. I think that when I am a venerable love dragon, I will start getting tattoos.  I already have it planned that I am going to dye my hair an icy silver white at some point and I will most certainly keep it long and in its naturally curly state.  When I&#8217;m old, I&#8217;ll be formidable.  That doesn&#8217;t mean I&#8217;ll never get a facelift one day.  I&#8217;m not planning one&#8230;but I&#8217;m not ruling it out, either.  But whatever I do, it will be cool.  It will make me happy with myself at that stage of life.  I plan to be venerable, ferocious, and wise.</p>
+
+
+
+<p>What about you?</p>
+
+
+
+<p>Either way, cosmetic acupuncture is your friend.  Myself, I have tried Botox but that was only because I had a friend who owns a med-spa and I got a deal.  After the effects of my second round wore off, that was it for me and Botox. I&#8217;m not philosophically opposed to Botox, mind you. It&#8217;s ok, but my feeling on the matter was: what about muscle atrophy?  And&#8230;after years of having a frozen face, what about bone loss?  What about disruption of neuromuscular connections?  I also think it does odd things to one&#8217;s capacity for emotion.  Botox is nice (I guess) but definitely not smart for the long term.  Cosmetic acupuncture leaves you looking like you, just refreshed and healthier-looking, and you can still move your face as part of the deal.  Much better!</p>
+
+
+<div class="wp-block-image">
+<figure class="alignright size-large is-resized"><a href="https://twoheartswellness.com/wp-content/uploads/2024/09/miicroneedling-bp-copy.png"><img data-attachment-id="13545" data-permalink="https://twoheartswellness.com/2024/10/01/gen-x-chinese-medicine-yes-please/miicroneedling-bp-copy/" data-orig-file="https://twoheartswellness.com/wp-content/uploads/2024/09/miicroneedling-bp-copy.png" data-orig-size="1000,1500" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="MIicroneedling BP copy" data-image-description="" data-image-caption="" data-medium-file="https://twoheartswellness.com/wp-content/uploads/2024/09/miicroneedling-bp-copy.png?w=200" data-large-file="https://twoheartswellness.com/wp-content/uploads/2024/09/miicroneedling-bp-copy.png?w=683" tabindex="0" role="button" loading="lazy" width="683" height="1024" src="https://twoheartswellness.com/wp-content/uploads/2024/09/miicroneedling-bp-copy.png?w=683" alt="" class="wp-image-13545" style="width:218px;height:auto" /></a></figure></div>
+
+
+<figure class="wp-block-pullquote"><blockquote><p>There are any number of ways to beautify your face via Chinese medicine.&nbsp; It&#8217;s a great place to start, and it&#8217;s a smart way to stave off ever feeling the need for a facelift or Botox.  More recent essays include: &#8220;<a href="https://twoheartswellness.com/2023/12/15/microneedling-and-more-holistic-treatments-that-you-will-love/">Microneedling and More: Holistic Treatments That You Will LOVE</a>,&#8221; and &#8220;<a href="https://twoheartswellness.com/2023/01/26/led-light-therapy-what-it-is-why-youll-love-it/">LED Light Therapy: What It Is, Why You’ll Love It</a>.&#8221;  If you are adamantly opposed to needles on your face, the solutions are here: &#8220;<a href="https://twoheartswellness.com/2018/03/13/facelift-with-no-downtime-with-needles-or-without-traditional-chinese-medicine-can-make-it-happen/">Facelift With no Downtime? (With Needles or Without, Traditional Chinese Medicine Can Make it Happen)</a>.&#8221; An essay that includes a link to research studies on how Botox interrupts facial expression and affects mood is here: &#8220;<a href="https://twoheartswellness.com/2017/03/07/aesthetic-treatment-for-beauty-and-calm-or-how-to-achieve-a-serene-face-and-a-peaceful-heart/">Aesthetic Treatment for Beauty and Calm, or How to Achieve a Serene Face and a Peaceful Heart</a>.&#8221;  If you don&#8217;t experience the marvel of Chinese medicine for cosmetic purposes you are missing out on one of life&#8217;s joys, trust me.</p></blockquote></figure>
+
+
+
+<h2 class="wp-block-heading">In conclusion (for now):</h2>
+
+
+
+<p>In some ways, I think that the Guardian article is just a little too perfect.  Forty-four and sixty?  That&#8217;s the beginning of the Gen X cohort and the end of it.  It feels like a clever way to scoop us all up and make us all worried.  And whether or not it&#8217;s entirely accurate or if it is, instead, just timely, the article still does present us with food for thought.</p>
+
+
+
+<p><strong>We in Gen X are at a crossroads.  </strong>There is time to take a serious look at our wellbeing and to do something about it.  But which way do you go?  The way of poor gut health, worse metabolism, diminished libido, and a sense of feeling unattractive like stale cake left out on the counter?  Or, instead, by figuring out which genetic inheritance is on your side and supporting your health on an individual level&#8230;plus having the attitude that yes, you are&#8211;according to your definition&#8211;sexy and strong?</p>
+
+
+
+<p>I say go with option two.&nbsp; Chinese medicine is a resource, then.&nbsp; It gives you options, and it gives you a measure of control over your health.&nbsp;</p>
+
+
+
+<p><strong>Which will it be, and are you ready to try it?</strong></p>
+
+
+
+<p class="has-text-align-center">******</p>
+
+
+
+<p class="has-text-align-center"><!-- Start Square Appointments Embed code --><a style="background-color: #bf000f;color: white;height: 40px;text-transform: uppercase;font-family: 'Square Market', 'helvetica neue', helvetica, arial, sans-serif;letter-spacing: 1px;line-height: 38px;padding: 0 28px;border-radius: 3px;font-weight: 500;font-size: 14px;cursor: pointer;display: inline-block" href="https://squareup.com/appointments/book/L4N76D/two-hearts-wellness">Book an Appointment</a><!-- End Square Appointments Embed code --></p>
+
+
+
+<p class="has-text-align-center">*****</p>
+
+
+<div class="wp-block-image">
+<figure class="alignright is-resized"><img data-attachment-id="9478" data-permalink="https://twoheartswellness.com/about-2/professionalportrait/" data-orig-file="https://twoheartswellness.com/wp-content/uploads/2019/03/professionalportrait.jpg" data-orig-size="1638,2048" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;John Stansell&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;\u00a92016 J STANSELL ALL RIGHTS RESERVED&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="ProfessionalPortrait" data-image-description="&lt;p&gt;Professional photo of Dr. Bruno&lt;/p&gt;
+" data-image-caption="" data-medium-file="https://twoheartswellness.com/wp-content/uploads/2019/03/professionalportrait.jpg?w=240" data-large-file="https://twoheartswellness.com/wp-content/uploads/2019/03/professionalportrait.jpg?w=819" tabindex="0" role="button" loading="lazy" width="1638" height="2048" src="https://twoheartswellness.com/wp-content/uploads/2019/03/professionalportrait.jpg" alt="ProfessionalPortrait" class="wp-image-9478" style="width:222px;height:auto" /></figure></div>
+
+
+<p>Dr. Paula Bruno, Ph.D., L.Ac., is a licensed acupuncturist and herbalist, an AOBTA-CP traditional Chinese bodywork therapist, a health coach, and an author. &nbsp;She maintains an active and growing practice at her Austin, TX office. &nbsp;Dr. Bruno is also available for distance appointments for wellness consultation or coaching.</p>
+
+
+
+<p>In her first career, she was a Spanish professor.</p>
+
+
+
+<p>Dr. Bruno’s specialties as a Chinese medicine practitioner include: • Musculoskeletal health (acute or chronic pain relief; Ehlers Danlos syndrome&nbsp; &amp; hypermobility support) • Digestive support, gut health, and weight loss • Aesthetic treatment, including scar revision • Men’s health • General preventative care and wellness support for all persons.</p>
+
+
+
+<p>She is the author of&nbsp;<a href="https://www.amazon.com/Medicine-Management-Hypermobile-Ehlers-danlos-Syndrome/dp/1839974982/ref=pd_ybh_a_sccl_4/142-4102253-1156338?pd_rd_w=Q6QiO&amp;content-id=amzn1.sym.67f8cf21-ade4-4299-b433-69e404eeecf1&amp;pf_rd_p=67f8cf21-ade4-4299-b433-69e404eeecf1&amp;pf_rd_r=060HG0ECM01JY4RAMPAC&amp;pd_rd_wg=KdPis&amp;pd_rd_r=95aca7b2-2b59-4fdb-82eb-9ceed1004fd9&amp;pd_rd_i=1839974982&amp;psc=1">Chinese Medicine and the Management of Hypermobile Ehlers Danlos Syndrome: A Practitioner’s Guide</a>. Dr. Bruno also maintains a second website,&nbsp;<a href="http://holistichealthandheds.com/">holistichealthandheds.com</a>, with resources and information curated specifically for people with hEDS and HSD.</p>
+
+
+
+<p>When you are ready to discover what traditional medicine plus a vibrant and engaged approach to holistic health can do for you, either&nbsp;<a href="https://twoheartswellness.com/services-contact/">contact</a>&nbsp;Dr. Bruno or&nbsp;<a href="https://twoheartswellness.com/book-an-appointment/">book an appointment</a>&nbsp;online.</p>
+
+
+
+<p class="has-text-align-center">*****</p>
+
+
+
+<p>The following is a Twitter (not X, sorry-not-sorry) exchange &amp; a picture from an Elvis Costello concert:</p>
+
+
+
+<div class="wp-block-jetpack-slideshow aligncenter" data-effect="slide"><div class="wp-block-jetpack-slideshow_container swiper-container"><ul class="wp-block-jetpack-slideshow_swiper-wrapper swiper-wrapper"><li class="wp-block-jetpack-slideshow_slide swiper-slide"><figure><img loading="lazy" width="1000" height="1500" alt="" class="wp-block-jetpack-slideshow_image wp-image-13548" data-id="13548" src="https://twoheartswellness.com/wp-content/uploads/2024/09/love-dragon.png" /></figure></li><li class="wp-block-jetpack-slideshow_slide swiper-slide"><figure><img loading="lazy" width="1000" height="1500" alt="" class="wp-block-jetpack-slideshow_image wp-image-13556" data-id="13556" src="https://twoheartswellness.com/wp-content/uploads/2024/09/favorite-shirt.png" /></figure></li></ul><a class="wp-block-jetpack-slideshow_button-prev swiper-button-prev swiper-button-white" role="button"></a><a class="wp-block-jetpack-slideshow_button-next swiper-button-next swiper-button-white" role="button"></a><a aria-label="Pause Slideshow" class="wp-block-jetpack-slideshow_button-pause" role="button"></a><div class="wp-block-jetpack-slideshow_pagination swiper-pagination swiper-pagination-white"></div></div></div>
+
+
+
+<p class="has-text-align-center"><strong>*****</strong></p>
+
+
+
+<p><em><strong>Two Hearts Wellness does not accept paid advertising on this website</strong></em></p>
+
+
+
+<p><strong>Note</strong>: Material on this web site site is not intended to diagnose, prevent, treat, or cure any disease, illness, or ailment. A Chinese medicine practitioner in Texas identifies syndrome patterns but does not diagnose illness. &nbsp;Material on this web site does not purport to identify syndrome patterns.</p>
+
+
+
+<p class="has-text-align-center">*****</p>
+
+
+<ol class="wp-block-footnotes"><li id="60e76912-c966-4025-b515-4d5ab1e6ad07">Though I no longer offer personal training as one of my services I did get certified while in my second graduate program (for MA number three and the license to practice Chinese medicine) and I still provide fitness programming for health coaching clients and, sometimes, for patients. <a href="#60e76912-c966-4025-b515-4d5ab1e6ad07-link">↩︎</a></li><li id="eed03d34-3ade-4ee1-8b74-02c31c85b969">As it turned out, my genes are a mixed bag. I do have excellent genes for longevity but when it comes to things like my history of extreme adverse events (we&#8217;re talking near-death) in response to basic Pharma drugs or the hypermobility issue, my genes are not necessarily an exemplar of flawless perfection. And a substantive percentage of my patient population got dealt a challenging hand as far as the genetics go (refer to my book, <a href="https://www.amazon.com/Medicine-Management-Hypermobile-Ehlers-danlos-Syndrome/dp/1839974982/ref=pd_ybh_a_d_sccl_17/138-9582403-5638803?pd_rd_w=tL6I9&amp;content-id=amzn1.sym.67f8cf21-ade4-4299-b433-69e404eeecf1&amp;pf_rd_p=67f8cf21-ade4-4299-b433-69e404eeecf1&amp;pf_rd_r=A3VJPZH0SAGY95Y6XVTC&amp;pd_rd_wg=GGC7H&amp;pd_rd_r=0d75a12a-ec7a-4ed7-9309-25bbb5f75ed2&amp;pd_rd_i=1839974982&amp;psc=1">Chinese Medicine and the Management of Hypermobile Ehlers-Danlos Syndrome</a>, for more on that) so let me just say for the record that yes, I know that the genetic part is a crapshoot.  Even so, the bad attitude is still taking me far and I encourage all my patients to cultivate one of their own. <a href="#eed03d34-3ade-4ee1-8b74-02c31c85b969-link">↩︎</a></li><li id="acb21b57-62e5-4ec8-8b41-e0610ac01fb3">The famous Pema Chödrön quote, &#8220;nothing ever  goes away until it teaches us what we need to know&#8221; is a somewhat pale expression of the larger commentary that the famous Buddhist nun intended.  A good commentary on this issue is &#8220;<a href="https://melissawest.com/pema-chodron-quote/">The Problem with the Pema Chodron Quote: &#8216;Nothing ever goes away….&#8217;</a>&#8221; <a href="#acb21b57-62e5-4ec8-8b41-e0610ac01fb3-link">↩︎</a></li><li id="d895d829-026c-4a1e-9e66-7cf473c1e2b7">Useful, albeit alarming, is the March 2024 article, &#8220;<a href="https://nationalhealthcouncil.org/blog/a-major-health-crisis-the-alarming-rise-of-autoimmune-disease/">A MAJOR HEALTH CRISIS: THE ALARMING RISE OF AUTOIMMUNE DISEASE</a>.&#8221;  See also &#8220;<a href="https://www.foodallergy.org/resources/facts-and-statistics">Facts and Statistics: Key information to help better understand food allergies and anaphylaxis.</a>&#8221; The connection between gut bacteria and autoimmune disease has been a subject of investigation for some time now, as the 2018 article, &#8220;<a href="https://www.nih.gov/news-events/nih-research-matters/gut-microbe-drives-autoimmunity">Gut microbe drives autoimmunity</a>&#8221; attests.  On the subject of diabetes and gut bacteria, refer to Harvard Medical School&#8217;s &#8220;<a href="https://hms.harvard.edu/news/changes-gut-microbiome-may-increase-type-2-diabetes-risk">Changes to Gut Microbiome May Increase Type 2 Diabetes Risk</a>.&#8221;  When you strengthen your gut bacteria you are bolstering your health for the long haul. <a href="#d895d829-026c-4a1e-9e66-7cf473c1e2b7-link">↩︎</a></li><li id="6c798338-17a7-4aed-b86c-3b8ff50c2b54">&#8220;<a href="https://twoheartswellness.com/sexual-health-vitality-and-life-stages/">Sexual Health, Vitality, and Life Stages</a>&#8221; is an annotated bibliography of interesting books on the topic at hand.  The section on women&#8217;s health, titled &#8220;<strong>Whores, Mothers, Vectors of Disease, and Crones: There is More to Being a Woman Than Diseased Wombs and Atrophied Vaginas</strong>&#8221; is a direct response to my reaction to the studied focus on women&#8217;s aging that was inflicted on the students in my program.  Yes, I have a bad attitude&#8230;what else can I say? <a href="#6c798338-17a7-4aed-b86c-3b8ff50c2b54-link">↩︎</a></li></ol><div id="jp-post-flair" class="sharedaddy sd-like-enabled sd-sharing-enabled"><div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon-text sd-sharing"><h3 class="sd-title">Share this:</h3><div class="sd-content"><ul><li class="share-facebook"><a rel="nofollow noopener noreferrer" data-shared="sharing-facebook-13473" class="share-facebook sd-button share-icon" href="https://twoheartswellness.com/2024/10/01/gen-x-chinese-medicine-yes-please/?share=facebook" target="_blank" title="Click to share on Facebook" ><span>Facebook</span></a></li><li class="share-twitter"><a rel="nofollow noopener noreferrer" data-shared="sharing-twitter-13473" class="share-twitter sd-button share-icon" href="https://twoheartswellness.com/2024/10/01/gen-x-chinese-medicine-yes-please/?share=twitter" target="_blank" title="Click to share on Twitter" ><span>Twitter</span></a></li><li class="share-linkedin"><a rel="nofollow noopener noreferrer" data-shared="sharing-linkedin-13473" class="share-linkedin sd-button share-icon" href="https://twoheartswellness.com/2024/10/01/gen-x-chinese-medicine-yes-please/?share=linkedin" target="_blank" title="Click to share on LinkedIn" ><span>LinkedIn</span></a></li><li class="share-pinterest"><a rel="nofollow noopener noreferrer" data-shared="sharing-pinterest-13473" class="share-pinterest sd-button share-icon" href="https://twoheartswellness.com/2024/10/01/gen-x-chinese-medicine-yes-please/?share=pinterest" target="_blank" title="Click to share on Pinterest" ><span>Pinterest</span></a></li><li class="share-end"></li></ul></div></div></div><div class='sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded' id='like-post-wrapper-72892392-13473-670d4b694d556' data-src='//widgets.wp.com/likes/index.html?ver=20241014#blog_id=72892392&amp;post_id=13473&amp;origin=pmbruno03.wordpress.com&amp;obj_id=72892392-13473-670d4b694d556&amp;domain=twoheartswellness.com' data-name='like-post-frame-72892392-13473-670d4b694d556' data-title='Like or Reblog'><div class='likes-widget-placeholder post-likes-widget-placeholder' style='height: 55px;'><span class='button'><span>Like</span></span> <span class='loading'>Loading...</span></div><span class='sd-text-color'></span><a class='sd-link-color'></a></div>
+<div id='jp-relatedposts' class='jp-relatedposts' >
+	<h3 class="jp-relatedposts-headline"><em>Related</em></h3>
+</div></div>					</div><!-- .entry-content -->
+
+		<footer class="entry-footer">
+			
+<div class="author-info">
+	<div class="author-avatar">
+		<img alt='' src='https://0.gravatar.com/avatar/62c478543fd5d8b2f946796573475ae32b8e64437f920e814687c7807fa605b2?s=64&#038;d=identicon&#038;r=G' srcset='https://0.gravatar.com/avatar/62c478543fd5d8b2f946796573475ae32b8e64437f920e814687c7807fa605b2?s=64&#038;d=identicon&#038;r=G 1x, https://0.gravatar.com/avatar/62c478543fd5d8b2f946796573475ae32b8e64437f920e814687c7807fa605b2?s=96&#038;d=identicon&#038;r=G 1.5x, https://0.gravatar.com/avatar/62c478543fd5d8b2f946796573475ae32b8e64437f920e814687c7807fa605b2?s=128&#038;d=identicon&#038;r=G 2x, https://0.gravatar.com/avatar/62c478543fd5d8b2f946796573475ae32b8e64437f920e814687c7807fa605b2?s=192&#038;d=identicon&#038;r=G 3x, https://0.gravatar.com/avatar/62c478543fd5d8b2f946796573475ae32b8e64437f920e814687c7807fa605b2?s=256&#038;d=identicon&#038;r=G 4x' class='avatar avatar-64' height='64' width='64' loading='lazy' decoding='async' />	</div><!-- .author-avatar -->
+
+	<div class="author-description">
+		<h2 class="author-heading">Published by</h2>
+
+		<h3 class="author-title">DrBrunoPhDLAc</h3>
+
+		<p class="author-bio">
+						<a class="author-link" href="https://twoheartswellness.com/author/pmbruno03/" rel="author">
+				View all posts by DrBrunoPhDLAc			</a>
+		</p><!-- .author-bio -->
+
+	</div><!-- .author-description -->
+</div><!-- .author-info -->
+			<span class="cat-links"><span class="screen-reader-text">Categories </span><a href="https://twoheartswellness.com/category/uncategorized/" rel="category tag">Uncategorized</a></span><span class="tags-links"><span class="screen-reader-text">Tags </span><a href="https://twoheartswellness.com/tag/wellness/" rel="tag">#Wellness</a>, <a href="https://twoheartswellness.com/tag/acupuncture/" rel="tag">Acupuncture</a>, <a href="https://twoheartswellness.com/tag/alternative-medicine/" rel="tag">alternative-medicine</a>, <a href="https://twoheartswellness.com/tag/health/" rel="tag">Health</a>, <a href="https://twoheartswellness.com/tag/traditional-chinese-medicine/" rel="tag">Traditional Chinese medicine</a></span><span class="comments-link"><a href="https://twoheartswellness.com/2024/10/01/gen-x-chinese-medicine-yes-please/#respond">Leave a comment</a></span>					</footer><!-- .entry-footer -->
+	</div>
+</article><!-- #post-## -->
+
+<div id="comments" class="comments-area">
+
+	
+	
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a comment <small><a rel="nofollow" id="cancel-comment-reply-link" href="/2024/10/01/gen-x-chinese-medicine-yes-please/#respond" style="display:none;">Cancel reply</a></small></h3><form action="https://twoheartswellness.com/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate>
+
+
+<div id="comment-form__verbum" class="transparent"></div><div class="verbum-form-meta"><input type='hidden' name='comment_post_ID' value='13473' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+
+			<input type="hidden" name="highlander_comment_nonce" id="highlander_comment_nonce" value="7397ff90f0" />
+			<input type="hidden" name="verbum_show_subscription_modal" value="" /></div><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="d169bbb8c0" /></p><p style="display: none !important;" class="akismet-fields-container" data-prefix="ak_"><label>&#916;<textarea name="ak_hp_textarea" cols="45" rows="8" maxlength="100"></textarea></label><input type="hidden" id="ak_js_1" name="ak_js" value="171"/><script>document.getElementById( "ak_js_1" ).setAttribute( "value", ( new Date() ).getTime() );</script></p></form>	</div><!-- #respond -->
+	
+</div><!-- .comments-area -->
+
+	<nav class="navigation post-navigation" aria-label="Posts">
+		<h2 class="screen-reader-text">Post navigation</h2>
+		<div class="nav-links"><div class="nav-previous"><a href="https://twoheartswellness.com/2024/09/13/are-you-ready-for-fall-living-with-the-seasons-according-to-chinese-medicine/" rel="prev"><span class="meta-nav" aria-hidden="true">Previous</span> <span class="screen-reader-text">Previous post:</span> <span class="post-title">Are You Ready For Fall? (Living With the Seasons According to Chinese Medicine)</span></a></div><div class="nav-next"><a href="https://twoheartswellness.com/2024/10/13/get-unstuck-with-acupuncture-six-ways-that-chinese-medicine-can-get-you-moving/" rel="next"><span class="meta-nav" aria-hidden="true">Next</span> <span class="screen-reader-text">Next post:</span> <span class="post-title">Get Unstuck With Acupuncture (Six Ways That Chinese Medicine Can Get You Moving)</span></a></div></div>
+	</nav>
+		</main><!-- .site-main -->
+	</div><!-- .content-area -->
+
+			<div id="sidebar" class="sidebar">
+		<div id="sidebar-inner" class="sidebar-inner">
+
+					<nav class="main-navigation" role="navigation">
+				<h2 class="menu-heading widget-title">Menu</h2>
+				<div class="menu-menu-container"><ul id="menu-menu-1" class="nav-menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-2895"><a href="https://twoheartswellness.com/">Home</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9091"><a href="https://twoheartswellness.com/conditions-treated/">Conditions Treated</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2940"><a href="https://twoheartswellness.com/services-benefits/">Services</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2937"><a href="https://twoheartswellness.com/about-2/">About</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2939"><a href="https://twoheartswellness.com/services-contact/">Contact</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-2943"><a href="https://twoheartswellness.com/blog/">Blog</a></li>
+</ul></div>			</nav><!-- .main-navigation -->
+		
+		
+					<div id="secondary" class="widget-area" role="complementary">
+				<aside id="search-2" class="widget widget_search"><form role="search" method="get" class="search-form" action="https://twoheartswellness.com/">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" />
+				</label>
+				<input type="submit" class="search-submit screen-reader-text" value="Search" />
+			</form></aside>
+		<aside id="recent-posts-2" class="widget widget_recent_entries">
+		<h2 class="widget-title">Recent Posts</h2>
+		<ul>
+											<li>
+					<a href="https://twoheartswellness.com/2024/10/13/get-unstuck-with-acupuncture-six-ways-that-chinese-medicine-can-get-you-moving/">Get Unstuck With Acupuncture (Six Ways That Chinese Medicine Can Get You Moving)</a>
+									</li>
+											<li>
+					<a href="https://twoheartswellness.com/2024/10/01/gen-x-chinese-medicine-yes-please/" aria-current="page">Gen X &amp; Chinese Medicine? &#8230; Yes, Please!</a>
+									</li>
+											<li>
+					<a href="https://twoheartswellness.com/2024/09/13/are-you-ready-for-fall-living-with-the-seasons-according-to-chinese-medicine/">Are You Ready For Fall? (Living With the Seasons According to Chinese Medicine)</a>
+									</li>
+											<li>
+					<a href="https://twoheartswellness.com/2024/09/02/late-summer-health-happiness-strategies/">Late Summer: Health, Happiness, &amp; Strategies</a>
+									</li>
+											<li>
+					<a href="https://twoheartswellness.com/2024/08/18/health-coach-for-college-students-yes-heres-why/">Health Coach For College Students? Yes! (Here&#8217;s Why)</a>
+									</li>
+					</ul>
+
+		</aside><aside id="recent-comments-2" class="widget widget_recent_comments"><h2 class="widget-title">Recent Comments</h2>				<table class="recentcommentsavatar" cellspacing="0" cellpadding="0" border="0">
+					<tr><td title="Coronavirus Tidbits #47 5/13/20 &#8211; Dr. Judy Stone" class="recentcommentsavatartop" style="height:48px; width:48px;"><a href="https://judystone.hivewario.com/coronavirus-tidbits-47-5-13-20/" rel="nofollow"></a></td><td class="recentcommentstexttop" style=""><a href="https://judystone.hivewario.com/coronavirus-tidbits-47-5-13-20/" rel="nofollow">Coronavirus Tidbits&hellip;</a> on <a href="https://twoheartswellness.com/2020/05/02/wearing-a-mask-some-thoughts-on-loving-thy-neighbor-and-on-being-fabulous-during-a-pandemic/comment-page-1/#comment-5096">Wearing A Mask: Some Thoughts&hellip;</a></td></tr><tr><td title="Kevin Foodie" class="recentcommentsavatarend" style="height:48px; width:48px;"><a href="http://foodexplora.wordpress.com" rel="nofollow"><img alt='' src='https://2.gravatar.com/avatar/b114f0da712df3416d02f68f92e94d0cd5c9e98d091874f009f16f9058140447?s=48&#038;d=identicon&#038;r=G' srcset='https://2.gravatar.com/avatar/b114f0da712df3416d02f68f92e94d0cd5c9e98d091874f009f16f9058140447?s=48&#038;d=identicon&#038;r=G 1x, https://2.gravatar.com/avatar/b114f0da712df3416d02f68f92e94d0cd5c9e98d091874f009f16f9058140447?s=72&#038;d=identicon&#038;r=G 1.5x, https://2.gravatar.com/avatar/b114f0da712df3416d02f68f92e94d0cd5c9e98d091874f009f16f9058140447?s=96&#038;d=identicon&#038;r=G 2x, https://2.gravatar.com/avatar/b114f0da712df3416d02f68f92e94d0cd5c9e98d091874f009f16f9058140447?s=144&#038;d=identicon&#038;r=G 3x, https://2.gravatar.com/avatar/b114f0da712df3416d02f68f92e94d0cd5c9e98d091874f009f16f9058140447?s=192&#038;d=identicon&#038;r=G 4x' class='avatar avatar-48' height='48' width='48' loading='lazy' decoding='async' /></a></td><td class="recentcommentstextend" style=""><a href="http://foodexplora.wordpress.com" rel="nofollow">Kevin Foodie</a> on <a href="https://twoheartswellness.com/2024/06/16/mens-health-self-care-or-self-sabotage-your-choice-gentlemen/comment-page-1/#comment-5087">Men&#8217;s Health: Self-Care&hellip;</a></td></tr><tr><td title="Carolyn" class="recentcommentsavatarend" style="height:48px; width:48px;"><img alt='' src='https://0.gravatar.com/avatar/33511fa393c5e8f40eb7effc8f7db37a25edb50acd7de3902d661001b655745e?s=48&#038;d=identicon&#038;r=G' srcset='https://0.gravatar.com/avatar/33511fa393c5e8f40eb7effc8f7db37a25edb50acd7de3902d661001b655745e?s=48&#038;d=identicon&#038;r=G 1x, https://0.gravatar.com/avatar/33511fa393c5e8f40eb7effc8f7db37a25edb50acd7de3902d661001b655745e?s=72&#038;d=identicon&#038;r=G 1.5x, https://0.gravatar.com/avatar/33511fa393c5e8f40eb7effc8f7db37a25edb50acd7de3902d661001b655745e?s=96&#038;d=identicon&#038;r=G 2x, https://0.gravatar.com/avatar/33511fa393c5e8f40eb7effc8f7db37a25edb50acd7de3902d661001b655745e?s=144&#038;d=identicon&#038;r=G 3x, https://0.gravatar.com/avatar/33511fa393c5e8f40eb7effc8f7db37a25edb50acd7de3902d661001b655745e?s=192&#038;d=identicon&#038;r=G 4x' class='avatar avatar-48' height='48' width='48' loading='lazy' decoding='async' /></td><td class="recentcommentstextend" style="">Carolyn on <a href="https://twoheartswellness.com/2024/06/16/mens-health-self-care-or-self-sabotage-your-choice-gentlemen/comment-page-1/#comment-5086">Men&#8217;s Health: Self-Care&hellip;</a></td></tr><tr><td title="Umer Siddiqui" class="recentcommentsavatarend" style="height:48px; width:48px;"><a href="https://forfoodiefriends.com" rel="nofollow"><img alt='' src='https://0.gravatar.com/avatar/f25c3c78e9ab875da10076b34da73696c4074576aeb98954ff6e94ce3d594f9e?s=48&#038;d=identicon&#038;r=G' srcset='https://0.gravatar.com/avatar/f25c3c78e9ab875da10076b34da73696c4074576aeb98954ff6e94ce3d594f9e?s=48&#038;d=identicon&#038;r=G 1x, https://0.gravatar.com/avatar/f25c3c78e9ab875da10076b34da73696c4074576aeb98954ff6e94ce3d594f9e?s=72&#038;d=identicon&#038;r=G 1.5x, https://0.gravatar.com/avatar/f25c3c78e9ab875da10076b34da73696c4074576aeb98954ff6e94ce3d594f9e?s=96&#038;d=identicon&#038;r=G 2x, https://0.gravatar.com/avatar/f25c3c78e9ab875da10076b34da73696c4074576aeb98954ff6e94ce3d594f9e?s=144&#038;d=identicon&#038;r=G 3x, https://0.gravatar.com/avatar/f25c3c78e9ab875da10076b34da73696c4074576aeb98954ff6e94ce3d594f9e?s=192&#038;d=identicon&#038;r=G 4x' class='avatar avatar-48' height='48' width='48' loading='lazy' decoding='async' /></a></td><td class="recentcommentstextend" style=""><a href="https://forfoodiefriends.com" rel="nofollow">Umer Siddiqui</a> on <a href="https://twoheartswellness.com/2024/06/09/emotional-scars-tell-a-story-but-you-can-change-the-narrative/comment-page-1/#comment-5085">Emotional Scars Tell a Story (&hellip;</a></td></tr><tr><td title="Monika Harrison" class="recentcommentsavatarend" style="height:48px; width:48px;"><img alt='' src='https://1.gravatar.com/avatar/a189c7a381e51e9cba1fc157a7dc056b21553bd9c5cbcd121cce98978eaebce3?s=48&#038;d=identicon&#038;r=G' srcset='https://1.gravatar.com/avatar/a189c7a381e51e9cba1fc157a7dc056b21553bd9c5cbcd121cce98978eaebce3?s=48&#038;d=identicon&#038;r=G 1x, https://1.gravatar.com/avatar/a189c7a381e51e9cba1fc157a7dc056b21553bd9c5cbcd121cce98978eaebce3?s=72&#038;d=identicon&#038;r=G 1.5x, https://1.gravatar.com/avatar/a189c7a381e51e9cba1fc157a7dc056b21553bd9c5cbcd121cce98978eaebce3?s=96&#038;d=identicon&#038;r=G 2x, https://1.gravatar.com/avatar/a189c7a381e51e9cba1fc157a7dc056b21553bd9c5cbcd121cce98978eaebce3?s=144&#038;d=identicon&#038;r=G 3x, https://1.gravatar.com/avatar/a189c7a381e51e9cba1fc157a7dc056b21553bd9c5cbcd121cce98978eaebce3?s=192&#038;d=identicon&#038;r=G 4x' class='avatar avatar-48' height='48' width='48' loading='lazy' decoding='async' /></td><td class="recentcommentstextend" style="">Monika Harrison on <a href="https://twoheartswellness.com/2024/06/09/emotional-scars-tell-a-story-but-you-can-change-the-narrative/comment-page-1/#comment-5084">Emotional Scars Tell a Story (&hellip;</a></td></tr>				</table>
+				</aside><aside id="archives-2" class="widget widget_archive"><h2 class="widget-title">Archives</h2>
+			<ul>
+					<li><a href='https://twoheartswellness.com/2024/10/'>October 2024</a></li>
+	<li><a href='https://twoheartswellness.com/2024/09/'>September 2024</a></li>
+	<li><a href='https://twoheartswellness.com/2024/08/'>August 2024</a></li>
+	<li><a href='https://twoheartswellness.com/2024/06/'>June 2024</a></li>
+	<li><a href='https://twoheartswellness.com/2024/05/'>May 2024</a></li>
+	<li><a href='https://twoheartswellness.com/2024/04/'>April 2024</a></li>
+	<li><a href='https://twoheartswellness.com/2023/12/'>December 2023</a></li>
+	<li><a href='https://twoheartswellness.com/2023/11/'>November 2023</a></li>
+	<li><a href='https://twoheartswellness.com/2023/09/'>September 2023</a></li>
+	<li><a href='https://twoheartswellness.com/2023/03/'>March 2023</a></li>
+	<li><a href='https://twoheartswellness.com/2023/01/'>January 2023</a></li>
+	<li><a href='https://twoheartswellness.com/2022/12/'>December 2022</a></li>
+	<li><a href='https://twoheartswellness.com/2021/06/'>June 2021</a></li>
+	<li><a href='https://twoheartswellness.com/2021/05/'>May 2021</a></li>
+	<li><a href='https://twoheartswellness.com/2021/02/'>February 2021</a></li>
+	<li><a href='https://twoheartswellness.com/2020/10/'>October 2020</a></li>
+	<li><a href='https://twoheartswellness.com/2020/08/'>August 2020</a></li>
+	<li><a href='https://twoheartswellness.com/2020/07/'>July 2020</a></li>
+	<li><a href='https://twoheartswellness.com/2020/06/'>June 2020</a></li>
+	<li><a href='https://twoheartswellness.com/2020/05/'>May 2020</a></li>
+	<li><a href='https://twoheartswellness.com/2020/04/'>April 2020</a></li>
+	<li><a href='https://twoheartswellness.com/2020/03/'>March 2020</a></li>
+	<li><a href='https://twoheartswellness.com/2019/11/'>November 2019</a></li>
+	<li><a href='https://twoheartswellness.com/2019/05/'>May 2019</a></li>
+	<li><a href='https://twoheartswellness.com/2019/03/'>March 2019</a></li>
+	<li><a href='https://twoheartswellness.com/2019/02/'>February 2019</a></li>
+	<li><a href='https://twoheartswellness.com/2018/09/'>September 2018</a></li>
+	<li><a href='https://twoheartswellness.com/2018/08/'>August 2018</a></li>
+	<li><a href='https://twoheartswellness.com/2018/07/'>July 2018</a></li>
+	<li><a href='https://twoheartswellness.com/2018/06/'>June 2018</a></li>
+	<li><a href='https://twoheartswellness.com/2018/05/'>May 2018</a></li>
+	<li><a href='https://twoheartswellness.com/2018/04/'>April 2018</a></li>
+	<li><a href='https://twoheartswellness.com/2018/03/'>March 2018</a></li>
+	<li><a href='https://twoheartswellness.com/2018/02/'>February 2018</a></li>
+	<li><a href='https://twoheartswellness.com/2018/01/'>January 2018</a></li>
+	<li><a href='https://twoheartswellness.com/2017/12/'>December 2017</a></li>
+	<li><a href='https://twoheartswellness.com/2017/11/'>November 2017</a></li>
+	<li><a href='https://twoheartswellness.com/2017/10/'>October 2017</a></li>
+	<li><a href='https://twoheartswellness.com/2017/09/'>September 2017</a></li>
+	<li><a href='https://twoheartswellness.com/2017/08/'>August 2017</a></li>
+	<li><a href='https://twoheartswellness.com/2017/07/'>July 2017</a></li>
+	<li><a href='https://twoheartswellness.com/2017/06/'>June 2017</a></li>
+	<li><a href='https://twoheartswellness.com/2017/05/'>May 2017</a></li>
+	<li><a href='https://twoheartswellness.com/2017/03/'>March 2017</a></li>
+	<li><a href='https://twoheartswellness.com/2016/12/'>December 2016</a></li>
+	<li><a href='https://twoheartswellness.com/2016/10/'>October 2016</a></li>
+	<li><a href='https://twoheartswellness.com/2016/09/'>September 2016</a></li>
+	<li><a href='https://twoheartswellness.com/2016/08/'>August 2016</a></li>
+	<li><a href='https://twoheartswellness.com/2016/07/'>July 2016</a></li>
+	<li><a href='https://twoheartswellness.com/2016/06/'>June 2016</a></li>
+	<li><a href='https://twoheartswellness.com/2016/05/'>May 2016</a></li>
+	<li><a href='https://twoheartswellness.com/2016/04/'>April 2016</a></li>
+	<li><a href='https://twoheartswellness.com/2016/03/'>March 2016</a></li>
+	<li><a href='https://twoheartswellness.com/2016/02/'>February 2016</a></li>
+	<li><a href='https://twoheartswellness.com/2016/01/'>January 2016</a></li>
+	<li><a href='https://twoheartswellness.com/2015/12/'>December 2015</a></li>
+	<li><a href='https://twoheartswellness.com/2015/11/'>November 2015</a></li>
+	<li><a href='https://twoheartswellness.com/2014/09/'>September 2014</a></li>
+	<li><a href='https://twoheartswellness.com/2014/08/'>August 2014</a></li>
+			</ul>
+
+			</aside><aside id="categories-2" class="widget widget_categories"><h2 class="widget-title">Categories</h2>
+			<ul>
+					<li class="cat-item cat-item-420149"><a href="https://twoheartswellness.com/category/acupunture/">Acupunture</a>
+</li>
+	<li class="cat-item cat-item-24174"><a href="https://twoheartswellness.com/category/arts-literature/">Arts &amp; Literature</a>
+</li>
+	<li class="cat-item cat-item-70722"><a href="https://twoheartswellness.com/category/beauty-fashion/">Beauty &amp; Fashion</a>
+</li>
+	<li class="cat-item cat-item-603705898"><a href="https://twoheartswellness.com/category/cultural-studies-history-research/">Cultural Studies; History: Research</a>
+</li>
+	<li class="cat-item cat-item-962664"><a href="https://twoheartswellness.com/category/cupping/">Cupping</a>
+</li>
+	<li class="cat-item cat-item-14839957"><a href="https://twoheartswellness.com/category/facial-rejuvenation-treatments/">Facial Rejuvenation Treatments</a>
+</li>
+	<li class="cat-item cat-item-33534580"><a href="https://twoheartswellness.com/category/find-a-professional/">Find A Professional</a>
+</li>
+	<li class="cat-item cat-item-148917"><a href="https://twoheartswellness.com/category/fitness-wellness/">Fitness/Wellness</a>
+</li>
+	<li class="cat-item cat-item-4820801"><a href="https://twoheartswellness.com/category/gua-sha/">gua sha</a>
+</li>
+	<li class="cat-item cat-item-1024"><a href="https://twoheartswellness.com/category/harry-potter/">Harry Potter</a>
+</li>
+	<li class="cat-item cat-item-443632122"><a href="https://twoheartswellness.com/category/health-coaching-austin-tx/">Health coaching Austin TX</a>
+</li>
+	<li class="cat-item cat-item-831"><a href="https://twoheartswellness.com/category/interviews/">Interviews</a>
+</li>
+	<li class="cat-item cat-item-580106124"><a href="https://twoheartswellness.com/category/lifestyle-living-well/">Lifestyle &amp; Living Well</a>
+</li>
+	<li class="cat-item cat-item-2007"><a href="https://twoheartswellness.com/category/musings/">Musings</a>
+</li>
+	<li class="cat-item cat-item-603978309"><a href="https://twoheartswellness.com/category/rare-disease-chronic-illness/">Rare Disease &amp; Chronic Illness</a>
+</li>
+	<li class="cat-item cat-item-589721787"><a href="https://twoheartswellness.com/category/traditional-chinese-bodywork/">traditional Chinese bodywork</a>
+</li>
+	<li class="cat-item cat-item-1698023"><a href="https://twoheartswellness.com/category/tui-na/">tui na</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="https://twoheartswellness.com/category/uncategorized/">Uncategorized</a>
+</li>
+	<li class="cat-item cat-item-4680312"><a href="https://twoheartswellness.com/category/volunteer-projects/">Volunteer Projects</a>
+</li>
+			</ul>
+
+			</aside><aside id="meta-2" class="widget widget_meta"><h2 class="widget-title">Meta</h2>
+		<ul>
+			<li><a href="https://wordpress.com/start?ref=wplogin">Register</a></li>			<li><a href="https://pmbruno03.wordpress.com/wp-login.php">Log in</a></li>
+			<li><a href="https://twoheartswellness.com/feed/">Entries feed</a></li>
+			<li><a href="https://twoheartswellness.com/comments/feed/">Comments feed</a></li>
+
+			<li><a href="https://wordpress.com/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.com</a></li>
+		</ul>
+
+		</aside>			</div><!-- .widget-area -->
+		
+		</div>
+	</div><!-- .sidebar -->
+
+	</div><!-- .site-content -->
+
+	<footer id="colophon" class="site-footer" role="contentinfo">
+		<div class="site-info">
+			<a href="https://wordpress.com/?ref=footer_blog" rel="nofollow">Blog at WordPress.com.</a>
+			
+					</div><!-- .site-info -->
+	</footer><!-- .site-footer -->
+</div><!-- .site -->
+
+<!--  -->
+<script type="text/javascript" src="//0.gravatar.com/js/hovercards/hovercards.min.js?ver=202442448e29c9ec460f70535c7958cd60e9e2980f935c5309d61d08f40d080a876779" id="grofiles-cards-js"></script>
+<script type="text/javascript" id="wpgroho-js-extra">
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script crossorigin='anonymous' type='text/javascript'  src='https://s2.wp.com/wp-content/mu-plugins/gravatar-hovercards/wpgroho.js?m=1610363240i'></script>
+
+	<script>
+		// Initialize and attach hovercards to all gravatars
+		( function() {
+			function init() {
+				if ( typeof Gravatar === 'undefined' ) {
+					return;
+				}
+
+				if ( typeof Gravatar.init !== 'function' ) {
+					return;
+				}
+
+				Gravatar.profile_cb = function ( hash, id ) {
+					WPGroHo.syncProfileData( hash, id );
+				};
+
+				Gravatar.my_hash = WPGroHo.my_hash;
+				Gravatar.init(
+					'body',
+					'#wp-admin-bar-my-account',
+					{
+						i18n: {
+							'Edit your profile': 'Edit your profile',
+							'View profile': 'View profile',
+							'Sorry, we are unable to load this Gravatar profile.': 'Sorry, we are unable to load this Gravatar profile.',
+							'Too Many Requests.': 'Too Many Requests.',
+							'Internal Server Error.': 'Internal Server Error.',
+						},
+					}
+				);
+			}
+
+			if ( document.readyState !== 'loading' ) {
+				init();
+			} else {
+				document.addEventListener( 'DOMContentLoaded', init );
+			}
+		} )();
+	</script>
+
+		<div style="display:none">
+	<div class="grofile-hash-map-adb3d37ef08849c0bc91ce09ceff0d43">
+	</div>
+	<div class="grofile-hash-map-59ef2e0d7139b8fd12a2f7c631f5ea3c">
+	</div>
+	<div class="grofile-hash-map-1e889387c761f1f0cf53c13776d4934c">
+	</div>
+	<div class="grofile-hash-map-b1a73f4b72f314ecaaa4a7c78bac3cb8">
+	</div>
+	<div class="grofile-hash-map-59b62e41a3a98ad4ff6ec498d50c7038">
+	</div>
+	</div>
+	<div id="actionbar" style="display: none;"
+			class="actnbr-pub-resonar actnbr-has-follow">
+		<ul>
+								<li class="actnbr-btn actnbr-hidden">
+						<a class="actnbr-action actnbr-actn-comment" href="https://twoheartswellness.com/2024/10/01/gen-x-chinese-medicine-yes-please/#respond">
+							<svg class="gridicon gridicons-comment" height="20" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M12 16l-5 5v-5H5c-1.1 0-2-.9-2-2V5c0-1.1.9-2 2-2h14c1.1 0 2 .9 2 2v9c0 1.1-.9 2-2 2h-7z"/></g></svg>							<span>Comment						</span>
+						</a>
+					</li>
+									<li class="actnbr-btn actnbr-hidden">
+						<a class="actnbr-action actnbr-actn-reblog" href="">
+							<svg class="gridicon gridicons-reblog" height="20" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M22.086 9.914L20 7.828V18c0 1.105-.895 2-2 2h-7v-2h7V7.828l-2.086 2.086L14.5 8.5 19 4l4.5 4.5-1.414 1.414zM6 16.172V6h7V4H6c-1.105 0-2 .895-2 2v10.172l-2.086-2.086L.5 15.5 5 20l4.5-4.5-1.414-1.414L6 16.172z"/></g></svg><span>Reblog</span>
+						</a>
+					</li>
+									<li class="actnbr-btn actnbr-hidden">
+								<a class="actnbr-action actnbr-actn-follow " href="">
+			<svg class="gridicon" height="20" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path clip-rule="evenodd" d="m4 4.5h12v6.5h1.5v-6.5-1.5h-1.5-12-1.5v1.5 10.5c0 1.1046.89543 2 2 2h7v-1.5h-7c-.27614 0-.5-.2239-.5-.5zm10.5 2h-9v1.5h9zm-5 3h-4v1.5h4zm3.5 1.5h-1v1h1zm-1-1.5h-1.5v1.5 1 1.5h1.5 1 1.5v-1.5-1-1.5h-1.5zm-2.5 2.5h-4v1.5h4zm6.5 1.25h1.5v2.25h2.25v1.5h-2.25v2.25h-1.5v-2.25h-2.25v-1.5h2.25z"  fill-rule="evenodd"></path></svg>
+			<span>Subscribe</span>
+		</a>
+		<a class="actnbr-action actnbr-actn-following  no-display" href="">
+			<svg class="gridicon" height="20" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path fill-rule="evenodd" clip-rule="evenodd" d="M16 4.5H4V15C4 15.2761 4.22386 15.5 4.5 15.5H11.5V17H4.5C3.39543 17 2.5 16.1046 2.5 15V4.5V3H4H16H17.5V4.5V12.5H16V4.5ZM5.5 6.5H14.5V8H5.5V6.5ZM5.5 9.5H9.5V11H5.5V9.5ZM12 11H13V12H12V11ZM10.5 9.5H12H13H14.5V11V12V13.5H13H12H10.5V12V11V9.5ZM5.5 12H9.5V13.5H5.5V12Z" fill="#008A20"></path><path class="following-icon-tick" d="M13.5 16L15.5 18L19 14.5" stroke="#008A20" stroke-width="1.5"></path></svg>
+			<span>Subscribed</span>
+		</a>
+							<div class="actnbr-popover tip tip-top-left actnbr-notice" id="follow-bubble">
+							<div class="tip-arrow"></div>
+							<div class="tip-inner actnbr-follow-bubble">
+															<ul>
+											<li class="actnbr-sitename">
+			<a href="https://twoheartswellness.com">
+				<img alt='' src='https://s2.wp.com/i/logo/wpcom-gray-white.png' srcset='https://s2.wp.com/i/logo/wpcom-gray-white.png 1x' class='avatar avatar-50' height='50' width='50' />				Two Hearts Wellness			</a>
+		</li>
+										<div class="actnbr-message no-display"></div>
+									<form method="post" action="https://subscribe.wordpress.com" accept-charset="utf-8" style="display: none;">
+																						<div class="actnbr-follow-count">Join 31 other subscribers</div>
+																					<div>
+										<input type="email" name="email" placeholder="Enter your email address" class="actnbr-email-field" aria-label="Enter your email address" />
+										</div>
+										<input type="hidden" name="action" value="subscribe" />
+										<input type="hidden" name="blog_id" value="72892392" />
+										<input type="hidden" name="source" value="https://twoheartswellness.com/2024/10/01/gen-x-chinese-medicine-yes-please/" />
+										<input type="hidden" name="sub-type" value="actionbar-follow" />
+										<input type="hidden" id="_wpnonce" name="_wpnonce" value="f358da7456" />										<div class="actnbr-button-wrap">
+											<button type="submit" value="Sign me up">
+												Sign me up											</button>
+										</div>
+									</form>
+									<li class="actnbr-login-nudge">
+										<div>
+											Already have a WordPress.com account? <a href="https://wordpress.com/log-in?redirect_to=https%3A%2F%2Fr-login.wordpress.com%2Fremote-login.php%3Faction%3Dlink%26back%3Dhttps%253A%252F%252Ftwoheartswellness.com%252F2024%252F10%252F01%252Fgen-x-chinese-medicine-yes-please%252F">Log in now.</a>										</div>
+									</li>
+								</ul>
+															</div>
+						</div>
+					</li>
+							<li class="actnbr-ellipsis actnbr-hidden">
+				<svg class="gridicon gridicons-ellipsis" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M7 12c0 1.104-.896 2-2 2s-2-.896-2-2 .896-2 2-2 2 .896 2 2zm12-2c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm-7 0c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2z"/></g></svg>				<div class="actnbr-popover tip tip-top-left actnbr-more">
+					<div class="tip-arrow"></div>
+					<div class="tip-inner">
+						<ul>
+									<li class="actnbr-sitename">
+			<a href="https://twoheartswellness.com">
+				<img alt='' src='https://s2.wp.com/i/logo/wpcom-gray-white.png' srcset='https://s2.wp.com/i/logo/wpcom-gray-white.png 1x' class='avatar avatar-50' height='50' width='50' />				Two Hearts Wellness			</a>
+		</li>
+								<li class="actnbr-folded-customize">
+								<a href="https://pmbruno03.wordpress.com/wp-admin/customize.php?url=https%3A%2F%2Fpmbruno03.wordpress.com%2F2024%2F10%2F01%2Fgen-x-chinese-medicine-yes-please%2F">
+									<svg class="gridicon gridicons-customize" height="20" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M2 6c0-1.505.78-3.08 2-4 0 .845.69 2 2 2 1.657 0 3 1.343 3 3 0 .386-.08.752-.212 1.09.74.594 1.476 1.19 2.19 1.81L8.9 11.98c-.62-.716-1.214-1.454-1.807-2.192C6.753 9.92 6.387 10 6 10c-2.21 0-4-1.79-4-4zm12.152 6.848l1.34-1.34c.607.304 1.283.492 2.008.492 2.485 0 4.5-2.015 4.5-4.5 0-.725-.188-1.4-.493-2.007L18 9l-2-2 3.507-3.507C18.9 3.188 18.225 3 17.5 3 15.015 3 13 5.015 13 7.5c0 .725.188 1.4.493 2.007L3 20l2 2 6.848-6.848c1.885 1.928 3.874 3.753 5.977 5.45l1.425 1.148 1.5-1.5-1.15-1.425c-1.695-2.103-3.52-4.092-5.448-5.977z"/></g></svg>									<span>Customize</span>
+								</a>
+							</li>
+																<li class="actnbr-folded-follow">
+												<a class="actnbr-action actnbr-actn-follow " href="">
+			<svg class="gridicon" height="20" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path clip-rule="evenodd" d="m4 4.5h12v6.5h1.5v-6.5-1.5h-1.5-12-1.5v1.5 10.5c0 1.1046.89543 2 2 2h7v-1.5h-7c-.27614 0-.5-.2239-.5-.5zm10.5 2h-9v1.5h9zm-5 3h-4v1.5h4zm3.5 1.5h-1v1h1zm-1-1.5h-1.5v1.5 1 1.5h1.5 1 1.5v-1.5-1-1.5h-1.5zm-2.5 2.5h-4v1.5h4zm6.5 1.25h1.5v2.25h2.25v1.5h-2.25v2.25h-1.5v-2.25h-2.25v-1.5h2.25z"  fill-rule="evenodd"></path></svg>
+			<span>Subscribe</span>
+		</a>
+		<a class="actnbr-action actnbr-actn-following  no-display" href="">
+			<svg class="gridicon" height="20" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path fill-rule="evenodd" clip-rule="evenodd" d="M16 4.5H4V15C4 15.2761 4.22386 15.5 4.5 15.5H11.5V17H4.5C3.39543 17 2.5 16.1046 2.5 15V4.5V3H4H16H17.5V4.5V12.5H16V4.5ZM5.5 6.5H14.5V8H5.5V6.5ZM5.5 9.5H9.5V11H5.5V9.5ZM12 11H13V12H12V11ZM10.5 9.5H12H13H14.5V11V12V13.5H13H12H10.5V12V11V9.5ZM5.5 12H9.5V13.5H5.5V12Z" fill="#008A20"></path><path class="following-icon-tick" d="M13.5 16L15.5 18L19 14.5" stroke="#008A20" stroke-width="1.5"></path></svg>
+			<span>Subscribed</span>
+		</a>
+										</li>
+																	<li class="actnbr-signup"><a href="https://wordpress.com/start/">Sign up</a></li>
+									<li class="actnbr-login"><a href="https://wordpress.com/log-in?redirect_to=https%3A%2F%2Fr-login.wordpress.com%2Fremote-login.php%3Faction%3Dlink%26back%3Dhttps%253A%252F%252Ftwoheartswellness.com%252F2024%252F10%252F01%252Fgen-x-chinese-medicine-yes-please%252F">Log in</a></li>
+																	<li class="actnbr-shortlink"><a href="https://wp.me/p4VQDK-3vj">Copy shortlink</a></li>
+																	<li class="flb-report">
+										<a href="https://wordpress.com/abuse/?report_url=https://twoheartswellness.com/2024/10/01/gen-x-chinese-medicine-yes-please/" target="_blank" rel="noopener noreferrer">
+											Report this content										</a>
+									</li>
+																	<li class="actnbr-reader">
+										<a href="https://wordpress.com/read/blogs/72892392/posts/13473">
+											View post in Reader										</a>
+									</li>
+																	<li class="actnbr-subs">
+										<a href="https://subscribe.wordpress.com/">Manage subscriptions</a>
+									</li>
+																		<li class="actnbr-fold"><a href="">Collapse this bar</a></li>
+															</ul>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+	
+<script>
+window.addEventListener( "load", function( event ) {
+	var link = document.createElement( "link" );
+	link.href = "https://s0.wp.com/wp-content/mu-plugins/actionbar/actionbar.css?v=20240822";
+	link.type = "text/css";
+	link.rel = "stylesheet";
+	document.head.appendChild( link );
+
+	var script = document.createElement( "script" );
+	script.src = "https://s0.wp.com/wp-content/mu-plugins/actionbar/actionbar.js?v=20231122";
+	script.defer = true;
+	document.body.appendChild( script );
+} );
+</script>
+
+			<div id="jp-carousel-loading-overlay">
+			<div id="jp-carousel-loading-wrapper">
+				<span id="jp-carousel-library-loading">&nbsp;</span>
+			</div>
+		</div>
+		<div class="jp-carousel-overlay" style="display: none;">
+
+		<div class="jp-carousel-container">
+			<!-- The Carousel Swiper -->
+			<div
+				class="jp-carousel-wrap swiper-container jp-carousel-swiper-container jp-carousel-transitions"
+				itemscope
+				itemtype="https://schema.org/ImageGallery">
+				<div class="jp-carousel swiper-wrapper"></div>
+				<div class="jp-swiper-button-prev swiper-button-prev">
+					<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<mask id="maskPrev" mask-type="alpha" maskUnits="userSpaceOnUse" x="8" y="6" width="9" height="12">
+							<path d="M16.2072 16.59L11.6496 12L16.2072 7.41L14.8041 6L8.8335 12L14.8041 18L16.2072 16.59Z" fill="white"/>
+						</mask>
+						<g mask="url(#maskPrev)">
+							<rect x="0.579102" width="23.8823" height="24" fill="#FFFFFF"/>
+						</g>
+					</svg>
+				</div>
+				<div class="jp-swiper-button-next swiper-button-next">
+					<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<mask id="maskNext" mask-type="alpha" maskUnits="userSpaceOnUse" x="8" y="6" width="8" height="12">
+							<path d="M8.59814 16.59L13.1557 12L8.59814 7.41L10.0012 6L15.9718 12L10.0012 18L8.59814 16.59Z" fill="white"/>
+						</mask>
+						<g mask="url(#maskNext)">
+							<rect x="0.34375" width="23.8822" height="24" fill="#FFFFFF"/>
+						</g>
+					</svg>
+				</div>
+			</div>
+			<!-- The main close buton -->
+			<div class="jp-carousel-close-hint">
+				<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<mask id="maskClose" mask-type="alpha" maskUnits="userSpaceOnUse" x="5" y="5" width="15" height="14">
+						<path d="M19.3166 6.41L17.9135 5L12.3509 10.59L6.78834 5L5.38525 6.41L10.9478 12L5.38525 17.59L6.78834 19L12.3509 13.41L17.9135 19L19.3166 17.59L13.754 12L19.3166 6.41Z" fill="white"/>
+					</mask>
+					<g mask="url(#maskClose)">
+						<rect x="0.409668" width="23.8823" height="24" fill="#FFFFFF"/>
+					</g>
+				</svg>
+			</div>
+			<!-- Image info, comments and meta -->
+			<div class="jp-carousel-info">
+				<div class="jp-carousel-info-footer">
+					<div class="jp-carousel-pagination-container">
+						<div class="jp-swiper-pagination swiper-pagination"></div>
+						<div class="jp-carousel-pagination"></div>
+					</div>
+					<div class="jp-carousel-photo-title-container">
+						<h2 class="jp-carousel-photo-caption"></h2>
+					</div>
+					<div class="jp-carousel-photo-icons-container">
+						<a href="#" class="jp-carousel-icon-btn jp-carousel-icon-info" aria-label="Toggle photo metadata visibility">
+							<span class="jp-carousel-icon">
+								<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<mask id="maskInfo" mask-type="alpha" maskUnits="userSpaceOnUse" x="2" y="2" width="21" height="20">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M12.7537 2C7.26076 2 2.80273 6.48 2.80273 12C2.80273 17.52 7.26076 22 12.7537 22C18.2466 22 22.7046 17.52 22.7046 12C22.7046 6.48 18.2466 2 12.7537 2ZM11.7586 7V9H13.7488V7H11.7586ZM11.7586 11V17H13.7488V11H11.7586ZM4.79292 12C4.79292 16.41 8.36531 20 12.7537 20C17.142 20 20.7144 16.41 20.7144 12C20.7144 7.59 17.142 4 12.7537 4C8.36531 4 4.79292 7.59 4.79292 12Z" fill="white"/>
+									</mask>
+									<g mask="url(#maskInfo)">
+										<rect x="0.8125" width="23.8823" height="24" fill="#FFFFFF"/>
+									</g>
+								</svg>
+							</span>
+						</a>
+												<a href="#" class="jp-carousel-icon-btn jp-carousel-icon-comments" aria-label="Toggle photo comments visibility">
+							<span class="jp-carousel-icon">
+								<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<mask id="maskComments" mask-type="alpha" maskUnits="userSpaceOnUse" x="2" y="2" width="21" height="20">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M4.3271 2H20.2486C21.3432 2 22.2388 2.9 22.2388 4V16C22.2388 17.1 21.3432 18 20.2486 18H6.31729L2.33691 22V4C2.33691 2.9 3.2325 2 4.3271 2ZM6.31729 16H20.2486V4H4.3271V18L6.31729 16Z" fill="white"/>
+									</mask>
+									<g mask="url(#maskComments)">
+										<rect x="0.34668" width="23.8823" height="24" fill="#FFFFFF"/>
+									</g>
+								</svg>
+
+								<span class="jp-carousel-has-comments-indicator" aria-label="This image has comments."></span>
+							</span>
+						</a>
+											</div>
+				</div>
+				<div class="jp-carousel-info-extra">
+					<div class="jp-carousel-info-content-wrapper">
+						<div class="jp-carousel-photo-title-container">
+							<h2 class="jp-carousel-photo-title"></h2>
+						</div>
+						<div class="jp-carousel-comments-wrapper">
+															<div id="jp-carousel-comments-loading">
+									<span>Loading Comments...</span>
+								</div>
+								<div class="jp-carousel-comments"></div>
+								<div id="jp-carousel-comment-form-container">
+									<span id="jp-carousel-comment-form-spinner">&nbsp;</span>
+									<div id="jp-carousel-comment-post-results"></div>
+																														<form id="jp-carousel-comment-form">
+												<label for="jp-carousel-comment-form-comment-field" class="screen-reader-text">Write a Comment...</label>
+												<textarea
+													name="comment"
+													class="jp-carousel-comment-form-field jp-carousel-comment-form-textarea"
+													id="jp-carousel-comment-form-comment-field"
+													placeholder="Write a Comment..."
+												></textarea>
+												<div id="jp-carousel-comment-form-submit-and-info-wrapper">
+													<div id="jp-carousel-comment-form-commenting-as">
+																													<fieldset>
+																<label for="jp-carousel-comment-form-email-field">Email (Required)</label>
+																<input type="text" name="email" class="jp-carousel-comment-form-field jp-carousel-comment-form-text-field" id="jp-carousel-comment-form-email-field" />
+															</fieldset>
+															<fieldset>
+																<label for="jp-carousel-comment-form-author-field">Name (Required)</label>
+																<input type="text" name="author" class="jp-carousel-comment-form-field jp-carousel-comment-form-text-field" id="jp-carousel-comment-form-author-field" />
+															</fieldset>
+															<fieldset>
+																<label for="jp-carousel-comment-form-url-field">Website</label>
+																<input type="text" name="url" class="jp-carousel-comment-form-field jp-carousel-comment-form-text-field" id="jp-carousel-comment-form-url-field" />
+															</fieldset>
+																											</div>
+													<input
+														type="submit"
+														name="submit"
+														class="jp-carousel-comment-form-button"
+														id="jp-carousel-comment-form-button-submit"
+														value="Post Comment" />
+												</div>
+											</form>
+																											</div>
+													</div>
+						<div class="jp-carousel-image-meta">
+							<div class="jp-carousel-title-and-caption">
+								<div class="jp-carousel-photo-info">
+									<h3 class="jp-carousel-caption" itemprop="caption description"></h3>
+								</div>
+
+								<div class="jp-carousel-photo-description"></div>
+							</div>
+							<ul class="jp-carousel-image-exif" style="display: none;"></ul>
+							<a class="jp-carousel-image-download" href="#" target="_blank" style="display: none;">
+								<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="3" y="3" width="19" height="18">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M5.84615 5V19H19.7775V12H21.7677V19C21.7677 20.1 20.8721 21 19.7775 21H5.84615C4.74159 21 3.85596 20.1 3.85596 19V5C3.85596 3.9 4.74159 3 5.84615 3H12.8118V5H5.84615ZM14.802 5V3H21.7677V10H19.7775V6.41L9.99569 16.24L8.59261 14.83L18.3744 5H14.802Z" fill="white"/>
+									</mask>
+									<g mask="url(#mask0)">
+										<rect x="0.870605" width="23.8823" height="24" fill="#FFFFFF"/>
+									</g>
+								</svg>
+								<span class="jp-carousel-download-text"></span>
+							</a>
+							<div class="jp-carousel-image-map" style="display: none;"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		</div>
+		
+	<script type="text/javascript">
+		window.WPCOM_sharing_counts = {"https:\/\/twoheartswellness.com\/2024\/10\/01\/gen-x-chinese-medicine-yes-please\/":13473};
+	</script>
+						<style id='jetpack-block-slideshow-inline-css'>
+.wp-block-jetpack-slideshow{margin-bottom:1.5em;position:relative}.wp-block-jetpack-slideshow [tabindex="-1"]:focus{outline:0}.wp-block-jetpack-slideshow.wp-amp-block>.wp-block-jetpack-slideshow_container{opacity:1}.wp-block-jetpack-slideshow.wp-amp-block.wp-block-jetpack-slideshow__autoplay .wp-block-jetpack-slideshow_button-play,.wp-block-jetpack-slideshow.wp-amp-block.wp-block-jetpack-slideshow__autoplay.wp-block-jetpack-slideshow__autoplay-playing .wp-block-jetpack-slideshow_button-pause{display:block}.wp-block-jetpack-slideshow.wp-amp-block.wp-block-jetpack-slideshow__autoplay.wp-block-jetpack-slideshow__autoplay-playing .wp-block-jetpack-slideshow_button-play{display:none}.wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_container{opacity:0;overflow:hidden;width:100%}.wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_container.wp-swiper-initialized{opacity:1}.wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_container.swiper-container{display:block}.wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_container .wp-block-jetpack-slideshow_slide,.wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_container .wp-block-jetpack-slideshow_swiper-wrapper{line-height:normal;margin:0;padding:0}.wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_container ul.wp-block-jetpack-slideshow_swiper-wrapper{display:flex}.wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_slide{display:flex;height:100%;width:100%}.wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_slide figure{align-items:center;display:flex;height:100%;justify-content:center;margin:0;position:relative;width:100%}.wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_slide figure .wp-block-jetpack-slideshow_image{pointer-events:none;-webkit-user-select:none;user-select:none}.wp-block-jetpack-slideshow.alignfull .wp-block-jetpack-slideshow_image,.wp-block-jetpack-slideshow.alignwide .wp-block-jetpack-slideshow_image{max-width:unset;object-fit:cover;width:100vw}.wp-block-jetpack-slideshow .swiper-container-fade .wp-block-jetpack-slideshow_slide:not(.swiper-slide-active){opacity:0!important}.wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_image{display:block;height:auto;max-height:100%;max-width:100%;object-fit:contain;width:auto}.wp-block-jetpack-slideshow .amp-carousel-button,.wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_button-next,.wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_button-pause,.wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_button-play,.wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_button-prev{background-color:#fff;background-position:50%;background-repeat:no-repeat;background-size:contain;border:0;border-radius:4px;box-shadow:none;height:30px;margin:-14px 0 0;opacity:.5;padding:0;transition:opacity .5s ease-out;width:28px}.wp-block-jetpack-slideshow .amp-carousel-button:focus,.wp-block-jetpack-slideshow .amp-carousel-button:hover,.wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_button-next:focus,.wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_button-next:hover,.wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_button-pause:focus,.wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_button-pause:hover,.wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_button-play:focus,.wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_button-play:hover,.wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_button-prev:focus,.wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_button-prev:hover{background-color:#fff;opacity:1}.wp-block-jetpack-slideshow .amp-carousel-button:focus,.wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_button-next:focus,.wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_button-pause:focus,.wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_button-play:focus,.wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_button-prev:focus{outline:thin dotted #fff;outline-offset:-4px}.wp-block-jetpack-slideshow .amp-carousel-button{margin:0}.wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_button-next,.wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_button-prev{display:none}.wp-block-jetpack-slideshow .swiper-button-next:after,.wp-block-jetpack-slideshow .swiper-button-prev:after,.wp-block-jetpack-slideshow .swiper-container-rtl .swiper-button-next:after,.wp-block-jetpack-slideshow .swiper-container-rtl .swiper-button-prev:after{content:""}.wp-block-jetpack-slideshow .amp-carousel-button-next,.wp-block-jetpack-slideshow .swiper-button-next.swiper-button-white,.wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_button-next,.wp-block-jetpack-slideshow.swiper-container-rtl .swiper-button-prev.swiper-button-white,.wp-block-jetpack-slideshow.swiper-container-rtl .wp-block-jetpack-slideshow_button-prev{background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNSIgaGVpZ2h0PSIyNCIgZmlsbD0ibm9uZSI+PG1hc2sgaWQ9ImEiIHdpZHRoPSI4IiBoZWlnaHQ9IjEyIiB4PSI4IiB5PSI2IiBtYXNrLXR5cGU9ImFscGhhIiBtYXNrVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cGF0aCBmaWxsPSIjZmZmIiBkPSJNOC41OTggMTYuNTkgMTMuMTU2IDEyIDguNTk4IDcuNDEgMTAuMDAxIDZsNS45NyA2LTUuOTcgNnoiLz48L21hc2s+PGcgbWFzaz0idXJsKCNhKSI+PHBhdGggZmlsbD0iIzAwMCIgZD0iTS4zNDQgMGgyMy44ODJ2MjRILjM0NHoiLz48L2c+PC9zdmc+)}.wp-block-jetpack-slideshow .amp-carousel-button-prev,.wp-block-jetpack-slideshow .swiper-button-prev.swiper-button-white,.wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_button-prev,.wp-block-jetpack-slideshow.swiper-container-rtl .swiper-button-next.swiper-button-white,.wp-block-jetpack-slideshow.swiper-container-rtl .wp-block-jetpack-slideshow_button-next{background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNSIgaGVpZ2h0PSIyNCIgZmlsbD0ibm9uZSI+PG1hc2sgaWQ9ImEiIHdpZHRoPSI5IiBoZWlnaHQ9IjEyIiB4PSI4IiB5PSI2IiBtYXNrLXR5cGU9ImFscGhhIiBtYXNrVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cGF0aCBmaWxsPSIjZmZmIiBkPSJNMTYuMjA3IDE2LjU5IDExLjY1IDEybDQuNTU3LTQuNTlMMTQuODA0IDZsLTUuOTcgNiA1Ljk3IDZ6Ii8+PC9tYXNrPjxnIG1hc2s9InVybCgjYSkiPjxwYXRoIGZpbGw9IiMwMDAiIGQ9Ik0uNTc5IDBoMjMuODgydjI0SC41Nzl6Ii8+PC9nPjwvc3ZnPg==)}.wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_button-pause,.wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_button-play{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cpath d='M6 19h4V5H6zm8-14v14h4V5z'/%3E%3Cpath fill='none' d='M0 0h24v24H0z'/%3E%3C/svg%3E");display:none;inset-inline-end:10px;margin-top:0;position:absolute;top:10px;z-index:1}.wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_autoplay-paused .wp-block-jetpack-slideshow_button-pause,.wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_button-play{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cpath d='M8 5v14l11-7z'/%3E%3Cpath fill='none' d='M0 0h24v24H0z'/%3E%3C/svg%3E")}.wp-block-jetpack-slideshow:has(>div[data-autoplay=true]) .wp-block-jetpack-slideshow_button-pause,.wp-block-jetpack-slideshow[data-autoplay=true] .wp-block-jetpack-slideshow_button-pause{display:block}.wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_caption.gallery-caption{background-color:#00000080;bottom:0;box-sizing:border-box;color:#fff;cursor:text;left:0;margin:0!important;max-height:100%;opacity:1;padding:.75em;position:absolute;right:0;text-align:initial;z-index:1}.wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_caption.gallery-caption a{color:inherit}.wp-block-jetpack-slideshow[data-autoplay=true] .wp-block-jetpack-slideshow_caption.gallery-caption{max-height:calc(100% - 68px)}.wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_pagination.swiper-pagination-bullets,.wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_pagination.swiper-pagination-custom{bottom:0;display:flex;gap:8px;justify-content:flex-start;line-height:24px;padding:10px 0 2px;position:relative}.wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_pagination.swiper-pagination-bullets .swiper-pagination-bullet,.wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_pagination.swiper-pagination-custom .swiper-pagination-bullet{background:currentColor;color:currentColor;height:8px;opacity:.5;transform:scale(.75);transition:opacity .25s,transform .25s;vertical-align:top;width:8px}.wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_pagination.swiper-pagination-bullets .swiper-pagination-bullet:focus,.wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_pagination.swiper-pagination-bullets .swiper-pagination-bullet:hover,.wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_pagination.swiper-pagination-custom .swiper-pagination-bullet:focus,.wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_pagination.swiper-pagination-custom .swiper-pagination-bullet:hover{opacity:1}.wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_pagination.swiper-pagination-bullets .swiper-pagination-bullet:focus,.wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_pagination.swiper-pagination-custom .swiper-pagination-bullet:focus{outline:thin dotted;outline-offset:0}.wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_pagination.swiper-pagination-bullets .swiper-pagination-bullet-active,.wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_pagination.swiper-pagination-bullets .swiper-pagination-bullet[selected],.wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_pagination.swiper-pagination-custom .swiper-pagination-bullet-active,.wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_pagination.swiper-pagination-custom .swiper-pagination-bullet[selected]{background-color:currentColor;opacity:1;transform:scale(1)}.wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_pagination.swiper-pagination-bullets .swiper-pagination-simple,.wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_pagination.swiper-pagination-custom .swiper-pagination-simple{font-size:14px;line-height:16px;text-align:start;width:100%}.wp-block-jetpack-slideshow_pagination.amp-pagination{text-align:center}.wp-block-jetpack-slideshow_pagination.amp-pagination .swiper-pagination-bullet{border:0;border-radius:100%;display:inline-block;margin:0 4px;padding:0}@media(min-width:600px){.wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_button-next,.wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_button-prev{display:block}}.is-email .wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_container{height:auto;opacity:1;overflow:visible;width:auto}.is-email .wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_container ul.wp-block-jetpack-slideshow_swiper-wrapper,.is-email .wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_slide figure{display:block;margin-bottom:12px}.is-email .wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_container ul.wp-block-jetpack-slideshow_swiper-wrapper,.is-email .wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_slide{list-style:none;margin-left:auto;margin-right:auto}.is-email .wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_slide{display:inline-block;height:auto;margin-left:2%!important;margin-right:2%!important;vertical-align:top;width:42%}.is-email .wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_caption.gallery-caption{background-color:#0000;bottom:auto;color:inherit;inset-inline-end:auto;padding-top:0;position:relative}
+</style>
+<link crossorigin='anonymous' rel='stylesheet' id='all-css-2-2' href='https://s2.wp.com/_static/??-eJydjEEKgCAQAD+UrR6KLtFbTJfQdJXWxe9HUB/oOMMw0KtyhRpSgyyqJjkCMURs1brzZWAhyMVLQgZnryKMCbiHipfahXzC0TEP8H/2NZ94fltezbxMxkx61vEGx+U/hQ==&cssminify=yes' type='text/css' media='all' />
+<script type="text/javascript" id="comment-like-js-extra">
+/* <![CDATA[ */
+var comment_like_text = {"loading":"Loading...","swipeUrl":"https:\/\/s2.wp.com\/wp-content\/mu-plugins\/comment-likes\/js\/lib\/swipe.js?ver=20131008"};
+/* ]]> */
+</script>
+<script type="text/javascript" id="coblocks-loader-js-extra">
+/* <![CDATA[ */
+var wpcom_coblocks_js = {"coblocks_masonry_js":"https:\/\/s2.wp.com\/wp-content\/plugins\/coblocks\/2.18.1-simple-rev.4\/dist\/js\/coblocks-masonry.min.js","coblocks_lightbox_js":"https:\/\/s2.wp.com\/wp-content\/plugins\/coblocks\/2.18.1-simple-rev.4\/dist\/js\/coblocks-lightbox.min.js","jquery_core_js":"\/wp-includes\/js\/jquery\/jquery.min.js","jquery_migrate_js":"\/wp-includes\/js\/jquery\/jquery-migrate.min.js","masonry_js":"\/wp-includes\/js\/masonry.min.js","imagesloaded_js":"\/wp-includes\/js\/imagesloaded.min.js"};
+var coblocksLigthboxData = {"closeLabel":"Close Gallery","leftLabel":"Previous","rightLabel":"Next"};
+/* ]]> */
+</script>
+<script type="text/javascript" id="resonar-script-js-extra">
+/* <![CDATA[ */
+var screenReaderText = {"expand":"<span class=\"screen-reader-text\">expand child menu<\/span>","collapse":"<span class=\"screen-reader-text\">collapse child menu<\/span>"};
+var toggleButtonText = {"menu":"Menu","widgets":"Widgets","both":"Menu & Widgets"};
+/* ]]> */
+</script>
+<script type="text/javascript" id="verbum-settings-js-before">
+/* <![CDATA[ */
+window.VerbumComments = {"Log in or provide your name and email to leave a reply.":"Log in or provide your name and email to leave a reply.","Log in or provide your name and email to leave a comment.":"Log in or provide your name and email to leave a comment.","Receive web and mobile notifications for posts on this site.":"Receive web and mobile notifications for posts on this site.","Name":"Name","Email (address never made public)":"Email (address never made public)","Website (optional)":"Website (optional)","Leave a reply. (log in optional)":"Leave a reply. (log in optional)","Leave a comment. (log in optional)":"Leave a comment. (log in optional)","Log in to leave a reply.":"Log in to leave a reply.","Log in to leave a comment.":"Log in to leave a comment.","Logged in via %s":"Logged in via %s","Log out":"Log out","Email":"Email","(Address never made public)":"(Address never made public)","Instantly":"Instantly","Daily":"Daily","Reply":"Reply","Comment":"Comment","WordPress":"WordPress","Weekly":"Weekly","Notify me of new posts":"Notify me of new posts","Email me new posts":"Email me new posts","Email me new comments":"Email me new comments","Cancel":"Cancel","Write a comment...":"Write a comment...","Write a reply...":"Write a reply...","Website":"Website","Optional":"Optional","We'll keep you in the loop!":"We'll keep you in the loop!","Loading your comment...":"Loading your comment...","Discover more from":"Discover more from Two Hearts Wellness","Subscribe now to keep reading and get access to the full archive.":"Subscribe now to keep reading and get access to the full archive.","Continue reading":"Continue reading","Never miss a beat!":"Never miss a beat!","Interested in getting blog post updates? Simply click the button below to stay in the loop!":"Interested in getting blog post updates? Simply click the button below to stay in the loop!","Enter your email address":"Enter your email address","Subscribe":"Subscribe","Comment sent successfully":"Comment sent successfully","Save my name, email, and website in this browser for the next time I comment.":"Save my name, email, and website in this browser for the next time I comment.","siteId":72892392,"postId":13473,"mustLogIn":false,"requireNameEmail":true,"commentRegistration":false,"connectURL":"https:\/\/pmbruno03.wordpress.com\/public.api\/connect\/?action=request&domain=twoheartswellness.com","logoutURL":"https:\/\/pmbruno03.wordpress.com\/wp-login.php?action=logout&_wpnonce=4e2349be9c","homeURL":"https:\/\/twoheartswellness.com\/","subscribeToBlog":true,"subscribeToComment":true,"isJetpackCommentsLoggedIn":false,"jetpackUsername":"","jetpackUserId":0,"jetpackSignature":"","jetpackAvatar":"https:\/\/0.gravatar.com\/avatar\/?s=96&amp;d=identicon&amp;r=G","enableBlocks":true,"enableSubscriptionModal":true,"currentLocale":"en","isJetpackComments":false,"allowedBlocks":["core\/paragraph","core\/list","core\/code","core\/list-item","core\/quote","core\/image","core\/embed","core\/quote","core\/code"],"embedNonce":"ffe80c9c4e","verbumBundleUrl":"https:\/\/s2.wp.com\/wp-content\/mu-plugins\/jetpack-mu-wpcom-plugin\/sun\/vendor\/automattic\/jetpack-mu-wpcom\/src\/features\/verbum-comments\/dist\/index.js","isRTL":false,"vbeCacheBuster":1721244820}
+/* ]]> */
+</script>
+<script type="text/javascript" id="jetpack-blocks-assets-base-url-js-before">
+/* <![CDATA[ */
+var Jetpack_Block_Assets_Base_Url="https://s0.wp.com/wp-content/mu-plugins/jetpack-plugin/sun/_inc/blocks/";
+/* ]]> */
+</script>
+<script crossorigin='anonymous' type='text/javascript'  src='https://s2.wp.com/_static/??-eJyNj+FOwzAMhF+I1OpgDH4gniVNXOY2cbI43tjbL1M3IQpC/LJk33d3hlM2LnFFrhDV5KAfxAKBZhQ4KCruLfuApZvkAX4XT1izdbNpq1N2Kd4OIMpwRPapgNWaoq2V3A81SHEwKAXfxGXQ2CJibBECVgTb8Ge2kZwJyfo/i9xAs7SfVos1+EUNIblZYNP1L11vhGIOaAoeuyfwJHVxWkT3EpF47Vf3GFts1gEKSmJbrqDMlFs+z2ZMTsWM9HkHiV1Q/71pwRzO/3cflV2lxNfn3uNbv9tsnx/7110/XQCLW7AG'></script>
+<script type="text/javascript" crossorigin='anonymous' src="https://s0.wp.com/wp-content/plugins/gutenberg-core/v19.4.0/build/dom-ready/index.min.js?m=1728516282i&amp;ver=222ad38e3e5e302c8bbf" id="wp-dom-ready-js"></script>
+<script type="text/javascript" id="wp-dom-ready-js-after">
+/* <![CDATA[ */
+wp.galleryBlockV2Enabled = true
+/* ]]> */
+</script>
+<script type="text/javascript" crossorigin='anonymous' src="https://s0.wp.com/wp-content/plugins/gutenberg-core/v19.4.0/build/escape-html/index.min.js?m=1728516282i&amp;ver=fbad781820bda8333f76" id="wp-escape-html-js"></script>
+<script type="text/javascript" crossorigin='anonymous' src="https://s0.wp.com/wp-content/plugins/gutenberg-core/v19.4.0/build/hooks/index.min.js?m=1728516282i&amp;ver=84e753e2b66eb7028d38" id="wp-hooks-js"></script>
+<script type="text/javascript" crossorigin='anonymous' src="https://s0.wp.com/wp-content/plugins/gutenberg-core/v19.4.0/build/i18n/index.min.js?m=1728516282i&amp;ver=5baa98e4345eccc97e24" id="wp-i18n-js"></script>
+<script type="text/javascript" id="wp-i18n-js-after">
+/* <![CDATA[ */
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+/* ]]> */
+</script>
+<script type="text/javascript" id="jetpack-carousel-js-extra">
+/* <![CDATA[ */
+var jetpackSwiperLibraryPath = {"url":"https:\/\/s2.wp.com\/wp-content\/mu-plugins\/jetpack-plugin\/sun\/_inc\/build\/carousel\/swiper-bundle.min.js"};
+var jetpackCarouselStrings = {"widths":[370,700,1000,1200,1400,2000],"is_logged_in":"","lang":"en","ajaxurl":"https:\/\/twoheartswellness.com\/wp-admin\/admin-ajax.php","nonce":"5ae41703a1","display_exif":"1","display_comments":"1","single_image_gallery":"1","single_image_gallery_media_file":"","background_color":"black","comment":"Comment","post_comment":"Post Comment","write_comment":"Write a Comment...","loading_comments":"Loading Comments...","download_original":"View full size <span class=\"photo-size\">{0}<span class=\"photo-size-times\">\u00d7<\/span>{1}<\/span>","no_comment_text":"Please be sure to submit some text with your comment.","no_comment_email":"Please provide an email address to comment.","no_comment_author":"Please provide your name to comment.","comment_post_error":"Sorry, but there was an error posting your comment. Please try again later.","comment_approved":"Your comment was approved.","comment_unapproved":"Your comment is in moderation.","camera":"Camera","aperture":"Aperture","shutter_speed":"Shutter Speed","focal_length":"Focal Length","copyright":"Copyright","comment_registration":"0","require_name_email":"1","login_url":"https:\/\/pmbruno03.wordpress.com\/wp-login.php?redirect_to=https%3A%2F%2Ftwoheartswellness.com%2F2024%2F10%2F01%2Fgen-x-chinese-medicine-yes-please%2F","blog_id":"72892392","meta_data":["camera","aperture","shutter_speed","focal_length","copyright"],"stats_query_args":"blog=72892392&v=wpcom&tz=0&user_id=0&subd=pmbruno03","is_public":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" id="sharing-js-js-extra">
+/* <![CDATA[ */
+var sharing_js_options = {"lang":"en","counts":"1","is_stats_active":"1"};
+/* ]]> */
+</script>
+<script crossorigin='anonymous' type='text/javascript'  src='https://s2.wp.com/_static/??-eJydj8EOgjAQRH/IsohBuRg/xdS2wkK7bbqtjX9vguDBA4nediYzbzNQglCekqEELotgc4/EMJoUpJoWDZwJrkgKbtariYEtasODL/BAU6qRd/AjJ6PVoGT0mY39xFajckgbVDkhO5PEoarfuNW4xzmsN7rrC1GC8u5L/r2EBxmNllo/5xOpXyZc3Hl/arq2PrZNN74ASMqIng=='></script>
+<script type="text/javascript" id="sharing-js-js-after">
+/* <![CDATA[ */
+var windowOpen;
+			( function () {
+				function matches( el, sel ) {
+					return !! (
+						el.matches && el.matches( sel ) ||
+						el.msMatchesSelector && el.msMatchesSelector( sel )
+					);
+				}
+
+				document.body.addEventListener( 'click', function ( event ) {
+					if ( ! event.target ) {
+						return;
+					}
+
+					var el;
+					if ( matches( event.target, 'a.share-facebook' ) ) {
+						el = event.target;
+					} else if ( event.target.parentNode && matches( event.target.parentNode, 'a.share-facebook' ) ) {
+						el = event.target.parentNode;
+					}
+
+					if ( el ) {
+						event.preventDefault();
+
+						// If there's another sharing window open, close it.
+						if ( typeof windowOpen !== 'undefined' ) {
+							windowOpen.close();
+						}
+						windowOpen = window.open( el.getAttribute( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
+						return false;
+					}
+				} );
+			} )();
+var windowOpen;
+			( function () {
+				function matches( el, sel ) {
+					return !! (
+						el.matches && el.matches( sel ) ||
+						el.msMatchesSelector && el.msMatchesSelector( sel )
+					);
+				}
+
+				document.body.addEventListener( 'click', function ( event ) {
+					if ( ! event.target ) {
+						return;
+					}
+
+					var el;
+					if ( matches( event.target, 'a.share-twitter' ) ) {
+						el = event.target;
+					} else if ( event.target.parentNode && matches( event.target.parentNode, 'a.share-twitter' ) ) {
+						el = event.target.parentNode;
+					}
+
+					if ( el ) {
+						event.preventDefault();
+
+						// If there's another sharing window open, close it.
+						if ( typeof windowOpen !== 'undefined' ) {
+							windowOpen.close();
+						}
+						windowOpen = window.open( el.getAttribute( 'href' ), 'wpcomtwitter', 'menubar=1,resizable=1,width=600,height=350' );
+						return false;
+					}
+				} );
+			} )();
+var windowOpen;
+			( function () {
+				function matches( el, sel ) {
+					return !! (
+						el.matches && el.matches( sel ) ||
+						el.msMatchesSelector && el.msMatchesSelector( sel )
+					);
+				}
+
+				document.body.addEventListener( 'click', function ( event ) {
+					if ( ! event.target ) {
+						return;
+					}
+
+					var el;
+					if ( matches( event.target, 'a.share-linkedin' ) ) {
+						el = event.target;
+					} else if ( event.target.parentNode && matches( event.target.parentNode, 'a.share-linkedin' ) ) {
+						el = event.target.parentNode;
+					}
+
+					if ( el ) {
+						event.preventDefault();
+
+						// If there's another sharing window open, close it.
+						if ( typeof windowOpen !== 'undefined' ) {
+							windowOpen.close();
+						}
+						windowOpen = window.open( el.getAttribute( 'href' ), 'wpcomlinkedin', 'menubar=1,resizable=1,width=580,height=450' );
+						return false;
+					}
+				} );
+			} )();
+/* ]]> */
+</script>
+
+	<script type="text/javascript">
+		(function () {
+			var wpcom_reblog = {
+				source: 'toolbar',
+
+				toggle_reblog_box_flair: function (obj_id, post_id) {
+
+					// Go to site selector. This will redirect to their blog if they only have one.
+					const postEndpoint = `https://wordpress.com/post`;
+
+					// Ideally we would use the permalink here, but fortunately this will be replaced with the 
+					// post permalink in the editor.
+					const originalURL = `${ document.location.href }?page_id=${ post_id }`; 
+					
+					const url =
+						postEndpoint +
+						'?url=' +
+						encodeURIComponent( originalURL ) +
+						'&is_post_share=true' +
+						'&v=5';
+
+					const redirect = function () {
+						if (
+							! window.open( url, '_blank' )
+						) {
+							location.href = url;
+						}
+					};
+
+					if ( /Firefox/.test( navigator.userAgent ) ) {
+						setTimeout( redirect, 0 );
+					} else {
+						redirect();
+					}
+				},
+			};
+
+			window.wpcom_reblog = wpcom_reblog;
+		})();
+	</script>
+<script type="text/javascript">
+// <![CDATA[
+(function() {
+try{
+  if ( window.external &&'msIsSiteMode' in window.external) {
+    if (window.external.msIsSiteMode()) {
+      var jl = document.createElement('script');
+      jl.type='text/javascript';
+      jl.async=true;
+      jl.src='/wp-content/plugins/ie-sitemode/custom-jumplist.php';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(jl, s);
+    }
+  }
+}catch(e){}
+})();
+// ]]>
+</script>	<iframe src='https://widgets.wp.com/likes/master.html?ver=20241014#ver=20241014&amp;origin=https://twoheartswellness.com' scrolling='no' id='likes-master' name='likes-master' style='display:none;'></iframe>
+	<div id='likes-other-gravatars' class='wpl-new-layout' role="dialog" aria-hidden="true" tabindex="-1">
+		<div class="likes-text">
+			<span>%d</span>		</div>
+		<ul class="wpl-avatars sd-like-gravatars"></ul>
+	</div>
+
+		<script src="//stats.wp.com/w.js?67" defer></script> <script type="text/javascript">
+_tkq = window._tkq || [];
+_stq = window._stq || [];
+_tkq.push(['storeContext', {'blog_id':'72892392','blog_tz':'0','user_lang':'en','blog_lang':'en','user_id':'0'}]);
+_stq.push(['view', {'blog':'72892392','v':'wpcom','tz':'0','user_id':'0','post':'13473','subd':'pmbruno03'}]);
+_stq.push(['extra', {'crypt':'UE40eW5QN0p8M2Y/RE1mNzc2NTVTamdsd0xoLz9RQkM2K298TXY9bERQMXc2MjhEaVZfb2wwakRoSj0mUkp1THptM1NdbkV1WjZIcU9mVWQmPUIvMlN6Jk8wW3NYVEJ3dWZOWExuWD9PbmJvTXVIQko2aStuN3ZiLVBaWmJCd2hRQUt4RHUtcGZ8dXcxZlRJWFlDZUF1THxaPS1YSUpSRGFkeC52c1FGTGMwUi1HQ0cwMzFtLTM4Tn41YjcwPy1NeVpKNls5UU82dmxacEZ5bFluRmhqUl9sMm9tWC8uWWZ0blhIUT1yQXZxNkdycyVpL2dDRF9Ca0dQLFt3NEtGVEdabDVQZlcufDgrWi5bb0dpTnRfUE9acXJDWUVDTnMvP3Uzd19TVmo4enY9flJjMXl4bFJhVWU1dzEwanA/fEcwaGFPM2d0Y3FZJWEmPzFUdjN3'}]);
+_stq.push([ 'clickTrackerInit', '72892392', '13473' ]);
+</script>
+<noscript><img src="https://pixel.wp.com/b.gif?v=noscript" style="height:1px;width:1px;overflow:hidden;position:absolute;bottom:1px;" alt="" /></noscript>
+<script>
+if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
+
+	wpcom_mobile_user_agent_info.init();
+	var mobileStatsQueryString = "";
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedPlatformName )
+		mobileStatsQueryString += "&x_" + 'mobile_platforms' + '=' + wpcom_mobile_user_agent_info.matchedPlatformName;
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedUserAgentName )
+		mobileStatsQueryString += "&x_" + 'mobile_devices' + '=' + wpcom_mobile_user_agent_info.matchedUserAgentName;
+	
+	if( wpcom_mobile_user_agent_info.isIPad() )
+		mobileStatsQueryString += "&x_" + 'ipad_views' + '=' + 'views';
+
+	if( "" != mobileStatsQueryString ) {
+		new Image().src = document.location.protocol + '//pixel.wp.com/g.gif?v=wpcom-no-pv' + mobileStatsQueryString + '&baba=' + Math.random();
+	}
+	
+}
+</script>
+<script>
+(function() {
+	'use strict';
+
+	const fetches = {};
+	const promises = {};
+	const urls = {
+		'wp-polyfill': 'https://s1.wp.com/wp-includes/js/dist/vendor/wp-polyfill.min.js?m=1727178113i&ver=3.15.0',
+		'verbum': 'https://s2.wp.com/wp-content/mu-plugins/jetpack-mu-wpcom-plugin/sun/vendor/automattic/jetpack-mu-wpcom/src/build/verbum-comments/verbum-comments.js?m=1726614918i&minify=false&ver=08c34240db8ba5e448b2'
+	};
+	const loaders = {
+		'verbum': () => {
+			fetchExternalScript('wp-polyfill');
+			fetchExternalScript('verbum');
+			promises['wp-polyfill'] = promises['wp-polyfill'] || loadWPScript('wp-polyfill');
+			promises['verbum'] = promises['verbum'] || promises['wp-polyfill'].then( () => loadWPScript('verbum') );
+			return promises['verbum'];
+		},
+		
+	};
+	const scriptExtras = {
+		
+	};
+
+	window.WP_Enqueue_Dynamic_Script = {
+		loadScript: (handle) => {
+			if (!loaders[handle]) {
+				console.error('WP_Enqueue_Dynamic_Script: unregistered script `' + handle + '`.');
+			}
+			return loaders[handle]();
+		}
+	};
+
+	function fetchExternalScript(handle) {
+		if (!urls[handle]) {
+			return Promise.resolve();
+		}
+
+		fetches[handle] = fetches[handle] || fetch(urls[handle], { mode: 'no-cors' });
+		return fetches[handle];
+	}
+
+	function runExtraScript(handle, type, index) {
+		const id = 'wp-enqueue-dynamic-script:' + handle + ':' + type + ':' + (index + 1);
+		const template = document.getElementById(id);
+		if (!template) {
+			return Promise.reject();
+		}
+
+		const script = document.createElement( 'script' );
+		script.innerHTML = template.innerHTML;
+		document.body.appendChild( script );
+		return Promise.resolve();
+	}
+
+	function loadExternalScript(handle) {
+		if (!urls[handle]) {
+			return Promise.resolve();
+		}
+
+		return fetches[handle].then(() => {
+			return new Promise((resolve, reject) => {
+				const script = document.createElement('script');
+				script.onload = () => resolve();
+				script.onerror = (e) => reject(e);
+				script.src = urls[handle];
+				document.body.appendChild(script);
+			});
+		});
+	}
+
+	function loadExtra(handle, pos) {
+		const count = (scriptExtras[handle] && scriptExtras[handle][pos]) || 0;
+		let promise = Promise.resolve();
+
+		for (let i = 0; i < count; i++) {
+			promise = promise.then(() => runExtraScript(handle, pos, i));
+		}
+
+		return promise;
+	}
+
+	function loadWPScript(handle) {
+		// Core loads scripts in this order. See: https://github.com/WordPress/WordPress/blob/a59eb9d39c4fcba834b70c9e8dfd64feeec10ba6/wp-includes/class-wp-scripts.php#L428.
+		return loadExtra(handle, 'translations')
+			.then(() => loadExtra(handle, 'before'))
+			.then(() => loadExternalScript(handle))
+			.then(() => loadExtra(handle, 'after'));
+	}
+} )();
+</script>
+</body>
+</html>

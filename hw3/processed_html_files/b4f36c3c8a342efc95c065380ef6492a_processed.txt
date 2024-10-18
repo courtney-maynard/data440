@@ -1,0 +1,2 @@
+Post author
+An artificial intelligence model effectively predicted “futile” surgeries in intrahepatic cholangiocarcinoma patients, utilizing ten preoperative factors. In a study of 827 cases, 378 (45.7%) experienced insufficient surgical outcomes, with notable rates of recurrence (78.6%) and mortality (21.4%) within 12 months. The model achieved high accuracy, with a training area under the curve of 0.830 and a testing area of 0.781, thus providing clinicians with a reliable preoperative tool to avoid ineffective surgeries.

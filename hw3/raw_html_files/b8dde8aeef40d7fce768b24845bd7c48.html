@@ -1,0 +1,4180 @@
+
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8"/>
+    <title>Practical Applications of Generative AI in the Supply Chain</title>
+    
+    
+    <meta name="template" content="article-page"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+    
+    
+    
+     <script type="module">
+  window.RUM_BASE = window.origin;
+  import { sampleRUM } from '/.rum/@adobe/helix-rum-js@%5E2/src/index.js';
+  window.hlx = window.hlx || {};
+  window.hlx.sampleRUM = sampleRUM;
+  sampleRUM();
+</script><script src="https://cdn.optimizely.com/js/29793560205.js"></script>
+
+     <script type='text/javascript'>
+      var zaius = window['zaius'] || (window['zaius'] = []);
+      zaius.methods = ["initialize", "onload", "customer", "entity", "event", "subscribe", "unsubscribe", "consent", "identify", "anonymize", "dispatch"];
+      zaius.factory = function(e) {
+      return function() {
+          var t = Array.prototype.slice.call(arguments);
+          t.unshift(e);
+          zaius.push(t);
+          return zaius
+      }
+      };
+      (function() {
+          for (var i = 0; i < zaius.methods.length; i++) {
+              var method = zaius.methods[i];
+              zaius[method] = zaius.factory(method)
+          }
+          var e = document.createElement("script");
+          e.type = "text/javascript";
+          e.async = true;
+          e.src = ("https:" === document.location.protocol ? "https://" : "http://") + "d1igp3oop3iho5.cloudfront.net/v2/9_xQPnjXEE7Gp9K4YcNVJQ/zaius-min.js";
+          var t = document.getElementsByTagName("script")[0];
+          t.parentNode.insertBefore(e, t)
+      })();
+      
+      // Edits to this script should only be made below this line.
+      zaius.event('pageview');
+
+      </script>
+
+    
+    
+<link rel="canonical" href="https://www.gs1us.org/articles/practical-applications-of-generative-ai-in-the-supply-chain"/>
+
+
+    
+
+
+    <meta name="og:title" content="Practical Applications of Generative AI in the Supply Chain"/>
+    <meta name="og:description"/>
+    <meta name="og:image"/>
+    <meta name="og:keywords" content=""/>
+    <meta name="og:tags" content=","/>
+    <meta name="og:locale" content="en"/>
+    <meta name="og:url" content="https://www.gs1us.org/articles/practical-applications-of-generative-ai-in-the-supply-chain"/>
+    <meta name="og:site_name" content="GS1US"/>
+    <meta name="google-site-verification"/>
+	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"/>
+
+
+
+
+
+<link rel="SHORTCUT ICON" type="image/x-icon" href="/etc.clientlibs/gs1us-aem/clientlibs/clientlib-site/resources/favicons/favicon.ico"/>
+
+
+
+
+
+
+    
+    
+<link rel="stylesheet" href="/etc.clientlibs/gs1us-aem/clientlibs/clientlib-base.lc-b72fd4bed890c607fcab0dc95c19b899-lc.min.css" type="text/css">
+
+
+
+
+<script type="text/javascript">
+
+
+;(function(win, doc, style, timeout) {
+
+    var STYLE_ID = 'at-body-style';
+
+    function getParent() {
+
+      return doc.getElementsByTagName('head')[0];
+
+    }
+
+    function addStyle(parent, id, def) {
+
+      if (!parent) {
+
+        return;
+
+      }
+
+      var style = doc.createElement('style');
+
+      style.id = id;
+
+      style.innerHTML = def;
+
+      parent.appendChild(style);
+
+    }
+
+    function removeStyle(parent, id) {
+
+      if (!parent) {
+
+        return;
+
+      }
+
+      var style = doc.getElementById(id);
+
+      if (!style) {
+
+        return;
+
+      }
+
+      parent.removeChild(style);
+
+    }
+
+    addStyle(getParent(), STYLE_ID, style);
+
+    setTimeout(function() {
+
+      removeStyle(getParent(), STYLE_ID);
+
+    }, timeout);
+
+  }(window, document, "body {opacity: 0 !important}", 500));
+
+
+</script>
+
+
+<meta id="BackendData" style="display: none;" data-page-url="https://www.gs1us.org/articles/practical-applications-of-generative-ai-in-the-supply-chain" data-page-depth="3" data-page-name="Practical Applications of Generative AI in the Supply Chain" data-page-primarycategory="articles" data-page-one="practical-applications-of-generative-ai-in-the-supply-chain" data-location-key="d95b847cf9564c248a98f9b5ac388d07" data-breadcrumb-arr="Home---Articles---Practical Applications of Generative AI in the Supply Chain" data-page-environment="prod"/>
+
+<script type="text/javascript">
+
+const BackendData = document.getElementById("BackendData");
+const modelPageName = BackendData.dataset.pageName;
+const modelPageUrl = BackendData.dataset.pageUrl;
+const ModelPageLevel = BackendData.dataset.pageDepth;
+const modelPrimaryCat = BackendData.dataset.pagePrimarycategory;
+const modelSubCat1 = BackendData.dataset.pageOne;
+const modelSubCat2 = BackendData.dataset.pageTwo;
+const modelSubCat3 = BackendData.dataset.pageThree;
+const modelSubCat4 = BackendData.dataset.pageFour;
+const modelSubCat5 = BackendData.dataset.pageFive;
+const modelbreadcrumbArr = BackendData.dataset.breadcrumbArr;
+const modelEnvironment = BackendData.dataset.pageEnvironment;
+const breadCrumb = modelbreadcrumbArr.split("---");
+const locationAPIKey = BackendData.dataset.locationKey;
+var defaultCountry = "United States";//This will be a fallback value when user denied to access the browser geo location
+const getDeviceType = () => {
+	const ua = navigator.userAgent;
+	if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
+		return "tablet";
+	}
+	if (
+		/Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(
+			ua
+		)
+	) {
+		return "mobile";
+	}
+	return "desktop";
+};
+
+var device = getDeviceType();
+var lastPage = document.referrer;
+
+var country;
+var options = {
+	enableHighAccuracy: true,
+	timeout: 5000,
+	maximumAge: 0
+};
+
+
+var today = new Date();
+var currentDate = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+var currentTime = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+
+
+function success(position) {
+	var crd = position.coords;
+	lattitude = crd.latitude;
+	longitude = crd.longitude;
+
+	fetch('https://api.opencagedata.com/geocode/v1/json?q=' + lattitude + '+' + longitude + '&key=' + locationAPIKey)
+		.then(res => res.json())
+		.then(response => {
+
+
+			country = response.results[0].components.country;
+			dataLayer[0].page.attributes.country = country;
+			sessionStorage.setItem("country", country);
+
+		})
+		.catch((data, status) => {
+			console.log('Request failed');
+		})
+
+}
+
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.splice(0, 0, {
+	page: {
+		pageInfo: {
+			pageName: modelPageName,
+			pageURL: modelPageUrl,
+			deviceType: device,
+			breadCrumbs: breadCrumb,
+			page_level: ModelPageLevel,
+			environment: modelEnvironment,
+			referrer: lastPage
+
+
+		},
+		category: {
+
+			site_section: "Public",
+			primaryCategory: modelPrimaryCat,
+			subCategory1: modelSubCat1 == undefined ? "" : modelSubCat1,
+			subCategory2: modelSubCat2 == undefined ? "" : modelSubCat2,
+			subCategory3: modelSubCat3 == undefined ? "" : modelSubCat3,
+			subCategory4: modelSubCat4 == undefined ? "" : modelSubCat4,
+			subCategory5: modelSubCat5 == undefined ? "" : modelSubCat5
+
+		},
+
+		attributes: {
+
+			country: country,
+			date: currentDate,
+			time: currentTime
+
+		}
+	},
+
+});
+
+const removeEmptyOrNull = (obj) => {
+
+	Object.keys(obj).forEach(
+
+		(k) =>
+
+		(obj[k] &&
+
+			typeof obj[k] === "object" &&
+
+			removeEmptyOrNull(obj[k])) ||
+
+		(!obj[k] && delete obj[k])
+
+	);
+
+	return obj;
+
+};
+
+removeEmptyOrNull(dataLayer[0].page);
+
+
+function error(err) {
+	console.log('Please enable browser location to fetch the country : ');
+	dataLayer[0].page.attributes.country = defaultCountry;
+}
+if (sessionStorage.getItem("country") == null) {
+	navigator.geolocation.getCurrentPosition(success, error, options);
+} else {
+	country = sessionStorage.getItem("country");
+	dataLayer[0].page.attributes.country = country;
+}
+
+
+</script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-P2JJVS');</script>
+<!-- End Google Tag Manager -->
+
+
+
+
+
+
+
+
+    
+    
+    
+
+    
+
+    
+
+
+        <script type="text/javascript" src="//assets.adobedtm.com/5c6a4b507aa4/db7c4274e880/launch-f78f970c5e6b.min.js" async></script>
+
+
+    
+    
+
+    
+    <link rel="stylesheet" href="/etc.clientlibs/gs1us-aem/clientlibs/clientlib-site.lc-1728899559913-lc.min.css" type="text/css">
+
+
+    
+
+    
+    
+</head>
+    <body class="page basicpage" id="page-9956725417" data-cmp-data-layer-enabled>
+		  
+		<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P2JJVS" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+
+
+        
+        
+            
+
+
+
+
+            
+<div itemprop="text" class="gs1-us-container responsivegrid page">
+
+    
+    <div id="container-7cc9625a7b" class="cmp-container">
+        
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="experiencefragment aem-GridColumn aem-GridColumn--default--12">
+<div id="experiencefragment-e587d62b70" class="cmp-experiencefragment cmp-experiencefragment--header">
+
+
+    
+    <div id="gs1us-header" class="cmp-container">
+        
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="header aem-GridColumn--default--none aem-GridColumn aem-GridColumn--default--12 aem-GridColumn--offset--default--0">
+
+    <script src="/etc.clientlibs/gs1us-aem/clientlibs/clientlib-base.lc-e1f34f440cb5dd7619a3c5f7f576b092-lc.min.js"></script>
+<script src="/etc.clientlibs/gs1us-aem/clientlibs/clientlib-header.lc-1728899559913-lc.min.js"></script>
+
+
+<header class="page-header">
+	<!-- notification area start -->
+	<div class="page-header__notification-container">
+		<div>
+			<div><div class="notificationbar">
+
+<style>
+    .header-banner{
+        background-color:E5F0FC
+    }
+    .header-banner__text{
+        color:001F3F
+    }
+    .header-banner__link {
+        color:001F3F
+    }
+</style>
+<div class="header-banner" id="header-banner">
+    <div class="header-banner__container wrapper">
+        <div class="header-banner__container-inner">
+            <p class="header-banner__text">50 Years of Confidence, Powered By GS1. One Big Idea, Infinite Possibilities. <a href="https://www.gs1us.org/who-we-are/about-us?creative_slot=home&creative_name=ribbon&promotion_name=scanniversary&promotion_id=123" target="_self" class="header-banner__link" role="link" aria-label="Learn More.">Learn More.</a> </p>
+            <button id="bannerCloseBtn" class="header-banner__close-btn" aria-label="Close">
+                <span class="header-banner__close-icon"></span>
+            </button>
+        </div>
+    </div>
+</div></div>
+</div>
+		</div>
+	</div>
+	<!-- notification area end -->
+	<div class="page-header__nav-container">
+		<div class="gs-header">
+			<div class="gs-header__top-container wrapper">
+				<div class="gs-header__top-left-container">
+					<div class="gs-logo"><div class="image">
+<div data-cmp-dmimage id="image-a13226573d" class="cmp-image" itemscope itemtype="http://schema.org/ImageObject">
+
+
+	<a role="link" href="/">
+		<img src="https://assets.gs1us.org/is/image/gsoneus/logo?ts=1710923392409&dpr=off" alt="GS1 US Logo" class="gs-logo__image"/>
+	</a>
+
+
+	
+	
+</div>
+
+    
+</div>
+</div>
+					<div class="gs-header__mobile-search-ham-container">
+						<div class="gs-header__mobile-search-icon">
+							<div class="gs-cta gs-cta--lg gs-cta--no-underline gs-cta-- gs-cta--link">
+								<a role="link" href="#" class="gs-cta__link" aria-label=" " data-cta-name=" "> <span class="cmp-button__text"> </span> <span class="cmp-button__icon" aria-hidden="true"> </span> </a>
+							</div>
+						</div>
+						<div class="gs-header__mobile-ham-icon">
+							<div class="gs-ham-menu">
+								<div class="gs-cta gs-cta--lg gs-cta--no-underline gs-cta-- gs-cta--link">
+									<a role="link" href="#" class="gs-cta__link" aria-label=" " data-cta-name=" "> <span class="cmp-button__text"> </span> <span class="cmp-button__icon" aria-hidden="true"> </span> </a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="gs-header__top-right-container">
+					<div class="gs-header__nav-container"><div class="navigationBar">
+
+<div></div>
+
+<div class="header-links">
+	<div class="header-links__container">
+		<p class="header-links__description">The Global Language of Business</p>
+		<ul class=" header-links__list">
+			<li class="header-links__list-item">
+				<div class="gs-cta gs-cta--sm gs-cta--has-underline gs-cta--light gs-cta--link">
+					<a role="link" href="https://my.gs1us.org/" target="_blank" class="gs-cta__link" aria-label="GS1 US Store" data-cta-name="GS1 US Store">
+						<span class="cmp-button__text">GS1 US Store</span>
+					</a>
+				</div>
+			</li>
+	    
+			<li class="header-links__list-item">
+				<div class="gs-cta gs-cta--sm gs-cta--has-underline gs-cta--light gs-cta--link">
+					<a role="link" href="/education-and-events/events/gs1-connect" target="_self" class="gs-cta__link" aria-label="GS1 Connect Conference" data-cta-name="GS1 Connect Conference">
+						<span class="cmp-button__text">GS1 Connect Conference</span>
+					</a>
+				</div>
+			</li>
+	    
+			<li class="header-links__list-item">
+				<div class="gs-cta gs-cta--sm gs-cta--has-underline gs-cta--light gs-cta--link">
+					<a role="link" href="/small-business" target="_self" class="gs-cta__link" aria-label="Small Business" data-cta-name="Small Business">
+						<span class="cmp-button__text">Small Business</span>
+					</a>
+				</div>
+			</li>
+	    </ul>
+	</div>
+</div>
+</div>
+</div>
+					<div class="gs-header__action-container">
+						<div class="gs-header__search-container"><div class="suggestions">
+<div class="gs-global-search">
+    <div class="gs-global-search__search-container">
+        <input type="hidden" class="search-suggestion-resource" value="/content/experience-fragments/gs1us/us/en/site/header/header-supply-chain/jcr:content/root/header/search"/>
+        <input type="hidden" class="results-page" value="/content/gs1us/us/en/search"/>
+        <input type="hidden" class="suggestions-count" value="100"/>
+        <button class="gs-global-search__search-icon-btn">
+            <img src="/etc.clientlibs/gs1us-aem/clientlibs/clientlib-site/resources/icons/normal_search_u296.svg" alt="Search GS1 US"/>
+        </button>
+        <input class="gs-global-search__search-field gs-global-search__search-field--hidden" type="text" placeholder="Search GS1 US" autocomplete="on"/>
+    </div>
+</div>
+</div>
+</div>
+						<div class="gs-header__cta-btn">
+							<div class="gs-dd-cta">
+
+<div></div>
+
+
+  <div class="gs-dd-cta__dd-cta-container">
+    <div class="gs-cta gs-cta--md gs-cta--no-underline gs-cta--chevron-down-white gs-cta--primary-btn">
+      <a role="button" href="#" class="gs-cta__link" aria-label="Get a Barcode" data-cta-name="Get a Barcode">
+        <span class="cmp-button__text">Get a Barcode</span>
+        <span class="cmp-button__icon" aria-hidden="true"> </span>
+      </a>
+    </div>
+  </div>
+
+  <div class="gs-dd-cta__dropdown-hidden">
+    <div class="gs-dd-cta__dropdown-container">
+      <div class="gs-dd-cta-dropdown">
+        <ul class="gs-dd-cta-dropdown__list">
+          
+            <li class="gs-dd-cta-dropdown__list-item">
+              <div class="gs-cta gs-cta--md gs-cta--no-underline gs-cta--orange gs-cta--link">
+                <a role="link" href="/upcs-barcodes-prefixes/what-is-a-prefix" target="_self" class="gs-cta__link" aria-label="Get Several UPC Barcodes" data-cta-name="Get Several UPC Barcodes">
+                  <span class="cmp-button__text">Get Several UPC Barcodes</span>
+                  <span class="cmp-button__icon" aria-hidden="true"> </span>
+                </a>
+              </div>
+            </li>
+          
+            <li class="gs-dd-cta-dropdown__list-item">
+              <div class="gs-cta gs-cta--md gs-cta--no-underline gs-cta--orange gs-cta--link">
+                <a role="link" href="/upcs-barcodes-prefixes/what-is-a-gtin" target="_self" class="gs-cta__link" aria-label="Get a Single UPC Barcode" data-cta-name="Get a Single UPC Barcode">
+                  <span class="cmp-button__text">Get a Single UPC Barcode</span>
+                  <span class="cmp-button__icon" aria-hidden="true"> </span>
+                </a>
+              </div>
+            </li>
+          
+            <li class="gs-dd-cta-dropdown__list-item">
+              <div class="gs-cta gs-cta--md gs-cta--no-underline gs-cta--orange gs-cta--link">
+                <a role="link" href="/industries-and-insights/standards/global-location-number/get-a-global-location-number" target="_self" class="gs-cta__link" aria-label="Global Location Number (GLN)" data-cta-name="Global Location Number (GLN)">
+                  <span class="cmp-button__text">Global Location Number (GLN)</span>
+                  <span class="cmp-button__icon" aria-hidden="true"> </span>
+                </a>
+              </div>
+            </li>
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+						</div>
+						<div class="gs-header__cta-btn">
+							<div class="gs-login-cta">
+
+<div></div>
+
+
+	<div class="gs-login-cta__login-cta-container">
+		<div class="gs-cta gs-cta--md gs-cta--no-underline gs-cta--chevron-down-orange  gs-cta--secondary-btn">
+			<a role="button" href="#" class="gs-cta__link" aria-label="Login" data-cta-name="Login">
+				<span class="cmp-button__text">Login</span>
+				<span class="cmp-button__icon" aria-hidden="true">
+				</span>
+			</a>
+		</div>
+	</div>
+
+  <div class="gs-login-cta__dropdown-hidden">
+    <div class="gs-login-cta__dropdown-container">
+		<div class="gs-login-dropdown">
+			<ul class="gs-login-dropdown__list">
+            
+			<li class="gs-login-dropdown__list-item">
+					<div class="gs-cta gs-cta--md gs-cta--no-underline gs-cta--orange gs-cta--link">
+						<a role="link" href="https://dh.gs1us.org/" target="_blank" class="gs-cta__link" aria-label="Access my Barcodes (Data Hub)" data-cta-name="Access my Barcodes (Data Hub)">
+							<span class="cmp-button__text">Access my Barcodes (Data Hub)</span>
+							<span class="cmp-button__icon" aria-hidden="true">
+							</span>
+						</a>
+					</div>
+				</li>
+             
+			<li class="gs-login-dropdown__list-item">
+					<div class="gs-cta gs-cta--md gs-cta--no-underline gs-cta--orange gs-cta--link">
+						<a role="link" href="https://my.gs1us.org/account/login" target="_blank" class="gs-cta__link" aria-label="myGS1 US" data-cta-name="myGS1 US">
+							<span class="cmp-button__text">myGS1 US</span>
+							<span class="cmp-button__icon" aria-hidden="true">
+							</span>
+						</a>
+					</div>
+				</li>
+             
+			</ul>
+		</div>
+	</div>
+  </div> 
+
+</div>
+
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			<div class="gs-header__bottom-container">
+				<div class="gs-header__bottom-container--inner wrapper">
+
+
+
+
+    <ul class="gs-mega-menu">
+        
+
+
+
+
+    
+    
+    <li class="gs-mega-menu__item">
+
+
+
+<div class="gs-mega-menu-item" aria-expanded="false" role="list" aria-busy="true">
+    <div class="gs-cta gs-cta--lg gs-cta--no-underline gs-cta--dark gs-cta--link">
+        <a role="link" href="#" class="gs-cta__link" aria-label="UPC, Barcodes &amp; Prefixes" data-cta-name="UPC, Barcodes &amp; Prefixes"> <span class="cmp-button__text">UPC, Barcodes &amp; Prefixes</span> </a>
+    </div>
+    <div class="gs-mega-menu-item__secondary-menu-container" role="listitem">
+        <div class="gs-secondary-menu">
+		<input type="hidden" class="featureVal" value="true"/>
+           
+              
+  <div class="gs-secondary-menu-feature-section" style="background-color:#F0F5FA;">
+    
+      <h5>Get Market Ready</h5>
+<hr />
+
+<h6><a href="/upcs-barcodes-prefixes/how-to-get-a-upc-barcode" title="How to Get a UPC Barcode">How to Get a UPC Barcode</a><br />
+</h6>
+<h6><a href="/tools/barcode-estimator">How Many Barcodes Do I Need?</a></h6>
+<h6><a href="https://spfinder.gs1us.org/home?ServiceQueryCriteria.Services&#61;2&amp;ServiceQueryCriteria.Services&#61;35" title="Find a Partner for Packaging &amp; Printing" target="_blank" rel="noopener noreferrer">Find a Partner for Packaging &amp; Printing</a></h6>
+<h6><a href="/tools/gs1-us-data-hub/create-upc-barcodes-and-manage-your-data" title="Create or Manage Your Barcode">Create or Manage Your Barcode</a><br />
+<br />
+<a href="/who-we-are/about-us">Why GS1 US?</a></h6>
+
+    
+    <input type="hidden" class="featureBgClr" value="#F0F5FA"/>
+  </div>
+
+           
+		  <div class="gs-secondary-menu-section">
+            
+                <a role="link" href="/upcs-barcodes-prefixes" aria-label="UPC, Barcodes &amp; Prefixes" target="_self" data-cta-name="UPC, Barcodes &amp; Prefixes">
+                    <h3 class="gs-secondary-menu__heading">UPC, Barcodes &amp; Prefixes</h3>
+                </a>
+            
+            
+            <ul class="gs-secondary-menu__list">
+                
+                    
+
+    
+        <li class="gs-secondary-menu__list-item">
+            <div class="gs-secondary-menu-item">
+
+
+
+
+
+                <h4 class="gs-secondary-menu-item__heading">
+                    <div class="gs-cta gs-cta--lg gs-cta--no-underline gs-cta--dark gs-cta--link">
+                        <a role="link" href="/upcs-barcodes-prefixes/guide-to-upcs" target="_self" class="gs-cta__link" aria-label="Learn More About Barcodes" data-cta-name="Learn More About Barcodes"> <span class="cmp-button__text">Learn More About Barcodes</span> </a>
+                    </div>
+                </h4>
+                <ul class="gs-secondary-menu-item__subitem-list" aria-expanded="false">
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/upcs-barcodes-prefixes/guide-to-upcs" target="_self" class="gs-cta__link" aria-label="Guide to UPCs" data-cta-name="Guide to UPCs"> <span class="cmp-button__text">Guide to UPCs</span> </a>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/upcs-barcodes-prefixes/barcode-types" target="_self" class="gs-cta__link" aria-label="Barcode Types" data-cta-name="Barcode Types"> <span class="cmp-button__text">Barcode Types</span> </a>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/upcs-barcodes-prefixes/create-a-barcode" target="_self" class="gs-cta__link" aria-label="Create a UPC Barcode" data-cta-name="Create a UPC Barcode"> <span class="cmp-button__text">Create a UPC Barcode</span> </a>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/upcs-barcodes-prefixes/what-is-a-prefix" target="_self" class="gs-cta__link" aria-label="What is a Prefix?" data-cta-name="What is a Prefix?"> <span class="cmp-button__text">What is a Prefix?</span> </a>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/upcs-barcodes-prefixes/what-is-a-gtin" target="_self" class="gs-cta__link" aria-label="What is a GTIN?" data-cta-name="What is a GTIN?"> <span class="cmp-button__text">What is a GTIN?</span> </a>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/industries-and-insights/standards/global-location-number" target="_self" class="gs-cta__link" aria-label="What is a GLN?" data-cta-name="What is a GLN?"> <span class="cmp-button__text">What is a GLN?</span> </a>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/upcs-barcodes-prefixes/2d-barcodes" target="_self" class="gs-cta__link" aria-label="The World of 2D Barcodes" data-cta-name="The World of 2D Barcodes"> <span class="cmp-button__text">The World of 2D Barcodes</span> </a>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/upcs-barcodes-prefixes/topics" target="_self" class="gs-cta__link" aria-label="More Barcode Topics" data-cta-name="More Barcode Topics"> <span class="cmp-button__text">More Barcode Topics</span> </a>
+                            </div>
+                        </li>
+                    
+                </ul>
+            </div>
+        </li>
+    
+
+                
+                    
+
+    
+        <li class="gs-secondary-menu__list-item">
+            <div class="gs-secondary-menu-item">
+
+
+
+
+
+                <h4 class="gs-secondary-menu-item__heading">
+                    <div class="gs-cta gs-cta--lg gs-cta--no-underline gs-cta--dark gs-cta--link">
+                        <a role="link" href="#" target="_self" class="gs-cta__link" aria-label="Use Your Barcodes" data-cta-name="Use Your Barcodes"> <span class="cmp-button__text">Use Your Barcodes</span> </a>
+                    </div>
+                </h4>
+                <ul class="gs-secondary-menu-item__subitem-list" aria-expanded="false">
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/tools/gs1-us-data-hub/create-upc-barcodes-and-manage-your-data" target="_self" class="gs-cta__link" aria-label="Create or Manage Your Barcodes" data-cta-name="Create or Manage Your Barcodes"> <span class="cmp-button__text">Create or Manage Your Barcodes</span> </a>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/upcs-barcodes-prefixes/how-to-use-your-upc-barcodes/place-barcodes-on-products" target="_self" class="gs-cta__link" aria-label="Place Barcodes on Products" data-cta-name="Place Barcodes on Products"> <span class="cmp-button__text">Place Barcodes on Products</span> </a>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="https://spfinder.gs1us.org/home?BarcodeServcieQueryCriteria.BarcodeServices=2" target="_blank" class="gs-cta__link" aria-label="Find a Partner for Printing" data-cta-name="Find a Partner for Printing"> <span class="cmp-button__text">Find a Partner for Printing</span> </a>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="https://spfinder.gs1us.org/home?ServiceQueryCriteria.Services=35" target="_blank" class="gs-cta__link" aria-label="Find a Solution Partner for Packaging" data-cta-name="Find a Solution Partner for Packaging"> <span class="cmp-button__text">Find a Solution Partner for Packaging</span> </a>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/tools/gs1-us-data-hub/search-and-verify-trading-partner-information" target="_self" class="gs-cta__link" aria-label="Look Up Product Data" data-cta-name="Look Up Product Data"> <span class="cmp-button__text">Look Up Product Data</span> </a>
+                            </div>
+                        </li>
+                    
+                </ul>
+            </div>
+        </li>
+    
+
+                
+                    
+
+    
+        <li class="gs-secondary-menu__list-item">
+            <div class="gs-secondary-menu-item">
+
+
+
+
+
+                <h4 class="gs-secondary-menu-item__heading">
+                    <div class="gs-cta gs-cta--lg gs-cta--no-underline gs-cta--dark gs-cta--link">
+                        <a role="link" href="/small-business" target="_self" class="gs-cta__link" aria-label="Enable Business Growth" data-cta-name="Enable Business Growth"> <span class="cmp-button__text">Enable Business Growth</span> </a>
+                    </div>
+                </h4>
+                <ul class="gs-secondary-menu-item__subitem-list" aria-expanded="false">
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/small-business/how-gs1-supports" target="_self" class="gs-cta__link" aria-label="Why GS1 US For Small Business" data-cta-name="Why GS1 US For Small Business"> <span class="cmp-button__text">Why GS1 US For Small Business</span> </a>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/small-business/inventory-management-for-small-business" target="_self" class="gs-cta__link" aria-label="Inventory Management for Small Business" data-cta-name="Inventory Management for Small Business"> <span class="cmp-button__text">Inventory Management for Small Business</span> </a>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/upcs-barcodes-prefixes/amazon/barcodes-for-amazon" target="_self" class="gs-cta__link" aria-label="Selling Through Marketplaces" data-cta-name="Selling Through Marketplaces"> <span class="cmp-button__text">Selling Through Marketplaces</span> </a>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/small-business/packaging-that-sells" target="_self" class="gs-cta__link" aria-label="Product Packaging that Sells" data-cta-name="Product Packaging that Sells"> <span class="cmp-button__text">Product Packaging that Sells</span> </a>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/small-business/how-to-get-your-product-manufactured" target="_self" class="gs-cta__link" aria-label="How to Get a Product Manufactured" data-cta-name="How to Get a Product Manufactured"> <span class="cmp-button__text">How to Get a Product Manufactured</span> </a>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/small-business/wholesale-distribution" target="_self" class="gs-cta__link" aria-label="Working With Wholesale Distribution Partners" data-cta-name="Working With Wholesale Distribution Partners"> <span class="cmp-button__text">Working With Wholesale Distribution Partners</span> </a>
+                            </div>
+                        </li>
+                    
+                </ul>
+            </div>
+        </li>
+    
+
+                
+            </ul>
+			</div>
+        </div>
+    </div>
+</div>
+</li>
+
+
+    
+    
+    <li class="gs-mega-menu__item">
+
+
+
+<div class="gs-mega-menu-item" aria-expanded="false" role="list" aria-busy="true">
+    <div class="gs-cta gs-cta--lg gs-cta--no-underline gs-cta--dark gs-cta--link">
+        <a role="link" href="#" class="gs-cta__link" aria-label="Tools &amp; Resources" target="_self" data-cta-name="Tools &amp; Resources"> <span class="cmp-button__text">Tools &amp; Resources</span> </a>
+    </div>
+    <div class="gs-mega-menu-item__secondary-menu-container" role="listitem">
+        <div class="gs-secondary-menu">
+		<input type="hidden" class="featureVal" value="false"/>
+           
+		  <div class="gs-secondary-menu-section">
+            
+            
+                <h3 class="gs-secondary-menu__heading">Tools &amp; Resources</h3>
+            
+            <ul class="gs-secondary-menu__list">
+                
+                    
+
+    
+        <li class="gs-secondary-menu__list-item">
+            <div class="gs-secondary-menu-item">
+
+
+
+
+
+                <h4 class="gs-secondary-menu-item__heading">
+                    <div class="gs-cta gs-cta--lg gs-cta--no-underline gs-cta--dark gs-cta--link">
+                        <a role="link" href="/tools" target="_self" class="gs-cta__link" aria-label="Tools" data-cta-name="Tools"> <span class="cmp-button__text">Tools</span> </a>
+                    </div>
+                </h4>
+                <ul class="gs-secondary-menu-item__subitem-list" aria-expanded="false">
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/tools/gs1-us-data-hub" target="_self" class="gs-cta__link" aria-label="GS1 US Data Hub" data-cta-name="GS1 US Data Hub"> <span class="cmp-button__text">GS1 US Data Hub</span> </a>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/tools/gs1-company-database-gepir" target="_self" class="gs-cta__link" aria-label="GS1 Database" data-cta-name="GS1 Database"> <span class="cmp-button__text">GS1 Database</span> </a>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/tools/barcode-estimator" target="_self" class="gs-cta__link" aria-label="Barcode Estimator" data-cta-name="Barcode Estimator"> <span class="cmp-button__text">Barcode Estimator</span> </a>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/upcs-barcodes-prefixes/create-a-barcode" target="_self" class="gs-cta__link" aria-label="Create a UPC Barcode" data-cta-name="Create a UPC Barcode"> <span class="cmp-button__text">Create a UPC Barcode</span> </a>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/tools/check-digit-calculator" target="_self" class="gs-cta__link" aria-label="Check Digit Calculator" data-cta-name="Check Digit Calculator"> <span class="cmp-button__text">Check Digit Calculator</span> </a>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/tools/epc-encoder-and-decoder" target="_self" class="gs-cta__link" aria-label="EPC Encoder / Decoder" data-cta-name="EPC Encoder / Decoder"> <span class="cmp-button__text">EPC Encoder / Decoder</span> </a>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/tools/user-memory-encoder-and-decoder" target="_self" class="gs-cta__link" aria-label="User Memory Encoder / Decoder" data-cta-name="User Memory Encoder / Decoder"> <span class="cmp-button__text">User Memory Encoder / Decoder</span> </a>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="https://www.gs1.org/1/gtinrules/en/decision-support" target="_blank" class="gs-cta__link" aria-label="GTIN Management Standard Decision Tool" data-cta-name="GTIN Management Standard Decision Tool"> <span class="cmp-button__text">GTIN Management Standard Decision Tool</span> </a>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="https://lookup.gs1us.org/location/bygln" target="_blank" class="gs-cta__link" aria-label="Global Location Number Lookup" data-cta-name="Global Location Number Lookup"> <span class="cmp-button__text">Global Location Number Lookup</span> </a>
+                            </div>
+                        </li>
+                    
+                </ul>
+            </div>
+        </li>
+    
+
+                
+                    
+
+    
+        <li class="gs-secondary-menu__list-item">
+            <div class="gs-secondary-menu-item">
+
+
+
+
+
+                <h4 class="gs-secondary-menu-item__heading">
+                    <div class="gs-cta gs-cta--lg gs-cta--no-underline gs-cta--dark gs-cta--link">
+                        <a role="link" href="/services" target="_self" class="gs-cta__link" aria-label="Services" data-cta-name="Services"> <span class="cmp-button__text">Services</span> </a>
+                    </div>
+                </h4>
+                <ul class="gs-secondary-menu-item__subitem-list" aria-expanded="false">
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/services/advisory-services" target="_self" class="gs-cta__link" aria-label="Advisory Services" data-cta-name="Advisory Services"> <span class="cmp-button__text">Advisory Services</span> </a>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/services/data-quality/national-data-quality-program/certification" target="_self" class="gs-cta__link" aria-label="Data Quality Certification" data-cta-name="Data Quality Certification"> <span class="cmp-button__text">Data Quality Certification</span> </a>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/services/product-measurement-services" target="_self" class="gs-cta__link" aria-label="Product Measurement Services" data-cta-name="Product Measurement Services"> <span class="cmp-button__text">Product Measurement Services</span> </a>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/services/find-gs1-us-solution-partner" target="_self" class="gs-cta__link" aria-label="Find GS1 US Solution Partners" data-cta-name="Find GS1 US Solution Partners"> <span class="cmp-button__text">Find GS1 US Solution Partners</span> </a>
+                            </div>
+                        </li>
+                    
+                </ul>
+            </div>
+        </li>
+    
+
+                
+                    
+
+    
+        <li class="gs-secondary-menu__list-item">
+            <div class="gs-secondary-menu-item">
+
+
+
+
+
+                <h4 class="gs-secondary-menu-item__heading">
+                    <div class="gs-cta gs-cta--lg gs-cta--no-underline gs-cta--dark gs-cta--link">
+                        <a role="link" href="/resources" target="_self" class="gs-cta__link" aria-label="Resources" data-cta-name="Resources"> <span class="cmp-button__text">Resources</span> </a>
+                    </div>
+                </h4>
+                <ul class="gs-secondary-menu-item__subitem-list" aria-expanded="false">
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/resources/data-hub-help-center" target="_self" class="gs-cta__link" aria-label="Data Hub Help Center" data-cta-name="Data Hub Help Center"> <span class="cmp-button__text">Data Hub Help Center</span> </a>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/resources/rosettanet" target="_self" class="gs-cta__link" aria-label="RosettaNet Standards" data-cta-name="RosettaNet Standards"> <span class="cmp-button__text">RosettaNet Standards</span> </a>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="https://xchange.gs1.org/sites/glossary" target="_blank" class="gs-cta__link" aria-label="Glossary" data-cta-name="Glossary"> <span class="cmp-button__text">Glossary</span> </a>
+                            </div>
+                        </li>
+                    
+                </ul>
+            </div>
+        </li>
+    
+
+                
+                    
+
+    
+        <li class="gs-secondary-menu__list-item">
+            <div class="gs-secondary-menu-item">
+
+
+
+
+
+                <h4 class="gs-secondary-menu-item__heading">
+                    <div class="gs-cta gs-cta--lg gs-cta--no-underline gs-cta--dark gs-cta--link">
+                        <a role="link" href="/faqs" target="_self" class="gs-cta__link" aria-label="FAQ" data-cta-name="FAQ"> <span class="cmp-button__text">FAQ</span> </a>
+                    </div>
+                </h4>
+                <ul class="gs-secondary-menu-item__subitem-list" aria-expanded="false">
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/faqs/gs1-company-prefix-barcodes-and-indentification" target="_self" class="gs-cta__link" aria-label="GS1 Company Prefix, Barcodes, and Identification" data-cta-name="GS1 Company Prefix, Barcodes, and Identification"> <span class="cmp-button__text">GS1 Company Prefix, Barcodes, and Identification</span> </a>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/faqs/loggin-in" target="_self" class="gs-cta__link" aria-label="Logging In" data-cta-name="Logging In"> <span class="cmp-button__text">Logging In</span> </a>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/faqs/my-account" target="_self" class="gs-cta__link" aria-label="My Account" data-cta-name="My Account"> <span class="cmp-button__text">My Account</span> </a>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/faqs/helpful-tools-and-resource" target="_self" class="gs-cta__link" aria-label="Helpful Tools and Resources" data-cta-name="Helpful Tools and Resources"> <span class="cmp-button__text">Helpful Tools and Resources</span> </a>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/faqs/update-prefix-registration" target="_self" class="gs-cta__link" aria-label="Update Prefix Registration" data-cta-name="Update Prefix Registration"> <span class="cmp-button__text">Update Prefix Registration</span> </a>
+                            </div>
+                        </li>
+                    
+                </ul>
+            </div>
+        </li>
+    
+
+                
+            </ul>
+			</div>
+        </div>
+    </div>
+</div>
+</li>
+
+
+    
+    
+    <li class="gs-mega-menu__item">
+
+
+
+<div class="gs-mega-menu-item" aria-expanded="false" role="list" aria-busy="true">
+    <div class="gs-cta gs-cta--lg gs-cta--no-underline gs-cta--dark gs-cta--link">
+        <a role="link" href="#" class="gs-cta__link" aria-label="Industries &amp; Insights" data-cta-name="Industries &amp; Insights"> <span class="cmp-button__text">Industries &amp; Insights</span> </a>
+    </div>
+    <div class="gs-mega-menu-item__secondary-menu-container" role="listitem">
+        <div class="gs-secondary-menu">
+		<input type="hidden" class="featureVal" value="false"/>
+           
+		  <div class="gs-secondary-menu-section">
+            
+                <a role="link" href="/industries-and-insights" aria-label="Industries &amp; Insights" target="_self" data-cta-name="Industries &amp; Insights">
+                    <h3 class="gs-secondary-menu__heading">Industries &amp; Insights</h3>
+                </a>
+            
+            
+            <ul class="gs-secondary-menu__list">
+                
+                    
+
+    
+        <li class="gs-secondary-menu__list-item">
+            <div class="gs-secondary-menu-item">
+
+
+
+
+
+                <h4 class="gs-secondary-menu-item__heading">
+                    <div class="gs-cta gs-cta--lg gs-cta--no-underline gs-cta--dark gs-cta--link">
+                        <a role="link" href="/industries-and-insights/featured" target="_self" class="gs-cta__link" aria-label="Featured" data-cta-name="Featured"> <span class="cmp-button__text">Featured</span> </a>
+                    </div>
+                </h4>
+                <ul class="gs-secondary-menu-item__subitem-list" aria-expanded="false">
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/industries-and-insights/by-topic/inventory-visibility-and-fulfillment" target="_self" class="gs-cta__link" aria-label="Autonomous Retail" data-cta-name="Autonomous Retail"> <span class="cmp-button__text">Autonomous Retail</span> </a>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/articles/sustainable-supply-chain" target="_self" class="gs-cta__link" aria-label="Sustainable Supply Chains" data-cta-name="Sustainable Supply Chains"> <span class="cmp-button__text">Sustainable Supply Chains</span> </a>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/supply-chain/standards-and-regulations/drug-supply-chain-security-act" target="_self" class="gs-cta__link" aria-label="DSCSA (Drug Supply Chain Security Act)" data-cta-name="DSCSA (Drug Supply Chain Security Act)"> <span class="cmp-button__text">DSCSA (Drug Supply Chain Security Act)</span> </a>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/services/data-quality" target="_self" class="gs-cta__link" aria-label="Data Quality &amp; Governance" data-cta-name="Data Quality &amp; Governance"> <span class="cmp-button__text">Data Quality &amp; Governance</span> </a>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/industries-and-insights/by-topic/sunrise-2027" target="_self" class="gs-cta__link" aria-label="Transitioning to 2D Barcodes – Sunrise 2027" data-cta-name="Transitioning to 2D Barcodes – Sunrise 2027"> <span class="cmp-button__text">Transitioning to 2D Barcodes – Sunrise 2027</span> </a>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/industries-and-insights/by-topic/rfid-implementation-program" target="_self" class="gs-cta__link" aria-label="RFID Implementation Program" data-cta-name="RFID Implementation Program"> <span class="cmp-button__text">RFID Implementation Program</span> </a>
+                            </div>
+                        </li>
+                    
+                </ul>
+            </div>
+        </li>
+    
+
+                
+                    
+
+    
+        <li class="gs-secondary-menu__list-item">
+            <div class="gs-secondary-menu-item">
+
+
+
+
+
+                <h4 class="gs-secondary-menu-item__heading">
+                    <div class="gs-cta gs-cta--lg gs-cta--no-underline gs-cta--dark gs-cta--link">
+                        <a role="link" href="/industries-and-insights/standards" target="_self" class="gs-cta__link" aria-label="Standards" data-cta-name="Standards"> <span class="cmp-button__text">Standards</span> </a>
+                    </div>
+                </h4>
+                <ul class="gs-secondary-menu-item__subitem-list" aria-expanded="false">
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/industries-and-insights/by-industry/apparel-and-general-merchandise/standards-in-use" target="_self" class="gs-cta__link" aria-label="Apparel &amp; General Merchandise Standards in Use" data-cta-name="Apparel &amp; General Merchandise Standards in Use"> <span class="cmp-button__text">Apparel &amp; General Merchandise Standards in Use</span> </a>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/industries-and-insights/by-industry/retail-grocery/standards-in-use" target="_self" class="gs-cta__link" aria-label="Retail Grocery Standards in Use" data-cta-name="Retail Grocery Standards in Use"> <span class="cmp-button__text">Retail Grocery Standards in Use</span> </a>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/industries-and-insights/by-industry/foodservice/standards-in-use" target="_blank" class="gs-cta__link" aria-label="Foodservice Standards in Use" data-cta-name="Foodservice Standards in Use"> <span class="cmp-button__text">Foodservice Standards in Use</span> </a>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/industries-and-insights/by-industry/healthcare/standards-in-use" target="_self" class="gs-cta__link" aria-label="Healthcare Standards in Use" data-cta-name="Healthcare Standards in Use"> <span class="cmp-button__text">Healthcare Standards in Use</span> </a>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/industries-and-insights/by-industry/foodservice/standards-in-use/food-safety" target="_self" class="gs-cta__link" aria-label="Food Safety" data-cta-name="Food Safety"> <span class="cmp-button__text">Food Safety</span> </a>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/industries-and-insights/standards/gs1-digital-link" target="_self" class="gs-cta__link" aria-label="GS1 Digital Link" data-cta-name="GS1 Digital Link"> <span class="cmp-button__text">GS1 Digital Link</span> </a>
+                            </div>
+                        </li>
+                    
+                </ul>
+            </div>
+        </li>
+    
+
+                
+                    
+
+    
+        <li class="gs-secondary-menu__list-item">
+            <div class="gs-secondary-menu-item">
+
+
+
+
+
+                <h4 class="gs-secondary-menu-item__heading">
+                    <div class="gs-cta gs-cta--lg gs-cta--no-underline gs-cta--dark gs-cta--link">
+                        <a role="link" href="/industries-and-insights" target="_self" class="gs-cta__link" aria-label="By Industry" data-cta-name="By Industry"> <span class="cmp-button__text">By Industry</span> </a>
+                    </div>
+                </h4>
+                <ul class="gs-secondary-menu-item__subitem-list" aria-expanded="false">
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/industries-and-insights/join-industry-initative-workgroup" target="_self" class="gs-cta__link" aria-label="Join an Industry Initiative &amp; Workgroup" data-cta-name="Join an Industry Initiative &amp; Workgroup"> <span class="cmp-button__text">Join an Industry Initiative &amp; Workgroup</span> </a>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/industries-and-insights/by-industry/apparel-and-general-merchandise" target="_self" class="gs-cta__link" aria-label="Apparel &amp; General Merchandise" data-cta-name="Apparel &amp; General Merchandise"> <span class="cmp-button__text">Apparel &amp; General Merchandise</span> </a>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/industries-and-insights/by-industry/retail-grocery" target="_self" class="gs-cta__link" aria-label="Retail Grocery" data-cta-name="Retail Grocery"> <span class="cmp-button__text">Retail Grocery</span> </a>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/industries-and-insights/by-industry/foodservice" target="_self" class="gs-cta__link" aria-label="Foodservice" data-cta-name="Foodservice"> <span class="cmp-button__text">Foodservice</span> </a>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/industries-and-insights/by-industry/healthcare" target="_self" class="gs-cta__link" aria-label="Healthcare" data-cta-name="Healthcare"> <span class="cmp-button__text">Healthcare</span> </a>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/industries-and-insights/by-industry/banking" target="_self" class="gs-cta__link" aria-label="Banking" data-cta-name="Banking"> <span class="cmp-button__text">Banking</span> </a>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/industries-and-insights/by-industry/government-and-public-sector" target="_self" class="gs-cta__link" aria-label="Government &amp; Public Sector" data-cta-name="Government &amp; Public Sector"> <span class="cmp-button__text">Government &amp; Public Sector</span> </a>
+                            </div>
+                        </li>
+                    
+                </ul>
+            </div>
+        </li>
+    
+
+                
+                    
+
+    
+        <li class="gs-secondary-menu__list-item">
+            <div class="gs-secondary-menu-item">
+
+
+
+
+
+                <h4 class="gs-secondary-menu-item__heading">
+                    <div class="gs-cta gs-cta--lg gs-cta--no-underline gs-cta--dark gs-cta--link">
+                        <a role="link" href="/supply-chain" target="_self" class="gs-cta__link" aria-label="Supply Chain Topics" data-cta-name="Supply Chain Topics"> <span class="cmp-button__text">Supply Chain Topics</span> </a>
+                    </div>
+                </h4>
+                <ul class="gs-secondary-menu-item__subitem-list" aria-expanded="false">
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/supply-chain" target="_self" class="gs-cta__link" aria-label="What is a Supply Chain" data-cta-name="What is a Supply Chain"> <span class="cmp-button__text">What is a Supply Chain</span> </a>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/supply-chain/inventory-management" target="_self" class="gs-cta__link" aria-label="Inventory Management" data-cta-name="Inventory Management"> <span class="cmp-button__text">Inventory Management</span> </a>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/supply-chain/standards-and-regulations" target="_self" class="gs-cta__link" aria-label="Standards &amp; Regulations" data-cta-name="Standards &amp; Regulations"> <span class="cmp-button__text">Standards &amp; Regulations</span> </a>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/supply-chain/supply-chain-visibility" target="_self" class="gs-cta__link" aria-label="Supply Chain Visibility" data-cta-name="Supply Chain Visibility"> <span class="cmp-button__text">Supply Chain Visibility</span> </a>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/supply-chain/rfid" target="_self" class="gs-cta__link" aria-label="RFID for Identifiers" data-cta-name="RFID for Identifiers"> <span class="cmp-button__text">RFID for Identifiers</span> </a>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/industries-and-insights/featured" target="_self" class="gs-cta__link" aria-label="More Topics" data-cta-name="More Topics"> <span class="cmp-button__text">More Topics</span> </a>
+                            </div>
+                        </li>
+                    
+                </ul>
+            </div>
+        </li>
+    
+
+                
+                    
+
+    
+        <li class="gs-secondary-menu__list-item">
+            <div class="gs-secondary-menu-item">
+
+
+
+
+
+                <h4 class="gs-secondary-menu-item__heading">
+                    <div class="gs-cta gs-cta--lg gs-cta--no-underline gs-cta--dark gs-cta--link">
+                        <a role="link" href="/industries-and-insights/by-topic/verified-by-gs1" target="_self" class="gs-cta__link" aria-label="Verified by GS1" data-cta-name="Verified by GS1"> <span class="cmp-button__text">Verified by GS1</span> </a>
+                    </div>
+                </h4>
+                
+            </div>
+        </li>
+    
+
+                
+                    
+
+    
+        <li class="gs-secondary-menu__list-item">
+            <div class="gs-secondary-menu-item">
+
+
+
+
+
+                <h4 class="gs-secondary-menu-item__heading">
+                    <div class="gs-cta gs-cta--lg gs-cta--no-underline gs-cta--dark gs-cta--link">
+                        <a role="link" href="/industries-and-insights/partners" target="_self" class="gs-cta__link" aria-label="Partners" data-cta-name="Partners"> <span class="cmp-button__text">Partners</span> </a>
+                    </div>
+                </h4>
+                <ul class="gs-secondary-menu-item__subitem-list" aria-expanded="false">
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/industries-and-insights/partners/become-gs1-us-solution-partner" target="_self" class="gs-cta__link" aria-label="Become GS1 US Solution Partner" data-cta-name="Become GS1 US Solution Partner"> <span class="cmp-button__text">Become GS1 US Solution Partner</span> </a>
+                            </div>
+                        </li>
+                    
+                </ul>
+            </div>
+        </li>
+    
+
+                
+                    
+
+    
+        <li class="gs-secondary-menu__list-item">
+            <div class="gs-secondary-menu-item">
+
+
+
+
+
+                <h4 class="gs-secondary-menu-item__heading">
+                    <div class="gs-cta gs-cta--lg gs-cta--no-underline gs-cta--dark gs-cta--link">
+                        <a role="link" href="https://next-level-supply-chain-with-gs1us.podcastpage.io/" target="_self" class="gs-cta__link" aria-label="Podcasts" data-cta-name="Podcasts"> <span class="cmp-button__text">Podcasts</span> </a>
+                    </div>
+                </h4>
+                
+            </div>
+        </li>
+    
+
+                
+                    
+
+    
+        <li class="gs-secondary-menu__list-item">
+            <div class="gs-secondary-menu-item">
+
+
+
+
+
+                <h4 class="gs-secondary-menu-item__heading">
+                    <div class="gs-cta gs-cta--lg gs-cta--no-underline gs-cta--dark gs-cta--link">
+                        <a role="link" href="/industries-and-insights/media-center" target="_self" class="gs-cta__link" aria-label="Media Center" data-cta-name="Media Center"> <span class="cmp-button__text">Media Center</span> </a>
+                    </div>
+                </h4>
+                
+            </div>
+        </li>
+    
+
+                
+            </ul>
+			</div>
+        </div>
+    </div>
+</div>
+</li>
+
+
+    
+    
+    <li class="gs-mega-menu__item">
+
+
+
+<div class="gs-mega-menu-item" aria-expanded="false" role="list" aria-busy="true">
+    <div class="gs-cta gs-cta--lg gs-cta--no-underline gs-cta--dark gs-cta--link">
+        <a role="link" href="#" class="gs-cta__link" aria-label="Education &amp; Events" data-cta-name="Education &amp; Events"> <span class="cmp-button__text">Education &amp; Events</span> </a>
+    </div>
+    <div class="gs-mega-menu-item__secondary-menu-container" role="listitem">
+        <div class="gs-secondary-menu">
+		<input type="hidden" class="featureVal" value="true"/>
+           
+              
+  <div class="gs-secondary-menu-feature-section" style="background-color:#e5f0fc;">
+    
+      <h4><a title="GS1 Connect" style="	color: rgb(0,44,108);
+" href="/education-and-events/events/gs1-connect">GS1 Connect</a></h4>
+<hr />
+
+
+    
+      <ul>
+        
+          <li>
+            <div class="gs-cta gs-cta--md gs-cta--no-underline gs-cta--dark gs-cta--link gs-cta--blue-arrow-right">
+              <a role="link" href="/education-and-events/events/gs1-connect/why-attend" class="gs-cta__link" target="_self" aria-label="Why Attend?" data-cta-name="Why Attend?">
+                <span class="cmp-button__text">Why Attend?</span>
+                <span class="cmp-button__icon" aria-hidden="true"> </span>
+              </a>
+            </div>
+          </li>
+        
+          <li>
+            <div class="gs-cta gs-cta--md gs-cta--no-underline gs-cta--dark gs-cta--link gs-cta--blue-arrow-right">
+              <a role="link" href="/education-and-events/events/gs1-connect/pricing" class="gs-cta__link" target="_self" aria-label="Pricing" data-cta-name="Pricing">
+                <span class="cmp-button__text">Pricing</span>
+                <span class="cmp-button__icon" aria-hidden="true"> </span>
+              </a>
+            </div>
+          </li>
+        
+          <li>
+            <div class="gs-cta gs-cta--md gs-cta--no-underline gs-cta--dark gs-cta--link gs-cta--blue-arrow-right">
+              <a role="link" href="/education-and-events/events/gs1-connect/travel-venue" class="gs-cta__link" target="_self" aria-label="Travel &amp; Info" data-cta-name="Travel &amp; Info">
+                <span class="cmp-button__text">Travel &amp; Info</span>
+                <span class="cmp-button__icon" aria-hidden="true"> </span>
+              </a>
+            </div>
+          </li>
+        
+          <li>
+            <div class="gs-cta gs-cta--md gs-cta--no-underline gs-cta--dark gs-cta--link gs-cta--blue-arrow-right">
+              <a role="link" href="/education-and-events/events/gs1-connect/sponsors-and-exhibitors" class="gs-cta__link" target="_self" aria-label="Sponsors &amp; Exhibitors" data-cta-name="Sponsors &amp; Exhibitors">
+                <span class="cmp-button__text">Sponsors &amp; Exhibitors</span>
+                <span class="cmp-button__icon" aria-hidden="true"> </span>
+              </a>
+            </div>
+          </li>
+        
+          <li>
+            <div class="gs-cta gs-cta--md gs-cta--no-underline gs-cta--dark gs-cta--link gs-cta--blue-arrow-right">
+              <a role="link" href="/education-and-events/events/gs1-connect/agenda" class="gs-cta__link" target="_self" aria-label="Agenda" data-cta-name="Agenda">
+                <span class="cmp-button__text">Agenda</span>
+                <span class="cmp-button__icon" aria-hidden="true"> </span>
+              </a>
+            </div>
+          </li>
+        
+      </ul>
+  </div>
+
+           
+		  <div class="gs-secondary-menu-section">
+            
+                <a role="link" href="/education-and-events" aria-label="Education &amp; Events" target="_self" data-cta-name="Education &amp; Events">
+                    <h3 class="gs-secondary-menu__heading">Education &amp; Events</h3>
+                </a>
+            
+            
+            <ul class="gs-secondary-menu__list">
+                
+                    
+
+    
+        <li class="gs-secondary-menu__list-item">
+            <div class="gs-secondary-menu-item">
+
+
+
+
+
+                <h4 class="gs-secondary-menu-item__heading">
+                    <div class="gs-cta gs-cta--lg gs-cta--no-underline gs-cta--dark gs-cta--link">
+                        <a role="link" href="/education-and-events/gs1-us-university" target="_self" class="gs-cta__link" aria-label="GS1 US University" data-cta-name="GS1 US University"> <span class="cmp-button__text">GS1 US University</span> </a>
+                    </div>
+                </h4>
+                <ul class="gs-secondary-menu-item__subitem-list" aria-expanded="false">
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/education-and-events/gs1-us-university/basic-education" target="_self" class="gs-cta__link" aria-label="GS1 Standards Essentials" data-cta-name="GS1 Standards Essentials"> <span class="cmp-button__text">GS1 Standards Essentials</span> </a>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/education-and-events/gs1-us-university/certificate-and-workshop-education" target="_self" class="gs-cta__link" aria-label="Certificate Courses" data-cta-name="Certificate Courses"> <span class="cmp-button__text">Certificate Courses</span> </a>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/education-and-events/gs1-us-university/enterprise-license" target="_self" class="gs-cta__link" aria-label="Team Learning" data-cta-name="Team Learning"> <span class="cmp-button__text">Team Learning</span> </a>
+                            </div>
+                        </li>
+                    
+                </ul>
+            </div>
+        </li>
+    
+
+                
+                    
+
+    
+        <li class="gs-secondary-menu__list-item">
+            <div class="gs-secondary-menu-item">
+
+
+
+
+
+                <h4 class="gs-secondary-menu-item__heading">
+                    <div class="gs-cta gs-cta--lg gs-cta--no-underline gs-cta--dark gs-cta--link">
+                        <a role="link" href="/education-and-events/events" target="_self" class="gs-cta__link" aria-label="Events" data-cta-name="Events"> <span class="cmp-button__text">Events</span> </a>
+                    </div>
+                </h4>
+                <ul class="gs-secondary-menu-item__subitem-list" aria-expanded="false">
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/education-and-events/events?&q=gs1us:events/event-type/webinar&offset=0" target="_self" class="gs-cta__link" aria-label="Webinars" data-cta-name="Webinars"> <span class="cmp-button__text">Webinars</span> </a>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/education-and-events/events" target="_self" class="gs-cta__link" aria-label="Calendar" data-cta-name="Calendar"> <span class="cmp-button__text">Calendar</span> </a>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/education-and-events/events/back-to-basics-for-supply-chain-visibility" target="_self" class="gs-cta__link" aria-label="Back to Basics on Demand" data-cta-name="Back to Basics on Demand"> <span class="cmp-button__text">Back to Basics on Demand</span> </a>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/education-and-events/events/2d-workshop-series" target="_self" class="gs-cta__link" aria-label="2D Barcode Workshop" data-cta-name="2D Barcode Workshop"> <span class="cmp-button__text">2D Barcode Workshop</span> </a>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="https://events.ringcentral.com/events/gs1-us-innovation-summit24/registration" target="_blank" class="gs-cta__link" aria-label="Innovation Summit" data-cta-name="Innovation Summit"> <span class="cmp-button__text">Innovation Summit</span> </a>
+                            </div>
+                        </li>
+                    
+                </ul>
+            </div>
+        </li>
+    
+
+                
+            </ul>
+			</div>
+        </div>
+    </div>
+</div>
+</li>
+
+
+    
+    
+    <li class="gs-mega-menu__item">
+
+
+
+<div class="gs-mega-menu-item" aria-expanded="false" role="list" aria-busy="true">
+    <div class="gs-cta gs-cta--lg gs-cta--no-underline gs-cta--dark gs-cta--link">
+        <a role="link" href="#" class="gs-cta__link" aria-label="Who We Are" data-cta-name="Who We Are"> <span class="cmp-button__text">Who We Are</span> </a>
+    </div>
+    <div class="gs-mega-menu-item__secondary-menu-container" role="listitem">
+        <div class="gs-secondary-menu">
+		<input type="hidden" class="featureVal"/>
+           
+		  <div class="gs-secondary-menu-section">
+            
+                <a role="link" href="/who-we-are" aria-label="Who We Are" target="_self" data-cta-name="Who We Are">
+                    <h3 class="gs-secondary-menu__heading">Who We Are</h3>
+                </a>
+            
+            
+            <ul class="gs-secondary-menu__list">
+                
+                    
+
+    
+        <li class="gs-secondary-menu__list-item">
+            <div class="gs-secondary-menu-item">
+
+
+
+
+
+                <h4 class="gs-secondary-menu-item__heading">
+                    <div class="gs-cta gs-cta--lg gs-cta--no-underline gs-cta--dark gs-cta--link">
+                        <a role="link" href="/who-we-are/about-us" target="_self" class="gs-cta__link" aria-label="About Us" data-cta-name="About Us"> <span class="cmp-button__text">About Us</span> </a>
+                    </div>
+                </h4>
+                <ul class="gs-secondary-menu-item__subitem-list" aria-expanded="false">
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/who-we-are/about-us/mission-history" target="_self" class="gs-cta__link" aria-label="Mission &amp; History" data-cta-name="Mission &amp; History"> <span class="cmp-button__text">Mission &amp; History</span> </a>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/who-we-are/about-us/leadership-team-and-board-of-governors" target="_self" class="gs-cta__link" aria-label="Leadership Team and Board of Governors" data-cta-name="Leadership Team and Board of Governors"> <span class="cmp-button__text">Leadership Team and Board of Governors</span> </a>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/who-we-are/about-us/how-we-help" target="_self" class="gs-cta__link" aria-label="How We Help" data-cta-name="How We Help"> <span class="cmp-button__text">How We Help</span> </a>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/who-we-are/about-us/gs1-us-story" target="_self" class="gs-cta__link" aria-label="GS1 US Story" data-cta-name="GS1 US Story"> <span class="cmp-button__text">GS1 US Story</span> </a>
+                            </div>
+                        </li>
+                    
+                </ul>
+            </div>
+        </li>
+    
+
+                
+                    
+
+    
+        <li class="gs-secondary-menu__list-item">
+            <div class="gs-secondary-menu-item">
+
+
+
+
+
+                <h4 class="gs-secondary-menu-item__heading">
+                    <div class="gs-cta gs-cta--lg gs-cta--no-underline gs-cta--dark gs-cta--link">
+                        <a role="link" href="/who-we-are/membership" target="_self" class="gs-cta__link" aria-label="Membership" data-cta-name="Membership"> <span class="cmp-button__text">Membership</span> </a>
+                    </div>
+                </h4>
+                <ul class="gs-secondary-menu-item__subitem-list" aria-expanded="false">
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/who-we-are/membership/benefits" target="_self" class="gs-cta__link" aria-label="Benefits" data-cta-name="Benefits"> <span class="cmp-button__text">Benefits</span> </a>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/who-we-are/membership/renew-membership" target="_self" class="gs-cta__link" aria-label="Join and Renew" data-cta-name="Join and Renew"> <span class="cmp-button__text">Join and Renew</span> </a>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/who-we-are/membership/services" target="_self" class="gs-cta__link" aria-label="Resources" data-cta-name="Resources"> <span class="cmp-button__text">Resources</span> </a>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/who-we-are/membership/update-your-gs1-identifier-registration" target="_self" class="gs-cta__link" aria-label="Update Your GS1 Company Prefix Registration" data-cta-name="Update Your GS1 Company Prefix Registration"> <span class="cmp-button__text">Update Your GS1 Company Prefix Registration</span> </a>
+                            </div>
+                        </li>
+                    
+                </ul>
+            </div>
+        </li>
+    
+
+                
+                    
+
+    
+        <li class="gs-secondary-menu__list-item">
+            <div class="gs-secondary-menu-item">
+
+
+
+
+
+                <h4 class="gs-secondary-menu-item__heading">
+                    <div class="gs-cta gs-cta--lg gs-cta--no-underline gs-cta--dark gs-cta--link">
+                        <a role="link" href="/who-we-are/careers" target="_self" class="gs-cta__link" aria-label="Careers" data-cta-name="Careers"> <span class="cmp-button__text">Careers</span> </a>
+                    </div>
+                </h4>
+                <ul class="gs-secondary-menu-item__subitem-list" aria-expanded="false">
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/who-we-are/careers/what-to-expect" target="_self" class="gs-cta__link" aria-label="What to Expect" data-cta-name="What to Expect"> <span class="cmp-button__text">What to Expect</span> </a>
+                            </div>
+                        </li>
+                    
+                
+                    
+                        <li class="gs-secondary-menu-item__list-item">
+                            <div class="gs-cta gs-cta--sm gs-cta--no-underline gs-cta--light gs-cta--link">
+                                <a role="link" href="/who-we-are/careers/view-open-roles" target="_self" class="gs-cta__link" aria-label="View Open Roles" data-cta-name="View Open Roles"> <span class="cmp-button__text">View Open Roles</span> </a>
+                            </div>
+                        </li>
+                    
+                </ul>
+            </div>
+        </li>
+    
+
+                
+                    
+
+    
+        <li class="gs-secondary-menu__list-item">
+            <div class="gs-secondary-menu-item">
+
+
+
+
+
+                <h4 class="gs-secondary-menu-item__heading">
+                    <div class="gs-cta gs-cta--lg gs-cta--no-underline gs-cta--dark gs-cta--link">
+                        <a role="link" href="/who-we-are/contact-us" target="_self" class="gs-cta__link" aria-label="Contact Us" data-cta-name="Contact Us"> <span class="cmp-button__text">Contact Us</span> </a>
+                    </div>
+                </h4>
+                
+            </div>
+        </li>
+    
+
+                
+            </ul>
+			</div>
+        </div>
+    </div>
+</div>
+</li>
+
+
+
+    </ul>
+</div>
+			</div>
+			<div class="gs-header__mobile-nav-container">
+				
+
+<div></div>
+
+<div class="header-links">
+	<div class="header-links__container">
+		<p class="header-links__description">The Global Language of Business</p>
+		<ul class=" header-links__list">
+			<li class="header-links__list-item">
+				<div class="gs-cta gs-cta--sm gs-cta--has-underline gs-cta--light gs-cta--link">
+					<a role="link" href="https://my.gs1us.org/" target="_blank" class="gs-cta__link" aria-label="GS1 US Store" data-cta-name="GS1 US Store">
+						<span class="cmp-button__text">GS1 US Store</span>
+					</a>
+				</div>
+			</li>
+	    
+			<li class="header-links__list-item">
+				<div class="gs-cta gs-cta--sm gs-cta--has-underline gs-cta--light gs-cta--link">
+					<a role="link" href="/education-and-events/events/gs1-connect" target="_self" class="gs-cta__link" aria-label="GS1 Connect Conference" data-cta-name="GS1 Connect Conference">
+						<span class="cmp-button__text">GS1 Connect Conference</span>
+					</a>
+				</div>
+			</li>
+	    
+			<li class="header-links__list-item">
+				<div class="gs-cta gs-cta--sm gs-cta--has-underline gs-cta--light gs-cta--link">
+					<a role="link" href="/small-business" target="_self" class="gs-cta__link" aria-label="Small Business" data-cta-name="Small Business">
+						<span class="cmp-button__text">Small Business</span>
+					</a>
+				</div>
+			</li>
+	    </ul>
+	</div>
+</div>
+
+			</div>
+		</div>
+	</div>
+</header></div>
+
+    
+</div>
+
+    </div>
+
+    
+</div>
+
+    
+</div>
+<main itemprop="text" class="gs1-us-container responsivegrid page aem-GridColumn aem-GridColumn--default--12">
+
+    
+    
+    
+    <div id="container-7eb62c4d23" class="cmp-container">
+        
+        <div class="wrapper intra-space-top intra-space-bottom"><div class="breadcrumb">
+<nav id="breadcrumb-8670c3763c" class="cmp-breadcrumb" aria-label="Breadcrumb" data-cmp-data-layer="{&#34;breadcrumb-8670c3763c&#34;:{&#34;@type&#34;:&#34;gs1us-aem/components/breadcrumb&#34;,&#34;repo:modifyDate&#34;:&#34;2024-05-13T08:11:13Z&#34;}}">
+    <ol class="cmp-breadcrumb__list breadcrumb-list" itemscope itemtype="http://schema.org/BreadcrumbList" role="list">
+        <li class="cmp-breadcrumb__item breadcrumb-list__item breadcrumb-list__item--active " data-cmp-data-layer="{&#34;breadcrumb-8670c3763c-item-0386eae6dd&#34;:{&#34;@type&#34;:&#34;gs1us-aem/components/breadcrumb/item&#34;,&#34;repo:modifyDate&#34;:&#34;2022-08-24T13:59:32Z&#34;,&#34;dc:title&#34;:&#34;Home&#34;,&#34;xdm:linkURL&#34;:&#34;/&#34;}}" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a class="cmp-breadcrumb__item-link breadcrumb-list__item-link" role="link" itemprop="item" data-cmp-clickable href="/">
+                <span itemprop="name">Home</span>
+            </a>
+            <meta itemprop="position" content="1"/>
+        </li>
+    
+        <li class="cmp-breadcrumb__item breadcrumb-list__item breadcrumb-list__item--active " data-cmp-data-layer="{&#34;breadcrumb-8670c3763c-item-1f65478108&#34;:{&#34;@type&#34;:&#34;gs1us-aem/components/breadcrumb/item&#34;,&#34;repo:modifyDate&#34;:&#34;2023-02-02T23:40:55Z&#34;,&#34;dc:title&#34;:&#34;Home&#34;,&#34;xdm:linkURL&#34;:&#34;/&#34;}}" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a class="cmp-breadcrumb__item-link breadcrumb-list__item-link" role="link" itemprop="item" data-cmp-clickable href="/">
+                <span itemprop="name">Home</span>
+            </a>
+            <meta itemprop="position" content="2"/>
+        </li>
+    
+        <li class="cmp-breadcrumb__item breadcrumb-list__item breadcrumb-list__item--active " data-cmp-data-layer="{&#34;breadcrumb-8670c3763c-item-c339418729&#34;:{&#34;@type&#34;:&#34;gs1us-aem/components/breadcrumb/item&#34;,&#34;repo:modifyDate&#34;:&#34;2023-07-11T21:47:02Z&#34;,&#34;dc:title&#34;:&#34;Featured News by Industry | GS1 US&#34;,&#34;xdm:linkURL&#34;:&#34;/industries-and-insights/featured&#34;}}" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a class="cmp-breadcrumb__item-link breadcrumb-list__item-link" role="link" itemprop="item" data-cmp-clickable href="/industries-and-insights/featured">
+                <span itemprop="name">Featured News by Industry | GS1 US</span>
+            </a>
+            <meta itemprop="position" content="3"/>
+        </li>
+    
+        <li class="cmp-breadcrumb__item breadcrumb-list__item breadcrumb-list__item--active  cmp-breadcrumb__item--active" aria-current="page" data-cmp-data-layer="{&#34;breadcrumb-8670c3763c-item-9956725417&#34;:{&#34;@type&#34;:&#34;gs1us-aem/components/breadcrumb/item&#34;,&#34;repo:modifyDate&#34;:&#34;2024-10-01T19:21:07Z&#34;,&#34;dc:title&#34;:&#34;Practical Applications of Generative AI in the Supply Chain&#34;,&#34;xdm:linkURL&#34;:&#34;/articles/practical-applications-of-generative-ai-in-the-supply-chain&#34;}}" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            
+                <span itemprop="name">Practical Applications of Generative AI in the Supply Chain</span>
+            
+            <meta itemprop="position" content="4"/>
+        </li>
+    </ol>
+</nav>
+</div>
+
+    
+
+
+</div>
+<div itemprop="text" class="gs1-us-container responsivegrid page">
+
+    
+    
+    
+    <div id="container-9b839e03f8" class="cmp-container">
+        
+        <div itemprop="text" class="gs1-us-container responsivegrid page">
+
+    
+    
+    
+    <div id="container-f08a87da51" class="cmp-container">
+        
+        <div class="gs-banner gs-banner--has-color gs-banner--blue gs-banner--text-wrap-66">
+	<!-- Variation Page Calculator with solid background -->
+	
+	<!-- Variation Page Calculator with background image -->
+	
+	<!-- Variation solid background and RTE -->
+	
+		<div class="gs-banner__inner wrapper">
+			<div class="gs-banner__left-container">
+				<div class="gs-banner__content"><div class="text white-text intra-space-top"><div data-cmp-data-layer="{&#34;text-8de7d75226&#34;:{&#34;@type&#34;:&#34;gs1us-aem/components/text&#34;,&#34;repo:modifyDate&#34;:&#34;2024-10-01T15:59:31Z&#34;,&#34;xdm:text&#34;:&#34;&lt;h1>Practical Applications of Generative AI in the Supply Chain&lt;/h1>\r\n&#34;}}" id="text-8de7d75226" class="cmp-text">
+    <h1>Practical Applications of Generative AI in the Supply Chain</h1>
+
+</div>
+
+    
+</div>
+</div>
+			</div>
+		</div>
+	
+	<!-- Variation Background Image and RTE -->
+	
+
+    <!-- Variation solid background and RTE with Hero Two Column -->
+	
+    <!-- Variation Background Image and RTE with Hero Two Column -->
+	
+
+	<!-- Variation solid background RTE and Button -->
+	
+	<!-- Variation Background Image, RTE and Button -->
+	
+	 <!-- Variant with two CTAs and Background Image -->	
+	
+ <!-- Variant with two CTAs and Solid Background -->	
+ 	
+
+
+    
+
+</div>
+<div itemprop="text" class="gs1-us-container responsivegrid page inter-space-bottom gs-container-wrapper">
+
+    
+    
+    
+    <div id="container-8f743cf03c" class="cmp-container" style="background-color:#f0f5fa;">
+        
+        <div class="columncontrol wrapper">
+
+
+
+
+
+
+    
+
+    
+
+    
+
+    
+        <ul class="gs-col-control gs-col-control--list-type">
+            <li class="col-12 col-sm-9">
+                
+                <div itemprop="text" class="gs1-us-container responsivegrid page intra-space-bottom">
+
+    
+    
+    
+    <div id="container-bd6a7b7d5a" class="cmp-container">
+        
+        <div class="title">
+    <div data-cmp-data-layer="{&#34;title-de15f146cb&#34;:{&#34;@type&#34;:&#34;gs1us-aem/components/title&#34;,&#34;repo:modifyDate&#34;:&#34;2024-08-29T12:24:57Z&#34;,&#34;dc:title&#34;:&#34;\n            Generative AI Revisited\n        &#34;}}" id="title-de15f146cb" class="cmp-title">
+        <h2 class="cmp-title__text">
+            
+            Generative AI Revisited
+        
+        </h2>
+    </div>
+
+
+    
+</div>
+<div class="text"><div data-cmp-data-layer="{&#34;text-802375884c&#34;:{&#34;@type&#34;:&#34;gs1us-aem/components/text&#34;,&#34;repo:modifyDate&#34;:&#34;2024-09-03T12:14:08Z&#34;,&#34;xdm:text&#34;:&#34;&lt;p>Since the first demo of ChatGPT hit the spotlight in late 2022, the hype around generative AI has been sky high. After the initial frenzy of AI-written haikus, reality began to set in.&lt;a>&lt;/a>&lt;a> &lt;/a>&lt;a href=\&#34;/content/gs1us/us/en/articles/generative-ai-in-the-supply-chain.html\&#34; target=\&#34;_self\&#34; rel=\&#34;noopener noreferrer\&#34;>&lt;u>Hallucinations, data privacy concerns, and copyright lawsuits&lt;/u>&lt;/a>&amp;nbsp;are real risks of using generative AI without careful consideration. Meanwhile, companies are trying to improve the quality of output by enabling the generative AI to access relevant documents and data sources. This method is called &lt;a href=\&#34;https://github.blog/2024-04-04-what-is-retrieval-augmented-generation-and-what-does-it-do-for-generative-ai/\&#34; target=\&#34;_blank\&#34; rel=\&#34;noopener noreferrer\&#34;>&lt;u>retrieval-augmented generation (RAG)&lt;/u>&lt;/a>&amp;nbsp;and helps guide the AI’s results. Generative AI is not a cure-all, but it excels in certain areas. Companies see both the benefits and drawbacks. Many are now asking: How can generative AI actually help my business?&lt;/p>\r\n&#34;}}" id="text-802375884c" class="cmp-text">
+    <p>Since the first demo of ChatGPT hit the spotlight in late 2022, the hype around generative AI has been sky high. After the initial frenzy of AI-written haikus, reality began to set in.<a></a><a> </a><a href="/articles/generative-ai-in-the-supply-chain" target="_self" rel="noopener noreferrer"><u>Hallucinations, data privacy concerns, and copyright lawsuits</u></a> are real risks of using generative AI without careful consideration. Meanwhile, companies are trying to improve the quality of output by enabling the generative AI to access relevant documents and data sources. This method is called <a href="https://github.blog/2024-04-04-what-is-retrieval-augmented-generation-and-what-does-it-do-for-generative-ai/" target="_blank" rel="noopener noreferrer"><u>retrieval-augmented generation (RAG)</u></a> and helps guide the AI’s results. Generative AI is not a cure-all, but it excels in certain areas. Companies see both the benefits and drawbacks. Many are now asking: How can generative AI actually help my business?</p>
+
+</div>
+
+    
+</div>
+
+        
+    </div>
+
+</div>
+
+            </li>
+            <li class="col-12 col-sm-3">
+                
+                <div itemprop="text" class="gs1-us-container responsivegrid page">
+
+    
+    
+    
+    <div id="container-946ee4681b" class="cmp-container">
+        
+        <div itemprop="text" class="gs1-us-container responsivegrid page intra-space-bottom gs-container-wrapper">
+
+    
+    
+    
+    <div id="container-41ab1057e0" class="cmp-container">
+        
+        <div class="text blue-text intra-space-top"><div data-cmp-data-layer="{&#34;text-1b51b5bcff&#34;:{&#34;@type&#34;:&#34;gs1us-aem/components/text&#34;,&#34;repo:modifyDate&#34;:&#34;2024-07-11T14:48:04Z&#34;,&#34;xdm:text&#34;:&#34;&lt;p>&lt;b>Related Topics&lt;/b>&lt;/p>\r\n&#34;}}" id="text-1b51b5bcff" class="cmp-text">
+    <p><b>Related Topics</b></p>
+
+</div>
+
+    
+</div>
+<div class="footer-link-text">
+
+
+
+
+
+<div>
+    <ul class="iconList-headings">
+        <li class="iconList-headings__heading">
+            <a href="/articles/generative-ai-in-the-supply-chain" class="iconList-headings__heading-item" role="link" aria-label="Overview of Generative AI in the Supply Chain" target="_self">
+                <span class="cmp-list__item-title">Overview of Generative AI in the Supply Chain</span>
+            </a>
+        </li>
+<li class="iconList-headings__heading">
+            <a href="/tools/gs1-us-data-hub" class="iconList-headings__heading-item" role="link" aria-label="Manage and Share Data in One Secure Platform" target="_self">
+                <span class="cmp-list__item-title">Manage and Share Data in One Secure Platform</span>
+            </a>
+        </li>
+<li class="iconList-headings__heading">
+            <a href="/articles/sustainable-supply-chain" class="iconList-headings__heading-item" role="link" aria-label="Sustainable Supply Chains" target="_self">
+                <span class="cmp-list__item-title">Sustainable Supply Chains</span>
+            </a>
+        </li>
+<li class="iconList-headings__heading">
+            <a href="/industries-and-insights/by-topic/inventory-visibility-and-fulfillment" class="iconList-headings__heading-item" role="link" aria-label="Automating Retail" target="_self">
+                <span class="cmp-list__item-title">Automating Retail</span>
+            </a>
+        </li>
+
+    </ul>
+</div>
+
+
+</div>
+
+        
+    </div>
+
+</div>
+
+        
+    </div>
+
+</div>
+
+            </li>
+        </ul>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+
+
+
+</div>
+
+        
+    </div>
+
+</div>
+<div class="columncontrol wrapper">
+
+
+
+
+
+
+    
+
+    
+
+    
+
+    
+        <ul class="gs-col-control gs-col-control--list-type">
+            <li class="col-12 col-sm-9">
+                
+                <div itemprop="text" class="gs1-us-container responsivegrid page intra-space-bottom">
+
+    
+    
+    
+    <div id="container-b11c0de54d" class="cmp-container">
+        
+        <div class="title">
+    <div data-cmp-data-layer="{&#34;title-f22f5777d8&#34;:{&#34;@type&#34;:&#34;gs1us-aem/components/title&#34;,&#34;repo:modifyDate&#34;:&#34;2024-08-29T12:27:59Z&#34;,&#34;dc:title&#34;:&#34;\n            \n            Generative AI Use Cases in the Supply Chain\n        \n        &#34;}}" id="title-f22f5777d8" class="cmp-title">
+        <h2 class="cmp-title__text">
+            
+            
+            Generative AI Use Cases in the Supply Chain
+        
+        
+        </h2>
+    </div>
+
+
+    
+</div>
+
+        
+    </div>
+
+</div>
+
+            </li>
+            <li class="col-12 col-sm-3">
+                
+                <div itemprop="text" class="gs1-us-container responsivegrid page">
+
+    
+    
+    
+    <div id="container-9d54bdd89e" class="cmp-container">
+        
+        
+        
+    </div>
+
+</div>
+
+            </li>
+        </ul>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+
+
+
+</div>
+<div class="columncontrol wrapper">
+
+
+
+
+
+
+    
+
+    
+
+    
+
+    
+        <ul class="gs-col-control gs-col-control--list-type">
+            <li class="col-12 col-sm-9">
+                
+                <div itemprop="text" class="gs1-us-container responsivegrid page intra-space-bottom">
+
+    
+    
+    
+    <div id="container-7f3d625db0" class="cmp-container">
+        
+        <div class="columncontrol">
+
+
+
+
+
+
+    
+
+    
+
+    
+
+    
+
+    
+        <ul class="gs-col-control gs-col-control--list-type">
+            <li class="col-12 col-sm-3">
+                
+                <div itemprop="text" class="gs1-us-container responsivegrid page">
+
+    
+    
+    
+    <div id="container-959f97348b" class="cmp-container">
+        
+        <div class="image intra-space-top gs1-image--object-contain gs-align-left gs1-image--height-xs">
+<div data-cmp-dmimage id="image-28d39f0aab" data-cmp-data-layer="{&#34;image-28d39f0aab&#34;:{&#34;@type&#34;:&#34;gs1us-aem/components/image&#34;,&#34;repo:modifyDate&#34;:&#34;2024-09-20T17:05:06Z&#34;,&#34;image&#34;:{&#34;repo:id&#34;:&#34;cb544d46-0299-4d41-af61-4b989e63784b&#34;,&#34;repo:modifyDate&#34;:&#34;2024-09-20T15:33:48Z&#34;,&#34;@type&#34;:&#34;image/png&#34;,&#34;repo:path&#34;:&#34;/content/dam/gs1us/images/articles/generative-ai/gs1-us-content-creation-communication.png&#34;,&#34;xdm:tags&#34;:[&#34;properties:orientation/square&#34;],&#34;xdm:smartTags&#34;:{&#34;touchpad&#34;:0.825,&#34;clipart&#34;:0.815,&#34;web icon&#34;:0.846,&#34;linedrawing&#34;:0.824,&#34;folio&#34;:0.765,&#34;graphic design&#34;:0.764,&#34;touchscreen&#34;:0.801,&#34;tutorial&#34;:0.768,&#34;night photography&#34;:0.833}}}}" class="cmp-image" itemscope itemtype="http://schema.org/ImageObject">
+	
+		<img src="https://assets.gs1us.org/is/image/gsoneus/gs1-us-content-creation-communication?ts=1726851906875&$PNG$&dpr=off" loading="lazy" class="cmp-image__image" itemprop="contentUrl" alt="content related icons in a grid"/>
+	
+	
+	
+</div>
+
+    
+
+
+</div>
+
+        
+    </div>
+
+</div>
+
+            </li>
+            <li class="col-12 col-sm-9">
+                
+                <div itemprop="text" class="gs1-us-container responsivegrid page">
+
+    
+    
+    
+    <div id="container-91aa8588ad" class="cmp-container">
+        
+        
+        
+    </div>
+
+</div>
+
+            </li>
+        </ul>
+    
+
+    
+
+    
+
+    
+
+    
+
+
+
+
+
+</div>
+<div class="title primary-title-height">
+    <div data-cmp-data-layer="{&#34;title-791f0f4472&#34;:{&#34;@type&#34;:&#34;gs1us-aem/components/title&#34;,&#34;repo:modifyDate&#34;:&#34;2024-10-01T16:00:03Z&#34;,&#34;dc:title&#34;:&#34;Content Creation and Communication                     &#34;}}" id="title-791f0f4472" class="cmp-title">
+        <h3 class="cmp-title__text">
+            Content Creation and Communication                     
+        </h3>
+    </div>
+
+
+    
+</div>
+<div class="text"><div data-cmp-data-layer="{&#34;text-6b79309a2b&#34;:{&#34;@type&#34;:&#34;gs1us-aem/components/text&#34;,&#34;repo:modifyDate&#34;:&#34;2024-09-20T13:05:31Z&#34;,&#34;xdm:text&#34;:&#34;&lt;p>One of the core functions of generative AI is to create content. Through probability and extrapolation, it uses large language models (LLMs) to understand and generate text, images, sounds, and even video. These models work quickly and at scale. As a result, generative AI can help create content for product descriptions and listings, marketing and media, website design, or e-commerce stores.&lt;/p>\r\n&lt;p>According to an &lt;a href=\&#34;https://www.ciodive.com/news/procter-gamble-PG-chatgp-AI-openAI/697067/\&#34; target=\&#34;_blank\&#34; rel=\&#34;noopener noreferrer\&#34;>&lt;u>article in &lt;i>CIO Dive&lt;/i>&lt;/u>&lt;/a>, Procter &amp;amp; Gamble developed an internal generative AI tool that aids their marketing team in the creation of photorealistic images and other assets. The enhancement to the content creation process frees up their employees to focus more on strategic planning and the customer experience.&amp;nbsp; These images can then be used as part of the company’s online product listings.&lt;/p>\r\n&lt;p>For e-commerce, &lt;a href=\&#34;https://www.retaildive.com/news/amazon-generative-ai-sellers-write-product-descriptions/693793/\&#34; target=\&#34;_blank\&#34; rel=\&#34;noopener noreferrer\&#34;>&lt;u>&lt;i>Retail Dive&lt;/i> reports&lt;/u>&lt;/a> that both Amazon and eBay use generative AI to help their sellers generate product descriptions. The AI take in a piece of information, such as a product’s image or key words provided by the seller, and use that data as a seed from which to create a longer, more detailed product description. From there, the seller can review, edit, and update the content, making the product listing process more efficient.&lt;/p>\r\n&lt;p>Content generated by AI needs to be reviewed for its authenticity. &lt;a href=\&#34;/content/gs1us/us/en/tools/gs1-us-data-hub.html\&#34;>&lt;u>GS1 US Data Hub®&lt;/u>&lt;/a>&amp;nbsp;can be used to search and verify product data. In theory, this capability could be expanded to aid human reviewers so that they can work to confirm the accuracy of the information AI generated into a product description or listing. In addition, the &lt;a href=\&#34;/content/gs1us/us/en/resources/data-hub-help-center/gpc-code.html\&#34;>&lt;u>Global Product Classification (GPC)&lt;/u>&lt;/a> can be used to help determine a product’s category for compliance. This can help ensure products have the appropriate certifications and disclaimers incorporated into their listings. A ground source of truth can mitigate the risk of AI hallucinations and make it easier to identify and correct content errors when they occur.&lt;/p>\r\n&#34;}}" id="text-6b79309a2b" class="cmp-text">
+    <p>One of the core functions of generative AI is to create content. Through probability and extrapolation, it uses large language models (LLMs) to understand and generate text, images, sounds, and even video. These models work quickly and at scale. As a result, generative AI can help create content for product descriptions and listings, marketing and media, website design, or e-commerce stores.</p>
+<p>According to an <a href="https://www.ciodive.com/news/procter-gamble-PG-chatgp-AI-openAI/697067/" target="_blank" rel="noopener noreferrer"><u>article in <i>CIO Dive</i></u></a>, Procter &amp; Gamble developed an internal generative AI tool that aids their marketing team in the creation of photorealistic images and other assets. The enhancement to the content creation process frees up their employees to focus more on strategic planning and the customer experience.  These images can then be used as part of the company’s online product listings.</p>
+<p>For e-commerce, <a href="https://www.retaildive.com/news/amazon-generative-ai-sellers-write-product-descriptions/693793/" target="_blank" rel="noopener noreferrer"><u><i>Retail Dive</i> reports</u></a> that both Amazon and eBay use generative AI to help their sellers generate product descriptions. The AI take in a piece of information, such as a product’s image or key words provided by the seller, and use that data as a seed from which to create a longer, more detailed product description. From there, the seller can review, edit, and update the content, making the product listing process more efficient.</p>
+<p>Content generated by AI needs to be reviewed for its authenticity. <a href="/tools/gs1-us-data-hub"><u>GS1 US Data Hub®</u></a> can be used to search and verify product data. In theory, this capability could be expanded to aid human reviewers so that they can work to confirm the accuracy of the information AI generated into a product description or listing. In addition, the <a href="/resources/data-hub-help-center/gpc-code"><u>Global Product Classification (GPC)</u></a> can be used to help determine a product’s category for compliance. This can help ensure products have the appropriate certifications and disclaimers incorporated into their listings. A ground source of truth can mitigate the risk of AI hallucinations and make it easier to identify and correct content errors when they occur.</p>
+
+</div>
+
+    
+</div>
+
+        
+    </div>
+
+</div>
+
+            </li>
+            <li class="col-12 col-sm-3">
+                
+                <div itemprop="text" class="gs1-us-container responsivegrid page">
+
+    
+    
+    
+    <div id="container-bda77fc8bd" class="cmp-container">
+        
+        
+        
+    </div>
+
+</div>
+
+            </li>
+        </ul>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+
+
+
+</div>
+<div class="columncontrol inter-space-bottom wrapper">
+
+
+
+
+
+
+    
+
+    
+
+    
+
+    
+        <ul class="gs-col-control gs-col-control--list-type">
+            <li class="col-12 col-sm-9">
+                
+                <div itemprop="text" class="gs1-us-container responsivegrid page intra-space-bottom">
+
+    
+    
+    
+    <div id="container-3bef4cf8b7" class="cmp-container">
+        
+        <div class="columncontrol">
+
+
+
+
+
+
+    
+
+    
+
+    
+
+    
+
+    
+        <ul class="gs-col-control gs-col-control--list-type">
+            <li class="col-12 col-sm-3">
+                
+                <div itemprop="text" class="gs1-us-container responsivegrid page">
+
+    
+    
+    
+    <div id="container-97e65c185c" class="cmp-container">
+        
+        <div class="image intra-space-top gs1-image--object-contain gs-align-left gs1-image--height-xs">
+<div data-cmp-dmimage id="image-e72bd6074a" data-cmp-data-layer="{&#34;image-e72bd6074a&#34;:{&#34;@type&#34;:&#34;gs1us-aem/components/image&#34;,&#34;repo:modifyDate&#34;:&#34;2024-09-20T18:14:33Z&#34;,&#34;image&#34;:{&#34;repo:id&#34;:&#34;2bd92f20-ce26-40eb-a54b-ec6b89b11109&#34;,&#34;repo:modifyDate&#34;:&#34;2024-09-20T15:33:42Z&#34;,&#34;@type&#34;:&#34;image/png&#34;,&#34;repo:path&#34;:&#34;/content/dam/gs1us/images/articles/generative-ai/gs1-us-chatbots.png&#34;,&#34;xdm:tags&#34;:[&#34;properties:orientation/square&#34;],&#34;xdm:smartTags&#34;:{&#34;robot&#34;:0.925,&#34;clipart&#34;:0.787}}}}" class="cmp-image" itemscope itemtype="http://schema.org/ImageObject">
+	
+		<img src="https://assets.gs1us.org/is/image/gsoneus/gs1-us-chatbots?ts=1726856073725&$PNG$&dpr=off" loading="lazy" class="cmp-image__image" itemprop="contentUrl" alt="Robot with chat bubble icon"/>
+	
+	
+	
+</div>
+
+    
+
+
+</div>
+
+        
+    </div>
+
+</div>
+
+            </li>
+            <li class="col-12 col-sm-9">
+                
+                <div itemprop="text" class="gs1-us-container responsivegrid page">
+
+    
+    
+    
+    <div id="container-c7d24b49cb" class="cmp-container">
+        
+        
+        
+    </div>
+
+</div>
+
+            </li>
+        </ul>
+    
+
+    
+
+    
+
+    
+
+    
+
+
+
+
+
+</div>
+<div class="title primary-title-height">
+    <div data-cmp-data-layer="{&#34;title-7a28120aab&#34;:{&#34;@type&#34;:&#34;gs1us-aem/components/title&#34;,&#34;repo:modifyDate&#34;:&#34;2024-08-29T12:31:20Z&#34;,&#34;dc:title&#34;:&#34;\n            \n            Chatbots, Personalization, and the Customer Experience\n        \n        &#34;}}" id="title-7a28120aab" class="cmp-title">
+        <h3 class="cmp-title__text">
+            
+            
+            Chatbots, Personalization, and the Customer Experience
+        
+        
+        </h3>
+    </div>
+
+
+    
+</div>
+<div class="text"><div data-cmp-data-layer="{&#34;text-5521ffebe0&#34;:{&#34;@type&#34;:&#34;gs1us-aem/components/text&#34;,&#34;repo:modifyDate&#34;:&#34;2024-09-03T12:22:30Z&#34;,&#34;xdm:text&#34;:&#34;&lt;p>Chat interface is another major aspect of generative AI. It uses the natural language processing (NLP) capabilities of LLMs to have text conversations with customers. AI can learn and adapt to customer habits, which makes for a dynamic experience. The chatbots can react to a customer’s interaction history to provide hyper-personalized insights and recommendations.&lt;/p>\r\n&lt;p>Etsy has launched an AI chatbot that recommends products and streamlines gift shopping, according to &lt;a href=\&#34;https://techcrunch.com/2024/01/24/etsy-launches-gift-mode-a-new-ai-powered-feature-that-generates-200-gift-guides/\&#34; target=\&#34;_blank\&#34; rel=\&#34;noopener noreferrer\&#34;>&lt;i>&lt;u>TechCrunch&lt;/u>&lt;/i>&lt;/a>. The e-commerce platform’s boost in personalization provides new ideas beyond a traditional keyword search and makes it easier for users to find great gifts.&lt;/p>\r\n&lt;p>Nestlé&amp;nbsp;used the scale and speed of generative AI, as &lt;a href=\&#34;https://www.thedrum.com/news/2023/02/15/how-nestl-using-ai-set-creative-rules-its-15000-marketers\&#34; target=\&#34;_blank\&#34; rel=\&#34;noopener noreferrer\&#34;>&lt;u>revealed by &lt;i>The Drum&lt;/i>&lt;/u>&lt;/a>, to aid alignment in its marketing organization. The AI accessed thousands of historical campaigns to find patterns in the methods that worked best and how to use them with new content. AI offered Nestlé-specific best practices that streamlined their marketing process.&lt;/p>\r\n&lt;p>GS1 Standards provide a common framework of reference for models to help understand products by their category and related products. The &lt;a href=\&#34;/content/gs1us/us/en/standards/gpc.html\&#34;>&lt;u>GPC&lt;/u>&lt;/a>&amp;nbsp;is an identifier that groups products based on essential properties and their relationships to other products. AI could use these relationships to improve recommendations to customers.&lt;/p>\r\n&#34;}}" id="text-5521ffebe0" class="cmp-text">
+    <p>Chat interface is another major aspect of generative AI. It uses the natural language processing (NLP) capabilities of LLMs to have text conversations with customers. AI can learn and adapt to customer habits, which makes for a dynamic experience. The chatbots can react to a customer’s interaction history to provide hyper-personalized insights and recommendations.</p>
+<p>Etsy has launched an AI chatbot that recommends products and streamlines gift shopping, according to <a href="https://techcrunch.com/2024/01/24/etsy-launches-gift-mode-a-new-ai-powered-feature-that-generates-200-gift-guides/" target="_blank" rel="noopener noreferrer"><i><u>TechCrunch</u></i></a>. The e-commerce platform’s boost in personalization provides new ideas beyond a traditional keyword search and makes it easier for users to find great gifts.</p>
+<p>Nestlé used the scale and speed of generative AI, as <a href="https://www.thedrum.com/news/2023/02/15/how-nestl-using-ai-set-creative-rules-its-15000-marketers" target="_blank" rel="noopener noreferrer"><u>revealed by <i>The Drum</i></u></a>, to aid alignment in its marketing organization. The AI accessed thousands of historical campaigns to find patterns in the methods that worked best and how to use them with new content. AI offered Nestlé-specific best practices that streamlined their marketing process.</p>
+<p>GS1 Standards provide a common framework of reference for models to help understand products by their category and related products. The <a href="/standards/gpc"><u>GPC</u></a> is an identifier that groups products based on essential properties and their relationships to other products. AI could use these relationships to improve recommendations to customers.</p>
+
+</div>
+
+    
+</div>
+
+        
+    </div>
+
+</div>
+
+            </li>
+            <li class="col-12 col-sm-3">
+                
+                <div itemprop="text" class="gs1-us-container responsivegrid page">
+
+    
+    
+    
+    <div id="container-5a39526fd6" class="cmp-container">
+        
+        
+        
+    </div>
+
+</div>
+
+            </li>
+        </ul>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+
+
+
+</div>
+
+        
+    </div>
+
+</div>
+<div itemprop="text" class="gs1-us-container responsivegrid page intra-space-bottom gs-container-wrapper">
+
+    
+    
+    
+    <div id="container-4e926f9501" class="cmp-container" style="background-color:#002c6c;">
+        
+        <div class="columncontrol intra-space-top wrapper">
+
+
+
+
+    
+        <div class="gs-col-control">
+            <div class="col-12 col-sm-6">
+                
+                <div itemprop="text" class="gs1-us-container responsivegrid page intra-space-bottom">
+
+    
+    
+    
+    <div id="container-12a0df6df8" class="cmp-container">
+        
+        <div class="image">
+<div data-cmp-dmimage id="image-98cf7d5c63" data-cmp-data-layer="{&#34;image-98cf7d5c63&#34;:{&#34;@type&#34;:&#34;gs1us-aem/components/image&#34;,&#34;repo:modifyDate&#34;:&#34;2024-08-30T18:37:50Z&#34;,&#34;xdm:linkURL&#34;:&#34;https://events.ringcentral.com/events/gs1-us-innovation-summit24/registration?creative_slot=gen-ai&amp;creative_name=banner1&amp;promotion_name=innovationsummit24&amp;promotion_id=0136&#34;,&#34;image&#34;:{&#34;repo:id&#34;:&#34;f78f0a3a-2230-4c32-87c4-0a57db21bdf4&#34;,&#34;repo:modifyDate&#34;:&#34;2024-08-05T13:00:33Z&#34;,&#34;@type&#34;:&#34;image/png&#34;,&#34;repo:path&#34;:&#34;/content/dam/gs1us/images/education-events/innovation-summit/gs1-us-innovation-summit-2024-web-merch-image-600x380.png&#34;,&#34;xdm:tags&#34;:[&#34;properties:orientation/landscape&#34;],&#34;xdm:smartTags&#34;:{&#34;event photography&#34;:0.792}}}}" class="cmp-image" itemscope itemtype="http://schema.org/ImageObject">
+	<a class="cmp-image__link" data-cmp-clickable href="https://events.ringcentral.com/events/gs1-us-innovation-summit24/registration?creative_slot=gen-ai&creative_name=banner1&promotion_name=innovationsummit24&promotion_id=0136">
+		<img src="https://assets.gs1us.org/is/image/gsoneus/gs1-us-innovation-summit-2024-web-merch-image-600x380?ts=1725043070119&dpr=off" loading="lazy" class="cmp-image__image" itemprop="contentUrl" alt="Innovation Summit 2024 | Believe the AI Hype | Free &amp; Virtual October 10"/>
+	</a>
+	
+	
+</div>
+
+    
+
+
+</div>
+
+        
+    </div>
+
+</div>
+
+            </div>
+            <div class="col-12 col-sm-6">
+                
+                <div itemprop="text" class="gs1-us-container responsivegrid page intra-space-bottom">
+
+    
+    
+    
+    <div id="container-0640162baf" class="cmp-container">
+        
+        <div class="text white-text"><div data-cmp-data-layer="{&#34;text-d0b3d1ac48&#34;:{&#34;@type&#34;:&#34;gs1us-aem/components/text&#34;,&#34;repo:modifyDate&#34;:&#34;2024-08-29T12:32:20Z&#34;,&#34;xdm:text&#34;:&#34;&lt;h3>Believe the AI Hype: Exploring the Realities and Opportunities of AI in Supply Chain&lt;/h3>\r\n&lt;p>Join us for free at the virtual GS1 US Innovation Summit where we will debunk myths, showcase real-world applications, and offer valuable insights to empower businesses of all sizes to embrace AI-driven solutions with confidence.&amp;nbsp;&lt;/p>\r\n&#34;}}" id="text-d0b3d1ac48" class="cmp-text">
+    <h3>Believe the AI Hype: Exploring the Realities and Opportunities of AI in Supply Chain</h3>
+<p>Join us for free at the virtual GS1 US Innovation Summit where we will debunk myths, showcase real-world applications, and offer valuable insights to empower businesses of all sizes to embrace AI-driven solutions with confidence. </p>
+
+</div>
+
+    
+</div>
+<div class="gs-cta gs-cta--alone gs-cta--secondary-btn">
+<a id="button-57db153b1b" class="gs-cta__link" aria-label="Register Now added" data-cmp-clickable data-cmp-data-layer="{&#34;button-57db153b1b&#34;:{&#34;@type&#34;:&#34;gs1us-aem/components/button&#34;,&#34;repo:modifyDate&#34;:&#34;2024-08-30T07:01:26Z&#34;,&#34;dc:title&#34;:&#34;Register Now &#34;,&#34;xdm:linkURL&#34;:&#34;#https://events.ringcentral.com/events/gs1-us-innovation-summit24/registration?creative_slot=gen-ai-apps&amp;creative_name=banner1&amp;promotion_name=innovationsummit24&amp;promotion_id=0144&#34;}}" role="link" href="#https://events.ringcentral.com/events/gs1-us-innovation-summit24/registration?creative_slot=gen-ai-apps&creative_name=banner1&promotion_name=innovationsummit24&promotion_id=0144" target="_blank" data-cta-name="Register Now ">
+        <span class="cmp-button__text">Register Now </span>
+        <span class="cmp-button__icon" aria-hidden="true"></span>
+
+</a>
+</div>
+
+        
+    </div>
+
+</div>
+
+            </div>
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+
+
+
+
+
+</div>
+
+        
+    </div>
+
+</div>
+<div itemprop="text" class="gs1-us-container responsivegrid page">
+
+    
+    
+    
+    <div id="container-d26facf71e" class="cmp-container">
+        
+        <div class="columncontrol wrapper">
+
+
+
+
+
+
+    
+
+    
+
+    
+
+    
+        <ul class="gs-col-control gs-col-control--list-type">
+            <li class="col-12 col-sm-9">
+                
+                <div itemprop="text" class="gs1-us-container responsivegrid page intra-space-bottom">
+
+    
+    
+    
+    <div id="container-ca1778fcb4" class="cmp-container">
+        
+        <div class="columncontrol">
+
+
+
+
+
+
+    
+
+    
+
+    
+
+    
+
+    
+        <ul class="gs-col-control gs-col-control--list-type">
+            <li class="col-12 col-sm-3">
+                
+                <div itemprop="text" class="gs1-us-container responsivegrid page">
+
+    
+    
+    
+    <div id="container-af53e8c2df" class="cmp-container">
+        
+        <div class="image intra-space-top gs1-image--object-contain gs-align-left gs1-image--height-xs">
+<div data-cmp-dmimage id="image-33daa2678f" data-cmp-data-layer="{&#34;image-33daa2678f&#34;:{&#34;@type&#34;:&#34;gs1us-aem/components/image&#34;,&#34;repo:modifyDate&#34;:&#34;2024-09-20T18:15:28Z&#34;,&#34;image&#34;:{&#34;repo:id&#34;:&#34;d5723451-a0c7-4e04-a48f-0ba74fceb3bc&#34;,&#34;repo:modifyDate&#34;:&#34;2024-09-20T15:33:41Z&#34;,&#34;@type&#34;:&#34;image/png&#34;,&#34;repo:path&#34;:&#34;/content/dam/gs1us/images/articles/generative-ai/gs1-us-data-insights-im.png&#34;,&#34;xdm:tags&#34;:[&#34;properties:orientation/square&#34;],&#34;xdm:smartTags&#34;:{&#34;diagram&#34;:0.875,&#34;clipart&#34;:0.756,&#34;business photography&#34;:0.85,&#34;research institution&#34;:0.818,&#34;stock&#34;:0.752}}}}" class="cmp-image" itemscope itemtype="http://schema.org/ImageObject">
+	
+		<img src="https://assets.gs1us.org/is/image/gsoneus/gs1-us-data-insights-im?ts=1726856128059&$PNG$&dpr=off" loading="lazy" class="cmp-image__image" itemprop="contentUrl" alt="Data with magnifying glass icon"/>
+	
+	
+	
+</div>
+
+    
+
+
+</div>
+
+        
+    </div>
+
+</div>
+
+            </li>
+            <li class="col-12 col-sm-9">
+                
+                <div itemprop="text" class="gs1-us-container responsivegrid page">
+
+    
+    
+    
+    <div id="container-a2f0635ed1" class="cmp-container">
+        
+        
+        
+    </div>
+
+</div>
+
+            </li>
+        </ul>
+    
+
+    
+
+    
+
+    
+
+    
+
+
+
+
+
+</div>
+<div class="title primary-title-height">
+    <div data-cmp-data-layer="{&#34;title-50bde40695&#34;:{&#34;@type&#34;:&#34;gs1us-aem/components/title&#34;,&#34;repo:modifyDate&#34;:&#34;2024-08-29T12:33:34Z&#34;,&#34;dc:title&#34;:&#34;\n            \n            \n            Data Insights for Inventory Management\n        \n        \n        &#34;}}" id="title-50bde40695" class="cmp-title">
+        <h3 class="cmp-title__text">
+            
+            
+            
+            Data Insights for Inventory Management
+        
+        
+        
+        </h3>
+    </div>
+
+
+    
+</div>
+<div class="text"><div data-cmp-data-layer="{&#34;text-942f121323&#34;:{&#34;@type&#34;:&#34;gs1us-aem/components/text&#34;,&#34;repo:modifyDate&#34;:&#34;2024-09-03T12:24:22Z&#34;,&#34;xdm:text&#34;:&#34;&lt;p>Generative AI can use a communication interface to share valuable information across the whole organization, so it doesn’t require specialized knowledge or skills to understand. As a result, decision-makers at all levels can access key information about inventory, demand forecasting, and logistics. This should help them to respond more quickly and make well-informed supply chain decisions.&lt;/p>\r\n&lt;p>Another article from &lt;a href=\&#34;https://www.ciodive.com/news/home-depot-sidekick-app/640521/\&#34; target=\&#34;_blank\&#34; rel=\&#34;noopener noreferrer\&#34;>&lt;i>&lt;u>CIO Dive&lt;/u>&lt;/i>&lt;/a> noted that The Home Depot has developed an AI application called Sidekick. It gives store associates access to AI insights to help them manage inventory. It uses computer vision systems to see real-time stock levels in the store and provide informed suggestions.&lt;/p>\r\n&lt;p>Walmart rolled out an AI application that can help manage inventory by analyzing structured and unstructured data from a variety of sources, according to a report from the &lt;a href=\&#34;https://www.wsj.com/articles/retailers-are-turning-to-ai-to-get-smarter-about-inventory-66d70f86\&#34; target=\&#34;_blank\&#34; rel=\&#34;noopener noreferrer\&#34;>&lt;i>&lt;u>Wall Street Journal&lt;/u>&lt;/i>&lt;/a>. For example, it can examine weather patterns and social media trends to better inform inventory decisions. These insights about large-scale unstructured data enhance traditional predictive AI forecasting.&lt;/p>\r\n&lt;p>Insights are built on data. GS1 US offers a &lt;a href=\&#34;/content/gs1us/us/en/tools/gs1-us-data-hub/product/view-use.html\&#34;>&lt;u>Data Hub View/Use subscription&lt;/u>&lt;/a> that allows users to query and view large amounts of product data that may be used for AI insights. GS1 Standards and data can help provide the building blocks for comprehensive AI operations spanning an industry’s supply chain.&lt;/p>\r\n&#34;}}" id="text-942f121323" class="cmp-text">
+    <p>Generative AI can use a communication interface to share valuable information across the whole organization, so it doesn’t require specialized knowledge or skills to understand. As a result, decision-makers at all levels can access key information about inventory, demand forecasting, and logistics. This should help them to respond more quickly and make well-informed supply chain decisions.</p>
+<p>Another article from <a href="https://www.ciodive.com/news/home-depot-sidekick-app/640521/" target="_blank" rel="noopener noreferrer"><i><u>CIO Dive</u></i></a> noted that The Home Depot has developed an AI application called Sidekick. It gives store associates access to AI insights to help them manage inventory. It uses computer vision systems to see real-time stock levels in the store and provide informed suggestions.</p>
+<p>Walmart rolled out an AI application that can help manage inventory by analyzing structured and unstructured data from a variety of sources, according to a report from the <a href="https://www.wsj.com/articles/retailers-are-turning-to-ai-to-get-smarter-about-inventory-66d70f86" target="_blank" rel="noopener noreferrer"><i><u>Wall Street Journal</u></i></a>. For example, it can examine weather patterns and social media trends to better inform inventory decisions. These insights about large-scale unstructured data enhance traditional predictive AI forecasting.</p>
+<p>Insights are built on data. GS1 US offers a <a href="/tools/gs1-us-data-hub/product/view-use"><u>Data Hub View/Use subscription</u></a> that allows users to query and view large amounts of product data that may be used for AI insights. GS1 Standards and data can help provide the building blocks for comprehensive AI operations spanning an industry’s supply chain.</p>
+
+</div>
+
+    
+</div>
+
+        
+    </div>
+
+</div>
+
+            </li>
+            <li class="col-12 col-sm-3">
+                
+                <div itemprop="text" class="gs1-us-container responsivegrid page">
+
+    
+    
+    
+    <div id="container-3e07922f67" class="cmp-container">
+        
+        
+        
+    </div>
+
+</div>
+
+            </li>
+        </ul>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+
+
+
+</div>
+<div class="columncontrol wrapper">
+
+
+
+
+
+
+    
+
+    
+
+    
+
+    
+        <ul class="gs-col-control gs-col-control--list-type">
+            <li class="col-12 col-sm-9">
+                
+                <div itemprop="text" class="gs1-us-container responsivegrid page intra-space-bottom">
+
+    
+    
+    
+    <div id="container-c27f93e0f4" class="cmp-container">
+        
+        <div class="columncontrol">
+
+
+
+
+
+
+    
+
+    
+
+    
+
+    
+
+    
+        <ul class="gs-col-control gs-col-control--list-type">
+            <li class="col-12 col-sm-3">
+                
+                <div itemprop="text" class="gs1-us-container responsivegrid page">
+
+    
+    
+    
+    <div id="container-27ce18499c" class="cmp-container">
+        
+        <div class="image intra-space-top gs1-image--object-contain gs-align-left gs1-image--height-xs">
+<div data-cmp-dmimage id="image-c5d029e068" data-cmp-data-layer="{&#34;image-c5d029e068&#34;:{&#34;@type&#34;:&#34;gs1us-aem/components/image&#34;,&#34;repo:modifyDate&#34;:&#34;2024-09-20T18:16:00Z&#34;,&#34;image&#34;:{&#34;repo:id&#34;:&#34;efc98dee-407a-4e82-afbb-ef96e05de2b7&#34;,&#34;repo:modifyDate&#34;:&#34;2024-09-20T15:33:42Z&#34;,&#34;@type&#34;:&#34;image/png&#34;,&#34;repo:path&#34;:&#34;/content/dam/gs1us/images/articles/generative-ai/gs1-us-digital-twins.png&#34;,&#34;xdm:tags&#34;:[&#34;properties:orientation/square&#34;],&#34;xdm:smartTags&#34;:{&#34;chip&#34;:0.753,&#34;composite photography&#34;:0.847,&#34;collaboration&#34;:0.818}}}}" class="cmp-image" itemscope itemtype="http://schema.org/ImageObject">
+	
+		<img src="https://assets.gs1us.org/is/image/gsoneus/gs1-us-digital-twins?ts=1726856160395&$PNG$&dpr=off" loading="lazy" class="cmp-image__image" itemprop="contentUrl" alt="Two heads overlapping icon"/>
+	
+	
+	
+</div>
+
+    
+
+
+</div>
+
+        
+    </div>
+
+</div>
+
+            </li>
+            <li class="col-12 col-sm-9">
+                
+                <div itemprop="text" class="gs1-us-container responsivegrid page">
+
+    
+    
+    
+    <div id="container-7074da282d" class="cmp-container">
+        
+        
+        
+    </div>
+
+</div>
+
+            </li>
+        </ul>
+    
+
+    
+
+    
+
+    
+
+    
+
+
+
+
+
+</div>
+<div class="title primary-title-height">
+    <div data-cmp-data-layer="{&#34;title-fd7e382052&#34;:{&#34;@type&#34;:&#34;gs1us-aem/components/title&#34;,&#34;repo:modifyDate&#34;:&#34;2024-09-03T12:24:29Z&#34;,&#34;dc:title&#34;:&#34;\n            \n            \n            \n            \n            Digital Simulation to Empower Resilience and Fulfillment\n        \n        \n        \n        \n        &#34;}}" id="title-fd7e382052" class="cmp-title">
+        <h3 class="cmp-title__text">
+            
+            
+            
+            
+            
+            Digital Simulation to Empower Resilience and Fulfillment
+        
+        
+        
+        
+        
+        </h3>
+    </div>
+
+
+    
+</div>
+<div class="text"><div data-cmp-data-layer="{&#34;text-3c63b64aa5&#34;:{&#34;@type&#34;:&#34;gs1us-aem/components/text&#34;,&#34;repo:modifyDate&#34;:&#34;2024-09-30T17:53:41Z&#34;,&#34;xdm:text&#34;:&#34;&lt;p>Digital twins are virtual recreations of a real-world environment. They can be used for simulations, studies, and predictive analytics. Generative AI enhances digital twins by producing synthetic data to increase the scope beyond current limitations. Generative and predictive AI work together in a digital twin to simulate and respond to supply chain disruptions or sudden changes in demand.&lt;/p>\r\n&lt;p>A recent article from &lt;a href=\&#34;https://www.automationworld.com/analytics/article/55021495/revolutionizing-the-supply-chain-with-generative-ai\&#34; target=\&#34;_blank\&#34; rel=\&#34;noopener noreferrer\&#34;>&lt;i>&lt;u>AutomationWorld&lt;/u>&lt;/i>&lt;/a> states that Mars collaborated with Accenture to create digital twins of their products and factory spaces. They wanted to see how adjustments to either would unfold before committing to making changes in the physical space. The digital twin simulation helped them identify bottlenecks and quality issues. They also learned how they could respond proactively to unexpected disruptions or shifts in demand.&lt;/p>\r\n&lt;p>UPS is in the process of creating a digital twin of its logistics network, as highlighted in &lt;a href=\&#34;https://www.supplychaindive.com/news/ups-orion-route-planning-analytics-data-logistics/601673/\&#34; target=\&#34;_blank\&#34; rel=\&#34;noopener noreferrer\&#34;>&lt;i>&lt;u>Supply Chain Dive&lt;/u>&lt;/i>&lt;/a>. Their goal is to track packages more accurately and update routes based on real-time updates. They are looking to coordinate many signals into a single cohesive vision of the route. To do so, the digital twin would be built with a combination of Internet of Things (IoT) sensors and AI. This would also aid in optimization and route planning.&lt;/p>\r\n&lt;p>The creation of an expansive digital twin ecosystem is not a singular effort. Companies want to gain maximum benefit from large-scale AI simulation. To do so, they would need to interoperably share data with their trading partners. &lt;a href=\&#34;/content/gs1us/us/en/standards/edi.html\&#34;>&lt;u>Electronic data interchange (EDI)&lt;/u>&lt;/a>&lt;sup>&lt;a href=\&#34;#_ftn1\&#34; name=\&#34;_ftnref1\&#34;>1&lt;/a>&lt;/sup>&amp;nbsp;standards form the core of that interoperable exchange of data. In addition, the digitization of key events within a supply chain can be achieved through &lt;a href=\&#34;https://www.gs1.org/standards/epcis\&#34; target=\&#34;_blank\&#34;>&lt;u>electronic product code information services (EPCIS)&lt;/u>&lt;/a> events to share visibility data and build a truly transparent digital twin.&lt;/p>\r\n&#34;}}" id="text-3c63b64aa5" class="cmp-text">
+    <p>Digital twins are virtual recreations of a real-world environment. They can be used for simulations, studies, and predictive analytics. Generative AI enhances digital twins by producing synthetic data to increase the scope beyond current limitations. Generative and predictive AI work together in a digital twin to simulate and respond to supply chain disruptions or sudden changes in demand.</p>
+<p>A recent article from <a href="https://www.automationworld.com/analytics/article/55021495/revolutionizing-the-supply-chain-with-generative-ai" target="_blank" rel="noopener noreferrer"><i><u>AutomationWorld</u></i></a> states that Mars collaborated with Accenture to create digital twins of their products and factory spaces. They wanted to see how adjustments to either would unfold before committing to making changes in the physical space. The digital twin simulation helped them identify bottlenecks and quality issues. They also learned how they could respond proactively to unexpected disruptions or shifts in demand.</p>
+<p>UPS is in the process of creating a digital twin of its logistics network, as highlighted in <a href="https://www.supplychaindive.com/news/ups-orion-route-planning-analytics-data-logistics/601673/" target="_blank" rel="noopener noreferrer"><i><u>Supply Chain Dive</u></i></a>. Their goal is to track packages more accurately and update routes based on real-time updates. They are looking to coordinate many signals into a single cohesive vision of the route. To do so, the digital twin would be built with a combination of Internet of Things (IoT) sensors and AI. This would also aid in optimization and route planning.</p>
+<p>The creation of an expansive digital twin ecosystem is not a singular effort. Companies want to gain maximum benefit from large-scale AI simulation. To do so, they would need to interoperably share data with their trading partners. <a href="/standards/edi"><u>Electronic data interchange (EDI)</u></a><sup><a href="#_ftn1" name="_ftnref1">1</a></sup> standards form the core of that interoperable exchange of data. In addition, the digitization of key events within a supply chain can be achieved through <a href="https://www.gs1.org/standards/epcis" target="_blank" rel="noopener noreferrer"><u>electronic product code information services (EPCIS)</u></a> events to share visibility data and build a truly transparent digital twin.</p>
+
+</div>
+
+    
+</div>
+
+        
+    </div>
+
+</div>
+
+            </li>
+            <li class="col-12 col-sm-3">
+                
+                <div itemprop="text" class="gs1-us-container responsivegrid page">
+
+    
+    
+    
+    <div id="container-319a475022" class="cmp-container">
+        
+        
+        
+    </div>
+
+</div>
+
+            </li>
+        </ul>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+
+
+
+</div>
+<div class="columncontrol wrapper">
+
+
+
+
+
+
+    
+
+    
+
+    
+
+    
+        <ul class="gs-col-control gs-col-control--list-type">
+            <li class="col-12 col-sm-9">
+                
+                <div itemprop="text" class="gs1-us-container responsivegrid page">
+
+    
+    
+    
+    <div id="container-4ec329f7d3" class="cmp-container">
+        
+        <div class="columncontrol">
+
+
+
+
+
+
+    
+
+    
+
+    
+
+    
+
+    
+        <ul class="gs-col-control gs-col-control--list-type">
+            <li class="col-12 col-sm-3">
+                
+                <div itemprop="text" class="gs1-us-container responsivegrid page">
+
+    
+    
+    
+    <div id="container-6b1c9523d9" class="cmp-container">
+        
+        <div class="image intra-space-top gs1-image--object-contain gs-align-left gs1-image--height-xs">
+<div data-cmp-dmimage id="image-deb431bbe9" data-cmp-data-layer="{&#34;image-deb431bbe9&#34;:{&#34;@type&#34;:&#34;gs1us-aem/components/image&#34;,&#34;repo:modifyDate&#34;:&#34;2024-09-20T18:17:30Z&#34;,&#34;image&#34;:{&#34;repo:id&#34;:&#34;a2884425-dcff-44e8-bd0b-51cb19ba6822&#34;,&#34;repo:modifyDate&#34;:&#34;2024-09-20T15:33:47Z&#34;,&#34;@type&#34;:&#34;image/png&#34;,&#34;repo:path&#34;:&#34;/content/dam/gs1us/images/articles/generative-ai/gs1-us-sustainability.png&#34;,&#34;xdm:tags&#34;:[&#34;properties:orientation/square&#34;],&#34;xdm:smartTags&#34;:{&#34;sprout&#34;:0.767,&#34;recycling&#34;:0.765,&#34;climate&#34;:0.817,&#34;night photography&#34;:0.85}}}}" class="cmp-image" itemscope itemtype="http://schema.org/ImageObject">
+	
+		<img src="https://assets.gs1us.org/is/image/gsoneus/gs1-us-sustainability-1?ts=1726856250385&$PNG$&dpr=off" loading="lazy" class="cmp-image__image" itemprop="contentUrl" alt="Leaf with circular arrows icon"/>
+	
+	
+	
+</div>
+
+    
+
+
+</div>
+
+        
+    </div>
+
+</div>
+
+            </li>
+            <li class="col-12 col-sm-9">
+                
+                <div itemprop="text" class="gs1-us-container responsivegrid page">
+
+    
+    
+    
+    <div id="container-ad86ee536a" class="cmp-container">
+        
+        
+        
+    </div>
+
+</div>
+
+            </li>
+        </ul>
+    
+
+    
+
+    
+
+    
+
+    
+
+
+
+
+
+</div>
+<div class="title primary-title-height">
+    <div data-cmp-data-layer="{&#34;title-cd1304a026&#34;:{&#34;@type&#34;:&#34;gs1us-aem/components/title&#34;,&#34;repo:modifyDate&#34;:&#34;2024-08-29T12:36:06Z&#34;,&#34;dc:title&#34;:&#34;\n            \n            \n            \n            \n            Design and Discovery for Sustainability\n        \n        \n        \n        \n        &#34;}}" id="title-cd1304a026" class="cmp-title">
+        <h3 class="cmp-title__text">
+            
+            
+            
+            
+            
+            Design and Discovery for Sustainability
+        
+        
+        
+        
+        
+        </h3>
+    </div>
+
+
+    
+</div>
+<div class="text"><div data-cmp-data-layer="{&#34;text-db50dd3835&#34;:{&#34;@type&#34;:&#34;gs1us-aem/components/text&#34;,&#34;repo:modifyDate&#34;:&#34;2024-10-01T19:20:54Z&#34;,&#34;xdm:text&#34;:&#34;&lt;p>Achieving sustainability is complex and needs coordination across a business. A strategy could include factors like optimizing packaging, reducing waste, and tracking Scope 3 emissions. Generative AI can bring this key sustainability data together in one place. It can access and combine diverse information from a company’s various departments and trading partners. Then, generative AI can act as a thought partner. It can quickly offer sustainability insights at scale to help companies achieve their environmental, social, and governance (ESG) goals.&lt;/p>\r\n&lt;p>&lt;a>&lt;/a>&lt;a>A report from &lt;/a>&lt;a href=\&#34;https://sustainabilitymag.com/tech-ai/how-amazon-is-accelerating-sustainability-goals-with-ai\&#34; target=\&#34;_blank\&#34; rel=\&#34;noopener noreferrer\&#34;>&lt;i>&lt;u>Sustainability Magazine&lt;/u>&lt;/i>&lt;/a> highlights how Amazon is using AI&amp;nbsp;to help achieve its sustainability goals. These AI functions help with packaging design to reduce size and include more sustainable materials. They monitor damaged items or food to reduce waste. They also improve apparel fits to reduce returns and aid in tracking the carbon footprints of products.&lt;/p>\r\n&lt;p>&lt;a>&lt;/a>&lt;a>Accenture, as discussed in the article from &lt;/a>&lt;a href=\&#34;https://www.automationworld.com/analytics/article/55021495/revolutionizing-the-supply-chain-with-generative-ai\&#34; target=\&#34;_blank\&#34; rel=\&#34;noopener noreferrer\&#34;>&lt;i>&lt;u>AutomationWorld&lt;/u>&lt;/i>&lt;/a> cited above, has used AI to help a client with their global decarbonization efforts. A generative AI solution was developed that could crawl through suppliers’ websites to aggregate information. Then, it could quickly determine which suppliers had the science-based targets (SBTs) necessary for tracking decarbonization. Accessing this type of supplier information could help companies with Scope 3 emissions compliance—found, summarized, analyzed, and delivered by AI.&lt;/p>\r\n&lt;p>Design and discovery through AI is only as good as the truth and authenticity of the data. GS1 US has worked with &lt;a href=\&#34;https://youtu.be/iDkANArgdKI?si=6XoJn6iZ7-0I0azG\&#34; target=\&#34;_blank\&#34; rel=\&#34;noopener noreferrer\&#34;>&lt;u>verifiable credentials&lt;/u>&lt;/a> for trading partners across the supply chain to help ensure the truth of sustainability certifications and other claims. GS1 US &lt;a href=\&#34;/content/gs1us/us/en/articles/sustainable-supply-chain.html\&#34;>&lt;u>supports sustainability&lt;/u>&lt;/a> with standards and identifiers, which can work with generative AI to help companies meet their ESG goals.&lt;/p>\r\n&#34;}}" id="text-db50dd3835" class="cmp-text">
+    <p>Achieving sustainability is complex and needs coordination across a business. A strategy could include factors like optimizing packaging, reducing waste, and tracking Scope 3 emissions. Generative AI can bring this key sustainability data together in one place. It can access and combine diverse information from a company’s various departments and trading partners. Then, generative AI can act as a thought partner. It can quickly offer sustainability insights at scale to help companies achieve their environmental, social, and governance (ESG) goals.</p>
+<p><a></a><a>A report from </a><a href="https://sustainabilitymag.com/tech-ai/how-amazon-is-accelerating-sustainability-goals-with-ai" target="_blank" rel="noopener noreferrer"><i><u>Sustainability Magazine</u></i></a> highlights how Amazon is using AI to help achieve its sustainability goals. These AI functions help with packaging design to reduce size and include more sustainable materials. They monitor damaged items or food to reduce waste. They also improve apparel fits to reduce returns and aid in tracking the carbon footprints of products.</p>
+<p><a></a><a>Accenture, as discussed in the article from </a><a href="https://www.automationworld.com/analytics/article/55021495/revolutionizing-the-supply-chain-with-generative-ai" target="_blank" rel="noopener noreferrer"><i><u>AutomationWorld</u></i></a> cited above, has used AI to help a client with their global decarbonization efforts. A generative AI solution was developed that could crawl through suppliers’ websites to aggregate information. Then, it could quickly determine which suppliers had the science-based targets (SBTs) necessary for tracking decarbonization. Accessing this type of supplier information could help companies with Scope 3 emissions compliance—found, summarized, analyzed, and delivered by AI.</p>
+<p>Design and discovery through AI is only as good as the truth and authenticity of the data. GS1 US has worked with <a href="https://youtu.be/iDkANArgdKI?si&#61;6XoJn6iZ7-0I0azG" target="_blank" rel="noopener noreferrer"><u>verifiable credentials</u></a> for trading partners across the supply chain to help ensure the truth of sustainability certifications and other claims. GS1 US <a href="/articles/sustainable-supply-chain"><u>supports sustainability</u></a> with standards and identifiers, which can work with generative AI to help companies meet their ESG goals.</p>
+
+</div>
+
+    
+</div>
+
+        
+    </div>
+
+</div>
+
+            </li>
+            <li class="col-12 col-sm-3">
+                
+                <div itemprop="text" class="gs1-us-container responsivegrid page">
+
+    
+    
+    
+    <div id="container-b344ff9086" class="cmp-container">
+        
+        
+        
+    </div>
+
+</div>
+
+            </li>
+        </ul>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+
+
+
+</div>
+<div itemprop="text" class="gs1-us-container responsivegrid page intra-space-top gs-container-wrapper">
+
+    
+    
+    
+    <div id="container-e45b4f624f" class="cmp-container">
+        
+        <div itemprop="text" class="gs1-us-container responsivegrid page inter-space-bottom wrapper">
+
+    
+    
+    
+    <div id="container-0f3f598349" class="cmp-container">
+        
+        <div class="separator inter-space-top">
+
+<div id="separator-cd4938fd8d">
+    <hr/>
+</div>
+</div>
+
+        
+    </div>
+
+</div>
+<div class="columncontrol inter-space-bottom wrapper">
+
+
+
+
+
+
+    
+
+    
+
+    
+
+    
+        <ul class="gs-col-control gs-col-control--list-type">
+            <li class="col-12 col-sm-9">
+                
+                <div itemprop="text" class="gs1-us-container responsivegrid page intra-space-bottom">
+
+    
+    
+    
+    <div id="container-019ed2384a" class="cmp-container">
+        
+        <div class="title inter-space-top">
+    <div data-cmp-data-layer="{&#34;title-84356c564f&#34;:{&#34;@type&#34;:&#34;gs1us-aem/components/title&#34;,&#34;repo:modifyDate&#34;:&#34;2024-08-29T12:38:57Z&#34;,&#34;dc:title&#34;:&#34;Generative AI on the Horizon&#34;}}" id="title-84356c564f" class="cmp-title">
+        <h2 class="cmp-title__text">
+            Generative AI on the Horizon
+        </h2>
+    </div>
+
+
+    
+</div>
+<div class="text inter-space-bottom"><div data-cmp-data-layer="{&#34;text-595953ba19&#34;:{&#34;@type&#34;:&#34;gs1us-aem/components/text&#34;,&#34;repo:modifyDate&#34;:&#34;2024-09-30T17:54:11Z&#34;,&#34;xdm:text&#34;:&#34;&lt;p>Generative AI’s potential is deeper than the use cases above. AI will continue to evolve as more powerful chips are developed, more users interact with the technology, and scientific advances occur, such as the advent of quantum computing. Companies looking to stay at the cutting edge of AI and supply chain will want to understand their vision of the AI future and proactively determine the role that AI plays in their organization, today and tomorrow.&lt;/p>\r\n&lt;p>To that end, there are several ways generative AI may evolve or be relevant to a supply chain organization in the future.&lt;/p>\r\n&#34;}}" id="text-595953ba19" class="cmp-text">
+    <p>Generative AI’s potential is deeper than the use cases above. AI will continue to evolve as more powerful chips are developed, more users interact with the technology, and scientific advances occur, such as the advent of quantum computing. Companies looking to stay at the cutting edge of AI and supply chain will want to understand their vision of the AI future and proactively determine the role that AI plays in their organization, today and tomorrow.</p>
+<p>To that end, there are several ways generative AI may evolve or be relevant to a supply chain organization in the future.</p>
+
+</div>
+
+    
+</div>
+<div class="title inter-space-top">
+    <div data-cmp-data-layer="{&#34;title-cc0bf6b7a9&#34;:{&#34;@type&#34;:&#34;gs1us-aem/components/title&#34;,&#34;repo:modifyDate&#34;:&#34;2024-08-29T12:39:35Z&#34;,&#34;dc:title&#34;:&#34;Generative AI as a Thought Partner&#34;}}" id="title-cc0bf6b7a9" class="cmp-title">
+        <h3 class="cmp-title__text">
+            Generative AI as a Thought Partner
+        </h3>
+    </div>
+
+
+    
+</div>
+<div class="text intra-space-bottom"><div data-cmp-data-layer="{&#34;text-07e5c59b1e&#34;:{&#34;@type&#34;:&#34;gs1us-aem/components/text&#34;,&#34;repo:modifyDate&#34;:&#34;2024-08-29T12:39:46Z&#34;,&#34;xdm:text&#34;:&#34;&lt;p>In this scenario, AI is meant solely to augment the human employee and largely take a back seat to their work. The AI is meant to provide insights, recommendations, and ideas that all are ultimately vetted and reviewed by the human employee before anything is deployed.&lt;/p>\r\n&#34;}}" id="text-07e5c59b1e" class="cmp-text">
+    <p>In this scenario, AI is meant solely to augment the human employee and largely take a back seat to their work. The AI is meant to provide insights, recommendations, and ideas that all are ultimately vetted and reviewed by the human employee before anything is deployed.</p>
+
+</div>
+
+    
+</div>
+<div class="title inter-space-top">
+    <div data-cmp-data-layer="{&#34;title-41f70e543d&#34;:{&#34;@type&#34;:&#34;gs1us-aem/components/title&#34;,&#34;repo:modifyDate&#34;:&#34;2024-08-29T12:40:12Z&#34;,&#34;dc:title&#34;:&#34;Generative AI as a Digital Assistant&#34;}}" id="title-41f70e543d" class="cmp-title">
+        <h3 class="cmp-title__text">
+            Generative AI as a Digital Assistant
+        </h3>
+    </div>
+
+
+    
+</div>
+<div class="text intra-space-bottom"><div data-cmp-data-layer="{&#34;text-bacaf8d830&#34;:{&#34;@type&#34;:&#34;gs1us-aem/components/text&#34;,&#34;repo:modifyDate&#34;:&#34;2024-08-29T12:40:30Z&#34;,&#34;xdm:text&#34;:&#34;&lt;p>Here, trust in the AI is greater. The role of the AI is that of a dedicated digital assistant that can take on small-scale tasks, like calendar scheduling or taking meeting notes, where the AI and its results have a measure of autonomy.&lt;/p>\r\n&#34;}}" id="text-bacaf8d830" class="cmp-text">
+    <p>Here, trust in the AI is greater. The role of the AI is that of a dedicated digital assistant that can take on small-scale tasks, like calendar scheduling or taking meeting notes, where the AI and its results have a measure of autonomy.</p>
+
+</div>
+
+    
+</div>
+<div class="title inter-space-top">
+    <div data-cmp-data-layer="{&#34;title-8ffb586ba3&#34;:{&#34;@type&#34;:&#34;gs1us-aem/components/title&#34;,&#34;repo:modifyDate&#34;:&#34;2024-08-29T12:40:20Z&#34;,&#34;dc:title&#34;:&#34;Generative AI as a Synthetic Coworker&#34;}}" id="title-8ffb586ba3" class="cmp-title">
+        <h3 class="cmp-title__text">
+            Generative AI as a Synthetic Coworker
+        </h3>
+    </div>
+
+
+    
+</div>
+<div class="text inter-space-bottom"><div data-cmp-data-layer="{&#34;text-f33d7baad7&#34;:{&#34;@type&#34;:&#34;gs1us-aem/components/text&#34;,&#34;repo:modifyDate&#34;:&#34;2024-08-29T12:40:34Z&#34;,&#34;xdm:text&#34;:&#34;&lt;p>For the most robust AI solutions, there is a potential for large levels of autonomy and trust to be given to the algorithm. In this scenario, there would be little human oversight of the AI as it is given tasks of greater importance and can be relied on to carry them out consistently.&amp;nbsp;&lt;/p>\r\n&#34;}}" id="text-f33d7baad7" class="cmp-text">
+    <p>For the most robust AI solutions, there is a potential for large levels of autonomy and trust to be given to the algorithm. In this scenario, there would be little human oversight of the AI as it is given tasks of greater importance and can be relied on to carry them out consistently. </p>
+
+</div>
+
+    
+</div>
+
+        
+    </div>
+
+</div>
+
+            </li>
+            <li class="col-12 col-sm-3">
+                
+                <div itemprop="text" class="gs1-us-container responsivegrid page">
+
+    
+    
+    
+    <div id="container-b9265806bf" class="cmp-container">
+        
+        
+        
+    </div>
+
+</div>
+
+            </li>
+        </ul>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+
+
+
+</div>
+
+        
+    </div>
+
+</div>
+<div itemprop="text" class="gs1-us-container responsivegrid page gs-container-wrapper">
+
+    
+    
+    
+    <div id="container-b65f58f167" class="cmp-container" style="background-color:#002c6c;">
+        
+        <div class="columncontrol intra-space-top wrapper">
+
+
+
+
+    
+
+    
+
+    
+
+    
+        <div class="gs-col-control">
+            <div class="col-12 col-sm-9">
+                
+                <div itemprop="text" class="gs1-us-container responsivegrid page">
+
+    
+    
+    
+    <div id="container-acf328b286" class="cmp-container">
+        
+        <div class="title tertiary-title-white primary-title-height">
+    <div data-cmp-data-layer="{&#34;title-8475061acd&#34;:{&#34;@type&#34;:&#34;gs1us-aem/components/title&#34;,&#34;repo:modifyDate&#34;:&#34;2024-08-29T13:33:36Z&#34;,&#34;dc:title&#34;:&#34;\n            Conclusion\n        &#34;}}" id="title-8475061acd" class="cmp-title">
+        <h2 class="cmp-title__text">
+            
+            Conclusion
+        
+        </h2>
+    </div>
+
+
+    
+</div>
+<div class="text white-text inter-space-bottom list-decoration"><div data-cmp-data-layer="{&#34;text-d4130d3797&#34;:{&#34;@type&#34;:&#34;gs1us-aem/components/text&#34;,&#34;repo:modifyDate&#34;:&#34;2024-09-03T12:26:42Z&#34;,&#34;xdm:text&#34;:&#34;&lt;p>Generative AI hype continues. But now, companies are cutting through the noise with solutions for a growing number of use cases.&amp;nbsp;AI now has a number of compelling use cases:&lt;/p>\r\n&lt;ul>\r\n&lt;li>Communication and content creation on the customer side&lt;/li>\r\n&lt;li>Data insights and digital twins for inventory management&lt;/li>\r\n&lt;li>Collaborative design for sustainability&lt;/li>\r\n&lt;/ul>\r\n&lt;p>How much AI and automation are embedded into a supply chain organization will change over time, but companies can lay the groundwork now. GS1 US® and GS1 Standards offer a foundation of trusted guidelines for data quality and interoperable sharing that can contribute to a set of emerging best practices. Collaboration can help AI application across an organization and span gaps between trading partners to maximize the benefits for all involved.&lt;/p>\r\n&#34;}}" id="text-d4130d3797" class="cmp-text">
+    <p>Generative AI hype continues. But now, companies are cutting through the noise with solutions for a growing number of use cases. AI now has a number of compelling use cases:</p>
+<ul><li>Communication and content creation on the customer side</li><li>Data insights and digital twins for inventory management</li><li>Collaborative design for sustainability</li></ul>
+<p>How much AI and automation are embedded into a supply chain organization will change over time, but companies can lay the groundwork now. GS1 US® and GS1 Standards offer a foundation of trusted guidelines for data quality and interoperable sharing that can contribute to a set of emerging best practices. Collaboration can help AI application across an organization and span gaps between trading partners to maximize the benefits for all involved.</p>
+
+</div>
+
+    
+</div>
+
+        
+    </div>
+
+</div>
+
+            </div>
+            <div class="col-12 col-sm-3">
+                
+                <div itemprop="text" class="gs1-us-container responsivegrid page">
+
+    
+    
+    
+    <div id="container-5f8633d9ff" class="cmp-container">
+        
+        
+        
+    </div>
+
+</div>
+
+            </div>
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+
+
+
+
+
+</div>
+
+        
+    </div>
+
+</div>
+<div itemprop="text" class="gs1-us-container responsivegrid page gs-container-wrapper">
+
+    
+    
+    
+    <div id="container-6089279f83" class="cmp-container" style="background-color:#f0f5fa;">
+        
+        <div class="columncontrol inter-space-bottom wrapper gs-col-wrapper">
+
+
+
+
+    
+        <div class="gs-col-control">
+            <div class="col-12 col-sm-6">
+                
+                <div itemprop="text" class="gs1-us-container responsivegrid page intra-space-bottom">
+
+    
+    
+    
+    <div id="container-19e9ab7b07" class="cmp-container">
+        
+        <div class="text list-decoration"><div data-cmp-data-layer="{&#34;text-8a32ae0ef5&#34;:{&#34;@type&#34;:&#34;gs1us-aem/components/text&#34;,&#34;repo:modifyDate&#34;:&#34;2024-08-29T13:31:05Z&#34;,&#34;xdm:text&#34;:&#34;&lt;h2>Interested in Generative AI in the Supply Chain?&lt;/h2>\r\n&lt;p>Whether you&#39;re looking for more information, want to exchange ideas with peer thought leaders, or are interested in piloting how GS1 Standards can help you apply generative AI, we want to hear from you.&lt;/p>\r\n&#34;}}" id="text-8a32ae0ef5" class="cmp-text">
+    <h2>Interested in Generative AI in the Supply Chain?</h2>
+<p>Whether you&#39;re looking for more information, want to exchange ideas with peer thought leaders, or are interested in piloting how GS1 Standards can help you apply generative AI, we want to hear from you.</p>
+
+</div>
+
+    
+</div>
+
+        
+    </div>
+
+</div>
+
+            </div>
+            <div class="col-12 col-sm-6">
+                
+                <div itemprop="text" class="gs1-us-container responsivegrid page inter-space-top">
+
+    
+    
+    
+    <div id="container-d74e3b86e5" class="cmp-container">
+        
+        <div class="embed">
+<div data-cmp-data-layer="{&#34;embed-4e9eb91868&#34;:{&#34;@type&#34;:&#34;gs1us-aem/components/embed&#34;,&#34;repo:modifyDate&#34;:&#34;2023-09-29T17:47:00Z&#34;}}" id="embed-4e9eb91868" class="cmp-embed">
+    
+    
+    <!--
+  ~ ACS AEM Commons
+  ~
+  ~ Copyright (C) 2013 - 2023 Adobe
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+    
+    
+    
+        <script src="//site.gs1us.org/js/forms2/js/forms2.js"></script>
+        <form id="mktoForm_36"></form>
+        <script>
+          MktoForms2.loadForm("//site.gs1us.org", "062-KHA-337", 36, function(form){
+            form.onSuccess(function(values, followUpUrl) {
+location.href = "\/articles\/generative-ai-in-the-supply-chain\/thank-you.html";
+return false;
+});
+            
+            
+            
+          });
+        </script>
+    
+
+</div>
+
+    
+
+</div>
+
+        
+    </div>
+
+</div>
+
+            </div>
+        </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+
+
+
+
+
+</div>
+
+        
+    </div>
+
+</div>
+<div class="title wrapper">
+    <div data-cmp-data-layer="{&#34;title-db1f035c53&#34;:{&#34;@type&#34;:&#34;gs1us-aem/components/title&#34;,&#34;repo:modifyDate&#34;:&#34;2024-08-29T12:52:18Z&#34;,&#34;dc:title&#34;:&#34;\n            Recommended Articles&#34;}}" id="title-db1f035c53" class="cmp-title">
+        <h2 class="cmp-title__text">
+            
+            Recommended Articles
+        </h2>
+    </div>
+
+
+    
+</div>
+<div class="columncontrol inter-space-bottom wrapper">
+
+
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <div class="gs-col-control">
+            <div class="col-12 col-sm-4">
+                
+                <div itemprop="text" class="gs1-us-container responsivegrid page h-100">
+
+    
+    
+    
+    <div id="container-d42f8b9860" class="cmp-container">
+        
+        <div class="gs-card">
+
+
+    <div class="gs-card__inner gs-card--vertical gs-card--image-top gs-card--vertical-image-top">
+        <div class="gs-card__content gs-card__left-container">
+            <div class="gs-card__image-container">
+                <div class="gs-image-color gs-image-color--has-bg-image gs-image-color--no-background-color">
+                    <img src="/content/dam/gs1us/images/landing-pages/brand-paid-media/gs1-us-generative-ai-web-card-300x150-2x.png" alt="person wearing digital looking blue glasses while tapping a screen that is not visible in the air" class="gs-image-color__image"/>
+                </div>
+            </div>
+        </div>
+        <div class="gs-card__content gs-card__right-container">
+            <div class="gs-card__text-container">
+                <div class="gs-card__text-content">
+                    <h3 class="gs-text gs-text--blue gs-text--paragraph gs-text--paragraph-l">Overview of Generative AI in the Supply Chain</h3>
+                </div>
+                <div class="gs-card__text-content">
+                    <div class="gs-text gs-text--dark-grey gs-text--paragraph gs-text--paragraph-sm"><p>Read a quick refresher about what Generative AI is, how it works, and some of its limitations and risks.</p>
+</div>
+                </div>
+                <div class="gs-cta gs-cta--lg gs-cta--no-underline gs-cta--dark gs-cta--primary-btn gs-cta--white-arrow-right">
+                    <a role="link" href="/articles/generative-ai-in-the-supply-chain" target="_self" class="gs-cta__link" aria-label="Learn More" data-cta-name="Learn More">
+                        <span class="cmp-button__text">Learn More</span>
+                        <span class="cmp-button__icon" aria-hidden="true"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+        
+    </div>
+
+</div>
+
+            </div>
+            <div class="col-12 col-sm-4">
+                
+                <div itemprop="text" class="gs1-us-container responsivegrid page h-100">
+
+    
+    
+    
+    <div id="container-dd1712529f" class="cmp-container">
+        
+        <div class="gs-card">
+
+
+    <div class="gs-card__inner gs-card--vertical gs-card--image-top gs-card--vertical-image-top">
+        <div class="gs-card__content gs-card__left-container">
+            <div class="gs-card__image-container">
+                <div class="gs-image-color gs-image-color--has-bg-image gs-image-color--no-background-color">
+                    <img src="/content/dam/gs1us/images/articles/gs1-us-dh-card.png" alt="Business person looking at tablet" class="gs-image-color__image"/>
+                </div>
+            </div>
+        </div>
+        <div class="gs-card__content gs-card__right-container">
+            <div class="gs-card__text-container">
+                <div class="gs-card__text-content">
+                    <h3 class="gs-text gs-text--blue gs-text--paragraph gs-text--paragraph-l">Manage and Share Data in One Secure Platform</h3>
+                </div>
+                <div class="gs-card__text-content">
+                    <div class="gs-text gs-text--dark-grey gs-text--paragraph gs-text--paragraph-sm"><p>Create UPC barcodes and manage your data, or search and verify trading partner information.</p>
+</div>
+                </div>
+                <div class="gs-cta gs-cta--lg gs-cta--no-underline gs-cta--dark gs-cta--primary-btn gs-cta--white-arrow-right">
+                    <a role="link" href="/tools/gs1-us-data-hub" target="_self" class="gs-cta__link" aria-label="Learn More" data-cta-name="Learn More">
+                        <span class="cmp-button__text">Learn More</span>
+                        <span class="cmp-button__icon" aria-hidden="true"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+        
+    </div>
+
+</div>
+
+            </div>
+            <div class="col-12 col-sm-4">
+                
+                <div itemprop="text" class="gs1-us-container responsivegrid page h-100">
+
+    
+    
+    
+    <div id="container-fbcdab61f1" class="cmp-container">
+        
+        <div class="gs-card">
+
+
+    <div class="gs-card__inner gs-card--vertical gs-card--image-top gs-card--vertical-image-top">
+        <div class="gs-card__content gs-card__left-container">
+            <div class="gs-card__image-container">
+                <div class="gs-image-color gs-image-color--has-bg-image gs-image-color--no-background-color">
+                    <img src="/content/dam/gs1us/images/articles/gs1-us-frictionless-future-card.png" alt="Small business owner talking to customer while holidng a tablet " class="gs-image-color__image"/>
+                </div>
+            </div>
+        </div>
+        <div class="gs-card__content gs-card__right-container">
+            <div class="gs-card__text-container">
+                <div class="gs-card__text-content">
+                    <h3 class="gs-text gs-text--blue gs-text--paragraph gs-text--paragraph-l">Flexible Fulfillment and Frictionless Commerce</h3>
+                </div>
+                <div class="gs-card__text-content">
+                    <div class="gs-text gs-text--dark-grey gs-text--paragraph gs-text--paragraph-sm"><p>Discover how automating retail processes can help power omni-channel fulfillment and reduce friction for your customers.</p>
+</div>
+                </div>
+                <div class="gs-cta gs-cta--lg gs-cta--no-underline gs-cta--dark gs-cta--primary-btn gs-cta--white-arrow-right">
+                    <a role="link" href="/industries-and-insights/by-topic/inventory-visibility-and-fulfillment" target="_self" class="gs-cta__link" aria-label="Learn More " data-cta-name="Learn More ">
+                        <span class="cmp-button__text">Learn More </span>
+                        <span class="cmp-button__icon" aria-hidden="true"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+        
+    </div>
+
+</div>
+
+            </div>
+        </div>
+    
+
+    
+
+    
+
+    
+
+
+
+
+
+
+
+</div>
+<div itemprop="text" class="gs1-us-container responsivegrid page inter-space-top inter-space-bottom wrapper">
+
+    
+    
+    
+    <div id="container-f0fa60ee7f" class="cmp-container">
+        
+        <div class="text gs1-legal"><div data-cmp-data-layer="{&#34;text-d56bb22b66&#34;:{&#34;@type&#34;:&#34;gs1us-aem/components/text&#34;,&#34;repo:modifyDate&#34;:&#34;2024-08-29T12:53:19Z&#34;,&#34;xdm:text&#34;:&#34;&lt;p>© 2024 GS1 US All Rights Reserved.&amp;nbsp;&amp;nbsp;&lt;/p>\r\n&lt;p>This content may not be copied, reproduced, printed, distributed, or published, electronically or physically, in whole or in part, in any and all media, without the express consent of the owner. The use of all GS1 Standards is voluntary and not mandatory. GS1 US is making this information available to be used for educational purposes only. The views, information, or opinions expressed regarding Generative AI do not necessarily represent those of GS1 US, its employees, or member companies. This publication has been provided as a convenience and does not constitute or imply an endorsement, recommendation, or favoring of Generative AI or any of the identified companies, products, or services by GS1 US. GS1 US does not warrant nor guarantee any of the products or services identified herein or the reliability or accuracy of content generated using Generative AI, nor does it assume any legal liability or responsibility regarding the same. Prior to the creation and distribution of content generated using Generative AI, it is recommended that you seek legal counsel to assess the compliance of said content with all applicable laws and regulations regarding intellectual property, data privacy, and/or other rights held by third parties.&lt;/p>\r\n&lt;p>&lt;sup>1&lt;/sup>All references to ASN or EDI 856 refer to X12’s Supply Chain Transaction Standards. For more information refer to x12.org/products/transaction-sets&lt;/p>\r\n&#34;}}" id="text-d56bb22b66" class="cmp-text">
+    <p>© 2024 GS1 US All Rights Reserved.  </p>
+<p>This content may not be copied, reproduced, printed, distributed, or published, electronically or physically, in whole or in part, in any and all media, without the express consent of the owner. The use of all GS1 Standards is voluntary and not mandatory. GS1 US is making this information available to be used for educational purposes only. The views, information, or opinions expressed regarding Generative AI do not necessarily represent those of GS1 US, its employees, or member companies. This publication has been provided as a convenience and does not constitute or imply an endorsement, recommendation, or favoring of Generative AI or any of the identified companies, products, or services by GS1 US. GS1 US does not warrant nor guarantee any of the products or services identified herein or the reliability or accuracy of content generated using Generative AI, nor does it assume any legal liability or responsibility regarding the same. Prior to the creation and distribution of content generated using Generative AI, it is recommended that you seek legal counsel to assess the compliance of said content with all applicable laws and regulations regarding intellectual property, data privacy, and/or other rights held by third parties.</p>
+<p><sup>1</sup>All references to ASN or EDI 856 refer to X12’s Supply Chain Transaction Standards. For more information refer to x12.org/products/transaction-sets</p>
+
+</div>
+
+    
+</div>
+
+        
+    </div>
+
+</div>
+
+        
+    </div>
+
+</div>
+
+        
+    </div>
+
+</div>
+
+        
+    </div>
+
+</main>
+<div class="experiencefragment aem-GridColumn aem-GridColumn--default--12">
+<div id="experiencefragment-83d7db8812" class="cmp-experiencefragment cmp-experiencefragment--footer">
+
+
+    
+    <div id="container-122283283b" class="cmp-container">
+        
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="footer aem-GridColumn aem-GridColumn--default--12"><div class="wrapper">
+    <div>
+
+
+
+
+
+
+
+<div>
+    <ul class="footer-headings">
+        <li class="footer-headings__heading">
+            <a href="/who-we-are" class="footer-headings__heading-item" role="link" aria-label="Who We Are" target="_self">
+                <span class="cmp-list__item-title">Who We Are</span>
+            </a>
+        </li>
+<li class="footer-headings__heading">
+            <a href="/education-and-events/events/gs1-connect" class="footer-headings__heading-item" role="link" aria-label="GS1 Connect Conference" target="_self">
+                <span class="cmp-list__item-title">GS1 Connect Conference</span>
+            </a>
+        </li>
+<li class="footer-headings__heading">
+            <a href="/who-we-are/careers" class="footer-headings__heading-item" role="link" aria-label="Careers" target="_self">
+                <span class="cmp-list__item-title">Careers</span>
+            </a>
+        </li>
+<li class="footer-headings__heading">
+            <a href="/who-we-are/contact-us" class="footer-headings__heading-item" role="link" aria-label="Contact Us" target="_self">
+                <span class="cmp-list__item-title">Contact Us</span>
+            </a>
+        </li>
+
+    </ul>
+</div>
+</div>
+    <div>
+
+<div id="separator-70f0782060">
+    <hr/>
+</div>
+</div>
+   <div class="footer-body-wrapper">
+       <div>
+
+
+
+    <ul class="footerIcon-links">
+        
+            <li>
+                <a href="https://www.linkedin.com/company/gs1-us" target="_blank" class="footerIcon-links__link-item linkedin-icon" role="link" aria-label="Linkedin"></a>
+            </li>
+        
+            <li>
+                <a href="https://twitter.com/gs1_us" target="_blank" class="footerIcon-links__link-item twitter-icon" role="link" aria-label="Twitter"></a>
+            </li>
+        
+            <li>
+                <a href="https://www.facebook.com/GS1US" target="_blank" class="footerIcon-links__link-item facebook-icon" role="link" aria-label="Facebook"></a>
+            </li>
+        
+            <li>
+                <a href="https://www.youtube.com/user/GS1US" target="_blank" class="footerIcon-links__link-item youtube-icon" role="link" aria-label="Youtube"></a>
+            </li>
+        
+    </ul>
+</div>
+       <div class="footer-link-text">
+           <div>
+
+
+
+<div>
+    <ul class="footer-link-text__links">
+        <li>
+            <a href="/terms-of-use" target="_self" class="footer-links__link-item" role="link" aria-label="Terms of Use">
+                <span class="cmp-list__item-title">Terms of Use</span>
+            </a>
+        </li>
+<li>
+            <a href="/privacy-policy" target="_self" class="footer-links__link-item" role="link" aria-label="Privacy">
+                <span class="cmp-list__item-title">Privacy</span>
+            </a>
+        </li>
+<li>
+            <a href="/antitrust-policy" target="_self" class="footer-links__link-item" role="link" aria-label="Antitrust Policy">
+                <span class="cmp-list__item-title">Antitrust Policy</span>
+            </a>
+        </li>
+<li>
+            <a href="/ip-policy" target="_self" class="footer-links__link-item" role="link" aria-label="IP Policy">
+                <span class="cmp-list__item-title">IP Policy</span>
+            </a>
+        </li>
+<li>
+            <a href="https://www.gs1.org/" target="_self" class="footer-links__link-item" role="link" aria-label="GS1 Global">
+                <span class="cmp-list__item-title">GS1 Global</span>
+            </a>
+        </li>
+<li>
+            <a href="/education-and-events/events/gs1-connect" target="_self" class="footer-links__link-item" role="link" aria-label="GS1 Connect">
+                <span class="cmp-list__item-title">GS1 Connect</span>
+            </a>
+        </li>
+<li>
+            <a href="https://www.gs1us.org/sitemap.xml" target="_self" class="footer-links__link-item" role="link" aria-label="Sitemap">
+                <span class="cmp-list__item-title">Sitemap</span>
+            </a>
+        </li>
+
+    </ul>
+</div>
+<div class="text">
+    <div class="cmp-text footer-link-text__text"><div data-cmp-data-layer="{&#34;text-a51ebedfbc&#34;:{&#34;@type&#34;:&#34;gs1us-aem/components/text&#34;,&#34;repo:modifyDate&#34;:&#34;2024-01-17T18:10:24Z&#34;,&#34;xdm:text&#34;:&#34;&lt;p>&lt;b>© 2024 GS1 US. All Rights Reserved&lt;/b>&lt;/p>\r\n&lt;p>GS1 US&lt;sup>®&lt;/sup> and design is a registered trademark of GS1 US, Inc. Trademarks appearing on this site are owned by GS1 US, Inc. unless otherwise noted, and may not be used without the permission of &lt;a href=\&#34;/content/gs1us/us/en.html\&#34; target=\&#34;_self\&#34; title=\&#34;GS1\&#34; rel=\&#34;noopener noreferrer\&#34;>GS1&lt;/a> US, Inc.&lt;/p>\r\n&#34;}}" id="text-a51ebedfbc" class="cmp-text">
+    <p><b>© 2024 GS1 US. All Rights Reserved</b></p>
+<p>GS1 US<sup>®</sup> and design is a registered trademark of GS1 US, Inc. Trademarks appearing on this site are owned by GS1 US, Inc. unless otherwise noted, and may not be used without the permission of <a href="/" target="_self" title="GS1" rel="noopener noreferrer">GS1</a> US, Inc.</p>
+
+</div>
+
+    
+</div>
+</div></div>
+       </div>
+       <div>
+
+    
+    
+    
+    <div id="container-f3fe07125e" class="cmp-container">
+        
+        <div class="codeembed">
+
+
+  <div class="row">
+    <div class="col-6">
+        <img src="https://assets.gs1us.org/is/image/gsoneus/blue-seal-150-110-bbb-90210989?ts=1713359036298&amp;dpr=off" loading="lazy" class="mx-auto w-100" itemprop="contentUrl" alt="Better Business Bureau A+ Rating as of 4/17/2024">
+    </div>
+    <div class="col-6">
+        <img src="https://assets.gs1us.org/is/image/gsoneus/2023-Inc-PowerPartner-Standard-Color-Logo?ts=1713362291599&amp;dpr=off" loading="lazy" class="mx-auto w-75" itemprop="contentUrl" alt="Better Business Bureau A+ Rating as of 4/17/2024">
+    </div>
+</div>
+</div>
+
+        
+    </div>
+
+</div>
+    </div>
+   
+   </div></div>
+<div class="image aem-GridColumn aem-GridColumn--default--12">
+
+
+    
+
+
+</div>
+
+    
+</div>
+
+    </div>
+
+    
+</div>
+
+    
+</div>
+
+    
+</div>
+
+    </div>
+
+    
+</div>
+
+
+            
+    
+    <script src="/etc.clientlibs/gs1us-aem/clientlibs/clientlib-site.lc-1728899559913-lc.min.js"></script>
+<script src="/etc.clientlibs/gs1us-aem/clientlibs/clientlib-scripts.lc-4c0268e34d8c21c4a7b2ddb4ec77124f-lc.min.js"></script>
+
+
+    
+
+    
+    
+<script src="/etc.clientlibs/core/wcm/components/commons/site/clientlibs/container.lc-0a6aff292f5cc42142779cde92054524-lc.min.js"></script>
+
+
+
+
+
+
+    
+
+    
+
+    
+
+
+
+    
+    
+
+        
+        <script type="text/javascript" src="//www.youtube.com/iframe_api"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var hideLinkHeader = "&enablejsapi=1";
+    var iframesDiv = document.querySelectorAll("iframe");
+    for (var i = 0; i < iframesDiv.length; i++) {
+      if (iframesDiv[i].src.indexOf("//www.youtube.com/") >= 0) {
+        var url = iframesDiv[i].getAttribute("src");
+        iframesDiv[i].setAttribute("src", url + hideLinkHeader);
+      }
+    }
+  });
+</script>
+<script>
+    window.onYouTubeIframeAPIReady = function() {
+        var players = [];
+        var iframeElems = document.querySelectorAll('iframe');
+        for (let i = 0; i < iframeElems.length; i++) {
+            let iframeElem = iframeElems[i];
+            if (iframeElem.src && iframeElem.src.indexOf('//www.youtube.com/') >= 0) {
+                if (!iframeElem.id) {
+                    iframeElem.id = 'embeddedvideoiframe' + i;
+                }
+                players.push(new YT.Player(iframeElem.id, {
+                    events: {
+                        'onStateChange': function (event) {
+                            if (event.data == YT.PlayerState.PLAYING) {
+                                for (let j = 0; j < players.length; j++) {
+                                    let elem = players[j];
+                                    if (elem.getIframe().id != event.target.getIframe().id) {
+                                        elem.pauseVideo && elem.pauseVideo();
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }))
+            }
+        }
+    };
+</script>
+    </body>
+</html>

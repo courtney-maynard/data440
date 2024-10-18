@@ -1,0 +1,25 @@
+Sasha Luccioni wants us to embrace "energy sobriety"
+When you purchase through links on our site, we may earn an affiliate commission. Here’s how it works .
+(Image credit: 123rf)
+Generative AI famously consumes large amounts of energy due to the extensive computational power required for training models and processing tasks, and this is raising concerns about its contribution to environmental issues such as increased carbon emissions and resource depletion.
+Sasha Luccioni , a prominent Canadian computer scientist and AI researcher known for her work on the environmental impact of artificial intelligence, recently discussed the topic at the ALL IN artificial intelligence conference in Montreal.
+"I find it particularly disappointing that generative AI is used to search the Internet," Luccioni told AFP on the sidelines of the conference, lamenting the energy costs of using AI for tasks that traditional search engines could perform.
+(Image credit: Future)
+Thoughtful, efficient use of AI
+Unlike basic search engines that retrieve existing information, AI models generate new content, requiring significant computing power to train on billions of data points and respond to user requests. Google 's AI Overview feature, for example, offers AI-generated snapshots that summarize key points from multiple sources in response to complex queries.
+"We are accelerating the climate crisis," Luccioni warned, calling for more transparency from tech companies and urging governments to legislate more effectively once such transparency is achieved.
+Recognized by Time in 2024 as one of the 100 most influential figures in AI, Luccioni helped create a tool called "CodeCarbon" in 2020, which enables developers to measure the carbon footprint of their code. This tool has been downloaded over a million times. She is now working on a certification system to label AI models based on their energy efficiency. Comparing the system to the US Environmental Protection Agency’s energy consumption ratings for appliances, she explained: "For a specific task, we can measure energy efficiency and say that this model has an A+, and that model has a D."
+While she might be perceived as anti-AI by some, Luccioni is keen to stress that her goal is to promote "energy sobriety" by encouraging users to make thoughtful, efficient use of AI technologies.
+Are you a pro? Subscribe to our newsletter
+Sign up to the TechRadar Pro newsletter to get all the top news, opinion, features and guidance your business needs to succeed!
+Contact me with news and offers from other Future brands
+Receive email from us on behalf of our trusted partners or sponsors
+By submitting your information you agree to the Terms & Conditions and Privacy Policy and are aged 16 or over.
+More from TechRadar Pro
+Editor
+Wayne Williams is a freelancer writing news for TechRadar Pro. He has been writing about computers, technology, and the web for 30 years. In that time he wrote for most of the UK’s PC magazines, and launched, edited and published a number of them too.
+More about pro
+Most Popular
+2
+3
+5

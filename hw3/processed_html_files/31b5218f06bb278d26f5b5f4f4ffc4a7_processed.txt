@@ -1,0 +1,3 @@
+Consistency mode
+Generate images in real-time
+Enter a prompt and generate images in milliseconds as you type. Powered by Flux on Together AI.

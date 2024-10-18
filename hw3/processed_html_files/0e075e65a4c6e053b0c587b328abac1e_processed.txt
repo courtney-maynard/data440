@@ -1,0 +1,26 @@
+Filter by
+Education
+Q: Walk us through what you did at work today.
+I woke up and checked the jobs I had submitted last night to the slurm cluster (I'm 90% work from home). A good portion of my job involves maintaining the lab's data and file systems and running neuroimaging analysis pipelines; I'm currently running scripts to calculate brain region volumes and segment brain lesions in patients in Multiple Sclerosis.
+I also tested a deep learning model sent to us from another lab that estimates biological brain age from MRI data, and I implemented a new model version and sent the test results back to compare.
+Q: What did you learn in the M.S. in Data Science (MSDS) program that you have found most useful in your career so far? And what do you wish you had learned?
+The curriculum provided an ideal balance between theory and practical applications, enhancing my understanding of quantitative research and teaching me how to efficiently implement models and new software. Specifically, Bayesian machine learning was the most interesting class, and its applications pop up in many areas of science.
+I am currently using a Bayesian-based machine learning model called SuStaIn (Subtype and Stage Inference) with volumetric data to identify brain biomarkers relevant to disease progression. In general, much of the neuroimaging software is based on Bayesian methods. I do wish I had learned SQL; while not essential for my current job, it’s always a useful skill.
+Q: How did the MSDS Capstone project prepare you for your current work?
+The Capstone project provided valuable experience collaborating with classmates, professors, and researchers – building the necessary skills for working in a professional environment. It’s also a great talking point in interviews.
+Q: Were there specific classes, projects, or professors that you found particularly influential in preparing you for your career?
+Professor Kropko’s hacking, get-it-done attitude equipped me with the mindset to quickly and confidently utilize any new tool or program. The rigor of Professor Don Brown’s teaching in his Bayesian Machine Learning course demanded that I invest the necessary effort to understand difficult fundamental concepts which has made me a better learner.
+Q: What networking opportunities or alumni resources played a role in securing your current position or aiding your professional development?
+The summer career lecture series was a great introduction. Reggie Leonard and Hannah in Data Science Career Services were amazing resources throughout the year.
+Q: How do you perceive the impact of your MSDS degree on your career advancement and opportunities?
+The MSDS degree broadened my qualifications for various job types and boosted my confidence in applying my skills to any data-related job. Although finding a first job was still a grueling task, whenever I scroll through LinkedIn job postings my future job hunts seem remarkably less daunting.
+Q: Was there a student experience or classmate/cohort interaction during your time at School of Data Science that stands out as particularly memorable or transformative for you?
+There were so many fun, interesting, and diverse people in the program – too many names to name. We bonded on and off the court, from nerding out about big ideas and fun concepts in science and math at Elliewood to intramural sports and letting loose at summer Thursday survivor hours. After such a fun and education-packed 11 months, it was great to have a roommate (shoutout Devin) from the program when I moved to NYC.
+Q: As you look ahead, where do you envision yourself professionally in the next 5-10 years? Are there specific career goals, projects, or milestones you aspire to achieve in the coming years?
+My current goal is to work in neurotechnology research, potentially pursuing a Ph.D. For now, I’m enjoying the experience of full-time work and life in the Big Apple. Having an M.S. in Data Science makes future career goals seem much more achievable. Trust the process.
+Author
+Subscribe to receive updates from the School of Data Science.
+First Name
+Last Name
+UVA Affiliate
+Industry Member

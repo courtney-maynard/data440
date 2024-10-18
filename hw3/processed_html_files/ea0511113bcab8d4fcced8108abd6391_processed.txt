@@ -1,0 +1,19 @@
+New York, Oct 6 (VOICE) Scientists have been trying to improve advanced pain management using artificial intelligence (AI) for drug discovery and now, an AI algorithm has identified multiple gut metabolites and US FDA-approved drugs that have potential to be repurposed as non-addictive, non-opioid pain medications.Feixiong Cheng, Director of Cleveland Clinic’s Genome Center, and tech giant IBM are using AI for drug discovery in advanced pain management.
+The team used the new AI tool to predict how 369 gut microbial metabolites and 2,308 FDA- approved drugs would interact with 13 pain-associated receptors.
+The AI framework identified several compounds that could be repurposed to treat pain. Studies are underway to validate these compounds in the lab, according to the study published in the journal Cell Reports Medicine.
+Treating chronic pain with opioids is still a challenge due to the risk of severe side effects and dependency.
+“Recent evidence has shown that drugging a specific subset of pain receptors in a protein class called G protein-coupled receptors (GPCRs) can provide non-addictive, non-opioid pain relief. The question is how to target those receptors,” said Yunguang Qiu, a postdoctoral fellow in Dr Cheng’s lab.
+To determine whether a molecule will work as a drug, researchers need to predict how it will physically interact with and influence proteins in our body (in this case, our pain receptors).
+To do this, the researchers need a 3D understanding of both molecules based on extensive 2D data about their physical, structural and chemical properties.
+The research team’s tool used the tool to predict if a molecule can bind to a specific pain receptor; where on the receptor a molecule will physically attach; how strongly the molecule will attach to that receptor; and whether binding a molecule to a receptor will turn signalling effects turn on or off.
+“We believe that these foundation models will offer powerful AI technologies to rapidly develop therapeutics for multiple challenging human health issues,” said Cheng.
+ADVERTISEMENT
+–VOICE
+na/
+No Result
+Welcome Back!
+Retrieve your password
+Please enter your username or email address to reset your password.
+Unlock left : 0
+Yes
+No

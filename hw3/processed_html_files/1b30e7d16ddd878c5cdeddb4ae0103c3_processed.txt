@@ -1,0 +1,160 @@
+Bhavesh
+January 26, 2021
+In this project, we will predict Forest Cover based on various attributes (cartographic variables) of the Forest. Hence, this is a classification problem.
+Problem Statement or Business Problem
+In this project, we’ll predict Forest Cover supported various attributes (cartographic variables) of the Forest. Hence, this is often a classification problem.
+Attribute Information or Dataset Details:
+Given is the attribute name, attribute type, the measurement unit, and a brief description. The forest cover type is the classification problem. The order of this listing corresponds to the order of numerals along the rows of the database.
+Name
+Vertical_Distance_To_Hydrology
+quantitative
+meters
+Horizontal_Distance_To_Roadways
+quantitative
+meters
+Hillshade_9am
+quantitative
+Hillshade_Noon
+quantitative
+Hillshade_3pm
+quantitative
+Horizontal_Distance_To_Fire_Points
+quantitative
+meters
+Wilderness_Area (4 binary columns)
+Introduction
+Welcome to this project on predict Forest Cover in Apache Spark Machine Learning using Databricks platform community edition server which allows you to execute your spark code, free of cost on their server just by registering through email id.
+In this project, we explore Apache Spark and Machine Learning on the Databricks platform.
+I am a firm believer that the best way to learn is by doing. That’s why I haven’t included any purely theoretical lectures in this tutorial: you will learn everything on the way and be able to put it into practice straight away. Seeing the way each feature works will help you learn Apache Spark machine learning thoroughly by heart.
+We’re going to look at how to set up a Spark Cluster and get started with that. And we’ll look at how we can then use that Spark Cluster to take data coming into that Spark Cluster, a process that data using a Machine Learning model, and generate some sort of output in the form of a prediction. That’s pretty much what we’re going to learn about the predictive model.
+In this project, we will be performing prediction Forest Cover Type.
+We will learn:
+Preparing the Data for Processing.
+Basics flow of data in Apache Spark, loading data, and working with data, this course shows you how Apache Spark is perfect for a Machine Learning job.
+Learn the basics of Databricks notebook by enrolling in Free Community Edition Server
+Define the Machine Learning Pipeline
+Train a Machine Learning Model
+Testing a Machine Learning Model
+Evaluating a Machine Learning Model (i.e. Examine the Predicted and Actual Values)
+The goal is to provide you with practical tools that will be beneficial for you in the future. While doing that, you’ll develop a model with a real use opportunity.
+I am really excited you are here, I hope you are going to follow all the way to the end of the Project. It is fairly straight forward fairly easy to follow through the article we will show you step by step each line of code & we will explain what it does and why we are doing it.
+Free Account creation in Databricks
+Load Data in Dataframe using User-defined Schema
+We are loading data into Databricks environment and creating dataframe with user defined schema.
+%scala
+
+import org.apache.spark.sql.Encoders
+
+case class Forest(	
+                  Elevation: Int, 
+                  Aspect: Int, 
+                  Slope: Int, 
+                  Horizontal_Distance_To_Hydrology: Int, 
+                  Vertical_Distance_To_Hydrology: Int, 
+                  Horizontal_Distance_To_Roadways: Int, 
+                  Hillshade_9am: Int, 
+                  Hillshade_Noon: Int, 
+                  Hillshade_3pm: Int, 
+                  Horizontal_Distance_To_Fire_Points: Int, 
+                  Wilderness_Area_0: Int, 
+                  Wilderness_Area_1: Int, 
+                  Wilderness_Area_2: Int, 
+                  Wilderness_Area_3: Int, 
+                  Soil_Type_0: Int, 
+                  Soil_Type_1: Int, 
+                  Soil_Type_2: Int, 
+                  Soil_Type_3: Int, 
+                  Soil_Type_4: Int, 
+                  Soil_Type_5: Int, 
+                  Soil_Type_6: Int, 
+                  Soil_Type_7: Int, 
+                  Soil_Type_8: Int, 
+                  Soil_Type_9: Int, 
+                  Soil_Type_10: Int, 
+                  Soil_Type_11: Int, 
+                  Soil_Type_12: Int, 
+                  Soil_Type_13: Int, 
+                  Soil_Type_14: Int, 
+                  Soil_Type_15: Int, 
+                  Soil_Type_16: Int, 
+                  Soil_Type_17: Int, 
+                  Soil_Type_18: Int, 
+                  Soil_Type_19: Int, 
+                  Soil_Type_20: Int, 
+                  Soil_Type_21: Int, 
+                  Soil_Type_22: Int, 
+                  Soil_Type_23: Int, 
+                  Soil_Type_24: Int, 
+                  Soil_Type_25: Int, 
+                  Soil_Type_26: Int, 
+                  Soil_Type_27: Int, 
+                  Soil_Type_28: Int, 
+                  Soil_Type_29: Int, 
+                  Soil_Type_30: Int, 
+                  Soil_Type_31: Int, 
+                  Soil_Type_32: Int, 
+                  Soil_Type_33: Int, 
+                  Soil_Type_34: Int, 
+                  Soil_Type_35: Int, 
+                  Soil_Type_36: Int, 
+                  Soil_Type_37: Int, 
+                  Soil_Type_38: Int, 
+                  Soil_Type_39: Int, 
+                  Cover_Type: Double
+                    )
+
+val ForestSchema = Encoders.product[Forest].schema
+
+val ForestDF = spark.read.schema(ForestSchema).option("header", "true").csv("/FileStore/tables/covtype.data")
+
+display(ForestDF)
+Print Schema of Dataframe
+Statistics of Data
+%scala
+
+ForestDF.describe().show()
+
+Output:
+
++-------+------------------+------------------+-----------------+--------------------------------+------------------------------+-------------------------------+------------------+------------------+-----------------+----------------------------------+-------------------+-------------------+------------------+-------------------+--------------------+--------------------+--------------------+-------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+-------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+-------------------+-------------------+-------------------+--------------------+--------------------+--------------------+--------------------+------------------+-------------------+-------------------+-------------------+-------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+------------------+
+|summary|         Elevation|            Aspect|            Slope|Horizontal_Distance_To_Hydrology|Vertical_Distance_To_Hydrology|Horizontal_Distance_To_Roadways|     Hillshade_9am|    Hillshade_Noon|    Hillshade_3pm|Horizontal_Distance_To_Fire_Points|  Wilderness_Area_0|  Wilderness_Area_1| Wilderness_Area_2|  Wilderness_Area_3|         Soil_Type_0|         Soil_Type_1|         Soil_Type_2|        Soil_Type_3|         Soil_Type_4|         Soil_Type_5|         Soil_Type_6|         Soil_Type_7|         Soil_Type_8|         Soil_Type_9|        Soil_Type_10|       Soil_Type_11|        Soil_Type_12|        Soil_Type_13|        Soil_Type_14|        Soil_Type_15|        Soil_Type_16|        Soil_Type_17|        Soil_Type_18|        Soil_Type_19|        Soil_Type_20|       Soil_Type_21|       Soil_Type_22|       Soil_Type_23|        Soil_Type_24|        Soil_Type_25|        Soil_Type_26|        Soil_Type_27|      Soil_Type_28|       Soil_Type_29|       Soil_Type_30|       Soil_Type_31|       Soil_Type_32|        Soil_Type_33|        Soil_Type_34|        Soil_Type_35|        Soil_Type_36|        Soil_Type_37|        Soil_Type_38|        Soil_Type_39|        Cover_Type|
++-------+------------------+------------------+-----------------+--------------------------------+------------------------------+-------------------------------+------------------+------------------+-----------------+----------------------------------+-------------------+-------------------+------------------+-------------------+--------------------+--------------------+--------------------+-------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+-------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+-------------------+-------------------+-------------------+--------------------+--------------------+--------------------+--------------------+------------------+-------------------+-------------------+-------------------+-------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+------------------+
+|  count|            581011|            581011|           581011|                          581011|                        581011|                         581011|            581011|            581011|           581011|                            581011|             581011|             581011|            581011|             581011|              581011|              581011|              581011|             581011|              581011|              581011|              581011|              581011|              581011|              581011|              581011|             581011|              581011|              581011|              581011|              581011|              581011|              581011|              581011|              581011|              581011|             581011|             581011|             581011|              581011|              581011|              581011|              581011|            581011|             581011|             581011|             581011|             581011|              581011|              581011|              581011|              581011|              581011|              581011|              581011|            581011|
+|   mean|2959.3659259463248|155.65698756133705|14.10372264896878|               269.4282362984522|             46.41893526972811|              2350.149778575621|212.14603337974668|223.31870136709975|142.5282533377165|                 1980.283827672798| 0.4488641351024335|0.05143448230756389|0.4360743600379339|0.06362702255206872|0.005216768701453157|0.012951562018619269|0.008301047656584815|0.02133522429007368|0.002748657082223...|0.011316481099325142|1.807194700272456...|3.080836679512091...|0.001974145067821...|0.056167611284467935|0.021359320219410647|0.05158422129701503|0.030001153162332556|0.001030961548060...|5.163413429349874...|0.004896637068833465|0.005889733585078...|0.003268440700778...|0.006920695133138615|0.015936014980783498|0.001442313484598...|0.05743953212589779|0.09939915079060466|0.03662237031656888|8.158193218372802E-4|0.004456025789528942|0.001869155661424...|0.001628196368054...|0.1983542480262852|0.05192672772116191|0.04417472302589796|0.09039243663200869|0.07771625666295474|0.002772753011560...|0.003254671598300...|2.048153993642117E-4|5.128990673154209E-4|0.026803279111755198|0.023762028601868122|0.015059955835603801|  2.05146546278814|
+| stddev| 279.9845693713207|111.91373308836437|7.488234089511352|               212.5495379798926|             58.29524998555078|             1559.2543428941767|26.769909322565002|19.768710885237958| 38.2745614961487|                1324.1843401788144|0.49737867777559513| 0.2208824581310452|0.4958971020355072|0.24408753982214487| 0.07203862129248234| 0.11306564934872727| 0.09073122082866608|0.14449937173580144| 0.05235557930431683| 0.10577541118661181|0.013441990979309393|0.017549623428915792|  0.0443875118715442| 0.23024530824660677| 0.14457916736636858|0.22118628712934196| 0.17059054504375418| 0.03209206193043992|0.002272310642369...| 0.06980450129313612| 0.07651832918151862| 0.05707682194397399| 0.08290241818588581| 0.12522813341396524| 0.03795043735261384| 0.2326807371872815|0.29919744933311637|0.18783299239704696|0.028550922290983532| 0.06660463391509971|0.043193345894996675|    0.04031808703838|0.3987607227329843|0.22187930818732113|0.20548330721437016| 0.2867434141297083|  0.267724790556452| 0.05258392921191433|0.056956863454754536|0.014309919722357935|0.022641485909296887| 0.16150822962417238| 0.15230704029877873| 0.12179153950820612|1.3965001604421121|
+|    min|              1859|                 0|                0|                               0|                          -173|                              0|                 0|                 0|                0|                                 0|                  0|                  0|                 0|                  0|                   0|                   0|                   0|                  0|                   0|                   0|                   0|                   0|                   0|                   0|                   0|                  0|                   0|                   0|                   0|                   0|                   0|                   0|                   0|                   0|                   0|                  0|                  0|                  0|                   0|                   0|                   0|                   0|                 0|                  0|                  0|                  0|                  0|                   0|                   0|                   0|                   0|                   0|                   0|                   0|               1.0|
+|    max|              3858|               360|               66|                            1397|                           601|                           7117|               254|               254|              254|                              7173|                  1|                  1|                 1|                  1|                   1|                   1|                   1|                  1|                   1|                   1|                   1|                   1|                   1|                   1|                   1|                  1|                   1|                   1|                   1|                   1|                   1|                   1|                   1|                   1|                   1|                  1|                  1|                  1|                   1|                   1|                   1|                   1|                 1|                  1|                  1|                  1|                  1|                   1|                   1|                   1|                   1|                   1|                   1|                   1|               7.0|
++-------+------------------+------------------+-----------------+--------------------------------+------------------------------+-------------------------------+------------------+------------------+-----------------+----------------------------------+-------------------+-------------------+------------------+-------------------+--------------------+--------------------+--------------------+-------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+-------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+-------------------+-------------------+-------------------+--------------------+--------------------+--------------------+--------------------+------------------+-------------------+-------------------+-------------------+-------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+------------------+
+Create Temporary View so we can perform Spark SQL on Data
+%scala
+
+ForestDF.createOrReplaceTempView("ForestData")
+Hill shade Based on Cover Type
+%sql
+
+select Hillshade_3pm, Hillshade_9am, Cover_Type from ForestData
+Horizontal_Distance_To_Hydrology VS Vertical_Distance_To_Hydrology Based on Cover_Type
+%sql
+
+select Horizontal_Distance_To_Hydrology, Vertical_Distance_To_Hydrology, Cover_Type from ForestData
+%sql
+
+select Hillshade_3pm, Hillshade_Noon, Cover_Type from ForestData
+Hillshade VS Aspect Based on Cover_Type
+%sql
+
+select Hillshade_3pm, Aspect, Cover_Type from ForestData
+Hillshade_Noon VS Slope Based on Cover_Type
+%sql
+
+select Hillshade_Noon, Slope, Cover_Type from ForestData
+Hillshade VS Aspect based on Cover_Type
+%sql
+
+select Hillshade_9am, Aspect, Cover_Type from ForestData
+Horizontal_Distance_To_Roadways VS Elevation based on Cover_Type
+%sql
+
+select Horizontal_Distance_To_Roadways, Elevation, Cover_Type from ForestData
+Categories
+Tag

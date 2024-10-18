@@ -1,0 +1,89 @@
+Happening
+Online
+Build a better world onchain, starting with your local community.
+WHAT IS BASED AFRICA?
+Base is for everyone who wants to build a better internet, and we’re calling all builders in Africa to solve real challenges in your community by building onchain. From instant payments, access to financial services, and getting rewarded for creativity, going onchain is improving the lives of people around the world — but that's just the beginning. We’re looking to you to start building a better future onchain, starting right where you are. See a problem in your community? Solve it. Have an idea? Build it. Every app you create brings us closer to an onchain world where everyone thrives. Based Africa is part of the Based Around the World regional Buildathon series in Africa , India , Southeast Asia , and LatAm . These regions have unstoppable builder energy. We can’t wait to see your creativity, onchain.
+THE PROMPT
+Build an onchain app that solves a challenge in your community OR Use existing onchain tools to create real-world impact in your community by bringing them onchain. If you’re looking for ideas, here are a few places to start:
+Help people come together, connect, and collaborate more easily — onchain or IRL
+Unlock access to social and educational resources
+Build tools that provide easier access to the onchain economy
+Create localized social or e-commerce apps
+Create platforms that empower creators to share their work (or, if you're a creator yourself, share your own)
+Make a blog, write a blog post, create a YouTube or TikTok video, or other content showing how you're making an impact and bringing your community onchain
+CO-PRESENTERS
+WHY PARTICIPATE?
+The Buildathon is open to anyone from these four regions. Each region will have a prize pool of 25 ETH (for a total of 100 ETH), with 2 to 8 winners selected from each region. In addition, Talent Protocol will contribute 10B $BUILD, split evenly across all winners. Each winner gets:
+Rewards: 3.125 to 12.5 ETH from Base and $BUILD from Talent Protocol.
+Marketing & Distribution: All winners will be highlighted at a Base meetup event in-region with Jesse Pollak, and featured on Base social channels (X, Warpcast).
+Network: Connections with some of the most prolific Base builders in your region, with direct access to the Base team.
+HOW IT WORKS
+In order to be eligible, the projects must follow the below rules.
+Must submit one project per team
+Must include a functioning onchain app at a publicly accessible URL
+Must include an open-source GitHub repository for all source code in the app
+Must include a video, with a minimum length of 1 minute
+Integrating Basenames and Smart Wallet is strongly recommended; they make it easy for anyone to get onchain.
+Must submit proof of 1+ transactions on Base mainnet or Base Sepolia testnet
+Apps built before the Buildathon are eligible for submission, but must clearly delineate what new feature or product was built during the Buildathon.
+Evaluation Criteria
+Aesthetics: Intuitive, easy-to-navigate
+Local Impact: Solves a clear challenge in the community
+BUILDER RESOURCES
+Rules
+Build a better world onchain, starting with your local community.
+Runs from
+Happening
+Online
+WHAT IS BASED AFRICA?
+Base is for everyone who wants to build a better internet, and we’re calling all builders in Africa to solve real challenges in your community by building onchain. From instant payments, access to financial services, and getting rewarded for creativity, going onchain is improving the lives of people around the world — but that's just the beginning. We’re looking to you to start building a better future onchain, starting right where you are. See a problem in your community? Solve it. Have an idea? Build it. Every app you create brings us closer to an onchain world where everyone thrives. Based Africa is part of the Based Around the World regional Buildathon series in Africa , India , Southeast Asia , and LatAm . These regions have unstoppable builder energy. We can’t wait to see your creativity, onchain.
+THE PROMPT
+Build an onchain app that solves a challenge in your community OR Use existing onchain tools to create real-world impact in your community by bringing them onchain. If you’re looking for ideas, here are a few places to start:
+Help people come together, connect, and collaborate more easily — onchain or IRL
+Unlock access to social and educational resources
+Build tools that provide easier access to the onchain economy
+Create localized social or e-commerce apps
+Create platforms that empower creators to share their work (or, if you're a creator yourself, share your own)
+Make a blog, write a blog post, create a YouTube or TikTok video, or other content showing how you're making an impact and bringing your community onchain
+CO-PRESENTERS
+WHY PARTICIPATE?
+The Buildathon is open to anyone from these four regions. Each region will have a prize pool of 25 ETH (for a total of 100 ETH), with 2 to 8 winners selected from each region. In addition, Talent Protocol will contribute 10B $BUILD, split evenly across all winners. Each winner gets:
+Rewards: 3.125 to 12.5 ETH from Base and $BUILD from Talent Protocol.
+Marketing & Distribution: All winners will be highlighted at a Base meetup event in-region with Jesse Pollak, and featured on Base social channels (X, Warpcast).
+Network: Connections with some of the most prolific Base builders in your region, with direct access to the Base team.
+HOW IT WORKS
+In order to be eligible, the projects must follow the below rules.
+Must submit one project per team
+Must include a functioning onchain app at a publicly accessible URL
+Must include an open-source GitHub repository for all source code in the app
+Must include a video, with a minimum length of 1 minute
+Integrating Basenames and Smart Wallet is strongly recommended; they make it easy for anyone to get onchain.
+Must submit proof of 1+ transactions on Base mainnet or Base Sepolia testnet
+Apps built before the Buildathon are eligible for submission, but must clearly delineate what new feature or product was built during the Buildathon.
+Evaluation Criteria
+Aesthetics: Intuitive, easy-to-navigate
+Local Impact: Solves a clear challenge in the community
+BUILDER RESOURCES
+Find us on
+Do we have to be based in Africa to submit?
+I am based in Africa but passionate about building for the global onchain community. Can I still be eligible?
+What are you looking for in submissions?
+How many projects can I submit?
+How much is each team eligible to win?
+What kind of support can I get from Base?
+Can I expect marketing support from Base if I win?
+Can I submit an old project or something that I’ve already built?
+Got more questions? Reach out to [email protected]
+FAQs
+Do we have to be based in Africa to submit?
+I am based in Africa but passionate about building for the global onchain community. Can I still be eligible?
+What are you looking for in submissions?
+How many projects can I submit?
+How much is each team eligible to win?
+What kind of support can I get from Base?
+Can I expect marketing support from Base if I win?
+Can I submit an old project or something that I’ve already built?
+Got more questions? Reach out to [email protected]
+Hacker reviews
+We love software and the people who build it.
+Community

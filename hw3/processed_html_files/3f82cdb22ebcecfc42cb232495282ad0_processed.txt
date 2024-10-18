@@ -1,0 +1,31 @@
+of Americans NEED a 3rd Party Candidate...
+The Other Side Feels the Same!
+...but what if you WORK TOGETHER???
+Using our Free Platform, You Will Feel Confident Voting Independent on Election Day.
+2. GET MATCHED
+Our platform will match you up with someone who would normally vote for the opposing party.
+Both of you agree to vote for non-duopoly candidates, knowing your vote is impactful and doesn't help the opposing party.
+3. VOTE
+On election day, vote for your favorite non-duopoly candidate.
+Know that your match is doing the same - thus DOUBLING the impact.
+Tell me more about...
+Why This Works
+Americans keep voting for the lesser of two evils, because they’re afraid of helping the “other guy” win. It’s called Splitting the Vote or the Spoiler Effect . Full context: here and here .
+The solution is balance – you only vote for a non-duopoly candidate if someone on the opposite side is doing the same (i.e. one “not Trump” voter for every “not Biden” voter).
+Our free platform matches people who would like to vote third-party or independent. You can sign-up to be paired with someone who would normally vote for the opposite candidate in a two-party race.
+If you are matched → you both promise to vote for a non-duopoly candidates, and your votes will balance out – no spoiler effect! You both vote your conscience!
+If you don’t match → you’re free to vote for the lesser of two evils. There’s no harm in trying our service. It’s free!
+Working together, we can change the way America votes and end the two-party system!
+Fraud Prevention
+Your vote is very important, and our highest priority is ensuring the authenticity of each pledge. Our biggest nightmare is fraudulent actors using our platform to skew election results. We have taken the following steps to ensure this does not happen.
+We utilize two-factor authentication, similar to the financial industry – unique random codes embedded in email and SMS text message – to certify the validity, humanity, and uniqueness of each pledge. Even with advanced hacking skills, it would be extremely difficult, time-consuming, and costly to create automated fraudulent pledges.
+Our software ensures a person, identified by email and cell phone number, cannot sign up for a race multiple times, or in multiple states for the same election. We cannot prevent someone from lying and entering a fraudulent pledge that would benefit their side by one vote. It may be tempting, but don’t do it! Dishonesty doesn’t pay in the end – the likelihood of someone being dishonest on either side is similar. We must adhere to the honor system!
+Our servers use SSH private/public key and two-factor authentication, with brute force lockout protection to ensure all pledge information is secured against potential attacks or manipulation. All these measures combined greatly reduce the risk of fraudulent activity having any tangible impact on the election results.
+Please contact us if you have any concerns:  BreakTheDuopoly@gmail.com
+Your Privacy
+We recognize your vote is a very personal choice, and have taken the following steps to ensure your personal information remains confidential.
+Our servers are secured using SSH private/public key and two-factor authentication, with brute force lockout, to prevent unauthorized access. SSL encryption is used on all website communication.
+We will not disclose your personal information or use it for any purpose other than processing your pledge. We collect the first and last names, email address, and cell phone number for each person that signs up.
+When individuals are matched, they are given the first name and last initial of the other person. No personally identifiable information is shared with the other party. No contact information is exchanged.
+We will not sell or give your personal information to anyone.
+Please contact us if you have any concerns:  BreakTheDuopoly@gmail.com

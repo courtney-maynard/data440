@@ -1,0 +1,348 @@
+.return-to-agenda {
+    display: none;
+    position: fixed;
+    top: 75px;
+    background-color: white;
+    width: 100%;
+    padding: 10px;
+    box-shadow: 0 2px 2px -2px gray;
+}
+.return-to-agenda .fa {
+    padding-right: 10px;
+}
+.return {
+    font-family: "korolev-compressed";
+    font-size: 25px;
+    line-height: 1;
+    cursor: pointer;
+}
+function enableBackToAgenda(){
+    jQuery('.return-to-agenda').css('top', jQuery(".site-header").outerHeight() + "px");
+   jQuery('.return-to-agenda').show();
+}
+function sortCouncilByLastName(){
+  var $divs = jQuery(".council-member");
+  var alphabeticallyOrderedDivs = $divs.sort(function (a, b) {
+      return jQuery(a).find(".last-name").text() > jQuery(b).find(".last-name").text();
+  });
+
+  jQuery(".keynote-speakers .accordion-content").html(alphabeticallyOrderedDivs);
+}
+
+/* Function for getting URL query string paramters */
+function getParameterByName(name) {
+	name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+	var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+	results = regex.exec(location.search);
+	return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+
+function goToSpeaker(){
+
+    var speakerID = getParameterByName( 'speaker' );
+
+    if( speakerID ) {
+        jQuery('.sub-page').hide();
+        jQuery('.keynote-speakers').show();
+        jQuery('html,body').animate({scrollTop:jQuery('#'+speakerID).offset().top-200}, 500);
+    }
+
+}
+function convertTo24Hour(time) {
+   var hours = parseInt(time.substr(0, 2));
+   if(time.indexOf('am') != -1 && hours == 12) {
+      time = time.replace('12', '0');
+   }
+   if(time.indexOf('pm')  != -1 && hours < 12) {
+      time = time.replace(hours, (hours + 12));
+   }
+   else if( hours < 10 ){
+      time = "0"+time;
+   }
+   return time.replace(/(am|pm)/, '');
+}
+function processSessionTimeDisplay(){
+   // if times are same, display only first one
+   var prevTime = 0;
+   jQuery(".session > .session-time:visible").each(function(){
+     var currentTime = jQuery(this).text();
+     if ( currentTime == prevTime ){ jQuery(this).css('color','transparent'); }
+     else{ jQuery(this).css('color','#333'); }
+     prevTime = currentTime;
+   });
+}
+function isNumeric(n) {
+  return !isNaN(parseFloat(n)) && isFinite(n);
+}
+function checkIfPastEvent(){
+  var eventDate = jQuery('.event-date').text();
+  var currentDate = jQuery('.current-date').text();
+
+  var eventDateSplit = eventDate.split(' '); // split the string into an array by spaces
+  var eventLastDate;
+
+  // if event date is more than one day (contains a -)
+  if( eventDateSplit[1].indexOf("-") !=-1 ){
+    var eventDateDay = eventDateSplit[1].replace(',','');
+    var eventLastDay = eventDateDay.split('-');
+
+    if ( isNumeric(eventLastDay[1]) ){
+        eventLastDate = eventDateSplit[0] + ' ' + eventLastDay[1] + ', ' + eventDateSplit[2]; // event's last date
+    }
+    else {
+        var tempString = eventDate.split('-');
+        eventLastDate = tempString[1];
+    }
+
+    //console.log(eventLastDate);
+  }
+  else{
+    eventLastDate = eventDate;
+  }
+
+  // check if event has passed
+  if( new Date(currentDate) > new Date(eventLastDate) ){
+    //console.log("event has passed");
+    jQuery('.popup-event-past').addClass('active');
+  }
+  else{
+    //console.log("event has not passed yet");
+  }
+}
+
+jQuery(document).ready(function($){
+    checkIfPastEvent();
+   sortCouncilByLastName();
+
+   // past event popup overlay button
+   jQuery('.popup-event-past .continue-button').click(function(){
+       jQuery('.popup-event-past').removeClass('active');
+   });
+
+    var sectionID = getParameterByName( 'show' );
+
+    if( sectionID == 'exhibitors-info' ) {
+       jQuery('.sub-page').hide();
+       jQuery('.exhibitors-information').show();
+       jQuery('html,body').animate({scrollTop:jQuery('.exhibitors-information').offset().top-100}, 500);
+    }
+
+   // remove numbers from title
+   var titleWithoutNumber = jQuery('.banner-info .event-title h1').text().replace(/\d+/g, '');
+   jQuery('.banner-info .event-title h1').text(titleWithoutNumber);
+
+   // remove numbers from title
+   var headerTitleWithoutNumber = jQuery('title').text().replace(/\d+/g, '');
+   jQuery('title').text(headerTitleWithoutNumber);
+
+   // remove duplicate speakers from speaker list
+   $('.keynote-speakers .speaker-block').each(function(){
+     $('[id="' + this.id + '"]').slice(1).remove();
+   });
+
+    $('.sponsor-slider').flexslider({
+      animation: "slide",
+      manualControls: ".flex-control-nav li",
+      startAt: 1,
+      useCSS: false /* Chrome fix*/
+    });
+
+    // slide out cta box
+    $('img.close-button').click(function(){
+      $('.sticky-side-cta').css("visibility", "hidden");
+    });
+
+	/*
+    // convert 24 hr time and add to .session-time-24 so we can sort later
+    jQuery('.session').each(function(){
+     var currentSessionTime = jQuery(this).children('.session-time').text();
+     jQuery(this).children('.session-time-24').text( jQuery.trim(convertTo24Hour(currentSessionTime)) );
+    });
+
+    // sort sessions by 24 hour
+    jQuery('.sessions-container').each(function(){
+       var $divs = jQuery(this).children('.session');
+       var sortedSessions = $divs.sort(function (a, b) {
+          var Atime = jQuery(a).find(".session-time-24").text();
+          var Btime = jQuery(b).find(".session-time-24").text();
+          if (Atime > Btime) return 1;
+          if (Atime < Btime) return -1;
+          return  0;
+       });
+       jQuery(this).html(sortedSessions);
+    }); */
+
+    processSessionTimeDisplay();
+
+    // when accordion is clicked
+    $('.accordion').click(function(){
+        if ( $(this).hasClass("closed") ){
+          $(this).removeClass("closed");
+          $(this).addClass("opened");
+          //$(this).parents('.accordion-wrapper').children('.accordion-content').slideToggle();
+          $(this).parent('.accordion-wrapper').children('.accordion-content').slideToggle();
+        }
+        else {
+          $(this).removeClass("opened");
+          $(this).addClass("closed");
+          $(this).parent('.accordion-wrapper').children('.accordion-content').slideToggle();
+          //$('.accordion-content').slideToggle();
+        }
+    });
+
+    // if the url contains id
+
+    if ( window.location.hash ){
+      $('html,body').animate({scrollTop:$(window.location.hash).offset().top-150}, 500);
+      console.log(window.location.hash);
+      $(window.location.hash).find('.accordion-content').slideToggle();
+      $(window.location.hash).find('.accordion').removeClass('closed');
+      $(window.location.hash).find('.accordion').addClass('opened');
+      $(window.location.hash).find('.session-accordion').slideToggle();
+    }
+
+    // session accordion
+    jQuery('.session-title').click(function(){
+      jQuery(this).siblings('.session-accordion').slideToggle();
+    });
+
+    // remove apostrophe from speaker-block id
+    jQuery('.keynote-speakers .speaker-block').each(function(){
+      var oldID = jQuery(this).attr('id');
+      jQuery(this).attr('id', oldID.replace(/'/g, ''));
+    });
+
+    // remove apostrophe from session speaker name url
+    jQuery('.session .speaker-block .name a').each(function(){
+      var oldID = jQuery(this).attr('href');
+      jQuery(this).attr('href', oldID.replace(/'/g, ''));
+    });
+
+    // remove apostrophe from session speaker photo url
+    jQuery('.session .speaker-block .photo a').each(function(){
+      var oldID = jQuery(this).attr('href');
+      jQuery(this).attr('href', oldID.replace(/'/g, ''));
+    });
+
+    // on speaker image click, go to speaker page and smooth scroll
+    jQuery('.agenda .session .photo a').click(function(){
+      var hash = jQuery(this).attr('href');
+      jQuery('.sub-page').hide();
+      jQuery('.keynote-speakers').show();
+      jQuery('html,body').animate({scrollTop:jQuery(hash).offset().top-150}, 500);
+      enableBackToAgenda();
+    });
+
+    // on speaker image click, go to speaker page and smooth scroll
+    jQuery('.agenda .session .name a').click(function(){
+      var hash = jQuery(this).attr('href');
+      jQuery('.sub-page').hide();
+      jQuery('.keynote-speakers').show();
+      jQuery('html,body').animate({scrollTop:jQuery(hash).offset().top-150}, 500);
+      enableBackToAgenda();
+    });
+
+    jQuery('.return-to-agenda .return').click(function(){
+       jQuery('.return-to-agenda').hide();
+
+       jQuery('.sub-page').hide();
+       jQuery('.agenda').show();
+       jQuery('html,body').animate({scrollTop:jQuery('.agenda').offset().top-50}, 500);
+    });
+
+    // on day click, scroll to day block
+    jQuery('.agenda .day a').click(function(){
+      var hash = jQuery(this).attr('href');
+      jQuery('html,body').animate({scrollTop:jQuery(hash).offset().top-100}, 500);
+    });
+
+    // add corresponding session levels classes to session block
+    jQuery('.session .session-level li').each(function(){
+      var sessionLevel = jQuery(this).children('img').attr("class");
+      jQuery(this).parent().parent().parent('.session').addClass(sessionLevel);
+    });
+
+    // show / hide registration levels
+    jQuery('.registration-level-filter li').click(function(){
+      var sessionLevel = jQuery(this).attr("id");
+      jQuery('.session').hide();
+      jQuery('.'+sessionLevel).show();
+      processSessionTimeDiplay();
+    });
+
+    // when keynote & speaker information bar is clicked
+    jQuery('#keynote-speakers-info').click(function(){
+      jQuery('.sub-page').hide();
+      jQuery('.keynote-speakers').show();
+      jQuery('html,body').animate({scrollTop:jQuery('.keynote-speakers').offset().top-150}, 500);
+      enableBackToAgenda();
+    });
+
+    // when exhibitors information bar is clicked
+    jQuery('#exhibitors-info').click(function(){
+      jQuery('.sub-page').hide();
+      jQuery('.exhibitors-information').show();
+      jQuery('html,body').animate({scrollTop:jQuery('.exhibitors-information').offset().top-100}, 500);
+    });
+
+    // move keynote speakers into keynote-speaker-list
+    jQuery('.session.keynote').each(function(){
+        jQuery(this).find('.speaker-block .photo a').each(function(){
+          var speakerID = jQuery(this).attr('href').replace('#','');
+          jQuery('ul.keynote-speakers-list').append( jQuery('.keynote-speakers .speaker-block#'+speakerID) );
+        });
+    });
+
+}); // end document ready
+jQuery(window).resize(function() {
+    jQuery('.sponsor-slider').flexslider({});
+    jQuery('.return-to-agenda').css('top', jQuery(".site-header").outerHeight() + "px");
+}); // end resize
+
+var stickySideCTADisplayed = false;
+jQuery(window).scroll(function(){
+  stickyHeader();
+
+  var stickyScrollHeight = jQuery('.site-header').height() + jQuery('.top-ad-space').height() + jQuery('.event-banner').height();
+  if (jQuery(document).scrollTop() >= stickyScrollHeight) {
+    if( stickySideCTADisplayed == false ){
+      var hidden = jQuery('.sticky-side-cta');
+      if (hidden.hasClass('visible')){
+          hidden.animate({"right":"-300px"}, "slow").removeClass('visible');
+      }
+      else {
+          hidden.animate({"right":"0px"}, "slow").addClass('visible');
+          stickySideCTADisplayed = true;
+      }
+    }
+  }// end sticky side bar scroll
+ });
+
+jQuery(window).on('load', function() {
+    var hash = window.location.hash.substring(1);
+    if ( hash != "" ){
+        jQuery('html,body').animate({scrollTop:jQuery('#'+hash).offset().top-jQuery('.site-header').outerHeight()-100}, 500);
+    }
+
+    goToSpeaker();
+}); // end window load
+hbspt.forms.create({
+						    css: '',
+						    portalId: '2221756',
+						    formId: 'de00eec1-d1e4-4ed7-92a5-513850f7168f'
+						  });
+/* <![CDATA[ */
+var screenReaderText = {"expand":"expand child menu","collapse":"collapse child menu"};
+/* ]]> */
+/* <![CDATA[ */
+var mejsL10n = {"language":"en","strings":{"mejs.download-file":"Download File","mejs.install-flash":"You are using a browser that does not have Flash player enabled or installed. Please turn on your Flash player plugin or download the latest version from https:\/\/get.adobe.com\/flashplayer\/","mejs.fullscreen":"Fullscreen","mejs.play":"Play","mejs.pause":"Pause","mejs.time-slider":"Time Slider","mejs.time-help-text":"Use Left\/Right Arrow keys to advance one second, Up\/Down arrows to advance ten seconds.","mejs.live-broadcast":"Live Broadcast","mejs.volume-help-text":"Use Up\/Down Arrow keys to increase or decrease volume.","mejs.unmute":"Unmute","mejs.mute":"Mute","mejs.volume-slider":"Volume Slider","mejs.video-player":"Video Player","mejs.audio-player":"Audio Player","mejs.captions-subtitles":"Captions\/Subtitles","mejs.captions-chapters":"Chapters","mejs.none":"None","mejs.afrikaans":"Afrikaans","mejs.albanian":"Albanian","mejs.arabic":"Arabic","mejs.belarusian":"Belarusian","mejs.bulgarian":"Bulgarian","mejs.catalan":"Catalan","mejs.chinese":"Chinese","mejs.chinese-simplified":"Chinese (Simplified)","mejs.chinese-traditional":"Chinese (Traditional)","mejs.croatian":"Croatian","mejs.czech":"Czech","mejs.danish":"Danish","mejs.dutch":"Dutch","mejs.english":"English","mejs.estonian":"Estonian","mejs.filipino":"Filipino","mejs.finnish":"Finnish","mejs.french":"French","mejs.galician":"Galician","mejs.german":"German","mejs.greek":"Greek","mejs.haitian-creole":"Haitian Creole","mejs.hebrew":"Hebrew","mejs.hindi":"Hindi","mejs.hungarian":"Hungarian","mejs.icelandic":"Icelandic","mejs.indonesian":"Indonesian","mejs.irish":"Irish","mejs.italian":"Italian","mejs.japanese":"Japanese","mejs.korean":"Korean","mejs.latvian":"Latvian","mejs.lithuanian":"Lithuanian","mejs.macedonian":"Macedonian","mejs.malay":"Malay","mejs.maltese":"Maltese","mejs.norwegian":"Norwegian","mejs.persian":"Persian","mejs.polish":"Polish","mejs.portuguese":"Portuguese","mejs.romanian":"Romanian","mejs.russian":"Russian","mejs.serbian":"Serbian","mejs.slovak":"Slovak","mejs.slovenian":"Slovenian","mejs.spanish":"Spanish","mejs.swahili":"Swahili","mejs.swedish":"Swedish","mejs.tagalog":"Tagalog","mejs.thai":"Thai","mejs.turkish":"Turkish","mejs.ukrainian":"Ukrainian","mejs.vietnamese":"Vietnamese","mejs.welsh":"Welsh","mejs.yiddish":"Yiddish"}};
+/* ]]> */
+/* <![CDATA[ */
+var _wpmejsSettings = {"pluginPath":"\/wp-includes\/js\/mediaelement\/","classPrefix":"mejs-","stretching":"responsive","audioShortcodeLibrary":"mediaelement","videoShortcodeLibrary":"mediaelement"};
+/* ]]> */
+(function(d,s,i,r) {
+      if (d.getElementById(i)){return;}
+      var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+      n.id=i;n.src='//js.hs-analytics.net/analytics/'+(Math.ceil(new Date()/r)*r)+'/2221756.js';
+      e.parentNode.insertBefore(n, e);
+    })(document,"script","hs-analytics",300000);

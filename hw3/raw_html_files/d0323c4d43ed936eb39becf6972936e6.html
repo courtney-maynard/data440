@@ -1,0 +1,658 @@
+<!doctype html>
+<html lang="en-US" class="no-js aws-lng-en_US" xmlns="http://www.w3.org/1999/xhtml" data-aws-assets="https://a0.awsstatic.com" data-js-version="1.0.681" data-css-version="1.0.538" data-static-assets="https://a0.awsstatic.com" prefix="og: https://ogp.me/ns#">
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <title>How Mend.io unlocked hidden patterns in CVE data with Anthropic Claude on Amazon Bedrock | AWS Machine Learning Blog</title> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://a0.awsstatic.com https://prod.us-east-1.ui.gcr-chat.marketing.aws.dev; connect-src 'self' *.akamaized.net *.googlevideo.com/videoplayback https://*.analytics.console.aws.a2z.com https://*.panorama.console.api.aws https://*.prod.chc-features.uxplatform.aws.dev https://112-tzm-766.mktoresp.com https://112-tzm-766.mktoutil.com https://a0.awsstatic.com https://a0.p.awsstatic.com https://a1.awsstatic.com https://amazonwebservices.d2.sc.omtrdc.net https://amazonwebservicesinc.tt.omtrdc.net https://api-v2.builderprofile.aws.dev https://api.regional-table.region-services.aws.a2z.com https://api.us-west-2.prod.pricing.aws.a2z.com https://auth.aws.amazon.com/ https://aws.amazon.com/p/sf/ https://aws.demdex.net https://b0.p.awsstatic.com https://c0.b0.p.awsstatic.com https://calculator.aws https://chat.us-east-1.prod.mrc-sunrise.marketing.aws.dev https://chatbot-api.us-east-1.prod.mrc-sunrise.marketing.aws.dev https://cm.everesttech.net https://d-90676d7478.awsapps.com https://d0.awsstatic.com https://d1.awsstatic.com https://d1fgizr415o1r6.cloudfront.net https://d2c.aws.amazon.com https://d3borx6sfvnesb.cloudfront.net https://dftu77xade0tc.cloudfront.net https://dpm.demdex.net https://fls-na.amazon.com https://i18n-string.us-west-2.prod.pricing.aws.a2z.com https://iad.staging.prod.tv.awsstatic.com https://infra-api.us-east-1.prod.mrc-sunrise.marketing.aws.dev https://ingestion.aperture-public-api.feedback.console.aws.dev https://livechat-api.us-east-1.prod.mrc-sunrise.marketing.aws.dev https://oidc.us-east-1.amazonaws.com https://pricing-table.us-west-2.prod.site.p.awsstatic.com https://prod-api.cosmic.aws.dev https://prod-us-west-2.csp-report.marketing.aws.dev https://prod-us-west-2.csp-report.marketing.aws.dev/submit https://prod.log.shortbread.aws.dev https://prod.tools.shortbread.aws.dev https://prod.us-east-1.api.gcr-chat.marketing.aws.dev https://prod.us-east-1.rest-bot.gcr-chat.marketing.aws.dev https://prod.us-east-1.ui.gcr-chat.marketing.aws.dev https://prod2.clientlogger.cn-northwest-1.marketplace.aws.a2z.org.cn https://public.lotus.awt.aws.a2z.com https://s0.awsstatic.com https://s3.amazonaws.com/aws-messaging-pricing-information/ https://s3.amazonaws.com/public-pricing-agc/ https://spot-bid-advisor.s3.amazonaws.com https://t0.m.awsstatic.com https://token.us-west-2.prod.site.p.awsstatic.com https://tv.awsstatic.com https://view-stage.us-west-2.prod.pricing.aws.a2z.com https://view-staging.us-east-1.prod.plc1-prod.pricing.aws.a2z.com https://vs.aws.amazon.com https://webchat-aws.clink.cn https://www.youtube-nocookie.com https://www.youtube.com wss://*.transport.connect.us-east-1.amazonaws.com wss://prod.us-east-1.wss-bot.gcr-chat.marketing.aws.dev wss://webchat-aws.clink.cn; font-src 'self' data: https://a0.awsstatic.com https://f0.awsstatic.com https://fonts.gstatic.com https://prod.us-east-1.ui.gcr-chat.marketing.aws.dev; frame-src 'self' https://*.widget.console.aws.amazon.com https://aws.demdex.net https://c0.b0.p.awsstatic.com https://calculator.aws https://commenting.awsblogs.com https://conversational-experience-worker.widget.console.aws.amazon.com/lotus/isolatedIFrame https://dpm.demdex.net https://player.vimeo.com https://pricing-table.us-west-2.prod.site.p.awsstatic.com https://token.us-west-2.prod.site.p.awsstatic.com https://www.youtube-nocookie.com https://www.youtube.com; img-src 'self' data: https://*.vidyard.com https://*.ytimg.com https://a0.awsstatic.com https://amazonwebservices.d2.sc.omtrdc.net https://avatars.builderprofile.aws.dev https://aws-clink2-resource.s3.cn-northwest-1.amazonaws.com.cn https://aws-quickstart.s3.amazonaws.com https://aws.amazon.com https://aws.demdex.net https://awsmedia.s3.amazonaws.com https://chat.us-east-1.prod.mrc-sunrise.marketing.aws.dev https://cm.everesttech.net https://d1.awsstatic.com https://d1d1et6laiqoh9.cloudfront.net https://d2908q01vomqb2.cloudfront.net https://d2c.aws.amazon.com https://d2cpw7vd6a2efr.cloudfront.net https://d36cz9buwru1tt.cloudfront.net https://d7umqicpi7263.cloudfront.net https://docs.aws.amazon.com https://dpm.demdex.net https://fls-na.amazon.com https://google.ca https://google.co.in https://google.co.jp https://google.co.th https://google.co.uk https://google.com https://google.com.ar https://google.com.au https://google.com.br https://google.com.hk https://google.com.mx https://google.com.tr https://google.com.tw https://google.de https://google.es https://google.fr https://google.it https://google.nl https://google.pl https://google.ru https://iad.staging.prod.tv.awsstatic.com https://img.youtube.com https://marketingplatform.google.com https://media.amazonwebservices.com https://p.adsymptotic.com https://pages.awscloud.com https://prod.cosmic.aws.dev https://prod.us-east-1.ui.gcr-chat.marketing.aws.dev https://s3.amazonaws.com/aws-quickstart/ https://s3.cn-north-1.amazonaws.com.cn/awschinablog/ https://s3.cn-north-1.amazonaws.com.cn/images-bjs/ https://ssl-static.libsyn.com https://static-cdn.jtvnw.net https://tv.awsstatic.com https://webchat-aws.clink.cn https://www.google.com https://www.linkedin.com https://yt3.ggpht.com; media-src 'self' https://*.libsyn.com https://a0.awsstatic.com https://anchor.fm https://awsmedia.s3.amazonaws.com https://awspodcastsiberiaent.s3.eu-west-3.amazonaws.com https://chat.us-east-1.prod.mrc-sunrise.marketing.aws.dev https://chtbl.com https://content.production.cdn.art19.com https://d1.awsstatic.com https://d1hemuljm71t2j.cloudfront.net https://d1le29qyzha1u4.cloudfront.net https://d1oqpvwii7b6rh.cloudfront.net https://d1vo51ubqkiilx.cloudfront.net https://d1yyh5dhdgifnx.cloudfront.net https://d2908q01vomqb2.cloudfront.net https://d2a6igt6jhaluh.cloudfront.net https://d3ctxlq1ktw2nl.cloudfront.net https://d3h2ozso0dirfl.cloudfront.net https://dgen8gghn3u86.cloudfront.net https://dk261l6wntthl.cloudfront.net https://download.stormacq.com/aws/podcast/ https://dts.podtrac.com https://media.amazonwebservices.com https://mktg-apac.s3-ap-southeast-1.amazonaws.com https://rss.art19.com https://s3-ap-northeast-1.amazonaws.com/aws-china-media/ https://www.buzzsprout.com; object-src 'none'; script-src 'nonce-x93PvdZWUZ5K2W844VYS99KpiU+4HqROZu8nxoVfhPc=' 'self' blob: https://*.cdn.console.awsstatic.com/ https://*.cdn.uis.awsstatic.com/ https://a.b.cdn.console.awsstatic.com https://a0.awsstatic.com https://amazonwebservicesinc.tt.omtrdc.net https://cdn.builderprofile.aws.dev https://chat.us-east-1.prod.mrc-sunrise.marketing.aws.dev https://d2c.aws.amazon.com https://googleads.g.doubleclick.net https://loader.us-east-1.prod.mrc-sunrise.marketing.aws.dev https://prod.cosmic.aws.dev https://prod.us-east-1.ui.gcr-chat.marketing.aws.dev https://spot-price.s3.amazonaws.com https://static.doubleclick.net https://t0.m.awsstatic.com https://token.us-west-2.prod.site.p.awsstatic.com https://website.spot.ec2.aws.a2z.com https://www.google.com https://www.gstatic.com https://www.youtube.com/iframe_api https://www.youtube.com/s/player/; style-src 'self' 'unsafe-inline' https://a0.awsstatic.com https://prod.us-east-1.ui.gcr-chat.marketing.aws.dev https://token.us-west-2.prod.site.p.awsstatic.com; report-uri https://prod-us-west-2.csp-report.marketing.aws.dev/submit" data-report-uri="https://prod-us-west-2.csp-report.marketing.aws.dev/submit"> 
+  <script src="https://a0.awsstatic.com/libra/1.0.587/csp/csp-report.js"></script> 
+  <meta name="robots" content="max-image-preview:large"> 
+  <link rel="dns-prefetch" href="//a0.awsstatic.com"> 
+  <style id="global-styles-inline-css" type="text/css">
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+</style> 
+  <link rel="canonical" href="https://aws.amazon.com/blogs/machine-learning/how-mend-io-unlocked-hidden-patterns-in-cve-data-with-anthropic-claude-on-amazon-bedrock/"> 
+  <meta property="og:locale" content="en_US"> 
+  <meta property="og:site_name" content="Amazon Web Services"> 
+  <meta property="og:title" content="How Mend.io unlocked hidden patterns in CVE data with Anthropic Claude on Amazon Bedrock | Amazon Web Services"> 
+  <meta property="og:type" content="article"> 
+  <meta property="og:url" content="https://aws.amazon.com/blogs/machine-learning/how-mend-io-unlocked-hidden-patterns-in-cve-data-with-anthropic-claude-on-amazon-bedrock/"> 
+  <meta property="og:description" content="This post is co-written with Maciej Mensfeld from Mend.io. In the ever-evolving landscape of cybersecurity, the ability to effectively analyze and categorize Common Vulnerabilities and Exposures (CVEs) is crucial. This post explores how Mend.io, a cybersecurity firm, used Anthropic Claude on Amazon Bedrock to classify and identify CVEs containing specific attack requirements details. By using […]"> 
+  <meta property="og:image" content="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2024/07/18/how-mendio-claude-bedrock-1120x630.jpg"> 
+  <meta property="og:image:width" content="1120"> 
+  <meta property="og:image:height" content="630"> 
+  <meta property="og:updated_time" content="2024-07-18T08:14:16-08:00"> 
+  <meta property="article:publisher" content="https://www.facebook.com/amazonwebservices"> 
+  <meta property="article:section" content="Amazon Bedrock"> 
+  <meta property="article:tag" content="Amazon Bedrock"> 
+  <meta property="article:tag" content="Customer Solutions"> 
+  <meta property="article:tag" content="Generative AI"> 
+  <meta property="article:published_time" content="2024-07-18T08:14:16-08:00"> 
+  <meta property="article:modified_time" content="2024-07-18T08:14:16-08:00"> 
+  <meta name="twitter:card" content="summary_large_image"> 
+  <meta name="twitter:site" content="@awscloud"> 
+  <meta name="twitter:domain" content="https://aws.amazon.com/blogs/"> 
+  <meta name="twitter:title" content="How Mend.io unlocked hidden patterns in CVE data with Anthropic Claude on Amazon Bedrock | Amazon Web Services"> 
+  <meta name="twitter:description" content="This post is co-written with Maciej Mensfeld from Mend.io. In the ever-evolving landscape of cybersecurity, the ability to effectively analyze and categorize Common Vulnerabilities and Exposures (CVEs) is crucial. This post explores how Mend.io, a cybersecurity firm, used Anthropic Claude on Amazon Bedrock to classify and identify CVEs containing specific attack requirements details. By using […]"> 
+  <meta name="twitter:image" content="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2024/07/18/how-mendio-claude-bedrock-1120x630.jpg"> 
+  <link rel="icon" type="image/ico" href="https://a0.awsstatic.com/main/images/site/fav/favicon.ico"> 
+  <link rel="shortcut icon" type="image/ico" href="https://a0.awsstatic.com/main/images/site/fav/favicon.ico"> 
+  <link rel="apple-touch-icon" sizes="57x57" href="https://a0.awsstatic.com/main/images/site/touch-icon-iphone-114-smile.png"> 
+  <link rel="apple-touch-icon" sizes="72x72" href="https://a0.awsstatic.com/main/images/site/touch-icon-ipad-144-smile.png"> 
+  <link rel="apple-touch-icon" sizes="114x114" href="https://a0.awsstatic.com/main/images/site/touch-icon-iphone-114-smile.png"> 
+  <link rel="apple-touch-icon" sizes="144x144" href="https://a0.awsstatic.com/main/images/site/touch-icon-ipad-144-smile.png"> 
+  <link rel="home" type="application/rss+xml" title="RSS 2.0 Feed" href="https://aws.amazon.com/blogs/machine-learning/feed/"> 
+  <meta name="robots" content="index, follow"> 
+  <link rel="stylesheet" href="https://a0.awsstatic.com/libra-css/css/1.0.500/style-awsm.css"> 
+  <link rel="stylesheet" href="https://a0.awsstatic.com/aws-blog/1.0.81/css/blog.css"> 
+  <script type="application/json" id="aws-page-settings">
+    {"blogPageTitle":"How Mend.io unlocked hidden patterns in CVE data with Anthropic Claude on Amazon Bedrock","currentLanguage":"en-US","libraCSSPath":"https:\/\/a0.awsstatic.com\/libra-css\/css\/1.0.500","requireBaseUrl":"https:\/\/a0.awsstatic.com","requirePackages":[{"name":"libra","location":"libra\/1.0.587"}],"requirePaths":{"aws-blog":"https:\/\/a0.awsstatic.com\/aws-blog\/1.0.81\/js","directories":"https:\/\/a0.awsstatic.com\/libra\/1.0.587\/directories","librastandardlib":"https:\/\/a0.awsstatic.com\/libra\/1.0.587\/librastandardlib","scripts":"https:\/\/a0.awsstatic.com\/libra\/1.0.587\/v1-polyfills\/scripts"},"supportedLanguages":["ar","de","en","es","fr","id","it","jp","ko","pt","ru","th","tr","vi","cn","tw"],"currentStage":"Prod"}  </script> 
+  <script src="https://a0.awsstatic.com/aws-blog/1.0.81/js/blog-head.js"></script> 
+  <script src="https://a0.awsstatic.com/s_code/js/3.0/awshome_s_code.js"></script> 
+  <script type="application/json" id="target-mediator">
+    {"supportedLanguages":["ar","de","en","es","fr","id","it","jp","ko","pt","ru","th","tr","vi","cn","tw"],"pageLanguage":"en","customParams":{"category0":"Amazon Bedrock","category1":"Customer Solutions","category2":"Generative AI"}}  </script> 
+  <script src="https://a0.awsstatic.com/target/1.0.122/aws-target-mediator.js"></script> 
+  <noscript> 
+   <style>.js-mbox { visibility: visible; }</style> 
+  </noscript> 
+ </head> 
+ <body class="awsm aws-blogs-page aws-blogs-page-type-single"> 
+  <script id="awsc-panorama-bundle" src="https://prod.pa.cdn.uis.awsstatic.com/panorama-nav-init.js" data-config="{&quot;appEntity&quot;:&quot;aws-marketing&quot;,&quot;region&quot;:&quot;us-west-1&quot;,&quot;service&quot;:&quot;blogs-site&quot;}" async="true"></script> 
+  <a id="aws-page-skip-to-main" class="lb-sr-only lb-sr-only-focusable lb-bold lb-skip-el" href="#aws-page-content-main"> Skip to Main Content</a> 
+  <header id="aws-page-header" class="awsm m-page-header lb-with-mobile-subrow" role="banner"> 
+   <div id="m-nav" class="m-nav" role="navigation" aria-label="Global Navigation"> 
+    <div class="m-nav-header lb-clearfix" data-menu-url="https://s0.awsstatic.com/en_US/nav/v3/panel-content/desktop/index.html"> 
+     <div class="m-nav-logo"> 
+      <div class="lb-bg-logo aws-amazon_web_services_smile-header-desktop-en"> 
+       <a href="https://aws.amazon.com/?nc2=h_lg"><span>Click here to return to Amazon Web Services homepage</span></a> 
+      </div> 
+     </div> 
+     <nav class="m-nav-secondary-links" style="min-width: 620px" aria-label="Secondary Global Navigation"> 
+      <a href="https://aws.amazon.com/about-aws/?nc2=h_header">About AWS</a> 
+      <a href="https://aws.amazon.com/contact-us/?nc2=h_header">Contact Us</a> 
+      <a class="lb-txt-none lb-tiny-iblock lb-txt-13 lb-txt lb-has-trigger-indicator" href="#" data-mbox-ignore="true" data-lb-popover-trigger="popover-support-selector" role="button" aria-expanded="false" aria-label="Explore support options" id="popover-popover-support-selector-trigger" aria-controls="popover-support-selector" aria-haspopup="true"> Support&nbsp; <i class="icon-caret-down lb-trigger-mount"></i></a> 
+      <a id="m-nav-language-selector" class="lb-tiny-iblock lb-txt lb-has-trigger-indicator" href="#" data-lb-popover-trigger="popover-language-selector" data-language="en" aria-label="Set site language" role="button" aria-controls="popover-language-selector" aria-expanded="false" aria-haspopup="true">English&nbsp;<i class="icon-caret-down lb-trigger-mount"></i></a> 
+      <a class="lb-tiny-iblock lb-txt lb-has-trigger-indicator" href="#" data-lb-popover-trigger="popover-my-account" aria-label="Access account options" role="button" aria-controls="popover-my-account" aria-expanded="false" aria-haspopup="true">My Account&nbsp;<i class="icon-caret-down lb-trigger-mount"></i></a> 
+      <div class="m-nav-cta-btn"> 
+       <div class="lb-mbox js-mbox" data-lb-comp="mbox" data-lb-comp-ignore="true" data-mbox="en_header_nav_cta"> 
+        <div class="lb-data-attr-wrapper data-attr-wrapper" data-da-type="so" data-da-so-type="viewport" data-da-so-language="en" data-da-so-category="monitoring" data-da-so-name="nav-buttons" data-da-so-version="sign-up-sign-in-all" data-da-so-url="nav"> 
+         <div class="data-attr-wrapper lb-tiny-iblock lb-none-pad lb-box" data-da-type="so" data-da-so-type="viewport" data-da-so-language="en" data-da-so-category="monitoring" data-da-so-name="nav-buttons" data-da-so-version="prospect-sign-in" data-da-so-url="all"> 
+          <a class="lb-txt-none lb-tiny-iblock lb-txt-13 lb-txt" style="padding-top:8px; padding-right:13px;" href="https://console.aws.amazon.com/console/home?nc2=h_ct&amp;src=header-signin"> Sign In</a> 
+         </div> 
+         <div class="data-attr-wrapper lb-tiny-iblock lb-none-v-margin lb-btn" data-da-type="so" data-da-so-type="viewport" data-da-so-language="en" data-da-so-category="monitoring" data-da-so-name="nav-buttons" data-da-so-version="prospect-signup" data-da-so-url="all"> 
+          <a class="lb-btn-p-primary" href="https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct&amp;src=header_signup" data-trk-params="{&quot;trkOverrideWithQs&quot;:true}" role="button"> <span> Create an AWS Account</span> </a> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </nav> 
+     <div class="m-nav-primary-group"> 
+      <nav class="m-nav-primary-links" aria-label="Primary Global Navigation"> 
+       <i class="m-nav-angle-left-icon" aria-hidden="true"></i> 
+       <ul> 
+        <li aria-expanded="false"><span><a href="https://aws.amazon.com/products/?nc2=h_ql_prod" data-panel="m-nav-panel-products">Products</a></span></li> 
+        <li aria-expanded="false"><span><a href="https://aws.amazon.com/solutions/?nc2=h_ql_sol" data-panel="m-nav-panel-solutions">Solutions</a></span></li> 
+        <li aria-expanded="false"><span><a href="https://aws.amazon.com/pricing/?nc2=h_ql_pr" data-panel="m-nav-panel-pricing">Pricing</a></span></li> 
+        <li aria-expanded="false"><span><a href="https://aws.amazon.com/documentation-overview/?nc2=h_ql_doc_do" data-panel="m-nav-panel-documentation">Documentation</a></span></li> 
+        <li aria-expanded="false"><span><a href="https://aws.amazon.com/getting-started/?nc2=h_ql_le" data-panel="m-nav-panel-learn">Learn</a></span></li> 
+        <li aria-expanded="false"><span><a href="https://aws.amazon.com/partners/?nc2=h_ql_pn" data-panel="m-nav-panel-partner">Partner Network</a></span></li> 
+        <li aria-expanded="false"><span><a href="https://aws.amazon.com/marketplace/?nc2=h_ql_mp" data-panel="m-nav-panel-marketplace">AWS Marketplace</a></span></li> 
+        <li aria-expanded="false"><span><a href="https://aws.amazon.com/customer-enablement/?nc2=h_ql_ce" data-panel="m-nav-panel-customer">Customer Enablement</a></span></li> 
+        <li aria-expanded="false"><span><a href="https://aws.amazon.com/events/?nc2=h_ql_ev" data-panel="m-nav-panel-events">Events</a></span></li> 
+        <li aria-expanded="false"><span><a href="https://aws.amazon.com/contact-us/?nc2=h_ql_exm" data-panel="m-nav-panel-more">Explore More </a></span></li> 
+       </ul> 
+       <div class="m-nav-icon-group"> 
+        <i class="m-nav-angle-right-icon" aria-hidden="true"></i> 
+        <i class="m-nav-search-icon" tabindex="0" role="button" aria-expanded="false" aria-label="Search"></i> 
+       </div> 
+      </nav> 
+      <div id="m-nav-desktop-search" class="m-nav-search"> 
+       <form action="https://aws.amazon.com/search/" role="search"> 
+        <div class="m-typeahead" data-directory-id="typeahead-suggestions" data-lb-comp="typeahead"> 
+         <input class="m-nav-search-field" placeholder="Search" autocomplete="off" spellcheck="false" dir="auto" type="text" name="searchQuery"> 
+        </div> 
+       </form> 
+       <i class="m-nav-close-icon" role="button" aria-label="Close"></i> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="lb-popover lb-popover-aui lb-popover-tiny" data-lb-comp="popover" data-id="popover-language-selector" id="popover-language-selector" aria-modal="false" aria-labelledby="popover-popover-language-selector-trigger" data-action="hover" data-position="top"> 
+     <a class="lb-popover-close" role="button" tabindex="0" aria-label="Close" title="Close"> <span class="lb-sr-only">Close</span> </a> 
+     <div class="lb-grid lb-row lb-row-max-large lb-snap"> 
+      <div class="lb-col lb-tiny-24 lb-mid-12"> 
+       <ul class="lb-txt-none lb-ul lb-list-style-none lb-tiny-ul-block"> 
+        <li lang="ar-SA" translate="no" data-language="ar"><a href="https://aws.amazon.com/ar/?nc1=h_ls">عربي</a></li> 
+        <li lang="id-ID" translate="no" data-language="id"><a href="https://aws.amazon.com/id/?nc1=h_ls">Bahasa Indonesia</a></li> 
+        <li lang="de-DE" translate="no" data-language="de"><a href="https://aws.amazon.com/de/?nc1=h_ls">Deutsch</a></li> 
+        <li lang="en-US" translate="no" data-language="en"><a href="https://aws.amazon.com/?nc1=h_ls">English</a></li> 
+        <li lang="es-ES" translate="no" data-language="es"><a href="https://aws.amazon.com/es/?nc1=h_ls">Español</a></li> 
+        <li lang="fr-FR" translate="no" data-language="fr"><a href="https://aws.amazon.com/fr/?nc1=h_ls">Français</a></li> 
+        <li lang="it-IT" translate="no" data-language="it"><a href="https://aws.amazon.com/it/?nc1=h_ls">Italiano</a></li> 
+        <li lang="pt-BR" translate="no" data-language="pt"><a href="https://aws.amazon.com/pt/?nc1=h_ls">Português</a></li> 
+       </ul> 
+      </div> 
+      <div class="lb-col lb-tiny-24 lb-mid-12"> 
+       <ul class="lb-txt-none lb-ul lb-list-style-none lb-tiny-ul-block"> 
+        <li lang="vi-VN" translate="no" data-language="vi"><a href="https://aws.amazon.com/vi/?nc1=f_ls">Tiếng Việt</a></li> 
+        <li lang="tr-TR" translate="no" data-language="tr"><a href="https://aws.amazon.com/tr/?nc1=h_ls">Türkçe</a></li> 
+        <li lang="ru-RU" translate="no" data-language="ru"><a href="https://aws.amazon.com/ru/?nc1=h_ls">Ρусский</a></li> 
+        <li lang="th-TH" translate="no" data-language="th"><a href="https://aws.amazon.com/th/?nc1=f_ls">ไทย</a></li> 
+        <li lang="ja-JP" translate="no" data-language="jp"><a href="https://aws.amazon.com/jp/?nc1=h_ls">日本語</a></li> 
+        <li lang="ko-KR" translate="no" data-language="ko"><a href="https://aws.amazon.com/ko/?nc1=h_ls">한국어</a></li> 
+        <li lang="zh-CN" translate="no" data-language="cn"><a href="https://aws.amazon.com/cn/?nc1=h_ls">中文 (简体)</a></li> 
+        <li lang="zh-TW" translate="no" data-language="tw"><a href="https://aws.amazon.com/tw/?nc1=h_ls">中文 (繁體)</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="lb-popover lb-popover-aui lb-popover-tiny" data-lb-comp="popover" data-id="popover-my-account" id="popover-my-account" aria-modal="false" aria-labelledby="popover-popover-my-account-trigger" data-action="hover" data-position="top"> 
+     <a class="lb-popover-close" role="button" tabindex="0" aria-label="Close" title="Close"> <span class="lb-sr-only">Close</span> </a> 
+     <ul class="lb-txt-none lb-ul lb-list-style-none lb-tiny-ul-block"> 
+      <li class="m-no-auth" data-myaws-auth-only="true"><a href="https://aws.amazon.com/profile/?nc2=h_m_mc">My Profile</a></li> 
+      <li class="m-no-auth" data-myaws-auth-only="true"><a href="https://auth.aws.amazon.com/sign-out/?nc2=h_m_mc">Sign out of AWS Builder ID</a></li> 
+      <li><a href="https://console.aws.amazon.com/?nc2=h_m_mc">AWS Management Console</a></li> 
+      <li><a href="https://console.aws.amazon.com/billing/home#/account?nc2=h_m_ma">Account Settings</a></li> 
+      <li><a href="https://console.aws.amazon.com/billing/home?nc2=h_m_bc">Billing &amp; Cost Management</a></li> 
+      <li><a href="https://console.aws.amazon.com/iam/home?nc2=h_m_sc#security_credential">Security Credentials</a></li> 
+      <li><a href="https://phd.aws.amazon.com/?nc2=h_m_sc">AWS Personal Health Dashboard</a></li> 
+     </ul> 
+    </div> 
+    <div class="lb-popover lb-popover-aui lb-popover-tiny" data-lb-comp="popover" data-id="popover-support-selector" id="popover-support-selector" aria-modal="false" aria-labelledby="popover-popover-support-selector-trigger" data-action="hover" data-position="top"> 
+     <a class="lb-popover-close" role="button" tabindex="0" aria-label="Close" title="Close"> <span class="lb-sr-only">Close</span> </a> 
+     <ul class="lb-txt-none lb-ul lb-list-style-none lb-tiny-ul-block"> 
+      <li><a href="https://console.aws.amazon.com/support/home/?nc2=h_ql_cu">Support Center</a></li> 
+      <li><a href="https://iq.aws.amazon.com/?utm=mkt.nav">Expert Help</a></li> 
+      <li><a href="https://repost.aws/knowledge-center/?nc2=h_m_ma">Knowledge Center</a></li> 
+      <li><a href="https://aws.amazon.com/premiumsupport/?nc2=h_m_bc">AWS Support Overview</a></li> 
+      <li><a href="https://repost.aws/">AWS re:Post</a></li> 
+     </ul> 
+    </div> 
+    <script type="text/x-handlebars-template" data-hbs-template-path="nav-desktop/suggestions" data-hbs-context="{&quot;pricingText&quot;:&quot;Pricing&quot;,&quot;documentationText&quot;:&quot;Documentation&quot;,&quot;calculatorText&quot;:&quot;Calculator&quot;}"></script> 
+    <script type="text/x-handlebars-template" data-hbs-template-path="nav-desktop/products-head" data-hbs-context="{&quot;productsText&quot;:&quot;Products&quot;}"></script> 
+    <script type="text/x-handlebars-template" data-hbs-template-path="nav-desktop/keypages-head" data-hbs-context="{&quot;relatedPagesText&quot;:&quot;Related Pages&quot;}"></script> 
+    <script type="text/x-handlebars-template" data-hbs-template-path="nav-desktop/tutorials-head" data-hbs-context="{&quot;tutorialsText&quot;:&quot;Tutorials&quot;}"></script> 
+    <script type="text/x-handlebars-template" data-hbs-template-path="nav-desktop/blogs-head" data-hbs-context="{&quot;blogsText&quot;:&quot;Blogs&quot;}"></script> 
+    <script type="text/x-handlebars-template" data-hbs-template-path="nav-desktop/see-all" data-hbs-context="{&quot;resultsText&quot;:&quot;See more results for&quot;}"></script> 
+   </div> 
+   <div id="m-nav-mobile" class="m-nav-mobile" role="navigation" aria-label="Global Navigation for Mobile"> 
+    <div id="m-nav-mobile-header" class="m-nav-mobile-header m-nav-mobile-with-sub-row" data-menu-url="https://s0.awsstatic.com/en_US/nav/v3/panel-content/mobile/index.html"> 
+     <div class="lb-bg-logo aws-amazon_web_services_smile-header-mobile-en"> 
+      <a href="https://aws.amazon.com/?nc2=h_lg"><span>Click here to return to Amazon Web Services homepage</span></a> 
+     </div> 
+     <div class="m-nav-mobile-button-group"> 
+      <i class="m-nav-mobile-button icon-search" tabindex="0" role="button" aria-expanded="false" aria-label="Search"></i> 
+      <i class="m-nav-mobile-button icon-reorder" tabindex="0" role="button" aria-expanded="false" aria-label="Menu"></i> 
+     </div> 
+     <div id="m-nav-mobile-sub-row" class="m-nav-mobile-sub-row"> 
+      <div class="data-attr-wrapper lb-btn" data-da-type="so" data-da-so-category="monitoring" data-da-so-language="en" data-da-so-name="global-mobile-sticky-cta-buttons" data-da-so-type="viewport" data-da-so-version="get-started-for-free-cta" data-da-so-url="all"> 
+       <a class="lb-btn-p-primary" href="https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_mobile" role="button"> <span> Get Started for Free</span> </a> 
+      </div> 
+      <div class="data-attr-wrapper lb-btn" data-da-type="so" data-da-so-category="monitoring" data-da-so-language="en" data-da-so-name="global-mobile-sticky-cta-buttons" data-da-so-type="viewport" data-da-so-version="contact-us"> 
+       <a class="lb-btn-p" href="https://aws.amazon.com/contact-us/?nc2=h_mobile" role="button"> <span> Contact Us</span> </a> 
+      </div> 
+     </div> 
+    </div> 
+    <div id="m-nav-mobile-search" class="m-nav-mobile-search"> 
+     <form action="https://aws.amazon.com/search" role="search"> 
+      <div class="m-typeahead"> 
+       <input class="m-nav-search-field" placeholder="Search" autocomplete="off" spellcheck="false" dir="auto" type="text" name="searchQuery"> 
+      </div> 
+     </form> 
+    </div> 
+    <nav id="m-nav-trimdown" aria-label="Condensed Global Navigation for Mobile"> 
+     <ul class="m-nav-mobile-menu-group"> 
+      <li> <a href="https://aws.amazon.com/products/?nc2=h_mo">Products</a> </li> 
+      <li> <a href="https://aws.amazon.com/solutions/?nc2=h_mo">Solutions</a> </li> 
+      <li> <a href="https://aws.amazon.com/pricing/?nc2=h_mo">Pricing</a> </li> 
+      <li> <a href="https://aws.amazon.com/what-is-aws/?nc2=h_mo">Introduction to AWS</a> </li> 
+      <li> <a href="https://aws.amazon.com/getting-started/?nc2=h_mo">Getting Started</a> </li> 
+      <li> <a href="https://aws.amazon.com/documentation-overview/?nc2=h_mo">Documentation</a> </li> 
+      <li> <a href="https://aws.amazon.com/training/?nc2=h_mo">Training and Certification</a> </li> 
+      <li> <a href="https://aws.amazon.com/developer/?nc2=h_mo">Developer Center</a> </li> 
+      <li> <a href="https://aws.amazon.com/solutions/case-studies/?nc2=h_mo">Customer Success</a> </li> 
+      <li> <a href="https://aws.amazon.com/partners/?nc2=h_mo">Partner Network</a> </li> 
+      <li> <a href="https://aws.amazon.com/marketplace/?nc2=h_mo">AWS Marketplace</a> </li> 
+      <li> <a href="https://console.aws.amazon.com/support/home?nc2=h_ql_cu">Support</a> </li> 
+      <li> <a href="https://repost.aws/">AWS re:Post</a> </li> 
+      <li> <a href="https://console.aws.amazon.com/console/home">Log into Console</a> </li> 
+      <li> <a href="https://aws.amazon.com/console/mobile/">Download the Mobile App</a> </li> 
+     </ul> 
+    </nav> 
+   </div> 
+  </header> 
+  <div class="awsm"> 
+   <div class="lb-blog-nav" data-lb-comp="aws-blog:blog-nav" data-lb-sticky-header="true"> 
+    <div class="lb-row lb-row-max-xlarge lb-snap"> 
+     <div class="lb-blog-nav-content"> 
+      <div class="lb-blog-nav-links"> 
+       <a class="lb-txt-none lb-txt" href="/blogs" data-trk-params="{&quot;trkOverrideWithQs&quot;:true}"> AWS Blog Home</a> 
+       <a class="lb-txt-none lb-txt lb-has-trigger-indicator" href="#" data-mbox-ignore="true" data-lb-popover-trigger="blog-category" role="button" aria-expanded="false" aria-label="Select blog category" id="popover-blog-category-trigger" aria-controls="blog-category" aria-haspopup="true" data-trk-params="{&quot;trkOverrideWithQs&quot;:true}"> Blogs&nbsp; <i class="icon-caret-down lb-trigger-mount"></i></a> 
+       <a class="lb-txt-none lb-txt lb-has-trigger-indicator" href="#" data-mbox-ignore="true" data-lb-popover-trigger="blog-editions" role="button" aria-expanded="false" aria-label="Select blog language" id="popover-blog-editions-trigger" aria-controls="blog-editions" aria-haspopup="true" data-trk-params="{&quot;trkOverrideWithQs&quot;:true}"> Editions&nbsp; <i class="icon-caret-down lb-trigger-mount"></i></a> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="lb-popover lb-popover-aui lb-popover-xlarge" data-lb-comp="popover" data-id="blog-category" id="blog-category" aria-modal="false" aria-labelledby="popover-blog-category-trigger" data-action="hover" data-position="top"> 
+    <a class="lb-popover-close" role="button" tabindex="0" aria-label="Close" title="Close"> <span class="lb-sr-only">Close</span> </a> 
+    <div class="lb-none-pad lb-none-v-margin lb-grid lb-row lb-row-max-large lb-snap"> 
+     <div class="lb-col lb-tiny-24 lb-mid-12"> 
+      <div class="lb-none-pad lb-none-v-margin lb-box"> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/architecture/"> Architecture</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/mt/" data-trk-params="{&quot;trkOverrideWithQs&quot;:true}"> AWS Cloud Operations</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/gametech/" data-trk-params="{&quot;trkOverrideWithQs&quot;:true}"> AWS for Games</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/aws-insights/"> AWS Insights</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/awsmarketplace/"> AWS Marketplace</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/aws/"> AWS News</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/apn/"> AWS Partner Network</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/smb/"> AWS Smart Business</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/big-data/"> Big Data</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/business-intelligence/"> Business Intelligence</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/business-productivity/"> Business Productivity</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/enterprise-strategy/" data-trk-params="{&quot;trkOverrideWithQs&quot;:true}"> Cloud Enterprise Strategy</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/aws-cloud-financial-management/"> Cloud Financial Management</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/compute/"> Compute</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/contact-center/"> Contact Center</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/containers/"> Containers</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/database/"> Database</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/desktop-and-application-streaming/"> Desktop &amp; Application Streaming</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/developer/" data-trk-params="{&quot;trkOverrideWithQs&quot;:true}"> Developer Tools</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/devops/" data-trk-params="{&quot;trkOverrideWithQs&quot;:true}"> DevOps &amp; Developer Productivity</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/mobile/"> Front-End Web &amp; Mobile</a> 
+      </div> 
+     </div> 
+     <div class="lb-col lb-tiny-24 lb-mid-12"> 
+      <div class="lb-none-pad lb-none-v-margin lb-box"> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/hpc/"> HPC</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/ibm-redhat/"> IBM and Red Hat</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/industries/"> Industries</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/infrastructure-and-automation/"> Integration &amp; Automation</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/iot/"> Internet of Things</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/machine-learning/"> Machine Learning</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/media/"> Media</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/messaging-and-targeting/"> Messaging &amp; Targeting</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/modernizing-with-aws/"> Microsoft Workloads on AWS</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/migration-and-modernization/"> Migration and Modernization</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/dotnet/"> .NET on AWS</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/networking-and-content-delivery/"> Networking &amp; Content Delivery</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/opensource/"> Open Source</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/publicsector/"> Public Sector</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/quantum-computing/" data-trk-params="{&quot;trkOverrideWithQs&quot;:true}"> Quantum Computing</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/robotics/"> Robotics</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/awsforsap/"> SAP</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/security/blogs/" data-trk-params="{&quot;trkOverrideWithQs&quot;:true}"> Security</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/spatial/"> Spatial Computing</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/startups/"> Startups</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/storage/"> Storage</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/supply-chain/"> Supply Chain &amp; Logistics</a> 
+       <a class="lb-txt-none lb-txt" href="https://aws.amazon.com/blogs/training-and-certification/"> Training &amp; Certification</a> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="lb-popover lb-popover-aui lb-popover-tiny" data-lb-comp="popover" data-id="blog-editions" id="blog-editions" aria-modal="false" aria-labelledby="popover-blog-editions-trigger" data-action="hover" data-position="top"> 
+    <a class="lb-popover-close" role="button" tabindex="0" aria-label="Close" title="Close"> <span class="lb-sr-only">Close</span> </a> 
+    <ul class="lb-txt-none lb-none-v-margin lb-ul lb-list-style-none lb-li-micro-v-margin lb-tiny-ul-block"> 
+     <li translate="no" lang="zh-CN"><a href="https://aws.amazon.com/cn/blogs/china/">中国版</a></li> 
+     <li translate="no" lang="ja-JP"><a href="https://aws.amazon.com/jp/blogs/news/">日本版</a></li> 
+     <li translate="no" lang="ko-KR"><a href="https://aws.amazon.com/ko/blogs/korea/">한국 에디션</a></li> 
+     <li translate="no" lang="ko-KR"><a href="https://aws.amazon.com/ko/blogs/tech/">기술 블로그</a></li> 
+     <li translate="no" lang="id-ID"><a href="https://aws.amazon.com/id/blogs/indonesia/">Edisi Bahasa Indonesia</a></li> 
+     <li translate="no" lang="tr-TR"><a href="https://aws.amazon.com/th/blogs/thailand/">AWS Thai Blog</a></li> 
+     <li translate="no" lang="fr-FR"><a href="https://aws.amazon.com/fr/blogs/france/">Édition Française</a></li> 
+     <li translate="no" lang="de-DE"><a href="https://aws.amazon.com/de/blogs/germany/">Deutsche Edition</a></li> 
+     <li translate="no" lang="pt-BR"><a href="https://aws.amazon.com/pt/blogs/aws-brasil/">Edição em Português</a></li> 
+     <li translate="no" lang="es-ES"><a href="https://aws.amazon.com/es/blogs/aws-spanish/">Edición en Español</a></li> 
+     <li translate="no" lang="ru-RU"><a href="https://aws.amazon.com/ru/blogs/rus/">Версия на русском</a></li> 
+     <li translate="no" lang="tr-TR"><a href="https://aws.amazon.com/tr/blogs/turkey/">Türkçe Sürüm</a></li> 
+    </ul> 
+   </div> 
+  </div> 
+  <div id="aws-page-content" class="aws-blog-has-related-posts lb-page-content lb-page-with-sticky-subnav blog-page" data-page-alert-target="true"> 
+   <div class="aws-blog-content lb-row lb-row-max-large lb-snap lb-gutter-mid"> 
+    <main class="lb-col lb-tiny-24 lb-mid-16" role="main" id="aws-page-content-main" tabindex="-1"> 
+     <h2 class="lb-h5 blog-title"><a href="https://aws.amazon.com/blogs/machine-learning/">AWS Machine Learning Blog</a></h2> 
+     <article class="blog-post" vocab="https://schema.org/" typeof="TechArticle"> 
+      <meta property="inLanguage" content="en-US"> 
+      <meta property="image" content="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2024/07/18/how-mendio-claude-bedrock-1120x630.jpg"> 
+      <h1 class="lb-h2 blog-post-title" property="name headline">How Mend.io unlocked hidden patterns in CVE data with Anthropic Claude on Amazon Bedrock</h1> 
+      <footer class="blog-post-meta" data-lb-comp="aws-blog:share-dialog"> 
+       <span>by <span property="author" typeof="Person"><span property="name">Hemmy Yona</span></span>, <span property="author" typeof="Person"><span property="name">Gili Nachum</span></span>, <span property="author" typeof="Person"><span property="name">Maciej Mensfeld</span></span>, and <span property="author" typeof="Person"><span property="name">Tzahi Mizrahi</span></span></span> 
+       <span>on <time property="datePublished" datetime="2024-07-18T08:14:16-08:00">18 JUL 2024</time></span> 
+       <span>in <span class="blog-post-categories"><a href="https://aws.amazon.com/blogs/machine-learning/category/artificial-intelligence/amazon-machine-learning/amazon-bedrock/" title="View all posts in Amazon Bedrock"><span property="articleSection">Amazon Bedrock</span></a>, <a href="https://aws.amazon.com/blogs/machine-learning/category/post-types/customer-solutions/" title="View all posts in Customer Solutions"><span property="articleSection">Customer Solutions</span></a>, <a href="https://aws.amazon.com/blogs/machine-learning/category/artificial-intelligence/generative-ai/" title="View all posts in Generative AI"><span property="articleSection">Generative AI</span></a></span></span> 
+       <span><a href="https://aws.amazon.com/blogs/machine-learning/how-mend-io-unlocked-hidden-patterns-in-cve-data-with-anthropic-claude-on-amazon-bedrock/" property="url">Permalink</a></span> 
+       <span><a href="https://aws.amazon.com/blogs/machine-learning/how-mend-io-unlocked-hidden-patterns-in-cve-data-with-anthropic-claude-on-amazon-bedrock/#Comments"><i class="icon-comment"></i> Comments</a> </span> 
+       <span><a href="#" role="button" data-share-dialog-toggle><span class="span icon-share"></span> Share</a></span> 
+       <div class="blog-share-dialog" data-share-dialog style="display: none;"> 
+        <ul> 
+         <li> <a class="lb-txt" href="https://www.facebook.com/sharer/sharer.php?u=https://aws.amazon.com/blogs/machine-learning/how-mend-io-unlocked-hidden-patterns-in-cve-data-with-anthropic-claude-on-amazon-bedrock/" target="_blank" rel="noopener noreferrer" aria-label="Share on Facebook"><span class="icon-facebook-square"></span></a> </li> 
+         <li> <a class="lb-txt" href="https://twitter.com/intent/tweet/?text=How%20Mend.io%20unlocked%20hidden%20patterns%20in%20CVE%20data%20with%20Anthropic%20Claude%20on%20Amazon%20Bedrock&amp;via=awscloud&amp;url=https://aws.amazon.com/blogs/machine-learning/how-mend-io-unlocked-hidden-patterns-in-cve-data-with-anthropic-claude-on-amazon-bedrock/" target="_blank" rel="noopener noreferrer" aria-label="Share on Twitter"><span class="icon-twitter-square"></span></a> </li> 
+         <li> <a class="lb-txt" href="https://www.linkedin.com/shareArticle?mini=true&amp;title=How%20Mend.io%20unlocked%20hidden%20patterns%20in%20CVE%20data%20with%20Anthropic%20Claude%20on%20Amazon%20Bedrock&amp;source=Amazon%20Web%20Services&amp;url=https://aws.amazon.com/blogs/machine-learning/how-mend-io-unlocked-hidden-patterns-in-cve-data-with-anthropic-claude-on-amazon-bedrock/" target="_blank" rel="noopener noreferrer" aria-label="Share on LinkedIn"><span class="icon-linkedin-square"></span></a> </li> 
+         <li> <a class="lb-txt" href="mailto:?subject=How%20Mend.io%20unlocked%20hidden%20patterns%20in%20CVE%20data%20with%20Anthropic%20Claude%20on%20Amazon%20Bedrock&amp;body=How%20Mend.io%20unlocked%20hidden%20patterns%20in%20CVE%20data%20with%20Anthropic%20Claude%20on%20Amazon%20Bedrock%0A%0Ahttps://aws.amazon.com/blogs/machine-learning/how-mend-io-unlocked-hidden-patterns-in-cve-data-with-anthropic-claude-on-amazon-bedrock/" target="_blank" rel="noopener noreferrer" aria-label="Share on Email"><span class="icon-envelope-square"></span></a> </li> 
+         <li class="blog-share-dialog-url"><input type="text" value="https://aws.amazon.com/blogs/machine-learning/how-mend-io-unlocked-hidden-patterns-in-cve-data-with-anthropic-claude-on-amazon-bedrock/" title="Link to How Mend.io unlocked hidden patterns in CVE data with Anthropic Claude on Amazon Bedrock" readonly data-share-dialog-url></li> 
+        </ul> 
+       </div> 
+      </footer> 
+      <section class="blog-post-content lb-rtxt" property="articleBody"> 
+       <p><em>This post is co-written with Maciej Mensfeld from Mend.io.</em></p> 
+       <p>In the ever-evolving landscape of cybersecurity, the ability to effectively analyze and categorize Common Vulnerabilities and Exposures (CVEs) is crucial. This post explores how <a href="https://www.mend.io/" target="_blank" rel="noopener">Mend.io</a>, a cybersecurity firm, used Anthropic Claude on <a href="https://aws.amazon.com/bedrock/?gclid=CjwKCAjwtqmwBhBVEiwAL-WAYfvNEPp2bbihmAu80Yt75YUU1AWPr97TNZNyzGucZ7bDa6NxpTqenhoCYtkQAvD_BwE&amp;trk=ea449fe3-b099-4464-85dc-ff4e38a0359f&amp;sc_channel=ps&amp;ef_id=CjwKCAjwtqmwBhBVEiwAL-WAYfvNEPp2bbihmAu80Yt75YUU1AWPr97TNZNyzGucZ7bDa6NxpTqenhoCYtkQAvD_BwE:G:s&amp;s_kwcid=AL!4422!3!692062173758!e!!g!!amazon%20bedrock!21054971963!158684190945" target="_blank" rel="noopener">Amazon Bedrock</a> to classify and identify CVEs containing specific attack requirements details. By using the power of large language models (LLMs), Mend.io streamlined the analysis of over 70,000 vulnerabilities, automating a process that would have been nearly impossible to accomplish manually. With this capability, they manage to reduce 200 days of human experts’ work. This also allows them to provide higher quality of verdicts to their customers, allowing them to prioritize vulnerabilities better. It gives Mend.io a competitive advantage. This initiative not only underscores the transformative potential of AI in cybersecurity, but also provides valuable insights into the challenges and best practices for integrating LLMs into real-world applications.</p> 
+       <p>The post delves into the challenges faced, such as managing quota limitations, estimating costs, and handling unexpected model responses. We also provide insights into the model selection process, results analysis, conclusions, recommendations, and Mend.io’s future outlook on integrating artificial intelligence (AI) in cybersecurity.</p> 
+       <p>Amazon Bedrock is a fully managed service that offers a choice of high-performing foundation models (FMs) from leading AI companies like AI21 Labs, Anthropic, Cohere, Meta, Mistral AI, Stability AI, and Amazon through a single API, along with a broad set of capabilities to build <a href="https://aws.amazon.com/generative-ai/" target="_blank" rel="noopener">generative AI</a> applications with security, privacy, and responsible AI.</p> 
+       <p>Mend.io is a cybersecurity company dedicated to safeguarding digital ecosystems through innovative solutions. With a deep commitment to using cutting-edge technologies, Mend.io has been at the forefront of integrating AI and machine learning (ML) capabilities into its operations. By continuously pushing the boundaries of what’s possible, Mend.io empowers organizations to stay ahead of evolving cyber threats and maintain a proactive, intelligent approach to security.</p> 
+       <h2>Uncovering attack requirements in CVE data</h2> 
+       <p>In the cybersecurity domain, the constant influx of CVEs presents a significant challenge. Each year, thousands of new vulnerabilities are reported, with descriptions varying in clarity, completeness, and structure. These reports, often contributed by a diverse global community, can be concise, ambiguous, or lack crucial details, burying critical information such as attack requirements, potential impact, and suggested mitigation steps. The unstructured nature of CVE reports poses a significant obstacle in extracting actionable insights. Automated systems struggle to accurately parse and comprehend the inconsistent and complex narratives, increasing the risk of overlooking or misinterpreting vital details—a scenario with severe implications for security postures.</p> 
+       <p>For cybersecurity professionals, one of the most daunting tasks is identifying the attack requirements—the specific conditions and prerequisites needed for a vulnerability to be successfully exploited—from these vast and highly variable natural language descriptions. Determining whether attack requirements are present or absent is equally crucial, as this information is vital for assessing and mitigating potential risks. With tens of thousands of CVE reports to analyze, manually sifting through each description to extract this nuanced information is impractical and nearly impossible, given the sheer volume of data involved</p> 
+       <h2>The decision to use Anthropic Claude on Amazon Bedrock and the advantages it offered</h2> 
+       <p>In the face of this daunting challenge, the power of LLMs offered a promising solution. These advanced generative AI models are great at understanding and analyzing vast amounts of text, making them the perfect tool for sifting through the flood of CVE reports to pinpoint those containing attack requirement details.</p> 
+       <p>The decision to use Anthropic Claude on Amazon Bedrock was a strategic one. During evaluations, Mend.io found that Although other LLMs like GPT-4 also showed strong performance in analyzing CVE descriptions, Mend.io’s specific requirements were better aligned with Anthropic Claude’s capabilities. Mend.io used tags like &lt;example-attack-requirement&gt;. When Mend.io evaluated other models with both structured and unstructured prompts, Anthropic Claude’s ability to precisely follow the structured prompts and include the expected tags made it a better fit for Mend.io’s use case during their testing.</p> 
+       <p>Anthropic Claude’s unique capabilities, which allows the recognition of XML tags within prompts, gave it a distinct advantage. This capability enabled Mend.io to structure the prompts in a way that improved precision and value, ensuring that Anthropic Claude’s analysis was tailored to Mend.io’s specific needs. Furthermore, the seamless integration with Amazon Bedrock provided a robust and secure platform for handling sensitive data. The proven security infrastructure of AWS strengthens confidence, allowing Mend.io to process and analyze CVE information without compromising data privacy and security—a critical consideration in the world of cybersecurity.</p> 
+       <h2>Crafting the prompt</h2> 
+       <p>Crafting the perfect prompt for Anthropic Claude was both an art and a science. It required a deep understanding of the model’s capabilities and a thorough process to make sure Anthropic Claude’s analysis was precise and grounded in practical applications. They composed the prompt with rich context, provided examples, and clearly defined the differences between attack complexity and attack requirements as defined in the Common Vulnerability Scoring System (CVSS) v4.0. This level of detail was crucial to make sure Anthropic Claude could accurately identify the nuanced details within CVE descriptions.</p> 
+       <p>The use of XML tags was a game-changer in structuring the prompt. These tags allowed them to isolate different sections, guiding Anthropic Claude’s focus and improving the accuracy of its responses. With this unique capability, Mend.io could direct the model’s attention to specific aspects of the CVE data, streamlining the analysis process and increasing the value of the insights derived.</p> 
+       <p>With a well-crafted prompt and the power of XML tags, Mend.io equipped Anthropic Claude with the context and structure necessary to navigate the intricate world of CVE descriptions, enabling it to pinpoint the critical attack requirement details that would arm security teams with invaluable insights for prioritizing vulnerabilities and fortifying defenses.</p> 
+       <p>The following example illustrates how to craft a prompt effectively using tags with the goal of identifying phishing emails:</p> 
+       <div class="hide-language"> 
+        <pre><code class="lang-code">&lt;Instructions&gt;
+        Analyze emails to identify potential spam or phishing threats. Users should provide the full email content, including headers, by copy-pasting or uploading the email file directly.
+&lt;/Instructions&gt;
+&lt;AnalysisProcess&gt;
+        &lt;StepOne&gt;
+            &lt;Title&gt;Analyze Sender Information&lt;/Title&gt;
+            &lt;Description&gt;Verify the sender's email address and domain. Assess     additional contacts, date, and time to evaluate potential legitimacy and context&lt;/Description&gt;
+        &lt;/StepOne&gt;
+        &lt;StepTwo&gt;
+            &lt;Title&gt;Examine Email Content&lt;/Title&gt;
+            &lt;Description&gt;Analyze the subject line and body content for relevance and legitimacy. Caution against quick offers. Evaluate personalization and sender legitimacy.&lt;/Description&gt;
+        &lt;/StepTwo&gt;
+        &lt;StepThree&gt;
+            &lt;Title&gt;Check for Unsolicited Attachments or Links&lt;/Title&gt;
+            &lt;Description&gt;Identify and scrutinize hyperlinks for potential phishing or spam indicators. Advise on verifying link legitimacy without direct interaction. Use tools like VirusTotal or Google Safe Browsing for safety checks.&lt;/Description&gt;
+        &lt;/StepThree&gt;
+&lt;/AnalysisProcess&gt;
+&lt;Conclusion&gt;
+        Based on the analysis, provide an estimation of the email's likelihood of being spam or phishing, expressed as a percentage to indicate the assessed risk level. This comprehensive analysis helps users make informed decisions about the email's authenticity while emphasizing security and privacy.
+&lt;/Conclusion&gt;
+&lt;DataHandling&gt;
+         Refer to uploaded documents as 'knowledge source'. Strictly adhere to facts provided, avoiding speculation. Prioritize documented information over baseline knowledge or external sources. If no answer is found within the documents, state this explicitly.
+&lt;/DataHandling&gt;</code></pre> 
+       </div> 
+       <h2>The challenges</h2> 
+       <p>While using Anthropic Claude, Mend.io experienced the flexibility and scalability of the service firsthand. As the analysis workload grew to encompass 70,000 CVEs, they encountered opportunities to optimize their usage of the service’s features and cost management capabilities. When using the on-demand model deployment of Amazon Bedrock across AWS Regions, Mend.io proactively managed the API request per minute (RPM) and tokens per minute (TPM) <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/quotas.html" target="_blank" rel="noopener">quotas</a> by parallelizing model requests and adjusting the degree of parallelization to operate within the quota limits. They also took advantage of the built-in retry logic in the Boto3 Python library to handle any occasional throttling scenarios seamlessly. For workloads requiring even higher quotas, the Amazon Bedrock <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/prov-throughput.html" target="_blank" rel="noopener">Provisioned Throughput</a> option offers a straightforward solution, though it didn’t align with Mend.io’s specific usage pattern in this case.</p> 
+       <p>Although the initial estimate for classifying all 70,000 CVEs was lower, the final cost came in higher due to more complex input data resulting in longer input and output sequences. This highlighted the importance of comprehensive testing and benchmarking. The flexible pricing models in Amazon Bedrock allow organizations to optimize costs by considering alternative model options or data partitioning strategies, where simpler cases can be processed by more cost-effective models, while reserving higher-capacity models for the most challenging instances.</p> 
+       <p>When working with advanced language models like those provided by AWS, it’s crucial to craft prompts that align precisely with the desired output format. In Mend.io’s case, their expectation was to receive straightforward YES/NO answers to their prompts, which would streamline subsequent data curation steps. However, the model often provided additional context, justifications, or explanations beyond the anticipated succinct responses. Although these expanded responses offered valuable insights, they introduced unanticipated complexity into Mend.io’s data processing workflow. This experience highlighted the importance of prompt refinement to make sure the model’s output aligns closely with the specific requirements of the use case. By iterating on prompt formulation and fine-tuning the prompts, organizations can optimize their model’s responses to better match their desired response format, ultimately enhancing the efficiency and effectiveness of their data processing pipelines.</p> 
+       <h2>Results</h2> 
+       <p>Despite the challenges Mend.io faced, their diligent efforts paid off. They successfully identified CVEs with attack requirement details, arming security teams with precious insights for prioritizing vulnerabilities and fortifying defenses. This outcome was a significant achievement, because understanding the specific prerequisites for a vulnerability to be exploited is crucial in assessing risk and developing effective mitigation strategies. By using the power of Anthropic Claude, Mend.io was able to sift through tens of thousands of CVE reports, extracting the nuanced information about attack requirements that would have been nearly impossible to obtain through manual analysis. This feat not only saved valuable time and resources but also provided cybersecurity teams with a comprehensive view of the threat landscape, enabling them to make informed decisions and prioritize their efforts effectively.</p> 
+       <p>Mend.io conducted an extensive evaluation of Anthropic Claude, issuing 68,378 requests without considering any quota limitations. Based on their initial experiment of analyzing a sample of 100 vulnerabilities to understand attack vectors, they could determine the accuracy of Claude’s direct YES or NO answers. As shown in the following table, Anthropic Claude demonstrated exceptional performance, providing direct YES or NO answers for 99.9883% of the requests. In the few instances where a straightforward answer was not given, Anthropic Claude still provided sufficient information to determine the appropriate response. This evaluation highlights Anthropic Claude’s robust capabilities in handling a wide range of queries with high accuracy and reliability.</p> 
+       <table border="1px" width="624" cellpadding="5px"> 
+        <tbody> 
+         <tr> 
+          <td width="312">Character count of the prompt (without CVE specific details)</td> 
+          <td width="312">13,935</td> 
+         </tr> 
+         <tr> 
+          <td width="312">Number of tokens for the prompt (without CVE specific details)</td> 
+          <td width="312">2,733</td> 
+         </tr> 
+         <tr> 
+          <td width="312">Total requests</td> 
+          <td width="312">68,378</td> 
+         </tr> 
+         <tr> 
+          <td width="312">Unexpected answers</td> 
+          <td width="312">8</td> 
+         </tr> 
+         <tr> 
+          <td width="312">Failures (quota limitations excluded)</td> 
+          <td width="312">0</td> 
+         </tr> 
+         <tr> 
+          <td width="312">Answer Quality Success Rate</td> 
+          <td width="312">99.9883%</td> 
+         </tr> 
+        </tbody> 
+       </table> 
+       <h2>Future plans</h2> 
+       <p>The successful application of Anthropic Claude in identifying attack requirement details from CVE data is just the beginning of the vast potential that generative AI holds for the cybersecurity domain. As these advanced models continue to evolve and mature, their capabilities will expand, opening up new frontiers in automating vulnerability analysis, threat detection, and incident response. One promising avenue is the use of generative AI for automating vulnerability categorization and prioritization. By using these models’ ability to analyze and comprehend technical descriptions, organizations can streamline the process of identifying and addressing the most critical vulnerabilities, making sure limited resources are allocated effectively. Furthermore, generative AI models can be trained to detect and flag potential malicious code signatures within software repositories or network traffic. This proactive approach can help cybersecurity teams stay ahead of emerging threats, enabling them to respond swiftly and mitigate risks before they can be exploited.</p> 
+       <p>Beyond vulnerability management and threat detection, generative AI also holds promise in incident response and forensic analysis. These models can assist in parsing and making sense of vast amounts of log data, network traffic records, and other security-related information, accelerating the identification of root causes and enabling more effective remediation efforts. As generative AI continues to advance, its integration with other cutting-edge technologies, such as ML and data analytics, will unlock even more powerful applications in the cybersecurity domain. The ability to process and understand natural language data at scale, combined with the predictive power of ML algorithms, could revolutionize threat intelligence gathering, enabling organizations to anticipate and proactively defend against emerging cyber threats.</p> 
+       <h2>Conclusion</h2> 
+       <p>The field of cybersecurity is continually advancing, the integration of generative AI models like Anthropic Claude, powered by the robust infrastructure of Amazon Bedrock, represents a significant step forward in advancing digital defense. Mend.io’s successful application of this technology in extracting attack requirement details from CVE data is a testament to the transformative potential of language AI in the vulnerability management and threat analysis domains. By utilizing the power of these advanced models, Mend.io has demonstrated that the complex task of sifting through vast amounts of unstructured data can be tackled with precision and efficiency. This initiative not only empowers security teams with crucial insights for prioritizing vulnerabilities, but also paves the way for future innovations in automating vulnerability analysis, threat detection, and incident response. Anthropic and AWS have played a pivotal role in enabling organizations like Mend.io to take advantage of these cutting-edge technologies.</p> 
+       <p>Looking ahead, the possibilities are truly exciting. As language models continue to evolve and integrate with other emerging technologies, such as ML and data analytics, the potential for revolutionizing threat intelligence gathering and proactive defense becomes increasingly tangible.</p> 
+       <p>If you’re a cybersecurity professional looking to unlock the full potential of language AI in your organization, we encourage you to explore the capabilities of Amazon Bedrock and the <a href="https://aws.amazon.com/bedrock/claude/" target="_blank" rel="noopener">Anthropic Claude models</a>. By integrating these cutting-edge technologies into your security operations, you can streamline your vulnerability management processes, enhance threat detection, and bolster your overall cybersecurity posture. Take the first step today and discover how Mend.io’s success can inspire your own journey towards a more secure digital future.</p> 
+       <hr> 
+       <h3>About the Authors</h3> 
+       <p style="clear: both"><img class="wp-image-79621 size-full alignleft" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2024/06/28/hemmy-100.jpg" alt="" width="100" height="133"><strong>Hemmy Yona</strong> is a Solutions Architect at Amazon Web Services based in Israel. With 20 years of experience in software development and group management, Hemmy is passionate about helping customers build innovative, scalable, and cost-effective solutions. Outside of work, you’ll find Hemmy enjoying sports and traveling with family.</p> 
+       <p style="clear: both"><img loading="lazy" class="wp-image-79622 size-full alignleft" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2024/06/28/Tzachi-100.jpg" alt="" width="100" height="132"><strong>Tzahi Mizrahi</strong> is a Solutions Architect at Amazon Web Services, specializing in container solutions with over 10 years of experience in development and DevOps lifecycle processes. His expertise includes designing scalable, container-based architectures and optimizing deployment workflows. In his free time, he enjoys music and plays the guitar.</p> 
+       <p style="clear: both"><img loading="lazy" class="wp-image-78943 size-full alignleft" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2024/06/19/ML-15266-gili.png" alt="" width="99" height="135"><strong>Gili Nachum</strong> is a Principal solutions architect at AWS, specializing in Generative AI and Machine Learning. Gili is helping AWS customers build new foundation models, and to leverage LLMs to innovate in their business. In his spare time Gili enjoys family time and Calisthenics.</p> 
+       <p style="clear: both"><img loading="lazy" class="wp-image-79623 size-full alignleft" src="https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2024/06/28/Maciej-100.jpg" alt="" width="100" height="100"><strong>Maciej Mensfeld</strong> is a principal product architect at Mend, focusing on data acquisition, aggregation, and AI/LLM security research. He’s the creator of diffend.io (acquired by Mend) and Karafka. As a Software Architect, Security Researcher, and conference speaker, he teaches Ruby, Rails, and Kafka. Passionate about OSS, Maciej actively contributes to various projects, including Karafka, and is a member of the RubyGems security team.</p> 
+       <!-- '"` --> 
+      </section> 
+      <footer> 
+      </footer> 
+      <aside id="Comments" class="blog-comments"> 
+       <div data-lb-comp="aws-blog:cosmic-comments" data-env="prod" data-content-id="f352c09b-3940-4712-a86f-a077adb69b0d" data-title="How Mend.io unlocked hidden patterns in CVE data with Anthropic Claude on Amazon Bedrock" data-url="https://aws.amazon.com/blogs/machine-learning/how-mend-io-unlocked-hidden-patterns-in-cve-data-with-anthropic-claude-on-amazon-bedrock/"> 
+        <p data-failed-message="Comments cannot be loaded… Please refresh and try again.">Loading comments…</p> 
+       </div> 
+      </aside> 
+      <div class="js-mbox" data-mbox="en_blog_post_comments"></div> 
+     </article> 
+    </main> 
+    <div class="blog-sidebar lb-col lb-tiny-24 lb-mid-8"> 
+     <div class="awsm"> 
+      <div class="lb-box" style="padding-left:30px;"> 
+       <h3 id="Resources" class="lb-txt-none lb-h3 lb-title" style="margin-top:30px;"> Resources</h3> 
+       <div class="data-attr-wrapper lb-none-pad lb-none-v-margin lb-box" data-da-type="ha" data-da-channel="ha" data-da-language="en" data-da-placement="blog-sb-resources" data-da-campaign="acq_awsblogsb" data-da-content="machine-learning-resources" data-da-trk="blog_initial"> 
+        <ul class="lb-txt-none lb-ul lb-list-style-none lb-li-none-v-margin lb-tiny-ul-block"> 
+         <li><a href="https://aws.amazon.com/getting-started?sc_ichannel=ha&amp;sc_icampaign=acq_awsblogsb&amp;sc_icontent=machine-learning-resources">Getting Started</a></li> 
+         <li><a href="https://aws.amazon.com/new?sc_ichannel=ha&amp;sc_icampaign=acq_awsblogsb&amp;sc_icontent=machine-learning-resources">What's New</a></li> 
+        </ul> 
+        <div class="lb-grid lb-row lb-row-max-large lb-snap"> 
+         <div class="lb-col lb-tiny-24 lb-mid-8"> 
+          <hr class="lb-divider"> 
+         </div> 
+         <div class="lb-col lb-tiny-24 lb-mid-8"> 
+         </div> 
+         <div class="lb-col lb-tiny-24 lb-mid-8"> 
+         </div> 
+        </div> 
+        <h3 id="Blog_Topics" class="lb-txt-none lb-h3 lb-title" style="margin-top:30px;"> Blog Topics</h3> 
+       </div> 
+       <div class="data-attr-wrapper lb-none-pad lb-none-v-margin lb-box" data-da-type="ha" data-da-channel="ha" data-da-language="en" data-da-placement="blog-sb-resources" data-da-campaign="acq_awsblogsb" data-da-content="machine-learning-resources" data-da-trk="blog_initial"> 
+        <ul class="lb-txt-none lb-ul lb-list-style-none lb-li-none-v-margin lb-tiny-ul-block"> 
+         <li><a href="https://aws.amazon.com/blogs/machine-learning/category/artificial-intelligence/amazon-machine-learning/amazon-bedrock/">Amazon Bedrock</a></li> 
+         <li><a href="https://aws.amazon.com/blogs/machine-learning/category/artificial-intelligence/amazon-comprehend/">Amazon Comprehend</a></li> 
+         <li><a href="https://aws.amazon.com/blogs/machine-learning/category/artificial-intelligence/amazon-kendra/">Amazon Kendra</a></li> 
+         <li><a href="https://aws.amazon.com/blogs/machine-learning/category/artificial-intelligence/amazon-lex/">Amazon Lex</a></li> 
+         <li><a href="https://aws.amazon.com/blogs/machine-learning/category/artificial-intelligence/amazon-polly/">Amazon Polly</a></li> 
+         <li><a href="https://aws.amazon.com/blogs/machine-learning/category/amazon-q/">Amazon Q</a></li> 
+         <li><a href="https://aws.amazon.com/blogs/machine-learning/category/artificial-intelligence/amazon-rekognition/">Amazon Rekognition</a></li> 
+         <li><a href="https://aws.amazon.com/blogs/machine-learning/category/artificial-intelligence/sagemaker/">Amazon SageMaker</a></li> 
+         <li><a href="https://aws.amazon.com/blogs/machine-learning/category/artificial-intelligence/amazon-textract/">Amazon Textract</a></li> 
+        </ul> 
+        <div class="lb-grid lb-row lb-row-max-large lb-snap"> 
+         <div class="lb-col lb-tiny-24 lb-mid-8"> 
+          <hr class="lb-divider"> 
+         </div> 
+         <div class="lb-col lb-tiny-24 lb-mid-8"> 
+         </div> 
+         <div class="lb-col lb-tiny-24 lb-mid-8"> 
+         </div> 
+        </div> 
+       </div> 
+       <h3 id="Follow" class="lb-txt-none lb-h3 lb-title"> Follow</h3> 
+       <div class="data-attr-wrapper lb-none-pad lb-none-v-margin lb-box" data-da-type="ha" data-da-channel="ha" data-da-language="en" data-da-placement="blog-sb-social" data-da-campaign="acq_awsblogsb" data-da-content="machine-learning-social" data-da-trk="blog_initial"> 
+        <ul class="lb-txt-none lb-ul lb-list-style-none lb-li-none-v-margin lb-tiny-ul-block"> 
+         <li><a href="https://twitter.com/awscloud"><i class="icon-twitter-square"></i> &nbsp;Twitter</a></li> 
+         <li><a href="https://www.facebook.com/amazonwebservices"><i class="icon-facebook-square"></i> &nbsp;Facebook</a></li> 
+         <li><a href="https://www.linkedin.com/company/amazon-web-services/"><i class="icon-linkedin-square"></i> &nbsp;LinkedIn</a></li> 
+         <li><a href="https://www.twitch.tv/aws"><i class="icon-twitch"></i> &nbsp;Twitch</a></li> 
+         <li><a href="https://pages.awscloud.com/communication-preferences?sc_ichannel=ha&amp;sc_icampaign=acq_awsblogsb&amp;sc_icontent=maching-learning-social"><i class="icon-envelope-square"></i> &nbsp;Email Updates</a></li> 
+        </ul> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="js-mbox" data-mbox="en_blog_post_sidebar"></div> 
+    </div> 
+   </div> 
+  </div> 
+  <div class="awsm"> 
+   <footer id="aws-page-footer" class="m-page-footer" role="contentinfo"> 
+    <div class="data-attr-wrapper lb-none-v-margin lb-xb-grid-wrap" style="background-color:#141f2e;" data-da-type="so" data-da-so-type="viewport" data-da-so-language="en" data-da-so-category="monitoring" data-da-so-name="footer" data-da-so-version="a"> 
+     <div class="lb-xb-grid lb-row-max-large lb-snap lb-tiny-xb-1 lb-small-xb-3 lb-large-xb-5"> 
+      <div class="lb-xbcol"> 
+       <div class="data-attr-wrapper lb-small-hide lb-btn" data-da-type="so" data-da-so-type="viewport" data-da-so-language="en" data-da-so-category="monitoring" data-da-so-name="footer_buttons" data-da-so-url="all" data-da-so-version="footer_signin-mobile-default"> 
+        <a class="lb-btn-p-primary" href="https://console.aws.amazon.com/console/home?nc1=f_ct&amp;src=footer-signin-mobile" role="button"> <span> Sign In to the Console</span> </a> 
+       </div> 
+       <h3 class="lb-txt-none lb-txt-white lb-tiny-v-margin lb-h3 lb-title"> Learn About AWS</h3> 
+       <ul class="lb-txt-white lb-ul lb-list-style-none lb-li-micro-v-margin lb-tiny-ul-block" style="margin-bottom:0px;"> 
+        <li><a href="https://aws.amazon.com/what-is-aws/?nc1=f_cc" target="_blank" rel="noopener noreferrer">What Is AWS?</a></li> 
+        <li><a href="https://aws.amazon.com/what-is-cloud-computing/?nc1=f_cc" target="_blank" rel="noopener noreferrer">What Is Cloud Computing?</a></li> 
+        <li><a href="https://aws.amazon.com/accessibility/?nc1=f_cc" target="_blank" rel="noopener noreferrer">AWS Accessibility</a></li> 
+        <li><a href="https://aws.amazon.com/diversity-inclusion/?nc1=f_cc" target="_blank" rel="noopener noreferrer">AWS Inclusion, Diversity &amp; Equity</a></li> 
+        <li><a href="https://aws.amazon.com/devops/what-is-devops/?nc1=f_cc" target="_blank" rel="noopener noreferrer">What Is DevOps?</a></li> 
+        <li><a href="https://aws.amazon.com/containers/?nc1=f_cc" target="_blank" rel="noopener noreferrer">What Is a Container?</a></li> 
+        <li><a href="https://aws.amazon.com/what-is/data-lake/?nc1=f_cc" target="_blank" rel="noopener noreferrer">What Is a Data Lake?</a></li> 
+        <li><a href="https://aws.amazon.com/what-is/artificial-intelligence/?nc1=f_cc" target="_blank" rel="noopener noreferrer">What is Artificial Intelligence (AI)?</a></li> 
+        <li><a href="https://aws.amazon.com/what-is/generative-ai/?nc1=f_cc" target="_blank" rel="noopener noreferrer">What is Generative AI?</a></li> 
+        <li><a href="https://aws.amazon.com/what-is/machine-learning/?nc1=f_cc" target="_blank" rel="noopener noreferrer">What is Machine Learning (ML)?</a></li> 
+        <li><a href="https://aws.amazon.com/security/?nc1=f_cc" target="_blank" rel="noopener noreferrer">AWS Cloud Security</a></li> 
+        <li><a href="https://aws.amazon.com/new/?nc1=f_cc" target="_blank" rel="noopener noreferrer">What's New</a></li> 
+        <li><a href="https://aws.amazon.com/blogs/?nc1=f_cc" target="_blank" rel="noopener noreferrer">Blogs</a></li> 
+        <li><a href="https://press.aboutamazon.com/press-releases/aws" target="_blank" rel="noopener noreferrer" title="Press Releases">Press Releases</a></li> 
+       </ul> 
+      </div> 
+      <div class="lb-xbcol"> 
+       <h3 class="lb-txt-none lb-txt-white lb-tiny-v-margin lb-h3 lb-title"> Resources for AWS</h3> 
+       <ul class="lb-txt-white lb-ul lb-list-style-none lb-li-micro-v-margin lb-tiny-ul-block" style="margin-bottom:0px;"> 
+        <li><a href="https://aws.amazon.com/getting-started/?nc1=f_cc" target="_blank" rel="noopener noreferrer">Getting Started</a></li> 
+        <li><a href="https://aws.amazon.com/training/?nc1=f_cc" target="_blank" rel="noopener noreferrer">Training and Certification</a></li> 
+        <li><a href="https://aws.amazon.com/solutions/?nc1=f_cc" target="_blank" rel="noopener noreferrer">AWS Solutions Library</a></li> 
+        <li><a href="https://aws.amazon.com/architecture/?nc1=f_cc" target="_blank" rel="noopener noreferrer">Architecture Center</a></li> 
+        <li><a href="https://aws.amazon.com/faqs/?nc1=f_dr" target="_blank" rel="noopener noreferrer">Product and Technical FAQs</a></li> 
+        <li><a href="https://aws.amazon.com/resources/analyst-reports/?nc1=f_cc" target="_blank" rel="noopener noreferrer">Analyst Reports</a></li> 
+        <li><a href="https://aws.amazon.com/partners/work-with-partners/?nc1=f_dr" target="_blank" rel="noopener noreferrer">AWS Partners</a></li> 
+       </ul> 
+      </div> 
+      <div class="lb-xbcol"> 
+       <h3 class="lb-txt-none lb-txt-white lb-tiny-v-margin lb-h3 lb-title"> Developers on AWS</h3> 
+       <ul class="lb-txt-white lb-ul lb-list-style-none lb-li-micro-v-margin lb-tiny-ul-block" style="margin-bottom:0px;"> 
+        <li><a href="https://aws.amazon.com/developer/?nc1=f_dr" target="_blank" rel="noopener noreferrer">Developer Center</a></li> 
+        <li><a href="https://aws.amazon.com/developer/tools/?nc1=f_dr" target="_blank" rel="noopener noreferrer">SDKs &amp; Tools</a></li> 
+        <li><a href="https://aws.amazon.com/developer/language/net/?nc1=f_dr" target="_blank" rel="noopener noreferrer">.NET on AWS</a></li> 
+        <li><a href="https://aws.amazon.com/developer/language/python/?nc1=f_dr" target="_blank" rel="noopener noreferrer">Python on AWS</a></li> 
+        <li><a href="https://aws.amazon.com/developer/language/java/?nc1=f_dr" target="_blank" rel="noopener noreferrer">Java on AWS</a></li> 
+        <li><a href="https://aws.amazon.com/developer/language/php/?nc1=f_cc" target="_blank" rel="noopener noreferrer">PHP on AWS</a></li> 
+        <li><a href="https://aws.amazon.com/developer/language/javascript/?nc1=f_dr" target="_blank" rel="noopener noreferrer">JavaScript on AWS</a></li> 
+       </ul> 
+      </div> 
+      <div class="lb-xbcol"> 
+       <h3 class="lb-txt-none lb-txt-white lb-tiny-v-margin lb-h3 lb-title"> Help</h3> 
+       <ul class="lb-txt-white lb-ul lb-list-style-none lb-li-micro-v-margin lb-tiny-ul-block" style="margin-bottom:0px;"> 
+        <li><a href="https://aws.amazon.com/contact-us/?nc1=f_m" target="_blank" rel="noopener noreferrer">Contact Us</a></li> 
+        <li><a href="https://iq.aws.amazon.com/?utm=mkt.foot/?nc1=f_m" target="_blank" rel="noopener noreferrer">Get Expert Help</a></li> 
+        <li><a href="https://console.aws.amazon.com/support/home/?nc1=f_dr" target="_blank" rel="noopener noreferrer">File a Support Ticket</a></li> 
+        <li><a href="https://repost.aws/?nc1=f_dr" target="_blank" rel="noopener noreferrer">AWS re:Post</a></li> 
+        <li><a href="https://repost.aws/knowledge-center/?nc1=f_dr" target="_blank" rel="noopener noreferrer">Knowledge Center</a></li> 
+        <li><a href="https://aws.amazon.com/premiumsupport/?nc1=f_dr" target="_blank" rel="noopener noreferrer">AWS Support Overview</a></li> 
+        <li><a href="https://aws.amazon.com/legal/?nc1=f_cc" target="_blank" rel="noopener noreferrer">Legal</a></li> 
+        <li><a href="https://aws.amazon.com/careers/">AWS Careers</a></li> 
+       </ul> 
+       <div class="lb-mbox js-mbox" data-lb-comp="mbox" data-lb-comp-ignore="true" data-mbox="en_footer-v3_addl-help"> 
+       </div> 
+      </div> 
+      <div class="lb-xbcol"> 
+       <div class="lb-mbox js-mbox" data-lb-comp="mbox" data-lb-comp-ignore="true" data-mbox="en_footer-v3_cta"> 
+        <div class="data-attr-wrapper lb-tiny-hide lb-small-show lb-btn" data-da-type="so" data-da-so-type="viewport" data-da-so-language="en" data-da-so-category="monitoring" data-da-so-name="footer_buttons" data-da-so-url="all" data-da-so-version="footer_signup-default"> 
+         <a class="lb-btn-p-primary" href="https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc1=f_ct&amp;src=default" role="button"> <span> Create an AWS Account</span> </a> 
+        </div> 
+       </div> 
+       <div class="lb-xb-grid-wrap" style="padding-left:0px; margin-top:20px; margin-bottom:0px;"> 
+        <div class="lb-xb-grid lb-row-max-large lb-xb-equal-height lb-snap lb-gutter-collapse lb-vgutter-collapse lb-tiny-xb-4"> 
+         <div class="lb-xbcol"> 
+          <a class="lb-txt-none lb-txt-white lb-none-pad lb-txt" style="padding-left:0px; padding-right:5px;" href="https://twitter.com/awscloud" target="_blank" rel="noopener noreferrer" title="Twitter"> <i class="icon-twitter"></i></a> 
+         </div> 
+         <div class="lb-xbcol"> 
+          <a class="lb-txt-none lb-txt-white lb-none-pad lb-none-v-margin lb-txt" style="padding-right:5px;" href="https://www.facebook.com/amazonwebservices" target="_blank" rel="noopener noreferrer" title="Facebook"> <i class="icon-facebook"></i></a> 
+         </div> 
+         <div class="lb-xbcol"> 
+          <a class="lb-txt-none lb-txt-white lb-none-pad lb-txt" style="padding-right:5px;" href="https://www.linkedin.com/company/amazon-web-services/" target="_blank" rel="noopener noreferrer" title="Linkedin"> <i class="icon-linkedin"></i></a> 
+         </div> 
+         <div class="lb-xbcol"> 
+          <a class="lb-txt-none lb-txt-white lb-none-pad lb-txt" style="padding-right:5px;" href="https://www.instagram.com/amazonwebservices/" target="_blank" rel="noopener noreferrer" title="Instagram"> <i class="icon-instagram"></i></a> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="lb-xb-grid-wrap" style="padding-left:0px; margin-top:10px;"> 
+        <div class="lb-xb-grid lb-row-max-large lb-xb-equal-height lb-snap lb-gutter-collapse lb-vgutter-collapse lb-tiny-xb-4"> 
+         <div class="lb-xbcol"> 
+          <a class="lb-txt-none lb-txt-white lb-none-pad lb-txt" style="padding-right:5px;" href="https://www.twitch.tv/aws" target="_blank" rel="noopener noreferrer" title="Twitch"> <i class="icon-twitch"></i></a> 
+         </div> 
+         <div class="lb-xbcol"> 
+          <a class="lb-txt-none lb-txt-white lb-none-pad lb-txt" style="padding-right:5px;" href="https://www.youtube.com/user/AmazonWebServices/Cloud/" target="_blank" rel="noopener noreferrer" title="YouTube"> <i class="icon-youtube"></i></a> 
+         </div> 
+         <div class="lb-xbcol"> 
+          <a class="lb-txt-none lb-txt-white lb-none-pad lb-txt" style="padding-right:5px;" href="https://aws.amazon.com/podcasts/" target="_blank" rel="noopener noreferrer" title="Podcast"> <i class="icon-podcast"></i></a> 
+         </div> 
+         <div class="lb-xbcol"> 
+          <a class="lb-txt-none lb-txt-white lb-none-pad lb-txt" style="padding-right:5px;" href="https://pages.awscloud.com/communication-preferences?trk=homepage" target="_blank" rel="noopener noreferrer" title="Email"> <i class="icon-envelope-o"></i></a> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="lb-txt-normal lb-txt-white lb-txt-14 lb-rtxt" style="color:#eaeded; margin-top:0px;"> 
+        <div>
+          Amazon is an Equal Opportunity Employer: 
+         <i> Minority / Women / Disability / Veteran / Gender Identity / Sexual Orientation / Age.</i> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="lb-none-pad lb-none-v-margin lb-xb-grid-wrap" style="background-color:#141f2e;"> 
+     <div class="lb-xb-grid lb-row-max-large lb-snap lb-tiny-xb-1"> 
+      <div class="lb-xbcol"> 
+       <ul class="lb-txt-white lb-tiny-iblock lb-none-v-margin lb-ul lb-list-style-none lb-li-micro-v-margin lb-tiny-ul-iblock"> 
+        <li class="lb-txt-bold">Language</li> 
+        <li data-language="ar" lang="ar-SA" translate="no"><a href="https://aws.amazon.com/ar/?nc1=h_ls">عربي</a></li> 
+        <li data-language="id" lang="id-ID" translate="no"><a href="https://aws.amazon.com/id/?nc1=h_ls">Bahasa Indonesia</a></li> 
+        <li data-language="de" lang="de-DE" translate="no"><a href="https://aws.amazon.com/de/?nc1=h_ls">Deutsch</a></li> 
+        <li data-language="en" lang="en-US" translate="no"><a href="https://aws.amazon.com/?nc1=h_ls">English</a></li> 
+        <li data-language="es" lang="es-ES" translate="no"><a href="https://aws.amazon.com/es/?nc1=h_ls">Español</a></li> 
+        <li data-language="fr" lang="fr-FR" translate="no"><a href="https://aws.amazon.com/fr/?nc1=h_ls">Français</a></li> 
+        <li data-language="it" lang="it-IT" translate="no"><a href="https://aws.amazon.com/it/?nc1=h_ls">Italiano</a></li> 
+        <li data-language="pt" lang="pt-BR" translate="no"><a href="https://aws.amazon.com/pt/?nc1=h_ls">Português</a></li> 
+        <li data-language="vi" lang="vi-VN" translate="no"><a href="https://aws.amazon.com/vi/?nc1=f_ls">Tiếng Việt</a></li> 
+        <li data-language="tr" lang="tr-TR" translate="no"><a href="https://aws.amazon.com/tr/?nc1=h_ls">Türkçe</a></li> 
+        <li data-language="ru" lang="ru-RU" translate="no"><a href="https://aws.amazon.com/ru/?nc1=h_ls">Ρусский</a></li> 
+        <li data-language="th" lang="th-TH" translate="no"><a href="https://aws.amazon.com/th/?nc1=f_ls">ไทย</a></li> 
+        <li data-language="jp" lang="ja-JP" translate="no"><a href="https://aws.amazon.com/jp/?nc1=h_ls">日本語</a></li> 
+        <li data-language="ko" lang="ko-KR" translate="no"><a href="https://aws.amazon.com/ko/?nc1=h_ls">한국어</a></li> 
+        <li data-language="cn" lang="zh-CN" translate="no"><a href="https://aws.amazon.com/cn/?nc1=h_ls">中文 (简体)</a></li> 
+        <li data-language="tw" lang="zh-TW" translate="no"><a href="https://aws.amazon.com/tw/?nc1=h_ls">中文 (繁體)</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="lb-none-pad lb-none-v-margin lb-xb-grid-wrap" style="background-color:#EAEDED; padding-top:5px;"> 
+     <div class="lb-xb-grid lb-row-max-large lb-snap lb-tiny-xb-1"> 
+      <div class="lb-xbcol"> 
+       <ul class="lb-txt-squid lb-none-v-margin lb-ul lb-list-style-none lb-li-none-v-margin lb-tiny-ul-iblock"> 
+        <li><a href="https://aws.amazon.com/privacy/?nc1=f_pr">Privacy</a></li> 
+        <li>|</li> 
+        <li><a href="https://aws.amazon.com/accessibility/?nc1=f_acc">Accessibility</a></li> 
+        <li>|</li> 
+        <li><a href="https://aws.amazon.com/terms/?nc1=f_pr">Site Terms</a></li> 
+        <li>|</li> 
+        <li data-cookie-consent-modal="1"><a href="#"> Cookie Preferences </a></li> 
+        <li>|</li> 
+        <li>© 2024, Amazon Web Services, Inc. or its affiliates. All rights reserved.</li> 
+       </ul> 
+      </div> 
+     </div> 
+    </div> 
+   </footer> 
+  </div> 
+  <div id="aws-page-end"></div> 
+  <div id="lb-page-end"></div> 
+  <script src="https://a0.awsstatic.com/da/js/1.0.50/aws-da.js" async></script> 
+  <script src="https://a0.awsstatic.com/aws-blog/1.0.81/js/vendor/prism.js" data-default-language="markup"></script>  
+ </body>
+</html>

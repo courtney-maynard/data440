@@ -1,0 +1,1287 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="en">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="en">
+<![endif]-->
+<!--[if !(IE 7) & !(IE 8)]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>The Myth of Religion as the Cause of Most Wars | Andrew Holt, Ph.D.</title>
+<link rel="profile" href="https://gmpg.org/xfn/11" />
+<link rel="pingback" href="https://apholt.com/xmlrpc.php">
+<!--[if lt IE 9]>
+<script src="https://s2.wp.com/wp-content/themes/pub/twentytwelve/js/html5.js?ver=3.7.0" type="text/javascript"></script>
+<![endif]-->
+<meta name='robots' content='max-image-preview:large' />
+
+<!-- Async WordPress.com Remote Login -->
+<script id="wpcom_remote_login_js">
+var wpcom_remote_login_extra_auth = '';
+function wpcom_remote_login_remove_dom_node_id( element_id ) {
+	var dom_node = document.getElementById( element_id );
+	if ( dom_node ) { dom_node.parentNode.removeChild( dom_node ); }
+}
+function wpcom_remote_login_remove_dom_node_classes( class_name ) {
+	var dom_nodes = document.querySelectorAll( '.' + class_name );
+	for ( var i = 0; i < dom_nodes.length; i++ ) {
+		dom_nodes[ i ].parentNode.removeChild( dom_nodes[ i ] );
+	}
+}
+function wpcom_remote_login_final_cleanup() {
+	wpcom_remote_login_remove_dom_node_classes( "wpcom_remote_login_msg" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_key" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_validate" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_js" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_request_access_iframe" );
+	wpcom_remote_login_remove_dom_node_id( "wpcom_request_access_styles" );
+}
+
+// Watch for messages back from the remote login
+window.addEventListener( "message", function( e ) {
+	if ( e.origin === "https://r-login.wordpress.com" ) {
+		var data = {};
+		try {
+			data = JSON.parse( e.data );
+		} catch( e ) {
+			wpcom_remote_login_final_cleanup();
+			return;
+		}
+
+		if ( data.msg === 'LOGIN' ) {
+			// Clean up the login check iframe
+			wpcom_remote_login_remove_dom_node_id( "wpcom_remote_login_key" );
+
+			var id_regex = new RegExp( /^[0-9]+$/ );
+			var token_regex = new RegExp( /^.*|.*|.*$/ );
+			if (
+				token_regex.test( data.token )
+				&& id_regex.test( data.wpcomid )
+			) {
+				// We have everything we need to ask for a login
+				var script = document.createElement( "script" );
+				script.setAttribute( "id", "wpcom_remote_login_validate" );
+				script.src = '/remote-login.php?wpcom_remote_login=validate'
+					+ '&wpcomid=' + data.wpcomid
+					+ '&token=' + encodeURIComponent( data.token )
+					+ '&host=' + window.location.protocol
+					+ '//' + window.location.hostname
+					+ '&postid=13012'
+					+ '&is_singular=1';
+				document.body.appendChild( script );
+			}
+
+			return;
+		}
+
+		// Safari ITP, not logged in, so redirect
+		if ( data.msg === 'LOGIN-REDIRECT' ) {
+			window.location = 'https://wordpress.com/log-in?redirect_to=' + window.location.href;
+			return;
+		}
+
+		// Safari ITP, storage access failed, remove the request
+		if ( data.msg === 'LOGIN-REMOVE' ) {
+			var css_zap = 'html { -webkit-transition: margin-top 1s; transition: margin-top 1s; } /* 9001 */ html { margin-top: 0 !important; } * html body { margin-top: 0 !important; } @media screen and ( max-width: 782px ) { html { margin-top: 0 !important; } * html body { margin-top: 0 !important; } }';
+			var style_zap = document.createElement( 'style' );
+			style_zap.type = 'text/css';
+			style_zap.appendChild( document.createTextNode( css_zap ) );
+			document.body.appendChild( style_zap );
+
+			var e = document.getElementById( 'wpcom_request_access_iframe' );
+			e.parentNode.removeChild( e );
+
+			document.cookie = 'wordpress_com_login_access=denied; path=/; max-age=31536000';
+
+			return;
+		}
+
+		// Safari ITP
+		if ( data.msg === 'REQUEST_ACCESS' ) {
+			console.log( 'request access: safari' );
+
+			// Check ITP iframe enable/disable knob
+			if ( wpcom_remote_login_extra_auth !== 'safari_itp_iframe' ) {
+				return;
+			}
+
+			// If we are in a "private window" there is no ITP.
+			var private_window = false;
+			try {
+				var opendb = window.openDatabase( null, null, null, null );
+			} catch( e ) {
+				private_window = true;
+			}
+
+			if ( private_window ) {
+				console.log( 'private window' );
+				return;
+			}
+
+			var iframe = document.createElement( 'iframe' );
+			iframe.id = 'wpcom_request_access_iframe';
+			iframe.setAttribute( 'scrolling', 'no' );
+			iframe.setAttribute( 'sandbox', 'allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-top-navigation-by-user-activation' );
+			iframe.src = 'https://r-login.wordpress.com/remote-login.php?wpcom_remote_login=request_access&origin=' + encodeURIComponent( data.origin ) + '&wpcomid=' + encodeURIComponent( data.wpcomid );
+
+			var css = 'html { -webkit-transition: margin-top 1s; transition: margin-top 1s; } /* 9001 */ html { margin-top: 46px !important; } * html body { margin-top: 46px !important; } @media screen and ( max-width: 660px ) { html { margin-top: 71px !important; } * html body { margin-top: 71px !important; } #wpcom_request_access_iframe { display: block; height: 71px !important; } } #wpcom_request_access_iframe { border: 0px; height: 46px; position: fixed; top: 0; left: 0; width: 100%; min-width: 100%; z-index: 99999; background: #23282d; } ';
+
+			var style = document.createElement( 'style' );
+			style.type = 'text/css';
+			style.id = 'wpcom_request_access_styles';
+			style.appendChild( document.createTextNode( css ) );
+			document.body.appendChild( style );
+
+			document.body.appendChild( iframe );
+		}
+
+		if ( data.msg === 'DONE' ) {
+			wpcom_remote_login_final_cleanup();
+		}
+	}
+}, false );
+
+// Inject the remote login iframe after the page has had a chance to load
+// more critical resources
+window.addEventListener( "DOMContentLoaded", function( e ) {
+	var iframe = document.createElement( "iframe" );
+	iframe.style.display = "none";
+	iframe.setAttribute( "scrolling", "no" );
+	iframe.setAttribute( "id", "wpcom_remote_login_key" );
+	iframe.src = "https://r-login.wordpress.com/remote-login.php"
+		+ "?wpcom_remote_login=key"
+		+ "&origin=aHR0cHM6Ly9hcGhvbHQuY29t"
+		+ "&wpcomid=78719230"
+		+ "&time=1728924046";
+	document.body.appendChild( iframe );
+}, false );
+</script>
+<link rel='dns-prefetch' href='//s0.wp.com' />
+<link rel='dns-prefetch' href='//s2.wp.com' />
+<link rel='dns-prefetch' href='//s1.wp.com' />
+<link rel='dns-prefetch' href='//wordpress.com' />
+<link rel='dns-prefetch' href='//fonts-api.wp.com' />
+<link href='https://fonts.gstatic.com' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="Andrew Holt, Ph.D. &raquo; Feed" href="https://apholt.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Andrew Holt, Ph.D. &raquo; Comments Feed" href="https://apholt.com/comments/feed/" />
+	<script type="text/javascript">
+		/* <![CDATA[ */
+		function addLoadEvent(func) {
+			var oldonload = window.onload;
+			if (typeof window.onload != 'function') {
+				window.onload = func;
+			} else {
+				window.onload = function () {
+					oldonload();
+					func();
+				}
+			}
+		}
+		/* ]]> */
+	</script>
+	<script type="text/javascript">
+/* <![CDATA[ */
+window._wpemojiSettings = {"baseUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/72x72\/","ext":".png","svgUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/s0.wp.com\/wp-includes\/js\/wp-emoji-release.min.js?m=1719498190i&ver=6.7-beta2-59225"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83d\udc26\u200d\u2b1b","\ud83d\udc26\u200b\u2b1b")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+/* ]]> */
+</script>
+<link crossorigin='anonymous' rel='stylesheet' id='all-css-0-1' href='https://s2.wp.com/_static/??-eJxtzFsKgCAQQNENZaMg+BWtRXQI39KMtP0ogiD6PHC5cHThWmWsDGWInscWKkFE7talx0CjQml+ZCTYMVtGL3oj/mh2RBP8H3NI+H5vXflaFmWU0VJLo+MJKT40cA==&cssminify=yes' type='text/css' media='all' />
+<style id='wp-emoji-styles-inline-css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link crossorigin='anonymous' rel='stylesheet' id='all-css-2-1' href='https://s2.wp.com/_static/??-eJyljssOwiAQRX9IGCE+6sL4LUAJUimQmaGGv7e6MXHVxOXNyTm58KzClcw+M9TUQswEoa3TegwrQQ+LusiD3INtMY1gU3EPkaJFgx2Ie/LSEe3gvxDf/bwl9LEIJs/VvHXTS2MRMI6bv/wk0HDMgb76bb6qsx6O6qQHPb0AgzdqXw==&cssminify=yes' type='text/css' media='all' />
+<style id='wp-block-library-inline-css'>
+.has-text-align-justify {
+	text-align:justify;
+}
+.has-text-align-justify{text-align:justify;}
+</style>
+<link crossorigin='anonymous' rel='stylesheet' id='all-css-4-1' href='https://s2.wp.com/_static/??-eJzTLy/QzcxLzilNSS3WzyrWz01NyUxMzUnNTc0rQeEU5CRWphbp5qSmJyZX6uVm5uklFxfr6OPTDpRD5sM02efaGpoZmFkYGRuZGmQBAHPvL0Y=&cssminify=yes' type='text/css' media='all' />
+<style id='jetpack-sharing-buttons-style-inline-css'>
+.jetpack-sharing-buttons__services-list{display:flex;flex-direction:row;flex-wrap:wrap;gap:0;list-style-type:none;margin:5px;padding:0}.jetpack-sharing-buttons__services-list.has-small-icon-size{font-size:12px}.jetpack-sharing-buttons__services-list.has-normal-icon-size{font-size:16px}.jetpack-sharing-buttons__services-list.has-large-icon-size{font-size:24px}.jetpack-sharing-buttons__services-list.has-huge-icon-size{font-size:36px}@media print{.jetpack-sharing-buttons__services-list{display:none!important}}.editor-styles-wrapper .wp-block-jetpack-sharing-buttons{gap:0;padding-inline-start:0}ul.jetpack-sharing-buttons__services-list.has-background{padding:1.25em 2.375em}
+</style>
+<link crossorigin='anonymous' rel='stylesheet' id='all-css-6-1' href='https://s2.wp.com/wp-content/plugins/coblocks/2.18.1-simple-rev.4/dist/coblocks-style.css?m=1681832297i&cssminify=yes' type='text/css' media='all' />
+<style id='classic-theme-styles-inline-css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<link crossorigin='anonymous' rel='stylesheet' id='all-css-8-1' href='https://s2.wp.com/_static/??-eJx9jcEKg0AMRH+oaVhorR7Eb9E16IpZg8min2889FZ6GYbhPQYPgbhlo2zIBWQtU8qKcdvJd5be0AmmMfW0Ejv2jKoP/K0daZzIXNdvB6PzvyJ+A8MgO6mCJ6fCYLN/6e113IZXU9WfUL/DcgHSTkDo&cssminify=yes' type='text/css' media='all' />
+<style id='global-styles-inline-css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #fff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--blue: #21759b;--wp--preset--color--dark-gray: #444;--wp--preset--color--medium-gray: #9f9f9f;--wp--preset--color--light-gray: #e6e6e6;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--font-family--albert-sans: 'Albert Sans', sans-serif;--wp--preset--font-family--alegreya: Alegreya, serif;--wp--preset--font-family--arvo: Arvo, serif;--wp--preset--font-family--bodoni-moda: 'Bodoni Moda', serif;--wp--preset--font-family--bricolage-grotesque: 'Bricolage Grotesque', sans-serif;--wp--preset--font-family--cabin: Cabin, sans-serif;--wp--preset--font-family--chivo: Chivo, sans-serif;--wp--preset--font-family--commissioner: Commissioner, sans-serif;--wp--preset--font-family--cormorant: Cormorant, serif;--wp--preset--font-family--courier-prime: 'Courier Prime', monospace;--wp--preset--font-family--crimson-pro: 'Crimson Pro', serif;--wp--preset--font-family--dm-mono: 'DM Mono', monospace;--wp--preset--font-family--dm-sans: 'DM Sans', sans-serif;--wp--preset--font-family--dm-serif-display: 'DM Serif Display', serif;--wp--preset--font-family--domine: Domine, serif;--wp--preset--font-family--eb-garamond: 'EB Garamond', serif;--wp--preset--font-family--epilogue: Epilogue, sans-serif;--wp--preset--font-family--fahkwang: Fahkwang, sans-serif;--wp--preset--font-family--figtree: Figtree, sans-serif;--wp--preset--font-family--fira-sans: 'Fira Sans', sans-serif;--wp--preset--font-family--fjalla-one: 'Fjalla One', sans-serif;--wp--preset--font-family--fraunces: Fraunces, serif;--wp--preset--font-family--gabarito: Gabarito, system-ui;--wp--preset--font-family--ibm-plex-mono: 'IBM Plex Mono', monospace;--wp--preset--font-family--ibm-plex-sans: 'IBM Plex Sans', sans-serif;--wp--preset--font-family--ibarra-real-nova: 'Ibarra Real Nova', serif;--wp--preset--font-family--instrument-serif: 'Instrument Serif', serif;--wp--preset--font-family--inter: Inter, sans-serif;--wp--preset--font-family--josefin-sans: 'Josefin Sans', sans-serif;--wp--preset--font-family--jost: Jost, sans-serif;--wp--preset--font-family--libre-baskerville: 'Libre Baskerville', serif;--wp--preset--font-family--libre-franklin: 'Libre Franklin', sans-serif;--wp--preset--font-family--literata: Literata, serif;--wp--preset--font-family--lora: Lora, serif;--wp--preset--font-family--merriweather: Merriweather, serif;--wp--preset--font-family--montserrat: Montserrat, sans-serif;--wp--preset--font-family--newsreader: Newsreader, serif;--wp--preset--font-family--noto-sans-mono: 'Noto Sans Mono', sans-serif;--wp--preset--font-family--nunito: Nunito, sans-serif;--wp--preset--font-family--open-sans: 'Open Sans', sans-serif;--wp--preset--font-family--overpass: Overpass, sans-serif;--wp--preset--font-family--pt-serif: 'PT Serif', serif;--wp--preset--font-family--petrona: Petrona, serif;--wp--preset--font-family--piazzolla: Piazzolla, serif;--wp--preset--font-family--playfair-display: 'Playfair Display', serif;--wp--preset--font-family--plus-jakarta-sans: 'Plus Jakarta Sans', sans-serif;--wp--preset--font-family--poppins: Poppins, sans-serif;--wp--preset--font-family--raleway: Raleway, sans-serif;--wp--preset--font-family--roboto: Roboto, sans-serif;--wp--preset--font-family--roboto-slab: 'Roboto Slab', serif;--wp--preset--font-family--rubik: Rubik, sans-serif;--wp--preset--font-family--rufina: Rufina, serif;--wp--preset--font-family--sora: Sora, sans-serif;--wp--preset--font-family--source-sans-3: 'Source Sans 3', sans-serif;--wp--preset--font-family--source-serif-4: 'Source Serif 4', serif;--wp--preset--font-family--space-mono: 'Space Mono', monospace;--wp--preset--font-family--syne: Syne, sans-serif;--wp--preset--font-family--texturina: Texturina, serif;--wp--preset--font-family--urbanist: Urbanist, sans-serif;--wp--preset--font-family--work-sans: 'Work Sans', sans-serif;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}.has-albert-sans-font-family{font-family: var(--wp--preset--font-family--albert-sans) !important;}.has-alegreya-font-family{font-family: var(--wp--preset--font-family--alegreya) !important;}.has-arvo-font-family{font-family: var(--wp--preset--font-family--arvo) !important;}.has-bodoni-moda-font-family{font-family: var(--wp--preset--font-family--bodoni-moda) !important;}.has-bricolage-grotesque-font-family{font-family: var(--wp--preset--font-family--bricolage-grotesque) !important;}.has-cabin-font-family{font-family: var(--wp--preset--font-family--cabin) !important;}.has-chivo-font-family{font-family: var(--wp--preset--font-family--chivo) !important;}.has-commissioner-font-family{font-family: var(--wp--preset--font-family--commissioner) !important;}.has-cormorant-font-family{font-family: var(--wp--preset--font-family--cormorant) !important;}.has-courier-prime-font-family{font-family: var(--wp--preset--font-family--courier-prime) !important;}.has-crimson-pro-font-family{font-family: var(--wp--preset--font-family--crimson-pro) !important;}.has-dm-mono-font-family{font-family: var(--wp--preset--font-family--dm-mono) !important;}.has-dm-sans-font-family{font-family: var(--wp--preset--font-family--dm-sans) !important;}.has-dm-serif-display-font-family{font-family: var(--wp--preset--font-family--dm-serif-display) !important;}.has-domine-font-family{font-family: var(--wp--preset--font-family--domine) !important;}.has-eb-garamond-font-family{font-family: var(--wp--preset--font-family--eb-garamond) !important;}.has-epilogue-font-family{font-family: var(--wp--preset--font-family--epilogue) !important;}.has-fahkwang-font-family{font-family: var(--wp--preset--font-family--fahkwang) !important;}.has-figtree-font-family{font-family: var(--wp--preset--font-family--figtree) !important;}.has-fira-sans-font-family{font-family: var(--wp--preset--font-family--fira-sans) !important;}.has-fjalla-one-font-family{font-family: var(--wp--preset--font-family--fjalla-one) !important;}.has-fraunces-font-family{font-family: var(--wp--preset--font-family--fraunces) !important;}.has-gabarito-font-family{font-family: var(--wp--preset--font-family--gabarito) !important;}.has-ibm-plex-mono-font-family{font-family: var(--wp--preset--font-family--ibm-plex-mono) !important;}.has-ibm-plex-sans-font-family{font-family: var(--wp--preset--font-family--ibm-plex-sans) !important;}.has-ibarra-real-nova-font-family{font-family: var(--wp--preset--font-family--ibarra-real-nova) !important;}.has-instrument-serif-font-family{font-family: var(--wp--preset--font-family--instrument-serif) !important;}.has-inter-font-family{font-family: var(--wp--preset--font-family--inter) !important;}.has-josefin-sans-font-family{font-family: var(--wp--preset--font-family--josefin-sans) !important;}.has-jost-font-family{font-family: var(--wp--preset--font-family--jost) !important;}.has-libre-baskerville-font-family{font-family: var(--wp--preset--font-family--libre-baskerville) !important;}.has-libre-franklin-font-family{font-family: var(--wp--preset--font-family--libre-franklin) !important;}.has-literata-font-family{font-family: var(--wp--preset--font-family--literata) !important;}.has-lora-font-family{font-family: var(--wp--preset--font-family--lora) !important;}.has-merriweather-font-family{font-family: var(--wp--preset--font-family--merriweather) !important;}.has-montserrat-font-family{font-family: var(--wp--preset--font-family--montserrat) !important;}.has-newsreader-font-family{font-family: var(--wp--preset--font-family--newsreader) !important;}.has-noto-sans-mono-font-family{font-family: var(--wp--preset--font-family--noto-sans-mono) !important;}.has-nunito-font-family{font-family: var(--wp--preset--font-family--nunito) !important;}.has-open-sans-font-family{font-family: var(--wp--preset--font-family--open-sans) !important;}.has-overpass-font-family{font-family: var(--wp--preset--font-family--overpass) !important;}.has-pt-serif-font-family{font-family: var(--wp--preset--font-family--pt-serif) !important;}.has-petrona-font-family{font-family: var(--wp--preset--font-family--petrona) !important;}.has-piazzolla-font-family{font-family: var(--wp--preset--font-family--piazzolla) !important;}.has-playfair-display-font-family{font-family: var(--wp--preset--font-family--playfair-display) !important;}.has-plus-jakarta-sans-font-family{font-family: var(--wp--preset--font-family--plus-jakarta-sans) !important;}.has-poppins-font-family{font-family: var(--wp--preset--font-family--poppins) !important;}.has-raleway-font-family{font-family: var(--wp--preset--font-family--raleway) !important;}.has-roboto-font-family{font-family: var(--wp--preset--font-family--roboto) !important;}.has-roboto-slab-font-family{font-family: var(--wp--preset--font-family--roboto-slab) !important;}.has-rubik-font-family{font-family: var(--wp--preset--font-family--rubik) !important;}.has-rufina-font-family{font-family: var(--wp--preset--font-family--rufina) !important;}.has-sora-font-family{font-family: var(--wp--preset--font-family--sora) !important;}.has-source-sans-3-font-family{font-family: var(--wp--preset--font-family--source-sans-3) !important;}.has-source-serif-4-font-family{font-family: var(--wp--preset--font-family--source-serif-4) !important;}.has-space-mono-font-family{font-family: var(--wp--preset--font-family--space-mono) !important;}.has-syne-font-family{font-family: var(--wp--preset--font-family--syne) !important;}.has-texturina-font-family{font-family: var(--wp--preset--font-family--texturina) !important;}.has-urbanist-font-family{font-family: var(--wp--preset--font-family--urbanist) !important;}.has-work-sans-font-family{font-family: var(--wp--preset--font-family--work-sans) !important;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+</style>
+<link crossorigin='anonymous' rel='stylesheet' id='all-css-10-1' href='https://s1.wp.com/_static/??/wp-content/mu-plugins/comment-likes/css/comment-likes.css,/i/noticons/noticons.css?m=1436783281j&cssminify=yes' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-fonts-css' href='https://fonts-api.wp.com/css?family=Open+Sans%3A400italic%2C700italic%2C400%2C700&#038;subset=latin%2Clatin-ext&#038;display=fallback' media='all' />
+<link crossorigin='anonymous' rel='stylesheet' id='all-css-12-1' href='https://s2.wp.com/_static/??-eJzTLy/QTc7PK0nNK9EvyUjNTS3WLyhN0i8pBwpUAsmcslT94pLKnFS95OJiHX0iVAPV6Sfl5CdnF4O02OfaGpqZWhoYmhuYmmUBAC/rKK8=&cssminify=yes' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentytwelve-ie-css' href='https://s2.wp.com/wp-content/themes/pub/twentytwelve/css/ie.css?m=1423935238i&#038;ver=20150214' media='all' />
+<![endif]-->
+<link crossorigin='anonymous' rel='stylesheet' id='all-css-14-1' href='https://s0.wp.com/wp-content/themes/pub/twentytwelve/style-wpcom.css?m=1509660268i&cssminify=yes' type='text/css' media='all' />
+<style id='jetpack_facebook_likebox-inline-css'>
+.widget_facebook_likebox {
+	overflow: hidden;
+}
+
+</style>
+<link crossorigin='anonymous' rel='stylesheet' id='all-css-16-1' href='https://s1.wp.com/_static/??-eJzTLy/QTc7PK0nNK9HPLdUtyClNz8wr1i9KTcrJTwcy0/WTi5G5ekCujj52Temp+bo5+cmJJZn5eSgc3bScxMwikFb7XFtDE1NLExMLc0OTLACohS2q&cssminify=yes' type='text/css' media='all' />
+<style id='jetpack-global-styles-frontend-style-inline-css'>
+:root { --font-headings: unset; --font-base: unset; --font-headings-default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif; --font-base-default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;}
+</style>
+<link crossorigin='anonymous' rel='stylesheet' id='all-css-18-1' href='https://s0.wp.com/_static/??-eJyNjcsKQjEMBX/ImlsQry7ET5GahrbXNCmmRfx7H7gRN+7OwGEGbs2hSifpUIdrPFIRg4V6C3j5MNgQqBoHk4HlcKUYYry/Z5G0RrMV/C06FUEwxRLYsSa1L/iR9Uz1mc0bSKznwK/DsR787Kd5P/ntbnkAuNBIYA==&cssminify=yes' type='text/css' media='all' />
+<script type="text/javascript" id="jetpack_related-posts-js-extra">
+/* <![CDATA[ */
+var related_posts_js_options = {"post_heading":"h4"};
+/* ]]> */
+</script>
+<script type="text/javascript" id="media-video-jwt-bridge-js-extra">
+/* <![CDATA[ */
+var videopressAjax = {"ajaxUrl":"https:\/\/apholt.wordpress.com\/wp-admin\/admin-ajax.php","bridgeUrl":"\/wp-content\/mu-plugins\/jetpack-plugin\/sun\/jetpack_vendor\/automattic\/jetpack-videopress\/build\/lib\/token-bridge.js","post_id":"13012"};
+/* ]]> */
+</script>
+<script type="text/javascript" id="wpcom-actionbar-placeholder-js-extra">
+/* <![CDATA[ */
+var actionbardata = {"siteID":"78719230","postID":"13012","siteURL":"https:\/\/apholt.com","xhrURL":"https:\/\/apholt.com\/wp-admin\/admin-ajax.php","nonce":"fe184e3781","isLoggedIn":"","statusMessage":"","subsEmailDefault":"instantly","proxyScriptUrl":"https:\/\/s0.wp.com\/wp-content\/js\/wpcom-proxy-request.js?ver=20211021","shortlink":"https:\/\/wp.me\/p5kit0-3nS","i18n":{"followedText":"New posts from this site will now appear in your <a href=\"https:\/\/wordpress.com\/read\">Reader<\/a>","foldBar":"Collapse this bar","unfoldBar":"Expand this bar"}};
+/* ]]> */
+</script>
+<script type="text/javascript" id="jetpack-mu-wpcom-settings-js-before">
+/* <![CDATA[ */
+var JETPACK_MU_WPCOM_SETTINGS = {"assetsUrl":"https:\/\/s1.wp.com\/wp-content\/mu-plugins\/jetpack-mu-wpcom-plugin\/sun\/vendor\/automattic\/jetpack-mu-wpcom\/src\/build\/"};
+/* ]]> */
+</script>
+<script crossorigin='anonymous' type='text/javascript'  src='https://s1.wp.com/_static/??-eJx9j1tOAzEMRTdEahUo9AexlCozMSOniR1sp7S7J0gDKgj4su5D98jw1sIs7MgO2aDKRAVDN9S4DC8Qv8gm2w1c9WoPrfSF2CCjtzgfVw3WGQ7EM0ydSgLFEh1TaGJu39WmEv/cHXwtHprK+fKZjbHSE9pHmF876mU91wN/lkKlRQf0N9r/X6zW4YScRCF2lxrdaf4qnyihNEWz9dtCE7gckcOklBYcwOf6tH28vd/vHrZ3+/wOM9KIfg=='></script>
+<script type="text/javascript" id="rlt-proxy-js-after">
+/* <![CDATA[ */
+	rltInitialize( {"token":null,"iframeOrigins":["https:\/\/widgets.wp.com"]} );
+/* ]]> */
+</script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://apholt.wordpress.com/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress.com" />
+<link rel="canonical" href="https://apholt.com/2023/01/03/the-myth-of-religion-as-the-cause-of-most-wars/" />
+<link rel='shortlink' href='https://wp.me/p5kit0-3nS' />
+<link rel="alternate" type="application/json+oembed" href="https://public-api.wordpress.com/oembed/?format=json&amp;url=https%3A%2F%2Fapholt.com%2F2023%2F01%2F03%2Fthe-myth-of-religion-as-the-cause-of-most-wars%2F&amp;for=wpcom-auto-discovery" /><link rel="alternate" type="application/xml+oembed" href="https://public-api.wordpress.com/oembed/?format=xml&amp;url=https%3A%2F%2Fapholt.com%2F2023%2F01%2F03%2Fthe-myth-of-religion-as-the-cause-of-most-wars%2F&amp;for=wpcom-auto-discovery" />
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="The Myth of Religion as the Cause of Most Wars" />
+<meta property="og:url" content="https://apholt.com/2023/01/03/the-myth-of-religion-as-the-cause-of-most-wars/" />
+<meta property="og:description" content="The following essay, by Andrew Holt, is republished from John D. Hosler&#8217;s edited volume, Seven Myths of Military History (Hackett, 2022). It is provided here with both the permission of Profe…" />
+<meta property="article:published_time" content="2023-01-03T20:37:30+00:00" />
+<meta property="article:modified_time" content="2023-01-05T13:21:23+00:00" />
+<meta property="og:site_name" content="Andrew Holt, Ph.D." />
+<meta property="og:image" content="https://apholt.com/wp-content/uploads/2023/01/hosler-cover.png" />
+<meta property="og:image:width" content="539" />
+<meta property="og:image:height" content="804" />
+<meta property="og:image:alt" content="" />
+<meta property="og:locale" content="en_US" />
+<meta property="article:publisher" content="https://www.facebook.com/WordPresscom" />
+<meta name="twitter:creator" content="@aholt_andrew" />
+<meta name="twitter:site" content="@aholt_andrew" />
+<meta name="twitter:text:title" content="The Myth of Religion as the Cause of Most&nbsp;Wars" />
+<meta name="twitter:image" content="https://apholt.com/wp-content/uploads/2023/01/hosler-cover.png?w=640" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<!-- End Jetpack Open Graph Tags -->
+<link rel="shortcut icon" type="image/x-icon" href="https://s1.wp.com/i/favicon.ico" sizes="16x16 24x24 32x32 48x48" />
+<link rel="icon" type="image/x-icon" href="https://s1.wp.com/i/favicon.ico" sizes="16x16 24x24 32x32 48x48" />
+<link rel="apple-touch-icon" href="https://s2.wp.com/i/webclip.png" />
+<link rel='openid.server' href='https://apholt.com/?openidserver=1' />
+<link rel='openid.delegate' href='https://apholt.com/' />
+<link rel="search" type="application/opensearchdescription+xml" href="https://apholt.com/osd.xml" title="Andrew Holt, Ph.D." />
+<link rel="search" type="application/opensearchdescription+xml" href="https://s1.wp.com/opensearch.xml" title="WordPress.com" />
+<meta name="theme-color" content="#1e73be" />
+		<style type="text/css">
+			.recentcomments a {
+				display: inline !important;
+				padding: 0 !important;
+				margin: 0 !important;
+			}
+
+			table.recentcommentsavatartop img.avatar, table.recentcommentsavatarend img.avatar {
+				border: 0px;
+				margin: 0;
+			}
+
+			table.recentcommentsavatartop a, table.recentcommentsavatarend a {
+				border: 0px !important;
+				background-color: transparent !important;
+			}
+
+			td.recentcommentsavatarend, td.recentcommentsavatartop {
+				padding: 0px 0px 1px 0px;
+				margin: 0px;
+			}
+
+			td.recentcommentstextend {
+				border: none !important;
+				padding: 0px 0px 2px 10px;
+			}
+
+			.rtl td.recentcommentstextend {
+				padding: 0px 10px 2px 0px;
+			}
+
+			td.recentcommentstexttop {
+				border: none;
+				padding: 0px 0px 0px 10px;
+			}
+
+			.rtl td.recentcommentstexttop {
+				padding: 0px 10px 0px 0px;
+			}
+		</style>
+		<meta name="application-name" content="Andrew Holt, Ph.D." /><meta name="msapplication-window" content="width=device-width;height=device-height" /><meta name="msapplication-tooltip" content="History, Religion, and Academia" /><meta name="description" content="The following essay, by Andrew Holt, is republished from John D. Hosler&#039;s edited volume, Seven Myths of Military History (Hackett, 2022). It is provided here with both the permission of Professor Hosler and Hackett Publishing. Thoughtful feedback and comments are welcome and can be emailed directly to the author at aholt@fscj.edu. ---------------------- Chapter 1. War&hellip;" />
+<style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #1e73be; }
+</style>
+	</head>
+
+<body class="post-template-default single single-post postid-13012 single-format-standard custom-background wp-embed-responsive customizer-styles-applied custom-font-enabled single-author jetpack-reblog-enabled">
+<div id="page" class="hfeed site">
+	<header id="masthead" class="site-header">
+				<hgroup>
+			<h1 class="site-title"><a href="https://apholt.com/" title="Andrew Holt, Ph.D." rel="home">Andrew Holt, Ph.D.</a></h1>
+			<h2 class="site-description">History, Religion, and Academia</h2>
+		</hgroup>
+
+		<nav id="site-navigation" class="main-navigation">
+			<button class="menu-toggle">Menu</button>
+			<a class="assistive-text" href="#content" title="Skip to content">Skip to content</a>
+			<div class="menu-main-menu-container"><ul id="menu-main-menu" class="nav-menu"><li id="menu-item-10978" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-10978"><a href="https://apholt.com/">Home</a></li>
+<li id="menu-item-10982" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-10982"><a href="https://apholt.com/about/">About</a>
+<ul class="sub-menu">
+	<li id="menu-item-10979" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10979"><a href="https://apholt.com/publications/">Publications</a></li>
+	<li id="menu-item-10980" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10980"><a href="https://apholt.com/television-and-radio-interviews/">Interviews</a></li>
+</ul>
+</li>
+<li id="menu-item-10983" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10983"><a href="https://apholt.com/profiles/">Profiles</a></li>
+<li id="menu-item-12226" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12226"><a href="https://apholt.com/myths-of-history-a-hackett-series/">Myths of History: A Hackett Series</a></li>
+<li id="menu-item-11800" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11800"><a href="https://apholt.com/crusade-book-lists-project/">Crusade Book Lists Project</a></li>
+<li id="menu-item-10994" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10994"><a href="https://apholt.com/crusades-medieval-history/">Crusades &amp; Medieval History</a></li>
+<li id="menu-item-11281" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11281"><a href="https://apholt.com/guest-essays/">Guest Essays</a></li>
+<li id="menu-item-12652" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12652"><a href="https://apholt.com/medieval-history-links/">Medieval History Links</a></li>
+</ul></div>		</nav><!-- #site-navigation -->
+
+						<a href="https://apholt.com/"><img src="https://apholt.com/wp-content/uploads/2019/10/cropped-bs3.jpg" class="header-image" width="1835" height="505" alt="" /></a>
+			</header><!-- #masthead -->
+
+	<div id="main" class="wrapper">
+	<div id="primary" class="site-content">
+		<div id="content" role="main">
+
+			
+				
+	<article id="post-13012" class="post-13012 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized tag-andrew-holt tag-hackett-publishing tag-historical-myths tag-john-d-hosler tag-religion-and-violence tag-religion-and-warfare tag-religion-as-the-cause-of-most-wars tag-richard-dawkins tag-richard-kimball tag-sam-harris tag-seven-myths-of-military-history">
+				<header class="entry-header">
+			<img width="539" height="804" src="https://apholt.com/wp-content/uploads/2023/01/hosler-cover.png?w=539" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" data-attachment-id="13019" data-permalink="https://apholt.com/2023/01/03/the-myth-of-religion-as-the-cause-of-most-wars/hosler-cover/" data-orig-file="https://apholt.com/wp-content/uploads/2023/01/hosler-cover.png" data-orig-size="539,804" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="Hosler Cover" data-image-description="" data-image-caption="" data-medium-file="https://apholt.com/wp-content/uploads/2023/01/hosler-cover.png?w=201" data-large-file="https://apholt.com/wp-content/uploads/2023/01/hosler-cover.png?w=539" tabindex="0" role="button" />
+						<h1 class="entry-title">The Myth of Religion as the Cause of Most&nbsp;Wars</h1>
+								</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			
+<p></p>
+
+
+
+<p>The following essay, by Andrew Holt, is republished from <a rel="noreferrer noopener" href="https://www.johnhosler.com/about" target="_blank">John D. Hosler</a>&#8216;s edited volume,<a rel="noreferrer noopener" href="https://www.amazon.com/Seven-Myths-Military-History-Hackett/dp/1647920434/ref=tmm_pap_swatch_0?_encoding=UTF8&amp;qid=&amp;sr=" target="_blank"> <em>Seven Myths of Military History</em></a> (Hackett, 2022). It is provided here with both the permission of Professor Hosler and <a rel="noreferrer noopener" href="https://hackettpublishing.com/" target="_blank">Hackett Publishing</a>. Thoughtful feedback and comments are welcome and can be emailed directly to the author at aholt@fscj.edu.</p>
+
+
+
+<p>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-</p>
+
+
+
+<p><strong>Chapter 1. War and the Divine: Is Religion the Cause of Most Wars?</strong></p>
+
+
+
+<p><strong>Andrew Holt</strong></p>
+
+
+
+<p>“It is somewhat trite, but nevertheless sadly true, to say that more wars have been waged, more people killed, and these days more evil perpetrated in the name of religion than by any other institutional force in human history.”</p>
+
+
+
+<p>—Richard Kimball<a id="_ftnref1" href="#_ftn1">[1]</a></p>
+
+
+
+<p>To uproarious laughter, the late comedian and social critic George Carlin once condemned God as the cause of the “bloodiest and most brutal wars” ever fought, which were “all based on religious hatred.” He stated that millions have died simply because “God told” Hindus, Muslims, Jews, and Christians it would be a “good idea” for them to kill each other. Carlin’s comedy routine, entitled “Kill for God!” has received rave reviews by its viewers for being “brilliant” and “spot on,” with one anonymous fan confirming that religion is “by far the single biggest cause of human deaths.”<a id="_ftnref2" href="#_ftn2"><sup>[2]</sup></a></p>
+
+
+
+<p>To be clear, it is not modern military historians who claim religion is the cause of most wars, but rather many prominent intellectuals, scientists, academics, and politicians, often with far greater influence over popular cultural assumptions than professional historians, who have popularized such claims. In a 2006 interview, the neuroscientist and cultural commentator Sam Harris stated, “If I could wave a magic wand and get rid of either rape or religion, I would not hesitate to get rid of religion. I think more people are dying as a result of our religious myths than as a result of any other ideology.”<a id="_ftnref3" href="#_ftn3"><sup>[3]</sup></a> The Oxford University evolutionary biologist Richard Dawkins claimed in 2003 that religion is the “principal label, and the most dangerous one,” by which human divisions occur, contributing to “wars, murders and terrorist attacks.”<a id="_ftnref4" href="#_ftn4"><sup>[4]</sup></a> </p>
+
+
+
+<span id="more-13012"></span>
+
+
+
+<p>Prominent American politicians have commented similarly. Richard Nixon argued in 1983 that the “bloodiest wars in history have been religious wars.”<a id="_ftnref5" href="#_ftn5"><sup>[5]</sup></a> Perhaps unknowingly, Nixon was following his predecessor George Washington, who remarked in a 1792 letter that “religious controversies are always productive of more acrimony and irreconcilable hatreds than those which spring from any other cause.”<a id="_ftnref6" href="#_ftn6"><sup>[6]</sup></a> That Washington held such views in the late eighteenth century is not surprising, given the rationalist spirit of his social class and times. Some of his contemporaries equally expressed their concern over the propensity for violence among traditional religious believers. Thomas Paine is perhaps most notable in this regard. In <em>The Age of Reason </em>he argued that “the most detestable wickedness, the most horrid cruelties, and the greatest miseries, that have afflicted the human race have had their origin in this thing called revelation, or revealed religion. It has been&nbsp;.&nbsp;.&nbsp;. the most destructive to&nbsp;.&nbsp;.&nbsp;. the peace and happiness of man.”<a id="_ftnref7" href="#_ftn7"><sup>[7]</sup></a></p>
+
+
+
+<p>Paine’s views reflect a particular strain of thought that emerged in a slightly earlier period of the European eighteenth century, which many persons then and now have referred to as the “Enlightenment.” While intellectuals of the period tended to emphasize religious toleration, many also wrote harshly about the negative social effects of traditional religion. Such concerns undoubtedly reflected the fact that they were writing in the wake of the so-called age of religious wars, during which Catholics and Protestants engaged in lengthy and destructive conflicts including, most notably, the French Wars of Religion (1562–98), the Thirty Years’ War (1618–48), and the English Civil War (1642–51).<a id="_ftnref8" href="#_ftn8"><sup>[8]</sup></a></p>
+
+
+
+<p>None can challenge the claim that religion has often inspired or motivated violence, but has it truly been, as Harris claims, the “most prolific” source? Are, or were, religious wars, as Nixon wrote, the “bloodiest” sort of wars? Is it true that “more wars have been waged” and “more people killed” because of religion than any other institutional force, as Richard Kimball claims in the quotation that begins this essay?</p>
+
+
+
+<p>Interestingly, these claims—often confidently asserted—that “more” wars have been waged and “more” people killed as a result of religion, can only be substantiated by an accounting of all major wars of which we have historical knowledge and both a means of separating the “religious” wars from other types of wars and counting the bodies. Such a list is destined to be incomplete and open to debate for many reasons, not least of which is the ambiguity surrounding many human conflicts. Was, for example, the English Civil War primarily a struggle over parliamentary rights vis-à-vis royal absolutism, or was it driven by a deep religious divide? Or was it both? Regardless of these pitfalls and uncertainties, such an accounting, no matter its imperfections, that seeks to understand the causes of particular wars and the degree of their lethality is possible. It is only with such an accounting that one can determine if religion is, indeed, the cause of most wars.</p>
+
+
+
+<p>To most historians, this may seem an impossible task, with insurmountable methodological problems. Nevertheless, the critics cited here—neither specialists on warfare in any era nor trained historians—assume an ability to do this. Indeed, there is no other basis for making their claims without these assumptions.</p>
+
+
+
+<p>The critics cited thus far do not provide such an accounting. Kimball and Harris imply that their claims are transparently obvious. For Kimball, religious ideologies and commitments are “indisputably central factors” in the “escalation of violence and evil around the world.”<a id="_ftnref9" href="#_ftn9"><sup>[9]</sup></a> He states that this “evidence is readily available,” after which he cites not data but the headlines of seven newspaper stories about contemporary religious violence.<a id="_ftnref10" href="#_ftn10"><sup>[10]</sup></a></p>
+
+
+
+<p>Yet this is anecdotal evidence. Moreover, alternative causality is dispensed with, as when Harris rejects out of hand the notion that the Hindu-Muslim conflict has political or economic roots.<a id="_ftnref11" href="#_ftn11"><sup>[11]</sup></a> Furthermore, neither author endeavors to sift through history’s wars in order to make even a rough estimate of how many were primarily motivated by religious considerations, much less offering a method for how one distinguishes “religious” wars from all other types of wars. And neither acknowledges a basic proposition that all historians would accept: that most, if not all, wars are driven by multiple factors. At what point does a preponderance of religious factors, however they might be defined, outweigh secular motives or goals allowing for a war to be categorized as a “religious” war? The critics cited here appear to consider such questions and modes of inquiry irrelevant.</p>
+
+
+
+<p>Of course, one could reasonably argue that firmly distinguishing between religious and nonreligious wars is so impossible that any effort to count and categorize all known wars in this manner is doomed to failure. Indeed, as I prepared this essay, I spoke with multiple historians who all inquired how one could possibly accomplish such a task, with some intonating it is not possible due to the complexity of warfare, which is almost always based on multiple causes and motivations. If this is true—that it is essentially impossible to distinguish “religious” wars from other types of war, much less provide accurate casualty figures for all wars ancient to modern—then the debate is over: there can be no basis to the argument that the former is the most frequent cause of war and/or the bloodiest type of human conflict. In sum, Harris, Kimball, and others would have zero basis for their claims. Likewise, those who seek to refute their charges would be unable to offer anything even approaching quantifiable evidence to support their objections. Game over.</p>
+
+
+
+<p>But let us not fall prey to defeatism. Complexity and ambiguity pervade historical research and are elements in every conclusion reached by every historian. With that in mind, let us dare to hazard a definition of religious warfare.</p>
+
+
+
+<p><strong>Defining “Religious Warfare”</strong></p>
+
+
+
+<p>In attempting to define religious warfare, it first seems worthwhile to consider the origin of the term “religion.” In its earliest Ciceronian sense, the Latin word <em>religio </em>meant to have respect or regard for the gods, as demonstrated by the performance of obligatory rites in veneration of them.<a id="_ftnref12" href="#_ftn12"><sup>[12]</sup></a> Although a critic of Roman religion, Augustine of Hippo (d. 430) adapted the term in such a way that it could be uniquely applied to a Christian understanding of and relationship to the sacred. For Augustine, <em>religio</em> meant worship, the actions by which one renders praise to God, but he also sought to separate what he understood to be true worship from false worship.<a id="_ftnref13" href="#_ftn13"><sup>[13]</sup></a></p>
+
+
+
+<p>Yet while many in the West think of religion as worship centered around a god or gods, accompanied by adherence to theological doctrines and rituals, such a definition fails to embrace the totality of the worldwide religious experience, both past and present. Definitions evolve and change, and modern scholars of religion have come to accept a broader definition of religion, one that phenomenologists who specialize in comparative religion now generally embrace, which sees “religion” as any spiritual or pragmatic connection with a transcendental Other. This Other could include gods (or God), sacred forces, a supreme cosmic spirit, or even a universal law, like Buddhist Dharma.<a id="_ftnref14" href="#_ftn14">[14]</a> Consequently, if “religion” represents belief in the Divine and reverence for the Other—and these beliefs influence the thoughts, morality, and deeds of believers—then it follows that “religious wars” are those conflicts in which religious belief or devotion plays a key role in the motivation of most of their originators and/or participants.</p>
+
+
+
+<p>The oft-cited Prussian military theorist Carl von Clausewitz famously argued that all wars are political.<a href="#_ftn15" id="_ftnref15"><sup>[15]</sup></a> Yet when religious motivations influence political goals, it becomes trickier to determine to what degree religion is the inspiration for a conflict. Must both sides in a conflict have religious motivations for it to be considered a “religious” war, or is one side sufficient? At what point do economic concerns, for example, outweigh religious concerns so that one would no longer consider a war “religious”? What if a war begins as religious but ends as an overtly political conflict, as was the case with the Thirty Years’ War? Those who make the claim that religion is the most prominent cause of violence or warfare never seem to bother with such details, yet they, nevertheless, obviously define “religious wars” broadly enough to support them.</p>
+
+
+
+<p>To be clear, few would object to the proposition that religion or religious motivation often inspire violence. Many examples of religiously inspired warfare are to be found in the histories of the ancient Near East, Greco-Roman antiquity, Europe, the Far East, India, the Americas, and sub-Saharan Africa by members of various religions. Spanning the ancient to modern worlds, Mesopotamians, Chinese, Indians, Europeans, Arabs, Persians, Turks, Aztecs, and many others have embraced religious beliefs that at times led to, justified, or encouraged violence or warfare, sometimes resulting in a massive loss of human life. Yet the aforementioned critics of religious violence do not claim that religion <em>sometimes </em>inspires violence or warfare. If this were the case, then their claims would be noncontroversial. Instead, they claim that, more than any other factor, religious faith has led to <em>more</em> war throughout history and across all cultures.</p>
+
+
+
+<p>If one is willing to hazard a definition of religious warfare, as I have just done, that allows for the distinct categorization of religious and nonreligious wars, then some data can be developed that might help us to evaluate these charges in a manner that is more systematic and logical than simply saying, “Your criticism of religion as the cause of most wars and bloodshed is without foundation.” As demonstrated in the remainder of this chapter, some have been willing to provide such a twofold analysis, namely to categorize wars as “religious” or otherwise and to provide death estimates for various wars. Such data are not supportive of the claims of Kimball et al. To the contrary, the only data currently available on these topics suggest that the popular claim that religion is the cause of “more” wars than anything else&nbsp;.&nbsp;.&nbsp;. is a myth.</p>
+
+
+
+<p><strong>Religious War by the Numbers</strong></p>
+
+
+
+<p>Charles Phillips and Alan Axelrod’s three-volume <em>Encyclopedia of Wars</em> includes an analysis of 1,763 wars covering the worldwide span of human history. It has become an influential reference in the popular sphere, often cited by persons seeking to define specific wars as religious or otherwise.<a id="_ftnref16" href="#_ftn16"><sup>[16]</sup></a> In their lengthy index entry on “religious wars, Phillips and Axelrod do not explain their classification methodology. They only provide clues in their limited commentary on the concept of religious wars in their introduction, where they seem to suggest that religion was often used as a sort of cover for premodern wars that resulted from more mundane causes, including territorial, ethnic, and economic concerns.<a id="_ftnref17" href="#_ftn17">[17]</a> Yet each war they list in the index under the category “religious wars” contains clear references to its religious nature or features, providing an apparent justification for its classification as such.<a id="_ftnref18" href="#_ftn18">[18]</a></p>
+
+
+
+<p>What, then, did Phillips and Axelrod find? Interestingly, of 1,763 wars they list only 121 entries fall under the heading “religious wars.” In one case, two wars are considered in a single entry (“Sixth and Seventh Wars of Religion”), bringing their total to 122.<a id="_ftnref19" href="#_ftn19"><sup>[19]</sup></a> Thus, only 6.9 percent of the wars they considered are classified as religious wars.<a id="_ftnref20" href="#_ftn20"><sup>[20]</sup></a> One presumes they see the remaining 93.1 percent as primarily wars that took shape due to other factors, such as geopolitics, economic rivalry, and ethnic divisions. One may certainly quibble over the omission of some wars from Phillips and Axelrod’s list, but it would take a lot of quibbling to get to the point where religious wars represent the majority (882 out of 1,763) of the wars they count and consider. They also list other categories of warfare that have higher totals than religion. Under the heading of “colonial wars,” they list 161 wars.<a id="_ftnref21" href="#_ftn21"><sup>[21]</sup></a> After cross-referencing both lists, one finds that Phillips and Axelrod only list two wars in both the “colonial” and “religious” categories, suggesting that they have made every effort to categorize these wars based on their primary causes, as they interpret them, rather than secondary ones.<a id="_ftnref22" href="#_ftn22">[22]</a> Consequently, based on the total numbers presented by Phillips and Axelrod in each category, one could argue that imperialist ideologies, regardless of the latent religiosity that occasionally colors such endeavors, have historically and collectively been the primary inspiration of more wars than explicitly religious ideologies.</p>
+
+
+
+<p>Again, historians could certainly look at Phillips and Axelrod’s list of religious wars and criticize the omission of many and the inclusion of some. Indeed, in my rough accounting of the 1,763 wars they list in their encyclopedia, I would likely come up with a figure of religious wars that, perhaps, doubled theirs. Other historians may arrive at still different figures, both lesser and greater, based on how they choose to categorize “religious wars.” Yet it seems highly unlikely that any historian would look at the 1,763 wars considered in the <em>Encyclopedia of Wars</em> and determine that a majority of them were primarily religious. If someone were to attempt to provide such a systematic accounting, their efforts would, indeed, be interesting to consider here, but nobody besides Phillips and Axelrod seems to have been bothered.</p>
+
+
+
+<p>In a similar way, Matthew White, a self-described “atrocitologist,” is sometimes cited by those comparing religious wars to nonreligious wars. His 2012 book purports to list the one hundred greatest atrocities in human history, based on total deaths.<a href="#_ftn23" id="_ftnref23"><sup>[23]</sup></a> Although a popular-history writer, White’s work was favorably reviewed in the <em>New York Times</em> and has won academic acclaim in some quarters, with Harvard psychologist Steven Pinker dubbing it, in a complimentary foreword, “the most comprehensive, disinterested and statistically nuanced estimates available.”<a href="#_ftn24" id="_ftnref24"><sup>[24]</sup></a> Historians, as well, have praised White’s efforts. Harvard University professor of history Charles S. Maier, in the same <em>New York Times</em> review, praised White for trying to arrive at “the best figures” and not being, like most historians when it comes to this type of research, “afraid to get his hands dirty.”<a href="#_ftn25" id="_ftnref25">[25]</a></p>
+
+
+
+<p>White is clear and upfront about both his methodology and the controversial nature of his statistics. He notes, for example, on the first page of his introduction, “Let’s get something out of the way right now. Everything you are about to read is disputed.&nbsp;.&nbsp;.&nbsp;. There is no atrocity in history that every person in the world agrees on.”<a href="#_ftn26" id="_ftnref26">[26]</a> His methodology, as described in the <em>Times</em> review, is simple and transparent. He gathers all of the death estimates he can find for an event, with all data on his website available for public review, throws out the highest and lowest numbers, and then calculates the median, “arriving at what he acknowledges is often just an informed guess.”<a href="#_ftn27" id="_ftnref27">[27]</a> Yet, White’s “informed guesses” appear to be the best ones currently available.</p>
+
+
+
+<p>Like Phillips and Axelrod, White also categorizes and provides a list under the heading “Religious Conflict.”<a href="#_ftn28" id="_ftnref28"><sup>[28]</sup></a> He notes that it is “impossible” to find a “common cause” in the various atrocities he considers, and that they can often fall under multiple headings. For example, White lists “Cromwell’s Invasion of Ireland” under the categories of both “Religious Conflict” and “Ethnic Cleansing.”<a href="#_ftn29" id="_ftnref29"><sup>[29]</sup></a> Yet even allowing for this, White lists only eleven atrocities that fall under the heading of “Religious Conflict.” He provides insights into how he arrived at his list in a section of his work subtitled “Religious Killing,” while pointing out that “no war is 100 percent religious (or 100 percent anything) in motivation, but we can’t duck the fact that some conflicts involve more religion than others.”<a href="#_ftn30" id="_ftnref30">[30]</a></p>
+
+
+
+<p>In an attempt to solve a problem we have already noted here, White then asks how we can decide if “religion is the real cause of a conflict and not just a convenient cover story?”<a href="#_ftn31" id="_ftnref31">[31]</a> In response, he lists three primary principles that cumulatively address this question. The first is when “the only difference between the two sides is religion,” for which he cites examples of people who look alike, speak the same languages, and live in the same communities yet engage in conflict over what can only be ascribed to religious differences. This would include Catholics and Protestants in Northern Ireland. The second is an ability to describe a conflict without reference to religion or religious trappings. For this, he gives the example of the US Civil War, which he notes certainly had religious elements, but can also be described in a detailed history without ever referencing those elements. White argues this would be impossible, for example, in writing a history of the crusades. Finally, the third is when the parties themselves declare religious motives. Here White notes that “we should at least consider the possibility that they are telling the truth,” especially if there are not other significant potential reasons.<a href="#_ftn32" id="_ftnref32">[32]</a></p>
+
+
+
+<p>With these rules in mind, White lists eleven atrocities from the one hundred that he classifies as “Religious Conflicts”: Taiping Rebellion, Thirty Years’ War, Mahdi’s Revolt, Crusades,<a href="#_ftn33" id="_ftnref33">[33]</a> French Wars of Religion War in the Sudan Albigensian Crusade, Panthay Rebellion, Hui Rebellion, Partition of India, and Cromwell’s Invasion of Ireland. <a href="#_ftn34" id="_ftnref34">[34]</a> Thus, according to White’s study, only 11 percent of the one hundred worst atrocities in history can be attributed, in some major part, to religion, with 89 percent primarily attributable to some other cause. Yet there are other atrocities in White’s book that seem to deserve to be grouped under a more general heading of religiously inspired atrocities, even if they do not meet his definition of “conflict.” These include the Roman gladiatorial games and Aztec human sacrifice, both of which White categorized separately under “Human Sacrifice.”<a href="#_ftn35" id="_ftnref35"><sup>[35]</sup></a> If we add these two atrocities to the eleven listed under religious conflict, this would bring the total of the one hundred greatest atrocities, based on White’s death estimates, attributed primarily to religious motivations (a broader category than just “conflicts”) up to thirteen, or only 13 percent.</p>
+
+
+
+<p>A final breakdown, depending on how one evaluates White’s work, is therefore as follows: 11/100 (or 11 percent) of the worst atrocities in history can be ascribed to “Religious Conflict,” and <a>13/100 (or 13 percent) of the worst atrocities in history can be ascribed to “Religious Conflict” or “Human Sacrifice.” </a><a></a><a></a>Although these percentages are higher than Phillips and Axelrod’s more comprehensive findings (6.9 percent), none supports the claim that religion has been and remains the cause of most wars. Indeed, “Hegemonial War,” a category that White defines as similar countries fighting “over who’s number 1,” and “Failed State” conflicts, involving the collapse of a central government and the division of lands among warlords that results from the civil war that follows, individually account for more of the “worst atrocities” on his list than “Religious Conflict.”<a href="#_ftn36" id="_ftnref36"><sup>[36]</sup></a></p>
+
+
+
+<p>Again, one may quibble about White’s categories, arguing that he omitted some significant wars and instances of mass violence or incorrectly included others, but it seems highly unlikely that any historian reviewing White’s list of the one hundred greatest atrocities in history would see a majority of them as primarily religious. An alternative accounting would be welcome for consideration here, but nobody else has offered one, certainly none of the prominent voices proclaiming religion as the cause of the “bloodiest” wars.</p>
+
+
+
+<p><a></a>Steven Pinker has provided his own rankings, based largely on White’s research, of the twenty-one worst wars or atrocities based on death tolls in his widely reviewed 2011 book, <em>Better Angels</em>.<a href="#_ftn37" id="_ftnref37"><sup>[37]</sup></a> His list includes the following: Second World War, reign of Mao Zedong, Mongol conquests, An Lushan Revolt, fall of the Ming dynasty, Taiping Rebellion, annihilation of the American Indians, rule of Joseph Stalin, Mideast slave trade, Atlantic slave trade, rule of Tamerlane, British rule of India, World War I, Russian Civil War, fall of Rome, Congo Free State, Thirty Years’ War, Russia’s Time of Troubles, Napoleonic Wars, Chinese Civil War, and the French Wars of Religion. Pinker then provides a unique perspective by factoring in population differences at the times such events occurred. While Pinker lists 55,000,000 deaths resulting from World War II in the mid-twentieth century and only 36,000,000 for the An Lushan Revolt in mid-eighth-century China, he then uses population estimates to adjust the rankings per capita between the different periods.<a href="#_ftn38" id="_ftnref38">[38]</a> Using this “mid-twentieth-century equivalent,” he finds that the An Lushan Revolt would move from fourth place to first place on his list with a mid-twentieth-century equivalent of 429,000,000 deaths, far surpassing World War II.<a href="#_ftn39" id="_ftnref39"><sup>[39]</sup></a></p>
+
+
+
+<p>While Pinker singles out religious conflicts/events in neither his ranking based on total deaths nor his population-adjusted rankings, it is interesting to note that religious conflicts appear to play a minor role in both. Only three of the conflicts would clearly seem to qualify as primarily religious conflicts or religiously inspired events: the Taiping Rebellion, the Thirty-Years’ War, and the French Wars of Religion, resulting in only 14.2 percent of the twenty-one worst atrocities in history as referenced by Pinker. It is worth pointing out that at least four of the twenty-one atrocities listed by Pinker could be attributed not to religion but rather <em>Marxist</em> efforts to establish or develop communist states, including the reign of Mao Zedong, the reign of Stalin, the Russian Civil War, and the Chinese Civil War, equaling 19 percent of the total. Consequently, one could argue that Marxism is a greater cause of violence and atrocities in Pinker’s study than religion!</p>
+
+
+
+<p>The numbers, therefore, as provided by our three major studies to enumerate history’s most violent wars and conflicts, break down as follows: 6.9 percent of Phillips and Axelrod’s 1,763 historical wars were religious conflicts; 13 percent of White’s 100 worst atrocities in history can be ascribed to “Religious Conflict” or “Human Sacrifice”; and 14.2 percent of Pinker’s 21 worst atrocities in history were religiously inspired. Thus, our only existing quantitative analyses suggest that religious motivations inspire only a relatively small percentage of all conflicts. Moreover, there seem to be other causes or motivations that have inspired more wars or atrocities than religion.</p>
+
+
+
+<p><strong>Distinguishing Religious Wars from Secular Wars</strong></p>
+
+
+
+<p>One can disagree with such an approach in considering to what degree religion was the cause of a particular conflict. Such disagreements among historians are not surprising. War is messy, after all, and conflicts usually emerge from a complex mix of factors that might incorporate economic, political, ethnic, and religious concerns on one or both sides.</p>
+
+
+
+<p>William T. Cavanaugh, a theologian and professor of Catholic studies at DePaul University, has considered the issue of defining and distinguishing religious warfare from other types of conflict in a highly influential 2009 book. Cavanaugh argues that various scholars have made “indefensible assumptions about what does and does not count as religion.”<a id="_ftnref40" href="#_ftn40"><sup>[40]</sup></a> He considers the claims of nine scholars who have suggested that “religion is particularly prone to violence” based on arguments that religion is, among other things, absolutist, divisive, and/or irrational.<a id="_ftnref41" href="#_ftn41"><sup>[41]</sup></a> He rejects their respective arguments, noting that “they all suffer from the same defect: the inability to find a convincing way to separate religious violence from secular violence.”<a id="_ftnref42" href="#_ftn42"><sup>[42]</sup></a> Indeed, as Cavanaugh argues, secular violence is often motivated by similar degrees of absolutism, division, and irrationality, but in nonreligious forms.</p>
+
+
+
+<p>Among the scholars that Cavanaugh considers is Charles Kimball. He argues that Kimball’s book (which, incidentally, was chosen by <em>Publishers Weekly</em> as the top book on religion in 2002) “suffers” from its inability to “distinguish the religious from the secular.”<a href="#_ftn43" id="_ftnref43"><sup>[43]</sup></a> Kimball postulates that there are various “warning signs” that religion could turn evil. Among such warning signs, for example, are calls for blind obedience and the belief that the end justifies the means. Cavanaugh argues in rebuttal that all of the warning signs offered by Kimball could equally apply to nationalism or nationalist ideologies. Concerning Kimball’s claim about blind obedience as a marker of religious conflict, for example, Cavanaugh points out that “obedience is institutionalized” in the US military, as there is no allowance for “selective conscientious objection.”<a href="#_ftn44" id="_ftnref44"><sup>[44]</sup></a> Yet Cavanaugh appears most dismissive of the claim that the end justifies the means is uniquely associated with religious conflict, noting that the history of modern conflict is “full of evidence” that demonstrates how secular states have embraced such a view. Among such evidence, he references “the vaporization of innocent civilians in Hiroshima” and “the practice of torture by over a third of the world’s nation states, including many democracies.”<a href="#_ftn45" id="_ftnref45"><sup>[45]</sup></a></p>
+
+
+
+<p>To be clear, Cavanaugh is not rejecting the notion that religion can sometimes inspire violence. Instead, he is arguing that Kimball’s efforts to clearly distinguish religious violence as somehow worse than secular violence, and more prone to fanaticism, are unconvincing.<a></a></p>
+
+
+
+<p>Similarly, Cavanaugh also challenges the claims of sociologist Mark Juergensmeyer, who argues that “religion seems to be connected with violence virtually everywhere,” perpetually and across all religious traditions.<a href="#_ftn46" id="_ftnref46"><sup>[46]</sup></a> Juergensmeyer, like Kimball, makes sharp distinctions between religious and secular violence, highlighting what he claims are significant differences. These include, for example, the notion that religious violence is “accompanied by strong claims of moral justification and enduring absolutism” as a result of the intense religious conviction of those carrying it out.<a href="#_ftn47" id="_ftnref47"><sup>[47]</sup></a> In response, Cavanaugh points out how secular warfare is often “couched in the strongest rhetoric of moral justification and historical duty,” citing, for example, Operation Infinite Justice, the US military’s initial name for the post-9/11 war in Afghanistan.<a href="#_ftn48" id="_ftnref48"><sup>[48]</sup></a> In another example, Juergensmeyer argues that secular conflicts are briefer, concluding within the lifetimes of the combatants, whereas religious conflicts can last for hundreds of years.<a href="#_ftn49" id="_ftnref49"><sup>[49]</sup></a> Cavanaugh objects by noting that, “Juergensmeyer himself says that US leaders have given every indication that the ‘war against terror’ will stretch indefinitely into the future” and that this war “seems so absolute and unyielding on both sides.”<a href="#_ftn50" id="_ftnref50"><sup>[50]</sup></a> To this one might also cite the examples of the so-called Hundred Years’ War, lasting from 1337 to 1453, as well as the Second Hundred Years’ War, lasting from 1689 to 1815, both of which have traditionally been interpreted, and rightly so, as secular conflicts rather than religious ones.</p>
+
+
+
+<p>Cavanaugh does not confine himself to refuting only Kimball’s and Juergensmeyer’s arguments. He critiques the positions of several other scholars who have made similar claims about religion, emphasizing their presumed inability to define religious wars or violence in a way that cannot also be applied to secular institutions or ideologies. He further argues that modern distinctions between religious violence and other types of violence “are part of a broader Enlightenment narrative that has invented a dichotomy between the religious and the secular. . .” that frames religious violence as “irrational and dangerous” in comparison to various forms of secular violence.<a href="#_ftn51" id="_ftnref51"><sup>[51]</sup></a> He then rejects the notion, convincingly, I think, that religious ideologies are inherently “more inclined toward violence” than secular ideologies or institutions, arguing that distinctions between the two have not been properly established by the scholars who make such claims.<a href="#_ftn52" id="_ftnref52"><sup>[52]</sup></a></p>
+
+
+
+<p><strong>Secular Ideologies as a Type of Religion?</strong></p>
+
+
+
+<p>Another problem is that people often define religion and its essential qualities quite differently. Some scholars even debate whether or not nationalism, Marxism, liberalism, or intersectionality are essentially religious in nature as a result of varying demands for philosophical and political “orthodoxy” from adherents to the worldviews promoted by these ideologies. Yet the definition of religion provided earlier in this essay, based on the earliest meanings of the term, centered on belief in, respect for, and devotion to a transcendental Other, obviously excludes secular ideologies from qualifying as “religions.” Moreover, modern adherents of the major faiths, which include Islam, Christianity, Hinduism, among others, who embrace the Divine as a mover of historical events and the afterlife, in some form, as a reality, would see such secular ideologies, devoid of any emphasis on the sacred or the Divine, as something very different from how they define religion.</p>
+
+
+
+<p>Similarly, Marxist governments, as well, have generally embraced atheism and typically rejected any associations of their beliefs with religion. Karl Marx himself disparaged “religion” as the “opium of the people,” serving only as a palliative that those in power offered to mask the suffering of the proletariat and, thereby, harmfully preventing the oppressed from perceiving the oppression that was the cause of their pain.<a id="_ftnref53" href="#_ftn53"><sup>[53]</sup></a> Marx did not see his conclusions, which he based on his study of history, economics, and government, as a faith or “religion.” To his mind, his insight was scientific truth, not empty belief, and he understood it to be a rational and true alternative to the irrational illusion of religion.</p>
+
+
+
+<p>Consequently, while some may classify certain secular ideologies as essentially religious, when claiming that religion is the cause of more wars than anything else critics like Harris or Dawkins certainly do not. They are not, after all, referring to secular atheists or agnostics (like themselves), progressives, or Marxists, as the cause of most wars or violence, but rather those who are inspired to acts of war because of their belief in the Divine.</p>
+
+
+
+<p><strong>Secular Ideologies and Violence</strong></p>
+
+
+
+<p>As noted at the beginning of this essay, Kimball argues that “more people” have been killed in the name of religion “than by any other institutional force in human history.”<a id="_ftnref54" href="#_ftn54"><sup>[54]</sup></a> Yet other ideologies appear to have proven far deadlier (and in a shorter amount of time) than religiously inspired conflict. Consider the comments of Sam Harris, who devotes a portion of his introductory chapter in <em>The End of Faith</em> to the collective horrors and atrocities that have resulted from historic Hindu-Muslim animosity and highlights political efforts to accommodate Hindu-Muslim religious divisions through the establishment of the modern nations of Pakistan and India. Harris then asks, “When will we realize that the concessions we have made to faith in our political discourse have prevented us from even speaking about, much less uprooting, the most prolific source of violence in our history?”<a id="_ftnref55" href="#_ftn55">[55]</a></p>
+
+
+
+<p>Concerning Harris’s suggestion that “concessions” in our “political discourse” to religious faith have been the main obstacle to reducing violence from its “most prolific” source (religious faith), it is worth noting that there has, indeed, been a political discourse that not only refused to make concessions to religious faith, particularly Christianity, but also outright attacked it—communism.<a id="_ftnref56" href="#_ftn56"><sup>[56]</sup></a> Indeed, the communist government of the Soviet Union initially attacked Christianity as a source of all evils, destroying churches and persecuting clergy during the 1920s, as it sought to <em>uproot</em>, to borrow Harris’s term, Christianity from Soviet society. Yet this did not stop violence in the Soviet Union or hinder the extensive Soviet promotion of revolutionary conflicts around the world. To the contrary, the twentieth century is grimly notable for the deaths of, so it has been estimated, nearly one hundred million people by communist governments.<a id="_ftnref57" href="#_ftn57"><sup>[57]</sup></a> Some estimates run even higher. R. J. Rummel, for example, studied governments responsible for mass killings of their own citizens, a phenomenon he called “democide.”<a id="_ftnref58" href="#_ftn58"><sup>[58]</sup></a> He attributed far higher numbers of deaths to the reigns of Mao or Stalin than did Pinker or White: seventy-three million to Mao (vs. forty), and thirty-eight million to Stalin (vs. twenty).<a id="_ftnref59" href="#_ftn59"><sup>[59]</sup></a> Similarly, in White’s statistical breakdown, by cause, of the deaths attributed to the one hundred greatest historic atrocities, multiple categories rank higher than religion. Of White’s estimated 455 million collective victims of these atrocities, he calculates that about 47 million were due to religion, or only around 10 percent of the total.<a id="_ftnref60" href="#_ftn60">[60]</a> In contrast, White estimates that communist ideology is responsible for 67 million deaths, or nearly 15 percent of the total.<a id="_ftnref61" href="#_ftn61">[61]</a></p>
+
+
+
+<p><strong>Conclusion</strong></p>
+
+
+
+<p>As I have tried to make clear throughout this essay, none of what I have written here is meant to imply that religions are always, or even typically, peaceful, or that members of various religious faiths cannot exhibit the same degree of violence as those otherwise motivated. Religious peoples are often willing to engage in warfare. To the contrary, my argument is that claims that religious wars are <em>more violent</em> and <em>greater in number</em> than other types have no empirical evidence to support them. Such arguments are wholly anecdotal, which almost certainly explains why professional historians have not embraced them. Available quantitative analyses of history’s wars in this regard, as flawed as they are, point in a different direction: that religious conflicts are but a relatively modest percentage of the total and that other causes or ideological motivations have inspired as much or more conflict than religion. Thus, until new data are collected that demonstrate otherwise, the claim that religion is the greatest cause of war is an unsubstantiated myth.</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity" />
+
+
+
+<p>[1] Richard Kimball, <em>When Religion Becomes Evil: Five Warning</em> <em>Signs</em> (New York: Harper, 2002), 1.</p>
+
+
+
+<p><a href="#_ftnref2" id="_ftn2"><sup>[2]</sup></a> George Carlin, “Kill for God,” YouTube, accessed January 16, 2019, <a href="https://www.youtube.com/watch?v=WEi3Gaptaas" rel="nofollow">https://www.youtube.com/watch?v=WEi3Gaptaas</a>.</p>
+
+
+
+<p><a href="#_ftnref3" id="_ftn3"><sup>[3]</sup></a> Bethany Saltman, “The Temple of Reason: Sam Harris on How Religion Puts the World at Risk,” <em>The Sun</em>, September 2006.</p>
+
+
+
+<p><a></a><a href="#_ftnref4" id="_ftn4"><sup>[4]</sup></a> Richard Dawkins, <em>A Devil’s Chaplain: Reflections on Hopes, Lies, Science, and Love</em> (Boston: Houghton Mifflin, 2003), 158.</p>
+
+
+
+<p><a href="#_ftnref5" id="_ftn5"><sup>[5]</sup></a> Richard M. Nixon, <em>Real Peace: A Strategy for the West</em> (Boston: Little, Brown, 1983), 14.</p>
+
+
+
+<p><a href="#_ftnref6" id="_ftn6"><sup>[6]</sup></a> George Washington to Edward Newenham, June 22, 1792,” National Archives Founders Online, accessed January 16, 2019, <a href="https://founders.archives.gov/documents/Washington/05-10-02-0324" rel="nofollow">https://founders.archives.gov/documents/Washington/05-10-02-0324</a>.</p>
+
+
+
+<p><a href="#_ftnref7" id="_ftn7"><sup>[7]</sup></a> Thomas Paine, <em>The Age of Reason, Part the Second: Being an Investigation of True and Fabulous Theology </em>(London: R. Carlisle, 1818), 82.</p>
+
+
+
+<p><a href="#_ftnref8" id="_ftn8"><sup>[8]</sup></a> See Richard S. Dunn, <em>The Age of Religious Wars: 1559–1689</em> (London: Weidenfeld and Nicolson, 1970), ix; and Philippe Buc, <em>Holy War, Martyrdom, and Terror: Christianity, Violence, and the West</em> (Philadelphia: University of Pennsylvania Press, 2015), 29–36.</p>
+
+
+
+<p><a href="#_ftnref9" id="_ftn9"><sup>[9]</sup></a> Kimball, <em>When Religion Becomes Evil</em>, 4.</p>
+
+
+
+<p><a href="#_ftnref10" id="_ftn10"><sup>[10]</sup></a> Kimball, <em>When Religion Becomes Evil</em>, 4.</p>
+
+
+
+<p><a href="#_ftnref11" id="_ftn11"><sup>[11]</sup></a> Sam Harris, <em>The End of Faith: Religion, Terror, and the Future of Reason</em> (New York: W. W. Norton, 2005), 27.</p>
+
+
+
+<p><a href="#_ftnref12" id="_ftn12"><sup>[12]</sup></a> Cicero, <em>De Natura Deorum Academia</em>, trans. H. Rackham (Cambridge, MA: Harvard University Press, 1979), XLII.112–13. On <em>religio</em>, see Clifford Ando, <em>The Matter of the Gods: Religion and the Roman Empire</em> (Berkeley: University of California Press, 2008), 1–6; William T. Cavanaugh, <em>The Myth of Religious Violence: Secular Ideology and the Roots of Modern Conflict</em> (Oxford: Oxford University Press, 2009), 60–69.</p>
+
+
+
+<p><a href="#_ftnref13" id="_ftn13"><sup>[13]</sup></a> Cavanaugh, <em>Myth of Religious Violence</em>,63; Ando, <em>Matter of the Gods</em>,4–5.</p>
+
+
+
+<p><a href="#_ftnref14" id="_ftn14">[14]</a> Alfred J. Andrea and Andrew Holt, <em>Sanctified Violence: Holy War in World History</em> (Indianapolis: Hackett, 2021), 1.</p>
+
+
+
+<p><a href="#_ftnref15" id="_ftn15"><sup>[15]</sup></a> Carl von Clausewitz, <em>On War</em>, ed. and trans. M. Howard and P. Paret (Princeton, NJ: Princeton University Press, 1989), I.1.24–27: “War is merely the continuation of policy by other means”; “a true political instrument, a continuation of political intercourse, carried on with other means”; and, consequently, “all wars can be considered acts of policy.”</p>
+
+
+
+<p><a href="#_ftnref16" id="_ftn16"><sup>[16]</sup></a> <em>Encyclopedia of Wars</em>,ed. C. Phillips and A. Axelrod, 3 vols.(New York: Facts on File, 2005), III:1484–85. Commentators citing the <em>Encyclopedia of Wars</em> in this manner include the <em>Huffington Post</em>, Christian apologetics groups, such as the <em>Christian Apologetics and Research Ministry </em>(CARM), and the libertarian political/social commentator Theodore Beale, more commonly known as Vox Day. See Vox Day, <em>The Irrational Atheist: Dissecting the Unholy Trinity of Dawkins, Harris, and Hitchens </em>(Dallas: Benbella, 2008), 103–6; Robin Schumacher, “The Myth That Religion Is the 1# Cause of War,” CARM: Christian Apologetics and Research Ministry, accessed March 13, 2019, <a href="https://carm.org/religion-cause-war" rel="nofollow">https://carm.org/religion-cause-war</a>; and Alan Lurie, “Is Religion the Cause of Most Wars?” <em>Huffington Post</em>, April 10, 2012.</p>
+
+
+
+<p><a href="#_ftnref17" id="_ftn17">[17]</a> <em>Encyclopedia of Wars</em>,I:xxii–xxiii.</p>
+
+
+
+<p><a href="#_ftnref18" id="_ftn18">[18]</a> In their entry titled “Charlemagne’s War against the Saxons,” e.g., Phillips and Axelrod refer to the effort to convert the Saxons to Christianity as one of Charlemagne’s “major” objectives and describe his success. See <em>Encyclopedia of Wars</em>, I:307–8.</p>
+
+
+
+<p><a href="#_ftnref19" id="_ftn19"><sup>[19]</sup></a> The common figure ascribed by various sources to the <em>Encyclopedia of Wars</em> is slightly different, usually listing 123 religious wars. See, e.g., Bruce Sheiman, <em>An Atheist Defends Religion: Why Humanity Is Better Off with Religion Than without It </em>(New York: Alpha, 2009), 117.</p>
+
+
+
+<p><a></a><a href="#_ftnref20" id="_ftn20"><sup>[20]</sup></a> Phillips and Axelrod’s list, reordered chronologically here, includes the following: First, Second, Third, and Fourth Sacred Wars (spanning 595 to 336 BCE); Roman-Persian Wars (421–22 and 441); Visigothic-Frankish War; Mecca-Medina War; Byzantine-Muslim Wars (633–42, 645–56, 668–79, 698–718, 739, 741–52, 778–83, 797–98, 803–9, 830–41, 851–63, 871–85, 960–76, and 995–99); Arab conquest of Carthage; revolt in Ravenna; First and Second Iconoclastic Wars, Charlemagne’s invasion of Northern Spain; revolt of Muqanna; Charlemagne’s War against the Saxons; Khurramites’ revolt; Paulician War; Spanish Christian-Muslim Wars (912–28, 977–97, 1001–31, 1172–1212, 1230–48, and 1481–92); German Civil War (1077–1106); Castilian conquest of Toledo; Almohad conquest of Muslim Spain; Spanish conquests in North Africa (1090–91); First, Second, Third, Fourth, Fifth, Sixth, Seventh, Eighth, and Ninth Crusades (spanning 1095–1272); Crusader-Turkish Wars (spanning 1100–1146 and 1272–91); Aragonese-Castilian War; Wars of the Lombard League; Saladin’s Holy War; Aragonese-French War (1209–13); Albigensian Crusade; Danish-Estonian War; Luccan-Florentine War; Crusade of Nicopolis; Portuguese-Moroccan Wars (1458–71 and 1578); War of the Monks; Bohemian Civil War (1465–71); Bohemian-Hungarian War (1468–78); Siege of Granada; Persian Civil War (1500–1503); Vijayanagar Wars; Anglo-Scottish War; Turko-Persian Wars (1514–17 and 1743–47); Counts’ War; Schmalkaldic War; Scottish uprising against Mary of Guise; First, Second, Third, Fourth, Fifth, Sixth, Seventh, Eighth, and Ninth Wars of Religion (spanning 1562 to 1598); Javanese invasion of Malacca; Bohemian-Palatine War; Thirty Years’ War; First, Second, and Third Bernese Revolts (spanning 1621 to 1629); Swedish War; Shimabara Revolt (1637–38); First and Second Bishops Wars; Maryland’s Religious War; Transylvania-Hapsburg War; Portuguese-Omani Wars in East Africa; First Villmergen War; Covenanters’ Rebellions (1666, 1679, and 1685); Rajput Rebellion against Aurangzeb; Camisard Rebellion; Second Villmergen War; Brabant Revolution; Vellore Mutiny; Great Java War; Padri War; Irish Tithe War; War of the Sonderbund; Crimean War; Tukulor-French Wars; Mountain Meadows Massacre; Serbo-Turkish War; Russo-Turkish War (1877–78); Ugandan Religious Wars; Ghost Dance War; Holy Wars of the “Mad Mullah”; raids of the Black Hundreds; Mexican insurrections; Indian Civil War; Bosnian War; and US War on Terrorism.</p>
+
+
+
+<p><a href="#_ftnref21" id="_ftn21"><sup>[21]</sup></a> <em>Encyclopedia of Wars</em>, III.1447–48.</p>
+
+
+
+<p><a href="#_ftnref22" id="_ftn22">[22]</a> The two wars listed in both the “colonial wars” and “religious wars” categories by Phillips and Axelrod are the Tukulor-French Wars and the Vellore Mutiny, nineteenth-century conflicts involving a complex mix of potential religious and colonial/territorial causes that may have proven too difficult for the authors to categorize under one primary cause. See <em>Encyclopedia of Wars</em>, III.1158–59 and 1243.</p>
+
+
+
+<p><a href="#_ftnref23" id="_ftn23"><sup>[23]</sup></a> Matthew White, <em>The Great Big Book of Horrible Things: The Definitive Chronicle of History’s 100 Worst Atrocities</em> (New York: W. W. Norton, 2012).</p>
+
+
+
+<p><a href="#_ftnref24" id="_ftn24"><sup>[24]</sup></a> <a>Jennifer Schuessler, “Ranking History’s Atrocities by Counting the Corpses,” <em>New York Times</em>, November 8, 2011.</a></p>
+
+
+
+<p><a href="#_ftnref25" id="_ftn25">[25]</a> Schuessler, “Ranking History’s Atrocities.”</p>
+
+
+
+<p><a href="#_ftnref26" id="_ftn26">[26]</a> White, <em>Great Big Book of Horrible Things</em>, xiii.</p>
+
+
+
+<p><a href="#_ftnref27" id="_ftn27">[27]</a> Schuessler, “Ranking History’s Atrocities.” For White’s figures, see “Death Tolls across History,” Necrometrics, accessed March 15, 2019, <a href="https://necrometrics.com/" rel="nofollow">https://necrometrics.com/</a>.</p>
+
+
+
+<p><a href="#_ftnref28" id="_ftn28"><sup>[28]</sup></a> White, <em>Great Big Book of Horrible Things</em>, 544.</p>
+
+
+
+<p><a href="#_ftnref29" id="_ftn29"><sup>[29]</sup></a> White, <em>Great Big Book of Horrible Things</em>, 544–45.</p>
+
+
+
+<p><a href="#_ftnref30" id="_ftn30">[30]</a> <a>White, <em>Great Big Book of Horrible Things</em>, 544 and 107–8.</a></p>
+
+
+
+<p><a href="#_ftnref31" id="_ftn31">[31]</a> White, <em>Great Big Book of Horrible Things</em>, 107.</p>
+
+
+
+<p><a href="#_ftnref32" id="_ftn32">[32]</a> White, <em>Great Big Book of Horrible Things</em>, 107–8.</p>
+
+
+
+<p><a href="#_ftnref33" id="_ftn33">[33]</a> Presumably, only the crusades that took place in the East.</p>
+
+
+
+<p><a href="#_ftnref34" id="_ftn34">[34]</a> White, <em>Great Big Book of Horrible Things</em>, 544.</p>
+
+
+
+<p><a href="#_ftnref35" id="_ftn35"><sup>[35]</sup></a> <a>White, <em>Great Big Book of Horrible Things</em>, 548. </a>One could argue that Mesoamerican human sacrifice is more correct, as even societies like the Maya appear to have performed it, even if apparently on a lesser scale. The scale of Aztec human sacrifice—from only 150 sacrificial victims to 250,000 per year—is a debate; see Matthew Restall’s book <em>When Montezuma Met Cortés: The True Story of the Meeting that Changed History</em> (New York: Ecco, 2018), 85–95.</p>
+
+
+
+<p><a href="#_ftnref36" id="_ftn36"><sup>[36]</sup></a> White, <em>Great Big Book of Horrible Things</em>, 543–44.</p>
+
+
+
+<p><a href="#_ftnref37" id="_ftn37"><sup>[37]</sup></a> Steven Pinker, <em>The Better Angels of Our Nature: Why Violence Has Declined</em> (New York: Penguin, 2011), 195. His categorizations are often problematic, as reflected in his consideration of the “Fall of Rome” as an “atrocity.”</p>
+
+
+
+<p><a></a><a href="#_ftnref38" id="_ftn38">[38]</a> Pinker draws his figure of 36,000,000 for the An Lushan Rebellion from White, <em>Great Big Book of Horrible Things</em>, 93. White notes, “The census taken in China in the year 754 recorded a population of 52,880,488. After ten years of civil war, the census of 764 found only 16,900,000 people in China. What happened to 36 million people? Is a loss of two-thirds in one decade even possible? Perhaps. Peasants often lived at the very edge of starvation, so the slightest disruption could cause a massive die off, particularly if they depended on large irrigation systems.&nbsp;.&nbsp;.&nbsp;. [Moreover] many authorities quote these numbers with a minimum of doubt.”</p>
+
+
+
+<p><a href="#_ftnref39" id="_ftn39"><sup>[39]</sup></a> Pinker, <em>Better Angels</em>, 195.</p>
+
+
+
+<p><a></a><a href="#_ftnref40" id="_ftn40"><sup>[40]</sup></a> Cavanaugh, <em>The Myth of Religious Violence</em>, 4.</p>
+
+
+
+<p><a href="#_ftnref41" id="_ftn41"><sup>[41]</sup></a> Cavanaugh, <em>The Myth of Religious Violence</em>, 15–56. In addition to Kimball, he considers the academic arguments of John Hick, Richard Wentz, Martin Marty, Mark Juergensmeyer, David C. Rapoport, Bhikhu Parekh, R. Scott Appleby, and Charles Selengut.</p>
+
+
+
+<p><a href="#_ftnref42" id="_ftn42"><sup>[42]</sup></a> Cavanaugh, <em>The Myth of Religious Violence</em>, 8.</p>
+
+
+
+<p><a href="#_ftnref43" id="_ftn43"><sup>[43]</sup></a> Cavanaugh, <em>The Myth of Religious Violence</em>, 21–24.</p>
+
+
+
+<p><a href="#_ftnref44" id="_ftn44"><sup>[44]</sup></a> Cavanaugh, <em>The Myth of Religious Violence</em>, 23.</p>
+
+
+
+<p><a href="#_ftnref45" id="_ftn45"><sup>[45]</sup></a> Cavanaugh, <em>The Myth of Religious Violence</em>, 24.</p>
+
+
+
+<p><a href="#_ftnref46" id="_ftn46"><sup>[46]</sup></a> Mark Juergensmeyer, <em>Terror in the Mind of God: The Global Rise of Religious Violence</em>, 3rd ed. (Berkeley: University of California Press, 2003), xi.</p>
+
+
+
+<p><a href="#_ftnref47" id="_ftn47"><sup>[47]</sup></a> Juergensmeyer, <em>Terror in the Mind of God</em>, 220.</p>
+
+
+
+<p><a href="#_ftnref48" id="_ftn48"><sup>[48]</sup></a> Cavanaugh, <em>Myth of Religious Violence</em>,32.</p>
+
+
+
+<p><a href="#_ftnref49" id="_ftn49"><sup>[49]</sup></a> Juergensmeyer, <em>Terror in the Mind of God</em>, 158.</p>
+
+
+
+<p><a href="#_ftnref50" id="_ftn50"><sup>[50]</sup></a> Cavanaugh, <em>Myth of Religious Violence</em>,32.</p>
+
+
+
+<p><a href="#_ftnref51" id="_ftn51"><sup>[51]</sup></a> Cavanaugh, <em>Myth of Religious Violence</em>, 4.</p>
+
+
+
+<p><a href="#_ftnref52" id="_ftn52"><sup>[52]</sup></a> Cavanaugh, <em>Myth of Religious Violence</em>, 5.</p>
+
+
+
+<p><a href="#_ftnref53" id="_ftn53"><sup>[53]</sup></a> Karl Marx, <em>A Contribution to the Critique of Hegel’s “Philosophy of Right</em>,<em>” </em>trans. A. Jolin and J. O’Malley (Cambridge: Cambridge University Press, 1972), 131.</p>
+
+
+
+<p><a href="#_ftnref54" id="_ftn54"><sup>[54]</sup></a> Kimball, <em>When Religion Becomes Evil</em>,1.</p>
+
+
+
+<p><a href="#_ftnref55" id="_ftn55">[55]</a> Harris, <em>The End of Faith</em>, 26–27.</p>
+
+
+
+<p><a href="#_ftnref56" id="_ftn56"><sup>[56]</sup></a> Special thanks to Professor Florin Curta of the University of Florida for drawing my attention to this point in a private conversation.</p>
+
+
+
+<p><a href="#_ftnref57" id="_ftn57"><sup>[57]</sup></a> Stéphane Courtois et al., <em>The Black Book of Communism: Crimes, Terror, Repression</em>, trans. J. Murphy and M. Kramer (Cambridge: Harvard University Press, 1999), 4.</p>
+
+
+
+<p><a href="#_ftnref58" id="_ftn58"><sup>[58]</sup></a> R. J. Rummel, <em>Death by Government</em> (New Brunswick, NJ: Transaction, 1994), 36–38.</p>
+
+
+
+<p><a href="#_ftnref59" id="_ftn59"><sup>[59]</sup></a> Rummel revised his figures in 2005; see Andrew Holt, “The 20th Century’s Bloodiest ‘Megamurderers’ According to Prof. R. J. Rummel,” apholt.com, accessed January 16, 2019, <a href="https://apholt.com/2018/11/15/the-20th-centurys-bloodiest-megamurderers-according-to-prof-r-j-rummel/">https://apholt.com/2018/11/15/the-20th-centurys-bloodiest-megamurderers-according-to-prof-r-j-rummel/</a>.</p>
+
+
+
+<p><a href="#_ftnref60" id="_ftn60">[60]</a> White, <em>Great Big Book of Horrible Things</em>, 554; in a footnote, he offers, “A friend once wondered aloud how much suffering in history has been caused by religious fanaticism, and I was able to confidently tell her 10 percent, based on this number.”</p>
+
+
+
+<p><a href="#_ftnref61" id="_ftn61">[61]</a> White, <em>Great Big Book of Horrible Things</em>, 554.</p>
+<div id="jp-post-flair" class="sharedaddy sd-like-enabled sd-sharing-enabled"><div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-official sd-sharing"><h3 class="sd-title">Share this:</h3><div class="sd-content"><ul><li class="share-twitter"><a href="https://twitter.com/share" class="twitter-share-button" data-url="https://apholt.com/2023/01/03/the-myth-of-religion-as-the-cause-of-most-wars/" data-text="The Myth of Religion as the Cause of Most Wars" data-via="aholt_andrew" data-related="wordpressdotcom">Tweet</a></li><li class="share-facebook"><div class="fb-share-button" data-href="https://apholt.com/2023/01/03/the-myth-of-religion-as-the-cause-of-most-wars/" data-layout="button_count"></div></li><li class="share-end"></li></ul></div></div></div><div class='sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded' id='like-post-wrapper-78719230-13012-670d498eeb034' data-src='//widgets.wp.com/likes/index.html?ver=20241014#blog_id=78719230&amp;post_id=13012&amp;origin=apholt.wordpress.com&amp;obj_id=78719230-13012-670d498eeb034&amp;domain=apholt.com' data-name='like-post-frame-78719230-13012-670d498eeb034' data-title='Like or Reblog'><div class='likes-widget-placeholder post-likes-widget-placeholder' style='height: 55px;'><span class='button'><span>Like</span></span> <span class='loading'>Loading...</span></div><span class='sd-text-color'></span><a class='sd-link-color'></a></div>
+<div id='jp-relatedposts' class='jp-relatedposts' >
+	<h3 class="jp-relatedposts-headline"><em>Related</em></h3>
+</div></div>					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			This entry was posted in <a href="https://apholt.com/category/uncategorized/" rel="category tag">Uncategorized</a> and tagged <a href="https://apholt.com/tag/andrew-holt/" rel="tag">Andrew Holt</a>, <a href="https://apholt.com/tag/hackett-publishing/" rel="tag">Hackett Publishing</a>, <a href="https://apholt.com/tag/historical-myths/" rel="tag">Historical myths</a>, <a href="https://apholt.com/tag/john-d-hosler/" rel="tag">John D. Hosler</a>, <a href="https://apholt.com/tag/religion-and-violence/" rel="tag">Religion and Violence</a>, <a href="https://apholt.com/tag/religion-and-warfare/" rel="tag">Religion and Warfare</a>, <a href="https://apholt.com/tag/religion-as-the-cause-of-most-wars/" rel="tag">Religion as the cause of most wars</a>, <a href="https://apholt.com/tag/richard-dawkins/" rel="tag">Richard Dawkins</a>, <a href="https://apholt.com/tag/richard-kimball/" rel="tag">Richard Kimball</a>, <a href="https://apholt.com/tag/sam-harris/" rel="tag">Sam Harris</a>, <a href="https://apholt.com/tag/seven-myths-of-military-history/" rel="tag">Seven Myths of Military History</a> on <a href="https://apholt.com/2023/01/03/the-myth-of-religion-as-the-cause-of-most-wars/" title="8:37 pm" rel="bookmark"><time class="entry-date" datetime="2023-01-03T20:37:30+00:00">January 3, 2023</time></a><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="https://apholt.com/author/aholt01/" title="View all posts by Andrew Holt Ph.D." rel="author">Andrew Holt Ph.D.</a></span></span>.								</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+
+				<nav class="nav-single">
+					<h3 class="assistive-text">Post navigation</h3>
+					<span class="nav-previous"><a href="https://apholt.com/2021/04/18/guest-essay-santiago-matamoros-in-the-americas-by-alfred-j-andrea/" rel="prev"><span class="meta-nav">&larr;</span> Guest Essay: Santiago Matamoros in the Americas by Alfred J.&nbsp;Andrea</a></span>
+					<span class="nav-next"><a href="https://apholt.com/2023/07/31/the-high-flying-sexy-world-of-encyclopedia-editing-some-insights-for-potential-encyclopedists/" rel="next">The High-Flying Sexy World of Encyclopedia Editing: Some Insights for Potential&nbsp;Encyclopedists <span class="meta-nav">&rarr;</span></a></span>
+				</nav><!-- .nav-single -->
+
+				
+<div id="comments" class="comments-area">
+
+	
+	
+	
+</div><!-- #comments .comments-area -->
+
+			
+		</div><!-- #content -->
+	</div><!-- #primary -->
+
+
+			<div id="secondary" class="widget-area" role="complementary">
+						<aside id="search-4" class="widget widget_search"><form role="search" method="get" id="searchform" class="searchform" action="https://apholt.com/">
+				<div>
+					<label class="screen-reader-text" for="s">Search for:</label>
+					<input type="text" value="" name="s" id="s" />
+					<input type="submit" id="searchsubmit" value="Search" />
+				</div>
+			</form></aside><aside id="facebook-likebox-2" class="widget widget_facebook_likebox"><h3 class="widget-title"><a href="https://www.facebook.com/apholt01">Andrew Holt, Ph.D. &#8211; History, Religion, and Foreign Affairs</a></h3>		<div id="fb-root"></div>
+		<div class="fb-page" data-href="https://www.facebook.com/apholt01" data-width="200"  data-height="432" data-hide-cover="false" data-show-facepile="true" data-tabs="false" data-hide-cta="false" data-small-header="false">
+		<div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/apholt01"><a href="https://www.facebook.com/apholt01">Andrew Holt, Ph.D. &#8211; History, Religion, and Foreign Affairs</a></blockquote></div>
+		</div>
+		</aside><aside id="twitter_timeline-2" class="widget widget_twitter_timeline"><h3 class="widget-title">Follow me on Twitter</h3><a class="twitter-timeline" data-theme="dark" data-border-color="#e8e8e8" data-tweet-limit="1" data-lang="EN" data-partner="jetpack" href="https://twitter.com/@aholt_andrew" href="https://twitter.com/@aholt_andrew">My Tweets</a></aside>
+		<aside id="recent-posts-5" class="widget widget_recent_entries">
+		<h3 class="widget-title">Recent Posts</h3>
+		<ul>
+											<li>
+					<a href="https://apholt.com/2023/08/26/a-crusaders-mom/">A Crusader&#8217;s Mom</a>
+											<span class="post-date">August 26, 2023</span>
+									</li>
+											<li>
+					<a href="https://apholt.com/2023/08/09/seven-myths-of-the-spanish-inquisition-an-interview-with-dr-gretchen-starr-lebeau/">Seven Myths of the Spanish Inquisition: An Interview with Dr. Gretchen&nbsp;Starr-LeBeau</a>
+											<span class="post-date">August 9, 2023</span>
+									</li>
+											<li>
+					<a href="https://apholt.com/2023/08/09/martin-luther-on-holy-war-against-the-turks/">Martin Luther on Holy War against the&nbsp;Turks</a>
+											<span class="post-date">August 9, 2023</span>
+									</li>
+											<li>
+					<a href="https://apholt.com/2023/07/31/the-high-flying-sexy-world-of-encyclopedia-editing-some-insights-for-potential-encyclopedists/">The High-Flying Sexy World of Encyclopedia Editing: Some Insights for Potential&nbsp;Encyclopedists</a>
+											<span class="post-date">July 31, 2023</span>
+									</li>
+											<li>
+					<a href="https://apholt.com/2023/01/03/the-myth-of-religion-as-the-cause-of-most-wars/" aria-current="page">The Myth of Religion as the Cause of Most&nbsp;Wars</a>
+											<span class="post-date">January 3, 2023</span>
+									</li>
+											<li>
+					<a href="https://apholt.com/2021/04/18/guest-essay-santiago-matamoros-in-the-americas-by-alfred-j-andrea/">Guest Essay: Santiago Matamoros in the Americas by Alfred J.&nbsp;Andrea</a>
+											<span class="post-date">April 18, 2021</span>
+									</li>
+											<li>
+					<a href="https://apholt.com/2020/12/18/guest-essay-santiago-matamoros-by-alfred-j-andrea/">Guest Essay: Santiago Matamoros by Alfred J.&nbsp;Andrea</a>
+											<span class="post-date">December 18, 2020</span>
+									</li>
+											<li>
+					<a href="https://apholt.com/2020/12/15/guest-essay-the-story-behind-the-making-of-sanctified-violence-holy-war-in-world-history-by-dr-alfred-j-andrea/">Guest Essay: The Story Behind the Making of Sanctified Violence: Holy War in World History by Alfred J.&nbsp;Andrea</a>
+											<span class="post-date">December 15, 2020</span>
+									</li>
+											<li>
+					<a href="https://apholt.com/2020/09/14/adversarial-camaraderie-at-the-siege-of-acre-archery-and-wrestling-competitions/">“Adversarial Camaraderie” at the Siege of Acre: Archery and Wrestling&nbsp;Competitions</a>
+											<span class="post-date">September 14, 2020</span>
+									</li>
+											<li>
+					<a href="https://apholt.com/2020/08/13/guest-essay-the-global-middle-ages-by-alfred-j-andrea/">Guest Essay: The Global Middle Ages, by Alfred J.&nbsp;Andrea</a>
+											<span class="post-date">August 13, 2020</span>
+									</li>
+											<li>
+					<a href="https://apholt.com/2020/07/17/joan-of-arcs-holy-war/">Joan of Arc&#8217;s Holy&nbsp;War</a>
+											<span class="post-date">July 17, 2020</span>
+									</li>
+					</ul>
+
+		</aside><aside id="blog-stats-2" class="widget widget_blog-stats"><h3 class="widget-title">Blog Stats</h3>		<ul>
+			<li>611,310 hits</li>
+		</ul>
+		</aside><aside id="follow_button_widget-3" class="widget widget_follow_button_widget">
+		<a class="wordpress-follow-button" href="https://apholt.com" data-blog="78719230" data-lang="en" >Follow Andrew Holt, Ph.D. on WordPress.com</a>
+		<script type="text/javascript">(function(d){ window.wpcomPlatform = {"titles":{"timelines":"Embeddable Timelines","followButton":"Follow Button","wpEmbeds":"WordPress Embeds"}}; var f = d.getElementsByTagName('SCRIPT')[0], p = d.createElement('SCRIPT');p.type = 'text/javascript';p.async = true;p.src = '//widgets.wp.com/platform.js';f.parentNode.insertBefore(p,f);}(document));</script>
+
+		</aside><aside id="text-3" class="widget widget_text">			<div class="textwidget"></div>
+		</aside>		</div><!-- #secondary -->
+		</div><!-- #main .wrapper -->
+	<footer id="colophon" role="contentinfo">
+		<div class="site-info">
+									<a href="https://wordpress.com/?ref=footer_blog" rel="nofollow">Blog at WordPress.com.</a>
+		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<!--  -->
+<script type="text/javascript" src="//0.gravatar.com/js/hovercards/hovercards.min.js?ver=202442448e29c9ec460f70535c7958cd60e9e2980f935c5309d61d08f40d080a876779" id="grofiles-cards-js"></script>
+<script type="text/javascript" id="wpgroho-js-extra">
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script crossorigin='anonymous' type='text/javascript'  src='https://s2.wp.com/wp-content/mu-plugins/gravatar-hovercards/wpgroho.js?m=1610363240i'></script>
+
+	<script>
+		// Initialize and attach hovercards to all gravatars
+		( function() {
+			function init() {
+				if ( typeof Gravatar === 'undefined' ) {
+					return;
+				}
+
+				if ( typeof Gravatar.init !== 'function' ) {
+					return;
+				}
+
+				Gravatar.profile_cb = function ( hash, id ) {
+					WPGroHo.syncProfileData( hash, id );
+				};
+
+				Gravatar.my_hash = WPGroHo.my_hash;
+				Gravatar.init(
+					'body',
+					'#wp-admin-bar-my-account',
+					{
+						i18n: {
+							'Edit your profile': 'Edit your profile',
+							'View profile': 'View profile',
+							'Sorry, we are unable to load this Gravatar profile.': 'Sorry, we are unable to load this Gravatar profile.',
+							'Too Many Requests.': 'Too Many Requests.',
+							'Internal Server Error.': 'Internal Server Error.',
+						},
+					}
+				);
+			}
+
+			if ( document.readyState !== 'loading' ) {
+				init();
+			} else {
+				document.addEventListener( 'DOMContentLoaded', init );
+			}
+		} )();
+	</script>
+
+		<div style="display:none">
+	</div>
+	<div id="actionbar" style="display: none;"
+			class="actnbr-pub-twentytwelve actnbr-has-follow">
+		<ul>
+								<li class="actnbr-btn actnbr-hidden">
+						<a class="actnbr-action actnbr-actn-reblog" href="">
+							<svg class="gridicon gridicons-reblog" height="20" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M22.086 9.914L20 7.828V18c0 1.105-.895 2-2 2h-7v-2h7V7.828l-2.086 2.086L14.5 8.5 19 4l4.5 4.5-1.414 1.414zM6 16.172V6h7V4H6c-1.105 0-2 .895-2 2v10.172l-2.086-2.086L.5 15.5 5 20l4.5-4.5-1.414-1.414L6 16.172z"/></g></svg><span>Reblog</span>
+						</a>
+					</li>
+									<li class="actnbr-btn actnbr-hidden">
+								<a class="actnbr-action actnbr-actn-follow " href="">
+			<svg class="gridicon" height="20" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path clip-rule="evenodd" d="m4 4.5h12v6.5h1.5v-6.5-1.5h-1.5-12-1.5v1.5 10.5c0 1.1046.89543 2 2 2h7v-1.5h-7c-.27614 0-.5-.2239-.5-.5zm10.5 2h-9v1.5h9zm-5 3h-4v1.5h4zm3.5 1.5h-1v1h1zm-1-1.5h-1.5v1.5 1 1.5h1.5 1 1.5v-1.5-1-1.5h-1.5zm-2.5 2.5h-4v1.5h4zm6.5 1.25h1.5v2.25h2.25v1.5h-2.25v2.25h-1.5v-2.25h-2.25v-1.5h2.25z"  fill-rule="evenodd"></path></svg>
+			<span>Subscribe</span>
+		</a>
+		<a class="actnbr-action actnbr-actn-following  no-display" href="">
+			<svg class="gridicon" height="20" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path fill-rule="evenodd" clip-rule="evenodd" d="M16 4.5H4V15C4 15.2761 4.22386 15.5 4.5 15.5H11.5V17H4.5C3.39543 17 2.5 16.1046 2.5 15V4.5V3H4H16H17.5V4.5V12.5H16V4.5ZM5.5 6.5H14.5V8H5.5V6.5ZM5.5 9.5H9.5V11H5.5V9.5ZM12 11H13V12H12V11ZM10.5 9.5H12H13H14.5V11V12V13.5H13H12H10.5V12V11V9.5ZM5.5 12H9.5V13.5H5.5V12Z" fill="#008A20"></path><path class="following-icon-tick" d="M13.5 16L15.5 18L19 14.5" stroke="#008A20" stroke-width="1.5"></path></svg>
+			<span>Subscribed</span>
+		</a>
+							<div class="actnbr-popover tip tip-top-left actnbr-notice" id="follow-bubble">
+							<div class="tip-arrow"></div>
+							<div class="tip-inner actnbr-follow-bubble">
+															<ul>
+											<li class="actnbr-sitename">
+			<a href="https://apholt.com">
+				<img alt='' src='https://s2.wp.com/i/logo/wpcom-gray-white.png' srcset='https://s2.wp.com/i/logo/wpcom-gray-white.png 1x' class='avatar avatar-50' height='50' width='50' />				Andrew Holt, Ph.D.			</a>
+		</li>
+										<div class="actnbr-message no-display"></div>
+									<form method="post" action="https://subscribe.wordpress.com" accept-charset="utf-8" style="display: none;">
+																						<div class="actnbr-follow-count">Join 140 other subscribers</div>
+																					<div>
+										<input type="email" name="email" placeholder="Enter your email address" class="actnbr-email-field" aria-label="Enter your email address" />
+										</div>
+										<input type="hidden" name="action" value="subscribe" />
+										<input type="hidden" name="blog_id" value="78719230" />
+										<input type="hidden" name="source" value="https://apholt.com/2023/01/03/the-myth-of-religion-as-the-cause-of-most-wars/" />
+										<input type="hidden" name="sub-type" value="actionbar-follow" />
+										<input type="hidden" id="_wpnonce" name="_wpnonce" value="9331b4a0e7" />										<div class="actnbr-button-wrap">
+											<button type="submit" value="Sign me up">
+												Sign me up											</button>
+										</div>
+									</form>
+									<li class="actnbr-login-nudge">
+										<div>
+											Already have a WordPress.com account? <a href="https://wordpress.com/log-in?redirect_to=https%3A%2F%2Fr-login.wordpress.com%2Fremote-login.php%3Faction%3Dlink%26back%3Dhttps%253A%252F%252Fapholt.com%252F2023%252F01%252F03%252Fthe-myth-of-religion-as-the-cause-of-most-wars%252F">Log in now.</a>										</div>
+									</li>
+								</ul>
+															</div>
+						</div>
+					</li>
+							<li class="actnbr-ellipsis actnbr-hidden">
+				<svg class="gridicon gridicons-ellipsis" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M7 12c0 1.104-.896 2-2 2s-2-.896-2-2 .896-2 2-2 2 .896 2 2zm12-2c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm-7 0c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2z"/></g></svg>				<div class="actnbr-popover tip tip-top-left actnbr-more">
+					<div class="tip-arrow"></div>
+					<div class="tip-inner">
+						<ul>
+									<li class="actnbr-sitename">
+			<a href="https://apholt.com">
+				<img alt='' src='https://s2.wp.com/i/logo/wpcom-gray-white.png' srcset='https://s2.wp.com/i/logo/wpcom-gray-white.png 1x' class='avatar avatar-50' height='50' width='50' />				Andrew Holt, Ph.D.			</a>
+		</li>
+								<li class="actnbr-folded-customize">
+								<a href="https://apholt.wordpress.com/wp-admin/customize.php?url=https%3A%2F%2Fapholt.wordpress.com%2F2023%2F01%2F03%2Fthe-myth-of-religion-as-the-cause-of-most-wars%2F">
+									<svg class="gridicon gridicons-customize" height="20" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M2 6c0-1.505.78-3.08 2-4 0 .845.69 2 2 2 1.657 0 3 1.343 3 3 0 .386-.08.752-.212 1.09.74.594 1.476 1.19 2.19 1.81L8.9 11.98c-.62-.716-1.214-1.454-1.807-2.192C6.753 9.92 6.387 10 6 10c-2.21 0-4-1.79-4-4zm12.152 6.848l1.34-1.34c.607.304 1.283.492 2.008.492 2.485 0 4.5-2.015 4.5-4.5 0-.725-.188-1.4-.493-2.007L18 9l-2-2 3.507-3.507C18.9 3.188 18.225 3 17.5 3 15.015 3 13 5.015 13 7.5c0 .725.188 1.4.493 2.007L3 20l2 2 6.848-6.848c1.885 1.928 3.874 3.753 5.977 5.45l1.425 1.148 1.5-1.5-1.15-1.425c-1.695-2.103-3.52-4.092-5.448-5.977z"/></g></svg>									<span>Customize</span>
+								</a>
+							</li>
+																<li class="actnbr-folded-follow">
+												<a class="actnbr-action actnbr-actn-follow " href="">
+			<svg class="gridicon" height="20" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path clip-rule="evenodd" d="m4 4.5h12v6.5h1.5v-6.5-1.5h-1.5-12-1.5v1.5 10.5c0 1.1046.89543 2 2 2h7v-1.5h-7c-.27614 0-.5-.2239-.5-.5zm10.5 2h-9v1.5h9zm-5 3h-4v1.5h4zm3.5 1.5h-1v1h1zm-1-1.5h-1.5v1.5 1 1.5h1.5 1 1.5v-1.5-1-1.5h-1.5zm-2.5 2.5h-4v1.5h4zm6.5 1.25h1.5v2.25h2.25v1.5h-2.25v2.25h-1.5v-2.25h-2.25v-1.5h2.25z"  fill-rule="evenodd"></path></svg>
+			<span>Subscribe</span>
+		</a>
+		<a class="actnbr-action actnbr-actn-following  no-display" href="">
+			<svg class="gridicon" height="20" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path fill-rule="evenodd" clip-rule="evenodd" d="M16 4.5H4V15C4 15.2761 4.22386 15.5 4.5 15.5H11.5V17H4.5C3.39543 17 2.5 16.1046 2.5 15V4.5V3H4H16H17.5V4.5V12.5H16V4.5ZM5.5 6.5H14.5V8H5.5V6.5ZM5.5 9.5H9.5V11H5.5V9.5ZM12 11H13V12H12V11ZM10.5 9.5H12H13H14.5V11V12V13.5H13H12H10.5V12V11V9.5ZM5.5 12H9.5V13.5H5.5V12Z" fill="#008A20"></path><path class="following-icon-tick" d="M13.5 16L15.5 18L19 14.5" stroke="#008A20" stroke-width="1.5"></path></svg>
+			<span>Subscribed</span>
+		</a>
+										</li>
+																	<li class="actnbr-signup"><a href="https://wordpress.com/start/">Sign up</a></li>
+									<li class="actnbr-login"><a href="https://wordpress.com/log-in?redirect_to=https%3A%2F%2Fr-login.wordpress.com%2Fremote-login.php%3Faction%3Dlink%26back%3Dhttps%253A%252F%252Fapholt.com%252F2023%252F01%252F03%252Fthe-myth-of-religion-as-the-cause-of-most-wars%252F">Log in</a></li>
+																	<li class="actnbr-shortlink"><a href="https://wp.me/p5kit0-3nS">Copy shortlink</a></li>
+																	<li class="flb-report">
+										<a href="https://wordpress.com/abuse/?report_url=https://apholt.com/2023/01/03/the-myth-of-religion-as-the-cause-of-most-wars/" target="_blank" rel="noopener noreferrer">
+											Report this content										</a>
+									</li>
+																	<li class="actnbr-reader">
+										<a href="https://wordpress.com/read/blogs/78719230/posts/13012">
+											View post in Reader										</a>
+									</li>
+																	<li class="actnbr-subs">
+										<a href="https://subscribe.wordpress.com/">Manage subscriptions</a>
+									</li>
+																		<li class="actnbr-fold"><a href="">Collapse this bar</a></li>
+															</ul>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+	
+<script>
+window.addEventListener( "load", function( event ) {
+	var link = document.createElement( "link" );
+	link.href = "https://s0.wp.com/wp-content/mu-plugins/actionbar/actionbar.css?v=20240822";
+	link.type = "text/css";
+	link.rel = "stylesheet";
+	document.head.appendChild( link );
+
+	var script = document.createElement( "script" );
+	script.src = "https://s0.wp.com/wp-content/mu-plugins/actionbar/actionbar.js?v=20231122";
+	script.defer = true;
+	document.body.appendChild( script );
+} );
+</script>
+
+				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+						<div id="fb-root"></div>
+			<script>(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&amp;appId=249643311490&version=v2.3'; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));</script>
+			<script>
+			document.body.addEventListener( 'is.post-load', function() {
+				if ( 'undefined' !== typeof FB ) {
+					FB.XFBML.parse();
+				}
+			} );
+			</script>
+			<script type="text/javascript" id="comment-like-js-extra">
+/* <![CDATA[ */
+var comment_like_text = {"loading":"Loading...","swipeUrl":"https:\/\/s2.wp.com\/wp-content\/mu-plugins\/comment-likes\/js\/lib\/swipe.js?ver=20131008"};
+/* ]]> */
+</script>
+<script type="text/javascript" id="jetpack-facebook-embed-js-extra">
+/* <![CDATA[ */
+var jpfbembed = {"appid":"249643311490","locale":"en_US"};
+/* ]]> */
+</script>
+<script type="text/javascript" id="sharing-js-js-extra">
+/* <![CDATA[ */
+var sharing_js_options = {"lang":"en","counts":"1","is_stats_active":"1"};
+/* ]]> */
+</script>
+<script crossorigin='anonymous' type='text/javascript'  src='https://s2.wp.com/_static/??-eJydj0EOgzAMBD/UYJCQOFV9ShUSFwyJQ4kD4vcNbU+o6oGLZa92dmVYJ2UCC7KAT2pyqSOO4GjECM+ECXvN1uFcDPECv80meJ8l9YGGg3AEpUefbVNqQdYsbHm6BXeO9UKdFgr8p21AmbQZvzfExHAnNvDQBtsQRoW+RXsiQFYSwVkJeXTEeCKiTeQsxF7PaLW123sl7gpP+0s3f62aqqnLumzq4QUTxo4+'></script>
+<script type="text/javascript" id="sharing-js-js-after">
+/* <![CDATA[ */
+var windowOpen;
+			( function () {
+				function matches( el, sel ) {
+					return !! (
+						el.matches && el.matches( sel ) ||
+						el.msMatchesSelector && el.msMatchesSelector( sel )
+					);
+				}
+
+				document.body.addEventListener( 'click', function ( event ) {
+					if ( ! event.target ) {
+						return;
+					}
+
+					var el;
+					if ( matches( event.target, 'a.share-facebook' ) ) {
+						el = event.target;
+					} else if ( event.target.parentNode && matches( event.target.parentNode, 'a.share-facebook' ) ) {
+						el = event.target.parentNode;
+					}
+
+					if ( el ) {
+						event.preventDefault();
+
+						// If there's another sharing window open, close it.
+						if ( typeof windowOpen !== 'undefined' ) {
+							windowOpen.close();
+						}
+						windowOpen = window.open( el.getAttribute( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
+						return false;
+					}
+				} );
+			} )();
+/* ]]> */
+</script>
+
+	<script type="text/javascript">
+		(function () {
+			var wpcom_reblog = {
+				source: 'toolbar',
+
+				toggle_reblog_box_flair: function (obj_id, post_id) {
+
+					// Go to site selector. This will redirect to their blog if they only have one.
+					const postEndpoint = `https://wordpress.com/post`;
+
+					// Ideally we would use the permalink here, but fortunately this will be replaced with the 
+					// post permalink in the editor.
+					const originalURL = `${ document.location.href }?page_id=${ post_id }`; 
+					
+					const url =
+						postEndpoint +
+						'?url=' +
+						encodeURIComponent( originalURL ) +
+						'&is_post_share=true' +
+						'&v=5';
+
+					const redirect = function () {
+						if (
+							! window.open( url, '_blank' )
+						) {
+							location.href = url;
+						}
+					};
+
+					if ( /Firefox/.test( navigator.userAgent ) ) {
+						setTimeout( redirect, 0 );
+					} else {
+						redirect();
+					}
+				},
+			};
+
+			window.wpcom_reblog = wpcom_reblog;
+		})();
+	</script>
+<script type="text/javascript">
+// <![CDATA[
+(function() {
+try{
+  if ( window.external &&'msIsSiteMode' in window.external) {
+    if (window.external.msIsSiteMode()) {
+      var jl = document.createElement('script');
+      jl.type='text/javascript';
+      jl.async=true;
+      jl.src='/wp-content/plugins/ie-sitemode/custom-jumplist.php';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(jl, s);
+    }
+  }
+}catch(e){}
+})();
+// ]]>
+</script>	<iframe src='https://widgets.wp.com/likes/master.html?ver=20241014#ver=20241014&amp;origin=https://apholt.com' scrolling='no' id='likes-master' name='likes-master' style='display:none;'></iframe>
+	<div id='likes-other-gravatars' class='wpl-new-layout' role="dialog" aria-hidden="true" tabindex="-1">
+		<div class="likes-text">
+			<span>%d</span>		</div>
+		<ul class="wpl-avatars sd-like-gravatars"></ul>
+	</div>
+
+		<script src="//stats.wp.com/w.js?67" defer></script> <script type="text/javascript">
+_tkq = window._tkq || [];
+_stq = window._stq || [];
+_tkq.push(['storeContext', {'blog_id':'78719230','blog_tz':'0','user_lang':'en','blog_lang':'en','user_id':'0'}]);
+_stq.push(['view', {'blog':'78719230','v':'wpcom','tz':'0','user_id':'0','post':'13012','subd':'apholt'}]);
+_stq.push(['extra', {'crypt':'UE40eW5QN0p8M2Y/RE1mNzc2NTVTamdsd0xoLz9RQkM2K298TXY9bERQMXc2MjhEaVZfb2wwakRoSj0mUkp1THptM1NdbkV1WjZIcU9mVWQmPUIvMlN6Jk8wW3NYVEJ3dWZOWExuWD9VNTEucGVsfEdudndPUHpBZkFZSlEyY0ZvWWVnPVFCdkNGLXRYYUJNSEF5cVJZZmRdXVdHV2NjQWhheVlHMHdpXT9beWVaM0xrQ3huMk9XfkN4fjhveHwlT0VNcy4tNkNJdSZRPytmOFUlWkZWdkQzdC16fEFjUyYzSHE2b0R5eCZwLHNHYitIW2VtLl9QLjJVU29DR2NZMkQmM0JwY28wejFIeC5GXT9Yd3JacXBYNHBZeG0zVkwyZkZMUEFoL2s1VkJueHpHa20lX05PW1UmeFM2RGhdbGYsR3kvJitVaVtYRHAubi1ZTE1bem90NkQ4TGs5YSZlNUh0K1lVcXE5aXB+UWFoJVF6azdnZA=='}]);
+_stq.push([ 'clickTrackerInit', '78719230', '13012' ]);
+</script>
+<noscript><img src="https://pixel.wp.com/b.gif?v=noscript" style="height:1px;width:1px;overflow:hidden;position:absolute;bottom:1px;" alt="" /></noscript>
+<script>
+if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
+
+	wpcom_mobile_user_agent_info.init();
+	var mobileStatsQueryString = "";
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedPlatformName )
+		mobileStatsQueryString += "&x_" + 'mobile_platforms' + '=' + wpcom_mobile_user_agent_info.matchedPlatformName;
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedUserAgentName )
+		mobileStatsQueryString += "&x_" + 'mobile_devices' + '=' + wpcom_mobile_user_agent_info.matchedUserAgentName;
+	
+	if( wpcom_mobile_user_agent_info.isIPad() )
+		mobileStatsQueryString += "&x_" + 'ipad_views' + '=' + 'views';
+
+	if( "" != mobileStatsQueryString ) {
+		new Image().src = document.location.protocol + '//pixel.wp.com/g.gif?v=wpcom-no-pv' + mobileStatsQueryString + '&baba=' + Math.random();
+	}
+	
+}
+</script></body>
+</html>

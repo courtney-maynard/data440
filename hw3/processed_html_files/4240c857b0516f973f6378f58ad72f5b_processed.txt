@@ -1,0 +1,30 @@
+analysis
+Jun 28, 20245 mins
+Artificial IntelligenceCloud ArchitectureCloud Computing
+Cloud-based generative AI systems that use too many resources turn out to be too complex and expensive. Here’s how you can avoid this.
+Credit: Cagkan Sayin/Shutterstock
+Cloud is the easiest way to build generative AI systems; that’s why cloud revenues are skyrocketing. However, many of these systems are overengineered, which drives complexity and unnecessary costs. Overengineering is a familiar issue. We’ve been overthinking and overbuilding systems, devices, machines, vehicles, etc., for many years. Why would the cloud be any different?
+Overengineering is designing an unnecessarily complex product or solution by incorporating features or functionalities that add no substantial value. This practice leads to the inefficient use of time, money, and materials and can lead to decreased productivity, higher costs, and reduced system resilience.
+Overengineering any system, whether AI or cloud, happens through easy access to resources and no limitations on using those resources. It is easy to find and allocate cloud services, so it’s tempting for an AI designer or engineer to add things that may be viewed as “nice to have” more so than “need to have.” Making a bunch of these decisions leads to many more databases, middleware layers, security systems, and governance systems than needed.
+The ease with which enterprises can access and provision cloud services has become both a boon and a bane. Advanced cloud-based tools simplify the deployment of sophisticated AI systems, yet they also open the door to overengineering. If engineers had to go through a procurement process, including purchasing specialized hardware for specific computing or storage services, chances are they would be more restrained than when it only takes a simple click of a mouse.
+The dangers of easy provisioning
+Public cloud platforms boast an impressive array of services designed to meet every possible generative AI need. From data storage and processing to machine learning models and analytics, these platforms offer an attractive mix of capabilities. Indeed, look at the recommended list of a few dozen services that cloud providers view as “necessary” to design, build, and deploy a generative AI system. Of course, keep in mind that the company creating the list is also selling the services.
+GPUs are the best example of this. I often see GPU-configured compute services added to a generative AI architecture. However, GPUs are not needed for “back of the napkin” type calculations, and CPU-powered systems work just fine for a bit of the cost.
+For some reason, the explosive growth of companies that build and sell GPUs has many people believing that GPUs are a requirement, and they are not . GPUs are needed when specialized processors are indicated for a specific problem. This type of overengineering costs enterprises more than other overengineering mistakes. Unfortunately, recommending that your company refrain from using higher-end and more expensive processors will often uninvite you to subsequent architecture meetings.
+Keeping to a budget
+Escalating costs are directly tied to the layered complexity and the additional cloud services, which are often included out of an impulse for thoroughness or future-proofing. When I recommend that a company use fewer resources or less expensive resources, I’m often met with, “We need to account for future growth,” but this can often be handled by adjusting the architecture as it evolves. It should never mean tossing money at the problems from the start.
+This tendency to include too many services also amplifies technical debt. Maintaining and upgrading complex systems becomes increasingly difficult and costly. If data is fragmented and siloed across various cloud services, it can further exacerbate these issues, making data integration and optimization a daunting task. Enterprises often find themselves trapped in a cycle where their generative AI solutions are not just overengineered but also need to be more optimized, leading to diminished returns on investment.
+Strategies to mitigate overengineering
+It takes a disciplined approach to avoid these pitfalls. Here are some strategies I use:
+Prioritize core needs. Focus on the essential functionalities required to achieve your primary objectives. Resist the temptation to inflate them.
+Plan and asses thoroughly. Invest time in the planning phase to determine which services are essential.
+Start small and scale gradually. Begin with a minimal viable product (MVP) focusing on core functionalities.
+Assemble an excellent generative AI architecture team. Pick AI engineering, data scientists, AI security specialists, etc., who share the approach to leveraging what’s needed but not overkill. You can submit the same problems to two different generative AI architecture teams and get plans that differ in cost by $10 million. Which one got it wrong? Usually, the team looking to spend the most.
+The power and flexibility of public cloud platforms are why we leverage the cloud in the first place, but caution is warranted to avoid the trap of overengineering generative AI systems. Thoughtful planning, judicious service selection, and continuous optimization are key to building cost-effective AI solutions. By adhering to these principles, enterprises can harness the full potential of generative AI without falling prey to the complexities and costs of an overengineered system.
+Contributor
+David S. Linthicum is an internationally recognized industry expert and thought leader. Dave has authored 13 books on computing, the latest of which is An Insider’s Guide to Cloud Computing . Dave’s industry experience includes tenures as CTO and CEO of several successful software companies, and upper-level management positions in Fortune 100 companies. He keynotes leading technology conferences on cloud computing, SOA, enterprise application integration, and enterprise architecture. Dave writes the Cloud Computing blog for InfoWorld. His views are his own.
+More from this author
+Popular
+Articles
+Videos
+news
