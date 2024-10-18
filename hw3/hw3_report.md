@@ -93,7 +93,7 @@ print('The number of html containing files is: ', total_valid)
 ```
 ### Commentary
 
-I created a python program to extract the text content from the raw HTML. Rather than iterating through the folder containing all of the raw HTML files, I decided to use the hashmap file I created to load in one file at a time, store that hashvalue in temporary memory, extract the content, and then save valid content to a hashvalue-named file of the processed content. Thus, each URI ended up with a unique hashvalue-named raw and processed file. Throughout creation of this program, many errors were thrown as I tested extracting the content. I created try and except blocks to account for the HTMLExtractionErrors and UnicodeDecodeErrors that I was receiving. Additionally, I ensured I only saved content to a file if there was actually content to be found and not just an empty output that would result in a OB file. After this process was completed, I ended up with 733 content-containing processed files.
+I created a python program to extract the text content from the raw HTML. Rather than iterating through the folder containing all of the raw HTML files, I decided to use the hashmap file I created to load in one file at a time, store that hash-value in temporary memory, extract the content, and then save valid content to a hash-value-named file of the processed content. Thus, each URI ended up with a unique hash-value-named raw and processed file. Throughout the creation of this program, many errors were thrown as I tested extracting the content. I created try and except blocks to account for the HTMLExtractionErrors and UnicodeDecodeErrors that I was receiving. Additionally, I ensured I only saved content to a file if there was actually content to be found and not just an empty output that would result in a OB file. After this process was completed, I ended up with 733 content-containing processed files.
 
 *How many of your 1000 URIs produced useful text? If that number was less than 1000, did that surprise you?*
 
@@ -190,7 +190,7 @@ Total Number of Documents with 'Career': 58
     1350 8376c58e4bbbc685f5e2271fd489caca_processed.txt
 ```
 
-I used the command line to count the number of files with occurences of the chosen word, 'career', across the entire corpus of documents. I made sure that I was counting the actual number of files, not the number of lines that the word appears in, as this would overestimate the number of documents. Only 58 documents contained the word 'career'. I chose ten documents and searched for occurences of the word, ensuring that the case of the word was not taken into account.
+I used the command line to count the number of files with occurrences of the chosen word, 'career', across the entire corpus of documents. I made sure that I counted the actual number of files, not the number of lines in which the word appears, as this would overestimate the number of documents. Only 58 documents contained the word 'career'. I chose ten documents and searched for occurrences of the word, ensuring that the case of the word was not considered.
 
 
 **Table 1. Indicating the TF, IDF, and TF-IDF Values For Each Link, Ranked by TF-IDF**
@@ -209,8 +209,8 @@ I used the command line to count the number of files with occurences of the chos
 |0.000012|0.0000068|1.78|https://www.marketingaiinstitute.com/blog/the-ai-show-episode-117?utm_campaign=MAII%3A%20Social%20Media&utm_content=310156390&utm_medium=social&utm_source=twitter&hss_channel=tw-769616948522946560
 
 
-To calculate TF: occurence in document/words in document
-- for each document, I used the count of word occurence divided by the total number of words in the document
+To calculate TF: occurrence in document/words in the document
+- for each document, I used the count of word occurrence divided by the total number of words in the document
 - Example for **URI ONE**: 3/5254 = 0.00057
   
 To calculate IDF: log<sub>2</sub>(total documents in corpus/documents with term)
