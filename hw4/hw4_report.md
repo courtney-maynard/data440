@@ -36,7 +36,7 @@ Answer:
 The mean number of friends that the user's friends have is 542.67, or approximately 543 friends. The standard deviation of the number of friends that the user's friends have is 536.67, or approximately 537 friends. The median number of friends that the user's friends have is 396.0. Based on this, the friendship paradox holds true because the user has 98 friends, and thus their friends have more friends on average. 
 
 
-### Q:  Does the friendship paradox hold for this user and their friends on Facebook?
+Q:  Does the friendship paradox hold for this user and their friends on Facebook?
 ```python
 '''PREPARING FOR THE GRAPH'''
 friend_counts = friend_counts.sort_values(by=['FRIENDCOUNT'])
@@ -77,5 +77,8 @@ plt.xlabel('Sorted Rank of Friend by Number of Their Friends', color = 'black', 
 plt.ylabel('Number of Friends', color = 'black', size = 16)
 plt.savefig('friend_counts_plot.png', bbox_inches='tight')
 ```
-<img src="">
-### Answer:
+<img src="friend_counts_plot.png">
+
+Answer:
+
+Based upon the graph, yes, the friendship paradox holds for the user. A majority of their friends have more friends than they do - the user ranks 11 out of 99 (the total of their friends and themself). Thus, 88.88% of their friends have more friends than they do. Combined with the statistics from the first part of the question, the user has fewer friends on average than their friends do.
