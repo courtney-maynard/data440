@@ -77,4 +77,5 @@ plt.xlabel('Sorted Rank of Friend by Number of Their Friends', color = 'black', 
 plt.ylabel('Number of Friends', color = 'black', size = 16)
 plt.savefig('friend_counts_plot.png', bbox_inches='tight')
 ```
+<img src="">
 ### Answer:
