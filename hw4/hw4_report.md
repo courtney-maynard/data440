@@ -32,9 +32,18 @@ print("The average number of friends that the user's friends have is: ", avg_fri
 print("The median number of friends that the user's friends have is: ", median_friends)
 print("The standard deviation of the number of friends that the user's friends have is: ", std_friends)
 ```
-**Answer:**
-The mean number of friends that the user's friends have is 542.67, or approximately 543 friends. The standard deviation of the number of friends that the user's friends have is 536.67, or approximately 537 friends. The median number of friends that the user's friends have is 396.0. Based on this, the friendship paradox holds true because the user has 98 friends, and thus their friends have more friends on average. 
 
+```console
+(base) courtneymaynard@Courtneys-MacBook-Pro-2 data440 % python3 friendship_paradox.py
+The average number of friends that the user's friends have is:  542.6734693877551
+The median number of friends that the user's friends have is:  396.0
+The standard deviation of the number of friends that the user's friends have is:  536.6744685696291
+The number of friends that the user has is:  98
+This puts the user at position:  11
+```
+
+**Answer:**
+The mean number of friends that the user's friends have is 542.67, or approximately 543 friends. The standard deviation of the number of friends that the user's friends have is 536.67, or approximately 537 friends. The median number of friends that the user's friends have is 396.0.
 
 **Q:  Does the friendship paradox hold for this user and their friends on Facebook?**
 ```python
@@ -79,4 +88,4 @@ plt.savefig('friend_counts_plot.png', bbox_inches='tight')
 ```
 <img src="friend_counts_plot.png">
 
-**Answer:** Based upon the graph, yes, the friendship paradox holds for the user. A majority of their friends have more friends than they do - the user ranks 11 out of 99 (the total of their friends and themself). Thus, 88.88% of their friends have more friends than they do. Combined with the statistics from the first part of the question, the user has fewer friends on average than their friends do.
+**Answer:** In order to construct the graph with the user in the correct position, I calculated where in the sorted rank of friends according to their number of friends the user fell. The user ranks 11 out of 99 (the total of their friends and themself), which provides us with a helpful statistic: 88.88% of their friends have more friends than they do. Though not every single friend has more friends than the user, an approximate 89% majority do, supporting the friendship paradox: that on average, an individual's friends will have more friends than that individual has. Additionally, the mean number of friends that the user has is approximately 543 friends, which is greater than the user's friend count of 98. Even when we consider the median, which may be a better measure of the center of the dataset in this instance since there is one friend that has over 4000 friends, the median number of friends is 396, which is still greater than 98. Thus, the user's friends have more friends on average than they do, making the friendship paradox hold true. 
