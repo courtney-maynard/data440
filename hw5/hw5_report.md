@@ -92,3 +92,8 @@ To create a graph that matches the Karate Club before the split shown in lecture
 **Q: How many nodes(students) eventually go with John and how many with Mr. Hi?**
 
 16 students eventually will split to go with Mr. Hi. 17 nodes are colored lavender - the 16 students plus Mr. Hi, who is node 1. Thus, 16 also go with John. 
+
+
+## Resources:
+https://pypi.org/project/dataframe-image/
+
