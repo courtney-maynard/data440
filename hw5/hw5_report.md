@@ -86,3 +86,9 @@ plt.show()
 <img src="Karate_Split_Colored_Graph.png">
 
 ### Commentary:
+
+To create a graph that matches the Karate Club before the split shown in lectures, I extracted the node attributes from the built-in karate club graph in NetworkX. I recognize I could have re-colored the nodes, however, I wanted the nodes to be numbered 1-34 instead of 0-33 to match the example, for clarity, and I decided it would give me some extra practice to both de-construct and construct a graph using node attributes. I started by creating a dataframe with all the necessary information to reconstruct a colorful graph, extracting the node itself, the list of edges, and the degrees for each node(member). I assigned a color to each node according to whether that member ended up in Mr. Hi's club or John A.'s club. I had to renumber the nodes by adding one, including the nodes inside the edge tuples. My completed dataframe then allowed me to construct a new graph by iteratively adding nodes of the correct color and filling in their edges (which adds nodes regardless of if the node had been added within the loop yet). Lastly, I drew the graph and chose the spring layout because it shows the split well. I created a legend for the different colors representing each club. 
+
+**Q: How many nodes(students) eventually go with John and how many with Mr. Hi?**
+
+16 students eventually will split to go with Mr. Hi. 17 nodes are colored lavender - the 16 students plus Mr. Hi, who is node 1. Thus, 16 also go with John. 
