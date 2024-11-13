@@ -93,6 +93,25 @@ To create a graph that matches the Karate Club before the split shown in lecture
 
 16 students eventually will split to go with Mr. Hi. 17 nodes are colored lavender - the 16 students plus Mr. Hi, who is node 1. Thus, 16 also go with John. 
 
+## Q2: Use the Girvan-Newman Algorithm to Illustrate The Split
+
+### Code:
+
+
+### Commentary:
+
+
+**Q: How many iterations did it take the split the graph?**
+
+It took 11 iterations in order for the graph to split into two connected components.
+
+## Q3: Compare The Actual to The Mathematical Split
+
+**Q: Did all of the same colored nodes end up in the same group? If not, what is different?**
+
+
+## Extra Credit Q5: Delete Edges Randomly and Compare to Highest Betweenness 
+
 
 ## Resources:
 https://pypi.org/project/dataframe-image/
