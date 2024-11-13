@@ -216,31 +216,31 @@ dfi.export(highest_data_collection_df, 'Highest_Betweenness_DataFrame.png', tabl
 
 ```
 ### Iterations:
-<img src="/highest_betweenness/Karate_Splitting_Highest_Iteration1_Graph.png">
+<img src="/hw5/highest_betweenness/Karate_Splitting_Highest_Iteration1_Graph.png">
 
-<img src="/highest_betweenness/Karate_Splitting_Highest_Iteration2_Graph.png">
+<img src="/hw5/highest_betweenness/Karate_Splitting_Highest_Iteration2_Graph.png">
 
-<img src="/highest_betweenness/Karate_Splitting_Highest_Iteration3_Graph.png">
+<img src="/hw5/highest_betweenness/Karate_Splitting_Highest_Iteration3_Graph.png">
 
-<img src="/highest_betweenness/Karate_Splitting_Highest_Iteration4_Graph.png">
+<img src="/hw5/highest_betweenness/Karate_Splitting_Highest_Iteration4_Graph.png">
 
-<img src="/highest_betweenness/Karate_Splitting_Highest_Iteration5_Graph.png">
+<img src="/hw5/highest_betweenness/Karate_Splitting_Highest_Iteration5_Graph.png">
 
-<img src="/highest_betweenness/Karate_Splitting_Highest_Iteration6_Graph.png">
+<img src="/hw5/highest_betweenness/Karate_Splitting_Highest_Iteration6_Graph.png">
 
-<img src="/highest_betweenness/Karate_Splitting_Highest_Iteration7_Graph.png">
+<img src="/hw5/highest_betweenness/Karate_Splitting_Highest_Iteration7_Graph.png">
 
-<img src="/highest_betweenness/Karate_Splitting_Highest_Iteration8_Graph.png">
+<img src="/hw5/highest_betweenness/Karate_Splitting_Highest_Iteration8_Graph.png">
 
-<img src="/highest_betweenness/Karate_Splitting_Highest_Iteration9_Graph.png">
+<img src="/hw5/highest_betweenness/Karate_Splitting_Highest_Iteration9_Graph.png">
 
-<img src="/highest_betweenness/Karate_Splitting_Highest_Iteration10_Graph.png">
+<img src="/hw5/highest_betweenness/Karate_Splitting_Highest_Iteration10_Graph.png">
 
-<img src="/highest_betweenness/Karate_Splitting_Highest_Iteration11_Graph.png">
+<img src="/hw5/highest_betweenness/Karate_Splitting_Highest_Iteration11_Graph.png">
 
 
 ### Commentary/Analysis:
-<img src="/highest_betweenness/Highest_Betweenness_DataFrame.png">
+<img src="/hw5/highest_betweenness/Highest_Betweenness_DataFrame.png">
 
 **Q: How many iterations did it take the split the graph?**
 
@@ -248,12 +248,135 @@ It took 11 iterations in order for the graph to split into two connected compone
 
 ## Q3: Compare The Actual to The Mathematical Split
 
+### Commentary/Analysis:
+
 **Q: Did all of the same colored nodes end up in the same group? If not, what is different?**
 
 
 ## Extra Credit Q5: Delete Edges Randomly and Compare to Highest Betweenness 
 
+### Code:
+```python
+''' EXTRA CREDIT Q5'''
+random.seed(24)
 
+'''
+random_betweenness_deletion_method()
+    inputs: none
+    outputs: data_collection_df (a dataframe), and intermediary steps save a graph image
+
+    - uses a random algorithm for splitting graphs
+        - calculate the edge betweenness for each edge
+        - randomly select an edge 
+        - removes the edge
+        - repeat until the graph has split into two components
+
+    - collects analysis data 
+'''
+def random_betweenness_deletion_method():
+    karate_splitting = karate_split
+
+    method = 'Random'
+    iteration = 0
+    
+    # the data I want to collect for analysis sake. variables I'm saving are indicated below where applicable
+    data_collection_df = pd.DataFrame(columns = ['Iteration', 'NumEdgesBefore', 'RandomBetweenness', 'RandomEdgeRemove', 'Node1', 'Node2', 'Node1Color', 'Node2Color'])
+    num_connected = number_connected_components(karate_splitting) 
+    
+    # the loop runs while the graph has not yet split into two connected components
+    while num_connected < 2:
+        iteration+=1
+        print('Iteration', iteration)
+        
+        # calculating the edge betweenness and which edges correspond
+        edge_between = edge_betweenness_centrality(karate_splitting)
+        edge_between_df = pd.DataFrame.from_dict(edge_between, orient='index', columns = ['Betweenness'])
+        edge_between_df.reset_index(inplace=True)
+        edge_between_df.rename(columns={'index': 'Edge'}, inplace=True)
+        num_edges_before = len(edge_between_df) # datacollection
+        
+        # choose a random edge to delete
+        random_index = random.randint(0, len(edge_between_df) - 1)
+        random_betweenness = edge_between_df['Betweenness'][random_index]  # datacollection
+        random_edge = edge_between_df['Edge'][random_index] # datacollection
+        
+        # data collection
+        node1 = random_edge[0]
+        node2 = random_edge[1]
+    
+        # data collection
+        if node1 in mr_hi_list:
+            node1_color = 'lavender'
+        else:
+            node1_color = 'lightblue'
+
+        # data collection
+        if node2 in mr_hi_list:
+            node2_color = 'lavender'
+        else:
+            node2_color = 'lightblue'
+    
+        # remove the edge (* unpacks the tuple)
+        karate_splitting.remove_edge(*random_edge)
+
+        # save all of the data I want to analyze as a row in the dataframe. each iteration corresponds to a row
+        data_collection_df.loc[len(data_collection_df)] = [iteration, num_edges_before, random_betweenness, random_edge, node1, node2, node1_color, node2_color]
+    
+        # draw and output the graph
+        drawing_splitting_graph(karate_splitting, iteration, method)
+        
+        # update the number of connected components, the condition for the while loop
+        num_connected = number_connected_components(karate_splitting)
+
+    return data_collection_df
+
+# run the deletion method which will save all of the iteration graphs
+# also save and export the data collection dataframe
+random_data_collection_df = random_betweenness_deletion_method()
+dfi.export(random_data_collection_df, 'Random_Betweenness_DataFrame.png', table_conversion = 'matplotlib')
+```
+
+### Iterations:
+<img src="/hw5/random_betweenness/Karate_Splitting_Random_Iteration1_Graph.png">
+
+<img src="/hw5/random_betweenness/Karate_Splitting_Random_Iteration2_Graph.png">
+
+<img src="/hw5/random_betweenness/Karate_Splitting_Random_Iteration3_Graph.png">
+
+<img src="/hw5/random_betweenness/Karate_Splitting_Random_Iteration4_Graph.png">
+
+<img src="/hw5/random_betweenness/Karate_Splitting_Random_Iteration5_Graph.png">
+
+<img src="/hw5/random_betweenness/Karate_Splitting_Random_Iteration6_Graph.png">
+
+<img src="/hw5/random_betweenness/Karate_Splitting_Random_Iteration7_Graph.png">
+
+<img src="/hw5/random_betweenness/Karate_Splitting_Random_Iteration8_Graph.png">
+
+<img src="/hw5/random_betweenness/Karate_Splitting_Random_Iteration9_Graph.png">
+
+<img src="/hw5/random_betweenness/Karate_Splitting_Random_Iteration10_Graph.png">
+
+<img src="/hw5/random_betweenness/Karate_Splitting_Random_Iteration11_Graph.png">
+
+<img src="/hw5/random_betweenness/Karate_Splitting_Random_Iteration12_Graph.png">
+
+<img src="/hw5/random_betweenness/Karate_Splitting_Random_Iteration13_Graph.png">
+
+<img src="/hw5/random_betweenness/Karate_Splitting_Random_Iteration14_Graph.png">
+
+<img src="/hw5/random_betweenness/Karate_Splitting_Random_Iteration15_Graph.png">
+
+<img src="/hw5/random_betweenness/Karate_Splitting_Random_Iteration16_Graph.png">
+
+<img src="/hw5/random_betweenness/Karate_Splitting_Random_Iteration17_Graph.png">
+
+<img src="/hw5/random_betweenness/Karate_Splitting_Random_Iteration18_Graph.png">
+
+<img src="/hw5/random_betweenness/Karate_Splitting_Random_Iteration19_Graph.png">
+
+### Commentary/Analysis:
+<img src="/hw5/random_betweenness/Random_Betweenness_DataFrame.png">
 ## Resources:
 https://pypi.org/project/dataframe-image/
 
