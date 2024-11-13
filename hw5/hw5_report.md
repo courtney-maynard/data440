@@ -7,7 +7,7 @@
 ## Q1: Color Nodes Based on Final Split
 
 ### Code:
-```python
+``` python
 # IMPORT STATEMENTS
 import numpy as np
 import pandas as pd
@@ -17,7 +17,11 @@ import networkx as nx
 import scipy
 import matplotlib.patches as mpatches
 import matplotlib.lines as mlines
+from networkx import edge_betweenness_centrality, number_connected_components
+import random
+import dataframe_image as dfi
 
+# Q1: COLORING THE SPLIT
 
 # EXPLORING KARATE CLUB GRAPH
 karate_base = nx.karate_club_graph()
@@ -69,14 +73,15 @@ for _, member in split_df.iterrows():
 
 # DRAW THE GRAPH
 node_colors = split_df['Color']
+
+plt.title('Karate Club Eventual Split, Where Each Node is A Member of the Original Club', fontsize=12, fontname='DejaVu Serif', color='black')
+
 nx.draw_spring(karate_split, with_labels=True, node_color=node_colors, font_size = 10)
 
 # making a legend by creating circlular symbols
 lavender_circle= mlines.Line2D([], [], marker='o', color='w', label='Mr. Hi', markersize=10, markerfacecolor='lavender', markeredgewidth=2)
 lightblue_circle = mlines.Line2D([], [], marker='o', color='w', label='John A.', markersize=10, markerfacecolor='lightblue', markeredgewidth=2)
 plt.legend(handles=[lavender_circle, lightblue_circle], loc='upper left', fontsize=12, frameon=False, prop={'family': 'DejaVu Serif'})
-
-plt.title('Karate Club Eventual Split, Where Each Node is A Member of the Original Club', fontsize=12, fontname='DejaVu Serif', color='black')
 
 plt.axis('off') 
 plt.savefig('Karate_Split_Colored_Graph.png')
@@ -96,10 +101,146 @@ To create a graph that matches the Karate Club before the split shown in lecture
 ## Q2: Use the Girvan-Newman Algorithm to Illustrate The Split
 
 ### Code:
+``` python
+## Q2: GIRVAN-NEWMAN ALGORITHM
+
+karate_splitting = karate_split.copy # made a copy of graph from above so the original one isn't changed
+
+'''
+drawing_splitting_grpah(graph, iteration, method)
+    inputs: graph (networkX graph object) --> the graph to be drawn
+            iteration (int) --> the number of times an edge has been removed from the graph
+            method (string) --> whether the algorithm is removing edges with 'random' or 'highest' betweenness
+    outputs: a figure, saved
+
+    - this function takes the graph to be drawn and titles it according to the iteration of the 
+    karate club splitting. it creates a network drawing with lavender for nodes (students) belonging
+    to Mr. Hi's club and light blue for those belonging to John A's club.
+    - it saves the network graph picture into a file named according to the iteration and method used
+'''
+def drawing_splitting_graph(graph, iteration, method):
+    method = method
+    
+    node_colors = split_df['Color']
+
+    plt.title(f'Karate Club Splitting Iteration {iteration}', fontsize=12, fontname='DejaVu Serif', color='black')
+    
+    nx.draw_spring(graph, with_labels=True, node_color=node_colors, font_size = 10)
+    
+    # making a legend by creating circlular symbols
+    lavender_marker = mlines.Line2D([], [], marker='o', color='w', label='Mr. Hi', markersize=10, markerfacecolor='lavender', markeredgewidth=2)
+    lightblue_marker = mlines.Line2D([], [], marker='o', color='w', label='John A.', markersize=10, markerfacecolor='lightblue', markeredgewidth=2)
+    plt.legend(handles=[lavender_marker, lightblue_marker], loc='upper left', fontsize=12, frameon=False, prop={'family': 'DejaVu Serif'})
+    
+    plt.axis('off') 
+    plt.savefig(f'Karate_Splitting_{method}_Iteration{iteration}_Graph.png')
+    plt.show()
+
+'''
+highest_betweenness_deletion_method()
+    inputs: none
+    outputs: data_collection_df (a dataframe), and intermediary steps save a graph image
+
+    - runs the Girvan-Newman algorithm for splitting graphs
+        - calculate the edge betweenness for each edge
+        - finds the maximum edge betweenness
+        - removes the edge
+        - repeat until the graph has split into two components
+    - collects analysis data 
+'''
+def highest_betweenness_deletion_method():
+    karate_splitting = karate_split
+
+    method = 'Highest'
+    iteration = 0
+    
+    # the data I want to collect for analysis sake. variables I'm saving are indicated below where applicable
+    data_collection_df = pd.DataFrame(columns = ['NumEdgesBefore', 'MaxBetweenness', 'SecondHighestBetweenness', 'EdgeRemove', 'Node1', 'Node2', 'Node1Color', 'Node2Color'])
+    num_connected = number_connected_components(karate_splitting)
+
+    # the loop runs while the graph has not yet split into two connected components
+    while num_connected < 2:
+        iteration+=1
+        print('Iteration', iteration)
+        
+        # calculating the edge betweenness and which edges correspond to this
+        edge_between = edge_betweenness_centrality(karate_splitting)
+        edge_between_df = pd.DataFrame.from_dict(edge_between, orient='index', columns = ['Betweenness'])
+        edge_between_df.reset_index(inplace=True)
+        edge_between_df.rename(columns={'index': 'Edge'}, inplace=True)
+        num_edges_before = len(edge_between_df) # datacollection
+        
+        # finding the maximum edge betweenness
+        max_between = max(edge_between_df['Betweenness']) # datacollection
+        loc_max = edge_between_df['Betweenness'].idxmax() 
+        edge_max = edge_between_df['Edge'][loc_max] # datacollection
+    
+        # find the second highest max betweenness, datacollection
+        sorted_betweenness = edge_between_df['Betweenness'].sort_values(ascending=False)
+        second_highest = sorted_betweenness.iloc[1]
+        
+        # data collection
+        node1 = edge_max[0]
+        node2 = edge_max[1]
+
+        # data collection
+        if node1 in mr_hi_list:
+            node1_color = 'lavender'
+        else:
+            node1_color = 'lightblue'
+
+        # data collection
+        if node2 in mr_hi_list:
+            node2_color = 'lavender'
+        else:
+            node2_color = 'lightblue'
+    
+        # remove the edge (* unpacks the tuple)
+        karate_splitting.remove_edge(*edge_max)
+    
+        # save all of the data I want to analyze as a row in the dataframe. each iteration corresponds to a row
+        data_collection_df.loc[len(data_collection_df)] = [num_edges_before, max_between, second_highest, edge_max, node1, node2, node1_color, node2_color]
+    
+        # draw and output the graph
+        drawing_splitting_graph(karate_splitting, iteration, method)
+        
+        # update the number of connected components, the condition for the while loop
+        num_connected = number_connected_components(karate_splitting)
+
+    return data_collection_df
+
+# run the deletion method which will save all of the iteration graphs
+# also save and export the data collection dataframe
+highest_data_collection_df = highest_betweenness_deletion_method()
+dfi.export(highest_data_collection_df, 'Highest_Betweenness_DataFrame.png', table_conversion = 'matplotlib')
+
+```
+### Iterations:
+<img src="/highest_betweenness/Karate_Splitting_Highest_Iteration1_Graph.png">
+
+<img src="/highest_betweenness/Karate_Splitting_Highest_Iteration2_Graph.png">
+
+<img src="/highest_betweenness/Karate_Splitting_Highest_Iteration3_Graph.png">
+
+<img src="/highest_betweenness/Karate_Splitting_Highest_Iteration4_Graph.png">
+
+<img src="/highest_betweenness/Karate_Splitting_Highest_Iteration5_Graph.png">
+
+<img src="/highest_betweenness/Karate_Splitting_Highest_Iteration6_Graph.png">
+
+<img src="/highest_betweenness/Karate_Splitting_Highest_Iteration7_Graph.png">
+
+<img src="/highest_betweenness/Karate_Splitting_Highest_Iteration8_Graph.png">
+
+<img src="/highest_betweenness/Karate_Splitting_Highest_Iteration9_Graph.png">
+
+<img src="/highest_betweenness/Karate_Splitting_Highest_Iteration10_Graph.png">
+
+<img src="/highest_betweenness/Karate_Splitting_Highest_Iteration11_Graph.png">
 
 
-### Commentary:
-
+### Commentary/Analysis:
+<img src="/highest_betweenness/Highest_Betweenness_DataFrame.png">
 
 **Q: How many iterations did it take the split the graph?**
 
