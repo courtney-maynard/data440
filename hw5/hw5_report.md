@@ -252,6 +252,8 @@ It took 11 iterations in order for the graph to split into two connected compone
 
 **Q: Did all of the same colored nodes end up in the same group? If not, what is different?**
 
+The two groups formed by the Girvan-Newman algorithm are not the same as the actual karate club split. According to the algorithm, four of John's students would go to Mr. Hi's group, while 6 of Mr. Hi's students would be in the same group as John and a majority of his students. Additionally, the groups are not of equal size. One connected component, the one with majority purple (Mr. Hi's students) nodes has fifteen nodes, while the other component has 19 nodes. In the actual split, there are 17 nodes in each group. The circular structural pattern formed by the edges and nodes connecting to nodes 33 and 34 for the majority-blue component is similar to the circular structural formed by these same components in the entire connected graph before the split algorithm was performed. 
+
 
 ## Extra Credit Q5: Delete Edges Randomly and Compare to Highest Betweenness 
 
@@ -377,6 +379,8 @@ dfi.export(random_data_collection_df, 'Random_Betweenness_DataFrame.png', table_
 
 ### Commentary/Analysis:
 <img src="/hw5/random_betweenness/Random_Betweenness_DataFrame.png">
+
+
 ## Resources:
 https://pypi.org/project/dataframe-image/
 
