@@ -14,3 +14,23 @@
   - keep track of this data
   - create a visualization showing the likelihood of the account to be misinformation
   - then post that visualization as a reply to several tweets on that account, with a caption saying something like 'watch out! this account may be misinforming!' --> make sure there is a certain threshold to limit false positives
+ 
+
+- image verification --> could solve the problem of people posting images out of context
+  - download image and find the original source
+  - post original source as a reply to the source
+  - analyze how many
+ 
+- volunteer opportunities
+  - scans for tweets that offer volunteer opportunities with keywords such as 'volunteers needed'
+    - only include tweets that have a link to the actual place where you can sign-up
+  - collects the user who is tweeting, the time of day the tweet was tweeted, the location of the tweet, and the text
+  - determines the type of volunteering/cause supported/event and the date of event using keyword analysis
+  - weekly and monthly trend analysis:
+    - accounts that post the most volunteer opportunities
+    - geographic map of the volunteer opportunities (visualization)
+    - trends in the causes/events supported if any
+    - trends in the time of day the tweet was tweeted
+  - posts a weekly and monthly volunteer report:
+    - includes the tags of top three organizations that post the most frequently
+    - posts trend visualizations for geographic map, trends in causes, and trends in times of day with suggestions to followers as to when      to source the best volunteer opportunities and what kind of opportunities are out there
