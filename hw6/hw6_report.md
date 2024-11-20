@@ -416,3 +416,15 @@ if __name__ == "__main__":
 
     posting_visualizations()
 ```
+
+## changes to 'scrape_twitter.py' to incorporate posting visualizations:
+```python
+
+image_path = kwargs.get('image_path', None)
+
+if image_path and Path(image_path).exists():
+        # Upload the image by setting the file input field
+        file_input_selector = 'input[type="file"]'
+        browser_dets['page'].set_input_files(file_input_selector, image_path)
+        time.sleep(1)  # Wait for the image upload to be ready
+```
