@@ -4,11 +4,56 @@
 <h3 align = "center">DATA 440, Fall 2024</h3>
 <h3 align = "center">November 19th, 2024</h3>
 
-## Criteria One: Usefulness
+<h4 align = "center"> The bot can be found at the following link: https://x.com/cbm_data_sci</h4>
 
+## Criteria One: Usefulness
+**Consider creating a bot to solve or partly solve a problem you care about --- maybe not poverty or crime or income inequality. In other words create a tool to address a need. Provide an argument in your report for the reason your Twitter bot is useful.**
+
+My Twitter bot serves as a centralized location for statistics regarding volunteer opportunities posted on Twitter and boosted opportunities, making it easier for people interested in volunteering to find ways to give back. I am very passionate about volunteering, and I noticed when I go home, it is harder to find places to volunteer because there is a lack of large-scale communication, unlike the many centralized databases William & Mary and Williamsburg have. Thus, I decided to tackle the problem of lack of information regarding volunteer opportunities. My bot searches through all of the volunteer opportunities posted on Twitter within the last week and month, aggregates them to post helpful statistics, and boosts opportunities. In order to figure out what keywords would yield posts with calls for volunteers, I performed a lot of manual searching. I landed on three key phrases: 'volunteer opportunities', 'volunteers needed', and 'volunteer with us'. I found that many replies would have some combination of these words but not advertise volunteer opportunities - usually, they were sarcastic or rude replies to other tweets. Thus, I decided to filter out all tweets that are replies, working under the assumption that legitimate volunteer postings will be posted as singular tweets, not replies. 
+
+The usefulness of the bot comes from both the ideas communicated through the visualizations and the boosting feature. I performed exploratory data analysis on all of the data I collected in a Jupyter notebook, which helped me decide on two key statistics and three visualizations to focus on. I decided to post two tweets about the top accounts for postings, one from the past week and one from the past month. Twitter users who stay updated with this bot account could then find new users to follow that may get them connected with more opportunities. 
+
+<img src="/hw6/twitterproof/topfiveweek_actual.png" width="400" >
+
+<img src="/hw6/twitterproof/topfivemonth_actual.png" width="400">
+
+
+Next, I created three visualizations. Each visualization can help users identify when they should log-on to see more volunteer opportunities in their feed, or when they should check for new postings to be the first to sign up. One observation I had while manually searching for volunteer opportunities in order to create the scraper was that some postings would link to sign-up websites, while others would have photos showing more information about the event and the contact information to get connected. I accounted for these two primary ways of telling social media about volunteer opportunities within my scraper, and was interested if there was a correlation between the days opportunities are posted and whether they have links or not. It does not appear that there is a correlation currently, but this could change throughout the months. Users may want to log in on a Tuesday to see more opportunities, as evidenced by the first visualization, or between 3-8 Eastern Standard time, as evidenced by the last visualization. The number of opportunities posted each day has varied greatly (visualization two), but this graphic is not entirely representative of all posts, as twitter has rate limits and the scraper will grab the most recent tweets or most relevant before older or less relevant tweets. 
+
+<img src="/hw6/twitterproof/stacked_actual.png" width="400" >
+
+<img src="/hw6/twitterproof/days_actual.png" width="400" >
+
+<img src="/hw6/twitterproof/times_actual.png" width="400" >
+
+Lastly, I decided to implement boosting of volunteer opportunities, with the goal of the bot being an account people can follow to find more niche opportunities. The bot currently doesn't filter for user's geographic ranges, so it is just reposting any opportunities it finds, but it could certainly be tweaked for certain states/countries/localities. I created a unique hashtag, #BOOSTINGTHISOPPORTUNITY to make all the posts easier to find, and tag the original poster for Twitter users to reference back to for more information. By preserving the sign-up links and other information included about the tweet, users could hopefully find volunteer postings with greater ease. The algorithm could additionally be tweaked to only repost opportunities below a certain number of likes or retweets, but I found that was not necessary from my data exploration - a majority of the tweets scraped had less than ten likes. All of the opportunities that the bot chooses from were posted within the past week, ensuring that the date of volunteering is less likely to have passed so the posts are still relevant. Future iterations of the bot could use NLP techniques to filter posts by type of volunteer activity and for the date in order to post with more specialized hashtags to allow users to filter for what they want to do and when. Below are the ten randomly chosen opportunities that the bot posted. 
+
+<img src="/hw6/twitterproof/boostingone.png" width="400" >
+
+<img src="/hw6/twitterproof/boostingtwo.png" width="400" >
+
+<img src="/hw6/twitterproof/boostingthree.png" width="400" >
+
+<img src="/hw6/twitterproof/boostingfour.png" width="400" >
+
+<img src="/hw6/twitterproof/boostingfive.png" width="400" >
+
+<img src="/hw6/twitterproof/boostingsix.png" width="400" >
+
+<img src="/hw6/twitterproof/boostingseven.png" width="400" >
+
+<img src="/hw6/twitterproof/boostingeight.png" width="400" >
+
+<img src="/hw6/twitterproof/boostingnine.png" width="400" >
+
+<img src="/hw6/twitterproof/boostingten.png" width="400" >
+
+Overall, my Twitter bot serves the social good of helping Twitter users find more ways to volunteer and give back in their communities.
 
 ## Criteria Two: Originality/Innovation
+**Express yourself, be creative. Alternatively, consider improving a pre-existing solution or tool. Provide an argument in your report for the reason your Twitter bot is original or innovative.**
 
+My twitter bot is original because it combines scraping from and posting to twitter, utilizing the collected data from scraped tweets within the posts. To run the bot, I ran both files 'good_twitter_bot.py' and 'good_twitter_bot_analysis_post.py'. The first file will gather the volunteer opportunities from twitter and extract the data, saving it to then be read in during execution of the second file. The second file creates all of the tweet messages and visualizations, as well as posts them. This bot could be set up to run on a weekly basis, continuing to update followers with relevant opportunities and provide more summary data. I improved my twitter scraping code from our earlier projects in order to incorporate the fifteen minute cool down period, meaning that I did not have to manually rescrape for each keyword and the bot truly acts as a scraping, analysis, and posting bot. To my knowledge, a bot like this does not yet exist, so the idea itself, as well as the code to execute, is original. Additionally, I adapted the scraping twitter code in order to post images, not just text, so that the bot could tweet the visualizations. The different types of tweets that my bot posts allows for a greater chance of interaction by users, as it appeals to people who are interested in data visualizations and statistics, as well as people interested in volunteering. I love creating visualizations, so it was important to me to have a creative component of the posted tweets, providing a more original spin on the overall project goal of posting tweets. The visualizations can be found above. 
 
 ## Code:
 ### 'good_twitter_bot.py': gathering tweets and extracting data
