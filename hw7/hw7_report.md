@@ -5,7 +5,7 @@
 <h3 align = "center">November 26th, 2024</h3>
 
 
-## Q1 
+## Question 1
 Find three users who are closest to me in terms of age, gender, and occupation.
 For each of those 3 users:
 
@@ -141,7 +141,7 @@ Independence Day (ID4) (1996)    1.0
 ### Commentary
 To load in the data, I made minor changes to the loadMovieLens function to include loading in the user datafile and returning a dictionary. I subsetted all of the users by their age, gender, and occupation. There were five movie critics who were also 22-year-old female students, so I chose the first three according to a numerical ordering of their user id. To find their top and bottom movies, I took subsets from a dataframe representation of the prefs dictionary and then sorted their values ascending and descending. I haven't seen any of the top ten movies from either the favorites or least favorites lists for any of the three users, so I looked up some movie summaries and ended up choosing user 711 to be substitute me for the rest of the project. 
 
-## Q2
+## Question 2
 Based on the ratings that users have given to the movies, answer the following questions:
 
 - **a: which five users are most correlated to the *substitute me*? (i.e. which 5 users rate movies most similarly to the substitute me?)**
@@ -290,7 +290,7 @@ Movie ratings in common between substitute me and user 309:
 ### Commentary
 I changed the topMatches function to allow the user to input if they want to select top or bottom matches through an additional parameter, t_or_b. This prevented me from making two different functions, one for top items (people or movies) and one for bottom items, and I ended up using this myTopChosenMatches function in a later function. In addition to looking at which critics are most correlated with the substitute me, I was curious about which movies they rated in common, which is a factor in determining the correlation between critics. To investigate, I created a function that compares substitute me with the other users and returns the movie and rating for all movies that the two users rated exactly the same. I was shocked to see that for the most similar user to substitute me, user 662, who had a similarity score of 1.0, there were no movies in common. For the other user with a similarity score of 1.0, user 358, there were eight movies in common. Another shock was that for a critic who correlated -1.0 with substitute me, user 431, there was one movie rated in common. 
 
-## Q3
+## Question 3
 Computing ratings for all the films that the *substitute me* has not seen.
 
 - **provide a list of the top five recommendations for films that the *substitute me* should see**
@@ -388,7 +388,7 @@ Babyfever (1994) with rating: 1.0
 ### Commentary
 I made small changes to the getRecommendations function to adapt it to return either the top or bottom of the sorted recommendation list, according to what the user inputs for the t_or_b parameter. I incorporated my earlier function, myTopChosenMatches. The function getRecommendations computes all of the ratings for the films that substitute me did not see, which is many films. I have seen the number one recommended movie for substitute me, which is Prefontaine, and I really enjoy that movie. 
 
-## Q4
+## Question 4
 Choose my favorite and least favorite films from the list.
 - **for each film, generate a list of the top five most correlated and bottom five least correlated films (20 in total)**
 
