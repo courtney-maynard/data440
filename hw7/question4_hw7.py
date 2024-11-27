@@ -102,13 +102,13 @@ for similarity, movie in least_similar_fav:
     print(f'{movie} with similarity score of: {similarity}')
 print('-'*100)
 
-print('five most similar movies to my least favorite movie, ', FAV_MOVIE, '\n')
-for similarity, movie in similar_fav:
+print('five most similar movies to my least favorite movie, ', LEAST_FAV_MOVIE, '\n')
+for similarity, movie in similar_least_fav:
     print(f'{movie} with similarity score of: {similarity}')
 print('-'*100)
 
 print('five least similar movies to my least favorite movie, ', LEAST_FAV_MOVIE, '\n')
-for similarity, movie in least_similar_fav:
+for similarity, movie in least_similar_least_fav:
     print(f'{movie} with similarity score of: {similarity}')
 print('-'*100)
 
