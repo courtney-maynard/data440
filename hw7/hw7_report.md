@@ -97,6 +97,7 @@ for user, movies in top_three_least_fav.items():
     print(f'\nUser {user}:')
     print(top_three_least_fav[user].to_string(index=True))
 ```
+Parts A and B Answers:
 
 ```shell
 (base) courtneymaynard@Courtneys-MacBook-Pro-2 homework7 % python3 question1_hw7.py
@@ -138,6 +139,7 @@ Independence Day (ID4) (1996)    1.0
 ```
 
 ### Commentary
+To load in the data, I made minor changes to the loadMovieLens function to include loading in the user datafile and returning a dictionary. I subsetted all of the users by their age, gender, and occupation. There were five movie critics who were also 22-year-old female students, so I chose the first three according to a numerical ordering of their user id. To find their top and bottom movies, I took subsets from a dataframe representation of the prefs dictionary and then sorted their values ascending and descending. I haven't seen any of the top ten movies from either the favorites or least favorites lists for any of the three users, so I looked up some movie summaries and ended up going with user 711 to be substitute me for the rest of the project. 
 
 ## Q2
 Based on the ratings that users have given to the movies, answer the following questions:
@@ -467,13 +469,13 @@ for similarity, movie in least_similar_fav:
     print(f'{movie} with similarity score of: {similarity}')
 print('-'*100)
 
-print('five most similar movies to my least favorite movie, ', FAV_MOVIE, '\n')
-for similarity, movie in similar_fav:
+print('five most similar movies to my least favorite movie, ', LEAST_FAV_MOVIE, '\n')
+for similarity, movie in similar_least_fav:
     print(f'{movie} with similarity score of: {similarity}')
 print('-'*100)
 
 print('five least similar movies to my least favorite movie, ', LEAST_FAV_MOVIE, '\n')
-for similarity, movie in least_similar_fav:
+for similarity, movie in least_similar_least_fav:
     print(f'{movie} with similarity score of: {similarity}')
 print('-'*100)
 
@@ -497,21 +499,21 @@ American Strays (1996) with similarity score of: 0
 August (1996) with similarity score of: 0
 B. Monkey (1998) with similarity score of: 0
 ----------------------------------------------------------------------------------------------------
-five most similar movies to my least favorite movie,  Groundhog Day (1993) 
+five most similar movies to my least favorite movie,  Blade Runner (1982) 
 
-Wings of Courage (1995) with similarity score of: 1.0
+Yankee Zulu (1994) with similarity score of: 1.0
+Wonderland (1997) with similarity score of: 1.0
+Woman in Question, The (1950) with similarity score of: 1.0
 Window to Paris (1994) with similarity score of: 1.0
-Wife, The (1995) with similarity score of: 1.0
-The Deadly Cure (1996) with similarity score of: 1.0
-Someone Else's America (1995) with similarity score of: 1.0
+Wend Kuuni (God's Gift) (1982) with similarity score of: 1.0
 ----------------------------------------------------------------------------------------------------
 five least similar movies to my least favorite movie,  Blade Runner (1982) 
 
-A Chef in Love (1996) with similarity score of: 0
-Aiqing wansui (1994) with similarity score of: 0
 American Strays (1996) with similarity score of: 0
 August (1996) with similarity score of: 0
 B. Monkey (1998) with similarity score of: 0
+Babysitter, The (1995) with similarity score of: 0
+Ballad of Narayama, The (Narayama Bushiko) (1958) with similarity score of: 0
 ----------------------------------------------------------------------------------------------------
 ```
 ### Commentary
