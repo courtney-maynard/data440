@@ -15,7 +15,7 @@ For each of those 3 users:
 
 Based on the movie values in those 6 tables, choose a user that is most like me, the *substitute me*. 
 
-### Code/Output
+### Code/Outputs
 ```python
 import pandas as pd 
 import numpy as np
@@ -387,7 +387,7 @@ Choose my favorite and least favorite films from the list.
 - **for each film, generate a list of the top five most correlated and bottom five least correlated films (20 in total)**
 - *Q: Based on your knowledge of the resulting films, do I agree with the results? Do I personally like/dislike the resulting films?*
 
-### Code/Output
+### Code/Outputs
 ```python
 from recommendations import sim_pearson, sim_distance, transformPrefs
 
