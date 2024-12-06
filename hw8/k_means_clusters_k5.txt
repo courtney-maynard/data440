@@ -1,0 +1,17 @@
+k-Means clustering results for k=5
+----------------------------------------------------------------------------------------------------
+cluster 1:
+nike, princeton, mit, ucla
+
+cluster 2:
+tomgoom, yale, brownuniversity, uva, johnshopkins, kamalaharris, timkaine, realdonaldtrump, joebiden, mike_pence, aoc, speakerpelosi, barackobama, hillaryclinton
+
+cluster 3:
+runnerspace, on_running, adidasrunning, usatf, ncaatrackfield, londonmarathon, comradesrace, flotrack
+
+cluster 4:
+the1975, technology, recode, thenextweb, techcrunch, techrepublic, engadget, gigaom, wired, arstechnica
+
+cluster 5:
+runnersworld, harvard, stanford, sabrinaannlynn, taylornation13, gracieshq, charli_xcx, troyesivan, livieshq, sza, rihanna, justinbieber, zdnet, markwarner
+

@@ -1,0 +1,32 @@
+k-Means clustering results for k=10
+----------------------------------------------------------------------------------------------------
+cluster 1:
+runnerspace, adidasrunning, tomgoom, flotrack, mit, ucla, taylornation13, troyesivan
+
+cluster 2:
+ncaatrackfield, the1975, gracieshq, charli_xcx, sza, technology, wired, realdonaldtrump, markwarner, speakerpelosi
+
+cluster 3:
+usatf, engadget, gigaom
+
+cluster 4:
+nike, sabrinaannlynn, livieshq, justinbieber, recode, thenextweb
+
+cluster 5:
+harvard, yale, brownuniversity, stanford, uva, johnshopkins, zdnet
+
+cluster 6:
+runnersworld, princeton, techcrunch, techrepublic, arstechnica
+
+cluster 7:
+timkaine, joebiden, hillaryclinton
+
+cluster 8:
+
+
+cluster 9:
+on_running, londonmarathon, comradesrace
+
+cluster 10:
+rihanna, kamalaharris, mike_pence, aoc, barackobama
+

@@ -1,0 +1,62 @@
+k-Means clustering results for k=20
+----------------------------------------------------------------------------------------------------
+cluster 1:
+mit, ucla, engadget, gigaom
+
+cluster 2:
+techcrunch, arstechnica
+
+cluster 3:
+
+
+cluster 4:
+runnerspace, hillaryclinton
+
+cluster 5:
+on_running, flotrack
+
+cluster 6:
+
+
+cluster 7:
+speakerpelosi
+
+cluster 8:
+sabrinaannlynn, taylornation13, gracieshq, charli_xcx, troyesivan, livieshq, sza, rihanna, justinbieber, realdonaldtrump
+
+cluster 9:
+harvard, stanford, techrepublic
+
+cluster 10:
+londonmarathon, comradesrace
+
+cluster 11:
+brownuniversity, uva, johnshopkins
+
+cluster 12:
+kamalaharris
+
+cluster 13:
+princeton
+
+cluster 14:
+adidasrunning, usatf
+
+cluster 15:
+ncaatrackfield, zdnet, markwarner
+
+cluster 16:
+technology, recode, thenextweb, wired
+
+cluster 17:
+timkaine, joebiden, mike_pence, aoc, barackobama
+
+cluster 18:
+nike
+
+cluster 19:
+
+
+cluster 20:
+runnersworld, tomgoom, yale, the1975
+
