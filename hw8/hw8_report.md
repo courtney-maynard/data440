@@ -63,6 +63,8 @@ I also made some changes to the scraping code in order to introduce a sleep time
 
 **B: Explain in detail the code that you added to filter for the 500 most frequent non-stopword terms.**
 
+Considering that wordcounts already contained non-stopword terms, it created a list to hold tuples representing the words and their respective counts. Then, looping through each word in wordcounts, I added the respective count to the tuple and appended it to the list word_and_each_count. I then sorted the word-count pairs in reverse order, to make it easier to grab the top 500, by the count, which was the second value in the tuple and then index 1. Lastly, I created a loop to iterate through each word in the reversed-ordered list of tuples, grabbing the first 500 words and appending them to the list popularlist.
+
 **C: Do the 500 most frequent terms make sense based on the accounts that you chose?**
 
 ### Q3: Create Dendrogram
