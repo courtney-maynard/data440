@@ -80,7 +80,31 @@ Cluster the accounts using k-Means with k's of 5, 10, and 20. For each value of 
 **A: Give a brief explanation of how the k-Means algorithm operates on this data. What features is the algorithm considering?**
 
 **B: How many iterations were required for each value of k?**
+```console
+(base) courtneymaynard@Courtneys-MacBook-Pro-2 data440 % python3 makingvisualizationshmwk8.py
+Iteration 0
+Iteration 1
+Iteration 2
+Iteration 3
+results for k= 5 written to  k_means_clusters_k5.txt
+Iteration 0
+Iteration 1
+Iteration 2
+Iteration 3
+Iteration 4
+results for k= 10 written to  k_means_clusters_k10.txt
+Iteration 0
+Iteration 1
+Iteration 2
+Iteration 3
+Iteration 4
+results for k= 20 written to  k_means_clusters_k20.txt
+```
+
+For k = 5, four iterations were needed before the clusters converged. For k = 10 and k = 20, five iterations were needed. However, the first time I ran the clustering, when I didn't set up the output files correctly, k = 5 took six iterations, k = 10 took five iterations and k = 20 only took three iterations. This is evidence of the element of randomness present in k-Means clustering, as each try of clustering will not necessarily result in the same groups.
 
 **C: Which k value created the most reasonable clusters? For that grouping, characterize the accounts that were clustered into each group.**
+
+The k-value of five created the most reasonable clusters, however, there were some notable clusters formed using k = 10 and k = 20 as well.
 
 
