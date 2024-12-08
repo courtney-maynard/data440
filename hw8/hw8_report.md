@@ -10,7 +10,7 @@ Generate a list of 50 popular accounts on Twitter with 10,000+ followers and 500
 
 **B: What topics/categories do the accounts belong to? You don't need to specify a grouping for each account, but what general topics/categories will you expect to be revealed by the clustering? Provide this list before generating the cluster.**
 
-I chose five distinct topics in order to search for accounts that fit the criteria. The first ten accounts are all related to running and athletics, the second ten accounts are all university accounts, the third set of ten accounts are all popular musicians' accounts or their official promotional social media accounts, the next ten accounts are accounts that post about technology, and the last group of accounts are all political figures. I expect that the clustering will identify the topical differences between these accounts and cluster them into five distinct categories. However, it is possible that the words of the tweets may reveal connections between the approximately twenty accounts belonging to people and they may cluster together. Additionally, the accounts that share information about technology may cluster with university accounts due to similar themes of education. 
+I chose five distinct topics in order to search for accounts that fit the criteria. The first ten accounts are all related to running and athletics, the second ten accounts are all university accounts, the third set of ten accounts are all popular musicians' accounts or their official promotional social media accounts, the next ten accounts are accounts that post about technology, and the last group of accounts are all political figures. I expect that the clustering will identify the topical differences between these accounts and cluster them into five distinct categories. However, it is possible that the words of the tweets may reveal connections between the approximately twenty accounts belonging to people and they may cluster together. Additionally, the accounts that share information about technology may cluster with university accounts due to similar themes of education. I ran into one hiccup while scraping the tweets, which was that the scraper would not recognize tweets from accounts with capital letters. After converting all of the account names to lowercase, I was able to successfully scrape all of the tweets needed. 
 
 ### Q2: Create Account-Term Matrix
 Create an account-term matrix for every term in the tweets, but only for the 500 most popular terms that are not stopwords.
@@ -67,6 +67,8 @@ Considering that wordcounts already contained non-stopword terms, it created a l
 
 **C: Do the 500 most frequent terms make sense based on the accounts that you chose?**
 
+Yes, the 500 most frequent terms do make sense for the different categories of accounts I chose. There are many words relating to politics and the election, which I expected to see as I chose several political figures to scrape tweets from. Most of the words also hold positive connotations, such as 'love', 'celebrate', 'champion', and 'thank'. Overall, I didn't find any terms that stood out to me as irrelevant to the categories or were very common, liken to stopwords. 
+
 ### Q3: Create Dendrogram
 Create an ASCII and JPEG Dendrogram using hierarchical clustering to cluster the most similar accounts.
 
@@ -74,6 +76,7 @@ Create an ASCII and JPEG Dendrogram using hierarchical clustering to cluster the
 
 **A: How well did the hierarchical clustering do in grouping similar accounts together? Were there any particularly odd groupings?**
 
+The hierarchical clustering performed very well with grouping the accounts by category. It correctly clustered all of the political figures together into their own branch system. 
 ### Q4: Cluster using k-Means
 Cluster the accounts using k-Means with k's of 5, 10, and 20. For each value of k, create a file that lists the accounts in each cluster.
 
