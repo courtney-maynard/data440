@@ -61,6 +61,7 @@ I also made some changes to the scraping code in order to introduce a sleep time
 
 **A: Explain the general operation of generate_tweet_vector.py and how the tweets are converted to the account-term matrix.**
 
+generate_tweet_vector.py begins by scraping twitter to get the top fifty tweets from each account contained in the accounts.txt file. In order to deal with issues caused by twitter timeouts and rate limits, it keeps in cache the data from accounts already visited. I ran the file several times to collect all the tweets, as previously visited accounts were pulled from the cache and non-visited accounts were traversed through the scraper. 
 
 **B: Explain in detail the code that you added to filter for the 500 most frequent non-stopword terms.**
 
