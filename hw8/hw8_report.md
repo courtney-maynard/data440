@@ -61,6 +61,7 @@ I also made some changes to the scraping code in order to introduce a sleep time
 
 **A: Explain the general operation of generate_tweet_vector.py and how the tweets are converted to the account-term matrix.**
 
+
 **B: Explain in detail the code that you added to filter for the 500 most frequent non-stopword terms.**
 
 Considering that wordcounts already contained non-stopword terms, it created a list to hold tuples representing the words and their respective counts. Then, looping through each word in wordcounts, I added the respective count to the tuple and appended it to the list word_and_each_count. I then sorted the word-count pairs in reverse order, to make it easier to grab the top 500, by the count, which was the second value in the tuple and then index 1. Lastly, I created a loop to iterate through each word in the reversed-ordered list of tuples, grabbing the first 500 words and appending them to the list popularlist.
@@ -76,7 +77,8 @@ Create an ASCII and JPEG Dendrogram using hierarchical clustering to cluster the
 
 **A: How well did the hierarchical clustering do in grouping similar accounts together? Were there any particularly odd groupings?**
 
-The hierarchical clustering performed very well with grouping the accounts by category. It correctly clustered all of the political figures together into their own branch system. 
+The hierarchical clustering performed very well with grouping the accounts by category, better than I thought it would. It correctly clustered all of the political figures together into their own branch system. It also was able to group a majority of the universities, seven, together, with a connecting branch to a group of eight of the technology-based accounts. These all broadly fall under the category of education, which was my initial prediction for one of the ways that the different accounts may end up clustering together. Additionally, many of the running accounts were clustered together, eight of them, with _ucla_, a university account, also appearing in the cluster on a sub-branch with _runnerspace_. My theory is that UCLA had many recent tweets talking about athletic accomplishments, thus they were grouped with the other athletic-based accounts. The hierarchical clustering also grouped nine of the musicians together, which was a surprise to me as they are a mix of official promotional accounts and personal accounts of the artists, which I thought might lead to different clustering. Additionally interesting is the closeness of _nike_ to these musician accounts. It was not clustered with the other athletics accounts, which may be because it's not only a running account but instead a corporate account. Lastly, the most peculiar grouping was the bottom cluster of _tomgoom_, _runnersworld_, and _mit_ along with _the1975_ and _zdnet_. This cluster contains four of the five categories of accounts, and it is not clear how they form a cohesive group that is also closely related to the musical artists and Nike. The hierarchical clustering performed better than the k-Means clustering at grouping by my pre-defined categories, as detailed below.
+
 ### Q4: Cluster using k-Means
 Cluster the accounts using k-Means with k's of 5, 10, and 20. For each value of k, create a file that lists the accounts in each cluster.
 
