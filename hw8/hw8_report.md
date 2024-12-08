@@ -85,6 +85,9 @@ Cluster the accounts using k-Means with k's of 5, 10, and 20. For each value of 
 
 **A: Give a brief explanation of how the k-Means algorithm operates on this data. What features is the algorithm considering?**
 
+The algorithm considers the frequencies of the words in the tweet term matrix as the features. Each row in the matrix corresponds to an account, while each column indicates how often a specific word was found in each account's tweets.  The algorithm starts by creating k random centroids, which essentially correspond to fake accounts with random word frequencies. Then the algorithm iteratively assigns accounts to clusters and updates the centroids, detecting for convergence as it updates. The loop to assign and update the centroids will run 100 times, unless convergence is reached before that. Each account is assigned to the cluster with the most similar centroid to the account, which is calculated using the Pearson distance. In this particular k-Means, the centroids are recalculated by averaging the frequency of the words for all of the accounts in the cluster in that iteration. This will essentially 'move' the centroid in the feature space to be an average of all of the accounts within that centroid. At the end, the list of lists, _bestmatches_, is returned, which contains the indexes of the rows assigned to each cluster. 
+
+
 **B: How many iterations were required for each value of k?**
 ```console
 (base) courtneymaynard@Courtneys-MacBook-Pro-2 data440 % python3 makingvisualizationshmwk8.py
