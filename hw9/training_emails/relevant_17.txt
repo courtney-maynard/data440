@@ -1,0 +1,22 @@
+Dear students, 
+
+We are writing to remind you that Information Technology will be turning off access to your W&M Gmail inboxes and Google Calendars beginning the week of September 2nd, which is the final step in William & Mary’s transition to Microsoft Office 365.  
+
+What does this mean? 
+Following this change, you will no longer be able to access your university-issued Gmail inbox and Google Calendar. 
+Access to Google Workspace apps (Google Docs, Google Sheets, etc.) will not be impacted by this change. All your current content outside your Gmail inbox will remain accessible from your university Google account. 
+To access your Google account moving forward, you will use your @wm.edu email account and NOT @email.wm.edu account. 
+Forwards from your @email.wm.edu account will no longer work once the inbox is turned off and any emails to those accounts will bounce. Any email communication to you should go to your W&M email address (wxgriffin@wm.edu).  
+Notifications 
+Moving forward, you will use a recipient’s W&M email address (wxgriffin@wm.edu) to share documents in Google Workspace.  
+Notifications will go to your Outlook email inbox.  
+If you try to access the document and get a prompt to log into Google, use your @wm.edu email address and you should get redirected to single-sign on.  
+You can access Google Workspace files by logging into my.wm.edu and clicking on the Google Workspace icon or directly at workspace.wm.edu. 
+You can find more information about the transition, including the timeline and information on moving your content on the IT website.  
+
+If you have any questions, please contact the Technology Support Center at support@wm.edu or (757) 221-4357.  
+
+We appreciate your cooperation and understanding as we make this important transition. 
+
+Sincerely, 
+W&M Information Technology 
