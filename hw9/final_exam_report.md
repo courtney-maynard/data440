@@ -141,6 +141,8 @@ Draw a confusion matrix for the classification results, created using a table in
 
 **B: Would you prefer an email classifier to have more false positives or more false negatives? Why?**
 
+I would prefer the classifier to have more False Positives in this case than False Negatives. False positives would mean that non-relevant emails, like a spam email, would be classified as relevant. Though this could be irritating as you are seeing spam emails that you don't want to, its better than the alternative, false negatives, which would lead to missing important/relevant emails that are incorrectly classified as spam.
+
 ### Q4: Extra Credit
 Report the precision and recall scores of your classification results and include the formulas used to compute the values.
 
