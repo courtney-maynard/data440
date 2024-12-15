@@ -21,8 +21,7 @@ Use the example code to train and test your Naive Bayes classifier, using your e
 #### Code:
 I used the Naive Bayes Classifier from the colab notebook, with the basic classifier implementation, and then wrote my own functions as below:
 
-```
-python
+```python
 ## ADDITIONAL IMPORTS
 import os
 import prettytable
@@ -100,8 +99,7 @@ print('accuracy: ', accuracy)
 
 ```
 
-```
-console
+```console
 (base) courtneymaynard@Courtneys-MacBook-Pro-2 data440 % python3 homework8classifier.py
 +--------------------+-----------------------+--------------------------+---------+
 |     Email File     | Actual Classification | Predicted Classification | Correct |
