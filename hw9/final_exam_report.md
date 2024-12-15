@@ -154,9 +154,6 @@ _Recall: True Positives/(True Positives + False Negatives)_
 
 The recall of the classifier is: 2/(2+3) = 0.4
 
-_Specificity: True Negatives/(True Negatives + False Positives)_
-
-The specificity of the classifier is: 5/(5+0) = 1.0
 
 ### Resources:
 I found this post on StackOverflow about the pretty-printing tables: https://stackoverflow.com/questions/9535954/printing-lists-as-tabular-data
