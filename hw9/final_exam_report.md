@@ -141,18 +141,18 @@ Draw a confusion matrix for the classification results, created using a table in
 
 **B: Would you prefer an email classifier to have more false positives or more false negatives? Why?**
 
-### Extra Credit Q4
+### Q4: Extra Credit
 Report the precision and recall scores of your classification results and include the formulas used to compute the values.
 
-Precision: True Positives/(True Positives + False Positives)
+_Precision: True Positives/(True Positives + False Positives)_
 
 The precision of the classifier is: 2/(2+0) = 1.0
 
-Recall: True Positives/(True Positives + False Negatives)
+_Recall: True Positives/(True Positives + False Negatives)_
 
 The recall of the classifier is: 2/(2+3) = 0.4
 
-Specificity: True Negatives/(True Negatives + False Positives)
+_Specificity: True Negatives/(True Negatives + False Positives)_
 
 The specificity of the classifier is: 5/(5+0) = 1.0
 
