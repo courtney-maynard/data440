@@ -11,13 +11,91 @@ Choose a topic to classify your emails on, but only choose one topic.
 - The testing dataset should consist of five relevant and five non-relevant text documents of email messages.
 
 **A: What topic did you decide to classify on?**
+I decided to classify emails sent to all William and Mary students from school administrators. After looking through my emails, I determined that I receive many emails to my school account that either come from third parties or are notifications(blackboard, W&M spirit shop, etc.), where the main content is images, hyperlinks, or formatted HTML. Thus, I decided to choose emails that were mostly plain text, with some possibilities of links. I found 25 emails from school administrators, like Ginger Ambler or President Rowe. Their content spanned from notifications about events such as convocation to emails about campus safety. For all of my other emails, I took a variety of emails from my email account that aren't spam but aren't emails that I open daily. Some examples are LinkedIn recap emails and compilations of daily New York Times articles. I removed email signatures from all emails in the training and testing sets. Since the content of these different types of emails was very different, I expected my classifier to perform well. 
 
 ### Q2: Naive Bayes Classifier
 Use the example code to train and test your Naive Bayes classifier, using your email document dataset.
 - Create a table to report the classification results for the email messages in the Testing dataset, including what the classifier reported vs the actual classification
 #### Code:
+I used the Naive Bayes Classifier from the colab notebook, with the basic classifier implementation, and then wrote my own functions as below:
+
 ```
 python
+## ADDITIONAL IMPORTS
+import os
+import prettytable
+from prettytable import PrettyTable
+
+## MY CODE FOR IMPLEMENTATION
+
+'''
+load_emails(folder):
+    - loads in all of my email text files from my respective folders
+    - uses the naming conventions i established for my files in order
+    to properly set up email and label pairs
+    
+    returns three lists: the email file name, the email content, and the email labels
+'''
+def load_emails(folder):
+    email_files = []
+    text_emails = []
+    email_labels = []
+    for filename in os.listdir(folder):
+        if filename.endswith('.txt'):
+            if filename.startswith('relevant'):
+                label = 'relevant'
+                #print(filename)
+            elif filename.startswith('nonrelevant'):
+                label = 'nonrelevant'
+            
+            with open(os.path.join(folder, filename), 'r', encoding='utf-8') as email_file:
+                email_files.append(str(filename))
+                text_emails.append(email_file.read())
+                email_labels.append(label)
+    return email_files, text_emails, email_labels
+
+#load in all of my emails, training and testing, and set up labels
+email_files, train_emails, train_labels = load_emails('training_emails')
+#print(len(train_emails), len(train_labels))
+email_files, test_emails, test_labels = load_emails('testingemails')
+
+# create and train the naive bayes classifier
+nbcl = naivebayes(getwords)
+
+# pair together the email and label
+for each_train_email, each_train_label in zip(train_emails, train_labels):
+    # train the classifier with each labeled pair
+    nbcl.train(each_train_email, each_train_label)
+
+# setting up a table to print the results of classification
+classifier_table = PrettyTable(['Email File', 'Actual Classification', 'Predicted Classification', 'Correct'])
+
+
+# testing the classifier
+correct = 0
+# pair together the email name, email content, and label so it's easier to put all into the table and can be iterated over
+for email_files, each_test_email, actual_label in zip(email_files, test_emails, test_labels):
+    predicted_label = nbcl.classify(each_test_email, default='unknown')
+    #print(f'snippet of email: {each_test_email[:50]}...')
+    #print(f'actual classification: {actual_label}, predicted classification: {predicted_label}')
+
+    if predicted_label == actual_label:
+        # update correct count to calculate accuracy later
+        correct += 1 
+        # add correctly classified testing email to table
+        classifier_table.add_row([email_files[:-4], actual_label, predicted_label, 1])
+    else:
+        # add incorrectly classified testing email to table
+        classifier_table.add_row([email_files[:-4], actual_label, predicted_label, 0])
+    
+
+# evaluation of classifier: table and accuracy
+classifier_table.add_row(['Total: ',' ', ' ', correct])
+print(classifier_table)
+
+accuracy = correct / len(test_emails)
+print('accuracy: ', accuracy)
+
 ```
 
 #### Commentary:
