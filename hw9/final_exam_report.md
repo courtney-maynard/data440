@@ -11,11 +11,13 @@ Choose a topic to classify your emails on, but only choose one topic.
 - The testing dataset should consist of five relevant and five non-relevant text documents of email messages.
 
 **A: What topic did you decide to classify on?**
-I decided to classify emails sent to all William and Mary students from school administrators. After looking through my emails, I determined that I receive many emails to my school account that either come from third parties or are notifications(blackboard, W&M spirit shop, etc.), where the main content is images, hyperlinks, or formatted HTML. Thus, I decided to choose emails that were mostly plain text, with some possibilities of links. I found 25 emails from school administrators, like Ginger Ambler or President Rowe. Their content spanned from notifications about events such as convocation to emails about campus safety. For all of my other emails, I took a variety of emails from my email account that aren't spam but aren't emails that I open daily. Some examples are LinkedIn recap emails and compilations of daily New York Times articles. I removed email signatures from all emails in the training and testing sets. Since the content of these different types of emails was very different, I expected my classifier to perform well. 
+
+I decided to classify emails sent to all William and Mary students from school administrators. After looking through my emails, I determined that I receive many emails to my school account that either come from third parties or are notifications(blackboard, W&M spirit shop, etc.), where the main content is images, hyperlinks, or formatted HTML. Thus, I decided to choose emails that were mostly plain text, with some possibilities of links. Interestingly, all of the emails I found that were 100% plain text were email blasts to all students from school administrators, like Ginger Ambler or President Rowe, or other relevant authority figures like the mayor of Williamsburg or the police chief. Their content spanned from notifications about events such as convocation to emails about campus safety. For all of my other emails, I took a variety of emails that I receive that aren't spam but aren't emails that I open daily. Some examples are LinkedIn recap emails and compilations of daily New York Times articles. I removed email signatures from all emails in the training and testing sets. Since the content of these different types of emails was very different, I expected my classifier to perform well. 
 
 ### Q2: Naive Bayes Classifier
 Use the example code to train and test your Naive Bayes classifier, using your email document dataset.
 - Create a table to report the classification results for the email messages in the Testing dataset, including what the classifier reported vs the actual classification
+  
 #### Code:
 I used the Naive Bayes Classifier from the colab notebook, with the basic classifier implementation, and then wrote my own functions as below:
 
@@ -98,6 +100,27 @@ print('accuracy: ', accuracy)
 
 ```
 
+```
+console
+(base) courtneymaynard@Courtneys-MacBook-Pro-2 data440 % python3 homework8classifier.py
++--------------------+-----------------------+--------------------------+---------+
+|     Email File     | Actual Classification | Predicted Classification | Correct |
++--------------------+-----------------------+--------------------------+---------+
+|  relevant_test_5   |        relevant       |       nonrelevant        |    0    |
+| nonrelevant_test_5 |      nonrelevant      |       nonrelevant        |    1    |
+| nonrelevant_test_4 |      nonrelevant      |       nonrelevant        |    1    |
+|  relevant_test_4   |        relevant       |       nonrelevant        |    0    |
+|  relevant_test_3   |        relevant       |         relevant         |    1    |
+| nonrelevant_test_3 |      nonrelevant      |       nonrelevant        |    1    |
+| nonrelevant_test_2 |      nonrelevant      |       nonrelevant        |    1    |
+|  relevant_test_2   |        relevant       |       nonrelevant        |    0    |
+| nonrelevant_test_1 |      nonrelevant      |       nonrelevant        |    1    |
+|  relevant_test_1   |        relevant       |         relevant         |    1    |
+|      Total:        |                       |                          |    7    |
++--------------------+-----------------------+--------------------------+---------+
+accuracy:  0.7
+```
+
 #### Commentary:
 
 Commentary goes here
@@ -106,7 +129,7 @@ Commentary goes here
 
 
 ### Q3: Confusion Matrix
-Draw a confusion matrix for the classification results, created using a table in Markdown not using another program or a screenshot of an image
+Draw a confusion matrix for the classification results, created using a table in Markdown not using another program or a screenshot of an image.
 
 **A: Based on the results in the confusion matrix, how well did the classifier perform?**
 
