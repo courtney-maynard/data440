@@ -1,0 +1,85 @@
+Dear Fig Members,
+
+ 
+
+For those in the USA: I hope you had a wonderful Thanksgiving with your family and friends!
+
+ 
+
+As many of you know, we're building a brand new restaurant experience called Fig Restaurants 2.0. Think Google Maps but for dietary restrictions 🤩
+
+ 
+
+Imagine clicking a button and instantly seeing every restaurant in your city that provides a detailed ingredient list. Or reading dining reviews from people who share your specific dietary needs. And even seeing accommodation details from an allergy-trained inspector. 
+
+ 
+
+That dream will soon be a reality ☺️ The Fig team has already gotten details on over 700 restaurants, so you can focus more on enjoying food, not finding it.
+
+ 
+
+We're currently beta-testing Restaurants 2.0 in Denver, Colorado. Once the bugs are ironed out and we get enough reviews in other areas, we'll expand to more cities early next year.
+
+ 
+
+Want Restaurants 2.0 to come to your city sooner? Apply to be a restaurant reviewer!
+
+What else is new this month? ✨
+New diet: Anti-inflammatory 🔔
+An anti-inflammatory diet focuses on reducing chronic inflammation by emphasizing whole, nutrient-dense foods like fruits, vegetables, nuts, seeds, lean proteins, whole grains, and healthy fats
+This diet may benefit individuals with medical conditions like rheumatoid arthritis, heart disease, inflammatory bowel disease, and type 2 diabetes
+You can add an anti-inflammatory diet to Fig by updating your profile. As always, please consult with your doctor or dietitian before starting a new, restrictive diet
+Fewer products rated Yellow 🎉 
+Fig will no longer rate vague ingredients like "natural flavors" and "chocolate" as Yellow for top 9 allergens if a product's allergen statement indicates those allergens aren't present
+This affects egg, fish, milk, peanut, sesame, shellfish, soy, tree nut, and wheat allergies as well any diet that also avoids those ingredients
+What does this mean for you? Expect to see more products rated Green in the app!
+Voluntary allergen statements rated Yellow instead of Red
+Some manufacturers include voluntary allergen statements on their products like "Made in a facility that also produces milk"
+These statements are now rated Yellow instead of Red. Soon, you'll be able to customize how these statements are rated for each of your allergens 🥳
+Refining Restaurants 2.0 in Denver
+This month, the team is adding filters to the restaurant map view
+Next month, we'll update the restaurant review flow, search system, and match score based on user feedback
+New products on the app ⚡ 
+We know missing products are a pain, so we added thousands more products to the app in October and November
+If you're worried about products changing ingredients or allergen statements, reminder to check out Fig Ingredient Alerts. We've already sent Fig members more than 160,000 alerts this year
+What else is coming soon? 👀
+Setting Severity and Cross-Contact Preferences (25% Complete):
+Soon, you'll be able to indicate how strictly you follow each diet/allergy in your Fig profile
+As mentioned previously, you'll also be able to set preferences for how Fig rates voluntary allergen statements like "May contain peanuts" 
+"Beyond the Label" Grocery Information (65% Complete):
+We're still contacting manufacturers seeking additional information that's not listed on product labels. Assuming we capture enough additional data, we'll start displaying this in the app next year
+Adding New Diets
+
+We're still in the process of assessing and adding more complicated diets like Low Oxalate, Low Salicylates, PKU and CSID. Thank you for your patience
+
+Whatever YOU Say is Most Important!
+
+As always, please feel free to reply to this e-mail if you have ideas for improving Fig
+Keep in mind: We are a small team, so changes can take time. Thank you for your patience and support 😃 
+And finally...
+I wanted to thank everyone who has supported Fig, either financially by subscribing to Fig+ or by submitting feedback and missing products to the app.
+
+ 
+
+Building Fig has been an honor for our team, but it's also been an incredible challenge. Maintaining the app, keeping data up-to-date, and building new features cost hundreds of thousands of dollars each month. Sometimes we haven't known how we were going to pay the bills. Your support has helped us to survive and continue this important work. It's also helped us grant free Fig+ to thousands of members who couldn't afford it.
+
+ 
+
+We honestly couldn't have done this without you. So, from our Fig family to yours, a genuine thank you 😊
+
+ 
+
+Though there's always more to improve, it's incredible to reflect on the impact Fig is already having. Here are some notes we've received from you this past month.
+
+ 
+
+
+Your kind words mean the world to our team. Thank you 😊
+
+Please don't hesitate to reach out if we can support you in any way. Wishing you a wonderful holiday season with your family and friends.
+
+Andrew
+Fig Co-Founder
+
+
+ 
