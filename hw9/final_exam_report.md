@@ -129,6 +129,12 @@ Commentary goes here
 ### Q3: Confusion Matrix
 Draw a confusion matrix for the classification results, created using a table in Markdown not using another program or a screenshot of an image.
 
+|  |  | **Actual** |  |
+|--|--|--|--|
+|  |  | **Relevant** | **Non-Relevant** |
+| **Predicted** | **Relevant** | 2 (True Positive)  | 0 (False Positive)|
+|  | **Non-Relevant** | 3 (False Negative) | 5 (True Negative) |
+
 
 
 **A: Based on the results in the confusion matrix, how well did the classifier perform?**
@@ -137,6 +143,18 @@ Draw a confusion matrix for the classification results, created using a table in
 
 ### Extra Credit Q4
 Report the precision and recall scores of your classification results and include the formulas used to compute the values.
+
+Precision: True Positives/(True Positives + False Positives)
+
+The precision of the classifier is: 2/(2+0) = 1.0
+
+Recall: True Positives/(True Positives + False Negatives)
+
+The recall of the classifier is: 2/(2+3) = 0.4
+
+Specificity: True Negatives/(True Negatives + False Positives)
+
+The specificity of the classifier is: 5/(5+0) = 1.0
 
 ### Resources:
 I found this post on StackOverflow about the pretty-printing tables: https://stackoverflow.com/questions/9535954/printing-lists-as-tabular-data
