@@ -121,10 +121,11 @@ accuracy:  0.7
 
 #### Commentary:
 
-Commentary goes here
+I originally set up my emails in a folder file structure, to make it easier to read the emails for later analysis, so I decided to stick with that structure and incorporate it into my execution of the naive bayes classification. I first created a function to load all of the emails from the respective folders, training and testing, creating lists of three components: the name of the email file, the text of the email, and the actual labels of the email (relevant and non-relevant). After loading in the emails, I instantiated and trained the naive bayes classifier by feeding in the pairs of email content and email labels. Next, I set up a 'PrettyTable' to output the results of the classifier, so I could clearly see which files were being incorrectly classified. Then, I classified each email in the testing set, kept track of how many were correct, added each observation to my table, and printed the results. 
 
 **A: For those emails that the classifier got wrong, what factors might have caused the classifier to be incorrect? Look at the text of the email to determine.**
 
+The overall accuracy of the classifier was 70%. All of the misclassified emails were relevant emails that the classifier thought were non-relevant. 
 
 ### Q3: Confusion Matrix
 Draw a confusion matrix for the classification results, created using a table in Markdown not using another program or a screenshot of an image.
