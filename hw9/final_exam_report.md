@@ -134,7 +134,7 @@ Draw a confusion matrix for the classification results, created using a table in
 |  |  | **Actual** |  |
 |--|--|--|--|
 |  |  | **Relevant** | **Non-Relevant** |
-| **Predicted** | **Relevant** | 2 (True Positive)  | 0 (False Positive)|
+| **Predicted** | **Relevant** | 2 (True Positive) | 0 (False Positive)|
 |  | **Non-Relevant** | 3 (False Negative) | 5 (True Negative) |
 
 
